@@ -9,9 +9,6 @@ class IndexController extends Controller {
         $this->display();
     }
     public function login(){
-        if(!IS_POST){
-            $this->error('页面不存在');
-        }
         if(!check_verify(I('code',''))){
             $this->error('验证码错误');
         }
@@ -45,8 +42,9 @@ class IndexController extends Controller {
     }
     public function verify(){
         $config=array(
+            'codeSet'=>'0123456789',
             'fontsize'=>20,
-            'length'=>1,
+            'length'=>3,
         );
         $verify=new Verify($config);
         $verify->entry();

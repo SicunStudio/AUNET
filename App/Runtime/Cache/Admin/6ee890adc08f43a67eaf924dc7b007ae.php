@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title></title>
 </head>
-<body>
 <!DOCTYPE html>
 <html>
 <head lang="en">
@@ -13,19 +12,20 @@
 </head>
 <body>
 <dl>
-    <dt>文件上传</dt>
+    <dt>资料上传</dt>
     <dd><a href="<?php echo U('/Admin/Upload/index');?>">上传附件</a></dd>
+    <dd><a href="<?php echo U('/Admin/Upload/doc_list');?>">资料列表</a></dd>
 </dl>
 <dl>
     <dt>属性管理</dt>
-    <dd><a href="<?php echo U('/Admin/Attribute/index');?>">属性列表</a></dd>
-    <dd><a href="<?php echo U('/Admin/Attribute/addAttr');?>">添加属性</a></dd>
+    <dd><a href="<?php echo U('/Admin/NewsAttribute/index');?>">属性列表</a></dd>
+    <dd><a href="<?php echo U('/Admin/NewsAttribute/addAttr');?>">添加属性</a></dd>
 </dl>
 <dl>
     <dt>文章管理</dt>
-    <dd><a href="<?php echo U('/Home/Index/Blog');?>">文章列表</a></dd>
-    <dd><a href="<?php echo U('/Home/Index/index');;?>">添加文章</a></dd>
-    <dd><a href="<?php echo U('/Home/Index/trash');;?>">回收站</a></dd>
+    <dd><a href="<?php echo U('/Admin/News/index');?>">文章列表</a></dd>
+    <dd><a href="<?php echo U('/Admin/News/addNews');;?>">添加文章</a></dd>
+    <dd><a href="<?php echo U('/Admin/News/trash');;?>">回收站</a></dd>
 </dl>
 <dl>
     <dt>权限管理</dt>
@@ -49,40 +49,25 @@
 
 </body>
 </html>
-<form action="<?php echo U('addRoleHandle');;?>" method="post"/>
-    <table class="table"/>
-
-        <tr>
-            <th colspan="2">添加角色</th>
-        </tr>
-
-        <tr>
-            <td align="right">角色名称:</td>
-            <td>
-                <input type="text" name='name'/>
-            </td>
-        </tr>
-
-        <tr>
-            <td align="right">角色描述:</td>
-            <td>
-                <input type="text" name='remark'/>
-            </td>
-        </tr>
-        <tr>
-            <td align="right">是否开启:</td>
-            <td>
-                <input type="radio" name='status' value='1' checked='checked'/>&nbsp;开启&nbsp;
-                <input type="radio" name='status' value='0'/>&nbsp;关闭
-            </td>
-        </tr>
+<body>
+<table class="table">
     <tr>
-        <td colspan="2" align="center">
-            <input type="submit" value="保存添加"/>
-        </td>
+        <th>ID</th>
+        <th>属性名称</th>
+        <th>颜色</th>
+        <th>操作</th>
     </tr>
-
-
-    </table>
+    <?php if(is_array($attr)): foreach($attr as $key=>$v): ?><tr>
+            <td><?php echo ($v["id"]); ?></td>
+            <td><?php echo ($v["name"]); ?></td>
+            <td>
+                <div style="width: 20px;height: 20px;background: <?php echo ($v["color"]); ?>"></div>
+            </td>
+            <td>
+                [<a href="">修改</a>]
+                [<a href="">删除</a>]
+            </td>
+        </tr><?php endforeach; endif; ?>
+</table>
 </body>
 </html>

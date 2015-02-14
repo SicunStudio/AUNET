@@ -5,7 +5,7 @@
     <title></title>
 </head>
 <body>
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html>
 <head lang="en">
     <meta charset="UTF-8">
@@ -50,29 +50,32 @@
 
 </body>
 </html>
-    <table class="table"/>
+    <table class="table">
         <tr>
             <th>ID</th>
-            <th>角色名稱</th>
-            <th>角色描述</th>
-            <th>開啟狀態</th>
-            <?php if(is_array($role)): foreach($role as $key=>$v): ?><tr>
-                    <td><?php echo ($v["id"]); ?></td>
-                    <td><?php echo ($v["name"]); ?></td>
-                    <td><?php echo ($v["remark"]); ?></td>
-                    <td>
-                        <?php if($v['status']): ?>開啟
-                        <?php else: ?>
-                                關閉<?php endif; ?>
-                    </td>
-                    <td>
-                        <a href="<?php echo U('access',array('rid'=>$v['id']));;?>">配置權限</a>
-                    </td>
-
-                </tr><?php endforeach; endif; ?>
+            <th>标题</th>
+            <th>所属分类</th>
+            <th>发布时间</th>
+            <th>操作</th>
         </tr>
+        <?php if(is_array($news)): foreach($news as $key=>$v): ?><tr>
+                <td width="8%"><?php echo ($v["id"]); ?></td>
+                <td><a href="<?php echo U('Text',array('id'=>$v['id']));?>" ><?php echo ($v["title"]); ?></a><?php if(is_array($v["attr"])): foreach($v["attr"] as $key=>$value): ?><strong style='color:<?php echo ($value["color"]); ?>'>[<?php echo ($value["name"]); ?>]</strong><?php endforeach; endif; ?></td>
+                <td width="12%"><?php echo ($v["cate"]); ?></td>
+                <td width="12%"><?php echo (date('y-m-d H:i',$v["time"])); ?></td>
+                <td width="18%" align="center">
+                    <?php if(ACTION_NAME == 'index'): ?>[<a href="<?php echo U('edit',array('id'=>$v['id']));?>">修改</a>]
+                        [<a href="<?php echo U('toTrash',array('id'=>$v['id'],'type'=>1));?>">删除</a>]
+                        <?php else: ?>
+                        [<a href="<?php echo U('toTrash',array('id'=>$v['id'],'type'=>0));?>">还原</a>]
+                        [<a href="<?php echo U('delete',array('id'=>$v['id']));?>">彻底删除</a>]<?php endif; ?>
 
+                </td>
+            </tr><?php endforeach; endif; ?>
 
     </table>
+    <?php if(ACTION_NAME == 'trash'): ?><td colspan="5" align="center">
+            [<a href="<?php echo U('deleteAll');?>">清空回收站</a>]
+        </td><?php endif; ?>
 </body>
 </html>

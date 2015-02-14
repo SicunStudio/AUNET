@@ -55,6 +55,19 @@
         float: left;
     }
 </style>
+<script type="text/javascript" src="/AUNET/Public/jquery-1.8.0.min.js"></script>
+<script type="text/javascript">
+    $(function (){
+        $('input[level=1]').click(function (){
+            var inputs=$(this).parents('.app').find('input');
+            $(this).attr('checked')?inputs.attr('checked','checked'):inputs.removeAttr('checked');
+        });
+        $('input[level=2]').click(function (){
+            var inputs=$(this).parents('dl').find('input');
+            $(this).attr('checked')?inputs.attr('checked','checked'):inputs.removeAttr('checked');
+        });
+    });
+</script>
 <body>
 <!DOCTYPE html>
 <html>
@@ -101,28 +114,30 @@
 
 </body>
 </html>
-    <div id='wrap'>
-        <a href="<?php echo U('addNode');;?>" class="add-app">添加应用</a>
-        <?php if(is_array($node)): foreach($node as $key=>$app): ?><div class='app'>
-                <p>
-                    <strong><?php echo ($app["title"]); ?></strong>
-                    [<a href="<?php echo U('addNode',array('pid'=>$app['id'],'level'=>2));;?>">添加控制器</a>]
-                    [<a href="">修改</a>]
-                    [<a href="">删除</a>]
-                </p>
-                <?php if(is_array($app["child"])): foreach($app["child"] as $key=>$action): ?><dl>
-                        <dt>
-                            <strong><?php echo ($action["title"]); ?></strong>
-                            [<a href="<?php echo U('addNode',array('pid'=>$action['id'],'level'=>3) );;?>">添加方法</a>]
-                        </dt>
-                        <?php if(is_array($action["child"])): foreach($action["child"] as $key=>$method): ?><dd>
-                                <span><?php echo ($method["title"]); ?></span>
-                                [<a href="">修改</a>]
-                                [<a href="">删除</a>]
-                            </dd><?php endforeach; endif; ?>
-                    </dl><?php endforeach; endif; ?>
-            </div><?php endforeach; endif; ?>
-    </div>
+<form action="<?php echo U('setAccess');;?>" method="post">
+<div id='wrap'>
+    <a href="<?php echo U('role');;?>" class="add-app">返回</a>
+
+    <?php if(is_array($node)): foreach($node as $key=>$app): ?><div class='app'>
+            <p>
+                <strong><?php echo ($app["title"]); ?></strong>
+                <input type="checkbox" name="access[]"  level="1" value="<?php echo ($app["id"]); ?>_1"<?php if($app['access']): ?>checked="checked"<?php endif; ?>/>
+            </p>
+            <?php if(is_array($app["child"])): foreach($app["child"] as $key=>$action): ?><dl>
+                    <dt>
+                        <strong><?php echo ($action["title"]); ?></strong>
+                        <input type="checkbox" name="access[]" value="<?php echo ($action["id"]); ?>_2" level="2"<?php if($action['access']): ?>checked="checked"<?php endif; ?>/>
+                    </dt>
+                    <?php if(is_array($action["child"])): foreach($action["child"] as $key=>$method): ?><dd>
+                            <span><?php echo ($method["title"]); ?></span>
+                            <input type="checkbox" name="access[]" value="<?php echo ($method["id"]); ?>_3" level="3"<?php if($method['access']): ?>checked="checked"<?php endif; ?>/>
+                        </dd><?php endforeach; endif; ?>
+                </dl><?php endforeach; endif; ?>
+        </div><?php endforeach; endif; ?>
+</div>
+    <input type="hidden" name="rid" value="<?php echo ($rid); ?>"/>
+    <input type="submit" value="保存修改" style="display: block; margin: 20px auto;cursor:pointer;"/>
+</form>
 </body>
 
 </html>

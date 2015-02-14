@@ -36,19 +36,20 @@
 </head>
 <body>
 <dl>
-    <dt>文件上传</dt>
+    <dt>资料上传</dt>
     <dd><a href="<?php echo U('/Admin/Upload/index');?>">上传附件</a></dd>
+    <dd><a href="<?php echo U('/Admin/Upload/doc_list');?>">资料列表</a></dd>
 </dl>
 <dl>
     <dt>属性管理</dt>
-    <dd><a href="<?php echo U('/Admin/Attribute/index');?>">属性列表</a></dd>
-    <dd><a href="<?php echo U('/Admin/Attribute/addAttr');?>">添加属性</a></dd>
+    <dd><a href="<?php echo U('/Admin/NewsAttribute/index');?>">属性列表</a></dd>
+    <dd><a href="<?php echo U('/Admin/NewsAttribute/addAttr');?>">添加属性</a></dd>
 </dl>
 <dl>
     <dt>文章管理</dt>
-    <dd><a href="<?php echo U('/Home/Index/Blog');?>">文章列表</a></dd>
-    <dd><a href="<?php echo U('/Home/Index/index');;?>">添加文章</a></dd>
-    <dd><a href="<?php echo U('/Home/Index/trash');;?>">回收站</a></dd>
+    <dd><a href="<?php echo U('/Admin/News/index');?>">文章列表</a></dd>
+    <dd><a href="<?php echo U('/Admin/News/addNews');;?>">添加文章</a></dd>
+    <dd><a href="<?php echo U('/Admin/News/trash');;?>">回收站</a></dd>
 </dl>
 <dl>
     <dt>权限管理</dt>

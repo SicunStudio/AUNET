@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+<include file="Rbac::index"/>
+<table class="table">
+    <caption align="top">资料列表</caption>
+    <tr>
+        <th>文件名</th>
+        <th>上传时间</th>
+        <th>操作</th>
+    </tr>
+    <foreach name="doc" item="v">
+        <tr>
+            <td>{$v.remark}</td>
+            <td>{$v.time|date='y-m-d H:i',###}</td>
+            <td>
+            <a href="{:U('Download/index',array('id'=>$v['id']))}">下载</a>
+            </td>
+            <td>
+                <a href="{:U('remove',array('id'=>$v['id']))}">删除</a>
+            </td>
+        </tr>
+    </foreach>
+</table>
+
+</body>
+</html>

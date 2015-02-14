@@ -1,9 +1,6 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-</head>
+
 <body>
 <!DOCTYPE html>
 <html>
@@ -50,29 +47,24 @@
 
 </body>
 </html>
-    <table class="table"/>
-        <tr>
-            <th>ID</th>
-            <th>角色名稱</th>
-            <th>角色描述</th>
-            <th>開啟狀態</th>
-            <?php if(is_array($role)): foreach($role as $key=>$v): ?><tr>
-                    <td><?php echo ($v["id"]); ?></td>
-                    <td><?php echo ($v["name"]); ?></td>
-                    <td><?php echo ($v["remark"]); ?></td>
-                    <td>
-                        <?php if($v['status']): ?>開啟
-                        <?php else: ?>
-                                關閉<?php endif; ?>
-                    </td>
-                    <td>
-                        <a href="<?php echo U('access',array('rid'=>$v['id']));;?>">配置權限</a>
-                    </td>
+<table class="table">
+    <caption align="top">资料列表</caption>
+    <tr>
+        <th>文件名</th>
+        <th>上传时间</th>
+        <th>操作</th>
+    </tr>
+    <?php if(is_array($doc)): foreach($doc as $key=>$v): ?><tr>
+            <td><?php echo ($v["remark"]); ?></td>
+            <td><?php echo (date('y-m-d H:i',$v["time"])); ?></td>
+            <td>
+            <a href="<?php echo U('Download/index',array('id'=>$v['id']));?>">下载</a>
+            </td>
+            <td>
+                <a href="<?php echo U('remove',array('id'=>$v['id']));?>">删除</a>
+            </td>
+        </tr><?php endforeach; endif; ?>
+</table>
 
-                </tr><?php endforeach; endif; ?>
-        </tr>
-
-
-    </table>
 </body>
 </html>

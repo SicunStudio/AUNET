@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<js href="__PUBLIC__/js/jquery-2.0.2.js" />
+<js href="__PUBLIC__/ueditor/ueditor.config.js" />
+<js href="__PUBLIC__/ueditor/ueditor.all.min.js" />
+<script type="text/javascript" charset="utf-8" src="lang/zh-cn/zh-cn.js"></script>
+<script>
+    $(function(){
+        window.UEDITOR_CONFIG.initialFrameHeight=600;
+        window.UEDITOR_CONFIG.initialFrameWidth=1900;
+        var ue = UE.getEditor('content')
+    })
+</script>
+<body>
+
+<form action="{:U('addNewsHandle')}" method="post">
+    <table class="table">
+        <tr>
+            <th colspan="2">博文发布</th>
+        </tr>
+        <tr>
+            <td align="right" width="10%">所属分类</td>
+            <td>
+                <select name="cid">
+                    <option value="">===请选择分类===</option>
+                    <foreach name="cate" item="v">
+                        <option value="{$v.id}">{$v.html}{$v.name}</option>
+                    </foreach>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td align="right">博文属性</td>
+            <td>
+                <foreach name="attr" item="v">
+                    <label style="margin-right:10px;">
+                        <input type="checkbox" name="aid[]" value="{$v.id}"/>&nbsp{$v.name}
+                    </label>
+                </foreach>
+            </td>
+        </tr>
+        <tr>
+            <td align="right">标题</td>
+            <td>
+                <input type="text" name="title"/>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <textarea name="content" id="content"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" colspan="2">
+                <input type="submit" value="保存提交"/>
+            </td>
+        </tr>
+    </table>
+</form>
+
+
+</body>
+</html>
