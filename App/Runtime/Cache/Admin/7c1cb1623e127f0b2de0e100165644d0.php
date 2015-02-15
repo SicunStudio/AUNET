@@ -58,13 +58,13 @@
         <tr>
             <td align="right"><?php echo ($type); ?>名稱:</td>
             <td>
-                <input type="text" name="name"/>
+                <input type="text" name="name"<?php if(isset($node)): ?>value="<?php echo ($node["name"]); ?>"<?php endif; ?>/>
             </td>
         </tr>
         <tr>
             <td align="right"><?php echo ($type); ?>描述:</td>
             <td>
-                <input type="text" name="title"/>
+                <input type="text" name="title"<?php if(isset($node)): ?>value="<?php echo ($node['title']); ?>"<?php endif; ?>/>
             </td>
         </tr>
     <tr>
@@ -77,14 +77,15 @@
     <tr>
         <td align="right">排序</td>
         <td>
-            <input type="text" name="sort" value="1"/>
+            <input type="text" name="sort" value="1"<?php if(isset($node)): ?>value="<?php echo ($node['sort']); ?>"<?php endif; ?>/>
         </td>
     </tr>
     <tr>
         <td colspan="2" align="center">
             <input type="hidden" name="pid" value="<?php echo ($pid); ?>"/>
             <input type="hidden" name="level" value="<?php echo ($level); ?>"/>
-            <input type="submit" value="保存添加"/>
+            <input type="hidden" name="id" <?php if(isset($node)): ?>value="<?php echo ($node['id']); ?>"<?php endif; ?>/>
+            <input type="submit" <?php if(isset($node)): ?>value="保存修改"<?php else: ?>value="添加"<?php endif; ?>/>
         </td>
     </tr>
 

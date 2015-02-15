@@ -14,13 +14,13 @@
         <tr>
             <td align="right">{$type}名稱:</td>
             <td>
-                <input type="text" name="name"/>
+                <input type="text" name="name"<if condition="isset($node)">value="{$node.name}"</if>/>
             </td>
         </tr>
         <tr>
             <td align="right">{$type}描述:</td>
             <td>
-                <input type="text" name="title"/>
+                <input type="text" name="title"<if condition="isset($node)">value="{$node['title']}"</if>/>
             </td>
         </tr>
     <tr>
@@ -33,14 +33,15 @@
     <tr>
         <td align="right">排序</td>
         <td>
-            <input type="text" name="sort" value="1"/>
+            <input type="text" name="sort" value="1"<if condition="isset($node)">value="{$node['sort']}"</if>/>
         </td>
     </tr>
     <tr>
         <td colspan="2" align="center">
             <input type="hidden" name="pid" value="{$pid}"/>
             <input type="hidden" name="level" value="{$level}"/>
-            <input type="submit" value="保存添加"/>
+            <input type="hidden" name="id" <if condition="isset($node)">value="{$node['id']}"</if>/>
+            <input type="submit" <if condition="isset($node)">value="保存修改"<else />value="添加"</if>/>
         </td>
     </tr>
 

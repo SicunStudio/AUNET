@@ -28,9 +28,11 @@ class RbacController extends CommonController{
     public function node(){
         $field=array('id','name','title','pid');
         $node=M('node')->field($field)->order('sort')->select();
+//        $node=node_merge($node);dump($node);die;
         $this->node=node_merge($node);
         $this->display();
     }
+
     public function addUser(){
         $this->role=M('role')->select();
         $this->display();
@@ -82,8 +84,10 @@ class RbacController extends CommonController{
     }
 
     public function addNode(){
-        $this->pid=I('pid',0,'intval');
+//                dump(I('id'));die;
+
         $this->level=I('level',1,'intval');
+        $this->pid=I('pid',0,'intval');
         switch($this->level){
             case 1:
                 $this->type='应用';
@@ -95,16 +99,40 @@ class RbacController extends CommonController{
                 $this->type='动作方法';
                 break;
         }
-        $this->display();
-    }
-    public function addNodeHandle(){
+        if(I('id',0,'intval')!=0){
+            $id=I('id',0,'intval');
+//            dump($id);die;
+            $node=M('node')->where(array('id'=>$id))->select();
+            foreach($node as $v){
+                $this->node=$v;
+            }
 
-//        dump($_POST);
-        if(M('node')->add($_POST)){
-            $this->success('添加成功',U('Admin/Rbac/node'));
+//            dump($this->node);
+            $this->display();
         }else{
-            $this->error;
+            $this->display();
         }
+
+
+    }
+    //修改 OR 添加节点
+    public function addNodeHandle(){
+        $id=I('id',0,'intval');
+        if($id!=0){
+            $where=array('id'=>$id);
+            if(M('node')->where($where)->save($_POST)){
+                $this->success('修改成功',U('Admin/Rbac/node'));
+            }else{
+                $this->error();
+            }
+        }else{
+            if(M('node')->add($_POST)){
+                $this->success('添加成功',U('Admin/Rbac/node'));
+            }else{
+                $this->error;
+            }
+        }
+
     }
 
     public function access(){
@@ -152,9 +180,10 @@ class RbacController extends CommonController{
         }
 
     }
+
+
     public function lock(){
         $id=I('id',0,'intval');
-//        dump($id);die;
         $User=M('user');
         $data['lock']=1;
         if($User->where(array('id'=>$id))->save($data)){
@@ -181,7 +210,15 @@ class RbacController extends CommonController{
         }else{
             $this->error('修改失败');
         }
-//        dump(I('pwd','','md5'));
 
+    }
+    //删除节点
+    public function delNode(){
+        $id=I('id',0,'intval');
+        if(M('node')->delete($id)){
+            $this->success('删除成功');
+        }else{
+            $this->error('删除失败');
+        }
     }
 } 

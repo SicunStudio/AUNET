@@ -63,21 +63,19 @@
             <div class='app'>
                 <p>
                     <strong>{$app.title}</strong>
-                    [<a href="{:U('addNode',array('pid'=>$app['id'],'level'=>2));}">添加控制器</a>]
-                    [<a href="">修改</a>]
-                    [<a href="">删除</a>]
+                    [<a href="{:U('addNode',array('pid'=>$app['id'],'level'=>2))}">添加控制器</a>]
                 </p>
                 <foreach name="app.child" item="action">
                     <dl>
                         <dt>
                             <strong>{$action.title}</strong>
-                            [<a href="{:U('addNode',array('pid'=>$action['id'],'level'=>3)   );}">添加方法</a>]
+                            [<a href="{:U('addNode',array('pid'=>$action['id'],'level'=>3));}">添加方法</a>]
                         </dt>
                         <foreach name="action.child" item="method">
                             <dd>
                                 <span>{$method.title}</span>
-                                [<a href="">修改</a>]
-                                [<a href="">删除</a>]
+                                [<a href="{:U('addNode',array('id'=>$method['id'],'level'=>3,'pid'=>$action['id']))}">修改</a>]
+                                [<a href="{:U('delNode',array('id'=>$method['id']))}">删除</a>]
                             </dd>
                         </foreach>
                     </dl>
