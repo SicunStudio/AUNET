@@ -12,6 +12,8 @@ namespace Admin\Controller;
 class DownloadController extends CommonController{
     public function index(){
         $id=I('id',0,'intval');
-        downloadFileById($id);
+        if(!downloadFileById($id)){
+            $this->error('下载失败');
+        }
     }
 } 

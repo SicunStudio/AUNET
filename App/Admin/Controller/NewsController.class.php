@@ -118,7 +118,7 @@ class NewsController extends CommonController{
     //删除新闻
     public function delete(){
         $id=I('id','','intval');
-        D('NewsRelation')->relation('attr')->delete($id);
+        D('NewsRelation')->relation('attr')->where(array('id'=>$id))->delete();
         $this->display('index');
     }
     public function deleteAll(){

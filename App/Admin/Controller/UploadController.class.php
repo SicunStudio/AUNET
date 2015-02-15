@@ -23,7 +23,7 @@ class UploadController extends CommonController{
         $upload->exts=array('txt','doc','docx');
         $upload->rootPath='./Upload/UploadsDoc/';
         $upload->subName=$_SESSION['username'];
-        $path=$upload->rootPath.$upload->subName;
+        $path=$upload->rootPath.$upload->subName.'/';
         if(!file_exists($path)){
             mkdir($path);
         }
