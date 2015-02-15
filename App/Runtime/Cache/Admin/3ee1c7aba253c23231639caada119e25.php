@@ -55,16 +55,10 @@
             <th>ID</th>
             <th>角色名稱</th>
             <th>角色描述</th>
-            <th>開啟狀態</th>
             <?php if(is_array($role)): foreach($role as $key=>$v): ?><tr>
                     <td><?php echo ($v["id"]); ?></td>
                     <td><?php echo ($v["name"]); ?></td>
                     <td><?php echo ($v["remark"]); ?></td>
-                    <td>
-                        <?php if($v['status']): ?>開啟
-                        <?php else: ?>
-                                關閉<?php endif; ?>
-                    </td>
                     <td>
                         <a href="<?php echo U('access',array('rid'=>$v['id']));;?>">配置權限</a>
                     </td>

@@ -181,17 +181,20 @@ class RbacController extends CommonController{
 
     }
 
-
-    public function lock(){
-        $id=I('id',0,'intval');
-        $User=M('user');
-        $data['lock']=1;
-        if($User->where(array('id'=>$id))->save($data)){
-            $this->success('锁定成功');
-        }else{
-            $this->error('锁定失败');
+    //锁定 OR 解锁用户
+    public function lock()
+    {
+        $id = I('id', 0, 'intval');
+        $User = M('user');
+        $data['lock']=I('lock')?0:1;
+        $msg=I('lock')?'解锁':'锁定';
+        if ($User->where(array('id' => $id))->save($data)) {
+            $this->success($msg.'成功');
+        } else {
+            $this->error($msg.'失败');
         }
     }
+
     public function editpwd(){
         $this->id=I('id','0','intval');
         $this->display();

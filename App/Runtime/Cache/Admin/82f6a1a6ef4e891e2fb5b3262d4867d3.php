@@ -79,7 +79,7 @@
                 <a href="<?php echo U('editpwd',array('id'=>$v['id']));?>">修改密码</a>
             </td>
             <td>
-                <a href="<?php echo U('lock',array('id'=>$v['id']));?>">锁定</a>
+                <a href="<?php echo U('lock',array('id'=>$v['id'],'lock'=>$v['lock']));?>"><?php if($v['lock']): ?>解锁<?php else: ?>锁定<?php endif; ?></a>
             </td>
         </tr><?php endforeach; endif; ?>
 </table>

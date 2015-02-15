@@ -11,19 +11,11 @@
             <th>ID</th>
             <th>角色名稱</th>
             <th>角色描述</th>
-            <th>開啟狀態</th>
             <foreach name="role" item="v">
                 <tr>
                     <td>{$v.id}</td>
                     <td>{$v.name}</td>
                     <td>{$v.remark}</td>
-                    <td>
-                        <if condition="$v['status']">
-                                開啟
-                        <else/>
-                                關閉
-                        </if>
-                    </td>
                     <td>
                         <a href="{:U('access',array('rid'=>$v['id']));}">配置權限</a>
                     </td>

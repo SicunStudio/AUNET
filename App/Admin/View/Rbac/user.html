@@ -39,7 +39,7 @@
                 <a href="{:U('editpwd',array('id'=>$v['id']))}">修改密码</a>
             </td>
             <td>
-                <a href="{:U('lock',array('id'=>$v['id']))}">锁定</a>
+                <a href="{:U('lock',array('id'=>$v['id'],'lock'=>$v['lock']))}"><if condition="$v['lock']">解锁<else />锁定</if></a>
             </td>
         </tr>
     </foreach>
