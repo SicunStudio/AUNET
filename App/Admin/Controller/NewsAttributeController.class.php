@@ -16,18 +16,46 @@ namespace Admin\Controller;
    yISAM default charset=utf8;
  */
 class NewsAttributeController extends CommonController{
-    public function index(){
+    public function attr_index(){
         $this->attr=M('attr')->select();
         $this->display();
     }
     public function addAttr(){
         $this->display();
     }
+    //添加 OR 编辑属性
     public function runAddAttr(){
-        if(M('attr')->add($_POST)){
-            $this->success('添加成功','index');
+//        dump($_POST);die;
+        $attr=M('attr');
+        if(I('id',0,'intval')){
+            if($attr->save($_POST)){
+                $this->success('修改成功',U('attr_index'));
+            }else{
+                $this->error('修改失败');
+            }
         }else{
-            $this->error('添加失败');
+            if($attr->add($_POST)){
+                $this->success('添加成功',U('attr_index'));
+            }else{
+                $this->error('添加失败');
+            }
+        }
+    }
+
+
+    public function editAttr(){
+        $id=I('id',0,'intval');
+//        dump($id);die;
+        $this->attr=M('attr')->where(array('id'=>$id))->find();
+        $this->display('addAttr');
+    }
+    //删除属性
+    public function deleteAttr(){
+        $id=I('id',0,'intval');
+        if(M('attr')->delete($id)){
+            $this->success('删除成功',U('attr_index'));
+        }else{
+            $this->error('删除失败');
         }
     }
 

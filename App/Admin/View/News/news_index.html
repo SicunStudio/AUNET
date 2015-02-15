@@ -5,7 +5,7 @@
     <title></title>
 </head>
 <body>
-    <include file="Rbac:index"/>
+    <include file="Rbac:rbac_index"/>
     <table class="table">
         <tr>
             <th>ID</th>
@@ -23,7 +23,7 @@
                 <td width="12%">{$v.cate}</td>
                 <td width="12%">{$v.time|date='y-m-d H:i',###}</td>
                 <td width="18%" align="center">
-                    <if condition="ACTION_NAME eq 'index'">
+                    <if condition="ACTION_NAME eq 'news_index'">
                         [<a href="{:U('edit',array('id'=>$v['id']))}">修改</a>]
                         [<a href="{:U('toTrash',array('id'=>$v['id'],'type'=>1))}">删除</a>]
                         <else/>

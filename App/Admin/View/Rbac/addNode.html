@@ -5,7 +5,7 @@
     <title></title>
 </head>
 <body>
-<include file="index"/>
+<include file="rbac_index"/>
     <form action="{:U('addNodeHandle');}" method="post">
     <table class="table">
         <tr>
@@ -21,6 +21,13 @@
             <td align="right">{$type}描述:</td>
             <td>
                 <input type="text" name="title"<if condition="isset($node)">value="{$node['title']}"</if>/>
+            </td>
+        </tr>
+        <tr>
+            <td align="right">是否开启:</td>
+            <td>
+                <input type="radio" name='status' value='1' checked='checked'/>&nbsp;开启&nbsp;
+                <input type="radio" name='status' value='0'/>&nbsp;关闭
             </td>
         </tr>
     <tr>

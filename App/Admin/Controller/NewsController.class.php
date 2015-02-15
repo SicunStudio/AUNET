@@ -23,7 +23,7 @@ class NewsController extends CommonController{
 
 
     //新闻列表
-    public function index(){
+    public function news_index(){
         $this->news=D('NewsRelation')->getNews();
         $this->display();
     }
@@ -50,7 +50,7 @@ class NewsController extends CommonController{
                 }
             }
             if(D('NewsRelation')->where(array('id'=>I('id')))->relation(true)->save($data)){
-                $this->success('修改成功',U('index'));
+                $this->success('修改成功',U('news_index'));
             }else{
                 $this->error('修改失败');
             }
@@ -68,7 +68,7 @@ class NewsController extends CommonController{
             }
 
             if(D('NewsRelation')->relation(true)->add($data)){
-                $this->success('添加成功',U('index'));
+                $this->success('添加成功',U('news_index'));
             }else{
                 $this->error('添加失败');
             }
@@ -87,7 +87,7 @@ class NewsController extends CommonController{
             'del'=>$type,
         );
         if(M('news')->save($update)){
-            $this->success($msg.'成功',U('index'));
+            $this->success($msg.'成功',U('news_index'));
         }else{
             $this->error($msg.'失败');
         }
@@ -111,7 +111,7 @@ class NewsController extends CommonController{
     //回收站页面
     public function trash(){
         $this->news=D('NewsRelation')->getNews(1);
-        $this->display('index');
+        $this->display('news_index');
     }
 
 

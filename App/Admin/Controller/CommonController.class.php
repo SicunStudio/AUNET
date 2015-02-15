@@ -14,7 +14,6 @@ class CommonController extends Controller{
         if(!isset($_SESSION[C('USER_AUTH_KEY')])){
             $this->redirect('Admin/Index/index');
         }
-        import('Org.Util.Rbac');
         if(Rbac::checkAccess()){
 
             Rbac::AccessDecision()||$this->error('没有权限');

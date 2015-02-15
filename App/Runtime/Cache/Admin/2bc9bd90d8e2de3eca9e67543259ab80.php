@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title></title>
 </head>
-<body>
 <!DOCTYPE html>
 <html>
 <head lang="en">
@@ -67,48 +66,25 @@
 
 </body>
 </html>
-    <form action="<?php echo U('addNodeHandle');;?>" method="post">
-    <table class="table">
-        <tr>
-            <th colspan="2">添加節點</th>
-        </tr>
-        <tr>
-            <td align="right"><?php echo ($type); ?>名稱:</td>
-            <td>
-                <input type="text" name="name"<?php if(isset($node)): ?>value="<?php echo ($node["name"]); ?>"<?php endif; ?>/>
-            </td>
-        </tr>
-        <tr>
-            <td align="right"><?php echo ($type); ?>描述:</td>
-            <td>
-                <input type="text" name="title"<?php if(isset($node)): ?>value="<?php echo ($node['title']); ?>"<?php endif; ?>/>
-            </td>
-        </tr>
-        <tr>
-            <td align="right">是否开启:</td>
-            <td>
-                <input type="radio" name='status' value='1' checked='checked'/>&nbsp;开启&nbsp;
-                <input type="radio" name='status' value='0'/>&nbsp;关闭
-            </td>
-        </tr>
+<body>
+<table class="table">
     <tr>
-        <td align="right">排序</td>
-        <td>
-            <input type="text" name="sort" value="1"<?php if(isset($node)): ?>value="<?php echo ($node['sort']); ?>"<?php endif; ?>/>
-        </td>
+        <th>ID</th>
+        <th>属性名称</th>
+        <th>颜色</th>
+        <th>操作</th>
     </tr>
-    <tr>
-        <td colspan="2" align="center">
-            <input type="hidden" name="pid" value="<?php echo ($pid); ?>"/>
-            <input type="hidden" name="level" value="<?php echo ($level); ?>"/>
-            <input type="hidden" name="id" <?php if(isset($node)): ?>value="<?php echo ($node['id']); ?>"<?php endif; ?>/>
-            <input type="submit" <?php if(isset($node)): ?>value="保存修改"<?php else: ?>value="添加"<?php endif; ?>/>
-        </td>
-    </tr>
-
-
-
-    </table>
-    </form>
+    <?php if(is_array($attr)): foreach($attr as $key=>$v): ?><tr>
+            <td><?php echo ($v["id"]); ?></td>
+            <td><?php echo ($v["name"]); ?></td>
+            <td>
+                <div style="width: 20px;height: 20px;background: <?php echo ($v["color"]); ?>"></div>
+            </td>
+            <td>
+                [<a href="<?php echo U('editAttr',array('id'=>$v['id']));?>">修改</a>]
+                [<a href="<?php echo U('deleteAttr',array('id'=>$v['id']));?>">删除</a>]
+            </td>
+        </tr><?php endforeach; endif; ?>
+</table>
 </body>
 </html>

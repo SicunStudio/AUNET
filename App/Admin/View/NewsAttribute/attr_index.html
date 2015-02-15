@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title></title>
 </head>
-<include file="Rbac:index"/>
+<include file="Rbac:rbac_index"/>
 <body>
 <table class="table">
     <tr>
@@ -21,8 +21,8 @@
                 <div style="width: 20px;height: 20px;background: {$v.color}"></div>
             </td>
             <td>
-                [<a href="">修改</a>]
-                [<a href="">删除</a>]
+                [<a href="{:U('editAttr',array('id'=>$v['id']))}">修改</a>]
+                [<a href="{:U('deleteAttr',array('id'=>$v['id']))}">删除</a>]
             </td>
         </tr>
     </foreach>

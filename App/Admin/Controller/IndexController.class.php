@@ -37,7 +37,8 @@ class IndexController extends Controller {
 
         import('Org.Util.Rbac');
         Rbac::saveAccessList();
-        $this->redirect('Admin/Rbac/index');
+//        dump($_SESSION);die;
+        $this->redirect('Admin/Rbac/rbac_index');
 
     }
     public function verify(){

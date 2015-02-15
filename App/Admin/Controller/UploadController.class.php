@@ -12,7 +12,7 @@ namespace Admin\Controller;
 use Think\Upload;
 
 class UploadController extends CommonController{
-    public function index(){
+    public function upload_index(){
         $this->display();
     }
 

@@ -18,7 +18,7 @@ use Admin\Util\Category;
  * 无限级分类
  */
 class CategoryController extends CommonController{
-    public function index(){
+    public function cate_index(){
         import('Util.Category',APP_PATH);
         $cate=M('cate')->order('sort')->select();
         $this->cate=Category::unlimitedForLevel($cate);
@@ -30,10 +30,19 @@ class CategoryController extends CommonController{
         $this->display();
     }
     public function runAddCate(){
-        if(M('cate')->add($_POST)){
-            $this->success('操作成功',U('index'));
+//        dump(I('id',0,'intval'));die;
+        if(I('id',0,'intval')){
+            if(M('cate')->save($_POST)){
+                $this->success('修改成功',U('cate_index'));
+            }else{
+                $this->error('修改失败');
+            }
         }else{
-            $this->error('操作失败');
+            if(M('cate')->add($_POST)){
+                $this->success('操作成功',U('cate_index'));
+            }else{
+                $this->error('操作失败');
+            }
         }
 
     }
@@ -43,6 +52,28 @@ class CategoryController extends CommonController{
         foreach($_POST as $id=>$sort){
             $db->where(array('id'=>$id))->setField('sort',$sort);
         }
-        $this->redirect('Admin/Category/index');
+        $this->redirect('Admin/Category/cate_index');
+    }
+    //编辑分类
+    public function editCate(){
+        $id=I('id',0,'intval');
+        $this->cate=M('cate')->where(array('id'=>$id))->find();
+//        dump($this->cate);die;
+        $this->display('addCate');
+    }
+
+    //删除分类及其子分类
+    public function deleteCate(){
+        $id=I('id',0,'intval');
+        $Cate=M('cate');
+        $cate=$Cate->order('sort')->select();
+        $arr=Category::getChildsId($cate,$id);
+        $arr[]=$id;
+//        dump($arr);die;
+        foreach($arr as $v=>$k){
+            $Cate->delete($k);
+        }
+        $this->success('删除成功',U('cate_index'));
+
     }
 } 

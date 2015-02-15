@@ -67,48 +67,31 @@
 
 </body>
 </html>
-    <form action="<?php echo U('addNodeHandle');;?>" method="post">
+<form action="<?php echo U('runAddAttr');?>" method="post">
     <table class="table">
         <tr>
-            <th colspan="2">添加節點</th>
+            <th colspan="2"><?php if($attr['id']): ?>修改博文属性<?php else: ?>添加博文属性<?php endif; ?></th>
         </tr>
         <tr>
-            <td align="right"><?php echo ($type); ?>名稱:</td>
+            <td align="right">属性名称</td>
             <td>
-                <input type="text" name="name"<?php if(isset($node)): ?>value="<?php echo ($node["name"]); ?>"<?php endif; ?>/>
+                <input type="text" name="name"<?php if($attr['id']): ?>value="<?php echo ($attr["name"]); ?>"<?php endif; ?> />
             </td>
         </tr>
         <tr>
-            <td align="right"><?php echo ($type); ?>描述:</td>
+            <td align="right">标题颜色</td>
             <td>
-                <input type="text" name="title"<?php if(isset($node)): ?>value="<?php echo ($node['title']); ?>"<?php endif; ?>/>
+                <input type="text" name="color"<?php if($attr['id']): ?>value="<?php echo ($attr["color"]); ?>"<?php endif; ?>/>
             </td>
         </tr>
         <tr>
-            <td align="right">是否开启:</td>
-            <td>
-                <input type="radio" name='status' value='1' checked='checked'/>&nbsp;开启&nbsp;
-                <input type="radio" name='status' value='0'/>&nbsp;关闭
+            <td colspan="2" align="center">
+                <input type="hidden" name="id" <?php if($attr['id']): ?>value="<?php echo ($attr["id"]); ?>"<?php endif; ?>/>
+                <input type="submit"<?php if($attr['id']): ?>value="保存修改"<?php else: ?>value="添加属性"<?php endif; ?>/>
             </td>
         </tr>
-    <tr>
-        <td align="right">排序</td>
-        <td>
-            <input type="text" name="sort" value="1"<?php if(isset($node)): ?>value="<?php echo ($node['sort']); ?>"<?php endif; ?>/>
-        </td>
-    </tr>
-    <tr>
-        <td colspan="2" align="center">
-            <input type="hidden" name="pid" value="<?php echo ($pid); ?>"/>
-            <input type="hidden" name="level" value="<?php echo ($level); ?>"/>
-            <input type="hidden" name="id" <?php if(isset($node)): ?>value="<?php echo ($node['id']); ?>"<?php endif; ?>/>
-            <input type="submit" <?php if(isset($node)): ?>value="保存修改"<?php else: ?>value="添加"<?php endif; ?>/>
-        </td>
-    </tr>
-
-
 
     </table>
-    </form>
+</form>
 </body>
 </html>

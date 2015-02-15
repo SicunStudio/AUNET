@@ -5,26 +5,35 @@
     <title></title>
 </head>
 <body>
-<include file="index"/>
-    <table class="table"/>
-        <tr>
-            <th>ID</th>
-            <th>角色名稱</th>
-            <th>角色描述</th>
-            <foreach name="role" item="v">
-                <tr>
-                    <td>{$v.id}</td>
-                    <td>{$v.name}</td>
-                    <td>{$v.remark}</td>
-                    <td>
-                        <a href="{:U('access',array('rid'=>$v['id']));}">配置權限</a>
-                    </td>
 
-                </tr>
-            </foreach>
-        </tr>
+<include file="rbac_index"/>
+<div>
+    <table class="table"/>
+    <caption align="top">角色列表</caption>
+    <tr>
+        <th>ID</th>
+        <th>角色名稱</th>
+        <th>角色描述</th>
+        <th>开启状态</th>
+        <foreach name="role" item="v">
+            <tr>
+                <td>{$v.id}</td>
+                <td>{$v.name}</td>
+                <td>{$v.remark}</td>
+                <td>
+                    <if condition="$v['status']">开启<else/>关闭</if>
+                </td>
+                <td>
+                    <a href="{:U('access',array('rid'=>$v['id']));}">配置權限</a>
+                </td>
+
+            </tr>
+        </foreach>
+    </tr>
 
 
     </table>
+</div>
+
 </body>
 </html>

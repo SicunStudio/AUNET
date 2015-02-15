@@ -5,7 +5,7 @@
     <title></title>
 </head>
 <body>
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html>
 <head lang="en">
     <meta charset="UTF-8">
@@ -67,48 +67,32 @@
 
 </body>
 </html>
-    <form action="<?php echo U('addNodeHandle');;?>" method="post">
     <table class="table">
         <tr>
-            <th colspan="2">添加節點</th>
+            <th>ID</th>
+            <th>标题</th>
+            <th>所属分类</th>
+            <th>发布时间</th>
+            <th>操作</th>
         </tr>
-        <tr>
-            <td align="right"><?php echo ($type); ?>名稱:</td>
-            <td>
-                <input type="text" name="name"<?php if(isset($node)): ?>value="<?php echo ($node["name"]); ?>"<?php endif; ?>/>
-            </td>
-        </tr>
-        <tr>
-            <td align="right"><?php echo ($type); ?>描述:</td>
-            <td>
-                <input type="text" name="title"<?php if(isset($node)): ?>value="<?php echo ($node['title']); ?>"<?php endif; ?>/>
-            </td>
-        </tr>
-        <tr>
-            <td align="right">是否开启:</td>
-            <td>
-                <input type="radio" name='status' value='1' checked='checked'/>&nbsp;开启&nbsp;
-                <input type="radio" name='status' value='0'/>&nbsp;关闭
-            </td>
-        </tr>
-    <tr>
-        <td align="right">排序</td>
-        <td>
-            <input type="text" name="sort" value="1"<?php if(isset($node)): ?>value="<?php echo ($node['sort']); ?>"<?php endif; ?>/>
-        </td>
-    </tr>
-    <tr>
-        <td colspan="2" align="center">
-            <input type="hidden" name="pid" value="<?php echo ($pid); ?>"/>
-            <input type="hidden" name="level" value="<?php echo ($level); ?>"/>
-            <input type="hidden" name="id" <?php if(isset($node)): ?>value="<?php echo ($node['id']); ?>"<?php endif; ?>/>
-            <input type="submit" <?php if(isset($node)): ?>value="保存修改"<?php else: ?>value="添加"<?php endif; ?>/>
-        </td>
-    </tr>
+        <?php if(is_array($news)): foreach($news as $key=>$v): ?><tr>
+                <td width="8%"><?php echo ($v["id"]); ?></td>
+                <td><a href="<?php echo U('Text',array('id'=>$v['id']));?>" ><?php echo ($v["title"]); ?></a><?php if(is_array($v["attr"])): foreach($v["attr"] as $key=>$value): ?><strong style='color:<?php echo ($value["color"]); ?>'>[<?php echo ($value["name"]); ?>]</strong><?php endforeach; endif; ?></td>
+                <td width="12%"><?php echo ($v["cate"]); ?></td>
+                <td width="12%"><?php echo (date('y-m-d H:i',$v["time"])); ?></td>
+                <td width="18%" align="center">
+                    <?php if(ACTION_NAME == 'news_index'): ?>[<a href="<?php echo U('edit',array('id'=>$v['id']));?>">修改</a>]
+                        [<a href="<?php echo U('toTrash',array('id'=>$v['id'],'type'=>1));?>">删除</a>]
+                        <?php else: ?>
+                        [<a href="<?php echo U('toTrash',array('id'=>$v['id'],'type'=>0));?>">还原</a>]
+                        [<a href="<?php echo U('delete',array('id'=>$v['id']));?>">彻底删除</a>]<?php endif; ?>
 
-
+                </td>
+            </tr><?php endforeach; endif; ?>
 
     </table>
-    </form>
+    <?php if(ACTION_NAME == 'trash'): ?><td colspan="5" align="center">
+            [<a href="<?php echo U('deleteAll');?>">清空回收站</a>]
+        </td><?php endif; ?>
 </body>
 </html>

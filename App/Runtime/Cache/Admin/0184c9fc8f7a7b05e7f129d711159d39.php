@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <title></title>
 </head>
-<script type="text/javascript" src="/AUNET/Public/js/jquery-2.0.2.js"></script>
-<script type="text/javascript" src="/AUNET/Public/ueditor/ueditor.config.js"></script>
-<script type="text/javascript" src="/AUNET/Public/ueditor/ueditor.all.min.js"></script>
+<script type="text/javascript" src="/aunet/Public/js/jquery-2.0.2.js"></script>
+<script type="text/javascript" src="/aunet/Public/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" src="/aunet/Public/ueditor/ueditor.all.min.js"></script>
 <script type="text/javascript" charset="utf-8" src="lang/zh-cn/zh-cn.js"></script>
 <script>
     $(function(){

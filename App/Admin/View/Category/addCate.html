@@ -5,7 +5,7 @@
     <title></title>
 </head>
 <body>
-<include file="Rbac::index"/>
+<include file="Rbac::rbac_index"/>
 <form action="{:U('runAddCate')}" method="post">
     <table class="table">
         <tr>
@@ -14,19 +14,20 @@
         <tr>
             <td align="right">分类栏目名称</td>
             <td>
-                <input type="text" name="name"/>
+                <input type="text" name="name" <if condition="$cate['id']">value="{$cate.name}"</if>/>
             </td>
         </tr>
         <tr>
             <td align="right">排序:</td>
             <td>
-                <input type="text" name="sort" value="100"/>
+                <input type="text" name="sort" <if condition="$cate['id']">value="{$cate.sort}"<else/>value="100"</if>/>
             </td>
         </tr>
         <tr>
             <td colspan="2" align="center">
-                <input type="hidden" name="pid" value="{$pid}"/>
-                <input type="submit" value="保存添加"/>
+                <input type="hidden" name="id" <if condition="$cate['id']">value="{$cate.id}"</if>/>
+                <input type="hidden" name="pid" <if condition="$cate['id']">value="{$cate.pid}"<else/>value="{$pid}"</if>/>
+                <input type="submit" <if condition="$cate['id']">value="保存修改"<else/>value="保存添加"</if>/>
             </td>
         </tr>
     </table>

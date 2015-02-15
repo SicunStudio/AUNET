@@ -28,7 +28,7 @@
    })
 </script>
 <body>
-<include file="index"/>
+<include file="rbac_index"/>
 <form action="{:U('addUserHandle');}" method="post">
 <table class="table">
     <tr>
@@ -52,7 +52,8 @@
             <select name="role_id[]">
                 <option value="">请选择角色</option>
                 <foreach name="role" item="v">
-                    <option value="{$v['id']}">{$v.name}({$v.remark})</option>
+                <if condition="$v['status']">  <option value="{$v['id']}">{$v.name}({$v.remark})</option>
+                </if>
                 </foreach>
             </select>
             <span class="add_role">添加一个角色</span>

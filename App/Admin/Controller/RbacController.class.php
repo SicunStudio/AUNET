@@ -15,7 +15,7 @@ class RbacController extends CommonController{
         session_destroy();
         $this->redirect('Admin/Index/index');
     }
-    public function index(){
+    public function rbac_index(){
 
 //        die;
         $this->display();
@@ -26,10 +26,10 @@ class RbacController extends CommonController{
 //        dump($this->role);die;
     }
     public function node(){
-        $field=array('id','name','title','pid');
+        $field=array('id','name','title','pid','status');
         $node=M('node')->field($field)->order('sort')->select();
-//        $node=node_merge($node);dump($node);die;
         $this->node=node_merge($node);
+//        dump($this->node);die;
         $this->display();
     }
 
@@ -64,7 +64,7 @@ class RbacController extends CommonController{
              * 添加用户-角色关系
              */
             if(M('role_user')->addAll($role)){
-                $this->success('添加成功',U('index'));
+                $this->success('添加成功',U('rbac_index'));
             }else{
                 $this->error('添加失败');
             }
@@ -84,7 +84,6 @@ class RbacController extends CommonController{
     }
 
     public function addNode(){
-//                dump(I('id'));die;
 
         $this->level=I('level',1,'intval');
         $this->pid=I('pid',0,'intval');
@@ -102,11 +101,8 @@ class RbacController extends CommonController{
         if(I('id',0,'intval')!=0){
             $id=I('id',0,'intval');
 //            dump($id);die;
-            $node=M('node')->where(array('id'=>$id))->select();
-            foreach($node as $v){
-                $this->node=$v;
-            }
-
+            $node=M('node')->where(array('id'=>$id))->find();
+            $this->node=$node;
 //            dump($this->node);
             $this->display();
         }else{
@@ -123,13 +119,13 @@ class RbacController extends CommonController{
             if(M('node')->where($where)->save($_POST)){
                 $this->success('修改成功',U('Admin/Rbac/node'));
             }else{
-                $this->error();
+                $this->error('修改失败');
             }
         }else{
             if(M('node')->add($_POST)){
                 $this->success('添加成功',U('Admin/Rbac/node'));
             }else{
-                $this->error;
+                $this->error('添加失败');
             }
         }
 
@@ -145,7 +141,7 @@ class RbacController extends CommonController{
         $access=M('access')->where(array('role_id'=>$rid))->getField('node_id',true);
 
         $this->node=node_merge($node,$access);
-//        dump($node);die;
+//        dump($this->node);die;
 
 
         $this->rid=$rid;
@@ -155,7 +151,7 @@ class RbacController extends CommonController{
      * 设置权限
      */
     public function setAccess(){
-//        dump($_POST);
+//        dump($_POST);die;
         $rid=I('rid',0,'intval');
 //        dump($rid);die;
         $db=M('access');
@@ -209,7 +205,7 @@ class RbacController extends CommonController{
             $this->error('请不要输入原来的密码');
         }
         if(M('user')->where($where)->save($data)){
-            $this->success('修改成功','index');
+            $this->success('修改成功','rbac_index');
         }else{
             $this->error('修改失败');
         }
