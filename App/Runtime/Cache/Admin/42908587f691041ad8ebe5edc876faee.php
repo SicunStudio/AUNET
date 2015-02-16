@@ -52,7 +52,6 @@
         <dd><a href="<?php echo U('/Admin/Rbac/user');;?>">用户列表</a></dd>
         <dd><a href="<?php echo U('/Admin/Rbac/node');;?>">节点列表</a></dd>
         <dd><a href="<?php echo U('/Admin/Rbac/addRole');;?>">添加角色</a></dd>
-        <dd><a href="<?php echo U('/Admin/Rbac/addNode');;?>">添加节点</a></dd>
         <dd><a href="<?php echo U('/Admin/Rbac/addUser');;?>">添加用户</a></dd>
         <dd><a href="<?php echo U('/Admin/Rbac/logout');;?>">退出登录</a></dd>
     </dl>

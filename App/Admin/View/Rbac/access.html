@@ -6,7 +6,6 @@
 </head>
 <style type="text/css">
     #wrap{
-        width:94%;
         height: auto;
         overflow: hidden;
         margin: 20px auto;
@@ -69,37 +68,44 @@
     });
 </script>
 <body>
-<include file="rbac_index"/>
-<form action="{:U('setAccess');}" method="post">
-<div id='wrap'>
-    <a href="{:U('role');}" class="add-app">返回</a>
+<div>
+    <include file="rbac_index"/>
+    <div>
+        <form action="{:U('setAccess');}" method="post">
+            <div id='wrap'>
+                <a href="{:U('role');}" class="add-app">返回</a>
 
-    <foreach name="node" item="app">
-        <div class='app'>
-            <p>
-                <strong>{$app.title}</strong>
-                <input type="checkbox" name="access[]"  level="1" value="{$app.id}_1"<if condition="$app['access']">checked="checked"</if>/>
-            </p>
-            <foreach name="app.child" item="action">
-                <dl>
-                    <dt>
-                        <strong>{$action.title}</strong>
-                        <input type="checkbox" name="access[]" value="{$action.id}_2" level="2"<if condition="$action['access']">checked="checked"</if>/>
-                    </dt>
-                    <foreach name="action.child" item="method">
-                        <dd>
-                            <span>{$method.title}</span>
-                            <input type="checkbox" name="access[]" value="{$method.id}_3" level="3"<if condition="$method['access']">checked="checked"</if>/>
-                        </dd>
-                    </foreach>
-                </dl>
-            </foreach>
-        </div>
-    </foreach>
+                <foreach name="node" item="app">
+                    <div class='app'>
+                        <p>
+                            <strong>{$app.title}</strong>
+                            <input type="checkbox" name="access[]"  level="1" value="{$app.id}_1"<if condition="$app['access']">checked="checked"</if>/>
+                        </p>
+                        <foreach name="app.child" item="action">
+                            <dl>
+                                <dt>
+                                    <strong>{$action.title}</strong>
+                                    <input type="checkbox" name="access[]" value="{$action.id}_2" level="2"<if condition="$action['access']">checked="checked"</if>/>
+                                </dt>
+                                <foreach name="action.child" item="method">
+                                    <dd>
+                                        <span>{$method.title}</span>
+                                        <input type="checkbox" name="access[]" value="{$method.id}_3" level="3"<if condition="$method['access']">checked="checked"</if>/>
+                                    </dd>
+                                </foreach>
+                            </dl>
+                        </foreach>
+                    </div>
+                </foreach>
+            </div>
+            <input type="hidden" name="rid" value="{$rid}"/>
+            <input type="submit" value="保存修改" style="display: block; margin: 20px auto;cursor:pointer;"/>
+        </form>
+    </div>
+
 </div>
-    <input type="hidden" name="rid" value="{$rid}"/>
-    <input type="submit" value="保存修改" style="display: block; margin: 20px auto;cursor:pointer;"/>
-</form>
+
+
 </body>
 
 </html>

@@ -70,31 +70,13 @@
 
 </body>
 </html>
-<form action="<?php echo U('runAddCate');?>" method="post">
-    <table class="table">
+    <form action="<?php echo U('editpwdHandle');?>" method="post">
         <tr>
-            <th colspan="2">添加栏目分类</th>
+            <td>修改密码</td>
+            <td><input type="password" name="password"/></td>
         </tr>
-        <tr>
-            <td align="right">分类栏目名称</td>
-            <td>
-                <input type="text" name="name" <?php if($cate['id']): ?>value="<?php echo ($cate["name"]); ?>"<?php endif; ?>/>
-            </td>
-        </tr>
-        <tr>
-            <td align="right">排序:</td>
-            <td>
-                <input type="text" name="sort" <?php if($cate['id']): ?>value="<?php echo ($cate["sort"]); ?>"<?php else: ?>value="100"<?php endif; ?>/>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2" align="center">
-                <input type="hidden" name="id" <?php if($cate['id']): ?>value="<?php echo ($cate["id"]); ?>"<?php endif; ?>/>
-                <input type="hidden" name="pid" <?php if($cate['id']): ?>value="<?php echo ($cate["pid"]); ?>"<?php else: ?>value="<?php echo ($pid); ?>"<?php endif; ?>/>
-                <input type="submit" <?php if($cate['id']): ?>value="保存修改"<?php else: ?>value="保存添加"<?php endif; ?>/>
-            </td>
-        </tr>
-    </table>
-</form>
+        <input type="hidden" name="id" value="<?php echo ($id); ?>"/>
+        <input type="submit" value="确认修改"/>
+    </form>
 </body>
 </html>

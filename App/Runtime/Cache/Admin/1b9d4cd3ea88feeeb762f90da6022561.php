@@ -51,50 +51,53 @@
         <dd><a href="<?php echo U('/Admin/Rbac/role');;?>">角色列表</a></dd>
         <dd><a href="<?php echo U('/Admin/Rbac/user');;?>">用户列表</a></dd>
         <dd><a href="<?php echo U('/Admin/Rbac/node');;?>">节点列表</a></dd>
-
+        <dd><a href="<?php echo U('/Admin/Rbac/logout');;?>">退出登录</a></dd>
     </dl>
     <dl>
         <dt>分类管理</dt>
         <dd><a href="<?php echo U('/Admin/Category/addCate');;?>">添加分类</a></dd>
         <dd><a href="<?php echo U('/Admin/Category/cate_index');;?>">分类列表</a></dd>
     </dl>
-    <dl>
-        <dt>账户管理</dt>
-        <dd><a href="<?php echo U('/Admin/Rbac/editpwdByUser');?>">修改密码</a></dd>
-        <dd><a href="<?php echo U('/Admin/Rbac/logout');;?>">退出登录</a></dd>
-    </dl>
-
 </div>
 
 
 
 </body>
 </html>
-<form action="<?php echo U('runAddCate');?>" method="post">
-    <table class="table">
+<form action="<?php echo U('addRoleHandle');;?>" method="post"/>
+    <table class="table"/>
+
         <tr>
-            <th colspan="2">添加栏目分类</th>
+            <th colspan="2">添加角色</th>
         </tr>
+
         <tr>
-            <td align="right">分类栏目名称</td>
+            <td align="right">角色名称:</td>
             <td>
-                <input type="text" name="name" <?php if($cate['id']): ?>value="<?php echo ($cate["name"]); ?>"<?php endif; ?>/>
+                <input type="text" name='name'/>
             </td>
         </tr>
+
         <tr>
-            <td align="right">排序:</td>
+            <td align="right">角色描述:</td>
             <td>
-                <input type="text" name="sort" <?php if($cate['id']): ?>value="<?php echo ($cate["sort"]); ?>"<?php else: ?>value="100"<?php endif; ?>/>
+                <input type="text" name='remark'/>
             </td>
         </tr>
         <tr>
-            <td colspan="2" align="center">
-                <input type="hidden" name="id" <?php if($cate['id']): ?>value="<?php echo ($cate["id"]); ?>"<?php endif; ?>/>
-                <input type="hidden" name="pid" <?php if($cate['id']): ?>value="<?php echo ($cate["pid"]); ?>"<?php else: ?>value="<?php echo ($pid); ?>"<?php endif; ?>/>
-                <input type="submit" <?php if($cate['id']): ?>value="保存修改"<?php else: ?>value="保存添加"<?php endif; ?>/>
+            <td align="right">是否开启:</td>
+            <td>
+                <input type="radio" name='status' value='1' checked='checked'/>&nbsp;开启&nbsp;
+                <input type="radio" name='status' value='0'/>&nbsp;关闭
             </td>
         </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <input type="submit" value="保存添加"/>
+        </td>
+    </tr>
+
+
     </table>
-</form>
 </body>
 </html>

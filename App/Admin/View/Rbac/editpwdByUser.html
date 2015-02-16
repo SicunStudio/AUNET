@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<include file="rbac_index"/>
+<form action="{:U('editpwdByUserHandle')}" method="post">
+    <table class="table">
+        <caption align="top">修改密码</caption>
+        <tr>
+            <td>旧密码:</td>
+            <td><input type="password" name="oldpwd"/></td>
+        </tr>
+        <tr>
+            <td>新密码:</td>
+            <td><input type="password" name="newpwd"/></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <input type="submit" value="确认修改"/>
+            </td>
+        </tr>
+
+    </table>
+
+
+</form>
+</body>
+</html>

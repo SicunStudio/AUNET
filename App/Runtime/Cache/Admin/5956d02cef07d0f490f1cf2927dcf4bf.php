@@ -103,16 +103,19 @@
         <dd><a href="<?php echo U('/Admin/Rbac/role');;?>">角色列表</a></dd>
         <dd><a href="<?php echo U('/Admin/Rbac/user');;?>">用户列表</a></dd>
         <dd><a href="<?php echo U('/Admin/Rbac/node');;?>">节点列表</a></dd>
-        <dd><a href="<?php echo U('/Admin/Rbac/addRole');;?>">添加角色</a></dd>
-        <dd><a href="<?php echo U('/Admin/Rbac/addNode');;?>">添加节点</a></dd>
-        <dd><a href="<?php echo U('/Admin/Rbac/addUser');;?>">添加用户</a></dd>
-        <dd><a href="<?php echo U('/Admin/Rbac/logout');;?>">退出登录</a></dd>
+
     </dl>
     <dl>
         <dt>分类管理</dt>
         <dd><a href="<?php echo U('/Admin/Category/addCate');;?>">添加分类</a></dd>
         <dd><a href="<?php echo U('/Admin/Category/cate_index');;?>">分类列表</a></dd>
     </dl>
+    <dl>
+        <dt>账户管理</dt>
+        <dd><a href="<?php echo U('/Admin/Rbac/editpwd');?>">修改密码</a></dd>
+        <dd><a href="<?php echo U('/Admin/Rbac/logout');;?>">退出登录</a></dd>
+    </dl>
+
 </div>
 
 
@@ -125,8 +128,7 @@
         <?php if(is_array($node)): foreach($node as $key=>$app): ?><div class='app'>
                 <p>
 
-                    <?php if($app['status']): ?><strong><?php echo ($app["title"]); ?></strong><?php else: echo ($app["title"]); endif; ?>
-                    [<a href="<?php echo U('addNode',array('pid'=>$app['id'],'level'=>2));?>">添加控制器</a>]
+                    <?php if($app['status']): ?><strong><?php echo ($app["title"]); ?></strong>[<a href="<?php echo U('addNode',array('pid'=>$app['id'],'level'=>2));?>">添加控制器</a>]<?php else: echo ($app["title"]); endif; ?>
                 </p>
                 <?php if(is_array($app["child"])): foreach($app["child"] as $key=>$action): ?><dl>
                         <dt>

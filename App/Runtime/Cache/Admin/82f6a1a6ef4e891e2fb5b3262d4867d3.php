@@ -52,16 +52,19 @@
         <dd><a href="<?php echo U('/Admin/Rbac/role');;?>">角色列表</a></dd>
         <dd><a href="<?php echo U('/Admin/Rbac/user');;?>">用户列表</a></dd>
         <dd><a href="<?php echo U('/Admin/Rbac/node');;?>">节点列表</a></dd>
-        <dd><a href="<?php echo U('/Admin/Rbac/addRole');;?>">添加角色</a></dd>
-        <dd><a href="<?php echo U('/Admin/Rbac/addNode');;?>">添加节点</a></dd>
-        <dd><a href="<?php echo U('/Admin/Rbac/addUser');;?>">添加用户</a></dd>
-        <dd><a href="<?php echo U('/Admin/Rbac/logout');;?>">退出登录</a></dd>
+
     </dl>
     <dl>
         <dt>分类管理</dt>
         <dd><a href="<?php echo U('/Admin/Category/addCate');;?>">添加分类</a></dd>
         <dd><a href="<?php echo U('/Admin/Category/cate_index');;?>">分类列表</a></dd>
     </dl>
+    <dl>
+        <dt>账户管理</dt>
+        <dd><a href="<?php echo U('/Admin/Rbac/editpwd');?>">修改密码</a></dd>
+        <dd><a href="<?php echo U('/Admin/Rbac/logout');;?>">退出登录</a></dd>
+    </dl>
+
 </div>
 
 
@@ -102,6 +105,9 @@
                         <a href="<?php echo U('lock',array('id'=>$v['id'],'lock'=>$v['lock']));?>"><?php if($v['lock']): ?>解锁<?php else: ?>锁定<?php endif; ?></a>
                     </td>
                 </tr><?php endforeach; endif; ?>
+            <td colspan="10" align="center">
+                <a href="<?php echo U('addUser');?>">添加用户</a>
+            </td>
         </table>
     </div>
 

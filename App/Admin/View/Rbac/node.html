@@ -65,8 +65,7 @@
             <div class='app'>
                 <p>
 
-                    <if condition="$app['status']"><strong>{$app.title}</strong><else/>{$app.title}</if>
-                    [<a href="{:U('addNode',array('pid'=>$app['id'],'level'=>2))}">添加控制器</a>]
+                    <if condition="$app['status']"><strong>{$app.title}</strong>[<a href="{:U('addNode',array('pid'=>$app['id'],'level'=>2))}">添加控制器</a>]<else/>{$app.title}</if>
                 </p>
                 <foreach name="app.child" item="action">
                     <dl>

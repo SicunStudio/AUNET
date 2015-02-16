@@ -39,6 +39,9 @@ class NewsController extends CommonController{
 
     //新增 OR 修改新闻后台处理
     public function addNewsHandle(){
+        if(!IS_POST){
+            $this->error('页面不存在',U('news_index'));
+        }
         if(M('news')->where(array('id'=>I('id')))->select()){
             $data=array('title'=>I('title'),
                 'content'=>$_POST['content']
@@ -78,7 +81,6 @@ class NewsController extends CommonController{
 
     //删除 OR 还原新闻
     public function toTrash(){
-
         $id=I('id','','intval');
         $type=I('type','','intval');
 
@@ -119,7 +121,7 @@ class NewsController extends CommonController{
     public function delete(){
         $id=I('id','','intval');
         D('NewsRelation')->relation('attr')->where(array('id'=>$id))->delete();
-        $this->display('index');
+        $this->display('news_index');
     }
     public function deleteAll(){
         $del=array('del'=>1);

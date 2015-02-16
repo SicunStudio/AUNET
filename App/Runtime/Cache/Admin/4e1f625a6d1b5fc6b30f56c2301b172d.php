@@ -44,16 +44,19 @@
         <dd><a href="<?php echo U('/Admin/Rbac/role');;?>">角色列表</a></dd>
         <dd><a href="<?php echo U('/Admin/Rbac/user');;?>">用户列表</a></dd>
         <dd><a href="<?php echo U('/Admin/Rbac/node');;?>">节点列表</a></dd>
-        <dd><a href="<?php echo U('/Admin/Rbac/addRole');;?>">添加角色</a></dd>
-        <dd><a href="<?php echo U('/Admin/Rbac/addNode');;?>">添加节点</a></dd>
-        <dd><a href="<?php echo U('/Admin/Rbac/addUser');;?>">添加用户</a></dd>
-        <dd><a href="<?php echo U('/Admin/Rbac/logout');;?>">退出登录</a></dd>
+
     </dl>
     <dl>
         <dt>分类管理</dt>
         <dd><a href="<?php echo U('/Admin/Category/addCate');;?>">添加分类</a></dd>
         <dd><a href="<?php echo U('/Admin/Category/cate_index');;?>">分类列表</a></dd>
     </dl>
+    <dl>
+        <dt>账户管理</dt>
+        <dd><a href="<?php echo U('/Admin/Rbac/editpwdByUser');?>">修改密码</a></dd>
+        <dd><a href="<?php echo U('/Admin/Rbac/logout');;?>">退出登录</a></dd>
+    </dl>
+
 </div>
 
 

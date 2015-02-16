@@ -46,6 +46,9 @@ class RbacController extends CommonController{
      */
     public function addUserHandle(){
 //        dump($_POST);die;
+        if(!IS_POST){
+            $this->error('页面不存在',U('rbac_index'));
+        }
         $user=array(
             'username'=>I('username'),
             'password'=>I('password','','md5'),
@@ -76,6 +79,9 @@ class RbacController extends CommonController{
 
     public function addRoleHandle(){
 //        dump($_POST);
+        if(!IS_POST){
+            $this->error('页面不存在',U('rbac_index'));
+        }
         if(M('role')->add($_POST)){
             $this->success('添加成功',U('Admin/Rbac/role'));
         }else{
@@ -113,6 +119,9 @@ class RbacController extends CommonController{
     }
     //修改 OR 添加节点
     public function addNodeHandle(){
+        if(!IS_POST){
+            $this->error('页面不存在',U('rbac_index'));
+        }
         $id=I('id',0,'intval');
         if($id!=0){
             $where=array('id'=>$id);
@@ -151,6 +160,9 @@ class RbacController extends CommonController{
      * 设置权限
      */
     public function setAccess(){
+        if(!IS_POST){
+            $this->error('页面不存在',U('rbac_index'));
+        }
 //        dump($_POST);die;
         $rid=I('rid',0,'intval');
 //        dump($rid);die;
@@ -192,11 +204,19 @@ class RbacController extends CommonController{
     }
 
     public function editpwd(){
+
         $this->id=I('id','0','intval');
+//        dump($this->id);die;
+//        dump($_SESSION['uid']);die;
         $this->display();
     }
     public function editpwdHandle(){
+        if(!IS_POST){
+            $this->error('页面不存在',U('rbac_index'));
+        }
         $id=I('id',0,'intval');
+//        dump($id);die;
+//        $id=$id?$id:(int)$_SESSION['uid'];
         $where=array('id'=>$id);
         $find=array('id'=>$id,'password'=>I('password','','md5'));
         $data['password']=I('password','','md5');
@@ -210,6 +230,7 @@ class RbacController extends CommonController{
             $this->error('修改失败');
         }
 
+
     }
     //删除节点
     public function delNode(){
@@ -219,5 +240,35 @@ class RbacController extends CommonController{
         }else{
             $this->error('删除失败');
         }
+    }
+
+    //用户修改密码界面
+    public function editpwdByUser(){
+        $this->display();
+    }
+    public function editpwdByUserHandle(){
+        if(!IS_POST){
+            $this->error('页面不存在');
+        }
+        $id=$_SESSION['uid'];
+        $oldpwd=I('oldpwd','','md5');
+        $newpwd=I('newpwd','','md5');
+        $find=array('id'=>$id,'password'=>$oldpwd);
+        $data=array('password'=>$newpwd);
+        if(!M('user')->where($find)->find()){
+            $this->error('旧密码错误');
+        }else{
+            if($oldpwd==$newpwd){
+                $this->error('新旧密码相同!');
+            }else{
+                if(M('user')->where(array('id'=>$id))->save($data)){
+                    $this->success('修改成功',U('Admin/Index/index'));
+                }else{
+                    $this->error('修改失败');
+                }
+            }
+        }
+
+//        dump($_POST);die;
     }
 } 

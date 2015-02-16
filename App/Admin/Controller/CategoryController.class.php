@@ -30,6 +30,9 @@ class CategoryController extends CommonController{
         $this->display();
     }
     public function runAddCate(){
+        if(!IS_POST){
+            $this->error('页面不存在',U('cate_index'));
+        }
 //        dump(I('id',0,'intval'));die;
         if(I('id',0,'intval')){
             if(M('cate')->save($_POST)){

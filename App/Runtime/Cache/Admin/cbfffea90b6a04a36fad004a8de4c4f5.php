@@ -6,7 +6,6 @@
 </head>
 <style type="text/css">
     #wrap{
-        width:94%;
         height: auto;
         overflow: hidden;
         margin: 20px auto;
@@ -55,7 +54,7 @@
         float: left;
     }
 </style>
-<script type="text/javascript" src="/aunet/Public/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="/AUNET/Public/jquery-1.8.0.min.js"></script>
 <script type="text/javascript">
     $(function (){
         $('input[level=1]').click(function (){
@@ -69,7 +68,8 @@
     });
 </script>
 <body>
-<!DOCTYPE html>
+<div>
+    <!DOCTYPE html>
 <html>
 <head lang="en">
     <meta charset="UTF-8">
@@ -115,9 +115,6 @@
         <dd><a href="<?php echo U('/Admin/Rbac/role');;?>">角色列表</a></dd>
         <dd><a href="<?php echo U('/Admin/Rbac/user');;?>">用户列表</a></dd>
         <dd><a href="<?php echo U('/Admin/Rbac/node');;?>">节点列表</a></dd>
-        <dd><a href="<?php echo U('/Admin/Rbac/addRole');;?>">添加角色</a></dd>
-        <dd><a href="<?php echo U('/Admin/Rbac/addNode');;?>">添加节点</a></dd>
-        <dd><a href="<?php echo U('/Admin/Rbac/addUser');;?>">添加用户</a></dd>
         <dd><a href="<?php echo U('/Admin/Rbac/logout');;?>">退出登录</a></dd>
     </dl>
     <dl>
@@ -131,30 +128,36 @@
 
 </body>
 </html>
-<form action="<?php echo U('setAccess');;?>" method="post">
-<div id='wrap'>
-    <a href="<?php echo U('role');;?>" class="add-app">返回</a>
+    <div>
+        <form action="<?php echo U('setAccess');;?>" method="post">
+            <div id='wrap'>
+                <a href="<?php echo U('role');;?>" class="add-app">返回</a>
 
-    <?php if(is_array($node)): foreach($node as $key=>$app): ?><div class='app'>
-            <p>
-                <strong><?php echo ($app["title"]); ?></strong>
-                <input type="checkbox" name="access[]"  level="1" value="<?php echo ($app["id"]); ?>_1"<?php if($app['access']): ?>checked="checked"<?php endif; ?>/>
-            </p>
-            <?php if(is_array($app["child"])): foreach($app["child"] as $key=>$action): ?><dl>
-                    <dt>
-                        <strong><?php echo ($action["title"]); ?></strong>
-                        <input type="checkbox" name="access[]" value="<?php echo ($action["id"]); ?>_2" level="2"<?php if($action['access']): ?>checked="checked"<?php endif; ?>/>
-                    </dt>
-                    <?php if(is_array($action["child"])): foreach($action["child"] as $key=>$method): ?><dd>
-                            <span><?php echo ($method["title"]); ?></span>
-                            <input type="checkbox" name="access[]" value="<?php echo ($method["id"]); ?>_3" level="3"<?php if($method['access']): ?>checked="checked"<?php endif; ?>/>
-                        </dd><?php endforeach; endif; ?>
-                </dl><?php endforeach; endif; ?>
-        </div><?php endforeach; endif; ?>
+                <?php if(is_array($node)): foreach($node as $key=>$app): ?><div class='app'>
+                        <p>
+                            <strong><?php echo ($app["title"]); ?></strong>
+                            <input type="checkbox" name="access[]"  level="1" value="<?php echo ($app["id"]); ?>_1"<?php if($app['access']): ?>checked="checked"<?php endif; ?>/>
+                        </p>
+                        <?php if(is_array($app["child"])): foreach($app["child"] as $key=>$action): ?><dl>
+                                <dt>
+                                    <strong><?php echo ($action["title"]); ?></strong>
+                                    <input type="checkbox" name="access[]" value="<?php echo ($action["id"]); ?>_2" level="2"<?php if($action['access']): ?>checked="checked"<?php endif; ?>/>
+                                </dt>
+                                <?php if(is_array($action["child"])): foreach($action["child"] as $key=>$method): ?><dd>
+                                        <span><?php echo ($method["title"]); ?></span>
+                                        <input type="checkbox" name="access[]" value="<?php echo ($method["id"]); ?>_3" level="3"<?php if($method['access']): ?>checked="checked"<?php endif; ?>/>
+                                    </dd><?php endforeach; endif; ?>
+                            </dl><?php endforeach; endif; ?>
+                    </div><?php endforeach; endif; ?>
+            </div>
+            <input type="hidden" name="rid" value="<?php echo ($rid); ?>"/>
+            <input type="submit" value="保存修改" style="display: block; margin: 20px auto;cursor:pointer;"/>
+        </form>
+    </div>
+
 </div>
-    <input type="hidden" name="rid" value="<?php echo ($rid); ?>"/>
-    <input type="submit" value="保存修改" style="display: block; margin: 20px auto;cursor:pointer;"/>
-</form>
+
+
 </body>
 
 </html>

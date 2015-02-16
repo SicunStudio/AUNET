@@ -5,8 +5,12 @@
     <title></title>
 </head>
 <body>
+<include file="rbac_index"/>
     <form action="{:U('editpwdHandle')}" method="post">
-        <input type="password" name="password"/>
+        <tr>
+            <td>修改密码</td>
+            <td><input type="password" name="password"/></td>
+        </tr>
         <input type="hidden" name="id" value="{$id}"/>
         <input type="submit" value="确认修改"/>
     </form>

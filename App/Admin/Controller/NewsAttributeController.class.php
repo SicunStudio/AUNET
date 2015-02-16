@@ -12,8 +12,8 @@ namespace Admin\Controller;
 */
 /*
  * create table aunet_attr(id int unsigned not null primary key auto_increme
-   nt,name char(10) not null default '',color char(10) not null default '')ENGINE=M
-   yISAM default charset=utf8;
+ * nt,name char(10) not null default '',color char(10) not null default '')ENGINE=M
+ * yISAM default charset=utf8;
  */
 class NewsAttributeController extends CommonController{
     public function attr_index(){
@@ -26,6 +26,9 @@ class NewsAttributeController extends CommonController{
     //添加 OR 编辑属性
     public function runAddAttr(){
 //        dump($_POST);die;
+        if(!IS_POST){
+            $this->error('页面不存在',U('attr_index'));
+        }
         $attr=M('attr');
         if(I('id',0,'intval')){
             if($attr->save($_POST)){
