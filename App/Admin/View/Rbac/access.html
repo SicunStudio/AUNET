@@ -79,18 +79,18 @@
                     <div class='app'>
                         <p>
                             <strong>{$app.title}</strong>
-                            <input type="checkbox" name="access[]"  level="1" value="{$app.id}_1"<if condition="$app['access']">checked="checked"</if>/>
+                            <input type="checkbox" name="access[]"  level="1" value="{$app.id}_1"<if condition="$app['access']">checked="checked"</if><if condition="!$app['status']">hidden="hidden"</if>/>
                         </p>
                         <foreach name="app.child" item="action">
                             <dl>
                                 <dt>
                                     <strong>{$action.title}</strong>
-                                    <input type="checkbox" name="access[]" value="{$action.id}_2" level="2"<if condition="$action['access']">checked="checked"</if>/>
+                                    <input type="checkbox" name="access[]" value="{$action.id}_2" level="2"<if condition="$action['access']">checked="checked"</if><if condition="!$action['status']">hidden="hidden"</if>/>
                                 </dt>
                                 <foreach name="action.child" item="method">
                                     <dd>
                                         <span>{$method.title}</span>
-                                        <input type="checkbox" name="access[]" value="{$method.id}_3" level="3"<if condition="$method['access']">checked="checked"</if>/>
+                                        <input type="checkbox" name="access[]" value="{$method.id}_3" level="3"<if condition="$method['access']">checked="checked"</if><if condition="!$method['status']">hidden="hidden"</if>/>
                                     </dd>
                                 </foreach>
                             </dl>

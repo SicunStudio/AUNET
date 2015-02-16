@@ -112,7 +112,7 @@
     </dl>
     <dl>
         <dt>账户管理</dt>
-        <dd><a href="<?php echo U('/Admin/Rbac/editpwd');?>">修改密码</a></dd>
+        <dd><a href="<?php echo U('/Admin/Rbac/editpwdByUser');?>">修改密码</a></dd>
         <dd><a href="<?php echo U('/Admin/Rbac/logout');;?>">退出登录</a></dd>
     </dl>
 

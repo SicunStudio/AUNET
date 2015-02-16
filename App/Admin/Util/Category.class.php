@@ -55,7 +55,7 @@ class Category {
         return $arr;
     }
     /*
-     * 传递父级ID,返回子级
+     * 传递父级ID,返回子级信息
      */
     static public function getChild($cate,$pid){
         $arr=array();
@@ -67,6 +67,9 @@ class Category {
         }
         return $arr;
     }
+    /*
+     * 传递父级ID,返回子级所有ID数组
+     */
     static public function getChildsId($cate,$pid){
         $arr=array();
         foreach($cate as $v){

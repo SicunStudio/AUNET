@@ -143,7 +143,7 @@ class RbacController extends CommonController{
     public function access(){
         $rid=I('rid',0,'intval');
 //        dump($rid);die;
-        $field=array('id','name','title','pid');
+        $field=array('id','name','title','pid','status');
         $node=M('node')->order('sort')->field($field)->select();
 
         //原有权限

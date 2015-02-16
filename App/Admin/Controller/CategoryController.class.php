@@ -19,10 +19,12 @@ use Admin\Util\Category;
  */
 class CategoryController extends CommonController{
     public function cate_index(){
-        import('Util.Category',APP_PATH);
-        $cate=M('cate')->order('sort')->select();
-        $this->cate=Category::unlimitedForLevel($cate);
-
+        if(!$cate=S('cate')){
+            $cate=M('cate')->order('sort')->select();
+            $cate=Category::unlimitedForLevel($cate);
+            S('cate',$cate,5);
+        }
+        $this->cate=$cate;
         $this->display();
     }
     public function addCate(){
@@ -67,16 +69,19 @@ class CategoryController extends CommonController{
 
     //删除分类及其子分类
     public function deleteCate(){
-        $id=I('id',0,'intval');
-        $Cate=M('cate');
-        $cate=$Cate->order('sort')->select();
-        $arr=Category::getChildsId($cate,$id);
-        $arr[]=$id;
+        if(!$arr=S('arr')){
+            $id=I('id',0,'intval');
+            $Cate=M('cate');
+            $cate=$Cate->order('sort')->select();
+            $arr=Category::getChildsId($cate,$id);
+            $arr[]=$id;
 //        dump($arr);die;
+            S('arr',$arr,5);
+        }
+
         foreach($arr as $v=>$k){
             $Cate->delete($k);
         }
         $this->success('删除成功',U('cate_index'));
-
     }
 } 

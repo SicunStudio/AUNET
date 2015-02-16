@@ -54,7 +54,7 @@
         float: left;
     }
 </style>
-<script type="text/javascript" src="/AUNET/Public/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="/AUNEt/Public/jquery-1.8.0.min.js"></script>
 <script type="text/javascript">
     $(function (){
         $('input[level=1]').click(function (){
@@ -115,13 +115,19 @@
         <dd><a href="<?php echo U('/Admin/Rbac/role');;?>">角色列表</a></dd>
         <dd><a href="<?php echo U('/Admin/Rbac/user');;?>">用户列表</a></dd>
         <dd><a href="<?php echo U('/Admin/Rbac/node');;?>">节点列表</a></dd>
-        <dd><a href="<?php echo U('/Admin/Rbac/logout');;?>">退出登录</a></dd>
+
     </dl>
     <dl>
         <dt>分类管理</dt>
         <dd><a href="<?php echo U('/Admin/Category/addCate');;?>">添加分类</a></dd>
         <dd><a href="<?php echo U('/Admin/Category/cate_index');;?>">分类列表</a></dd>
     </dl>
+    <dl>
+        <dt>账户管理</dt>
+        <dd><a href="<?php echo U('/Admin/Rbac/editpwdByUser');?>">修改密码</a></dd>
+        <dd><a href="<?php echo U('/Admin/Rbac/logout');;?>">退出登录</a></dd>
+    </dl>
+
 </div>
 
 
@@ -136,16 +142,16 @@
                 <?php if(is_array($node)): foreach($node as $key=>$app): ?><div class='app'>
                         <p>
                             <strong><?php echo ($app["title"]); ?></strong>
-                            <input type="checkbox" name="access[]"  level="1" value="<?php echo ($app["id"]); ?>_1"<?php if($app['access']): ?>checked="checked"<?php endif; ?>/>
+                            <input type="checkbox" name="access[]"  level="1" value="<?php echo ($app["id"]); ?>_1"<?php if($app['access']): ?>checked="checked"<?php endif; if(!$app['status']): ?>hidden="hidden"<?php endif; ?>/>
                         </p>
                         <?php if(is_array($app["child"])): foreach($app["child"] as $key=>$action): ?><dl>
                                 <dt>
                                     <strong><?php echo ($action["title"]); ?></strong>
-                                    <input type="checkbox" name="access[]" value="<?php echo ($action["id"]); ?>_2" level="2"<?php if($action['access']): ?>checked="checked"<?php endif; ?>/>
+                                    <input type="checkbox" name="access[]" value="<?php echo ($action["id"]); ?>_2" level="2"<?php if($action['access']): ?>checked="checked"<?php endif; if(!$action['status']): ?>hidden="hidden"<?php endif; ?>/>
                                 </dt>
                                 <?php if(is_array($action["child"])): foreach($action["child"] as $key=>$method): ?><dd>
                                         <span><?php echo ($method["title"]); ?></span>
-                                        <input type="checkbox" name="access[]" value="<?php echo ($method["id"]); ?>_3" level="3"<?php if($method['access']): ?>checked="checked"<?php endif; ?>/>
+                                        <input type="checkbox" name="access[]" value="<?php echo ($method["id"]); ?>_3" level="3"<?php if($method['access']): ?>checked="checked"<?php endif; if(!$method['status']): ?>hidden="hidden"<?php endif; ?>/>
                                     </dd><?php endforeach; endif; ?>
                             </dl><?php endforeach; endif; ?>
                     </div><?php endforeach; endif; ?>
