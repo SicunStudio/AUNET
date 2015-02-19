@@ -3,9 +3,11 @@
 
 #社团网后台管理系统入口http://serverName/AUNET/
 
-#社团网前台入口文件夹/App/Home
-#社团网后台入口文件夹/App/Admin
-#社团网前后台共用文件/Public
+#社团网前台(首页)入口文件夹/App/Home
+#社团网后台(管理系统)入口文件夹/App/Admin
+
+#社团网前后台共用文件(即资源文件或相关框架)/Public
+
 #上传文件路径/Upload
 
 #其余均为框架文件
