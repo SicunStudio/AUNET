@@ -13,8 +13,9 @@
     $(function(){
         window.UEDITOR_CONFIG.initialFrameHeight=600;
         window.UEDITOR_CONFIG.initialFrameWidth=1900;
-        var ue = UE.getEditor('content');
+        var ue = UE.getEditor('content',{serverUrl :"<?php echo U('Admin/News/ueditor');?>"});
     })
+
 </script>
 <body>
 
@@ -53,6 +54,7 @@
         </tr>
         <tr>
             <td align="center" colspan="2">
+                <input name="pic" type="hidden" id="pic" value=""/>
                 <input type="submit" value="保存提交"/>
             </td>
         </tr>

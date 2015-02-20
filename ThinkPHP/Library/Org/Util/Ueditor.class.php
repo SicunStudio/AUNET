@@ -8,21 +8,20 @@ namespace Org\Util;
 
 class Ueditor{
 	
-	//public $uid;//要操作的用户id 如有登录需要则去掉注释
-	
+	public $uid;//要操作的用户id 如有登录需要则去掉注释
+	public $data;
 	private $output;//要输出的数据
 	
 	private $st;
 	
-	private $rootpath = 'Upload/';
+	private $rootpath = "./Upload/";
 	
 	public function __construct($uid = ''){
-		//uid 为空则导入当前会话uid
-		//if(''===$uid) $this->uid = session('uid');
-		
+//		uid 为空则导入当前会话uid
+		if(''===$uid) $this->uid = session('uid');
 		\Vin\FileStorage::connect(STORAGE_TYPE);
 		//导入设置
-		$CONFIG = json_decode(preg_replace("/\/\*[\s\S]+?\*\//", "", file_get_contents(CONF_PATH."ueditor.json")), true);
+		$CONFIG = json_decode(preg_replace("/\/\*[\s\S]+?\*\//", "", file_get_contents(CONF_PATH."config.json")), true);
 		
 		$action = htmlspecialchars($_GET['action']);
 		
@@ -144,7 +143,7 @@ class Ueditor{
 		$upload = new \Think\Upload();
 		$upload->maxSize   =     $config['maxSize'] ;// 设置附件上传大小
 		$upload->exts      =     $this->format_exts($config['allowFiles']);// 设置附件上传类型
-		$upload->rootPath  =     '.'.$this->rootpath; // 设置附件上传根目录
+		$upload->rootPath  =     $this->rootpath; // 设置附件上传根目录
 		$upload->autoSub = false;
 		$upload->savePath  =     $this->getFullPath($config['pathFormat']); // 设置附件上传（子）目录
 		$info=$upload->uploadOne($_FILES[$fieldName]);

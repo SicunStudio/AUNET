@@ -12,14 +12,13 @@
     $(function(){
         window.UEDITOR_CONFIG.initialFrameHeight=600;
         window.UEDITOR_CONFIG.initialFrameWidth=1900;
-        var ue = UE.getEditor('ueditor',{onready: function () {
+        var ue = UE.getEditor('ueditor',{serverUrl :'{:U('Admin/News/ueditor')}',onready: function () {
             this.setContent('{$text.content}');
         }});
     })
 
 </script>
 <body>
-<include file="Rbac::rbac_index"/>
     <form action="{:U('addNewsHandle')}" method="post">
         <table class="table">
             <tr>

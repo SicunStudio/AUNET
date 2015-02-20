@@ -6,7 +6,7 @@ return array(
     'USER_AUTH_TYPE'        =>1,     //验证类型(1,下次登录生效 2,实时生效)
     'USER_AUTH_KEY'         =>'uid',  //session用户识别号
     'NOT_AUTH_MODULE'      =>'Index,Download',     //无需验证的控制器
-    'NOT_AUTH_ACTION'      =>'rbac_index,logout,addUserHandle,addNodeHandle,addRoleHandle,setAccess,lock,editpwd,editpwdHandle,delNode
+    'NOT_AUTH_ACTION'      =>'rbac_index,logout,addUserHandle,addNodeHandle,addRoleHandle,setAccess,lock,editpwd,editpwdHandle,delNode,ueditor
                             runAddCate,sortCate,runAddAttr,editpwdByUser,editpwdByUserHandle',
     'RBAC_ROLE_TABLE'       =>'aunet_role',
     'RBAC_USER_TABLE'       =>'aunet_role_user',

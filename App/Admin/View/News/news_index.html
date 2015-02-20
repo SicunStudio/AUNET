@@ -7,6 +7,7 @@
 <body>
     <include file="Rbac:rbac_index"/>
     <table class="table">
+        <caption align="top"><if condition="ACTION_NAME eq 'news_index'">文章列表<else />回收站列表</if></caption>
         <tr>
             <th>ID</th>
             <th>标题</th>

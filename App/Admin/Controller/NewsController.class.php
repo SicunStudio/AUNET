@@ -8,11 +8,17 @@
 
 namespace Admin\Controller;
 use Admin\Util\Category;
+use Org\Util\Ueditor;
+
 /*
+ *
+ * pic---文章缩略图，以第一张图片制作
+ *
+ *
  * create table aunet_news(id int unsigned not null primary key auto_increme
  * nt,title varchar(30) not null default '',content text,time int(10) unsigned not
  * null default 0,cid int unsigned not null,del tinyint(1) unsigned not null defaul
- * t 0)ENGINE=MyISAM default charset=utf8;
+ * t 0,pic text not null default '')ENGINE=MyISAM default charset=utf8;
  */
 /*
  * 新闻与标签多对多关联数据库
@@ -37,39 +43,39 @@ class NewsController extends CommonController{
         $this->display();
     }
 
+    public function ueditor(){
+        $ueditor=new Ueditor();
+        echo $ueditor->output();
+    }
+
     //新增 OR 修改新闻后台处理
     public function addNewsHandle(){
+
         if(!IS_POST){
             $this->error('页面不存在',U('news_index'));
         }
-        if(M('news')->where(array('id'=>I('id')))->select()){
-            $data=array('title'=>I('title'),
-                'content'=>$_POST['content']
-                ,'time'=>time()
-            );
-            if(isset($_POST['aid'])){
-                foreach($_POST['aid'] as $v){
-                    $data['attr'][]=$v;
-                }
+        //相关数据
+        $data=array();
+        if(preg_match_all("/src=([\"|']?)([^\"'>]+\.(gif|jpg|jpeg|bmp|png))\\1/i",$_POST['content'],$match)){
+            $data['pic']=$match[2][0];
+        }
+        if(isset($_POST['aid'])){
+            foreach($_POST['aid'] as $v){
+                $data['attr'][]=$v;
             }
+        }
+        $data['title']=I('title');
+        $data['content']=$_POST['content'];
+        $data['time']=time();
+
+        if(M('news')->where(array('id'=>I('id')))->find()){
             if(D('NewsRelation')->where(array('id'=>I('id')))->relation(true)->save($data)){
                 $this->success('修改成功',U('news_index'));
             }else{
                 $this->error('修改失败');
             }
         }else{
-            $data=array(
-                'title'=>I('title'),
-                'content'=>$_POST['content'],
-                'time'=>time(),
-                'cid'=>(int)$_POST['cid']
-            );
-            if(isset($_POST['aid'])){
-                foreach($_POST['aid'] as $v){
-                    $data['attr'][]=$v;
-                }
-            }
-
+            $data['cid']=(int)$_POST['cid'];
             if(D('NewsRelation')->relation(true)->add($data)){
                 $this->success('添加成功',U('news_index'));
             }else{
@@ -77,6 +83,7 @@ class NewsController extends CommonController{
             }
         }
     }
+
 
 
     //删除 OR 还原新闻
@@ -96,7 +103,6 @@ class NewsController extends CommonController{
 
 
     }
-
 
     //编辑原有新闻
     public function edit(){
@@ -121,7 +127,7 @@ class NewsController extends CommonController{
     public function delete(){
         $id=I('id','','intval');
         D('NewsRelation')->relation('attr')->where(array('id'=>$id))->delete();
-        $this->display('news_index');
+        $this->redirect('news_index');
     }
     public function deleteAll(){
         $del=array('del'=>1);

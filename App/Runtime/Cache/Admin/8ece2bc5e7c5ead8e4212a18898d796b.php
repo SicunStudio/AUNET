@@ -60,7 +60,7 @@
     </dl>
     <dl>
         <dt>账户管理</dt>
-        <dd><a href="<?php echo U('/Admin/Rbac/editpwd');?>">修改密码</a></dd>
+        <dd><a href="<?php echo U('/Admin/Rbac/editpwdByUser');?>">修改密码</a></dd>
         <dd><a href="<?php echo U('/Admin/Rbac/logout');;?>">退出登录</a></dd>
     </dl>
 
@@ -71,6 +71,7 @@
 </body>
 </html>
     <table class="table">
+        <caption align="top"><?php if(ACTION_NAME == 'news_index'): ?>文章列表<?php else: ?>回收站列表<?php endif; ?></caption>
         <tr>
             <th>ID</th>
             <th>标题</th>

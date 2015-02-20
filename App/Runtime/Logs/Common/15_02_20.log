@@ -1,0 +1,18 @@
+[ 2015-02-20T11:57:11+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/index.php/Admin/News/news_index.html.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-02-20T11:57:30+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/index.php/Admin/News/news_index.html.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-02-20T11:57:30+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/index.php/Admin/News/news_index.html.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
