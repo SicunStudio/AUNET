@@ -13,7 +13,7 @@ use Org\Util\Ueditor;
 /*
  *
  * pic---文章缩略图，以第一张图片制作
- *
+ * 图片上传路径Upload/news/image/{uid}/{yyyy}{mm}{dd}/
  *
  * create table aunet_news(id int unsigned not null primary key auto_increme
  * nt,title varchar(30) not null default '',content text,time int(10) unsigned not
@@ -54,6 +54,7 @@ class NewsController extends CommonController{
         if(!IS_POST){
             $this->error('页面不存在',U('news_index'));
         }
+
         //相关数据
         $data=array();
         if(preg_match_all("/src=([\"|']?)([^\"'>]+\.(gif|jpg|jpeg|bmp|png))\\1/i",$_POST['content'],$match)){
@@ -82,6 +83,8 @@ class NewsController extends CommonController{
                 $this->error('添加失败');
             }
         }
+
+
     }
 
 

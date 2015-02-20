@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<include file="rbac_index"/>
+<div>
+    <h1>您的身份是{$remark}</h1>
+    <h2><p>您拥有的权限是</p></h2>
+    <tr>
+
+            <foreach name="text" item="v">
+                <th>{$v}</th>
+            </foreach>
+
+    </tr>
+</div>
+</body>
+</html>

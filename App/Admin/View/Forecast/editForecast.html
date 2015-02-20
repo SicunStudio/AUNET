@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<include file="Rbac::rbac_index"/>
+<form method="post" action="{:U('addForecastHandle',array('id'=>$id))}">
+    <table class="table">
+        <tr>
+            <td align="right">预告内容</td>
+            <td>
+                <input type="text" name="title" value="{$data.title}"/>
+                <input type="hidden" name="id" value="{$data.id}"/>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <input type="submit" value="提交"/>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

@@ -268,7 +268,40 @@ class RbacController extends CommonController{
                 }
             }
         }
+    }
 
-//        dump($_POST);die;
+
+
+
+    //用户帮助界面
+
+
+    public function help(){
+        $id=(int)$_SESSION['uid'];
+        $data=D('UserRelation')->where(array('id'=>$id))->relation(true)->find();
+//        dump($data['role']);
+        $role=array();
+        foreach($data['role'] as $v){
+            $role['id']=(int)$v['id'];
+            $role['remark']=$v['remark'];   //身份描述
+        }
+        $node=M('access')->where(array('role_id'=>$role['id'],'level'=>3))->field('node_id')->select();
+        $Node=M('node');
+        foreach($node as $v=>$k){
+            foreach($k as $node){
+                $user_node[]=$Node->where(array('id'=>$node))->field('title')->find();
+            }
+        }
+        foreach($user_node as $v=>$k){
+            foreach($k as $title){
+                $text[]=$title;
+            }
+        }
+        $this->text=$text;    //权限拥有
+        $this->remark=$role['remark'];
+        $this->display();
+
+
+
     }
 } 

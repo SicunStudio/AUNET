@@ -6,5 +6,28 @@
 </head>
 <body>
 <include file="Rbac::rbac_index"/>
+<table class="table">
+    <caption align="top">预告列表</caption>
+    <tr>
+        <th>ID</th>
+        <th>内容</th>
+        <th>时间</th>
+        <th>发布人</th>
+        <th>操作</th>
+    </tr>
+    <foreach name="data" item="v">
+        <tr>
+            <td width="8%">{$v.id}</td>
+            <td width="18%" align="center">{$v.title}</td>
+            <td width="12%" align="center">{$v.time|date='y-m-d H:i',###}</td>
+            <td width="12%" align="center">{$v.username}</td>
+            <td width="18%" align="center">
+                <a href="{:U('editForecast',array('id'=>$v['id'],'name'=>$v['username']))}">修改</a>
+                <a href="{:U('delForecast',array('id'=>$v['id'],'name'=>$v['username']))}">删除</a>
+            </td>
+        </tr>
+    </foreach>
+
+</table>
 </body>
 </html>

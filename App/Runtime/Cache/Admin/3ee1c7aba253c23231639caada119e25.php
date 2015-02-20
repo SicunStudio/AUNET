@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <title></title>
 </head>
+<body>
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
 <style type="text/css">
     div#header{text-align: center;}
     div#menu {float: left;}
@@ -53,7 +61,6 @@
     </dl>
     <dl>
         <dt>账户管理</dt>
-        <dd><a href="<?php echo U('/Admin/Rbac/help');;?>">用户帮助</a></dd>
         <dd><a href="<?php echo U('/Admin/Rbac/editpwdByUser');?>">修改密码</a></dd>
         <dd><a href="<?php echo U('/Admin/Rbac/logout');;?>">退出登录</a></dd>
     </dl>
@@ -61,6 +68,39 @@
 </div>
 
 
+
+</body>
+</html>
+<div>
+    <table class="table"/>
+    <caption align="top">角色列表</caption>
+    <tr>
+        <th>ID</th>
+        <th>角色名稱</th>
+        <th>角色描述</th>
+        <th>开启状态</th>
+        <?php if(is_array($role)): foreach($role as $key=>$v): ?><tr>
+                <td><?php echo ($v["id"]); ?></td>
+                <td><?php echo ($v["name"]); ?></td>
+                <td><?php echo ($v["remark"]); ?></td>
+                <td>
+                    <?php if($v['status']): ?>开启<?php else: ?>关闭<?php endif; ?>
+                </td>
+                <td>
+                    <a href="<?php echo U('access',array('rid'=>$v['id']));;?>">配置權限</a>
+                </td>
+
+            </tr><?php endforeach; endif; ?>
+    </tr>
+    <tr>
+        <td colspan="5" align="center">
+            <a href="<?php echo U('addRole');?>">添加角色</a>
+        </td>
+    </tr>
+
+
+    </table>
+</div>
 
 </body>
 </html>

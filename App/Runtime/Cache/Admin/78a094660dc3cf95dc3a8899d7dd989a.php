@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <title></title>
 </head>
+<body>
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
 <style type="text/css">
     div#header{text-align: center;}
     div#menu {float: left;}
@@ -62,5 +69,16 @@
 
 
 
+</body>
+</html>
+<div>
+    <h1>您的身份是<?php echo ($remark); ?></h1>
+    <h2><p>您拥有的权限是</p></h2>
+    <tr>
+
+            <?php if(is_array($text)): foreach($text as $key=>$v): ?><th><?php echo ($v); ?> </th><?php endforeach; endif; ?>
+
+    </tr>
+</div>
 </body>
 </html>

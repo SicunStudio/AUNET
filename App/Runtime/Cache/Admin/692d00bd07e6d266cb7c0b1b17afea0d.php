@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <title></title>
 </head>
+<body>
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
 <style type="text/css">
     div#header{text-align: center;}
     div#menu {float: left;}
@@ -53,7 +60,6 @@
     </dl>
     <dl>
         <dt>账户管理</dt>
-        <dd><a href="<?php echo U('/Admin/Rbac/help');;?>">用户帮助</a></dd>
         <dd><a href="<?php echo U('/Admin/Rbac/editpwdByUser');?>">修改密码</a></dd>
         <dd><a href="<?php echo U('/Admin/Rbac/logout');;?>">退出登录</a></dd>
     </dl>
@@ -62,5 +68,22 @@
 
 
 
+</body>
+</html>
+<form method="post" action="<?php echo U('addForecastHandle');?>">
+    <table class="table">
+        <tr>
+            <td align="right">预告内容</td>
+            <td>
+                <input type="text" name="title"/>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <input type="submit" value="提交"/>
+            </td>
+        </tr>
+    </table>
+</form>
 </body>
 </html>

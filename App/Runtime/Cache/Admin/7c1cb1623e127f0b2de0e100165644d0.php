@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <title></title>
 </head>
+<body>
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
 <style type="text/css">
     div#header{text-align: center;}
     div#menu {float: left;}
@@ -53,7 +60,6 @@
     </dl>
     <dl>
         <dt>账户管理</dt>
-        <dd><a href="<?php echo U('/Admin/Rbac/help');;?>">用户帮助</a></dd>
         <dd><a href="<?php echo U('/Admin/Rbac/editpwdByUser');?>">修改密码</a></dd>
         <dd><a href="<?php echo U('/Admin/Rbac/logout');;?>">退出登录</a></dd>
     </dl>
@@ -62,5 +68,50 @@
 
 
 
+</body>
+</html>
+    <form action="<?php echo U('addNodeHandle');;?>" method="post">
+    <table class="table">
+        <tr>
+            <th colspan="2">添加節點</th>
+        </tr>
+        <tr>
+            <td align="right"><?php echo ($type); ?>名稱:</td>
+            <td>
+                <input type="text" name="name"<?php if(isset($node)): ?>value="<?php echo ($node["name"]); ?>"<?php endif; ?>/>
+            </td>
+        </tr>
+        <tr>
+            <td align="right"><?php echo ($type); ?>描述:</td>
+            <td>
+                <input type="text" name="title"<?php if(isset($node)): ?>value="<?php echo ($node['title']); ?>"<?php endif; ?>/>
+            </td>
+        </tr>
+        <tr>
+            <td align="right">是否开启:</td>
+            <td>
+                <input type="radio" name='status' value='1' checked='checked'/>&nbsp;开启&nbsp;
+                <input type="radio" name='status' value='0'/>&nbsp;关闭
+            </td>
+        </tr>
+    <tr>
+        <td align="right">排序</td>
+        <td>
+            <input type="text" name="sort" value="1"<?php if(isset($node)): ?>value="<?php echo ($node['sort']); ?>"<?php endif; ?>/>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <input type="hidden" name="pid" value="<?php echo ($pid); ?>"/>
+            <input type="hidden" name="level" value="<?php echo ($level); ?>"/>
+            <input type="hidden" name="id" <?php if(isset($node)): ?>value="<?php echo ($node['id']); ?>"<?php endif; ?>/>
+            <input type="submit" <?php if(isset($node)): ?>value="保存修改"<?php else: ?>value="添加"<?php endif; ?>/>
+        </td>
+    </tr>
+
+
+
+    </table>
+    </form>
 </body>
 </html>
