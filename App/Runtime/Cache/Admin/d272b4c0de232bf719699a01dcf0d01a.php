@@ -4,13 +4,6 @@
     <meta charset="UTF-8">
     <title></title>
 </head>
-<body>
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-</head>
 <style type="text/css">
     div#header{text-align: center;}
     div#menu {float: left;}
@@ -60,36 +53,25 @@
     </dl>
     <dl>
         <dt>账户管理</dt>
+        <dd><a href="<?php echo U('/Admin/Rbac/help');;?>">用户帮助</a></dd>
         <dd><a href="<?php echo U('/Admin/Rbac/editpwdByUser');?>">修改密码</a></dd>
         <dd><a href="<?php echo U('/Admin/Rbac/logout');;?>">退出登录</a></dd>
     </dl>
 
 </div>
-
-
-
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<h1>
+    欢迎回来，<?php echo ($_SESSION['username']); ?>！
+</h1>
+<p>您上次登录的时间是<?php echo ($_SESSION['lastlogintime']); ?></p>
+<p>您上次登录的ip是<?php echo ($_SESSION['lastloginip']); ?></p>
 </body>
 </html>
-<table class="table">
-    <caption align="top">预告列表</caption>
-    <tr>
-        <th>ID</th>
-        <th>内容</th>
-        <th>时间</th>
-        <th>发布人</th>
-        <th>操作</th>
-    </tr>
-    <?php if(is_array($data)): foreach($data as $key=>$v): ?><tr>
-            <td width="8%"><?php echo ($v["id"]); ?></td>
-            <td width="18%" align="center"><?php echo ($v["title"]); ?></td>
-            <td width="12%" align="center"><?php echo (date('y-m-d H:i',$v["time"])); ?></td>
-            <td width="12%" align="center"><?php echo ($v["username"]); ?></td>
-            <td width="18%" align="center">
-                <a href="<?php echo U('editForecast',array('id'=>$v['id']));?>">修改</a>
-                <a href="<?php echo U('delForecast',array('id'=>$v['id']));?>">删除</a>
-            </td>
-        </tr><?php endforeach; endif; ?>
-
-</table>
 </body>
 </html>

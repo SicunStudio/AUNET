@@ -16,8 +16,7 @@ class RbacController extends CommonController{
         $this->redirect('Admin/Index/index');
     }
     public function rbac_index(){
-
-//        die;
+//    dump($_SESSION);
         $this->display();
     }
     public function role(){
@@ -274,31 +273,45 @@ class RbacController extends CommonController{
 
 
     //用户帮助界面
+    //显示用户拥有的权限
 
 
     public function help(){
-        $id=(int)$_SESSION['uid'];
-        $data=D('UserRelation')->where(array('id'=>$id))->relation(true)->find();
-//        dump($data['role']);
-        $role=array();
-        foreach($data['role'] as $v){
-            $role['id']=(int)$v['id'];
-            $role['remark']=$v['remark'];   //身份描述
-        }
-        $node=M('access')->where(array('role_id'=>$role['id'],'level'=>3))->field('node_id')->select();
-        $Node=M('node');
-        foreach($node as $v=>$k){
-            foreach($k as $node){
-                $user_node[]=$Node->where(array('id'=>$node))->field('title')->find();
+
+        if($_SESSION['username']==C("RBAC_SUPERADMIN")){
+            $this->remark="超级管理员";
+            $this->text="所有权限";
+        }else{
+            $id=(int)$_SESSION['uid'];
+            $data=D('UserRelation')->where(array('id'=>$id))->relation(true)->field('id')->find();
+            $role_id=array();
+            $remark=array();
+            foreach($data['role'] as $v=>$k){
+                $role_id[$v]=(int)$k['id'];
+                $remark[$v]=$k['remark'];   //身份描述
             }
-        }
-        foreach($user_node as $v=>$k){
-            foreach($k as $title){
-                $text[]=$title;
+            $access=M('access');
+            foreach($role_id as $v=>$k){
+                $node[$v]=$access->where(array('role_id'=>$k,'level'=>3))->field('node_id')->select();
             }
+            foreach($node as $item=>$arr){
+                foreach($arr as $v=>$k){
+                    foreach($k as $num=>$node_id){
+                        $user_node[]=(int)$node_id;
+                    }
+                }
+            }
+            $Node=M('node');
+            foreach($user_node as $v=>$id){
+                $text[$v]=$Node->where(array('id'=>$id))->field('title')->find();
+                $user_permission[$v]=$text[$v]['title'];
+            }
+
+
+            $this->text=$user_permission;    //权限拥有
+            $this->remark=$remark;
         }
-        $this->text=$text;    //权限拥有
-        $this->remark=$role['remark'];
+
         $this->display();
 
 

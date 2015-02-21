@@ -19,9 +19,8 @@ class IndexController extends Controller {
             $this->error('用户名或密码错误');
         }
         if($user['lock']){
-            $this->error('用户被锁定');
+            $this->error('用户被锁定,请联系管理员解锁');
         }
-
         $data=array('id'=>$user['id'],
             'logintime'=>time(),
             'loginip'=>get_client_ip()
@@ -29,8 +28,8 @@ class IndexController extends Controller {
         M('user')->save($data);
         session(C('USER_AUTH_KEY'),$user['id']);
         session('username',$user['username']);
-        session('logintime',date('Y-m-d H:i',$user['logintime']));
-        session('loginip',$user['loginip']);
+        session('lastlogintime',date('Y-m-d H:i',$user['logintime']));
+        session('lastloginip',$user['loginip']);
         if($user['username']==C('RBAC_SUPERADMIN')){
             session(C('ADMIN_AUTH_KEY'),true);
         }

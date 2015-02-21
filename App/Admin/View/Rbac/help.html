@@ -5,17 +5,20 @@
     <title></title>
 </head>
 <body>
-<include file="rbac_index"/>
 <div>
-    <h1>您的身份是{$remark}</h1>
+    <h1>您的身份是</h1>
+    <if condition="is_array($text)">
+        <foreach name="remark" item="v"><h2>{$v}</h2></foreach>
+        <else/>
+        <p>超级管理员</p>
+    </if>
     <h2><p>您拥有的权限是</p></h2>
-    <tr>
+    <if condition="is_array($text)">
+        <foreach name="text" item="v"><p>{$v}</p></foreach>
+        <else/>
+        <p>所有权限</p>
+    </if>
 
-            <foreach name="text" item="v">
-                <th>{$v}</th>
-            </foreach>
-
-    </tr>
 </div>
 </body>
 </html>

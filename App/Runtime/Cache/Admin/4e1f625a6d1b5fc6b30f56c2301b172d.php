@@ -59,8 +59,19 @@
     </dl>
 
 </div>
-
-
-
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<h1>
+    欢迎回来，<?php echo ($_SESSION['username']); ?>！
+</h1>
+<p>您上次登录的时间是<?php echo ($_SESSION['lastlogintime']); ?></p>
+<p>您上次登录的ip是<?php echo ($_SESSION['lastloginip']); ?></p>
+</body>
+</html>
 </body>
 </html>

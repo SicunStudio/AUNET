@@ -1,9 +1,5 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html>
-
-<body>
-<!DOCTYPE html>
-<html>
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
@@ -57,16 +53,16 @@
     </dl>
     <dl>
         <dt>账户管理</dt>
+        <dd><a href="<?php echo U('/Admin/Rbac/help');;?>">用户帮助</a></dd>
         <dd><a href="<?php echo U('/Admin/Rbac/editpwdByUser');?>">修改密码</a></dd>
         <dd><a href="<?php echo U('/Admin/Rbac/logout');;?>">退出登录</a></dd>
     </dl>
 
 </div>
+<!DOCTYPE html>
+<html>
 
-
-
-</body>
-</html>
+<body>
 <div>
     <table class="table">
         <caption align="top">资料列表</caption>
@@ -93,5 +89,7 @@
 </div>
 
 
+</body>
+</html>
 </body>
 </html>

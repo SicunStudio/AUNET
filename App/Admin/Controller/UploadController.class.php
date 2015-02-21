@@ -56,9 +56,11 @@ class UploadController extends CommonController{
     public function remove(){
         $id=I('id',0,'intval');
         $doc=M('doc')->where(array('id'=>$id))->select();
+//        dump($doc);die;
         foreach($doc as $v){
             $filename=$v['filename'];
         }
+//        die;
         if(M('doc')->delete($id)&&unlink($filename)){
             $this->success('删除成功');
         }else{

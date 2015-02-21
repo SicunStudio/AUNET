@@ -4,13 +4,6 @@
     <meta charset="UTF-8">
     <title></title>
 </head>
-<body>
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-</head>
 <style type="text/css">
     div#header{text-align: center;}
     div#menu {float: left;}
@@ -60,16 +53,19 @@
     </dl>
     <dl>
         <dt>账户管理</dt>
+        <dd><a href="<?php echo U('/Admin/Rbac/help');;?>">用户帮助</a></dd>
         <dd><a href="<?php echo U('/Admin/Rbac/editpwdByUser');?>">修改密码</a></dd>
         <dd><a href="<?php echo U('/Admin/Rbac/logout');;?>">退出登录</a></dd>
     </dl>
 
 </div>
-
-
-
-</body>
-</html>
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
 <form action="<?php echo U('sortCate');?>" method="post">
     <table class="table">
         <tr>
@@ -100,5 +96,7 @@
         </tr>
     </table>
 </form>
+</body>
+</html>
 </body>
 </html>

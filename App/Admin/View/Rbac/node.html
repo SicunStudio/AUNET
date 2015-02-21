@@ -5,8 +5,17 @@
     <title></title>
 </head>
 <style type="text/css">
+    #wrap.clearcache{
+        display: block;
+        width: 100px;
+        height: 28px;
+        line-height: 28px;
+        text-align: center;
+        background: #670768;
+        color: #fff;
+        border-radius: 4px;
+    }
     #wrap{
-        float: left;
         height: auto;
         overflow: hidden;
         margin: 20px auto;
@@ -56,8 +65,7 @@
     }
 </style>
 <body>
-<div>
-    <include file="rbac_index"/>
+
 
     <div id='wrap'>
         <a href="{:U('addNode');}" class="add-app">添加应用</a>
@@ -84,8 +92,12 @@
                 </foreach>
             </div>
         </foreach>
+        <div id="cache">
+            <a href="{:U('/Admin/News/clearCache')}" class="clearcache">清空缓存</a>
+        </div>
     </div>
-</div>
+
+
 
 </body>
 

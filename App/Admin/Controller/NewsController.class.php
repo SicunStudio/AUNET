@@ -18,7 +18,7 @@ use Org\Util\Ueditor;
  * create table aunet_news(id int unsigned not null primary key auto_increme
  * nt,title varchar(30) not null default '',content text,time int(10) unsigned not
  * null default 0,cid int unsigned not null,del tinyint(1) unsigned not null defaul
- * t 0,pic text not null default '')ENGINE=MyISAM default charset=utf8;
+ * t 0,pic text not null default '',src text not null default '')ENGINE=MyISAM default charset=utf8;
  */
 /*
  * 新闻与标签多对多关联数据库
@@ -57,9 +57,16 @@ class NewsController extends CommonController{
 
         //相关数据
         $data=array();
+        //缩略图
         if(preg_match_all("/src=([\"|']?)([^\"'>]+\.(gif|jpg|jpeg|bmp|png))\\1/i",$_POST['content'],$match)){
             $data['pic']=$match[2][0];
         }
+        $str="";
+        //将所有图片存入数据库
+        foreach($match[2] as $v){
+            $str=" ".$v.$str;
+        }
+        $data['src']=$str;
         if(isset($_POST['aid'])){
             foreach($_POST['aid'] as $v){
                 $data['attr'][]=$v;
@@ -129,12 +136,29 @@ class NewsController extends CommonController{
     //删除新闻
     public function delete(){
         $id=I('id','','intval');
+        $data=M('news')->where(array('id'=>$id))->getField('src');
+        $src=explode(" ",substr($data,1));
+        foreach($src as $v=>$k){
+            if(file_exists(substr($k,6))){
+                unlink(substr($k,6));
+            }
+        }
         D('NewsRelation')->relation('attr')->where(array('id'=>$id))->delete();
+
         $this->redirect('news_index');
     }
+
     public function deleteAll(){
         $del=array('del'=>1);
+        $data=M('news')->where($del)->getField('src');
+        $src=explode(" ",substr($data,1));
+        foreach($src as $v=>$k){
+            if(file_exists(substr($k,6))){
+                unlink(substr($k,6));
+            }
+        }
         D('NewsRelation')->relation('attr')->where($del)->delete();
+        $this->redirect('news_index');
     }
 
 
@@ -153,4 +177,35 @@ class NewsController extends CommonController{
         $this->display();
 
     }
+
+    //清空未利用的资源
+    public function clearCache(){
+        $images=get_filetree("./Upload/news/image");   //图片文件遍历
+        $pics=M('news')->getField('src');
+        $pic=explode(" ",substr($pics,1));
+        arsort($images);
+
+        foreach($pic as $v=>$k){
+            $result[]=substr($k,6);
+        }
+        $res=array_diff($images,$result);
+//        dump($data);dump($result);dump($res);
+        if($res!=null){
+            foreach($res as $v){
+                if(file_exists($v)){
+                    if(unlink($v)){
+                        $this->success('清除成功','news_index');
+                    }else{
+                        $this->error('清除失败','news_index');
+                    }
+                }else{
+                    $this->error('清除失败','news_index');
+                }
+            }
+        }else{
+            $this->success('没有缓存','news_index');
+        }
+
+    }
+
 } 
