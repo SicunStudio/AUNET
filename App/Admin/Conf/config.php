@@ -14,6 +14,9 @@ return array(
     'RBAC_NODE_TABLE'       =>'aunet_node',
 
     'LAYOUT_ON'             =>true,
-    'LAYOUT_NAME'           =>'index'
-	//'配置项'=>'配置值'
+    'LAYOUT_NAME'           =>'index',
+
+//    'TMPL_ACTION_ERROR'     =>,        错误跳转页面
+//    'TMPL_ACTION_SUCCESS'   =>         成功跳转页面
+
 );

@@ -9,6 +9,7 @@
 namespace Admin\Controller;
 use Admin\Util\Category;
 use Org\Util\Ueditor;
+use Think\Page;
 
 /*
  *
@@ -20,6 +21,8 @@ use Org\Util\Ueditor;
  * null default 0,cid int unsigned not null,del tinyint(1) unsigned not null defaul
  * t 0,pic text not null default '',src text not null default '')ENGINE=MyISAM default charset=utf8;
  */
+
+
 /*
  * 新闻与标签多对多关联数据库
  * create table aunet_news_attr(nid int unsigned not null,aid int unsigned n
@@ -30,8 +33,13 @@ class NewsController extends CommonController{
 
     //新闻列表
     public function news_index(){
-        $this->news=D('NewsRelation')->getNews();
-        $this->display();
+
+        $count=D('NewsRelation')->getNewsCount();
+        $this->count=$count;
+        $Page=new Page($count,5);
+        $this->news=D('NewsRelation')->where(array('del'=>0))->order('time desc')->limit($Page->firstRow.','.$Page->listRows)->select();
+        $this->page=$Page->show();
+        $this->display('news_index');
     }
 
 
@@ -128,7 +136,11 @@ class NewsController extends CommonController{
 
     //回收站页面
     public function trash(){
-        $this->news=D('NewsRelation')->getNews(1);
+        $count=D('NewsRelation')->getNewsCount(1);
+        $Page=new Page($count,2);
+        $this->news=D('NewsRelation')->where(array('del'=>1))->order('time desc')->limit($Page->firstRow.','.$Page->listRows)->select();
+//        $this->news=D('NewsRelation')->getNews(1);
+        $this->page=$Page->show();
         $this->display('news_index');
     }
 

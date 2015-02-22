@@ -12,6 +12,7 @@ namespace Common\Model;
 */
 
 use Think\Model\RelationModel;
+
 class NewsRelationModel extends RelationModel{
     protected $tableName='news';
     protected $_link=array(
@@ -27,19 +28,32 @@ class NewsRelationModel extends RelationModel{
         )
     );
 
+
  /*
- * 获取新闻列表
+ * 按时间顺序获取新闻列表
  */
     public function getNews($del=0){
         $field=array('del');
         $where=array('del'=>$del);
-        return $this->field($field,true)->relation(true)->where($where)->select();
+        return $this->field($field,true)->relation(true)->where($where)->order('time desc')->select();
     }
 
+    /*
+     * 获取新闻总数
+     * $del 是否被删除
+     */
+    public function getNewsCount($del=0){
+        return $this->where(array('del'=>$del))->count();
+    }
+
+    /*
+     * 根据id获取新闻
+     */
     public function getNewsById($id){
         $field=array('del');
         $where=array('id'=>$id);
         return $this->field($field,true)->relation(true)->where($where)->select();
     }
+
 
 } 

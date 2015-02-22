@@ -17,11 +17,16 @@ namespace Admin\Controller;
 
 
 
+use Think\Page;
+
 class ForecastController extends CommonController{
     public function forecast_index(){
-
-        $this->data=M('forecast')->select();
-
+        $Forecast=M('forecast');
+        $count=$Forecast->count();
+        $Page=new Page($count,5);
+        $this->count=$count;
+        $this->data=$Forecast->order('time desc')->limit($Page->firstRow.','.$Page->listRows)->select();
+        $this->page=$Page->show();
         $this->display();
     }
     public function addForecast(){

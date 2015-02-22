@@ -66,11 +66,48 @@
     <title></title>
 </head>
 <body>
-<h1>
-    欢迎回来，<?php echo ($_SESSION['username']); ?>！
-</h1>
-<p>您上次登录的时间是<?php echo ($_SESSION['lastlogintime']); ?></p>
-<p>您上次登录的ip是<?php echo ($_SESSION['lastloginip']); ?></p>
+    <div>
+        <table class="table">
+            <tr>
+                <th>ID</th>
+                <th>用户名称</th>
+                <th>上一次登陆时间</th>
+                <th>上一次登陆IP</th>
+                <th>锁定状态</th>
+                <th>用户所属组别</th>
+                <th>操作</th>
+            </tr>
+            <?php if(is_array($user)): foreach($user as $key=>$v): ?><tr>
+                    <td><?php echo ($v["id"]); ?></td>
+                    <td><?php echo ($v["username"]); ?></td>
+                    <td><?php echo (date('y-m-d H:i', $v["logintime"])); ?></td>
+                    <td><?php echo ($v["loginip"]); ?></td>
+                    <td>
+                        <?php if($v['lock']): ?>锁定<?php else: ?>未锁定<?php endif; ?>
+                    </td>
+                    <td>
+                        <?php if($v['username']==C('RBAC_SUPERADMIN')): ?>超级管理员
+                            <?php else: ?>
+                            <ul>
+                                <?php if(is_array($v["role"])): foreach($v["role"] as $key=>$value): ?><li><?php echo ($value["name"]); ?>(<?php echo ($value["remark"]); ?>)</li><?php endforeach; endif; ?>
+                            </ul><?php endif; ?>
+                    </td>
+                    <td>
+                        <a href="<?php echo U('editpwd',array('id'=>$v['id']));?>">修改密码</a>
+                    </td>
+                    <td>
+                        <a href="<?php echo U('lock',array('id'=>$v['id'],'lock'=>$v['lock']));?>"><?php if($v['lock']): ?>解锁<?php else: ?>锁定<?php endif; ?></a>
+                    </td>
+                </tr><?php endforeach; endif; ?>
+            <td colspan="10" align="center">
+                <a href="<?php echo U('addUser');?>">添加用户</a>
+            </td>
+        </table>
+    </div>
+
+
+
+
 </body>
 </html>
 </body>

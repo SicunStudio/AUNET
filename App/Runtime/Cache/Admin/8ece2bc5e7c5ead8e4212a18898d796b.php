@@ -94,6 +94,11 @@
     <?php if(ACTION_NAME == 'trash'): ?><td colspan="5" align="center">
             [<a href="<?php echo U('deleteAll');?>">清空回收站</a>]
         </td><?php endif; ?>
+    <div align="center">
+        <span class="rows">共<?php echo ($count); ?>条记录</span>
+        <?php echo ($page); ?>
+    </div>
+
 </body>
 </html>
 </body>

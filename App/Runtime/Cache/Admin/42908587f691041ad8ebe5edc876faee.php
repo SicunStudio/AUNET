@@ -61,34 +61,37 @@
 </div>
 <!DOCTYPE html>
 <html>
-
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
 <body>
-<div>
+<form action="<?php echo U('runAddAttr');?>" method="post">
     <table class="table">
-        <caption align="top">资料列表</caption>
         <tr>
-            <th>文件名</th>
-            <th>上传时间</th>
-            <th>操作</th>
-            <th <?php if($_SESSION['username'] == C('RBAC_SUPERADMIN')): else: ?>hidden="hidden"<?php endif; ?>>上传用户</th>
+            <th colspan="2"><?php if($attr['id']): ?>修改博文属性<?php else: ?>添加博文属性<?php endif; ?></th>
         </tr>
-        <?php if(is_array($doc)): foreach($doc as $key=>$v): ?><tr>
-                <td><?php echo ($v["remark"]); ?></td>
-                <td><?php echo (date('y-m-d H:i',$v["time"])); ?></td>
-                <td>
-                    <a href="<?php echo U('Download/download_index',array('id'=>$v['id']));?>">下载</a>
-                </td>
-                <td>
-                    <a href="<?php echo U('remove',array('id'=>$v['id']));?>">删除</a>
-                </td>
-                <td<?php if($_SESSION['username'] == C('RBAC_SUPERADMIN')): else: ?>hidden="hidden"<?php endif; ?>>
-                <?php echo ($v["user"]); ?>
-                </td>
-            </tr><?php endforeach; endif; ?>
+        <tr>
+            <td align="right">属性名称</td>
+            <td>
+                <input type="text" name="name"<?php if($attr['id']): ?>value="<?php echo ($attr["name"]); ?>"<?php endif; ?> />
+            </td>
+        </tr>
+        <tr>
+            <td align="right">标题颜色</td>
+            <td>
+                <input type="text" name="color"<?php if($attr['id']): ?>value="<?php echo ($attr["color"]); ?>"<?php endif; ?>/>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <input type="hidden" name="id" <?php if($attr['id']): ?>value="<?php echo ($attr["id"]); ?>"<?php endif; ?>/>
+                <input type="submit"<?php if($attr['id']): ?>value="保存修改"<?php else: ?>value="添加属性"<?php endif; ?>/>
+            </td>
+        </tr>
+
     </table>
-</div>
-
-
+</form>
 </body>
 </html>
 </body>
