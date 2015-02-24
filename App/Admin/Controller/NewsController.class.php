@@ -141,6 +141,7 @@ class NewsController extends CommonController{
         $this->news=D('NewsRelation')->where(array('del'=>1))->order('time desc')->limit($Page->firstRow.','.$Page->listRows)->select();
 //        $this->news=D('NewsRelation')->getNews(1);
         $this->page=$Page->show();
+        $this->count=$count;
         $this->display('news_index');
     }
 
@@ -158,6 +159,25 @@ class NewsController extends CommonController{
         D('NewsRelation')->relation('attr')->where(array('id'=>$id))->delete();
 
         $this->redirect('news_index');
+
+        //In Sae :
+        /*
+         * $src=explode(" ",substr($data,1));
+           $st=new \SaeStorage();
+
+           foreach($src as $v=>$k){
+              $filename=substr($k,strpos($k,"com")+3);
+              if($st->fileExists('upload',$filename)){
+                  if($st->delete('upload',$filename)&&D('NewsRelation')->relation('attr')->where(array('id'=>$id))->delete()){
+                      $this->redirect('news_index');
+                  }else{
+                      $this->error('删除失败');
+                  }
+              }else{
+                  $this->error('删除失败');
+              }
+
+         }*/
     }
 
     public function deleteAll(){
@@ -171,6 +191,31 @@ class NewsController extends CommonController{
         }
         D('NewsRelation')->relation('attr')->where($del)->delete();
         $this->redirect('news_index');
+
+        //In Sae:
+
+
+        /*$src=explode(" ",substr($data,1));
+          $st=new \SaeStorage();
+
+          foreach($src as $v=>$k){
+              $filename=substr($k,strpos($k,"com")+3);
+              if($st->fileExists('upload',$filename)){
+                  if(D('NewsRelation')->relation('attr')->where($del)->delete()&&$st->delete('upload',$filename)){
+                	  $this->redirect('news_index');
+                  }else{
+                	  break;
+                  }
+              }else{
+            	  break;
+              }
+
+          }
+          $this->error('删除失败');
+         *
+         */
+
+
     }
 
 
@@ -219,5 +264,56 @@ class NewsController extends CommonController{
         }
 
     }
+
+    //@Override
+
+    //Change in Sae
+
+
+    /*public function clearCache(){
+        $st=new \SaeStorage();
+        $images=$st->getList('upload','news/image');
+
+
+        //        $images=get_filetree("./Upload/news/image");   //图片文件遍历
+        $pics=M('news')->field('src')->select();
+        foreach($pics as $s=>$p){
+            foreach($p as $k=>$v){
+                $pic[]=explode(" ",substr($v,1));
+            }
+
+        }
+        foreach($pic as $s=>$p){
+            foreach($p as $k=>$v){
+                if($v!=''){
+                    $res[]=substr($v,strpos($v,"com")+4);
+
+                }
+
+            }
+        }
+        $result=array_diff($images,$res);
+        if($result!=null){
+            foreach($result as $k=>$v){
+                if($st->fileExists('upload',$v)){
+                    if($st->delete('upload',$v)){
+                        $this->success('清除成功','news_index');
+                        break;
+                    }else{
+                        break;
+                    }
+                }else{
+                    break;
+                }
+
+            }
+            $this->success('没有缓存','news_index');
+        }else{
+            $this->success('没有缓存','news_index');
+        }
+
+
+    }*/
+
 
 } 

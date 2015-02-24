@@ -7,8 +7,6 @@
  */
 
 namespace Admin\Controller;
-
-
 use Think\Upload;
 
 class UploadController extends CommonController{
@@ -23,6 +21,10 @@ class UploadController extends CommonController{
         $upload->exts=array('txt','doc','docx');
         $upload->rootPath='./Upload/UploadsDoc/';
         $upload->subName=$_SESSION['username'];
+//        For Sae  Add:
+//        $upload->driverConfig=array();
+//        $upload->driver='Sae';
+
         $path=$upload->rootPath.$upload->subName.'/';
         if(!file_exists($path)){
             mkdir($path);
@@ -32,7 +34,8 @@ class UploadController extends CommonController{
             $this->error($upload->getError());
         }else{
             foreach($info as $v){
-                $data[]=array('filename'=>$path.$v['savename'],
+                $data[]=array('filename'=>$path.$v['savename'],      //$path.$v['savename'] to $v['url'] in Sae
+                    //add 'url'=>$v['url'] in Sae
                     'remark'=>$v['name'],
                     'user'=>$_SESSION['username'],
                     'time'=>time());
@@ -54,12 +57,27 @@ class UploadController extends CommonController{
 
     //删除上传附件
     public function remove(){
+
+
         $id=I('id',0,'intval');
-        $doc=M('doc')->where(array('id'=>$id))->select();
+        $doc=M('doc')->where(array('id'=>$id))->find();
 //        dump($doc);die;
-        foreach($doc as $v){
-            $filename=$v['filename'];
-        }
+        $filename=$doc['filename'];       //$doc['filename'] to substr($doc['filename'],9) in Sae
+
+/*
+        Function remove in Sae
+        $st=new \SaeStorage();
+        if($st->fileExists('upload',$filename)){
+            if($st->delete('upload',$filename)&&M('doc')->delete($id)){
+                $this->success('删除成功');
+            }else{
+                $this->error('删除失败');
+            }
+        }else{
+            $this->error('删除失败');
+        }*/
+
+
 //        die;
         if(M('doc')->delete($id)&&unlink($filename)){
             $this->success('删除成功');

@@ -12,9 +12,9 @@ function downloadFileById($id=0){
         return false;
     }else{
         $Doc=M('doc');
-        $filename=$Doc->where(array('id'=>$id))->getField('filename');
+        $filename=$Doc->where(array('id'=>$id))->getField('filename');    //getField('filename') to getField('url') in Sae
         $showname=$Doc->where(array('id'=>$id))->getField('remark');
-        if(file_exists($filename)){
+        if(file_exists($filename)){             //file_exists不生效  in Sae
             $length = filesize($filename);
             header('Content-Description: File Transfer');
             header('Content-Type: application/msword');

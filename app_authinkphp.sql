@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.4.1
+-- version 3.3.8.1
 -- http://www.phpmyadmin.net
 --
--- 主机: 127.0.0.1
--- 生成日期: 2015 �?02 �?24 �?15:59
--- 服务器版本: 5.6.11
--- PHP 版本: 5.5.1
+-- 主机: w.rdc.sae.sina.com.cn:3307
+-- 生成日期: 2015 年 02 月 25 日 02:53
+-- 服务器版本: 5.5.23
+-- PHP 版本: 5.3.3
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -17,10 +16,8 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- 数据库: `aunet`
+-- 数据库: `app_authinkphp`
 --
-CREATE DATABASE IF NOT EXISTS `aunet` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `aunet`;
 
 -- --------------------------------------------------------
 
@@ -111,24 +108,25 @@ INSERT INTO `aunet_cate` (`id`, `name`, `pid`, `sort`) VALUES
 
 CREATE TABLE IF NOT EXISTS `aunet_doc` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `filename` char(50) NOT NULL DEFAULT '',
+  `url` char(90) NOT NULL DEFAULT '',
   `remark` varchar(32) NOT NULL DEFAULT '',
   `user` varchar(20) NOT NULL DEFAULT '',
   `time` int(10) unsigned NOT NULL DEFAULT '0',
+  `filename` varchar(90) NOT NULL DEFAULT ' ',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=32 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=43 ;
 
 --
 -- 转存表中的数据 `aunet_doc`
 --
 
-INSERT INTO `aunet_doc` (`id`, `filename`, `remark`, `user`, `time`) VALUES
-(30, './Upload/UploadsDoc/test/54e07c4258005.docx', '社团网总体需求.docx', 'test', 1423998018),
-(29, './Upload/UploadsDoc/admin/54e05d1a08a86.docx', '社团网总体需求.docx', 'admin', 1423990042),
-(28, './Upload/UploadsDoc/admin/54e05d1a0869d.docx', '社团网.docx', 'admin', 1423990042),
-(27, './Upload/UploadsDoc/admin/54e05d1a07ecd.docx', '[社团部]社团网场地物资借用及相关功能与要求.docx', 'admin', 1423990042),
-(26, './Upload/UploadsDoc/admin/54e05b90b5a1f.docx', '社团网.docx', 'admin', 1423989648),
-(31, './Upload/UploadsDoc/admin/54e093cf597e7.docx', '社团网总体需求.docx', 'admin', 1424004047);
+INSERT INTO `aunet_doc` (`id`, `url`, `remark`, `user`, `time`, `filename`) VALUES
+(30, './Upload/UploadsDoc/test/54e07c4258005.docx', '社团网总体需求.docx', 'test', 1423998018, ' '),
+(29, './Upload/UploadsDoc/admin/54e05d1a08a86.docx', '社团网总体需求.docx', 'admin', 1423990042, ' '),
+(28, './Upload/UploadsDoc/admin/54e05d1a0869d.docx', '社团网.docx', 'admin', 1423990042, ' '),
+(27, './Upload/UploadsDoc/admin/54e05d1a07ecd.docx', '[社团部]社团网场地物资借用及相关功能与要求.docx', 'admin', 1423990042, ' '),
+(26, './Upload/UploadsDoc/admin/54e05b90b5a1f.docx', '社团网.docx', 'admin', 1423989648, ' '),
+(31, './Upload/UploadsDoc/admin/54e093cf597e7.docx', '社团网总体需求.docx', 'admin', 1424004047, ' ');
 
 -- --------------------------------------------------------
 
@@ -173,7 +171,7 @@ CREATE TABLE IF NOT EXISTS `aunet_news` (
   `src` text NOT NULL,
   PRIMARY KEY (`id`),
   KEY `cid` (`cid`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=58 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=70 ;
 
 --
 -- 转存表中的数据 `aunet_news`
@@ -185,7 +183,9 @@ INSERT INTO `aunet_news` (`id`, `title`, `content`, `time`, `cid`, `del`, `pic`,
 (54, '333', '<p>333</p>', 1424601221, 18, 0, '', ''),
 (55, '444', '<p>444</p>', 1424601233, 10, 0, '', ''),
 (56, '555', '<p>555</p>', 1424601243, 0, 0, '', ''),
-(57, '666', '<p>666</p>', 1424601251, 13, 0, '', '');
+(57, '666', '<p>666</p>', 1424601251, 13, 0, '', ''),
+(68, 'asdf', '<p><img src="http://authinkphp-upload.stor.sinaapp.com/news/image/1/20150225/54ecbc49a8a7b.jpg" style="" title="54ecbc49a8a7b.jpg"/></p><p><img src="http://authinkphp-upload.stor.sinaapp.com/news/image/1/20150225/54ecbc50975d5.jpg" style="" title="54ecbc50975d5.jpg"/></p><p><img src="http://authinkphp-upload.stor.sinaapp.com/news/image/1/20150225/54ecbc5345574.jpg" style="" title="54ecbc5345574.jpg"/></p><p><img src="http://authinkphp-upload.stor.sinaapp.com/news/image/1/20150225/54ecbc56f205f.jpg" style="" title="54ecbc56f205f.jpg"/></p><p><img src="http://authinkphp-upload.stor.sinaapp.com/news/image/1/20150225/54ecbc6939a25.jpg" style="" title="54ecbc6939a25.jpg"/></p><p><br/></p>', 1424800880, 0, 0, 'http://authinkphp-upload.stor.sinaapp.com/news/image/1/20150225/54ecbc49a8a7b.jpg', ' http://authinkphp-upload.stor.sinaapp.com/news/image/1/20150225/54ecbc6939a25.jpg http://authinkphp-upload.stor.sinaapp.com/news/image/1/20150225/54ecbc56f205f.jpg http://authinkphp-upload.stor.sinaapp.com/news/image/1/20150225/54ecbc5345574.jpg http://authinkphp-upload.stor.sinaapp.com/news/image/1/20150225/54ecbc50975d5.jpg http://authinkphp-upload.stor.sinaapp.com/news/image/1/20150225/54ecbc49a8a7b.jpg'),
+(69, 'ddd', '<p><img src="http://authinkphp-upload.stor.sinaapp.com/news/image/1/20150225/54ecbeb70b3af.jpg" style="" title="54ecbeb70b3af.jpg"/></p><p><img src="http://authinkphp-upload.stor.sinaapp.com/news/image/1/20150225/54ecbeb7e8cc4.jpg" style="" title="54ecbeb7e8cc4.jpg"/></p><p><br/></p>', 1424801469, 10, 0, 'http://authinkphp-upload.stor.sinaapp.com/news/image/1/20150225/54ecbeb70b3af.jpg', ' http://authinkphp-upload.stor.sinaapp.com/news/image/1/20150225/54ecbeb7e8cc4.jpg http://authinkphp-upload.stor.sinaapp.com/news/image/1/20150225/54ecbeb70b3af.jpg');
 
 -- --------------------------------------------------------
 
@@ -249,7 +249,11 @@ INSERT INTO `aunet_news_attr` (`nid`, `aid`) VALUES
 (53, 2),
 (55, 2),
 (56, 2),
-(57, 4);
+(57, 4),
+(68, 2),
+(65, 2),
+(68, 4),
+(69, 2);
 
 -- --------------------------------------------------------
 
@@ -382,10 +386,6 @@ CREATE TABLE IF NOT EXISTS `aunet_user` (
 --
 
 INSERT INTO `aunet_user` (`id`, `username`, `password`, `logintime`, `loginip`, `lock`) VALUES
-(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 1424596220, '127.0.0.1', 0),
+(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 1424802658, '221.235.94.189', 0),
 (6, 'root', '63a9f0ea7bb98050796b649e85481845', 1424519625, '127.0.0.1', 0),
 (5, 'ted', '870fa8ee962d90af50c7eaed792b075a', 1424524151, '127.0.0.1', 0);
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

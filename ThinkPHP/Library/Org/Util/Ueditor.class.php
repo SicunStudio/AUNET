@@ -14,7 +14,7 @@ class Ueditor{
 	
 	private $st;
 	
-	private $rootpath = "./Upload/";
+	private $rootpath = "./Upload/";            //SAE Change into Upload
 	
 	public function __construct($uid = ''){
 //		uid 为空则导入当前会话uid
