@@ -44,7 +44,7 @@ class NewsController extends CommonController{
 
 
     //添加新闻界面
-    public function addNews(){
+    public function addnews(){
         $cate=M('cate')->order('sort')->select();
         $this->cate=Category::unlimitedForLevel($cate);
         $this->attr=M('attr')->select();
@@ -220,7 +220,7 @@ class NewsController extends CommonController{
 
 
     //新闻预览
-    public function Text(){
+    public function text(){
         $id=I('id','','intval');
         $text=D('NewsRelation')->getNewsById($id);
 //        dump($text);die;

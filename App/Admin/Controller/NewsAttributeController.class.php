@@ -20,7 +20,7 @@ class NewsAttributeController extends CommonController{
         $this->attr=M('attr')->select();
         $this->display();
     }
-    public function addAttr(){
+    public function addattr(){
         $this->display();
     }
     //添加 OR 编辑属性
@@ -50,7 +50,7 @@ class NewsAttributeController extends CommonController{
         $id=I('id',0,'intval');
 //        dump($id);die;
         $this->attr=M('attr')->where(array('id'=>$id))->find();
-        $this->display('addAttr');
+        $this->display('addattr');
     }
     //删除属性
     public function deleteAttr(){

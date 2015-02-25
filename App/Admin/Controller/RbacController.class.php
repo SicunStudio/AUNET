@@ -32,7 +32,7 @@ class RbacController extends CommonController{
         $this->display();
     }
 
-    public function addUser(){
+    public function adduser(){
         $this->role=M('role')->select();
         $this->display();
     }
@@ -72,7 +72,7 @@ class RbacController extends CommonController{
             }
         }
     }
-    public function addRole(){
+    public function addrole(){
         $this->display();
     }
 
@@ -88,7 +88,7 @@ class RbacController extends CommonController{
         }
     }
 
-    public function addNode(){
+    public function addnode(){
 
         $this->level=I('level',1,'intval');
         $this->pid=I('pid',0,'intval');
@@ -242,7 +242,7 @@ class RbacController extends CommonController{
     }
 
     //用户修改密码界面
-    public function editpwdByUser(){
+    public function editpwdbyuser(){
         $this->display();
     }
     public function editpwdByUserHandle(){

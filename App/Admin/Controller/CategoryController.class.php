@@ -27,7 +27,7 @@ class CategoryController extends CommonController{
         $this->cate=$cate;
         $this->display();
     }
-    public function addCate(){
+    public function addcate(){
         $this->pid=I('pid',0,'intval');
         $this->display();
     }

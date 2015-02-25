@@ -29,7 +29,7 @@ class ForecastController extends CommonController{
         $this->page=$Page->show();
         $this->display();
     }
-    public function addForecast(){
+    public function addforecast(){
         $this->display();
     }
     public function addForecastHandle(){
@@ -56,7 +56,7 @@ class ForecastController extends CommonController{
             }
         }
     }
-    public function editForecast(){
+    public function editforecast(){
         $id=I('id',0,'intval');
         if($_SESSION['username']==C('RBAC_SUPERADMIN')){
             $this->data=M('forecast')->where(array('id'=>$id))->find();
