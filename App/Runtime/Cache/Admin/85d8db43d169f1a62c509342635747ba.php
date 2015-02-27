@@ -66,11 +66,21 @@
     <title></title>
 </head>
 <body>
-<h1>
-    欢迎回来，<?php echo ($_SESSION['username']); ?>！
-</h1>
-<p>您上次登录的时间是<?php echo ($_SESSION['lastlogintime']); ?></p>
-<p>您上次登录的ip是<?php echo ($_SESSION['lastloginip']); ?></p>
+<form method="post" action="<?php echo U('addForecastHandle');?>">
+    <table class="table">
+        <tr>
+            <td align="right">预告内容</td>
+            <td>
+                <input type="text" name="title"/>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <input type="submit" value="提交"/>
+            </td>
+        </tr>
+    </table>
+</form>
 </body>
 </html>
 </body>

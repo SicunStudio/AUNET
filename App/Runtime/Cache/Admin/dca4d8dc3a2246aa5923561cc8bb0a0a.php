@@ -66,11 +66,32 @@
     <title></title>
 </head>
 <body>
-<h1>
-    欢迎回来，<?php echo ($_SESSION['username']); ?>！
-</h1>
-<p>您上次登录的时间是<?php echo ($_SESSION['lastlogintime']); ?></p>
-<p>您上次登录的ip是<?php echo ($_SESSION['lastloginip']); ?></p>
+<form action="<?php echo U('runAddAttr');?>" method="post">
+    <table class="table">
+        <tr>
+            <th colspan="2"><?php if($attr['id']): ?>修改博文属性<?php else: ?>添加博文属性<?php endif; ?></th>
+        </tr>
+        <tr>
+            <td align="right">属性名称</td>
+            <td>
+                <input type="text" name="name"<?php if($attr['id']): ?>value="<?php echo ($attr["name"]); ?>"<?php endif; ?> />
+            </td>
+        </tr>
+        <tr>
+            <td align="right">标题颜色</td>
+            <td>
+                <input type="text" name="color"<?php if($attr['id']): ?>value="<?php echo ($attr["color"]); ?>"<?php endif; ?>/>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <input type="hidden" name="id" <?php if($attr['id']): ?>value="<?php echo ($attr["id"]); ?>"<?php endif; ?>/>
+                <input type="submit"<?php if($attr['id']): ?>value="保存修改"<?php else: ?>value="添加属性"<?php endif; ?>/>
+            </td>
+        </tr>
+
+    </table>
+</form>
 </body>
 </html>
 </body>

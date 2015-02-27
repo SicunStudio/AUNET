@@ -61,16 +61,16 @@
 </div>
 <!DOCTYPE html>
 <html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-</head>
+
 <body>
-<h1>
-    欢迎回来，<?php echo ($_SESSION['username']); ?>！
-</h1>
-<p>您上次登录的时间是<?php echo ($_SESSION['lastlogintime']); ?></p>
-<p>您上次登录的ip是<?php echo ($_SESSION['lastloginip']); ?></p>
+<div>
+    <form action="<?php echo U('upload');?>" method="post" enctype="multipart/form-data">
+    <input type="file" name="file[]" multiple/>
+    <input type="submit" value="提交"/>
+</form>
+
+</div>
+
 </body>
 </html>
 </body>

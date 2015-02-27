@@ -1,7 +1,6 @@
 <?php
 return array(
     'DEFAULT_MODULE'=>'Admin',
-    'URL_MODEL'             =>2,
     'DB_TYPE'               =>  'mysql',     // 数据库类型
     'DB_HOST'               =>  'localhost', // 服务器地址
     'DB_NAME'               =>  'aunet',          // 数据库名

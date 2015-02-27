@@ -66,11 +66,32 @@
     <title></title>
 </head>
 <body>
-<h1>
-    欢迎回来，<?php echo ($_SESSION['username']); ?>！
-</h1>
-<p>您上次登录的时间是<?php echo ($_SESSION['lastlogintime']); ?></p>
-<p>您上次登录的ip是<?php echo ($_SESSION['lastloginip']); ?></p>
+<form action="<?php echo U('runAddCate');?>" method="post">
+    <table class="table">
+        <tr>
+            <th colspan="2">添加栏目分类</th>
+        </tr>
+        <tr>
+            <td align="right">分类栏目名称</td>
+            <td>
+                <input type="text" name="name" <?php if($cate['id']): ?>value="<?php echo ($cate["name"]); ?>"<?php endif; ?>/>
+            </td>
+        </tr>
+        <tr>
+            <td align="right">排序:</td>
+            <td>
+                <input type="text" name="sort" <?php if($cate['id']): ?>value="<?php echo ($cate["sort"]); ?>"<?php else: ?>value="100"<?php endif; ?>/>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <input type="hidden" name="id" <?php if($cate['id']): ?>value="<?php echo ($cate["id"]); ?>"<?php endif; ?>/>
+                <input type="hidden" name="pid" <?php if($cate['id']): ?>value="<?php echo ($cate["pid"]); ?>"<?php else: ?>value="<?php echo ($pid); ?>"<?php endif; ?>/>
+                <input type="submit" <?php if($cate['id']): ?>value="保存修改"<?php else: ?>value="保存添加"<?php endif; ?>/>
+            </td>
+        </tr>
+    </table>
+</form>
 </body>
 </html>
 </body>

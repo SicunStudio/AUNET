@@ -61,16 +61,34 @@
 </div>
 <!DOCTYPE html>
 <html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-</head>
+
 <body>
-<h1>
-    欢迎回来，<?php echo ($_SESSION['username']); ?>！
-</h1>
-<p>您上次登录的时间是<?php echo ($_SESSION['lastlogintime']); ?></p>
-<p>您上次登录的ip是<?php echo ($_SESSION['lastloginip']); ?></p>
+<div>
+    <table class="table">
+        <caption align="top">资料列表</caption>
+        <tr>
+            <th>文件名</th>
+            <th>上传时间</th>
+            <th>操作</th>
+            <th <?php if($_SESSION['username'] == C('RBAC_SUPERADMIN')): else: ?>hidden="hidden"<?php endif; ?>>上传用户</th>
+        </tr>
+        <?php if(is_array($doc)): foreach($doc as $key=>$v): ?><tr>
+                <td><?php echo ($v["remark"]); ?></td>
+                <td><?php echo (date('y-m-d H:i',$v["time"])); ?></td>
+                <td>
+                    <a href="<?php echo U('Download/download_index',array('id'=>$v['id']));?>">下载</a>
+                </td>
+                <td>
+                    <a href="<?php echo U('remove',array('id'=>$v['id']));?>">删除</a>
+                </td>
+                <td<?php if($_SESSION['username'] == C('RBAC_SUPERADMIN')): else: ?>hidden="hidden"<?php endif; ?>>
+                <?php echo ($v["user"]); ?>
+                </td>
+            </tr><?php endforeach; endif; ?>
+    </table>
+</div>
+
+
 </body>
 </html>
 </body>
