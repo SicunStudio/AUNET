@@ -24,5 +24,12 @@ class AdviseController extends CommonController{
         $this->page=$Page->show();
         $this->display();
     }
+    public function deladvise(){
+        $id=I('id',0,'intval');
+//        dump($id);
+        if(M('advise')->delete($id)){
+            $this->redirect('advise_index');
+        }
+    }
 
 }

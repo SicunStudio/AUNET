@@ -79,6 +79,7 @@
         <th>标题</th>
         <th>内容</th>
         <th>是否需要回复</th>
+        <th>操作</th>
     </tr>
     <?php if(is_array($advise)): foreach($advise as $key=>$v): ?><tr>
             <td width="8%" align="center"><?php if($v['name']): echo ($v["name"]); else: ?>匿名<?php endif; ?></td>
@@ -88,6 +89,7 @@
             <td width="8%" align="center"><?php echo ($v["title"]); ?></td>
             <td width="18%" align="center"><?php echo ($v["content"]); ?></td>
             <td width="4%" align="center"><?php if($v['feedback']): ?><strong>需要</strong><?php else: ?>不需要<?php endif; ?></td>
+            <td width="4%" align="center"><a href="<?php echo U('deladvise',array('id'=>$v['id']));?>">删除</a> </td>
         </tr><?php endforeach; endif; ?>
 </table>
 <div align="center">
