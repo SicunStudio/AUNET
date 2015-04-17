@@ -6,13 +6,6 @@
  * Time: 20:51
  */
 /*
- * 验证码认证函数
- */
-function check_verify($code, $id = ""){
-    $verify = new \Think\Verify();
-    return $verify->check($code, $id);
-}
-/*
  * 递归重组节点信息为多维数组
  */
 function node_merge($node,$access=null,$pid=0){

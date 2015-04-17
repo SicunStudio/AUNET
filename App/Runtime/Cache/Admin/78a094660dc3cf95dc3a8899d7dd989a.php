@@ -74,11 +74,17 @@
     <title></title>
 </head>
 <body>
-<h1>
-    欢迎回来，<?php echo ($_SESSION['username']); ?>！
-</h1>
-<p>您上次登录的时间是<?php echo ($_SESSION['lastlogintime']); ?></p>
-<p>您上次登录的ip是<?php echo ($_SESSION['lastloginip']); ?></p>
+<div>
+    <h1>您的身份是</h1>
+    <?php if(is_array($text)): if(is_array($remark)): foreach($remark as $key=>$v): ?><h2><?php echo ($v); ?></h2><?php endforeach; endif; ?>
+        <?php else: ?>
+        <p>超级管理员</p><?php endif; ?>
+    <h2><p>您拥有的权限是</p></h2>
+    <?php if(is_array($text)): if(is_array($text)): foreach($text as $key=>$v): ?><p><?php echo ($v); ?></p><?php endforeach; endif; ?>
+        <?php else: ?>
+        <p>所有权限</p><?php endif; ?>
+
+</div>
 </body>
 </html>
 </body>

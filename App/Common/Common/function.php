@@ -6,6 +6,13 @@
  * Time: 22:59
  */
 
+/*
+ * 验证码认证函数
+ */
+function check_verify($code, $id = ""){
+    $verify = new \Think\Verify();
+    return $verify->check($code, $id);
+}
 //根据资料ID下载文件
 function downloadFileById($id=0){
     if($id==0){

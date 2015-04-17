@@ -61,6 +61,10 @@
         <dd><a href="<?php echo U('/Admin/Rbac/editpwdbyuser');?>">修改密码</a></dd>
         <dd><a href="<?php echo U('/Admin/Rbac/logout');;?>">退出登录</a></dd>
     </dl>
+    <dl>
+        <dt>物资系统管理</dt>
+        <dd><a href="<?php echo U('/Admin/Material/material_index');;?>">物资系统管理</a></dd>
+    </dl>
 
 </div>
 <!DOCTYPE html>
