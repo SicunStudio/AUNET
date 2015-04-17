@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>社团网-华中科技大学学生社团联合会</title>
+    <!--<link type="text/css" rel="stylesheet" href="__PUBLIC__/Src/style/general.css">-->
+    <!--<link type="text/css" rel="stylesheet" href="__PUBLIC__/Src/Src/style/top.css">-->
+    <!--<link type="text/css" rel="stylesheet" href="__PUBLIC__/Src/style/banner.css">-->
+    <link type="text/css" rel="stylesheet" href="__PUBLIC__/Src/style/new.css">
+    <link type="text/css" rel="stylesheet" href="__PUBLIC__/Src/style/button.css">
+    <!--<link type="text/css" rel="stylesheet" href="__PUBLIC__/Src/style/buttom.css">-->
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Src/style/flexslider.css"/>
+
+    <style>
+
+        .slideimgs {
+            height: 600px;
+            overflow: hidden;
+        }
+
+        #flexsliderarea {
+            width: 100%;
+            height: 600px;
+        }
+    </style>
+
+
+    <script type="text/javascript" src="__PUBLIC__/Src/js/jquery.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Src/js/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Src/js/jquery.easing.min.js"></script>
+
+    <script>
+
+        $(function () {
+            $(".flexslider").flexslider({
+                animation: "slide",
+                slideshowSpeed: 4000, //展示时间间隔ms
+                animationSpeed: 400, //滚动时间ms
+                touch: true, //是否支持触屏滑动
+
+            });
+        });
+
+        $(document).ready(
+                function () {
+
+                    $(".a-top").mouseenter(
+                            function (e) {
+                                $("#downlist").slideDown("fast");
+                            });
+
+                    $("#downlist").mouseenter(
+                            function (e) {
+                                $("#downlist").slideDown("fast");
+                            });
+
+
+                    $("#downlist").mouseleave(
+                            function (e) {
+                                $("#downlist").slideUp("fast");
+                            });
+
+                });
+    </script>
+</head>
+
+<body>
+
+<!-- HeadAreaStart -->
+
+
+<!-- HeadAreaEnd -->
+<div class="flexslider" id="flexsliderarea">
+    <ul class="slides">
+        <li><img src="__PUBLIC__/Src/imgs/1.jpg" class="slideimgs"/></li>
+        <li><img src="__PUBLIC__/Src/imgs/2.jpg" class="slideimgs"/></li>
+        <li><img src="__PUBLIC__/Src/imgs/3.jpg" class="slideimgs"/></li>
+        <li><img src="__PUBLIC__/Src/imgs/4.jpg" class="slideimgs"/></li>
+
+    </ul>
+</div>
+
+<div id="wrap">
+
+
+    <table width="90%" border="0" style="margin:5px auto;">
+        <tbody>
+        <tr>
+            <td height="56" colspan="2" align="center" valign="middle"><p style="color:#74b05c; font-size:30px">Weekly
+                News</p></td>
+        </tr>
+        <tr>
+            <td valign="middle">
+                <div class="new-small new1">
+                    <a href="http://www.baidu.com">
+                        <p class="new-head1"><span class="first">丁</span>李娥：来华科观光</p>
+
+                        <p class="new-xiaoxi1">要求进行世界级对话，不给进行的话就杀无赦,真的就这养洛克吗，没有爱了吗，卧槽。</p>
+                    </a>
+                </div>
+            </td>
+            <td align="left">
+                <div class="new-small new2">
+                    <a href="http://www.baidu.com">
+                        <p class="new-head1"><span class="first">丁</span>李娥：来华科观光</p>
+
+                        <p class="new-xiaoxi1">要求进行世界级对话，不给进行的话就杀无赦,真的就这养洛克吗，没有爱了吗，卧槽。</p>
+                    </a>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td valign="middle">
+                <div class="new-small new3">
+                    <a href="http://www.baidu.com">
+                        <p class="new-head1"><span class="first">丁</span>李娥：来华科观光</p>
+
+                        <p class="new-xiaoxi1">要求进行世界级对话，不给进行的话就杀无赦,真的就这养洛克吗，没有爱了吗，卧槽。</p>
+                    </a>
+                </div>
+            </td>
+            <td align="left">
+                <div class="new-small new4">
+                    <a href="http://www.baidu.com">
+                        <p class="new-head1"><span class="first">丁</span>李娥：来华科观光</p>
+
+                        <p class="new-xiaoxi1">要求进行世界级对话，不给进行的话就杀无赦,真的就这养洛克吗，没有爱了吗，卧槽。</p>
+                    </a>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+
+    <table width="99%" border="0" style="margin:5px auto;">
+        <tbody>
+        <tr>
+            <td height="55" colspan="4" align="center" valign="middle">
+                <p style="color:#74b05c; font-size:30px">Things We Do</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="24%">
+                <div class="button button1">
+                    <a class="buttonlink" href="http://www.baidu.com"></a>
+                </div>
+            </td>
+            <td width="24%">
+                <div class="button button2">
+                    <a class="buttonlink" href="http://www.baidu.com"></a>
+                </div>
+            </td>
+            <td width="24%">
+                <div class="button button3">
+                    <a class="buttonlink" href="http://www.baidu.com"></a>
+                </div>
+            </td>
+            <td width="24%">
+                <div class="button button4">
+                    <a class="buttonlink" href="http://www.baidu.com"></a>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+
+</div>
+<!-- FootAreaStart -->
+
+<!-- FootAreaEnd -->
+
+</body>
+</html>

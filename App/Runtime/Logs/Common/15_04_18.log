@@ -4,3 +4,1041 @@ INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
 ERR: 无法加载模块:Gr
 
+[ 2015-04-18T04:16:09+08:00 ] 127.0.0.1 /AUNET/index.php/MODULE_PATH/View/style/general.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:MODULE_PATH
+
+[ 2015-04-18T04:16:09+08:00 ] 127.0.0.1 /AUNET/index.php/imgs/1.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:Imgs
+
+[ 2015-04-18T04:16:09+08:00 ] 127.0.0.1 /AUNET/index.php/imgs/2.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:Imgs
+
+[ 2015-04-18T04:16:09+08:00 ] 127.0.0.1 /AUNET/index.php/imgs/3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:Imgs
+
+[ 2015-04-18T04:16:09+08:00 ] 127.0.0.1 /AUNET/index.php/imgs/4.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Imgs
+
+[ 2015-04-18T04:16:38+08:00 ] 127.0.0.1 /AUNET/index.php/MODULE_PATH/View/style/general.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:MODULE_PATH
+
+[ 2015-04-18T04:16:38+08:00 ] 127.0.0.1 /AUNET/index.php/imgs/1.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:Imgs
+
+[ 2015-04-18T04:16:38+08:00 ] 127.0.0.1 /AUNET/index.php/imgs/2.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:Imgs
+
+[ 2015-04-18T04:16:38+08:00 ] 127.0.0.1 /AUNET/index.php/imgs/4.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:Imgs
+
+[ 2015-04-18T04:16:38+08:00 ] 127.0.0.1 /AUNET/index.php/imgs/3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Imgs
+
+[ 2015-04-18T04:16:38+08:00 ] 127.0.0.1 /AUNET/index.php/MODULE_PATH/View/style/general.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:MODULE_PATH
+
+[ 2015-04-18T04:16:38+08:00 ] 127.0.0.1 /AUNET/index.php/imgs/3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Imgs
+
+[ 2015-04-18T04:16:38+08:00 ] 127.0.0.1 /AUNET/index.php/imgs/4.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:Imgs
+
+[ 2015-04-18T04:16:38+08:00 ] 127.0.0.1 /AUNET/index.php/imgs/1.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Imgs
+
+[ 2015-04-18T04:16:38+08:00 ] 127.0.0.1 /AUNET/index.php/imgs/2.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Imgs
+
+[ 2015-04-18T04:16:39+08:00 ] 127.0.0.1 /AUNET/index.php/MODULE_PATH/View/style/general.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:MODULE_PATH
+
+[ 2015-04-18T04:16:39+08:00 ] 127.0.0.1 /AUNET/index.php/imgs/1.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Imgs
+
+[ 2015-04-18T04:16:39+08:00 ] 127.0.0.1 /AUNET/index.php/imgs/3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:Imgs
+
+[ 2015-04-18T04:16:39+08:00 ] 127.0.0.1 /AUNET/index.php/imgs/4.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:Imgs
+
+[ 2015-04-18T04:16:39+08:00 ] 127.0.0.1 /AUNET/index.php/imgs/2.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:Imgs
+
+[ 2015-04-18T04:16:39+08:00 ] 127.0.0.1 /AUNET/index.php/MODULE_PATH/View/style/general.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:MODULE_PATH
+
+[ 2015-04-18T04:16:39+08:00 ] 127.0.0.1 /AUNET/index.php/imgs/4.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Imgs
+
+[ 2015-04-18T04:16:39+08:00 ] 127.0.0.1 /AUNET/index.php/imgs/3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Imgs
+
+[ 2015-04-18T04:16:39+08:00 ] 127.0.0.1 /AUNET/index.php/imgs/1.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Imgs
+
+[ 2015-04-18T04:16:39+08:00 ] 127.0.0.1 /AUNET/index.php/imgs/2.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:Imgs
+
+[ 2015-04-18T04:17:21+08:00 ] 127.0.0.1 /AUNET/index.php/View/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:View
+
+[ 2015-04-18T04:17:26+08:00 ] 127.0.0.1 /AUNET/index.php/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:Index
+
+[ 2015-04-18T04:34:45+08:00 ] 127.0.0.1 /AUNET/index.php/__SELF__App/Home/View/Src/style/banner.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:__SELF__App
+
+[ 2015-04-18T04:34:45+08:00 ] 127.0.0.1 /AUNET/index.php/__SELF__App/Home/View/Src/style/general.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:__SELF__App
+
+[ 2015-04-18T04:34:45+08:00 ] 127.0.0.1 /AUNET/index.php/__SELF__App/Home/View/Src/style/button.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:__SELF__App
+
+[ 2015-04-18T04:34:45+08:00 ] 127.0.0.1 /AUNET/index.php/__SELF__App/Home/View/Src/style/new.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:__SELF__App
+
+[ 2015-04-18T04:34:45+08:00 ] 127.0.0.1 /AUNET/index.php/__SELF__App/Home/View/Src/style/buttom.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:__SELF__App
+
+[ 2015-04-18T04:34:45+08:00 ] 127.0.0.1 /AUNET/index.php/__SELF__App/Home/View/Src/style/top.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:__SELF__App
+
+[ 2015-04-18T04:34:45+08:00 ] 127.0.0.1 /AUNET/index.php/__SELF__App/Home/View/Src/style/flexslider.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:__SELF__App
+
+[ 2015-04-18T04:34:45+08:00 ] 127.0.0.1 /AUNET/index.php/__SELF__App/Home/View/Src/js/jquery.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:__SELF__App
+
+[ 2015-04-18T04:34:45+08:00 ] 127.0.0.1 /AUNET/index.php/__SELF__App/Home/View/Src/js/jquery.easing.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:__SELF__App
+
+[ 2015-04-18T04:34:45+08:00 ] 127.0.0.1 /AUNET/index.php/__SELF__App/Home/View/Src/im/dh.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:__SELF__App
+
+[ 2015-04-18T04:34:45+08:00 ] 127.0.0.1 /AUNET/index.php/__SELF__App/Home/View/Src/js/jquery.flexslider.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:__SELF__App
+
+[ 2015-04-18T04:34:45+08:00 ] 127.0.0.1 /AUNET/index.php/__SELF__App/Home/View/Src/imgs/1.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:__SELF__App
+
+[ 2015-04-18T04:34:45+08:00 ] 127.0.0.1 /AUNET/index.php/__SELF__App/Home/View/Src/imgs/3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:__SELF__App
+
+[ 2015-04-18T04:34:45+08:00 ] 127.0.0.1 /AUNET/index.php/__SELF__App/Home/View/Src/imgs/4.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:__SELF__App
+
+[ 2015-04-18T04:34:45+08:00 ] 127.0.0.1 /AUNET/index.php/__SELF__App/Home/View/Src/im/dh.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+ERR: 无法加载模块:__SELF__App
+
+[ 2015-04-18T04:34:45+08:00 ] 127.0.0.1 /AUNET/index.php/__SELF__App/Home/View/Src/imgs/2.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:__SELF__App
+
+[ 2015-04-18T04:34:46+08:00 ] 127.0.0.1 /AUNET/index.php/__SELF__App/Home/View/Src/style/top.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:__SELF__App
+
+[ 2015-04-18T04:34:46+08:00 ] 127.0.0.1 /AUNET/index.php/__SELF__App/Home/View/Src/style/general.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:__SELF__App
+
+[ 2015-04-18T04:34:46+08:00 ] 127.0.0.1 /AUNET/index.php/__SELF__App/Home/View/Src/style/buttom.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:__SELF__App
+
+[ 2015-04-18T04:34:46+08:00 ] 127.0.0.1 /AUNET/index.php/__SELF__App/Home/View/Src/style/button.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:__SELF__App
+
+[ 2015-04-18T04:34:46+08:00 ] 127.0.0.1 /AUNET/index.php/__SELF__App/Home/View/Src/style/banner.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:__SELF__App
+
+[ 2015-04-18T04:34:46+08:00 ] 127.0.0.1 /AUNET/index.php/__SELF__App/Home/View/Src/style/flexslider.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:__SELF__App
+
+[ 2015-04-18T04:34:46+08:00 ] 127.0.0.1 /AUNET/index.php/__SELF__App/Home/View/Src/js/jquery.flexslider.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:__SELF__App
+
+[ 2015-04-18T04:34:46+08:00 ] 127.0.0.1 /AUNET/index.php/__SELF__App/Home/View/Src/js/jquery.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:__SELF__App
+
+[ 2015-04-18T04:34:46+08:00 ] 127.0.0.1 /AUNET/index.php/__SELF__App/Home/View/Src/js/jquery.easing.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:__SELF__App
+
+[ 2015-04-18T04:34:46+08:00 ] 127.0.0.1 /AUNET/index.php/__SELF__App/Home/View/Src/im/dh.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:__SELF__App
+
+[ 2015-04-18T04:34:46+08:00 ] 127.0.0.1 /AUNET/index.php/__SELF__App/Home/View/Src/style/new.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:__SELF__App
+
+[ 2015-04-18T04:34:46+08:00 ] 127.0.0.1 /AUNET/index.php/__SELF__App/Home/View/Src/imgs/1.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:__SELF__App
+
+[ 2015-04-18T04:34:46+08:00 ] 127.0.0.1 /AUNET/index.php/__SELF__App/Home/View/Src/imgs/4.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:__SELF__App
+
+[ 2015-04-18T04:34:46+08:00 ] 127.0.0.1 /AUNET/index.php/__SELF__App/Home/View/Src/imgs/3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:__SELF__App
+
+[ 2015-04-18T04:34:46+08:00 ] 127.0.0.1 /AUNET/index.php/__SELF__App/Home/View/Src/im/dh.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:__SELF__App
+
+[ 2015-04-18T04:34:46+08:00 ] 127.0.0.1 /AUNET/index.php/__SELF__App/Home/View/Src/imgs/2.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:__SELF__App
+
+[ 2015-04-18T04:34:49+08:00 ] 127.0.0.1 /AUNET/index.php/__SELF__App/Home/View/Src/style/buttom.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:__SELF__App
+
+[ 2015-04-18T04:34:49+08:00 ] 127.0.0.1 /AUNET/index.php/__SELF__App/Home/View/Src/style/banner.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:__SELF__App
+
+[ 2015-04-18T04:34:49+08:00 ] 127.0.0.1 /AUNET/index.php/__SELF__App/Home/View/Src/style/general.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:__SELF__App
+
+[ 2015-04-18T04:34:49+08:00 ] 127.0.0.1 /AUNET/index.php/__SELF__App/Home/View/Src/style/top.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:__SELF__App
+
+[ 2015-04-18T04:34:49+08:00 ] 127.0.0.1 /AUNET/index.php/__SELF__App/Home/View/Src/style/new.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:__SELF__App
+
+[ 2015-04-18T04:34:49+08:00 ] 127.0.0.1 /AUNET/index.php/__SELF__App/Home/View/Src/style/button.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:__SELF__App
+
+[ 2015-04-18T04:34:49+08:00 ] 127.0.0.1 /AUNET/index.php/__SELF__App/Home/View/Src/style/flexslider.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:__SELF__App
+
+[ 2015-04-18T04:36:36+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/style/general.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:36:36+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/style/new.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:36:36+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/style/buttom.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:36:36+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/style/top.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:36:36+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/style/button.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:36:36+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/style/banner.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:36:36+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/js/jquery.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:36:36+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/js/jquery.flexslider.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:36:36+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/style/flexslider.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:36:36+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/im/dh.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:36:36+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/js/jquery.easing.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:36:36+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/imgs/1.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:36:37+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/imgs/3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:36:37+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/imgs/2.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:36:37+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/im/dh.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:36:37+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/imgs/4.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:36:37+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/style/banner.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:36:37+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/style/new.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:36:37+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/style/general.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:36:37+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/style/button.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:36:37+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/style/top.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:36:37+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/style/flexslider.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:36:37+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/style/buttom.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:36:37+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/js/jquery.flexslider.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:36:37+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/js/jquery.easing.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:36:37+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/js/jquery.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:36:37+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/im/dh.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:36:37+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/imgs/1.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:36:37+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/imgs/3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:36:37+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/imgs/2.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:36:37+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/imgs/4.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:36:38+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/style/new.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:36:38+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/style/buttom.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:36:38+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/style/button.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:36:38+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/style/general.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:36:38+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/style/banner.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:36:38+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/style/top.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:36:38+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/style/flexslider.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:36:38+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/js/jquery.flexslider.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:36:38+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/im/dh.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:36:38+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/js/jquery.easing.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:36:38+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/js/jquery.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:36:38+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/imgs/4.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:36:38+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/imgs/1.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.010001s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:36:38+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/imgs/2.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:36:38+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/imgs/3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:36:38+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/im/dh.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:37:24+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/style/new.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:37:24+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/style/button.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:37:24+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/style/general.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:37:24+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/style/banner.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:37:24+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/style/top.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:37:24+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/style/buttom.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:37:24+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/js/jquery.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:37:24+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/js/jquery.flexslider.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:37:24+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/style/flexslider.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:37:24+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/js/jquery.easing.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:37:24+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/imgs/2.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:37:24+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/imgs/3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:37:24+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/imgs/1.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:37:24+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/imgs/4.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:37:24+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/im/dh.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:37:25+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/style/banner.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:37:25+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/style/top.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:37:25+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/style/general.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:37:25+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/style/new.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:37:25+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/style/buttom.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:37:25+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/style/flexslider.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:37:25+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/js/jquery.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:37:25+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/js/jquery.flexslider.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:37:25+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/style/button.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:37:25+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/im/dh.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:37:25+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/js/jquery.easing.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:37:25+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/imgs/4.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:37:25+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/imgs/1.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:37:25+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/imgs/3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:37:25+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/imgs/2.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:37:38+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/style/top.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:37:38+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/style/button.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:37:38+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/style/banner.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004001s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:37:38+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/style/new.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:37:38+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/style/buttom.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:37:38+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/style/general.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:37:38+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/js/jquery.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:37:38+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/style/flexslider.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:37:38+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/js/jquery.easing.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:37:38+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/js/jquery.flexslider.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:37:38+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/imgs/1.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:37:38+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/imgs/3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:37:38+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/imgs/4.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:37:38+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/imgs/2.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:37:38+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/im/dh.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:37:39+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/style/general.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:37:39+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/style/top.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:37:39+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/style/new.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:37:39+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/style/button.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:37:39+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/style/buttom.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:37:39+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/style/banner.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:37:39+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/js/jquery.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:37:39+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/style/flexslider.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:37:39+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/js/jquery.easing.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:37:39+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/js/jquery.flexslider.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:37:39+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/im/dh.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:37:39+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/imgs/1.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:37:39+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/imgs/3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:37:39+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/imgs/4.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:AUNET
+
+[ 2015-04-18T04:37:39+08:00 ] 127.0.0.1 /AUNET/index.php/AUNET/App/Home/View/Src/imgs/2.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:AUNET
+
