@@ -316,22 +316,22 @@
         <tr>
             <td width="24%">
                 <div class="button button1">
-                    <a class="buttonlink" href="http://www.baidu.com"></a>
+                    <a class="buttonlink" href="#"></a>
                 </div>
             </td>
             <td width="24%">
                 <div class="button button2">
-                    <a class="buttonlink" href="http://www.baidu.com"></a>
+                    <a class="buttonlink" href="<?php echo U('/Design/Index/index');?>"></a>
                 </div>
             </td>
             <td width="24%">
                 <div class="button button3">
-                    <a class="buttonlink" href="http://www.baidu.com"></a>
+                    <a class="buttonlink" href="<?php echo U('/Material/Index/index');?>"></a>
                 </div>
             </td>
             <td width="24%">
                 <div class="button button4">
-                    <a class="buttonlink" href="http://www.baidu.com"></a>
+                    <a class="buttonlink" href="<?php echo U('/Grade/Index/index');?>"></a>
                 </div>
             </td>
         </tr>
