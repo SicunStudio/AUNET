@@ -61,6 +61,10 @@
         <dd><a href="<?php echo U('/Admin/Rbac/editpwdbyuser');?>">修改密码</a></dd>
         <dd><a href="<?php echo U('/Admin/Rbac/logout');;?>">退出登录</a></dd>
     </dl>
+    <dl>
+        <dt>物资系统管理</dt>
+        <dd><a href="<?php echo U('/Admin/Material/material_index');;?>">物资系统管理</a></dd>
+    </dl>
 
 </div>
 <!DOCTYPE html>
@@ -70,33 +74,11 @@
     <title></title>
 </head>
 <body>
-<table class="table">
-    <tr>
-        <th>姓名</th>
-        <th>电话</th>
-        <th>QQ</th>
-        <th>提交时间</th>
-        <th>标题</th>
-        <th>内容</th>
-        <th>是否需要回复</th>
-        <th>操作</th>
-    </tr>
-    <?php if(is_array($advise)): foreach($advise as $key=>$v): ?><tr>
-            <td width="8%" align="center"><?php if($v['name']): echo ($v["name"]); else: ?>匿名<?php endif; ?></td>
-            <td width="10%" align="center"><?php echo ($v["phone"]); ?></td>
-            <td width="8%" align="center"><?php echo ($v["qq"]); ?></td>
-            <td width="8%" align="center"><?php echo ($v["time"]); ?></td>
-            <td width="8%" align="center"><?php echo ($v["title"]); ?></td>
-            <td width="18%" align="center"><?php echo ($v["content"]); ?></td>
-            <td width="4%" align="center"><?php if($v['feedback']): ?><strong>需要</strong><?php else: ?>不需要<?php endif; ?></td>
-            <td width="4%" align="center"><a href="<?php echo U('deladvise',array('id'=>$v['id']));?>">删除</a> </td>
-        </tr><?php endforeach; endif; ?>
-</table>
-<div align="center">
-    <span class="rows">共<?php echo ($count); ?>条记录</span>
-    <?php echo ($page); ?>
-</div>
-
+<h1>
+    欢迎回来，<?php echo ($_SESSION['username']); ?>！
+</h1>
+<p>您上次登录的时间是<?php echo ($_SESSION['lastlogintime']); ?></p>
+<p>您上次登录的ip是<?php echo ($_SESSION['lastloginip']); ?></p>
 </body>
 </html>
 </body>
