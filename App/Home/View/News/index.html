@@ -89,10 +89,6 @@
 <body>
 
 
-<!-- HeadAreaStart -->
-
-<!-- HeadAreaEnd -->
-
 <div id="wrap">
     <table width="99%" border="0" style="margin:25px 0px">
         <tbody>
@@ -110,88 +106,46 @@
             </td>
             <td width="73%" align="center" valign="top">
 
-            <for start="0" end="3">
-                <div class="ActivityBlock box{$i+1}">
-                    <table width="95%" height="95%" border="0">
-                        <tbody>
-                        <tr>
-                            <td width="30%" rowspan="2">&nbsp</td>
-                            <td width="70%" height="66" valign="top"><span class="titlefirst">{$news[$i].title|substr=0,1}</span><span
-                                    class="titletext"><?php echo substr($news[$i]['title'],1,strlen($news[$i]['title']));?></span></td>
-                        </tr>
-                        <tr>
-                            <td height="73"><span class="normaltext">{$news[$i].content}</span></td>
-                        </tr>
-                        </tbody>
-                    </table>
+                <for start="0" end="3">
+                    <div class="ActivityBlock box{$i+1}">
+                        <table width="95%" height="95%" border="0">
+                            <tbody>
+                            <tr>
+                                <td width="30%" rowspan="2">
+                                    <if condition="$news[$i]['pic'] eq ' '">
+                                        <img src="__PUBLIC__/Src/im/dh.png" width="180" />
+                                        <else/>
 
-                </div>
+                                        <img src="{$news[$i].pic}" width="150" />
+                                    </if>
 
+                                </td>
+                                <td width="70%" height="66" valign="top"><span class="titlefirst">{$news[$i].title|substr=0,1}</span><span
+                                        class="titletext"><?php echo substr($news[$i]['title'],1,strlen($news[$i]['title']));?></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td height="73"><span class="normaltext">{$news[$i].content}</span></td>
+                            </tr>
+                            </tbody>
+                        </table>
 
-            </for>
-                <!--<div class="ActivityBlock box1">-->
-                    <!--<table width="95%" height="95%" border="0">-->
-                        <!--<tbody>-->
-                        <!--<tr>-->
-                            <!--<td width="30%" rowspan="2">&nbsp;</td>-->
-                            <!--<td width="70%" height="66" valign="top"><span class="titlefirst">留</span><span-->
-                                    <!--class="titletext">学生：ABCDEFG</span></td>-->
-                        <!--</tr>-->
-                        <!--<tr>-->
-                            <!--<td height="73"><span class="normaltext">ABASDGSDAFSDF</span></td>-->
-                        <!--</tr>-->
-                        <!--</tbody>-->
-                    <!--</table>-->
-
-                <!--</div>-->
+                    </div>
 
 
-                <!--<div class="ActivityBlock box2">-->
-
-                    <!--<table width="95%" height="95%" border="0">-->
-                        <!--<tbody>-->
-                        <!--<tr>-->
-                            <!--<td width="30%" rowspan="2">&nbsp;</td>-->
-                            <!--<td width="70%" height="66" valign="top"><span class="titlefirst">留</span><span-->
-                                    <!--class="titletext">学生：ABCDEFG</span></td>-->
-                        <!--</tr>-->
-                        <!--<tr>-->
-                            <!--<td height="73"><span class="normaltext">ABASDGSDAFSDF</span></td>-->
-                        <!--</tr>-->
-                        <!--</tbody>-->
-                    <!--</table>-->
-
-                <!--</div>-->
-
-
-                <!--<div class="ActivityBlock box3">-->
-
-                    <!--<table width="95%" height="95%" border="0">-->
-                        <!--<tbody>-->
-                        <!--<tr>-->
-                            <!--<td width="30%" rowspan="2">&nbsp;</td>-->
-                            <!--<td width="70%" height="66" valign="top"><span class="titlefirst">留</span><span-->
-                                    <!--class="titletext">学生：ABCDEFG</span></td>-->
-                        <!--</tr>-->
-                        <!--<tr>-->
-                            <!--<td height="73"><span class="normaltext">ABASDGSDAFSDF</span></td>-->
-                        <!--</tr>-->
-                        <!--</tbody>-->
-                    <!--</table>-->
-
-                <!--</div>-->
+                </for>
 
 
             </td>
         </tr>
         </tbody>
     </table>
-
+    <div align="center">
+        <span class="rows">共{$count}条记录</span>
+        {$page}
+    </div>
 
 </div>
 
-<!-- FootAreaStart -->
-
-<!-- FootAreaEnd -->
 </body>
 </html>

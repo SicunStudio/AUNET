@@ -40,6 +40,7 @@ class ForecastController extends CommonController{
         $data['username']=$_SESSION['username'];
         $data['time']=time();
         $data['title']=$_POST['title'];
+        $data['place']=$_POST['place'];
 //        die;
         if($id){
             if($Forecast->where(array('id'=>$id))->save($data)){

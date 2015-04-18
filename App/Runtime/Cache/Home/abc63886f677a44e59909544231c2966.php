@@ -174,104 +174,105 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>活动预告</title>
- <link type="text/css" rel="stylesheet" href="/AUNET/Public/Src/style/general.css">
- <script type="text/javascript" src="/AUNET/Public/Src/js/jquery.js"></script>
- <script>
-  $(document).ready(
-	   function() {
-		 
-		   $(".a-top").mouseenter(
-		   function(e) {
-            $("#downlist").slideDown("fast");	
-        });
-		
-		$("#downlist").mouseenter(
-		   function(e) {
-            $("#downlist").slideDown("fast");	
-        });
-		
-	
-		
-		$("#downlist").mouseleave(
-		   function(e) {
-            $("#downlist").slideUp("fast");	
-        });
-		
-    });
- </script>
- <style>
- .slidebarlink{
-	 padding:12px 12px;
-	 font-size:22px;
-	 margin:15px;
-	 display:block;
-	 color:#444e41;
-	 transition:.2s;
-	 border-radius:3px;
-	 
-	 }
-	 .now{color:#FFFFFF;
-	background-color:#74b05c;}
-	 
-.slidebarlink:hover{
-	color:#FFFFFF;
-	background-color:#74b05c;
-}
- </style>
- 
+    <meta charset="utf-8">
+    <title>活动预告</title>
+    <link type="text/css" rel="stylesheet" href="/AUNET/Public/Src/style/general.css">
+    <script type="text/javascript" src="/AUNET/Public/Src/js/jquery.js"></script>
+    <script>
+        $(document).ready(
+                function () {
+
+                    $(".a-top").mouseenter(
+                            function (e) {
+                                $("#downlist").slideDown("fast");
+                            });
+
+                    $("#downlist").mouseenter(
+                            function (e) {
+                                $("#downlist").slideDown("fast");
+                            });
+
+
+                    $("#downlist").mouseleave(
+                            function (e) {
+                                $("#downlist").slideUp("fast");
+                            });
+
+                });
+    </script>
+    <style>
+        .slidebarlink {
+            padding: 12px 12px;
+            font-size: 22px;
+            margin: 15px;
+            display: block;
+            color: #444e41;
+            transition: .2s;
+            border-radius: 3px;
+
+        }
+
+        .now {
+            color: #FFFFFF;
+            background-color: #74b05c;
+        }
+
+        .slidebarlink:hover {
+            color: #FFFFFF;
+            background-color: #74b05c;
+        }
+    </style>
+
 </head>
 
 <body>
 
 
-<!-- HeadAreaStart -->
+<div id="wrap">
+    <table width="99%" border="0" style="margin:25px 0px">
+        <tbody>
+        <tr>
+            <td height="59" colspan="2" align="left" valign="middle" style="color:#444e41"><span style="font-size:34px">&nbsp;&nbsp;&nbsp;&nbsp;新闻&nbsp;&nbsp;</span><span
+                    style="font-size:24px">&gt;&gt;&nbsp;&nbsp;活动预告</span></td>
+        </tr>
+        <tr>
+            <td width="27%" height="585" rowspan="2" valign="top">
+                <p><a href="<?php echo U('/Home/News/Index');?>" class="slidebarlink">&gt;最新动态</a></p>
 
- <!-- HeadAreaEnd -->
- 
- <div id="wrap">
- <table width="99%" border="0" style="margin:25px 0px">
-  <tbody>
-    <tr>
-      <td height="59" colspan="2" align="left" valign="middle" style="color:#444e41"><span style="font-size:34px">&nbsp;&nbsp;&nbsp;&nbsp;新闻&nbsp;&nbsp;</span><span style="font-size:24px">&gt;&gt;&nbsp;&nbsp;活动预告</span></td>
-      </tr>
-    <tr>
-      <td width="27%" height="585" rowspan="2" valign="top">
-          <p><a href="<?php echo U('/Home/News/Index');?>" class="slidebarlink">&gt;最新动态</a></p>
-          <p><a href="<?php echo U('/Home/Activity/Index');?>" class="slidebarlink now">▶&nbsp;活动预告</a></p>
-          <p><a href="<?php echo U('/Home/BroadCast/Index');?>" class="slidebarlink">&gt;公告栏</a></p>
-      </td>
-      <td width="79%" align="center"><img src="/AUNET/Public/Src/image/HDYG-Head.png" width="714" height="169" alt=""/></td>
-    </tr>
-    <tr>
-      <td align="center">
-      <table width="714px" border="0" style=" margin-top:20px; margin-bottom:20px;">
-  <tbody>
-    <tr>
-      <td bgcolor="#ffa968">&nbsp;</td>
-      <td bgcolor="#addf7e">&nbsp;</td>
-      <td bgcolor="#7db3f1">&nbsp;</td>
-    </tr>
-     <tr>
-      <td bgcolor="#ffa968">&nbsp;</td>
-      <td bgcolor="#addf7e">&nbsp;</td>
-      <td bgcolor="#7db3f1">&nbsp;</td>
-    </tr>
-  </tbody>
-</table>
+                <p><a href="<?php echo U('/Home/Activity/Index');?>" class="slidebarlink now">▶&nbsp;活动预告</a></p>
 
-      </td>
-    </tr>
-  </tbody>
-</table>
+                <p><a href="<?php echo U('/Home/BroadCast/Index');?>" class="slidebarlink">&gt;公告栏</a></p>
+            </td>
+            <td width="79%" align="center"><img src="/AUNET/Public/Src/image/HDYG-Head.png" width="714" height="169"
+                                                alt=""/></td>
+        </tr>
+        <tr>
+            <td align="center">
+                <table width="714px" border="0" style=" margin-top:20px; margin-bottom:20px;">
+                    <tbody>
+                    <!--<tr>-->
+                        <!--<td bgcolor="#ffa968">&nbsp;</td>-->
+                        <!--<td bgcolor="#addf7e">&nbsp;</td>-->
+                        <!--<td bgcolor="#7db3f1">&nbsp;</td>-->
+                    <!--<tr>-->
+                    <?php if(is_array($forecast)): foreach($forecast as $key=>$v): ?><tr>
+                        <td bgcolor="#ffa968" width="30%"><?php echo (date('Y-m-d H:i',$v["time"])); ?></td>
+                        <td bgcolor="#addf7e" width="30%"><?php echo ($v["place"]); ?></td>
+                        <td bgcolor="#7db3f1" width="30%"><?php echo ($v["title"]); ?></td>
+                        <tr><?php endforeach; endif; ?>
 
- 
- </div>
- 
- <!-- FootAreaStart -->
 
-<!-- FootAreaEnd -->
+                    </tbody>
+                </table>
+
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+
+</div>
+
 </body>
 </html>
 

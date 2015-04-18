@@ -13,6 +13,7 @@ use Think\Controller;
 
 class ActivityController extends Controller{
     public function index(){
+        $this->forecast=D('forecast')->order('time desc')->select();
 //        layout('news_layout');
         $this->display();
     }

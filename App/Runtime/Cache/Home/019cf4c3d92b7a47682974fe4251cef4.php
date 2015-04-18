@@ -262,10 +262,6 @@
 <body>
 
 
-<!-- HeadAreaStart -->
-
-<!-- HeadAreaEnd -->
-
 <div id="wrap">
     <table width="99%" border="0" style="margin:25px 0px">
         <tbody>
@@ -283,85 +279,41 @@
             </td>
             <td width="73%" align="center" valign="top">
 
-            <?php $__FOR_START_22036__=0;$__FOR_END_22036__=3;for($i=$__FOR_START_22036__;$i < $__FOR_END_22036__;$i+=1){ ?><div class="ActivityBlock box<?php echo ($i+1); ?>">
-                    <table width="95%" height="95%" border="0">
-                        <tbody>
-                        <tr>
-                            <td width="30%" rowspan="2">&nbsp</td>
-                            <td width="70%" height="66" valign="top"><span class="titlefirst"><?php echo (substr($news[$i]["title"],0,1)); ?></span><span
-                                    class="titletext"><?php echo substr($news[$i]['title'],1,strlen($news[$i]['title']));?></span></td>
-                        </tr>
-                        <tr>
-                            <td height="73"><span class="normaltext"><?php echo ($news[$i]["content"]); ?></span></td>
-                        </tr>
-                        </tbody>
-                    </table>
+                <?php $__FOR_START_12150__=0;$__FOR_END_12150__=3;for($i=$__FOR_START_12150__;$i < $__FOR_END_12150__;$i+=1){ ?><div class="ActivityBlock box<?php echo ($i+1); ?>">
+                        <table width="95%" height="95%" border="0">
+                            <tbody>
+                            <tr>
+                                <td width="30%" rowspan="2">
+                                    <?php if($news[$i]['pic'] == ' '): ?><img src="/AUNET/Public/Src/im/dh.png" width="180" />
+                                        <?php else: ?>
 
-                </div><?php } ?>
-                <!--<div class="ActivityBlock box1">-->
-                    <!--<table width="95%" height="95%" border="0">-->
-                        <!--<tbody>-->
-                        <!--<tr>-->
-                            <!--<td width="30%" rowspan="2">&nbsp;</td>-->
-                            <!--<td width="70%" height="66" valign="top"><span class="titlefirst">留</span><span-->
-                                    <!--class="titletext">学生：ABCDEFG</span></td>-->
-                        <!--</tr>-->
-                        <!--<tr>-->
-                            <!--<td height="73"><span class="normaltext">ABASDGSDAFSDF</span></td>-->
-                        <!--</tr>-->
-                        <!--</tbody>-->
-                    <!--</table>-->
+                                        <img src="<?php echo ($news[$i]["pic"]); ?>" width="150" /><?php endif; ?>
 
-                <!--</div>-->
+                                </td>
+                                <td width="70%" height="66" valign="top"><span class="titlefirst"><?php echo (substr($news[$i]["title"],0,1)); ?></span><span
+                                        class="titletext"><?php echo substr($news[$i]['title'],1,strlen($news[$i]['title']));?></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td height="73"><span class="normaltext"><?php echo ($news[$i]["content"]); ?></span></td>
+                            </tr>
+                            </tbody>
+                        </table>
 
-
-                <!--<div class="ActivityBlock box2">-->
-
-                    <!--<table width="95%" height="95%" border="0">-->
-                        <!--<tbody>-->
-                        <!--<tr>-->
-                            <!--<td width="30%" rowspan="2">&nbsp;</td>-->
-                            <!--<td width="70%" height="66" valign="top"><span class="titlefirst">留</span><span-->
-                                    <!--class="titletext">学生：ABCDEFG</span></td>-->
-                        <!--</tr>-->
-                        <!--<tr>-->
-                            <!--<td height="73"><span class="normaltext">ABASDGSDAFSDF</span></td>-->
-                        <!--</tr>-->
-                        <!--</tbody>-->
-                    <!--</table>-->
-
-                <!--</div>-->
-
-
-                <!--<div class="ActivityBlock box3">-->
-
-                    <!--<table width="95%" height="95%" border="0">-->
-                        <!--<tbody>-->
-                        <!--<tr>-->
-                            <!--<td width="30%" rowspan="2">&nbsp;</td>-->
-                            <!--<td width="70%" height="66" valign="top"><span class="titlefirst">留</span><span-->
-                                    <!--class="titletext">学生：ABCDEFG</span></td>-->
-                        <!--</tr>-->
-                        <!--<tr>-->
-                            <!--<td height="73"><span class="normaltext">ABASDGSDAFSDF</span></td>-->
-                        <!--</tr>-->
-                        <!--</tbody>-->
-                    <!--</table>-->
-
-                <!--</div>-->
+                    </div><?php } ?>
 
 
             </td>
         </tr>
         </tbody>
     </table>
-
+    <div align="center">
+        <span class="rows">共<?php echo ($count); ?>条记录</span>
+        <?php echo ($page); ?>
+    </div>
 
 </div>
 
-<!-- FootAreaStart -->
-
-<!-- FootAreaEnd -->
 </body>
 </html>
 

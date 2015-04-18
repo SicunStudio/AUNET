@@ -68,6 +68,8 @@ class NewsController extends CommonController{
         //缩略图
         if(preg_match_all("/src=([\"|']?)([^\"'>]+\.(gif|jpg|jpeg|bmp|png))\\1/i",$_POST['content'],$match)){
             $data['pic']=$match[2][0];
+        }else{
+            $data['pic']=' ';
         }
         $str="";
         //将所有图片存入数据库
