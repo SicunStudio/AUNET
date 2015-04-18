@@ -83,6 +83,14 @@
       <td width="50%">标题</td>
       <td width="30%">日期</td>
     </tr>
+    <foreach name="broadcast" item="v">
+        <tr>
+            <td width="20%">{$v.id}</td>
+            <td width="50%">{$v.title}</td>
+            <td width="30%">{$v.time|date='y-m-d H:i',###}</td>
+        </tr>
+    </foreach>
+
   </tbody>
 </table>
  <hr style="width:95%;margin:10px auto"/>

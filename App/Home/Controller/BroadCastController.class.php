@@ -13,6 +13,7 @@ use Think\Controller;
 
 class BroadCastController extends Controller{
     public function index(){
+        $this->broadcast=D('forecast')->select();
 //        layout('news_layout');
         $this->display();
     }

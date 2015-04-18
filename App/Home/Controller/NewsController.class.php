@@ -13,7 +13,9 @@ use Think\Controller;
 
 class NewsController extends Controller{
     public function index(){
-//        layout('news_layout');
+
+        $this->news=D('news')->order('time desc')->limit(0,3)->select();
+//        dump($this->news);
         $this->display();
     }
 }

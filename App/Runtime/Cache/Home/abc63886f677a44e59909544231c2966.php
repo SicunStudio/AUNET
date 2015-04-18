@@ -71,7 +71,7 @@
             <td width="33%" align="center" valign="middle"><img src="/AUNET/Public/Src/im/dh.png" width="380" height="106"
                                                                 alt=""/>
             </td>
-            <td width="13%" align="center" valign="middle" class="NaviLinkContainer"><a class="a-top" href="#"
+            <td width="13%" align="center" valign="middle" class="NaviLinkContainer"><a class="a-top" href="<?php echo U('Home/Index/index');?>"
                                                                                         style="color: #FFFFFF">首页</a>
             </td>
             <td width="13%" align="center" valign="middle" class="NaviLinkContainer"><a class="a-top" href="#"
@@ -234,7 +234,7 @@
  <table width="99%" border="0" style="margin:25px 0px">
   <tbody>
     <tr>
-      <td height="59" colspan="2" align="left" valign="middle" style="color:#444e41"><span style="font-size:34px">&nbsp;&nbsp;&nbsp;&nbsp;新闻&nbsp;&nbsp;</span><span style="font-size:24px">&gt;&gt;&nbsp;&nbsp;最新动态</span></td>
+      <td height="59" colspan="2" align="left" valign="middle" style="color:#444e41"><span style="font-size:34px">&nbsp;&nbsp;&nbsp;&nbsp;新闻&nbsp;&nbsp;</span><span style="font-size:24px">&gt;&gt;&nbsp;&nbsp;活动预告</span></td>
       </tr>
     <tr>
       <td width="27%" height="585" rowspan="2" valign="top">

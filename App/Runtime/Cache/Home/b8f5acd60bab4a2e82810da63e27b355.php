@@ -256,6 +256,12 @@
       <td width="50%">标题</td>
       <td width="30%">日期</td>
     </tr>
+    <?php if(is_array($broadcast)): foreach($broadcast as $key=>$v): ?><tr>
+            <td width="20%"><?php echo ($v["id"]); ?></td>
+            <td width="50%"><?php echo ($v["title"]); ?></td>
+            <td width="30%"><?php echo (date('y-m-d H:i',$v["time"])); ?></td>
+        </tr><?php endforeach; endif; ?>
+
   </tbody>
 </table>
  <hr style="width:95%;margin:10px auto"/>
