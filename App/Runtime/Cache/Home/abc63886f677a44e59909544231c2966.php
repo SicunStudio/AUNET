@@ -250,15 +250,10 @@
             <td align="center">
                 <table width="714px" border="0" style=" margin-top:20px; margin-bottom:20px;">
                     <tbody>
-                    <!--<tr>-->
-                        <!--<td bgcolor="#ffa968">&nbsp;</td>-->
-                        <!--<td bgcolor="#addf7e">&nbsp;</td>-->
-                        <!--<td bgcolor="#7db3f1">&nbsp;</td>-->
-                    <!--<tr>-->
                     <?php if(is_array($forecast)): foreach($forecast as $key=>$v): ?><tr>
                         <td bgcolor="#ffa968" width="30%"><?php echo (date('Y-m-d H:i',$v["time"])); ?></td>
                         <td bgcolor="#addf7e" width="30%"><?php echo ($v["place"]); ?></td>
-                        <td bgcolor="#7db3f1" width="30%"><?php echo ($v["title"]); ?></td>
+                        <td bgcolor="#7db3f1" width="30%"><a href="<?php echo U('/Home/ActivityDetail/Index',array('id'=>$v['id']));?>"><?php echo ($v["title"]); ?></a> </td>
                         <tr><?php endforeach; endif; ?>
 
 

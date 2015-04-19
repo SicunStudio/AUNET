@@ -2,80 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="70255eca-b6cb-4432-88ee-fa4b2a2332f9" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\02a260db6fd12543e26385cc4ef5ced9.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\3ee1c7aba253c23231639caada119e25.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\4e1f625a6d1b5fc6b30f56c2301b172d.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\5956d02cef07d0f490f1cf2927dcf4bf.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\625cda856d5010895f98587d5f7c03a0.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\78a094660dc3cf95dc3a8899d7dd989a.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\7c1cb1623e127f0b2de0e100165644d0.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\82f6a1a6ef4e891e2fb5b3262d4867d3.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\85d8db43d169f1a62c509342635747ba.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\8ece2bc5e7c5ead8e4212a18898d796b.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\9df924d9a2d217daa77a359c5bee0c33.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\c955bb65f62cc55b94e9d7f905e9ce82.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\cbfffea90b6a04a36fad004a8de4c4f5.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\e6a11c1b54a1ceab93779a5250feb18c.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\AUNET\App\Runtime\Cache\Design\70f92949cbb44efebb1d266c68070035.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\AUNET\App\Runtime\Cache\Design\c955bb65f62cc55b94e9d7f905e9ce82.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\AUNET\App\Runtime\Cache\Design\cf0ad0092a83bb7432d8b74bf14d92b9.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\AUNET\App\Runtime\Cache\Grade\c955bb65f62cc55b94e9d7f905e9ce82.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\AUNET\App\Runtime\Cache\Grade\e40a6f957c2cef7f7f4628ed8e16615e.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\AUNET\App\Runtime\Cache\Grade\f3bd2ee39b8be33676f31fa3ca61aa8a.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\AUNET\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\AUNET\App\Runtime\Cache\Home\019cf4c3d92b7a47682974fe4251cef4.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\AUNET\App\Runtime\Cache\Home\4084b4f6fe8468d5a7cbc8cba1ea612f.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\AUNET\App\Runtime\Cache\Home\abc63886f677a44e59909544231c2966.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\AUNET\App\Runtime\Cache\Home\b39761fdd01eadcd4b8a82f371520558.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\AUNET\App\Runtime\Cache\Home\b8f5acd60bab4a2e82810da63e27b355.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\AUNET\App\Runtime\Cache\Home\e050d5619624146a648edb153a9a4fd8.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\AUNET\App\Runtime\Cache\Home\e57cd4a5c0a11e7c4df04c9b7b19be1a.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\AUNET\App\Runtime\Cache\Material\56296064d2241b811f6fde887532ed65.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\AUNET\App\Runtime\Cache\Material\623e8924f97bf675a689cac9402dc6a0.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\AUNET\App\Runtime\Cache\Material\c955bb65f62cc55b94e9d7f905e9ce82.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\AUNET\App\Runtime\Logs\Admin\15_04_18.log" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\AUNET\App\Runtime\Logs\Admin\15_04_19.log" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\AUNET\App\Runtime\Logs\Common\15_04_18.log" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\AUNET\App\Runtime\Logs\Design\15_04_18.log" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\AUNET\App\Runtime\Logs\Grade\15_04_18.log" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\AUNET\App\Runtime\Logs\Home\15_04_18.log" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\AUNET\App\Runtime\Logs\Material\15_04_18.log" afterPath="" />
-      <change type="MOVED" beforePath="C:\xampp\htdocs\AUNET\Public\Src\im\1.png" afterPath="$PROJECT_DIR$/Public/NewsSrc/im/1.png" />
-      <change type="MOVED" beforePath="C:\xampp\htdocs\AUNET\Public\Src\im\11.png" afterPath="$PROJECT_DIR$/Public/NewsSrc/im/11.png" />
-      <change type="MOVED" beforePath="C:\xampp\htdocs\AUNET\Public\Src\im\2.png" afterPath="$PROJECT_DIR$/Public/NewsSrc/im/2.png" />
-      <change type="MOVED" beforePath="C:\xampp\htdocs\AUNET\Public\Src\im\22.png" afterPath="$PROJECT_DIR$/Public/NewsSrc/im/22.png" />
-      <change type="MOVED" beforePath="C:\xampp\htdocs\AUNET\Public\Src\im\3.png" afterPath="$PROJECT_DIR$/Public/NewsSrc/im/3.png" />
-      <change type="MOVED" beforePath="C:\xampp\htdocs\AUNET\Public\Src\im\33.png" afterPath="$PROJECT_DIR$/Public/NewsSrc/im/33.png" />
-      <change type="MOVED" beforePath="C:\xampp\htdocs\AUNET\Public\Src\im\4.png" afterPath="$PROJECT_DIR$/Public/NewsSrc/im/4.png" />
-      <change type="MOVED" beforePath="C:\xampp\htdocs\AUNET\Public\Src\im\44.png" afterPath="$PROJECT_DIR$/Public/NewsSrc/im/44.png" />
-      <change type="MOVED" beforePath="C:\xampp\htdocs\AUNET\Public\Src\im\banner1.png" afterPath="$PROJECT_DIR$/Public/NewsSrc/im/banner1.png" />
-      <change type="MOVED" beforePath="C:\xampp\htdocs\AUNET\Public\Src\im\dh old.png" afterPath="$PROJECT_DIR$/Public/NewsSrc/im/dh old.png" />
-      <change type="MOVED" beforePath="C:\xampp\htdocs\AUNET\Public\Src\im\dh.png" afterPath="$PROJECT_DIR$/Public/NewsSrc/im/dh.png" />
-      <change type="MOVED" beforePath="C:\xampp\htdocs\AUNET\Public\Src\image\GGL.png" afterPath="$PROJECT_DIR$/Public/NewsSrc/image/GGL.png" />
-      <change type="MOVED" beforePath="C:\xampp\htdocs\AUNET\Public\Src\image\HDYG-Head.png" afterPath="$PROJECT_DIR$/Public/NewsSrc/image/HDYG-Head.png" />
-      <change type="MOVED" beforePath="C:\xampp\htdocs\AUNET\Public\Src\imgs\1.jpg" afterPath="$PROJECT_DIR$/Public/NewsSrc/imgs/1.jpg" />
-      <change type="MOVED" beforePath="C:\xampp\htdocs\AUNET\Public\Src\imgs\2.jpg" afterPath="$PROJECT_DIR$/Public/NewsSrc/imgs/2.jpg" />
-      <change type="MOVED" beforePath="C:\xampp\htdocs\AUNET\Public\Src\imgs\3.jpg" afterPath="$PROJECT_DIR$/Public/NewsSrc/imgs/3.jpg" />
-      <change type="MOVED" beforePath="C:\xampp\htdocs\AUNET\Public\Src\imgs\4.jpg" afterPath="$PROJECT_DIR$/Public/NewsSrc/imgs/4.jpg" />
-      <change type="MOVED" beforePath="C:\xampp\htdocs\AUNET\Public\Src\imgs\long.jpg" afterPath="$PROJECT_DIR$/Public/NewsSrc/imgs/long.jpg" />
-      <change type="MOVED" beforePath="C:\xampp\htdocs\AUNET\Public\Src\js\jquery.color.plus-names-2.1.2.js" afterPath="$PROJECT_DIR$/Public/NewsSrc/js/jquery.color.plus-names-2.1.2.js" />
-      <change type="MOVED" beforePath="C:\xampp\htdocs\AUNET\Public\Src\js\jquery.easing.min.js" afterPath="$PROJECT_DIR$/Public/NewsSrc/js/jquery.easing.min.js" />
-      <change type="MOVED" beforePath="C:\xampp\htdocs\AUNET\Public\Src\js\jquery.flexslider-min.js" afterPath="$PROJECT_DIR$/Public/NewsSrc/js/jquery.flexslider-min.js" />
-      <change type="MOVED" beforePath="C:\xampp\htdocs\AUNET\Public\Src\js\jquery.flexslider.js" afterPath="$PROJECT_DIR$/Public/NewsSrc/js/jquery.flexslider.js" />
-      <change type="MOVED" beforePath="C:\xampp\htdocs\AUNET\Public\Src\js\jquery.js" afterPath="$PROJECT_DIR$/Public/NewsSrc/js/jquery.js" />
-      <change type="MOVED" beforePath="C:\xampp\htdocs\AUNET\Public\Src\style\banner.css" afterPath="$PROJECT_DIR$/Public/NewsSrc/style/banner.css" />
-      <change type="MOVED" beforePath="C:\xampp\htdocs\AUNET\Public\Src\style\buttom.css" afterPath="$PROJECT_DIR$/Public/NewsSrc/style/buttom.css" />
-      <change type="MOVED" beforePath="C:\xampp\htdocs\AUNET\Public\Src\style\button.css" afterPath="$PROJECT_DIR$/Public/NewsSrc/style/button.css" />
-      <change type="MOVED" beforePath="C:\xampp\htdocs\AUNET\Public\Src\style\flexslider.css" afterPath="$PROJECT_DIR$/Public/NewsSrc/style/flexslider.css" />
-      <change type="MOVED" beforePath="C:\xampp\htdocs\AUNET\Public\Src\style\general.css" afterPath="$PROJECT_DIR$/Public/NewsSrc/style/general.css" />
-      <change type="MOVED" beforePath="C:\xampp\htdocs\AUNET\Public\Src\style\new.css" afterPath="$PROJECT_DIR$/Public/NewsSrc/style/new.css" />
-      <change type="MOVED" beforePath="C:\xampp\htdocs\AUNET\Public\Src\style\top.css" afterPath="$PROJECT_DIR$/Public/NewsSrc/style/top.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Home/View/common_layout.html" afterPath="$PROJECT_DIR$/App/Home/View/common_layout.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/App/Home/Controller/ActivityDetailController.class.php" />
+      <change type="MOVED" beforePath="C:\xampp\htdocs\AUNET\App\Home\View\news_hdyg_detail.html" afterPath="$PROJECT_DIR$/App/Home/View/ActivityDetail/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Runtime/Cache/Home/00e52909bed743ea261af4b6823297ff.php" afterPath="$PROJECT_DIR$/App/Runtime/Cache/Home/00e52909bed743ea261af4b6823297ff.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Runtime/Logs/Home/15_04_19.log" afterPath="$PROJECT_DIR$/App/Runtime/Logs/Home/15_04_19.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Runtime/Cache/Home/4084b4f6fe8468d5a7cbc8cba1ea612f.php" afterPath="$PROJECT_DIR$/App/Runtime/Cache/Home/4084b4f6fe8468d5a7cbc8cba1ea612f.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Runtime/Cache/Home/abc63886f677a44e59909544231c2966.php" afterPath="$PROJECT_DIR$/App/Runtime/Cache/Home/abc63886f677a44e59909544231c2966.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Home/View/Activity/index.html" afterPath="$PROJECT_DIR$/App/Home/View/Activity/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Home/View/BroadCast/index.html" afterPath="$PROJECT_DIR$/App/Home/View/BroadCast/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Home/View/Index/index.html" afterPath="$PROJECT_DIR$/App/Home/View/Index/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Home/View/News/index.html" afterPath="$PROJECT_DIR$/App/Home/View/News/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AUNET.iws" />
@@ -101,12 +34,42 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/App/Home/View/ActivityDetail/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3257403" vertical-offset="0" max-vertical-offset="1196">
-              <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-              <folding />
+            <state vertical-scroll-proportion="0.20818713" vertical-offset="1434" max-vertical-offset="3146">
+              <caret line="62" column="15" selection-start-line="62" selection-start-column="15" selection-end-line="62" selection-end-column="15" />
+              <folding>
+                <element signature="n#style#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#1;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#hr#0;n#div#1;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#0;n#div#1;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/App/Home/View/BroadCast/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-22.828571" vertical-offset="1645" max-vertical-offset="3094">
+              <caret line="94" column="8" selection-start-line="94" selection-start-column="8" selection-end-line="94" selection-end-column="8" />
+              <folding>
+                <element signature="n#style#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#1;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#hr#0;n#div#1;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -124,7 +87,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/App/Admin/Controller/AdviseController.php" />
         <option value="$PROJECT_DIR$/App/Admin/View/Advise/advise_index.html" />
         <option value="$PROJECT_DIR$/App/Admin/Controller/AdviseController.class.php" />
         <option value="$PROJECT_DIR$/ThinkPHP/Mode/Sae/convention.php" />
@@ -171,9 +133,11 @@
         <option value="$PROJECT_DIR$/App/Home/View/common_layout.html" />
         <option value="$PROJECT_DIR$/App/Home/View/Index/index.html" />
         <option value="$PROJECT_DIR$/App/Home/View/BroadCast/index.html" />
-        <option value="$PROJECT_DIR$/App/Home/View/Activity/index.html" />
         <option value="$PROJECT_DIR$/App/Home/View/News/index.html" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/App/Home/View/Activity/index.html" />
+        <option value="$PROJECT_DIR$/App/Home/Controller/ActivityDetailController.class.php" />
+        <option value="$PROJECT_DIR$/App/Home/View/ActivityDetail/index.html" />
       </list>
     </option>
   </component>
@@ -213,6 +177,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -231,23 +196,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AUNET" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AUNET" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="App" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -270,6 +220,7 @@
       <recent name="C:\xampp\htdocs\AUNET\Public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\AUNET\App\Home\View\ActivityDetail" />
       <recent name="C:\xampp\htdocs\AUNET\App\Home\View\Src" />
       <recent name="C:\xampp\htdocs\AUNET\App\Material\View" />
       <recent name="C:\xampp\htdocs\AUNET\App\Material\Controller" />
@@ -291,9 +242,6 @@
       <BehatRunner />
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
@@ -301,6 +249,9 @@
       <arguments />
       <pass-parent-envs>true</pass-parent-envs>
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <list size="0" />
@@ -325,23 +276,44 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32870865" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21770833" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.44270834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33943966" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32870865" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32870865" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33943966" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.44270834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -366,13 +338,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/App/Admin/Common/function.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.029953917" vertical-offset="0" max-vertical-offset="1664">
-          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/App/Admin/Controller/IndexController.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33450294" vertical-offset="0" max-vertical-offset="1508">
@@ -590,13 +555,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/Home/View/news_hdyg_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48304093" vertical-offset="3877" max-vertical-offset="5044">
-          <caret line="165" column="33" selection-start-line="165" selection-start-column="33" selection-end-line="165" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/App/Home/Controller/BroadCastController.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.657143" vertical-offset="0" max-vertical-offset="546">
@@ -625,13 +583,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/Admin/View/News/news_index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8202765" vertical-offset="510" max-vertical-offset="1456">
-          <caret line="47" column="10" selection-start-line="44" selection-start-column="4" selection-end-line="47" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/App/Admin/View/Forecast/addforecast.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5391705" vertical-offset="0" max-vertical-offset="910">
@@ -643,14 +594,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5691244" vertical-offset="0" max-vertical-offset="936">
           <caret line="19" column="71" selection-start-line="19" selection-start-column="71" selection-end-line="19" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/Admin/Controller/NewsController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.085714" vertical-offset="858" max-vertical-offset="8294">
-          <caret line="63" column="9" selection-start-line="63" selection-start-column="9" selection-end-line="63" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -673,7 +616,7 @@
         <state vertical-scroll-proportion="-4.5241733" vertical-offset="3998" max-vertical-offset="4784">
           <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -682,30 +625,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7071339" vertical-offset="3699" max-vertical-offset="4498">
           <caret line="164" column="6" selection-start-line="164" selection-start-column="6" selection-end-line="164" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/Home/View/BroadCast/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20610687" vertical-offset="1762" max-vertical-offset="3094">
-          <caret line="74" column="31" selection-start-line="74" selection-start-column="31" selection-end-line="74" selection-end-column="31" />
-          <folding>
-            <element signature="n#style#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/Home/View/Activity/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26717559" vertical-offset="1298" max-vertical-offset="2912">
-          <caret line="58" column="34" selection-start-line="58" selection-start-column="34" selection-end-line="58" selection-end-column="34" />
-          <folding>
-            <element signature="n#style#0;n#table#0;n#td#0;n#tr#2;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -713,12 +632,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.67048347" vertical-offset="3217" max-vertical-offset="4082">
           <caret line="144" column="15" selection-start-line="144" selection-start-column="15" selection-end-line="144" selection-end-column="15" />
-          <folding>
-            <element signature="n#style#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -734,15 +647,84 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.29953918" vertical-offset="0" max-vertical-offset="868">
           <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3257403" vertical-offset="0" max-vertical-offset="1196">
-          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1196">
+          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Admin/View/News/news_index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-22.285715" vertical-offset="0" max-vertical-offset="1456">
+          <caret line="30" column="64" selection-start-line="30" selection-start-column="64" selection-end-line="30" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Home/View/Activity/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.0" vertical-offset="1225" max-vertical-offset="2782">
+          <caret line="70" column="57" selection-start-line="70" selection-start-column="28" selection-end-line="70" selection-end-column="57" />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#td#0;n#tr#2;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Home/Controller/ActivityDetailController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.914286" vertical-offset="0" max-vertical-offset="598">
+          <caret line="17" column="72" selection-start-line="17" selection-start-column="72" selection-end-line="17" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Admin/Controller/NewsController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.096774" vertical-offset="3276" max-vertical-offset="8294">
+          <caret line="63" column="9" selection-start-line="63" selection-start-column="9" selection-end-line="63" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Home/View/BroadCast/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-22.828571" vertical-offset="1645" max-vertical-offset="3094">
+          <caret line="94" column="8" selection-start-line="94" selection-start-column="8" selection-end-line="94" selection-end-column="8" />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#1;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#hr#0;n#div#1;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Home/View/ActivityDetail/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20818713" vertical-offset="1434" max-vertical-offset="3146">
+          <caret line="62" column="15" selection-start-line="62" selection-start-column="15" selection-end-line="62" selection-end-column="15" />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#1;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#hr#0;n#div#1;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#1;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

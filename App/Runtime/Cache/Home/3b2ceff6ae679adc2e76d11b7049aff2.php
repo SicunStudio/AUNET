@@ -171,45 +171,14 @@
         </tbody>
     </table>
 </div>
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title>社团网-华中科技大学学生社团联合会</title>
-    <link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsSrc/style/new.css">
-    <link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsSrc/style/button.css">
-    <link rel="stylesheet" type="text/css" href="/AUNET/Public/NewsSrc/style/flexslider.css"/>
-
-    <style>
-
-        .slideimgs {
-            height: 600px;
-            overflow: hidden;
-        }
-
-        #flexsliderarea {
-            width: 100%;
-            height: 600px;
-        }
-    </style>
-
-
+<head>
+    <meta charset="utf-8">
+    <title>最新动态</title>
+    <link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsSrc/style/general.css">
     <script type="text/javascript" src="/AUNET/Public/NewsSrc/js/jquery.js"></script>
-    <script type="text/javascript" src="/AUNET/Public/NewsSrc/js/jquery.flexslider.js"></script>
-    <script type="text/javascript" src="/AUNET/Public/NewsSrc/js/jquery.easing.min.js"></script>
-
     <script>
-
-        $(function () {
-            $(".flexslider").flexslider({
-                animation: "slide",
-                slideshowSpeed: 4000, //展示时间间隔ms
-                animationSpeed: 400, //滚动时间ms
-                touch: true, //是否支持触屏滑动
-
-            });
-        });
-
         $(document).ready(
                 function () {
 
@@ -231,114 +200,93 @@
 
                 });
     </script>
+    <style>
+        .slidebarlink {
+            padding: 12px 12px;
+            font-size: 22px;
+            margin: 15px;
+            display: block;
+            color: #444e41;
+            transition: .2s;
+            border-radius: 3px;
+
+        }
+
+        .now {
+            color: #FFFFFF;
+            background-color: #74b05c;
+        }
+
+        .slidebarlink:hover {
+            color: #FFFFFF;
+            background-color: #74b05c;
+        }
+
+        .TextBlock {
+            width: 80%;
+            padding: 8px;
+            margin: 25px auto;
+            height: 150px;
+        }
+
+        .box1 {
+            background-color: #ffa968;
+        }
+
+        .box2 {
+            background-color: #addf7e
+        }
+
+        .box3 {
+            background-color: #7db3f1;
+        }
+    </style>
+
 </head>
 
 <body>
 
-<!-- HeadAreaStart -->
-
-
-<!-- HeadAreaEnd -->
-<div class="flexslider" id="flexsliderarea">
-    <ul class="slides">
-        <li><img src="/AUNET/Public/NewsSrc/imgs/1.jpg" class="slideimgs"/></li>
-        <li><img src="/AUNET/Public/NewsSrc/imgs/2.jpg" class="slideimgs"/></li>
-        <li><img src="/AUNET/Public/NewsSrc/imgs/3.jpg" class="slideimgs"/></li>
-        <li><img src="/AUNET/Public/NewsSrc/imgs/4.jpg" class="slideimgs"/></li>
-
-    </ul>
-</div>
 
 <div id="wrap">
-
-
-    <table width="90%" border="0" style="margin:5px auto;">
+    <table width="99%" border="0" style="margin:25px 0px">
         <tbody>
         <tr>
-            <td height="56" colspan="2" align="center" valign="middle"><p style="color:#74b05c; font-size:30px">Weekly
-                News</p></td>
+            <td height="59" colspan="2" align="left" valign="middle" style="color:#444e41"><span style="font-size:34px">&nbsp;&nbsp;&nbsp;&nbsp;新闻&nbsp;&nbsp;</span><span
+                    style="font-size:24px">&gt;&gt;&nbsp;&nbsp;活动预告 &gt;&gt; 活动详情</span></td>
         </tr>
         <tr>
-            <td valign="middle">
-                <div class="new-small new1">
-                    <a href="http://www.baidu.com">
-                        <p class="new-head1"><span class="first">丁</span>李娥：来华科观光</p>
+            <td width="27%" height="585" valign="top">
+                <p><a href="<?php echo U('/Home/News/Index');?>" class="slidebarlink">&gt;最新动态</a></p>
 
-                        <p class="new-xiaoxi1">要求进行世界级对话，不给进行的话就杀无赦,真的就这养洛克吗，没有爱了吗，卧槽。</p>
-                    </a>
-                </div>
-            </td>
-            <td align="left">
-                <div class="new-small new2">
-                    <a href="http://www.baidu.com">
-                        <p class="new-head1"><span class="first">丁</span>李娥：来华科观光</p>
+                <p><a href="<?php echo U('/Home/Activity/Index');?>" class="slidebarlink now">▶&nbsp;活动预告</a></p>
 
-                        <p class="new-xiaoxi1">要求进行世界级对话，不给进行的话就杀无赦,真的就这养洛克吗，没有爱了吗，卧槽。</p>
-                    </a>
-                </div>
+                <p><a href="<?php echo U('/Home/BroadCast/Index');?>" class="slidebarlink">&gt;公告栏</a></p>
             </td>
-        </tr>
-        <tr>
-            <td valign="middle">
-                <div class="new-small new3">
-                    <a href="http://www.baidu.com">
-                        <p class="new-head1"><span class="first">丁</span>李娥：来华科观光</p>
 
-                        <p class="new-xiaoxi1">要求进行世界级对话，不给进行的话就杀无赦,真的就这养洛克吗，没有爱了吗，卧槽。</p>
-                    </a>
-                </div>
-            </td>
-            <td align="left">
-                <div class="new-small new4">
-                    <a href="http://www.baidu.com">
-                        <p class="new-head1"><span class="first">丁</span>李娥：来华科观光</p>
+            <td width="79%" align="center" valign="top">
+                <div><img src="/AUNET/Public/NewsSrc/image/GGL.png" width="746" height="122" alt=""
+                          style="margin:0px auto;"/></div>
+                <div style="width:734px;margin:0px auto; border-left:solid #74b05c 6px;border-right:solid #74b05c 6px;border-bottom:solid #74b05c 6px">
 
-                        <p class="new-xiaoxi1">要求进行世界级对话，不给进行的话就杀无赦,真的就这养洛克吗，没有爱了吗，卧槽。</p>
-                    </a>
-                </div>
-            </td>
-        </tr>
-        </tbody>
-    </table>
+                    <p style="font-size:24px; margin:10px auto; color:#74b05c;">活动详情</p>
 
+                    <hr style="width:95%;margin:10px auto"/>
+                    <div style="border-left: 6px;">
+                        <p style="font-size:24px; margin:10px auto; color:#74b05c;"><?php echo ($forecast["title"]); ?></p>
+                    </div>
 
-    <table width="99%" border="0" style="margin:5px auto;">
-        <tbody>
-        <tr>
-            <td height="55" colspan="4" align="center" valign="middle">
-                <p style="color:#74b05c; font-size:30px">Things We Do</p>
-            </td>
-        </tr>
-        <tr>
-            <td width="24%">
-                <div class="button button1">
-                    <a class="buttonlink" href="#"></a>
                 </div>
             </td>
-            <td width="24%">
-                <div class="button button2">
-                    <a class="buttonlink" href="<?php echo U('/Design/Index/index');?>"></a>
-                </div>
-            </td>
-            <td width="24%">
-                <div class="button button3">
-                    <a class="buttonlink" href="<?php echo U('/Material/Index/index');?>"></a>
-                </div>
-            </td>
-            <td width="24%">
-                <div class="button button4">
-                    <a class="buttonlink" href="<?php echo U('/Grade/Index/index');?>"></a>
-                </div>
-            </td>
-        </tr>
         </tbody>
     </table>
 
 
 </div>
+
 
 </body>
 </html>
+
 <div id="footer">
     <p class="friendlink">友情链接</p>
 </div>
