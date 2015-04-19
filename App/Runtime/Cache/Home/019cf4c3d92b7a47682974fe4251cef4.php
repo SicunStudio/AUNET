@@ -3,10 +3,10 @@
 <head lang="en">
     <meta charset="UTF-8">
 
-    <link type="text/css" rel="stylesheet" href="/AUNET/Public/Src/style/general.css">
-    <link type="text/css" rel="stylesheet" href="/AUNET/Public/Src/Src/style/top.css">
-    <link type="text/css" rel="stylesheet" href="/AUNET/Public/Src/style/banner.css">
-    <link type="text/css" rel="stylesheet" href="/AUNET/Public/Src/style/buttom.css">
+    <link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsSrc/style/general.css">
+    <link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsSrc/style/top.css">
+    <link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsSrc/style/banner.css">
+    <link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsSrc/style/buttom.css">
 
 
     <style>
@@ -23,9 +23,9 @@
     </style>
 
 
-    <script type="text/javascript" src="/AUNET/Public/Src/js/jquery.js"></script>
-    <script type="text/javascript" src="/AUNET/Public/Src/js/jquery.flexslider.js"></script>
-    <script type="text/javascript" src="/AUNET/Public/Src/js/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="/AUNET/Public/NewsSrc/js/jquery.js"></script>
+    <script type="text/javascript" src="/AUNET/Public/NewsSrc/js/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="/AUNET/Public/NewsSrc/js/jquery.easing.min.js"></script>
 
     <script>
 
@@ -68,7 +68,7 @@
     <table width="1200px" border="0" style="background:#74b05c;margin:0px auto;">
         <tbody>
         <tr>
-            <td width="33%" align="center" valign="middle"><img src="/AUNET/Public/Src/im/dh.png" width="380" height="106"
+            <td width="33%" align="center" valign="middle"><img src="/AUNET/Public/NewsSrc/im/dh.png" width="380" height="106"
                                                                 alt=""/>
             </td>
             <td width="13%" align="center" valign="middle" class="NaviLinkContainer"><a class="a-top" href="<?php echo U('Home/Index/index');?>"
@@ -176,8 +176,8 @@
 <head>
     <meta charset="utf-8">
     <title>最新动态</title>
-    <link type="text/css" rel="stylesheet" href="/AUNET/Public/Src/style/general.css">
-    <script type="text/javascript" src="/AUNET/Public/Src/js/jquery.js"></script>
+    <link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsSrc/style/general.css">
+    <script type="text/javascript" src="/AUNET/Public/NewsSrc/js/jquery.js"></script>
     <script>
         $(document).ready(
                 function () {
@@ -279,12 +279,12 @@
             </td>
             <td width="73%" align="center" valign="top">
 
-                <?php $__FOR_START_12150__=0;$__FOR_END_12150__=3;for($i=$__FOR_START_12150__;$i < $__FOR_END_12150__;$i+=1){ ?><div class="ActivityBlock box<?php echo ($i+1); ?>">
+                <?php $__FOR_START_31726__=0;$__FOR_END_31726__=3;for($i=$__FOR_START_31726__;$i < $__FOR_END_31726__;$i+=1){ ?><div class="ActivityBlock box<?php echo ($i+1); ?>">
                         <table width="95%" height="95%" border="0">
                             <tbody>
                             <tr>
                                 <td width="30%" rowspan="2">
-                                    <?php if($news[$i]['pic'] == ' '): ?><img src="/AUNET/Public/Src/im/dh.png" width="180" />
+                                    <?php if($news[$i]['pic'] == ' '): ?><img src="/AUNET/Public/NewsSrc/im/dh.png" width="180" />
                                         <?php else: ?>
 
                                         <img src="<?php echo ($news[$i]["pic"]); ?>" width="150" /><?php endif; ?>

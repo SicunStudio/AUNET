@@ -3,10 +3,10 @@
 <head lang="en">
     <meta charset="UTF-8">
 
-    <link type="text/css" rel="stylesheet" href="/AUNET/Public/Src/style/general.css">
-    <link type="text/css" rel="stylesheet" href="/AUNET/Public/Src/Src/style/top.css">
-    <link type="text/css" rel="stylesheet" href="/AUNET/Public/Src/style/banner.css">
-    <link type="text/css" rel="stylesheet" href="/AUNET/Public/Src/style/buttom.css">
+    <link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsSrc/style/general.css">
+    <link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsSrc/style/top.css">
+    <link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsSrc/style/banner.css">
+    <link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsSrc/style/buttom.css">
 
 
     <style>
@@ -23,9 +23,9 @@
     </style>
 
 
-    <script type="text/javascript" src="/AUNET/Public/Src/js/jquery.js"></script>
-    <script type="text/javascript" src="/AUNET/Public/Src/js/jquery.flexslider.js"></script>
-    <script type="text/javascript" src="/AUNET/Public/Src/js/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="/AUNET/Public/NewsSrc/js/jquery.js"></script>
+    <script type="text/javascript" src="/AUNET/Public/NewsSrc/js/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="/AUNET/Public/NewsSrc/js/jquery.easing.min.js"></script>
 
     <script>
 
@@ -68,7 +68,7 @@
     <table width="1200px" border="0" style="background:#74b05c;margin:0px auto;">
         <tbody>
         <tr>
-            <td width="33%" align="center" valign="middle"><img src="/AUNET/Public/Src/im/dh.png" width="380" height="106"
+            <td width="33%" align="center" valign="middle"><img src="/AUNET/Public/NewsSrc/im/dh.png" width="380" height="106"
                                                                 alt=""/>
             </td>
             <td width="13%" align="center" valign="middle" class="NaviLinkContainer"><a class="a-top" href="<?php echo U('Home/Index/index');?>"
@@ -176,8 +176,8 @@
 <head>
 <meta charset="utf-8">
 <title>公告栏</title>
- <link type="text/css" rel="stylesheet" href="/AUNET/Public/Src/style/general.css">
- <script type="text/javascript" src="/AUNET/Public/Src/js/jquery.js"></script>
+ <link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsSrc/style/general.css">
+ <script type="text/javascript" src="/AUNET/Public/NewsSrc/js/jquery.js"></script>
  <script>
   $(document).ready(
 	   function() {
@@ -245,7 +245,7 @@
       <p><a href="<?php echo U('/Home/Activity/Index');?>" class="slidebarlink">&gt;活动预告</a></p>
       <p><a href="<?php echo U('/Home/BroadCast/Index');?>" class="slidebarlink now">▶&nbsp;公告栏</a></p>
       </td>
-      <td width="79%" align="center" valign="top"><div><img src="/AUNET/Public/Src/image/GGL.png" width="746" height="122" alt="" style="margin:0px auto;"/></div>
+      <td width="79%" align="center" valign="top"><div><img src="/AUNET/Public/NewsSrc/image/GGL.png" width="746" height="122" alt="" style="margin:0px auto;"/></div>
       <div style="width:734px;margin:0px auto; border-left:solid #74b05c 6px;border-right:solid #74b05c 6px;border-bottom:solid #74b05c 6px">
       
       <p style="font-size:24px; margin:10px auto; color:#74b05c;">最新公告</p>

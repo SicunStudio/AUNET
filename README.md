@@ -2,6 +2,11 @@
 #基于ThinkPHP框架的社团网快速开发
 #完成SAE平台移植
 
+
+#前台注意:
+#   你的文件请将除html以外的文件用 "/Public/模块名+Src" 路径命名的文件夹保存，如新闻模块的css，jpg文件放在/Public/NewsSrc文件夹下
+#   html文件放入/App/Home/View中
+
 ##社团网入口http://serverName/AUNET/
 
 ##社团网前台(首页)入口文件夹/App/Home

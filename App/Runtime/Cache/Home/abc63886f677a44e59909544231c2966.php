@@ -3,10 +3,10 @@
 <head lang="en">
     <meta charset="UTF-8">
 
-    <link type="text/css" rel="stylesheet" href="/AUNET/Public/Src/style/general.css">
-    <link type="text/css" rel="stylesheet" href="/AUNET/Public/Src/Src/style/top.css">
-    <link type="text/css" rel="stylesheet" href="/AUNET/Public/Src/style/banner.css">
-    <link type="text/css" rel="stylesheet" href="/AUNET/Public/Src/style/buttom.css">
+    <link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsSrc/style/general.css">
+    <link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsSrc/style/top.css">
+    <link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsSrc/style/banner.css">
+    <link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsSrc/style/buttom.css">
 
 
     <style>
@@ -23,9 +23,9 @@
     </style>
 
 
-    <script type="text/javascript" src="/AUNET/Public/Src/js/jquery.js"></script>
-    <script type="text/javascript" src="/AUNET/Public/Src/js/jquery.flexslider.js"></script>
-    <script type="text/javascript" src="/AUNET/Public/Src/js/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="/AUNET/Public/NewsSrc/js/jquery.js"></script>
+    <script type="text/javascript" src="/AUNET/Public/NewsSrc/js/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="/AUNET/Public/NewsSrc/js/jquery.easing.min.js"></script>
 
     <script>
 
@@ -68,7 +68,7 @@
     <table width="1200px" border="0" style="background:#74b05c;margin:0px auto;">
         <tbody>
         <tr>
-            <td width="33%" align="center" valign="middle"><img src="/AUNET/Public/Src/im/dh.png" width="380" height="106"
+            <td width="33%" align="center" valign="middle"><img src="/AUNET/Public/NewsSrc/im/dh.png" width="380" height="106"
                                                                 alt=""/>
             </td>
             <td width="13%" align="center" valign="middle" class="NaviLinkContainer"><a class="a-top" href="<?php echo U('Home/Index/index');?>"
@@ -243,7 +243,7 @@
 
                 <p><a href="<?php echo U('/Home/BroadCast/Index');?>" class="slidebarlink">&gt;公告栏</a></p>
             </td>
-            <td width="79%" align="center"><img src="/AUNET/Public/Src/image/HDYG-Head.png" width="714" height="169"
+            <td width="79%" align="center"><img src="/AUNET/Public/NewsSrc/image/HDYG-Head.png" width="714" height="169"
                                                 alt=""/></td>
         </tr>
         <tr>

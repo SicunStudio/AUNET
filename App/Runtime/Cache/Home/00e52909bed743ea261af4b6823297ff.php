@@ -3,10 +3,10 @@
 <head lang="en">
     <meta charset="UTF-8">
 
-    <link type="text/css" rel="stylesheet" href="/AUNET/Public/Src/style/general.css">
-    <link type="text/css" rel="stylesheet" href="/AUNET/Public/Src/Src/style/top.css">
-    <link type="text/css" rel="stylesheet" href="/AUNET/Public/Src/style/banner.css">
-    <link type="text/css" rel="stylesheet" href="/AUNET/Public/Src/style/buttom.css">
+    <link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsSrc/style/general.css">
+    <link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsSrc/style/top.css">
+    <link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsSrc/style/banner.css">
+    <link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsSrc/style/buttom.css">
 
 
     <style>
@@ -23,9 +23,9 @@
     </style>
 
 
-    <script type="text/javascript" src="/AUNET/Public/Src/js/jquery.js"></script>
-    <script type="text/javascript" src="/AUNET/Public/Src/js/jquery.flexslider.js"></script>
-    <script type="text/javascript" src="/AUNET/Public/Src/js/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="/AUNET/Public/NewsSrc/js/jquery.js"></script>
+    <script type="text/javascript" src="/AUNET/Public/NewsSrc/js/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="/AUNET/Public/NewsSrc/js/jquery.easing.min.js"></script>
 
     <script>
 
@@ -68,7 +68,7 @@
     <table width="1200px" border="0" style="background:#74b05c;margin:0px auto;">
         <tbody>
         <tr>
-            <td width="33%" align="center" valign="middle"><img src="/AUNET/Public/Src/im/dh.png" width="380" height="106"
+            <td width="33%" align="center" valign="middle"><img src="/AUNET/Public/NewsSrc/im/dh.png" width="380" height="106"
                                                                 alt=""/>
             </td>
             <td width="13%" align="center" valign="middle" class="NaviLinkContainer"><a class="a-top" href="<?php echo U('Home/Index/index');?>"
@@ -176,13 +176,13 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>社团网-华中科技大学学生社团联合会</title>
-    <!--<link type="text/css" rel="stylesheet" href="/AUNET/Public/Src/style/general.css">-->
-    <!--<link type="text/css" rel="stylesheet" href="/AUNET/Public/Src/Src/style/top.css">-->
-    <!--<link type="text/css" rel="stylesheet" href="/AUNET/Public/Src/style/banner.css">-->
-    <link type="text/css" rel="stylesheet" href="/AUNET/Public/Src/style/new.css">
-    <link type="text/css" rel="stylesheet" href="/AUNET/Public/Src/style/button.css">
-    <!--<link type="text/css" rel="stylesheet" href="/AUNET/Public/Src/style/buttom.css">-->
-    <link rel="stylesheet" type="text/css" href="/AUNET/Public/Src/style/flexslider.css"/>
+    <!--<link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsNewsSrc/style/general.css">-->
+    <!--<link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsNewsSrc/NewsNewsSrc/style/top.css">-->
+    <!--<link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsNewsSrc/style/banner.css">-->
+    <link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsSrc/style/new.css">
+    <link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsSrc/style/button.css">
+    <!--<link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsNewsSrc/style/buttom.css">-->
+    <link rel="stylesheet" type="text/css" href="/AUNET/Public/NewsSrc/style/flexslider.css"/>
 
     <style>
 
@@ -198,9 +198,9 @@
     </style>
 
 
-    <script type="text/javascript" src="/AUNET/Public/Src/js/jquery.js"></script>
-    <script type="text/javascript" src="/AUNET/Public/Src/js/jquery.flexslider.js"></script>
-    <script type="text/javascript" src="/AUNET/Public/Src/js/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="/AUNET/Public/NewsSrc/js/jquery.js"></script>
+    <script type="text/javascript" src="/AUNET/Public/NewsSrc/js/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="/AUNET/Public/NewsSrc/js/jquery.easing.min.js"></script>
 
     <script>
 
@@ -245,10 +245,10 @@
 <!-- HeadAreaEnd -->
 <div class="flexslider" id="flexsliderarea">
     <ul class="slides">
-        <li><img src="/AUNET/Public/Src/imgs/1.jpg" class="slideimgs"/></li>
-        <li><img src="/AUNET/Public/Src/imgs/2.jpg" class="slideimgs"/></li>
-        <li><img src="/AUNET/Public/Src/imgs/3.jpg" class="slideimgs"/></li>
-        <li><img src="/AUNET/Public/Src/imgs/4.jpg" class="slideimgs"/></li>
+        <li><img src="/AUNET/Public/NewsSrc/imgs/1.jpg" class="slideimgs"/></li>
+        <li><img src="/AUNET/Public/NewsSrc/imgs/2.jpg" class="slideimgs"/></li>
+        <li><img src="/AUNET/Public/NewsSrc/imgs/3.jpg" class="slideimgs"/></li>
+        <li><img src="/AUNET/Public/NewsSrc/imgs/4.jpg" class="slideimgs"/></li>
 
     </ul>
 </div>
