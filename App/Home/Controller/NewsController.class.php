@@ -18,6 +18,8 @@ class NewsController extends Controller{
         $Page=new Page($count,3);
 
         $this->news=D('news')->order('time desc')->limit($Page->firstRow.','.$Page->listRows)->select();
+//        dump($this->news);
+//        die;
         $this->page=$Page->show();
         $this->count=$count;
 //        dump($this->news);

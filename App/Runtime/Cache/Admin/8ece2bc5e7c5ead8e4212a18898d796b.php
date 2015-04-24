@@ -74,11 +74,39 @@
     <title></title>
 </head>
 <body>
-<h1>
-    欢迎回来，<?php echo ($_SESSION['username']); ?>！
-</h1>
-<p>您上次登录的时间是<?php echo ($_SESSION['lastlogintime']); ?></p>
-<p>您上次登录的ip是<?php echo ($_SESSION['lastloginip']); ?></p>
+    <table class="table">
+        <caption align="top"><?php if(ACTION_NAME == 'news_index'): ?>文章列表<?php else: ?>回收站列表<?php endif; ?></caption>
+        <tr>
+            <th>ID</th>
+            <th>标题</th>
+            <th>所属分类</th>
+            <th>发布时间</th>
+            <th>操作</th>
+        </tr>
+        <?php if(is_array($news)): foreach($news as $key=>$v): ?><tr>
+                <td width="8%"><?php echo ($v["id"]); ?></td>
+                <td><a href="<?php echo U('Text',array('id'=>$v['id']));?>" ><?php echo ($v["title"]); ?></a><?php if(is_array($v["attr"])): foreach($v["attr"] as $key=>$value): ?><strong style='color:<?php echo ($value["color"]); ?>'>[<?php echo ($value["name"]); ?>]</strong><?php endforeach; endif; ?></td>
+                <td width="12%"><?php echo ($v["cate"]); ?></td>
+                <td width="12%"><?php echo (date('y-m-d H:i',$v["time"])); ?></td>
+                <td width="18%" align="center">
+                    <?php if(ACTION_NAME == 'news_index'): ?>[<a href="<?php echo U('edit',array('id'=>$v['id']));?>">修改</a>]
+                        [<a href="<?php echo U('toTrash',array('id'=>$v['id'],'type'=>1));?>">删除</a>]
+                        <?php else: ?>
+                        [<a href="<?php echo U('toTrash',array('id'=>$v['id'],'type'=>0));?>">还原</a>]
+                        [<a href="<?php echo U('delete',array('id'=>$v['id']));?>">彻底删除</a>]<?php endif; ?>
+
+                </td>
+            </tr><?php endforeach; endif; ?>
+
+    </table>
+    <?php if(ACTION_NAME == 'trash'): ?><td colspan="5" align="center">
+            [<a href="<?php echo U('deleteAll');?>">清空回收站</a>]
+        </td><?php endif; ?>
+    <div align="center">
+        <span class="rows">共<?php echo ($count); ?>条记录</span>
+        <?php echo ($page); ?>
+    </div>
+
 </body>
 </html>
 </body>
