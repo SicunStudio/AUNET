@@ -263,43 +263,47 @@
         <tr>
             <td valign="middle">
                 <div class="new-small new1">
+                  <div class="newsblock_container">
                     <a href="#">
                         <p class="new-head1"><span class="first"><?php echo (substr($news[0]["title"],0,1)); ?></span><?php echo substr($news[0]['title'],1,strlen($news[0]['title']));?></p>
-
                         <p class="new-xiaoxi1"><?php echo (replace_img($news[0]["content"])); ?></p>
                     </a>
+                  </div>
                 </div>
             </td>
             <td align="left">
+              <div class="newsblock_container">
                 <div class="new-small new2">
                     <a href="#">
                         <p class="new-head1"><span class="first"><?php echo (substr($news[1]["title"],0,1)); ?></span><?php echo substr($news[1]['title'],1,strlen($news[1]['title']));?></p>
-
                         <p class="new-xiaoxi1"><?php echo (replace_img($news[1]["content"])); ?></p>
                     </a>
                 </div>
+              </div>
             </td>
         </tr>
 
 
         <tr>
             <td valign="middle" >
-                <div class="new-small new3" style="margin:0 auto">
+              <div class="newsblock_container">
+                <div class="new-small new3">
                     <a href="#">
                         <p class="new-head1"><span class="first"><?php echo (substr($news[2]["title"],0,1)); ?></span><?php echo substr($news[2]['title'],1,strlen($news[2]['title']));?></p>
-
                         <p class="new-xiaoxi1"><?php echo (replace_img($news[2]["content"])); ?></p>
                     </a>
                 </div>
+              </div>
             </td>
             <td align="left">
-                <div class="new-small new4" style="margin:0 auto">
+              <div class="newsblock_container">
+                <div class="new-small new4">
                     <a href="#">
                         <p class="new-head1"><span class="first"><?php echo (substr($news[3]["title"],0,1)); ?></span><?php echo substr($news[3]['title'],1,strlen($news[3]['title']));?></p>
-
                         <p class="new-xiaoxi1"><?php echo (replace_img($news[3]["content"])); ?></p>
                     </a>
                 </div>
+              </div>
             </td>
         </tr>
 

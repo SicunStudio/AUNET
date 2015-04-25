@@ -90,43 +90,47 @@
         <tr>
             <td valign="middle">
                 <div class="new-small new1">
+                  <div class="newsblock_container">
                     <a href="#">
                         <p class="new-head1"><span class="first">{$news[0].title|substr=0,1}</span><?php echo substr($news[0]['title'],1,strlen($news[0]['title']));?></p>
-
                         <p class="new-xiaoxi1">{$news[0].content|replace_img}</p>
                     </a>
+                  </div>
                 </div>
             </td>
             <td align="left">
+              <div class="newsblock_container">
                 <div class="new-small new2">
                     <a href="#">
                         <p class="new-head1"><span class="first">{$news[1].title|substr=0,1}</span><?php echo substr($news[1]['title'],1,strlen($news[1]['title']));?></p>
-
                         <p class="new-xiaoxi1">{$news[1].content|replace_img}</p>
                     </a>
                 </div>
+              </div>
             </td>
         </tr>
 
 
         <tr>
             <td valign="middle" >
-                <div class="new-small new3" style="margin:0 auto">
+              <div class="newsblock_container">
+                <div class="new-small new3">
                     <a href="#">
                         <p class="new-head1"><span class="first">{$news[2].title|substr=0,1}</span><?php echo substr($news[2]['title'],1,strlen($news[2]['title']));?></p>
-
                         <p class="new-xiaoxi1">{$news[2].content|replace_img}</p>
                     </a>
                 </div>
+              </div>
             </td>
             <td align="left">
-                <div class="new-small new4" style="margin:0 auto">
+              <div class="newsblock_container">
+                <div class="new-small new4">
                     <a href="#">
                         <p class="new-head1"><span class="first">{$news[3].title|substr=0,1}</span><?php echo substr($news[3]['title'],1,strlen($news[3]['title']));?></p>
-
                         <p class="new-xiaoxi1">{$news[3].content|replace_img}</p>
                     </a>
                 </div>
+              </div>
             </td>
         </tr>
 
