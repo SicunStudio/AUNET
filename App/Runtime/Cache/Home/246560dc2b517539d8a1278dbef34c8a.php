@@ -125,23 +125,23 @@
             </td>
             <td width="13%" align="left" valign="top">
                 <p>
-                    <a href="" class="downlistlink">社联简介</a>
+                    <a href="<?php echo U('/Home/AU/index');?>" class="downlistlink">社联简介</a>
                 </p>
 
                 <p>
-                    <a href="" class="downlistlink">社联机构</a>
+                    <a href="<?php echo U('/Home/AU/department');?>" class="downlistlink">社联机构</a>
                 </p>
 
                 <p>
-                    <a href="" class="downlistlink">制度汇编</a>
+                    <a href="<?php echo U('/Home/AU/regulation');?>" class="downlistlink">制度汇编</a>
                 </p>
 
                 <p>
-                    <a href="" class="downlistlink">社联大事记</a>
+                    <a href="<?php echo U('/Home/AU/event');?>" class="downlistlink">社联大事记</a>
                 </p>
 
                 <p>
-                    <a href="" class="downlistlink">微仔说</a>
+                    <a href="#" class="downlistlink">微仔说</a>
                 </p>
 
                 <p>&nbsp;</p>
@@ -174,98 +174,194 @@
 <!doctype html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>活动预告</title>
-    <link type="text/css" rel="stylesheet" href="/AUNET/Public/Src/style/general.css">
-    <script type="text/javascript" src="/AUNET/Public/Src/js/jquery.js"></script>
-    <script>
-        $(document).ready(
-                function () {
+<meta charset="utf-8">
+<title>社联大事记</title>
+ <link type="text/css" rel="stylesheet" href="/AUNET/Public/general.css">
+ <script type="text/javascript" src="/AUNET/Public/js/jquery.js"></script>
+ <script>
+  $(document).ready(
+	   function() {
+		 
+		   $(".a-top").mouseenter(
+		   function(e) {
+            $("#downlist").slideDown("fast");	
+        });
+		
+		$("#downlist").mouseenter(
+		   function(e) {
+            $("#downlist").slideDown("fast");	
+        });
+		
+	
+		
+		$("#downlist").mouseleave(
+		   function(e) {
+            $("#downlist").slideUp("fast");	
+        });
+		
+    });
+	
+	function ShowMonth(yr){
+		var elementid="#"+yr+"_month";		
+			$(elementid).slideToggle("fast");			
+		}
+		
+	function ShowBox(yr,mon)
+	{
+		var allbox = document.getElementsByClassName("eventbox");
+		for(var j=0;j<allbox.length;j=j+1){
+allbox[j].style.display='none';
 
-                    $(".a-top").mouseenter(
-                            function (e) {
-                                $("#downlist").slideDown("fast");
-                            });
-
-                    $("#downlist").mouseenter(
-                            function (e) {
-                                $("#downlist").slideDown("fast");
-                            });
+}
 
 
-                    $("#downlist").mouseleave(
-                            function (e) {
-                                $("#downlist").slideUp("fast");
-                            });
+		
+       
+		var box = document.getElementsByClassName("eventbox "+ yr+" "+mon);
+		for(var i=0;i<box.length;i=i+1){
+box[i].style.display='block';
+}
+ var lilist = document.getElementsByClassName("li_list");
+		for(var j=0;j<lilist.length;j=j+1){
+lilist[j].style.backgroundColor='#ffffff';
+}
+        
+		var liitemid="li_" +yr + "_" + mon;
+		document.getElementById(liitemid).style.backgroundColor="#59a642";
+		}
+ </script>
+ <style>
+ .slidebarlink{
+	 padding:12px 12px;
+	 font-size:22px;
+	 margin:15px;
+	 display:block;
+	 color:#444e41;
+	 transition:.2s;
+	 border-radius:3px;
+	 
+	 }
+	 
+	 .now{color:#FFFFFF;
+	background-color:#74b05c;}
+	 
+.slidebarlink:hover{
+		background-color:#74b05c;
+}
 
-                });
-    </script>
-    <style>
-        .slidebarlink {
-            padding: 12px 12px;
-            font-size: 22px;
-            margin: 15px;
-            display: block;
-            color: #444e41;
-            transition: .2s;
-            border-radius: 3px;
+.li_list
+{
+	width:40px;
+	font-size:18px;
+	transition:.2s;
+	color:#000000;
+	
+	}
+	
+.li_list:hover
+{
+	color:#ffffff;
+	background-color:#59a642;
+}
 
-        }
+.monthlist{
+	list-style-type:none;
+	}
+	
+	.eventbox{
+		width:80%;
+		height:150px;
+		margin:20px auto;
+		display:none;
+		background-color:#ffd739;
+		color:#FFFFFF;
+		}
 
-        .now {
-            color: #FFFFFF;
-            background-color: #74b05c;
-        }
-
-        .slidebarlink:hover {
-            color: #FFFFFF;
-            background-color: #74b05c;
-        }
-    </style>
-
+ </style>
+ 
 </head>
 
 <body>
 
 
-<div id="wrap">
-    <table width="99%" border="0" style="margin:25px 0px">
+ <div id="wrap">
+ <table width="99%" border="0" style="margin:25px 0px">
+  <tbody>
+    <tr>
+      <td height="59" colspan="3" align="left" valign="middle" style="color:#444e41"><span style="font-size:34px">&nbsp;&nbsp;&nbsp;&nbsp;社联&nbsp;&nbsp;</span><span style="font-size:24px">Association Union</span></td>
+      </tr>
+    <tr>
+      <td width="27%" valign="top">
+        <p><a href="<?php echo U('/Home/AU/index');?>" class="slidebarlink">&gt;社联简介</a></p>
+        <p><a href="<?php echo U('/Home/AU/department');?>" class="slidebarlink">&gt;社联机构</a></p>
+        <p><a href="<?php echo U('/Home/AU/regulation');?>" class="slidebarlink">&gt;制度汇编</a></p>
+        <p><a href="<?php echo U('/Home/AU/event');?>" class="slidebarlink now">▶&nbsp;社联大事记</a></p>
+        <p><a href="#" class="slidebarlink">&gt;微仔说</a></p>
+        </td>
+      <td width="58%" align="left" valign="top">
+      <div class="eventbox 2014 1">
+      
+      <table width="100%" border="0">
         <tbody>
-        <tr>
-            <td height="59" colspan="2" align="left" valign="middle" style="color:#444e41"><span style="font-size:34px">&nbsp;&nbsp;&nbsp;&nbsp;新闻&nbsp;&nbsp;</span><span
-                    style="font-size:24px">&gt;&gt;&nbsp;&nbsp;活动预告</span></td>
-        </tr>
-        <tr>
-            <td width="27%" height="585" valign="top">
-                <p><a href="<?php echo U('/Home/News/Index');?>" class="slidebarlink">&gt;最新动态</a></p>
+          <tr>
+            <td width="30%">&nbsp;</td>
+            <td width="69%" align="left" valign="middle">201401</td>
+          </tr>
+        </tbody>
+      </table>
 
-                <p><a href="<?php echo U('/Home/Activity/Index');?>" class="slidebarlink now">▶&nbsp;活动预告</a></p>
+      </div>
+      <div class="eventbox 2014 1">201401</div>
+       <div class="eventbox 2014 5">201405</div>
+      <div class="eventbox 2014 3">201403</div>
+       <div class="eventbox 2015 1">201501</div>
+      <div class="eventbox 2014 6">201406</div>
+       <div class="eventbox 2015 1">201501</div>
+      <div class="eventbox 2014 1">201401</div>
+       <div class="eventbox 2015 1">201501</div>
+      <div class="eventbox 2015 12">201512</div>
+            <div class="eventbox 2009 12">200912</div>
+      </td>
+      
+      <td width="15%" align="left" valign="top"> 
+  
+      
+      <script>
+	  var mydate=new Date();
+	  var thisyear=mydate.getFullYear();
+	  var thismonth=mydate.getMonth();
+	  thismonth++;
+	  document.writeln("<a onClick='ShowMonth(" + thisyear + ")'>" + thisyear + "年</a>");
+	  document.writeln(" <ul id='"+ thisyear+"_month' class='monthlist' style='display:none'>");
+	  for(var mon=1;mon<=thismonth;mon++)
+	  {
+		  document.writeln("<li onClick='ShowBox("+thisyear+","+mon+")'>"+mon+"月</li>");	  
+		  }
+	  document.writeln("</ul>");
+	  document.writeln("<br>");
+      for(var yr=thisyear-1;yr>=2008;yr--)
+	  {
+		  document.writeln("<a onClick='ShowMonth(" + yr + ")'>" + yr + "年</a>");
+		   document.writeln(" <ul id='"+ yr+"_month' class='monthlist' style='display:none'>");
+	       for(var mon=1;mon<=12;mon++)
+	       {
+		     document.writeln("<li class='li_list' id='li_" + yr + "_" + mon + "' onClick='ShowBox("+yr+","+mon+")'>"+mon+"月</li>");	  
+		   }
+	      document.writeln("</ul>");
+	  document.writeln("<br>");
+		  
+	  }
+      
+      
+      </script>
+     
+      </td>     
+    </tr>
+    </tbody>
+</table>
 
-                <p><a href="<?php echo U('/Home/BroadCast/Index');?>" class="slidebarlink">&gt;公告栏</a></p>
-            </td>
-            <td width="79%" align="center" valign="top"><img src="/AUNET/Public/NewsSrc/image/HDYG-Head.png" width="714" height="169"
-                                                alt=""/>
-                                                <table width="714px" border="0" style=" margin-top:10px; margin-bottom:20px;">
-                    <tbody>
-                    <?php if(is_array($forecast)): foreach($forecast as $key=>$v): ?><tr>
-                        <td bgcolor="#ffa968" width="33%"><?php echo (date('Y-m-d H:i',$v["time"])); ?></td>
-                        <td bgcolor="#addf7e" width="33%"><?php echo ($v["place"]); ?></td>
-                        <td bgcolor="#7db3f1" width="33%"><a style="text-decoration:none;color:#000000;" href="<?php echo U('/Home/ActivityDetail/Index',array('id'=>$v['id']));?>"><?php echo ($v["title"]); ?></a> </td>
-                        <tr><?php endforeach; endif; ?>
-
-
-                    </tbody>
-                </table>
-                                                </td>
-        </tr>
-
-
-
-    </table>
-    
-
-
-</div>
+ 
+ </div>
 
 </body>
 </html>

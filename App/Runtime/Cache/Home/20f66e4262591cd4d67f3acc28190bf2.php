@@ -1,12 +1,185 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+
+    <link type="text/css" rel="stylesheet" href="/AUNET/Public/general.css">
+    <link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsSrc/style/top.css">
+    <link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsSrc/style/banner.css">
+    <link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsSrc/style/buttom.css">
+
+
+    <style>
+
+        .slideimgs {
+            height: 600px;
+            overflow: hidden;
+        }
+
+        #flexsliderarea {
+            width: 100%;
+            height: 600px;
+        }
+    </style>
+
+
+    <script type="text/javascript" src="/AUNET/Public/NewsSrc/js/jquery.js"></script>
+    <script type="text/javascript" src="/AUNET/Public/NewsSrc/js/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="/AUNET/Public/NewsSrc/js/jquery.easing.min.js"></script>
+
+    <script>
+
+        $(function () {
+            $(".flexslider").flexslider({
+                animation: "slide",
+                slideshowSpeed: 4000, //展示时间间隔ms
+                animationSpeed: 400, //滚动时间ms
+                touch: true, //是否支持触屏滑动
+
+            });
+        });
+
+        $(document).ready(
+                function () {
+
+                    $(".a-top").mouseenter(
+                            function (e) {
+                                $("#downlist").slideDown("fast");
+                            });
+
+                    $("#downlist").mouseenter(
+                            function (e) {
+                                $("#downlist").slideDown("fast");
+                            });
+
+
+                    $("#downlist").mouseleave(
+                            function (e) {
+                                $("#downlist").slideUp("fast");
+                            });
+
+                });
+    </script>
+    <title></title>
+</head>
+<body>
+<div id="header">
+
+    <table width="1200px" border="0" style="background:#74b05c;margin:0px auto;">
+        <tbody>
+        <tr>
+            <td width="33%" align="center" valign="middle"><img src="/AUNET/Public/NewsSrc/im/dh.png" width="380" height="106"
+                                                                alt=""/>
+            </td>
+            <td width="13%" align="center" valign="middle" class="NaviLinkContainer"><a class="a-top" href="<?php echo U('Home/Index/index');?>"
+                                                                                        style="color: #FFFFFF">首页</a>
+            </td>
+            <td width="13%" align="center" valign="middle" class="NaviLinkContainer"><a class="a-top" href="#"
+                                                                                        style="color: #FFFFFF">新闻</a>
+            </td>
+            <td width="13%" align="center" valign="middle" class="NaviLinkContainer"><a class="a-top" href="#"
+                                                                                        style="color: #FFFFFF">社联</a>
+            </td>
+            <td width="13%" align="center" valign="middle" class="NaviLinkContainer"><a class="a-top" href="#"
+                                                                                        style="color: #FFFFFF">社团</a>
+            </td>
+            <td width="13%" align="center" valign="middle" class="NaviLinkContainer"><a class="a-top" href="#"
+                                                                                        style="color: #FFFFFF">其他</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div id="downlist" style="display:none;">
+    <table width="1200px" border="0" style="margin:0px auto;">
+        <tbody>
+        <tr>
+            <td width="36%" align="center" valign="middle">&nbsp;
+
+
+            </td>
+            <td width="13%" align="left" valign="top">
+                <p><a href="<?php echo U('/Grade/Index/index');?>" class="downlistlink">评分系统</a></p>
+
+                <p><a href="<?php echo U('/Material/Index/index');?>" class="downlistlink">资源申请</a></p>
+
+                <p>
+                    <a href="<?php echo U('/Design/Index/index');?>" class="downlistlink">设计委任栏</a></p>
+
+                <p>
+                    <a href="" class="downlistlink">资料下载</a></p>
+            </td>
+            <td width="13%" align="left" valign="top">
+                <p>
+                    <a href="<?php echo U('/Home/News/index');?>" class="downlistlink">最新动态</a>
+                </p>
+
+                <p>
+                    <a href="<?php echo U('/Home/Activity/index');?>" class="downlistlink">活动预告</a>
+                </p>
+
+                <p>
+                    <a href="<?php echo U('/Home/BroadCast/index');?>" class="downlistlink">通告栏</a>
+                </p>
+
+            </td>
+            <td width="13%" align="left" valign="top">
+                <p>
+                    <a href="<?php echo U('/Home/AU/index');?>" class="downlistlink">社联简介</a>
+                </p>
+
+                <p>
+                    <a href="<?php echo U('/Home/AU/department');?>" class="downlistlink">社联机构</a>
+                </p>
+
+                <p>
+                    <a href="<?php echo U('/Home/AU/regulation');?>" class="downlistlink">制度汇编</a>
+                </p>
+
+                <p>
+                    <a href="<?php echo U('/Home/AU/event');?>" class="downlistlink">社联大事记</a>
+                </p>
+
+                <p>
+                    <a href="#" class="downlistlink">微仔说</a>
+                </p>
+
+                <p>&nbsp;</p>
+
+            </td>
+            <td width="13%" align="left" valign="top">&nbsp;
+
+            </td>
+            <td width="10%" align="left" valign="top">
+                <p>
+                    <a href="<?php echo U('/Home/Other/contact');?>" class="downlistlink">会员维权</a>
+                </p>
+
+                <p>
+                    <a href="<?php echo U('/Home/Other/advice');?>" class="downlistlink">投诉建议</a>
+                </p>
+
+                <p>
+                    <a href="<?php echo U('/Home/Other/member');?>" class="downlistlink">联系我们</a>
+                </p>
+
+                <p>
+                    <a href="<?php echo U('/Home/FAQ/index');?>" class="downlistlink">FAQ</a>
+                </p>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 <!doctype html>
 <html>
  <head>
  <meta charset="utf-8">
  <title>社联简介</title>
- <link type="text/css" rel="stylesheet" href="style/general.css">
- <link href="style/catalog.css" type="text/css" rel="stylesheet">
- <link href="style/public.css" type="text/css" rel="stylesheet">
- <script type="text/javascript" src="js/jquery.js"></script>
+ <link type="text/css" rel="stylesheet" href="/AUNET/Public/general.css">
+ <link href="/AUNET/Public/AUSrc/style/catalog.css" type="text/css" rel="stylesheet">
+ <link href="/AUNET/Public/AUSrc/style/public.css" type="text/css" rel="stylesheet">
+ <script type="text/javascript" src="/AUNET/Public/js/jquery.js"></script>
  <script>
   $(document).ready(
 	   function() {
@@ -53,58 +226,6 @@
 
  <body>
 
-<!-- HeadAreaStart -->
-<div id="header">
-   <table width="1200px" border="0" style="background:#74b05c;margin:0px auto;">
-    <tbody>
-       <tr>
-        <td width="33%" align="center" valign="middle"><img src="im/dh.png" width="380" height="106" alt=""/> </td>
-        <td width="13%" align="center" valign="middle" class="NaviLinkContainer"><a class="a-top"   href="#"   style="color: #FFFFFF">首页</a></td>
-        <td width="13%" align="center" valign="middle" class="NaviLinkContainer"><a  class="a-top"   href="#"  style="color: #FFFFFF" >新闻</a></td>
-        <td width="13%" align="center" valign="middle" class="NaviLinkContainer"><a  class="a-top"   href="#" style="color: #FFFFFF">社联</a></td>
-        <td width="13%" align="center" valign="middle" class="NaviLinkContainer"><a   class="a-top"   href="#"  style="color: #FFFFFF">社团</a> </td>
-        <td width="13%" align="center" valign="middle" class="NaviLinkContainer"><a  class="a-top" href="#"  style="color: #FFFFFF">其他</a></td>
-      </tr>
-     </tbody>
-  </table>
- </div>
-<div id="downlist" style="display:none;">
-   <table width="1200px" border="0" style="margin:0px auto;">
-    <tbody>
-       <tr>
-        <td width="36%" align="center" valign="middle">&nbsp; </td>
-        <td width="13%" align="left" valign="top">
-           <p><a href="" class="downlistlink">评分系统</a> </p>
-           <p><a href="" class="downlistlink">资源申请</a></p>
-           <p> <a href="" class="downlistlink">设计委任栏</a></p>
-           <p> <a href="" class="downlistlink">资料下载</a></p>
-         </td>
-        <td width="13%" align="left" valign="top">
-           <p> <a href="" class="downlistlink">最新动态</a> </p>
-           <p> <a href="" class="downlistlink">活动预告</a> </p>
-           <p> <a href="" class="downlistlink">通告栏</a> </p>
-         </td>
-        <td width="13%" align="left" valign="top">
-           <p> <a href="" class="downlistlink">社联简介</a> </p>
-           <p> <a href="" class="downlistlink">社联机构</a> </p>
-           <p> <a href="" class="downlistlink">制度汇编</a> </p>
-           <p> <a href="" class="downlistlink">社联大事记</a> </p>
-           <p> <a href="" class="downlistlink">微仔说</a> </p>
-           <p>&nbsp;</p>
-         </td>
-        <td width="13%" align="left" valign="top">&nbsp; </td>
-        <td width="10%" align="left" valign="top">
-           <p> <a href="" class="downlistlink">会员维权</a> </p>
-           <p> <a href="" class="downlistlink">投诉建议</a> </p>
-           <p> <a href="" class="downlistlink">联系我们</a> </p>
-           <p> <a href="" class="downlistlink">FAQ</a> </p>
-         </td>
-      </tr>
-     </tbody>
-  </table>
- </div>
-
-<!-- HeadAreaEnd -->
 
 <div id="wrap">
    <table width="99%" border="0" style="margin:25px 0px">
@@ -114,7 +235,7 @@
       </tr>
        <tr>
         <td width="27%" valign="top">
-           <p><a href="au_info.html" class="slidebarlink now">▶&nbsp;社联简介</a></p>
+           <p><a href="index.html" class="slidebarlink now">▶&nbsp;社联简介</a></p>
            <div id="z_catalog">
             <dl id="catalog">
                <dd class="catalog_li"><span class="catalog_dot">▪</span><a href="#001">历史沿革</a></dd>
@@ -123,10 +244,10 @@
                <dd class="catalog_li"><span class="catalog_dot">▪</span><a href="#004">社联会歌</a></dd>
              </dl>
           </div>
-           <p><a href="au_department.html" class="slidebarlink">&gt;社联机构</a></p>
-           <p><a href="au_regulation.html" class="slidebarlink">&gt;制度汇编</a></p>
-           <p><a href="au_event.html" class="slidebarlink">&gt;社联大事记</a></p>
-           <p><a href="au_weizai.html" class="slidebarlink">&gt;微仔说</a></p>
+           <p><a href="<?php echo U('/Home/AU/department');?>" class="slidebarlink">&gt;社联机构</a></p>
+           <p><a href="<?php echo U('/Home/AU/regulation');?>" class="slidebarlink">&gt;制度汇编</a></p>
+           <p><a href="<?php echo U('/Home/AU/event');?>" class="slidebarlink">&gt;社联大事记</a></p>
+           <p><a href="#" class="slidebarlink">&gt;微仔说</a></p>
          </td>
         <td width="73%" align="left" valign="top">
            <div id="catalog_content">
@@ -145,7 +266,7 @@
                 <div class="para">社联主校区共设置五大中心，13个部门。五大中心有：常务人事中心,社团服务中心，传媒中心，外事信息中心，文艺中心。每个中心由一名副主席分管，并下属自己的部门。其中财务部，社团外联企划小组由主席直接分管。常务人事中心下属的部门有:秘书部，人力资源部。社团服务中心下属的有：行政监察部，社团部。传媒中心下属：宣传部，媒体部，新媒体工作室，思存工作室。外事信息中心下属：外联部，公共关系部。文艺中心下属：文艺拓展部。</div>
                 <div class="para">同济校区共设置八个部门：秘书部、财务部、人力资源部、外事信息部、社团部、权益部、宣传部和DD studio。</div>
                 <div class="para">由主席团统筹规划整体工作，各部门各团体各司其责，相互配合。</div>
-                <div id="content_diagram"> <img src="image/au_structure.png"/></div>
+                <div id="content_diagram"> <img src="/AUNET/Public/AUSrc/image/au_structure.png"/></div>
               </div>
                <div id="zbhd"><a name="003"></a>
                 <p><span class="content_num">3</span> <span class="content_item">主办活动</span> <span class="content_line"></span> </p>
@@ -229,10 +350,11 @@
   </table>
  </div>
 
-<!-- FootAreaStart -->
+</body>
+</html>
+
 <div id="footer">
-   <p class="friendlink">友情链接</p>
- </div>
-<!-- FootAreaEnd -->
+    <p class="friendlink">友情链接</p>
+</div>
 </body>
 </html>

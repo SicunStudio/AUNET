@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <title>最新动态</title>
- <link type="text/css" rel="stylesheet" href="style/general.css">
- <script type="text/javascript" src="js/jquery.js"></script>
+ <link type="text/css" rel="stylesheet" href="__PUBLIC__/general.css">
+ <script type="text/javascript" src="__PUBLIC__/js/jquery.js"></script>
  <script>
   $(document).ready(
 	   function() {
@@ -56,115 +56,26 @@
 <body>
 
 
-<!-- HeadAreaStart -->
-<div id="header">
-  
-    <table width="1200px" border="0" style="background:#74b05c;margin:0px auto;">
-      <tbody>
-        <tr>
-          <td width="33%" align="center" valign="middle"><img src="im/dh.png" width="380" height="106" alt=""/>
-          </td>
-          <td width="13%" align="center" valign="middle" class="NaviLinkContainer"><a class="a-top"   href="#"   style="color: #FFFFFF">首页</a></td>
-          <td width="13%" align="center" valign="middle" class="NaviLinkContainer"><a  class="a-top"   href="#"  style="color: #FFFFFF" >新闻</a></td>
-          <td width="13%" align="center" valign="middle" class="NaviLinkContainer"><a  class="a-top"   href="#" style="color: #FFFFFF">社联</a></td>
-          <td width="13%" align="center" valign="middle" class="NaviLinkContainer"><a   class="a-top"   href="#"  style="color: #FFFFFF">社团</a>
-         </td>
-          <td width="13%" align="center" valign="middle" class="NaviLinkContainer"><a  class="a-top" href="#"  style="color: #FFFFFF">其他</a></td>
-        </tr>
-      </tbody>
-    </table>
-</div>      
-    <div id="downlist" style="display:none;">
-     <table width="1200px" border="0" style="margin:0px auto;">
-      <tbody>
-        <tr>
-          <td width="36%" align="center" valign="middle">&nbsp;
-          
-          
-          </td>
-          <td width="13%" align="left" valign="top">
-            <p><a href="" class="downlistlink">评分系统</a>              </p>
-            <p><a href="" class="downlistlink">资源申请</a></p>
-            <p>
-              <a href="" class="downlistlink">设计委任栏</a></p>
-            <p>
-              <a href="" class="downlistlink">资料下载</a></p>
-          </td>
-          <td width="13%" align="left" valign="top">
-          <p>
-          	<a href="" class="downlistlink">最新动态</a>
-          </p>
-          <p>
-          	<a href="" class="downlistlink">活动预告</a>
-          </p>
-          <p>
-          	<a href="" class="downlistlink">通告栏</a>
-          </p>
-          
-          </td>
-          <td width="13%" align="left" valign="top">
-          <p>
-          	<a href="" class="downlistlink">社联简介</a>
-          </p>
-          <p>
-          	<a href="" class="downlistlink">社联机构</a>
-          </p>
-          <p>
-          	<a href="" class="downlistlink">制度汇编</a>
-          </p>
-          <p>
-          	<a href="" class="downlistlink">社联大事记</a>
-          </p>
-          <p>
-          	<a href="" class="downlistlink">微仔说</a>
-          </p>
-         
-          <p>&nbsp;</p>
-          
-          </td>
-          <td width="13%" align="left" valign="top">&nbsp;
-          
-          </td>
-          <td width="10%" align="left" valign="top">
-               <p>
-          	<a href="" class="downlistlink">会员维权</a>
-          </p>
-          <p>
-          	<a href="" class="downlistlink">投诉建议</a>
-          </p>
-          <p>
-          	<a href="" class="downlistlink">联系我们</a>
-          </p>
-          <p>
-          	<a href="" class="downlistlink">FAQ</a>
-          </p>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    </div>
-    
- <!-- HeadAreaEnd -->
  
  <div id="wrap">
  <table width="99%" border="0" style="margin:25px 0px">
   <tbody>
     <tr>
-      <td height="59" colspan="2" align="left" valign="middle" style="color:#444e41"><span style="font-size:34px">&nbsp;&nbsp;&nbsp;&nbsp;新闻&nbsp;&nbsp;</span><span style="font-size:24px">&gt;&gt;&nbsp;&nbsp;公告栏</span></td>
+      <td height="59" colspan="2" align="left" valign="middle" style="color:#444e41"><span style="font-size:34px">&nbsp;&nbsp;&nbsp;&nbsp;新闻&nbsp;&nbsp;</span><span style="font-size:24px">&gt;&gt;&nbsp;&nbsp;动态详情</span></td>
       </tr>
     <tr>
       <td width="27%" height="585" valign="top">
-      <p><a href="news.html" class="slidebarlink">&gt;最新动态</a></p>
-      <p><a href="news_hdyg.html" class="slidebarlink">&gt;活动预告</a></p>
-      <p><a href="news_ggl.html" class="slidebarlink now">▶&nbsp;公告栏</a></p>      
+      <p><a href="{:U('/Home/News/index')}" class="slidebarlink now">▶&nbsp;最新动态</a></p>
+      <p><a href="{:U('/Home/Activity/index')}" class="slidebarlink">&gt;活动预告</a></p>
+      <p><a href="{:U('/Home/BroadCast/index')}" class="slidebarlink">&gt;公告栏</a></p>
       </td>
-      <td width="79%" align="center" valign="top"><div><img src="image/GGL.png" width="746" height="122" alt="" style="margin:0px auto;"/></div>
+      <td width="79%" align="center" valign="top"><div><img src="__PUBLIC__/NewsSrc/image/GGL.png" width="746" height="122" alt="" style="margin:0px auto;"/></div>
       <div style="width:734px;margin:0px auto; ">
       
-      <p style="font-size:28px; margin:10px auto; color:#74b05c;">Title</p>
-      <p style="font-size:22px; margin:10px auto; color:#74b05c;">Time</p>
+      <p style="font-size:28px; margin:10px auto; color:#74b05c;">{$news.title}</p>
+      <p style="font-size:22px; margin:10px auto; color:#74b05c;">{$news.time|date='Y-m-d H:i',###}</p>
       <div id="context">
-      Text here
+      {$news.content}
       
       </div>     
       </div>
@@ -178,11 +89,5 @@
 
  
  </div>
- 
- <!-- FootAreaStart -->
-<div id="footer">
-        <p class="friendlink">友情链接</p>
-    </div>
-<!-- FootAreaEnd -->
 </body>
 </html>

@@ -279,7 +279,7 @@
             </td>
             <td width="73%" align="center" valign="top">
 
-                <?php $__FOR_START_18692__=0;$__FOR_END_18692__=3;for($i=$__FOR_START_18692__;$i < $__FOR_END_18692__;$i+=1){ ?><div class="ActivityBlock box<?php echo ($i+1); ?>">
+                <?php $__FOR_START_6523__=0;$__FOR_END_6523__=3;for($i=$__FOR_START_6523__;$i < $__FOR_END_6523__;$i+=1){ ?><div class="ActivityBlock box<?php echo ($i+1); ?>">
                         <table width="95%" border="0">
                             <tbody>
                             <tr>
@@ -290,7 +290,7 @@
                                         <img src="<?php echo ($news[$i]["pic"]); ?>" width="65%" /><?php endif; ?>
 
                                 </td>
-                                <td width="70%" height="40" valign="top"><a href="#"><span class="titlefirst"><?php echo (substr($news[$i]["title"],0,1)); ?></span>
+                                <td width="70%" height="40" valign="top"><a href="<?php echo U('/Home/NewsDetail/index',array('id'=>$news[$i]['id']));?>"><span class="titlefirst"><?php echo (substr($news[$i]["title"],0,1)); ?></span>
                                     <span class="titletext"><?php echo substr($news[$i]['title'],1,strlen($news[$i]['title']));?></span>  </a>
                                 </td>
                             </tr>
