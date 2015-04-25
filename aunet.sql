@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: 127.0.0.1
--- 生成日期: 2015 �?04 �?25 �?08:50
+-- 生成日期: 2015 �?04 �?25 �?10:48
 -- 服务器版本: 5.6.11
 -- PHP 版本: 5.5.1
 
@@ -104,14 +104,14 @@ CREATE TABLE IF NOT EXISTS `aunet_advise` (
   `feedback` tinyint(1) NOT NULL DEFAULT '0',
   `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
 
 --
 -- 转存表中的数据 `aunet_advise`
 --
 
 INSERT INTO `aunet_advise` (`id`, `name`, `phone`, `qq`, `title`, `content`, `feedback`, `time`) VALUES
-(3, 'tt', 'tt', 'tt', '思存', '思存工作室', 0, '2015-02-28 07:49:22');
+(7, 'aaa', 'aaa', 'aaa', 'aaa', 'aaaa', 1, '2015-04-25 08:42:48');
 
 -- --------------------------------------------------------
 
@@ -247,20 +247,17 @@ CREATE TABLE IF NOT EXISTS `aunet_news` (
   `del` tinyint(1) unsigned NOT NULL DEFAULT '0',
   `pic` text NOT NULL,
   `src` text NOT NULL,
+  `text` text,
   PRIMARY KEY (`id`),
   KEY `cid` (`cid`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=63 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=67 ;
 
 --
 -- 转存表中的数据 `aunet_news`
 --
 
-INSERT INTO `aunet_news` (`id`, `title`, `content`, `time`, `cid`, `del`, `pic`, `src`) VALUES
-(62, 'asdf', '<p><img src="/AUNET./Upload/news/image/1/20150425/553ae5e2b052f.jpg" title="553ae5e2b052f.jpg" alt="img_0867.jpg"/>&nbsp;asdffdasd<img src="/AUNET./Upload/news/image/1/20150425/553ae5e656544.jpg" title="553ae5e656544.jpg" alt="t016d99bcbe6d471359.jpg"/></p>', 1429923308, 10, 0, '/AUNET./Upload/news/image/1/20150425/553ae5e2b052f.jpg', ' /AUNET./Upload/news/image/1/20150425/553ae5e656544.jpg /AUNET./Upload/news/image/1/20150425/553ae5e2b052f.jpg'),
-(61, 'fasdf', '<p>asdfsadfasfdasfd</p>', 1429892550, 10, 0, ' ', ''),
-(59, 'gg', '<p>gg</p>', 1429375995, 0, 0, ' ', ''),
-(60, 'PS干训成功召开', '<p><img src="/AUNET./Upload/news/image/1/20150424/553a5ff8017d9.png" title="553a5ff8017d9.png" alt="KanColle-150411-00472408.png"/></p><p><br/></p><p>今天晚上，学生社团联合会在东九C202进行了一次精彩的PS干训。<br/></p>', 1429889076, 10, 0, '/AUNET./Upload/news/image/1/20150424/553a5ff8017d9.png', ' /AUNET./Upload/news/image/1/20150424/553a5ff8017d9.png'),
-(58, 'asdf', '<p><img src="/AUNET./Upload/news/image/1/20150419/55328a8dc7020.png" title="55328a8dc7020.png" alt="下载.png"/></p>', 1429375634, 10, 0, '/AUNET./Upload/news/image/1/20150419/55328a8dc7020.png', ' /AUNET./Upload/news/image/1/20150419/55328a8dc7020.png');
+INSERT INTO `aunet_news` (`id`, `title`, `content`, `time`, `cid`, `del`, `pic`, `src`, `text`) VALUES
+(66, 'asdf', '<p>asdfasdf<img src="/AUNET./Upload/news/image/1/20150425/553b4cfb36ae5.png" title="553b4cfb36ae5.png" alt="下载.png"/>asdf11111</p>', 1429949702, 10, 0, '/AUNET./Upload/news/image/1/20150425/553b4cfb36ae5.png', ' /AUNET./Upload/news/image/1/20150425/553b4cfb36ae5.png', 'asdfasdfasdf11111');
 
 -- --------------------------------------------------------
 
@@ -328,7 +325,9 @@ INSERT INTO `aunet_news_attr` (`nid`, `aid`) VALUES
 (58, 2),
 (60, 2),
 (61, 2),
-(62, 2);
+(62, 2),
+(65, 2),
+(66, 2);
 
 -- --------------------------------------------------------
 

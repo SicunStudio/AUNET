@@ -152,15 +152,15 @@
             </td>
             <td width="10%" align="left" valign="top">
                 <p>
-                    <a href="" class="downlistlink">会员维权</a>
+                    <a href="<?php echo U('/Home/Other/contact');?>" class="downlistlink">会员维权</a>
                 </p>
 
                 <p>
-                    <a href="" class="downlistlink">投诉建议</a>
+                    <a href="<?php echo U('/Home/Other/advice');?>" class="downlistlink">投诉建议</a>
                 </p>
 
                 <p>
-                    <a href="" class="downlistlink">联系我们</a>
+                    <a href="<?php echo U('/Home/Other/member');?>" class="downlistlink">联系我们</a>
                 </p>
 
                 <p>
@@ -175,10 +175,9 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>常见问题</title>
- <link type="text/css" rel="stylesheet" href="/AUNET/Public/general.css">
-   <link href="/AUNET/Public/FAQSrc/content.css" rel="stylesheet" type="text/css">
- <script type="text/javascript" src="/AUNET/Public/js/jquery.js"></script>
+<title>投诉建议</title>
+    <link type="text/css" rel="stylesheet" href="/AUNET/Public/general.css">
+    <script type="text/javascript" src="/AUNET/Public/js/jquery.js"></script>
  <script>
   $(document).ready(
 	   function() {
@@ -201,6 +200,33 @@
         });
 		
     });
+	
+	function ChangeRecFeedback(subject)
+	{
+		document.getElementById("ReceiveFeedback_Yes").checked=false;
+		document.getElementById("ReceiveFeedback_No").checked=false;
+		document.getElementById("IfReceiveNo").style.backgroundColor="#e6f6c5";
+		document.getElementById("IfReceiveYes").style.backgroundColor="#e6f6c5";
+		switch (subject)
+		{ 
+		case 1:
+		document.getElementById("ReceiveFeedback_Yes").checked=true;
+		document.getElementById("IfReceiveYes").style.backgroundColor="#9bd288";
+		document.getElementById("ReceiveInfo").style.display="block";
+		break;
+		
+		case 2:
+		document.getElementById("ReceiveFeedback_No").checked=true;
+		document.getElementById("IfReceiveNo").style.backgroundColor="#9bd288";
+		document.getElementById("ReceiveInfo").style.display="none";
+		break;
+			}
+	};
+	
+	<!-- 设置默认接受反馈 -->
+
+    ChangeRecFeedback(1);
+
  </script>
  <style>
  .slidebarlink{
@@ -214,7 +240,7 @@
 	 
 	 }
 	 
-	 .now{color:#FFFFFF;
+.now{color:#FFFFFF;
 	background-color:#74b05c;}
 	 
 .slidebarlink:hover{
@@ -222,6 +248,59 @@
 	background-color:#74b05c;
 }
 
+.subtitle_container{
+	background-color:#9bd288;
+	margin-top:5px;
+	margin-left:5px;
+	padding:5px;
+	border-radius:2px;
+	}
+	
+.subtitle{
+		color:#ffffff;
+		font-family:幼圆;
+		font-size:20px;
+		font-weight:bold;
+		display:block;
+		margin:5px auto;
+		}
+		
+.inputbox{
+	background-color:#e6f6c5;
+	border:none;
+	font-size:22px;
+	padding:5px;
+	width:90%;
+	height:auto;
+	margin:5px;
+	border-radius:2px;}
+	
+.IfReceiveContainer{
+	width:35%;
+	color:#74b05c;
+	font-size:20px;}
+	
+.IfReceiveDot{
+	height:20px;
+	width:20px;
+	border-radius:10px;
+	background-color:#e6f6c5;
+	margin-left:180px;
+	top:5px;
+	float:left;}
+	
+#submitbtn{
+	width:70%;
+	background-color:#9bd288;
+	font-size:20px;
+	color:#ffffff;
+	border:none;
+	border-radius:2px;
+	height:50px;
+	margin:10px auto;
+	padding:10px auto;
+}
+	
 </style>
  
 </head>
@@ -234,20 +313,104 @@
  <table width="99%" border="0" style="margin:25px 0px">
   <tbody>
     <tr>
-      <td height="59" colspan="2" align="left" valign="middle" style="color:#444e41"><span style="font-size:34px">&nbsp;&nbsp;&nbsp;&nbsp;FAQ&nbsp;&nbsp;</span><span style="font-size:24px">常见问题&amp;解答</span></td>
+      <td height="59" colspan="2" align="left" valign="middle" style="color:#444e41"><span style="font-size:34px">&nbsp;&nbsp;&nbsp;&nbsp;其他 Other&nbsp;&nbsp;</span><span style="font-size: 24px">&gt;&gt; 投诉建议</span></td>
       </tr>
     <tr>
-      <td width="27%" valign="top">
-        <p><a href="index.html" class="slidebarlink">&gt;FAQ首页</a></p>
-        <p><a href="faq_question.html" class="slidebarlink now">▶&nbsp;常见问题</a></p>
-        <p><a href="faq_financial.html" class="slidebarlink">&gt;财务部</a></p>
-        <p><a href="faq_secretary.html" class="slidebarlink">&gt;秘书部</a></p>
-        <p><a href="faq_media.html" class="slidebarlink">&gt;新媒体工作室</a></p>
-        <p><a href="faq_art.html" class="slidebarlink">&gt;文艺拓展部</a></p>
-                <p><a href="faq_supervise.html" class="slidebarlink">&gt;财监委</a></p>
-        <p><a href="faq_guide.html" class="slidebarlink">&gt;社团成立指南</a></p>
+      <td width="27%" height="672" valign="top">
+        <p><a href="<?php echo U('/Home/Other/member');?>" class="slidebarlink">&gt;会员维权</a></p>
+        <p><a href="<?php echo U('/Home/Other/advice');?>" class="slidebarlink now">▶&nbsp;投诉建议</a></p>
+        <p><a href="<?php echo U('/Home/Other/contact');?>" class="slidebarlink">&gt;联系我们</a></p>
+        <p><a href="<?php echo U('/Home/FAQ/index');?>" class="slidebarlink">&gt;FAQ</a></p>
+
         </td>
-      <td width="73%" align="center" valign="top">&nbsp;
+      <td width="73%" align="center" valign="top">
+      
+      <form id="main" method="post" action="<?php echo U('/Admin/Advise/advise_handle');?>"><table width="90%" border="0">
+        <tbody>
+          <tr>
+            <td width="29%" height="71">
+            <div class="subtitle_container" style="width:200px;">
+                <p class="subtitle" >投诉（建议）主题</p>
+            </div>
+            </td>
+            <td width="71%">
+              <input type="text" name="subject" class="inputbox" id="subject"></td>
+          </tr>
+          <tr>
+            <td height="65" colspan="2"> 
+            <div class="subtitle_container" style="width:150px;">
+                <p class="subtitle">内容</p>
+            </div>
+            </td>
+            </tr>
+          <tr>
+            <td height="255" colspan="2">
+              <textarea name="text" id="text" class="inputbox" style="height:90%"></textarea>
+              </td>
+            </tr>
+          <tr>
+            <td height="78" colspan="2">
+             <div class="subtitle_container" style="width:150px;">
+                <p class="subtitle" >是否接受反馈</p>
+            </div>
+            </td>
+            </tr>
+          <tr>
+            <td colspan="2" align="center" valign="middle">
+              <div class="IfReceiveContainer" style="float:left;">
+                <div class="IfReceiveDot" id="IfReceiveYes"  onClick="ChangeRecFeedback(1)" style="background-color:#9bd288"></div>是
+                </div>
+              <div class="IfReceiveContainer" style="float:left;">
+                <div class="IfReceiveDot" id="IfReceiveNo" onClick="ChangeRecFeedback(2)"></div>否
+              </div>
+              
+              <p>
+               
+                  <input name="ReceiveFeedback" type="radio" id="ReceiveFeedback_Yes" value="1" checked style="display:none;" >
+                 
+                <br>
+               
+                  <input type="radio" name="ReceiveFeedback" value="0" id="ReceiveFeedback_No" style="display:none;">
+                  
+                <br>
+              </p></td>
+            </tr>
+        </tbody>
+      </table>
+      
+      <div id="ReceiveInfo">
+      <table width="80%" border="0">
+  <tbody>
+    <tr>
+      <td width="25%" height="41">
+      <div class="subtitle_container">
+      <p class="subtitle" style="width:60px;">姓名</p>
+      </div>
+      </td>
+      <td width="75%" valign="middle">
+      
+      <input name="info_name" type="text" class="inputbox" id="info_name" ></td>
+    </tr>
+    <tr>
+      <td height="37"><div class="subtitle_container">
+      <p class="subtitle" style="width:60px;">电话</p>
+      </div></td>
+      <td valign="middle"><input name="info_phone" type="text" class="inputbox" id="info_phone" ></td>
+    </tr>
+    <tr>
+      <td height="42"><div class="subtitle_container">
+      <p class="subtitle"  style="width:60px;">QQ</p>
+      </div></td>
+      <td valign="middle"><input name="info_qq" type="text" class="inputbox" id="info_qq"> </td>
+    </tr>
+  </tbody>
+</table>
+      </div>
+      <input name="submit" type="submit" id="submitbtn" value="提交">
+      
+      
+      </form>
+      
       
       
       
@@ -259,9 +422,11 @@
     </tr>
     </tbody>
 </table>
+ <input type="text" class="inputbox" >
 
  
  </div>
+ 
 
 </body>
 </html>

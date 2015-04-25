@@ -28,8 +28,23 @@ class AdviseController extends CommonController{
         $id=I('id',0,'intval');
 //        dump($id);
         if(M('advise')->delete($id)){
-            $this->redirect('advise_index');
+            $this->success('删除成功');
+        }else{
+            $this->error('删除失败');
         }
+    }
+    public function advise_handle(){
+        $data=array();
+        $data['name']=I('info_name');
+        $data['content']=I('text');
+        $data['phone']=I('info_phone');
+        $data['qq']=I('info_qq');
+        $data['feedback']=I('ReceiveFeedback',0,'intval');
+        $data['title']=I('subject');
+        if(M('advise')->add($data)){
+            $this->redirect('/Home/Other/advice');
+        }
+
     }
 
 }

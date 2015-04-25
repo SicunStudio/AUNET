@@ -152,15 +152,15 @@
             </td>
             <td width="10%" align="left" valign="top">
                 <p>
-                    <a href="" class="downlistlink">会员维权</a>
+                    <a href="<?php echo U('/Home/Other/contact');?>" class="downlistlink">会员维权</a>
                 </p>
 
                 <p>
-                    <a href="" class="downlistlink">投诉建议</a>
+                    <a href="<?php echo U('/Home/Other/advice');?>" class="downlistlink">投诉建议</a>
                 </p>
 
                 <p>
-                    <a href="" class="downlistlink">联系我们</a>
+                    <a href="<?php echo U('/Home/Other/member');?>" class="downlistlink">联系我们</a>
                 </p>
 
                 <p>
@@ -266,7 +266,7 @@
                   <div class="newsblock_container">
                     <a href="#">
                         <p class="new-head1"><span class="first"><?php echo (substr($news[0]["title"],0,1)); ?></span><?php echo substr($news[0]['title'],1,strlen($news[0]['title']));?></p>
-                        <p class="new-xiaoxi1"><?php echo (replace_img($news[0]["content"])); ?></p>
+                        <p class="new-xiaoxi1"><?php echo ($news[0]["text"]); ?></p>
                     </a>
                   </div>
                 </div>
@@ -276,7 +276,7 @@
                 <div class="new-small new2">
                     <a href="#">
                         <p class="new-head1"><span class="first"><?php echo (substr($news[1]["title"],0,1)); ?></span><?php echo substr($news[1]['title'],1,strlen($news[1]['title']));?></p>
-                        <p class="new-xiaoxi1"><?php echo (replace_img($news[1]["content"])); ?></p>
+                        <p class="new-xiaoxi1"><?php echo ($news[1]["text"]); ?></p>
                     </a>
                 </div>
               </div>
@@ -290,7 +290,7 @@
                 <div class="new-small new3">
                     <a href="#">
                         <p class="new-head1"><span class="first"><?php echo (substr($news[2]["title"],0,1)); ?></span><?php echo substr($news[2]['title'],1,strlen($news[2]['title']));?></p>
-                        <p class="new-xiaoxi1"><?php echo (replace_img($news[2]["content"])); ?></p>
+                        <p class="new-xiaoxi1"><?php echo ($news[2]["text"]); ?></p>
                     </a>
                 </div>
               </div>
@@ -300,7 +300,7 @@
                 <div class="new-small new4">
                     <a href="#">
                         <p class="new-head1"><span class="first"><?php echo (substr($news[3]["title"],0,1)); ?></span><?php echo substr($news[3]['title'],1,strlen($news[3]['title']));?></p>
-                        <p class="new-xiaoxi1"><?php echo (replace_img($news[3]["content"])); ?></p>
+                        <p class="new-xiaoxi1"><?php echo ($news[3]["text"]); ?></p>
                     </a>
                 </div>
               </div>

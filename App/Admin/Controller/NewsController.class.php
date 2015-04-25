@@ -58,7 +58,8 @@ class NewsController extends CommonController{
 
     //新增 OR 修改新闻后台处理
     public function addNewsHandle(){
-
+//        dump($_POST);
+////        die;
         if(!IS_POST){
             $this->error('页面不存在',U('news_index'));
         }
@@ -85,7 +86,7 @@ class NewsController extends CommonController{
         $data['title']=I('title');
         $data['content']=$_POST['content'];
         $data['time']=time();
-
+        $data['text']=$_POST['text'];
         if(M('news')->where(array('id'=>I('id')))->find()){
             if(D('NewsRelation')->where(array('id'=>I('id')))->relation(true)->save($data)){
                 $this->success('修改成功',U('news_index'));

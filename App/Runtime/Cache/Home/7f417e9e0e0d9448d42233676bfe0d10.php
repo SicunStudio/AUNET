@@ -152,15 +152,15 @@
             </td>
             <td width="10%" align="left" valign="top">
                 <p>
-                    <a href="" class="downlistlink">会员维权</a>
+                    <a href="<?php echo U('/Home/Other/contact');?>" class="downlistlink">会员维权</a>
                 </p>
 
                 <p>
-                    <a href="" class="downlistlink">投诉建议</a>
+                    <a href="<?php echo U('/Home/Other/advice');?>" class="downlistlink">投诉建议</a>
                 </p>
 
                 <p>
-                    <a href="" class="downlistlink">联系我们</a>
+                    <a href="<?php echo U('/Home/Other/member');?>" class="downlistlink">联系我们</a>
                 </p>
 
                 <p>
@@ -175,9 +175,8 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>秘书部</title>
+<title>会员维权</title>
     <link type="text/css" rel="stylesheet" href="/AUNET/Public/general.css">
-    <link href="/AUNET/Public/FAQSrc/content.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="/AUNET/Public/js/jquery.js"></script>
  <script>
   $(document).ready(
@@ -214,13 +213,23 @@
 	 
 	 }
 	 
-	 .now{color:#FFFFFF;
+.now{color:#FFFFFF;
 	background-color:#74b05c;}
 	 
 .slidebarlink:hover{
 	color:#FFFFFF;
 	background-color:#74b05c;
 }
+
+.context
+{display:block;
+ width: 90%; 
+ margin:40px 20px; 
+ font-size:22px; 
+ color:#000000; 
+ font-family:幼圆;
+ font-weight:bold;
+	}
 
 </style>
  
@@ -233,44 +242,35 @@
  <table width="99%" border="0" style="margin:25px 0px">
   <tbody>
     <tr>
-      <td height="59" colspan="2" align="left" valign="middle" style="color:#444e41"><span style="font-size:34px">&nbsp;&nbsp;&nbsp;&nbsp;FAQ&nbsp;&nbsp;</span><span style="font-size:24px">常见问题&amp;解答</span></td>
+      <td height="59" colspan="2" align="left" valign="middle" style="color:#444e41"><span style="font-size:34px">&nbsp;&nbsp;&nbsp;&nbsp;其他 Other&nbsp;&nbsp;</span><span style="font-size: 24px">&gt;&gt; 会员维权</span></td>
       </tr>
     <tr>
       <td width="27%" valign="top">
-        <p><a href="index.html" class="slidebarlink">&gt;FAQ首页</a></p>
-        <p><a href="faq_question.html" class="slidebarlink">&gt;常见问题</a></p>
-        <p><a href="faq_financial.html" class="slidebarlink">&gt;财务部</a></p>
-        <p><a href="faq_secretary.html" class="slidebarlink now">▶&nbsp;秘书部</a></p>
-        <p><a href="faq_media.html" class="slidebarlink">&gt;新媒体工作室</a></p>
-        <p><a href="faq_art.html" class="slidebarlink">&gt;文艺拓展部</a></p>
-        <p><a href="faq_supervise.html" class="slidebarlink">&gt;财监委</a></p>
-        <p><a href="faq_guide.html" class="slidebarlink">&gt;社团成立指南</a></p>
+        <p><a href="<?php echo U('/Home/Other/member');?>" class="slidebarlink now">▶&nbsp;会员维权</a></p>
+        <p><a href="<?php echo U('/Home/Other/advice');?>" class="slidebarlink">&gt;投诉建议</a></p>
+        <p><a href="<?php echo U('/Home/Other/contact');?>" class="slidebarlink">&gt;联系我们</a></p>
+        <p><a href="<?php echo U('/Home/FAQ/index');?>" class="slidebarlink">&gt;FAQ</a></p>
+
         </td>
-      <td width="73%" valign="top">
-      <div class="content_container">
-          <div class="content_title">Q1:如何借用社联办公室？</div>
-          <div class="content_text">A：413办公室只限在社联内部（各部门）办公使用，不得外借；414办公室对社团、表演队以及相关其他校级学生组织开放。各社团或表演队分别作为一个整体单位，不得以个人名义提出借用申请，每个社团或表演队的有效借用人有且只有一名，社团为其会长，表演队为其经理人，办公室借用只可由其有效借用人提出申请。借用办公室需提前与秘书部办公室借用负责人（张悦萌：15927051637）联系。在使用办公室时，须保持办公室的整洁。</div>
+      <td width="73%" align="left" valign="top">
+      
+      <div style="width:400px; background-color:#9bd288; margin-top:35px; margin-left:25px; padding: 10px;">
+      <p style="display:block; width: 180px; margin:10px auto; font-size:21px; color:#ffffff; font-family:幼圆; font-weight:bold">会员维权方式</p>
       </div>
       
-      <div class="content_container">
-          <div class="content_title">Q2.社联办公室值班时间是如何安排的？</div>
-          <div class="content_text">A：值班的具体时间为：周一至周五上午08:30-09:55，09:55-11:50，下午14:20-16:15，16:15-18:00（夏季作息），13:50-15:45，15:45-17:30（秋季作息），其中行政监察部将负责周一至周五晚上的值班，秘书部将负责周一至周五中午的值班，社团部将于周一至周五下午第七、八节课值班。具体值班时间为：中午12：30-14：00（夏季作息）12：30-13：30（秋季作息），晚上7：00-9：30（夏季作息）6：30-8：30（秋季作息）。</div>
+      <div style="width:750px; background-color:#e6f6c5; margin-top:25px; margin-left:25px; padding: 10px;">
+      <p class="context">社联办公室电话：027-87541242</p>
+<p class="context">行政监察部邮箱：xingzhengjiancha@auhust.net</p>
+<p class="context">社团网投诉建议：sau.hust.edu.cn</p>
+  <p class="context">社联办公室：大学生活动中心B413</p>
       </div>
       
-      <div class="content_container">
-          <div class="content_title">Q3.社团委员会有哪些工作职责？</div>
-          <div class="content_text">
-          A：社团委员会是全校社团的最高权力机关和最高决策机构，学生社团联合会主席团由其产生并在其指导和监督下展开工作，而社团委员会作为社团代表大会的常设机构，社团委员会代表广大社团的根本利益，全心全意服务于社团，在社团代表大会闭会期间行使社团代表大会的权力。社团委员会有以下工作职责：<br>
-1．审议和批准我校学生社团联合会及社团的工作报告，决定我校社团活动的重大事项；<br>
-2．协调社团之间的关系，加强互相间的合作交流；<br>
-3．定期修改学生社团联合会章程和制度，并监督其执行；<br>
-4．管理、审批社团发展基金，监督社团发展基金使用；<br>
-5．协助学校开展其他学生工作；<br>
-6．讨论决定应当由社团委员会决议的其他重大事项。<br>
-
-</div>
-      </div>
-
+      
+      
+      
+      
+      
+      
       </td>
     </tr>
     </tbody>
