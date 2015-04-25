@@ -246,8 +246,10 @@
             <td width="79%" align="center"><img src="/AUNET/Public/NewsSrc/image/HDYG-Head.png" width="714" height="169"
                                                 alt=""/></td>
         </tr>
-        <tr>
-            <td align="center">
+
+
+
+            <td align="center" valign="top">
                 <table width="714px" border="0" style=" margin-top:20px; margin-bottom:20px;">
                     <tbody>
                     <?php if(is_array($forecast)): foreach($forecast as $key=>$v): ?><tr>
@@ -261,7 +263,10 @@
                 </table>
 
             </td>
-        </tr>
+
+
+
+
         </tbody>
     </table>
 

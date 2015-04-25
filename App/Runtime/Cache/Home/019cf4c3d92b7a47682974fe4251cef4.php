@@ -3,7 +3,7 @@
 <head lang="en">
     <meta charset="UTF-8">
 
-    <link type="text/css" rel="stylesheet" href="/AUNET/Public/general.css">
+    <link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsSrc/style/general.css">
     <link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsSrc/style/top.css">
     <link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsSrc/style/banner.css">
     <link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsSrc/style/buttom.css">
@@ -164,52 +164,21 @@
                 </p>
 
                 <p>
-                    <a href="<?php echo U('/Home/FAQ/index');?>" class="downlistlink">FAQ</a>
+                    <a href="" class="downlistlink">FAQ</a>
                 </p>
             </td>
         </tr>
         </tbody>
     </table>
 </div>
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title>社团网-华中科技大学学生社团联合会</title>
-    <link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsSrc/style/new.css">
-    <link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsSrc/style/button.css">
-    <link rel="stylesheet" type="text/css" href="/AUNET/Public/NewsSrc/style/flexslider.css"/>
-
-    <style>
-
-        .slideimgs {
-            height: 600px;
-            overflow: hidden;
-        }
-
-        #flexsliderarea {
-            width: 100%;
-            height: 600px;
-        }
-    </style>
-
-
-    <script type="text/javascript" src="/AUNET/Public/js/jquery.js"></script>
-    <script type="text/javascript" src="/AUNET/Public/NewsSrc/js/jquery.flexslider.js"></script>
-    <script type="text/javascript" src="/AUNET/Public/NewsSrc/js/jquery.easing.min.js"></script>
-
+<head>
+    <meta charset="utf-8">
+    <title>最新动态</title>
+    <link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsSrc/style/general.css">
+    <script type="text/javascript" src="/AUNET/Public/NewsSrc/js/jquery.js"></script>
     <script>
-
-        $(function () {
-            $(".flexslider").flexslider({
-                animation: "slide",
-                slideshowSpeed: 4000, //展示时间间隔ms
-                animationSpeed: 400, //滚动时间ms
-                touch: true, //是否支持触屏滑动
-
-            });
-        });
-
         $(document).ready(
                 function () {
 
@@ -231,120 +200,123 @@
 
                 });
     </script>
+    <style>
+        .slidebarlink {
+            padding: 12px 12px;
+            font-size: 22px;
+            margin: 15px;
+            display: block;
+            color: #444e41;
+            transition: .2s;
+            border-radius: 3px;
+
+        }
+
+        .now {
+            color: #FFFFFF;
+            background-color: #74b05c;
+        }
+
+        .slidebarlink:hover {
+            color: #FFFFFF;
+            background-color: #74b05c;
+        }
+
+        .ActivityBlock {
+            width: 80%;
+            padding: 8px;
+            margin: 25px auto;
+            height: 150px;
+        }
+
+        .box1 {
+            background-color: #ffa968;
+        }
+
+        .box2 {
+            background-color: #addf7e
+        }
+
+        .box3 {
+            background-color: #7db3f1;
+        }
+
+        .titlefirst {
+            font-size: 32px;
+            color: #ffffff;
+        }
+
+        .titletext {
+            font-size: 24px;
+            color: #ffffff;
+        }
+
+        .normaltext {
+            font-size: 20px;
+            color: #ffffff;
+        }
+    </style>
+
 </head>
 
 <body>
 
-<!-- HeadAreaStart -->
-
-
-<!-- HeadAreaEnd -->
-<div class="flexslider" id="flexsliderarea">
-    <ul class="slides">
-        <li><img src="/AUNET/Public/NewsSrc/imgs/1.jpg" class="slideimgs"/></li>
-        <li><img src="/AUNET/Public/NewsSrc/imgs/2.jpg" class="slideimgs"/></li>
-        <li><img src="/AUNET/Public/NewsSrc/imgs/3.jpg" class="slideimgs"/></li>
-        <li><img src="/AUNET/Public/NewsSrc/imgs/4.jpg" class="slideimgs"/></li>
-
-    </ul>
-</div>
 
 <div id="wrap">
-
-
-    <table width="90%" border="0" style="margin:5px auto;">
+    <table width="99%" border="0" style="margin:25px 0px">
         <tbody>
         <tr>
-            <td height="56" colspan="2" align="center" valign="middle"><p style="color:#74b05c; font-size:30px">Weekly
-                News</p></td>
-        </tr>
-
-
-        <tr>
-            <td valign="middle">
-                <div class="new-small new1">
-                    <a href="#">
-                        <p class="new-head1"><span class="first"><?php echo (substr($news[0]["title"],0,1)); ?></span><?php echo substr($news[0]['title'],1,strlen($news[0]['title']));?></p>
-
-                        <p class="new-xiaoxi1"><?php echo (replace_img($news[0]["content"])); ?></p>
-                    </a>
-                </div>
-            </td>
-            <td align="left">
-                <div class="new-small new2">
-                    <a href="#">
-                        <p class="new-head1"><span class="first"><?php echo (substr($news[1]["title"],0,1)); ?></span><?php echo substr($news[1]['title'],1,strlen($news[1]['title']));?></p>
-
-                        <p class="new-xiaoxi1"><?php echo (replace_img($news[1]["content"])); ?></p>
-                    </a>
-                </div>
-            </td>
-        </tr>
-
-
-        <tr>
-            <td valign="middle" >
-                <div class="new-small new3" style="margin:0 auto">
-                    <a href="#">
-                        <p class="new-head1"><span class="first"><?php echo (substr($news[2]["title"],0,1)); ?></span><?php echo substr($news[2]['title'],1,strlen($news[2]['title']));?></p>
-
-                        <p class="new-xiaoxi1"><?php echo (replace_img($news[2]["content"])); ?></p>
-                    </a>
-                </div>
-            </td>
-            <td align="left">
-                <div class="new-small new4" style="margin:0 auto">
-                    <a href="#">
-                        <p class="new-head1"><span class="first"><?php echo (substr($news[3]["title"],0,1)); ?></span><?php echo substr($news[3]['title'],1,strlen($news[3]['title']));?></p>
-
-                        <p class="new-xiaoxi1"><?php echo (replace_img($news[3]["content"])); ?></p>
-                    </a>
-                </div>
-            </td>
-        </tr>
-
-
-        </tbody>
-    </table>
-
-
-    <table width="99%" border="0" style="margin:5px auto;">
-        <tbody>
-        <tr>
-            <td height="55" colspan="4" align="center" valign="middle">
-                <p style="color:#74b05c; font-size:30px">Things We Do</p>
-            </td>
+            <td height="59" colspan="2" align="left" valign="middle" style="color:#444e41"><span style="font-size:34px">&nbsp;&nbsp;&nbsp;&nbsp;新闻&nbsp;&nbsp;</span><span
+                    style="font-size:24px">&gt;&gt;&nbsp;&nbsp;最新动态</span></td>
         </tr>
         <tr>
-            <td width="24%">
-                <div class="button button1">
-                    <a class="buttonlink" href="#"></a>
-                </div>
+            <td width="27%" valign="top">
+                <p><a href="<?php echo U('/Home/News/Index');?>" class="slidebarlink now">▶&nbsp;最新动态</a></p>
+
+                <p><a href="<?php echo U('/Home/Activity/Index');?>" class="slidebarlink">&gt;活动预告</a></p>
+
+                <p><a href="<?php echo U('/Home/BroadCast/Index');?>" class="slidebarlink">&gt;公告栏</a></p>
             </td>
-            <td width="24%">
-                <div class="button button2">
-                    <a class="buttonlink" href="<?php echo U('/Design/Index/index');?>"></a>
-                </div>
-            </td>
-            <td width="24%">
-                <div class="button button3">
-                    <a class="buttonlink" href="<?php echo U('/Material/Index/index');?>"></a>
-                </div>
-            </td>
-            <td width="24%">
-                <div class="button button4">
-                    <a class="buttonlink" href="<?php echo U('/Grade/Index/index');?>"></a>
-                </div>
+            <td width="73%" align="center" valign="top">
+
+                <?php $__FOR_START_25840__=0;$__FOR_END_25840__=3;for($i=$__FOR_START_25840__;$i < $__FOR_END_25840__;$i+=1){ ?><div class="ActivityBlock box<?php echo ($i+1); ?>">
+                        <table width="95%" height="95%" border="0">
+                            <tbody>
+                            <tr>
+                                <td width="30%" rowspan="2">
+                                    <?php if($news[$i]['pic'] == ' '): ?><img src="/AUNET/Public/NewsSrc/im/dh.png" width="180" />
+                                        <?php else: ?>
+
+                                        <img src="<?php echo ($news[$i]["pic"]); ?>" width="65%" /><?php endif; ?>
+
+                                </td>
+                                <td width="70%" height="40" valign="top"><a href="#"><span class="titlefirst"><?php echo (substr($news[$i]["title"],0,1)); ?></span>
+                                    <span class="titletext"><?php echo substr($news[$i]['title'],1,strlen($news[$i]['title']));?></span>  </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td height="73"><span class="normaltext"><?php echo (replace_img($news[$i]["content"])); ?></span></td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                    </div><?php } ?>
+
+
             </td>
         </tr>
         </tbody>
     </table>
-
+    <div align="center">
+        <span class="rows">共<?php echo ($count); ?>条记录</span>
+        <?php echo ($page); ?>
+    </div>
 
 </div>
 
 </body>
 </html>
+
 <div id="footer">
     <p class="friendlink">友情链接</p>
 </div>
