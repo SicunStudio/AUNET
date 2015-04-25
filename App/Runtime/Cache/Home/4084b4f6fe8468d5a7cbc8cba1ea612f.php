@@ -174,91 +174,98 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>新媒体工作室</title>
-    <link type="text/css" rel="stylesheet" href="/AUNET/Public/general.css">
-    <link href="/AUNET/Public/FAQSrc/content.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="/AUNET/Public/js/jquery.js"></script>
- <script>
-  $(document).ready(
-	   function() {
-		 
-		   $(".a-top").mouseenter(
-		   function(e) {
-            $("#downlist").slideDown("fast");	
-        });
-		
-		$("#downlist").mouseenter(
-		   function(e) {
-            $("#downlist").slideDown("fast");	
-        });
-		
-	
-		
-		$("#downlist").mouseleave(
-		   function(e) {
-            $("#downlist").slideUp("fast");	
-        });
-		
-    });
- </script>
- <style>
- .slidebarlink{
-	 padding:12px 12px;
-	 font-size:22px;
-	 margin:15px;
-	 display:block;
-	 color:#444e41;
-	 transition:.2s;
-	 border-radius:3px;
-	 
-	 }
-	 
-	 .now{color:#FFFFFF;
-	background-color:#74b05c;}
-	 
-.slidebarlink:hover{
-	color:#FFFFFF;
-	background-color:#74b05c;
-}
+    <meta charset="utf-8">
+    <title>活动预告</title>
+    <link type="text/css" rel="stylesheet" href="/AUNET/Public/Src/style/general.css">
+    <script type="text/javascript" src="/AUNET/Public/Src/js/jquery.js"></script>
+    <script>
+        $(document).ready(
+                function () {
 
-</style>
- 
+                    $(".a-top").mouseenter(
+                            function (e) {
+                                $("#downlist").slideDown("fast");
+                            });
+
+                    $("#downlist").mouseenter(
+                            function (e) {
+                                $("#downlist").slideDown("fast");
+                            });
+
+
+                    $("#downlist").mouseleave(
+                            function (e) {
+                                $("#downlist").slideUp("fast");
+                            });
+
+                });
+    </script>
+    <style>
+        .slidebarlink {
+            padding: 12px 12px;
+            font-size: 22px;
+            margin: 15px;
+            display: block;
+            color: #444e41;
+            transition: .2s;
+            border-radius: 3px;
+
+        }
+
+        .now {
+            color: #FFFFFF;
+            background-color: #74b05c;
+        }
+
+        .slidebarlink:hover {
+            color: #FFFFFF;
+            background-color: #74b05c;
+        }
+    </style>
+
 </head>
 
 <body>
 
 
- 
- <div id="wrap">
- <table width="99%" border="0" style="margin:25px 0px">
-  <tbody>
-    <tr>
-      <td height="59" colspan="2" align="left" valign="middle" style="color:#444e41"><span style="font-size:34px">&nbsp;&nbsp;&nbsp;&nbsp;FAQ&nbsp;&nbsp;</span><span style="font-size:24px">常见问题&amp;解答</span></td>
-      </tr>
-    <tr>
-      <td width="27%" valign="top">
-        <p><a href="index.html" class="slidebarlink">&gt;FAQ首页</a></p>
-        <p><a href="faq_question.html" class="slidebarlink">&gt;常见问题</a></p>
-        <p><a href="faq_financial.html" class="slidebarlink">&gt;财务部</a></p>
-        <p><a href="faq_secretary.html" class="slidebarlink">&gt;秘书部</a></p>
-        <p><a href="faq_media.html" class="slidebarlink now">▶&nbsp;新媒体工作室</a></p>
-        <p><a href="faq_art.html" class="slidebarlink">&gt;文艺拓展部</a></p>
-        <p><a href="faq_supervise.html" class="slidebarlink">&gt;财监委</a></p>
-        <p><a href="faq_guide.html" class="slidebarlink">&gt;社团成立指南</a></p>
-        </td>
-      <td width="73%" valign="top">
-      <div class="content_container">
-          <div class="content_title">Q：利用社联平台进行宣传？</div>
-          <div class="content_text">A：可通过社联微信公众平台及QQ进行宣传。<br>1、微信公众平台：按照微信平台的《社团帮助手册》上的相关要求，编辑好文案后以word形式发送到新媒体公邮；<br>2、QQ：将内容私戳给QQ微仔，微仔将在QQ空间进行宣传</div>
-      </div>
-      </td>
-    </tr>
-    </tbody>
-</table>
+<div id="wrap">
+    <table width="99%" border="0" style="margin:25px 0px">
+        <tbody>
+        <tr>
+            <td height="59" colspan="2" align="left" valign="middle" style="color:#444e41"><span style="font-size:34px">&nbsp;&nbsp;&nbsp;&nbsp;新闻&nbsp;&nbsp;</span><span
+                    style="font-size:24px">&gt;&gt;&nbsp;&nbsp;活动预告</span></td>
+        </tr>
+        <tr>
+            <td width="27%" height="585" valign="top">
+                <p><a href="<?php echo U('/Home/News/Index');?>" class="slidebarlink">&gt;最新动态</a></p>
 
- 
- </div>
+                <p><a href="<?php echo U('/Home/Activity/Index');?>" class="slidebarlink now">▶&nbsp;活动预告</a></p>
+
+                <p><a href="<?php echo U('/Home/BroadCast/Index');?>" class="slidebarlink">&gt;公告栏</a></p>
+            </td>
+            <td width="79%" align="center" valign="top"><img src="/AUNET/Public/NewsSrc/image/HDYG-Head.png" width="714" height="169"
+                                                alt=""/>
+                                                <table width="714px" border="0" style=" margin-top:10px; margin-bottom:20px;">
+                    <tbody>
+                    <?php if(is_array($forecast)): foreach($forecast as $key=>$v): ?><tr>
+                        <td bgcolor="#ffa968" width="33%"><?php echo (date('Y-m-d H:i',$v["time"])); ?></td>
+                        <td bgcolor="#addf7e" width="33%"><?php echo ($v["place"]); ?></td>
+                        <td bgcolor="#7db3f1" width="33%"><a style="text-decoration:none;color:#000000;" href="<?php echo U('/Home/ActivityDetail/Index',array('id'=>$v['id']));?>"><?php echo ($v["title"]); ?></a> </td>
+                        <tr><?php endforeach; endif; ?>
+
+
+                    </tbody>
+                </table>
+                                                </td>
+        </tr>
+
+
+
+    </table>
+    
+
+
+</div>
 
 </body>
 </html>

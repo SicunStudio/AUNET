@@ -152,15 +152,15 @@
             </td>
             <td width="10%" align="left" valign="top">
                 <p>
-                    <a href="" class="downlistlink">会员维权</a>
+                    <a href="<?php echo U('/Home/Other/contact');?>" class="downlistlink">会员维权</a>
                 </p>
 
                 <p>
-                    <a href="" class="downlistlink">投诉建议</a>
+                    <a href="<?php echo U('/Home/Other/advice');?>" class="downlistlink">投诉建议</a>
                 </p>
 
                 <p>
-                    <a href="" class="downlistlink">联系我们</a>
+                    <a href="<?php echo U('/Home/Other/member');?>" class="downlistlink">联系我们</a>
                 </p>
 
                 <p>
@@ -176,8 +176,8 @@
 <head>
     <meta charset="utf-8">
     <title>最新动态</title>
-    <link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsSrc/style/general.css">
-    <script type="text/javascript" src="/AUNET/Public/NewsSrc/js/jquery.js"></script>
+    <link type="text/css" rel="stylesheet" href="/AUNET/Public/general.css">
+    <script type="text/javascript" src="/AUNET/Public/js/jquery.js"></script>
     <script>
         $(document).ready(
                 function () {
@@ -279,7 +279,7 @@
             </td>
             <td width="73%" align="center" valign="top">
 
-                <?php $__FOR_START_15098__=0;$__FOR_END_15098__=3;for($i=$__FOR_START_15098__;$i < $__FOR_END_15098__;$i+=1){ ?><div class="ActivityBlock box<?php echo ($i+1); ?>">
+                <?php $__FOR_START_18692__=0;$__FOR_END_18692__=3;for($i=$__FOR_START_18692__;$i < $__FOR_END_18692__;$i+=1){ ?><div class="ActivityBlock box<?php echo ($i+1); ?>">
                         <table width="95%" border="0">
                             <tbody>
                             <tr>
@@ -295,7 +295,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td height="73"><span class="normaltext"><?php echo (replace_img($news[$i]["content"])); ?></span></td>
+                                <td height="73"><span class="normaltext"><?php echo ($news[$i]["text"]); ?></span></td>
                             </tr>
                             </tbody>
                         </table>

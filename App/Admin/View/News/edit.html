@@ -9,13 +9,19 @@
 <js href="__PUBLIC__/ueditor/ueditor.all.min.js" />
 <script type="text/javascript" charset="utf-8" src="lang/zh-cn/zh-cn.js"></script>
 <script>
+
+    var ue;
     $(function(){
         window.UEDITOR_CONFIG.initialFrameHeight=600;
         window.UEDITOR_CONFIG.initialFrameWidth=1900;
-        var ue = UE.getEditor('ueditor',{serverUrl :'{:U('Admin/News/ueditor')}',onready: function () {
+         ue= UE.getEditor('ueditor',{serverUrl :'{:U('Admin/News/ueditor')}',onready: function () {
             this.setContent('{$text.content}');
         }});
     })
+    function ClearTags(){
+        var text=ue.getContentTxt();
+        document.getElementById("text").textContent=text;
+    }
 
 </script>
 <body>
@@ -49,9 +55,11 @@
                 </td>
             </tr>
             <input type="hidden" name="id" value="{$text.id}"/>
+
             <tr>
                 <td align="center" colspan="2">
-                    <input type="submit" value="保存提交"/>
+                    <input onClick="ClearTags()" type="submit" value="保存提交"/>
+                    <textarea style="display:none" name="text" id="text" ></textarea>
                 </td>
             </tr>
 

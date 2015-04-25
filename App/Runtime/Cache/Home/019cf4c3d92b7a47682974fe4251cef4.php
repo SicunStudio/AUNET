@@ -176,8 +176,8 @@
 <head>
     <meta charset="utf-8">
     <title>最新动态</title>
-    <link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsSrc/style/general.css">
-    <script type="text/javascript" src="/AUNET/Public/NewsSrc/js/jquery.js"></script>
+    <link type="text/css" rel="stylesheet" href="/AUNET/Public/general.css">
+    <script type="text/javascript" src="/AUNET/Public/js/jquery.js"></script>
     <script>
         $(document).ready(
                 function () {
@@ -279,7 +279,7 @@
             </td>
             <td width="73%" align="center" valign="top">
 
-                <?php $__FOR_START_24618__=0;$__FOR_END_24618__=3;for($i=$__FOR_START_24618__;$i < $__FOR_END_24618__;$i+=1){ ?><div class="ActivityBlock box<?php echo ($i+1); ?>">
+                <?php $__FOR_START_3928__=0;$__FOR_END_3928__=3;for($i=$__FOR_START_3928__;$i < $__FOR_END_3928__;$i+=1){ ?><div class="ActivityBlock box<?php echo ($i+1); ?>">
                         <table width="95%" border="0">
                             <tbody>
                             <tr>
@@ -295,7 +295,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td height="73"><span class="normaltext"><?php echo (replace_img($news[$i]["content"])); ?></span></td>
+                                <td height="73"><span class="normaltext"><?php echo ($news[$i]["text"]); ?></span></td>
                             </tr>
                             </tbody>
                         </table>

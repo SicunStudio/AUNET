@@ -79,21 +79,10 @@
     <title></title>
 </head>
 <body>
-<form method="post" action="<?php echo U('add_announce_handle');?>">
-    <table class="table">
-        <tr>
-            <td align="right">公告内容</td>
-            <td>
-                <input type="text" name="title"/>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2" align="center">
-                <input type="submit" value="提交"/>
-            </td>
-        </tr>
-    </table>
-</form>
+    <p><?php echo ($title); if(is_array($attr)): foreach($attr as $key=>$v): ?><strong style='color:<?php echo ($v["color"]); ?>'>[<?php echo ($v["name"]); ?>]</strong><?php endforeach; endif; ?></p>
+    <p><?php echo ($cate); ?></p>
+    <p><?php echo ($time); ?></p>
+    <P><?php echo ($text); ?></P>
 </body>
 </html>
 </body>

@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>联系我们</title>
+    <link type="text/css" rel="stylesheet" href="__PUBLIC__/general.css">
+    <script type="text/javascript" src="__PUBLIC__/js/jquery.js"></script>
+ <script>
+  $(document).ready(
+	   function() {
+		 
+		   $(".a-top").mouseenter(
+		   function(e) {
+            $("#downlist").slideDown("fast");	
+        });
+		
+		$("#downlist").mouseenter(
+		   function(e) {
+            $("#downlist").slideDown("fast");	
+        });
+		
+	
+		
+		$("#downlist").mouseleave(
+		   function(e) {
+            $("#downlist").slideUp("fast");	
+        });
+		
+    });
+ </script>
+ <style>
+ .slidebarlink{
+	 padding:12px 12px;
+	 font-size:22px;
+	 margin:15px;
+	 display:block;
+	 color:#444e41;
+	 transition:.2s;
+	 border-radius:3px;
+	 
+	 }
+	 
+	 .now{color:#FFFFFF;
+	background-color:#74b05c;}
+	 
+.slidebarlink:hover{
+	color:#FFFFFF;
+	background-color:#74b05c;
+}
+
+</style>
+ 
+</head>
+
+<body>
+
+
+ 
+ <div id="wrap">
+ <table width="99%" border="0" style="margin:25px 0px">
+  <tbody>
+    <tr>
+      <td height="59" colspan="2" align="left" valign="middle" style="color:#444e41"><span style="font-size:34px">&nbsp;&nbsp;&nbsp;&nbsp;其他 Other&nbsp;&nbsp;</span><span style="font-size: 24px">&gt;&gt;联系我们</span></td>
+      </tr>
+    <tr>
+      <td width="27%" height="932" valign="top">
+        <p><a href="{:U('/Home/Other/member')}" class="slidebarlink">&gt;会员维权</a></p>
+        <p><a href="{:U('/Home/Other/advice')}" class="slidebarlink">&gt;投诉建议</a></p>
+        <p><a href="{:U('/Home/Other/contact')}" class="slidebarlink now">▶&nbsp;联系我们</a></p>
+        <p><a href="{:U('/Home/FAQ/index')}" class="slidebarlink">&gt;FAQ</a></p>
+
+       </td>
+      <td width="73%" align="center" valign="top">
+	  <span style="padding:12px 12px;font-size:22px; margin:15px 500px auto 40px;display:block;color:#FFFFFF;background-color:#9BD288;transition:.2s;border-radius:3px;">联系方式</span>
+	  <span style="padding:12px 12px;font-size:22px; margin:30px 300px auto 40px;display:block;color:#000;background-color:#E6F6C5;transition:.2s;border-radius:0px;">
+	    <p style="margin:20px 30px 20px 30px; font:20px '幼圆'">社联微博: 华中大社联AU</p>
+		<p><img src="image/AUweibo.png"/></p>
+		<p style="margin:20px 30px 20px 30px; font:20px '幼圆'">社联微信号:ihustauer员</p>
+		<p><img src="image/ihustauer.jpg"/></p>
+		<p style="margin:20px 30px 20px 30px; font:20px '幼圆'">社联公众QQ: 2434075395</p>
+		<p style="margin:20px 30px 20px 30px; font:20px '幼圆'">地址：华中科技大学大学生活动中心B413</p>
+		<p style="margin:20px 30px 20px 30px; font:20px '幼圆'">办公室电话：027-87541242箱</p>
+		<p style="margin:20px 30px 40px 30px; font:20px '幼圆'">社联邮箱：auhust@auhust.net</p>
+	  </span>
+	  
+      </td>
+    </tr>
+    </tbody>
+</table>
+</div>
+ 
+
+</body>
+</html>

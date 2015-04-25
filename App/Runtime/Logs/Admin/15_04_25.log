@@ -1347,3 +1347,1861 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001357s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001439s ]
 
+[ 2015-04-25T15:59:13+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/News/addnews.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `aunet_cate` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `aunet_cate` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `aunet_attr` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `aunet_attr`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-04-25T15:59:13+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/News/lang/zh-cn/zh-cn.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 非法操作:lang
+
+[ 2015-04-25T15:59:13+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/News/ueditor.html?action=config&&noCache=1429948753553
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-04-25T15:59:22+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/News/ueditor.html?action=uploadimage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2015-04-25T15:59:26+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/News/addNewsHandle.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-04-25T15:59:38+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/News/addNewsHandle.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-04-25T15:59:40+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/News/ueditor.html?action=config&&noCache=1429948780499
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-04-25T16:01:15+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/News/edit/id/60.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `aunet_news` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`title`,`content`,`time`,`cid`,`pic`,`src`,`text` FROM `aunet_news` WHERE `id` = 60  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `aunet_attr` [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: mapping_order C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 186 行.
+NOTIC: [8] Undefined index: mapping_limit C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 187 行.
+SQL: SELECT b.* FROM aunet_news_attr AS a, aunet_attr AS b WHERE a.aid = b.id AND a. nid='60' [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `aunet_cate` [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `aunet_cate` WHERE ( 1=1 AND id='10' ) LIMIT 1   [ RunTime:0.0150s ]
+SQL: SHOW COLUMNS FROM `aunet_attr` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `aunet_attr`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-04-25T16:01:15+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/News/edit/id/lang/zh-cn/zh-cn.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `aunet_news` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`title`,`content`,`time`,`cid`,`pic`,`src`,`text` FROM `aunet_news` WHERE `id` = 0  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `aunet_attr` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `aunet_attr`  [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\xampp\htdocs\AUNET\App\Admin\Controller\NewsController.class.php 第 133 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: text C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\8b404c3a8cc1b6a384374147d3e233ee.php 第 116 行.
+NOTIC: [8] Undefined variable: text C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\8b404c3a8cc1b6a384374147d3e233ee.php 第 124 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-04-25T16:01:15+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/News/ueditor.html?action=config&&noCache=1429948875513
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-04-25T16:02:28+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/News/news_index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `aunet_news` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `aunet_news` WHERE `del` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `aunet_news` WHERE `del` = 0 ORDER BY time desc LIMIT 0,5   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.003000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8] Undefined index: attr C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\8ece2bc5e7c5ead8e4212a18898d796b.php 第 93 行.
+NOTIC: [8] Undefined index: cate C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\8ece2bc5e7c5ead8e4212a18898d796b.php 第 94 行.
+NOTIC: [8] Undefined index: attr C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\8ece2bc5e7c5ead8e4212a18898d796b.php 第 93 行.
+NOTIC: [8] Undefined index: cate C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\8ece2bc5e7c5ead8e4212a18898d796b.php 第 94 行.
+NOTIC: [8] Undefined index: attr C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\8ece2bc5e7c5ead8e4212a18898d796b.php 第 93 行.
+NOTIC: [8] Undefined index: cate C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\8ece2bc5e7c5ead8e4212a18898d796b.php 第 94 行.
+NOTIC: [8] Undefined index: attr C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\8ece2bc5e7c5ead8e4212a18898d796b.php 第 93 行.
+NOTIC: [8] Undefined index: cate C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\8ece2bc5e7c5ead8e4212a18898d796b.php 第 94 行.
+NOTIC: [8] Undefined index: attr C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\8ece2bc5e7c5ead8e4212a18898d796b.php 第 93 行.
+NOTIC: [8] Undefined index: cate C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\8ece2bc5e7c5ead8e4212a18898d796b.php 第 94 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.073004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.073004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-04-25T16:02:29+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/News/edit/id/62.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `aunet_news` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`title`,`content`,`time`,`cid`,`pic`,`src`,`text` FROM `aunet_news` WHERE `id` = 62  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `aunet_attr` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: mapping_order C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 186 行.
+NOTIC: [8] Undefined index: mapping_limit C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 187 行.
+SQL: SELECT b.* FROM aunet_news_attr AS a, aunet_attr AS b WHERE a.aid = b.id AND a. nid='62' [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `aunet_cate` [ RunTime:0.0020s ]
+SQL: SELECT `name` FROM `aunet_cate` WHERE ( 1=1 AND id='10' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `aunet_attr` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `aunet_attr`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2015-04-25T16:02:29+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/News/ueditor.html?action=config&&noCache=1429948949272
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-04-25T16:02:45+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/News/news_index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `aunet_news` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `aunet_news` WHERE `del` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `aunet_news` WHERE `del` = 0 ORDER BY time desc LIMIT 0,5   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: attr C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\8ece2bc5e7c5ead8e4212a18898d796b.php 第 93 行.
+NOTIC: [8] Undefined index: cate C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\8ece2bc5e7c5ead8e4212a18898d796b.php 第 94 行.
+NOTIC: [8] Undefined index: attr C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\8ece2bc5e7c5ead8e4212a18898d796b.php 第 93 行.
+NOTIC: [8] Undefined index: cate C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\8ece2bc5e7c5ead8e4212a18898d796b.php 第 94 行.
+NOTIC: [8] Undefined index: attr C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\8ece2bc5e7c5ead8e4212a18898d796b.php 第 93 行.
+NOTIC: [8] Undefined index: cate C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\8ece2bc5e7c5ead8e4212a18898d796b.php 第 94 行.
+NOTIC: [8] Undefined index: attr C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\8ece2bc5e7c5ead8e4212a18898d796b.php 第 93 行.
+NOTIC: [8] Undefined index: cate C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\8ece2bc5e7c5ead8e4212a18898d796b.php 第 94 行.
+NOTIC: [8] Undefined index: attr C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\8ece2bc5e7c5ead8e4212a18898d796b.php 第 93 行.
+NOTIC: [8] Undefined index: cate C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\8ece2bc5e7c5ead8e4212a18898d796b.php 第 94 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-04-25T16:02:46+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/News/edit/id/58.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `aunet_news` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`title`,`content`,`time`,`cid`,`pic`,`src`,`text` FROM `aunet_news` WHERE `id` = 58  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `aunet_attr` [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: mapping_order C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 186 行.
+NOTIC: [8] Undefined index: mapping_limit C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 187 行.
+SQL: SELECT b.* FROM aunet_news_attr AS a, aunet_attr AS b WHERE a.aid = b.id AND a. nid='58' [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `aunet_cate` [ RunTime:0.0020s ]
+SQL: SELECT `name` FROM `aunet_cate` WHERE ( 1=1 AND id='10' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `aunet_attr` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `aunet_attr`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-04-25T16:02:46+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/News/ueditor.html?action=config&&noCache=1429948966058
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-04-25T16:05:56+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/News/news_index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `aunet_news` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `aunet_news` WHERE `del` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `aunet_news` WHERE `del` = 0 ORDER BY time desc LIMIT 0,5   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-04-25T16:05:58+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/News/ueditor.html?action=config&&noCache=1429949158811
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-04-25T16:06:17+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/News/ueditor.html?action=uploadimage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-04-25T16:06:50+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/News/addNewsHandle.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `aunet_news` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `aunet_news` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] Illegal string offset 'cid' C:\xampp\htdocs\AUNET\App\Admin\Controller\NewsController.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `aunet_news` [ RunTime:0.0020s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Db\Driver.class.php 第 791 行.
+SQL: INSERT INTO `aunet_news` () VALUES () [ RunTime:0.0000s ]
+NOTIC: [2] Illegal string offset 'id' C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model.class.php 第 328 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-04-25T16:07:03+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/News/news_index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `aunet_news` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `aunet_news` WHERE `del` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `aunet_news` WHERE `del` = 0 ORDER BY time desc LIMIT 0,5   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: attr C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\8ece2bc5e7c5ead8e4212a18898d796b.php 第 93 行.
+NOTIC: [8] Undefined index: cate C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\8ece2bc5e7c5ead8e4212a18898d796b.php 第 94 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-04-25T16:07:13+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/News/toTrash/id/63/type/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `aunet_news` [ RunTime:0.0020s ]
+SQL: UPDATE `aunet_news` SET `del`='1' WHERE `id` = 63 [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-04-25T16:08:04+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/News/ueditor.html?action=config&&noCache=1429949284583
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-04-25T16:08:11+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/News/ueditor.html?action=uploadimage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-04-25T16:08:12+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/News/addNewsHandle.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-04-25T16:08:32+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/News/ueditor.html?action=config&&noCache=1429949312279
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-04-25T16:08:33+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/News/addnews.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `aunet_cate` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `aunet_cate` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `aunet_attr` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `aunet_attr`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-04-25T16:08:33+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/News/lang/zh-cn/zh-cn.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 非法操作:lang
+
+[ 2015-04-25T16:08:33+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/News/ueditor.html?action=config&&noCache=1429949313474
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-04-25T16:08:40+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/News/ueditor.html?action=uploadimage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-04-25T16:08:41+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/News/addNewsHandle.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `aunet_news` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `aunet_news` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Illegal string offset 'cid' C:\xampp\htdocs\AUNET\App\Admin\Controller\NewsController.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `aunet_news` [ RunTime:0.0040s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Db\Driver.class.php 第 791 行.
+SQL: INSERT INTO `aunet_news` () VALUES () [ RunTime:0.0010s ]
+NOTIC: [2] Illegal string offset 'id' C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model.class.php 第 328 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-04-25T16:08:43+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/News/news_index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `aunet_news` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `aunet_news` WHERE `del` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `aunet_news` WHERE `del` = 0 ORDER BY time desc LIMIT 0,5   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: attr C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\8ece2bc5e7c5ead8e4212a18898d796b.php 第 93 行.
+NOTIC: [8] Undefined index: cate C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\8ece2bc5e7c5ead8e4212a18898d796b.php 第 94 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-04-25T16:08:44+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/News/news_index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `aunet_news` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `aunet_news` WHERE `del` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `aunet_news` WHERE `del` = 0 ORDER BY time desc LIMIT 0,5   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: attr C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\8ece2bc5e7c5ead8e4212a18898d796b.php 第 93 行.
+NOTIC: [8] Undefined index: cate C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\8ece2bc5e7c5ead8e4212a18898d796b.php 第 94 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-04-25T16:08:44+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/News/news_index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `aunet_news` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `aunet_news` WHERE `del` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `aunet_news` WHERE `del` = 0 ORDER BY time desc LIMIT 0,5   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: attr C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\8ece2bc5e7c5ead8e4212a18898d796b.php 第 93 行.
+NOTIC: [8] Undefined index: cate C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\8ece2bc5e7c5ead8e4212a18898d796b.php 第 94 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-04-25T16:08:44+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/News/news_index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `aunet_news` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `aunet_news` WHERE `del` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `aunet_news` WHERE `del` = 0 ORDER BY time desc LIMIT 0,5   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: attr C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\8ece2bc5e7c5ead8e4212a18898d796b.php 第 93 行.
+NOTIC: [8] Undefined index: cate C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\8ece2bc5e7c5ead8e4212a18898d796b.php 第 94 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-04-25T16:08:44+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/News/news_index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `aunet_news` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `aunet_news` WHERE `del` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `aunet_news` WHERE `del` = 0 ORDER BY time desc LIMIT 0,5   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: attr C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\8ece2bc5e7c5ead8e4212a18898d796b.php 第 93 行.
+NOTIC: [8] Undefined index: cate C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\8ece2bc5e7c5ead8e4212a18898d796b.php 第 94 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-04-25T16:08:44+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/News/news_index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `aunet_news` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `aunet_news` WHERE `del` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `aunet_news` WHERE `del` = 0 ORDER BY time desc LIMIT 0,5   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: attr C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\8ece2bc5e7c5ead8e4212a18898d796b.php 第 93 行.
+NOTIC: [8] Undefined index: cate C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\8ece2bc5e7c5ead8e4212a18898d796b.php 第 94 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-04-25T16:08:45+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/News/news_index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `aunet_news` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `aunet_news` WHERE `del` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `aunet_news` WHERE `del` = 0 ORDER BY time desc LIMIT 0,5   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: attr C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\8ece2bc5e7c5ead8e4212a18898d796b.php 第 93 行.
+NOTIC: [8] Undefined index: cate C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\8ece2bc5e7c5ead8e4212a18898d796b.php 第 94 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-04-25T16:08:45+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/News/news_index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `aunet_news` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `aunet_news` WHERE `del` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `aunet_news` WHERE `del` = 0 ORDER BY time desc LIMIT 0,5   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: attr C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\8ece2bc5e7c5ead8e4212a18898d796b.php 第 93 行.
+NOTIC: [8] Undefined index: cate C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\8ece2bc5e7c5ead8e4212a18898d796b.php 第 94 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-04-25T16:08:45+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/News/news_index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `aunet_news` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `aunet_news` WHERE `del` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `aunet_news` WHERE `del` = 0 ORDER BY time desc LIMIT 0,5   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: attr C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\8ece2bc5e7c5ead8e4212a18898d796b.php 第 93 行.
+NOTIC: [8] Undefined index: cate C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\8ece2bc5e7c5ead8e4212a18898d796b.php 第 94 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-04-25T16:08:45+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/News/news_index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `aunet_news` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `aunet_news` WHERE `del` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `aunet_news` WHERE `del` = 0 ORDER BY time desc LIMIT 0,5   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: attr C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\8ece2bc5e7c5ead8e4212a18898d796b.php 第 93 行.
+NOTIC: [8] Undefined index: cate C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\8ece2bc5e7c5ead8e4212a18898d796b.php 第 94 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-04-25T16:10:08+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/News/news_index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `aunet_news` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `aunet_news` WHERE `del` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `aunet_news` WHERE `del` = 0 ORDER BY time desc LIMIT 0,5   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-04-25T16:10:10+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/News/ueditor.html?action=config&&noCache=1429949410480
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-04-25T16:10:15+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/News/ueditor.html?action=uploadimage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2015-04-25T16:10:18+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/News/addNewsHandle.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `aunet_news` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `aunet_news` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `aunet_news` [ RunTime:0.0050s ]
+SQL: INSERT INTO `aunet_news` (`pic`,`src`,`title`,`content`,`time`,`text`,`cid`) VALUES ('/AUNET./Upload/news/image/1/20150425/553b4be7ed39d.png',' /AUNET./Upload/news/image/1/20150425/553b4be7ed39d.png','asdf','<p><img src=\"/AUNET./Upload/news/image/1/20150425/553b4be7ed39d.png\" title=\"553b4be7ed39d.png\" alt=\"下载.png\"/>asdfdsaf</p>','1429949418','asdfdsaf','10') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: mapping_name C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 259 行.
+SQL: SHOW COLUMNS FROM `aunet_attr` [ RunTime:0.0020s ]
+NOTIC: [2] Illegal string offset 'id' C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 340 行.
+SQL: INSERT INTO aunet_news_attr (nid,aid) SELECT a.id,b.id FROM aunet_news AS a ,aunet_attr AS b where a.id =65 AND  b.id IN (2)  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: mapping_name C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 259 行.
+SQL: SHOW COLUMNS FROM `aunet_cate` [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-04-25T16:10:20+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/News/news_index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `aunet_news` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `aunet_news` WHERE `del` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `aunet_news` WHERE `del` = 0 ORDER BY time desc LIMIT 0,5   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: attr C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\8ece2bc5e7c5ead8e4212a18898d796b.php 第 93 行.
+NOTIC: [8] Undefined index: cate C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\8ece2bc5e7c5ead8e4212a18898d796b.php 第 94 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-04-25T16:13:14+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/News/edit/id/65.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `aunet_news` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`content`,`time`,`cid`,`pic`,`src`,`text` FROM `aunet_news` WHERE `id` = 65  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `aunet_attr` [ RunTime:0.0040s ]
+NOTIC: [8] Undefined index: mapping_order C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 186 行.
+NOTIC: [8] Undefined index: mapping_limit C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 187 行.
+SQL: SELECT b.* FROM aunet_news_attr AS a, aunet_attr AS b WHERE a.aid = b.id AND a. nid='65' [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `aunet_cate` [ RunTime:0.0020s ]
+SQL: SELECT `name` FROM `aunet_cate` WHERE ( 1=1 AND id='10' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `aunet_attr` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `aunet_attr`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-04-25T16:13:15+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/News/ueditor.html?action=config&&noCache=1429949595087
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-04-25T16:13:18+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/News/addNewsHandle.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `aunet_news` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `aunet_news` WHERE `id` = 65 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `aunet_news` [ RunTime:0.0040s ]
+SQL: UPDATE `aunet_news` SET `pic`='/AUNET./Upload/news/image/1/20150425/553b4be7ed39d.png',`src`=' /AUNET./Upload/news/image/1/20150425/553b4be7ed39d.png',`title`='asdf',`content`='<p><img src=\"/AUNET./Upload/news/image/1/20150425/553b4be7ed39d.png\" title=\"553b4be7ed39d.png\" alt=\"下载.png\"/>asdfdsafsadfsafddsa</p>',`time`='1429949598',`text`='' WHERE `id` = 65 [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: mapping_name C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 259 行.
+SQL: SHOW COLUMNS FROM `aunet_attr` [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: mapping_name C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 259 行.
+SQL: SHOW COLUMNS FROM `aunet_cate` [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-04-25T16:13:48+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/News/news_index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `aunet_news` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `aunet_news` WHERE `del` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `aunet_news` WHERE `del` = 0 ORDER BY time desc LIMIT 0,5   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: attr C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\8ece2bc5e7c5ead8e4212a18898d796b.php 第 93 行.
+NOTIC: [8] Undefined index: cate C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\8ece2bc5e7c5ead8e4212a18898d796b.php 第 94 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-04-25T16:13:49+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/News/Text/id/65.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `aunet_news` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`title`,`content`,`time`,`cid`,`pic`,`src`,`text` FROM `aunet_news` WHERE `id` = 65  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `aunet_attr` [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: mapping_order C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 186 行.
+NOTIC: [8] Undefined index: mapping_limit C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 187 行.
+SQL: SELECT b.* FROM aunet_news_attr AS a, aunet_attr AS b WHERE a.aid = b.id AND a. nid='65' [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `aunet_cate` [ RunTime:0.0030s ]
+SQL: SELECT `name` FROM `aunet_cate` WHERE ( 1=1 AND id='10' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-04-25T16:14:43+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/News/news_index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `aunet_news` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `aunet_news` WHERE `del` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `aunet_news` WHERE `del` = 0 ORDER BY time desc LIMIT 0,5   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-04-25T16:14:45+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/News/ueditor.html?action=config&&noCache=1429949685416
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-04-25T16:14:51+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/News/ueditor.html?action=uploadimage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-04-25T16:14:53+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/News/addNewsHandle.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `aunet_news` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `aunet_news` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `aunet_news` [ RunTime:0.0020s ]
+SQL: INSERT INTO `aunet_news` (`pic`,`src`,`title`,`content`,`time`,`text`,`cid`) VALUES ('/AUNET./Upload/news/image/1/20150425/553b4cfb36ae5.png',' /AUNET./Upload/news/image/1/20150425/553b4cfb36ae5.png','asdf','<p>asdfasdf<img src=\"/AUNET./Upload/news/image/1/20150425/553b4cfb36ae5.png\" title=\"553b4cfb36ae5.png\" alt=\"下载.png\"/>asdf</p>','1429949693','asdfasdfasdf','10') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: mapping_name C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 259 行.
+SQL: SHOW COLUMNS FROM `aunet_attr` [ RunTime:0.0020s ]
+NOTIC: [2] Illegal string offset 'id' C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 340 行.
+SQL: INSERT INTO aunet_news_attr (nid,aid) SELECT a.id,b.id FROM aunet_news AS a ,aunet_attr AS b where a.id =66 AND  b.id IN (2)  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: mapping_name C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 259 行.
+SQL: SHOW COLUMNS FROM `aunet_cate` [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-04-25T16:14:55+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/News/news_index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `aunet_news` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `aunet_news` WHERE `del` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `aunet_news` WHERE `del` = 0 ORDER BY time desc LIMIT 0,5   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: attr C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\8ece2bc5e7c5ead8e4212a18898d796b.php 第 93 行.
+NOTIC: [8] Undefined index: cate C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\8ece2bc5e7c5ead8e4212a18898d796b.php 第 94 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-04-25T16:14:59+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/News/edit/id/66.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `aunet_news` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`content`,`time`,`cid`,`pic`,`src`,`text` FROM `aunet_news` WHERE `id` = 66  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `aunet_attr` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: mapping_order C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 186 行.
+NOTIC: [8] Undefined index: mapping_limit C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 187 行.
+SQL: SELECT b.* FROM aunet_news_attr AS a, aunet_attr AS b WHERE a.aid = b.id AND a. nid='66' [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `aunet_cate` [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `aunet_cate` WHERE ( 1=1 AND id='10' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `aunet_attr` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `aunet_attr`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-04-25T16:14:59+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/News/ueditor.html?action=config&&noCache=1429949699286
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-04-25T16:15:02+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/News/addNewsHandle.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `aunet_news` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `aunet_news` WHERE `id` = 66 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `aunet_news` [ RunTime:0.0030s ]
+SQL: UPDATE `aunet_news` SET `pic`='/AUNET./Upload/news/image/1/20150425/553b4cfb36ae5.png',`src`=' /AUNET./Upload/news/image/1/20150425/553b4cfb36ae5.png',`title`='asdf',`content`='<p>asdfasdf<img src=\"/AUNET./Upload/news/image/1/20150425/553b4cfb36ae5.png\" title=\"553b4cfb36ae5.png\" alt=\"下载.png\"/>asdf11111</p>',`time`='1429949702',`text`='asdfasdfasdf11111' WHERE `id` = 66 [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: mapping_name C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 259 行.
+SQL: SHOW COLUMNS FROM `aunet_attr` [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: mapping_name C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 259 行.
+SQL: SHOW COLUMNS FROM `aunet_cate` [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-04-25T16:15:04+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/News/news_index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `aunet_news` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `aunet_news` WHERE `del` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `aunet_news` WHERE `del` = 0 ORDER BY time desc LIMIT 0,5   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: attr C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\8ece2bc5e7c5ead8e4212a18898d796b.php 第 93 行.
+NOTIC: [8] Undefined index: cate C:\xampp\htdocs\AUNET\App\Runtime\Cache\Admin\8ece2bc5e7c5ead8e4212a18898d796b.php 第 94 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-04-25T16:15:05+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/News/Text/id/66.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `aunet_news` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`content`,`time`,`cid`,`pic`,`src`,`text` FROM `aunet_news` WHERE `id` = 66  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `aunet_attr` [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: mapping_order C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 186 行.
+NOTIC: [8] Undefined index: mapping_limit C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 187 行.
+SQL: SELECT b.* FROM aunet_news_attr AS a, aunet_attr AS b WHERE a.aid = b.id AND a. nid='66' [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `aunet_cate` [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `aunet_cate` WHERE ( 1=1 AND id='10' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-04-25T16:26:24+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/Advise/advise_handle.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-04-25T16:26:31+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/Advise/advise_handle.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-04-25T16:27:15+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/Advise/advise_handle.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-04-25T16:27:25+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/Advise/advise_handle.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-04-25T16:28:02+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/Advise/advise_handle.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-04-25T16:33:08+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/Advise/advise_handle.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `aunet_advise` [ RunTime:0.0040s ]
+SQL: INSERT INTO `aunet_advise` (`name`,`content`,`phone`,`qq`,`feedback`,`time`,`title`) VALUES ('aaa','','aaa','aa','1','1429950788','aa') [ RunTime:0.0000s ]
+
+[ 2015-04-25T16:33:41+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/Advise/advise_index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `aunet_advise` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `aunet_advise`  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `aunet_advise` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `aunet_advise` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.066004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.066004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-04-25T16:33:52+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/Advise/deladvise/id/4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `aunet_advise` [ RunTime:0.0020s ]
+SQL: DELETE FROM `aunet_advise` WHERE `id` = 4 [ RunTime:0.0010s ]
+
+[ 2015-04-25T16:33:53+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/Advise/deladvise/id/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `aunet_advise` [ RunTime:0.0030s ]
+SQL: DELETE FROM `aunet_advise` WHERE `id` = 3 [ RunTime:0.0000s ]
+
+[ 2015-04-25T16:33:54+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/Advise/deladvise/id/4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `aunet_advise` [ RunTime:0.0030s ]
+SQL: DELETE FROM `aunet_advise` WHERE `id` = 4 [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-04-25T16:33:58+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/Advise/advise_index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `aunet_advise` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `aunet_advise`  [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `aunet_advise` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `aunet_advise` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-04-25T16:33:59+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/Advise/advise_index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `aunet_advise` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `aunet_advise`  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `aunet_advise` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `aunet_advise` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-04-25T16:40:14+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/Advise/advise_index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `aunet_advise` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `aunet_advise`  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `aunet_advise` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `aunet_advise` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-04-25T16:40:15+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/Advise/advise_index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `aunet_advise` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `aunet_advise`  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `aunet_advise` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `aunet_advise` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-04-25T16:40:15+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/Advise/advise_index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `aunet_advise` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `aunet_advise`  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `aunet_advise` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `aunet_advise` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-04-25T16:40:21+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/Advise/advise_handle.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `aunet_advise` [ RunTime:0.0010s ]
+SQL: INSERT INTO `aunet_advise` (`name`,`content`,`phone`,`qq`,`feedback`,`time`,`title`) VALUES ('aaa','','aaa','aaaa','1','1429951221','aaaa') [ RunTime:0.0000s ]
+
+[ 2015-04-25T16:40:24+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/Advise/advise_index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `aunet_advise` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `aunet_advise`  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `aunet_advise` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `aunet_advise` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-04-25T16:40:54+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/Advise/deladvise/id/5.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `aunet_advise` [ RunTime:0.0030s ]
+SQL: DELETE FROM `aunet_advise` WHERE `id` = 5 [ RunTime:0.0000s ]
+
+[ 2015-04-25T16:40:55+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/Advise/advise_index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `aunet_advise` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `aunet_advise`  [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `aunet_advise` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `aunet_advise` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-04-25T16:41:01+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/Advise/advise_handle.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `aunet_advise` [ RunTime:0.0020s ]
+SQL: INSERT INTO `aunet_advise` (`name`,`content`,`phone`,`qq`,`feedback`,`title`) VALUES ('aaa','','aaa','aaa','1','aaa') [ RunTime:0.0010s ]
+
+[ 2015-04-25T16:41:03+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/Advise/advise_index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `aunet_advise` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `aunet_advise`  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `aunet_advise` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `aunet_advise` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-04-25T16:42:48+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/Advise/advise_handle.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `aunet_advise` [ RunTime:0.0030s ]
+SQL: INSERT INTO `aunet_advise` (`name`,`content`,`phone`,`qq`,`feedback`,`title`) VALUES ('aaa','aaaa','aaa','aaa','1','aaa') [ RunTime:0.0000s ]
+
+[ 2015-04-25T16:42:50+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/Advise/advise_index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `aunet_advise` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `aunet_advise`  [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `aunet_advise` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `aunet_advise` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-04-25T16:42:52+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/Advise/deladvise/id/6.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `aunet_advise` [ RunTime:0.0040s ]
+SQL: DELETE FROM `aunet_advise` WHERE `id` = 6 [ RunTime:0.0000s ]
+
+[ 2015-04-25T16:42:53+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/Advise/advise_index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `aunet_advise` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `aunet_advise`  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `aunet_advise` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `aunet_advise` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-04-25T16:44:14+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/Advise/advise_handle.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `aunet_advise` [ RunTime:0.0040s ]
+SQL: INSERT INTO `aunet_advise` (`name`,`content`,`phone`,`qq`,`feedback`,`title`) VALUES ('asdf','asdf','asdf','asdf','1','adsf') [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-04-25T16:44:54+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/Advise/advise_index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `aunet_advise` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `aunet_advise`  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `aunet_advise` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `aunet_advise` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-04-25T16:44:55+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/Advise/advise_index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `aunet_advise` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `aunet_advise`  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `aunet_advise` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `aunet_advise` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-04-25T16:45:28+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/Advise/advise_index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `aunet_advise` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `aunet_advise`  [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `aunet_advise` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `aunet_advise` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001001s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-04-25T16:45:28+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/Advise/advise_index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `aunet_advise` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `aunet_advise`  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `aunet_advise` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `aunet_advise` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-04-25T16:45:29+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/Advise/advise_index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `aunet_advise` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `aunet_advise`  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `aunet_advise` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `aunet_advise` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-04-25T16:45:29+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/Advise/deladvise/id/8.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `aunet_advise` [ RunTime:0.0020s ]
+SQL: DELETE FROM `aunet_advise` WHERE `id` = 8 [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-04-25T16:45:31+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/Advise/advise_index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `aunet_advise` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `aunet_advise`  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `aunet_advise` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `aunet_advise` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-04-25T16:45:31+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/Advise/advise_index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `aunet_advise` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `aunet_advise`  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `aunet_advise` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `aunet_advise` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
