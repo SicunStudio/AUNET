@@ -116,16 +116,16 @@
                                         <img src="__PUBLIC__/NewsSrc/im/dh.png" width="180" />
                                         <else/>
 
-                                        <img src="{$news[$i].pic}" width="150" />
+                                        <img src="{$news[$i].pic}" width="65%" />
                                     </if>
 
                                 </td>
-                                <td width="70%" height="66" valign="top"><a href="#"><span class="titlefirst">{$news[$i].title|substr=0,1}</span>
+                                <td width="70%" height="40" valign="top"><a href="#"><span class="titlefirst">{$news[$i].title|substr=0,1}</span>
                                     <span class="titletext"><?php echo substr($news[$i]['title'],1,strlen($news[$i]['title']));?></span>  </a>
                                 </td>
                             </tr>
                             <tr>
-                                <td height="73"><span class="normaltext">{$news[$i].content}</span></td>
+                                <td height="73"><span class="normaltext">{$news[$i].content|replace_img}</span></td>
                             </tr>
                             </tbody>
                         </table>
