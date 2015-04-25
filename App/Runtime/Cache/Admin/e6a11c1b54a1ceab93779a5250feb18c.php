@@ -23,6 +23,11 @@
         <dd><a href="#">添加预告</a></dd>
     </dl>
     <dl>
+        <dt>发布公告</dt>
+        <dd><a href="<?php echo U('/Admin/Announce/add_announce');?>">添加公告</a></dd>
+        <dd><a href="<?php echo U('/Admin/Announce/announce_index');?>">公告列表</a></dd>
+    </dl>
+    <dl>
         <dt>社团地带活动预告</dt>
         <dd><a href="<?php echo U('/Admin/Forecast/forecast_index');?>">预告列表</a></dd>
         <dd><a href="<?php echo U('/Admin/Forecast/addforecast');?>">添加预告</a></dd>
@@ -78,13 +83,14 @@
 <script type="text/javascript" src="/AUNET/Public/ueditor/ueditor.all.min.js"></script>
 <script type="text/javascript" charset="utf-8" src="lang/zh-cn/zh-cn.js"></script>
 <script>
-
-    $(function(){
-        window.UEDITOR_CONFIG.initialFrameHeight=600;
+    window.UEDITOR_CONFIG.initialFrameHeight=600;
         window.UEDITOR_CONFIG.initialFrameWidth=1900;
-        var ue = UE.getEditor('content',{serverUrl :"<?php echo U('Admin/News/ueditor');?>"});
-//        var text=ue.getContentTxt();
-    })
+		var ue = UE.getEditor('content',{serverUrl :"<?php echo U('Admin/News/ueditor');?>"});
+    
+	function ClearTags(){ 
+	var text=ue.getContentTxt();
+	document.getElementById("text").textContent=text;
+	}
 
 </script>
 <body>
@@ -125,8 +131,11 @@
         <tr>
             <td align="center" colspan="2">
                 <input name="pic" type="hidden" id="pic" value=""/>
-                <input type="submit" value="保存提交"/>
-            </td>
+                
+                <input onClick="ClearTags()" type="submit" value="保存提交"/>
+                <textarea style="display:none" name="text" id="text" ></textarea>
+                
+          </td>
         </tr>
     </table>
 </form>

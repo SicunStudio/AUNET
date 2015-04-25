@@ -3,7 +3,7 @@
 <head lang="en">
     <meta charset="UTF-8">
 
-    <link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsSrc/style/general.css">
+    <link type="text/css" rel="stylesheet" href="/AUNET/Public/general.css">
     <link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsSrc/style/top.css">
     <link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsSrc/style/banner.css">
     <link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsSrc/style/buttom.css">
@@ -164,7 +164,7 @@
                 </p>
 
                 <p>
-                    <a href="" class="downlistlink">FAQ</a>
+                    <a href="<?php echo U('/Home/FAQ/index');?>" class="downlistlink">FAQ</a>
                 </p>
             </td>
         </tr>
@@ -279,8 +279,8 @@
             </td>
             <td width="73%" align="center" valign="top">
 
-                <?php $__FOR_START_2340__=0;$__FOR_END_2340__=3;for($i=$__FOR_START_2340__;$i < $__FOR_END_2340__;$i+=1){ ?><div class="ActivityBlock box<?php echo ($i+1); ?>">
-                        <table width="95%" height="95%" border="0">
+                <?php $__FOR_START_15098__=0;$__FOR_END_15098__=3;for($i=$__FOR_START_15098__;$i < $__FOR_END_15098__;$i+=1){ ?><div class="ActivityBlock box<?php echo ($i+1); ?>">
+                        <table width="95%" border="0">
                             <tbody>
                             <tr>
                                 <td width="30%" rowspan="2">

@@ -3,7 +3,7 @@
 <head lang="en">
     <meta charset="UTF-8">
 
-    <link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsSrc/style/general.css">
+    <link type="text/css" rel="stylesheet" href="/AUNET/Public/general.css">
     <link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsSrc/style/top.css">
     <link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsSrc/style/banner.css">
     <link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsSrc/style/buttom.css">
@@ -164,7 +164,7 @@
                 </p>
 
                 <p>
-                    <a href="" class="downlistlink">FAQ</a>
+                    <a href="<?php echo U('/Home/FAQ/index');?>" class="downlistlink">FAQ</a>
                 </p>
             </td>
         </tr>
@@ -236,39 +236,33 @@
                     style="font-size:24px">&gt;&gt;&nbsp;&nbsp;活动预告</span></td>
         </tr>
         <tr>
-            <td width="27%" height="585" rowspan="2" valign="top">
+            <td width="27%" height="585" valign="top">
                 <p><a href="<?php echo U('/Home/News/Index');?>" class="slidebarlink">&gt;最新动态</a></p>
 
                 <p><a href="<?php echo U('/Home/Activity/Index');?>" class="slidebarlink now">▶&nbsp;活动预告</a></p>
 
                 <p><a href="<?php echo U('/Home/BroadCast/Index');?>" class="slidebarlink">&gt;公告栏</a></p>
             </td>
-            <td width="79%" align="center"><img src="/AUNET/Public/NewsSrc/image/HDYG-Head.png" width="714" height="169"
-                                                alt=""/></td>
-        </tr>
-
-
-
-            <td align="center" valign="top">
-                <table width="714px" border="0" style=" margin-top:20px; margin-bottom:20px;">
+            <td width="79%" align="center" valign="top"><img src="/AUNET/Public/NewsSrc/image/HDYG-Head.png" width="714" height="169"
+                                                alt=""/>
+                                                <table width="714px" border="0" style=" margin-top:10px; margin-bottom:20px;">
                     <tbody>
                     <?php if(is_array($forecast)): foreach($forecast as $key=>$v): ?><tr>
-                        <td bgcolor="#ffa968" width="30%"><?php echo (date('Y-m-d H:i',$v["time"])); ?></td>
-                        <td bgcolor="#addf7e" width="30%"><?php echo ($v["place"]); ?></td>
-                        <td bgcolor="#7db3f1" width="30%"><a href="<?php echo U('/Home/ActivityDetail/Index',array('id'=>$v['id']));?>"><?php echo ($v["title"]); ?></a> </td>
+                        <td bgcolor="#ffa968" width="33%"><?php echo (date('Y-m-d H:i',$v["time"])); ?></td>
+                        <td bgcolor="#addf7e" width="33%"><?php echo ($v["place"]); ?></td>
+                        <td bgcolor="#7db3f1" width="33%"><a style="text-decoration:none;color:#000000;" href="<?php echo U('/Home/ActivityDetail/Index',array('id'=>$v['id']));?>"><?php echo ($v["title"]); ?></a> </td>
                         <tr><?php endforeach; endif; ?>
 
 
                     </tbody>
                 </table>
-
-            </td>
-
-
+                                                </td>
+        </tr>
 
 
-        </tbody>
+
     </table>
+    
 
 
 </div>
