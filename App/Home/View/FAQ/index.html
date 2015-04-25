@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>常见问题</title>
+<title>FAQ首页</title>
  <link type="text/css" rel="stylesheet" href="__PUBLIC__/general.css">
    <link href="__PUBLIC__/FAQSrc/content.css" rel="stylesheet" type="text/css">
  <script type="text/javascript" src="__PUBLIC__/js/jquery.js"></script>
@@ -49,11 +49,19 @@
 	background-color:#74b05c;
 }
 
+#note{
+	width:80%;
+	border:none;
+	margin-left:10px;
+	font-size:25px;
+	}
+
 </style>
  
 </head>
 
 <body>
+
 
 
  
@@ -65,16 +73,21 @@
       </tr>
     <tr>
       <td width="27%" valign="top">
-        <p><a href="index.html" class="slidebarlink">&gt;FAQ首页</a></p>
-        <p><a href="faq_question.html" class="slidebarlink now">▶&nbsp;常见问题</a></p>
-        <p><a href="faq_financial.html" class="slidebarlink">&gt;财务部</a></p>
-        <p><a href="faq_secretary.html" class="slidebarlink">&gt;秘书部</a></p>
-        <p><a href="faq_media.html" class="slidebarlink">&gt;新媒体工作室</a></p>
-        <p><a href="faq_art.html" class="slidebarlink">&gt;文艺拓展部</a></p>
-                <p><a href="faq_supervise.html" class="slidebarlink">&gt;财监委</a></p>
-        <p><a href="faq_guide.html" class="slidebarlink">&gt;社团成立指南</a></p>
+        <p><a href="{:U('/Home/FAQ/index')}" class="slidebarlink now">▶&nbsp;FAQ首页</a></p>
+        <p><a href="{:U('/Home/FAQ/faq_question')}" class="slidebarlink">&gt;常见问题</a></p>
+        <p><a href="{:U('/Home/FAQ/faq_financial')}" class="slidebarlink">&gt;财务部</a></p>
+        <p><a href="{:U('/Home/FAQ/faq_secretary')}" class="slidebarlink">&gt;秘书部</a></p>
+        <p><a href="{:U('/Home/FAQ/faq_media')}" class="slidebarlink">&gt;新媒体工作室</a></p>
+        <p><a href="{:U('/Home/FAQ/faq_art')}" class="slidebarlink">&gt;文艺拓展部</a></p>
+        <p><a href="{:U('/Home/FAQ/faq_supervise')}" class="slidebarlink">&gt;财监委</a></p>
+        <p><a href="{:U('/Home/FAQ/faq_guide')}" class="slidebarlink">&gt;社团成立指南</a></p>
         </td>
-      <td width="73%" align="center" valign="top">&nbsp;
+      <td width="73%" align="left" valign="top"><p>&nbsp;</p>
+        <p>
+        <div id="note">
+        <p>建议使用 Chrome IE9及以上 Opera Firefox等浏览器</p>
+        </div>
+        </p>
       
       
       
@@ -89,6 +102,7 @@
 
  
  </div>
+ 
 
 </body>
 </html>
