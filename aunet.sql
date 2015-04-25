@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: 127.0.0.1
--- 生成日期: 2015 �?02 �?24 �?15:59
+-- 生成日期: 2015 �?04 �?25 �?08:50
 -- 服务器版本: 5.6.11
 -- PHP 版本: 5.5.1
 
@@ -42,21 +42,98 @@ CREATE TABLE IF NOT EXISTS `aunet_access` (
 --
 
 INSERT INTO `aunet_access` (`role_id`, `node_id`, `level`, `module`) VALUES
+(5, 59, 3, NULL),
+(5, 48, 2, NULL),
+(5, 47, 3, NULL),
 (4, 49, 3, NULL),
 (4, 48, 2, NULL),
-(4, 41, 3, NULL),
-(4, 40, 3, NULL),
-(4, 39, 2, NULL),
-(4, 38, 3, NULL),
-(4, 37, 3, NULL),
 (4, 36, 3, NULL),
+(4, 37, 3, NULL),
+(4, 38, 3, NULL),
 (4, 34, 2, NULL),
+(4, 40, 3, NULL),
+(4, 41, 3, NULL),
+(4, 39, 2, NULL),
 (4, 70, 3, NULL),
-(4, 69, 3, NULL),
 (4, 68, 3, NULL),
+(4, 69, 3, NULL),
 (4, 62, 2, NULL),
+(5, 46, 3, NULL),
+(5, 60, 3, NULL),
+(5, 61, 3, NULL),
+(5, 45, 2, NULL),
+(5, 36, 3, NULL),
+(5, 37, 3, NULL),
+(5, 38, 3, NULL),
+(5, 72, 3, NULL),
+(5, 63, 3, NULL),
+(5, 34, 2, NULL),
+(5, 40, 3, NULL),
+(5, 41, 3, NULL),
+(5, 39, 2, NULL),
+(5, 70, 3, NULL),
+(5, 68, 3, NULL),
+(5, 69, 3, NULL),
+(5, 62, 2, NULL),
+(5, 33, 1, NULL),
+(5, 35, 1, NULL),
+(5, 89, 3, NULL),
+(5, 88, 2, NULL),
+(5, 86, 1, NULL),
 (4, 33, 1, NULL),
-(5, 35, 1, NULL);
+(5, 58, 3, NULL),
+(5, 50, 3, NULL),
+(5, 49, 3, NULL),
+(4, 104, 3, NULL),
+(4, 103, 2, NULL),
+(4, 91, 1, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `aunet_advise`
+--
+
+CREATE TABLE IF NOT EXISTS `aunet_advise` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(30) DEFAULT NULL,
+  `phone` varchar(15) DEFAULT NULL,
+  `qq` varchar(9) DEFAULT NULL,
+  `title` varchar(15) NOT NULL DEFAULT ' ',
+  `content` text NOT NULL,
+  `feedback` tinyint(1) NOT NULL DEFAULT '0',
+  `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+
+--
+-- 转存表中的数据 `aunet_advise`
+--
+
+INSERT INTO `aunet_advise` (`id`, `name`, `phone`, `qq`, `title`, `content`, `feedback`, `time`) VALUES
+(3, 'tt', 'tt', 'tt', '思存', '思存工作室', 0, '2015-02-28 07:49:22');
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `aunet_announce`
+--
+
+CREATE TABLE IF NOT EXISTS `aunet_announce` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `uid` int(10) unsigned NOT NULL DEFAULT '0',
+  `title` varchar(30) NOT NULL DEFAULT '',
+  `time` int(10) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uid` (`uid`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+--
+-- 转存表中的数据 `aunet_announce`
+--
+
+INSERT INTO `aunet_announce` (`id`, `uid`, `title`, `time`) VALUES
+(2, 1, '明天社团网上线', 1429942058);
 
 -- --------------------------------------------------------
 
@@ -141,20 +218,19 @@ CREATE TABLE IF NOT EXISTS `aunet_forecast` (
   `username` varchar(30) NOT NULL DEFAULT '',
   `time` int(10) NOT NULL DEFAULT '0',
   `title` text NOT NULL,
+  `place` varchar(40) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=23 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=27 ;
 
 --
 -- 转存表中的数据 `aunet_forecast`
 --
 
-INSERT INTO `aunet_forecast` (`id`, `username`, `time`, `title`) VALUES
-(16, 'admin', 1424421108, 'nvasdf'),
-(18, 'admin', 1424597534, '111'),
-(19, 'admin', 1424597539, '222'),
-(20, 'admin', 1424597544, '333'),
-(21, 'admin', 1424597549, '444'),
-(22, 'admin', 1424597554, '555');
+INSERT INTO `aunet_forecast` (`id`, `username`, `time`, `title`, `place`) VALUES
+(23, 'admin', 1429376778, '11', '11'),
+(24, 'admin', 1429376982, '222', '222'),
+(25, 'admin', 1429376988, '33', '333'),
+(26, 'admin', 1429459986, '社联大会将于本周六晚上在大活召开。希望大家都能按时到场(写这么多我就是想凑字数而已)。。。。。。。。。。。。。。。', '大活');
 
 -- --------------------------------------------------------
 
@@ -173,19 +249,18 @@ CREATE TABLE IF NOT EXISTS `aunet_news` (
   `src` text NOT NULL,
   PRIMARY KEY (`id`),
   KEY `cid` (`cid`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=58 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=63 ;
 
 --
 -- 转存表中的数据 `aunet_news`
 --
 
 INSERT INTO `aunet_news` (`id`, `title`, `content`, `time`, `cid`, `del`, `pic`, `src`) VALUES
-(52, '111', '<p>111</p>', 1424600007, 10, 0, '', ''),
-(53, '222', '<p>222</p>', 1424600186, 10, 0, '', ''),
-(54, '333', '<p>333</p>', 1424601221, 18, 0, '', ''),
-(55, '444', '<p>444</p>', 1424601233, 10, 0, '', ''),
-(56, '555', '<p>555</p>', 1424601243, 0, 0, '', ''),
-(57, '666', '<p>666</p>', 1424601251, 13, 0, '', '');
+(62, 'asdf', '<p><img src="/AUNET./Upload/news/image/1/20150425/553ae5e2b052f.jpg" title="553ae5e2b052f.jpg" alt="img_0867.jpg"/>&nbsp;asdffdasd<img src="/AUNET./Upload/news/image/1/20150425/553ae5e656544.jpg" title="553ae5e656544.jpg" alt="t016d99bcbe6d471359.jpg"/></p>', 1429923308, 10, 0, '/AUNET./Upload/news/image/1/20150425/553ae5e2b052f.jpg', ' /AUNET./Upload/news/image/1/20150425/553ae5e656544.jpg /AUNET./Upload/news/image/1/20150425/553ae5e2b052f.jpg'),
+(61, 'fasdf', '<p>asdfsadfasfdasfd</p>', 1429892550, 10, 0, ' ', ''),
+(59, 'gg', '<p>gg</p>', 1429375995, 0, 0, ' ', ''),
+(60, 'PS干训成功召开', '<p><img src="/AUNET./Upload/news/image/1/20150424/553a5ff8017d9.png" title="553a5ff8017d9.png" alt="KanColle-150411-00472408.png"/></p><p><br/></p><p>今天晚上，学生社团联合会在东九C202进行了一次精彩的PS干训。<br/></p>', 1429889076, 10, 0, '/AUNET./Upload/news/image/1/20150424/553a5ff8017d9.png', ' /AUNET./Upload/news/image/1/20150424/553a5ff8017d9.png'),
+(58, 'asdf', '<p><img src="/AUNET./Upload/news/image/1/20150419/55328a8dc7020.png" title="55328a8dc7020.png" alt="下载.png"/></p>', 1429375634, 10, 0, '/AUNET./Upload/news/image/1/20150419/55328a8dc7020.png', ' /AUNET./Upload/news/image/1/20150419/55328a8dc7020.png');
 
 -- --------------------------------------------------------
 
@@ -249,7 +324,11 @@ INSERT INTO `aunet_news_attr` (`nid`, `aid`) VALUES
 (53, 2),
 (55, 2),
 (56, 2),
-(57, 4);
+(57, 4),
+(58, 2),
+(60, 2),
+(61, 2),
+(62, 2);
 
 -- --------------------------------------------------------
 
@@ -271,7 +350,7 @@ CREATE TABLE IF NOT EXISTS `aunet_node` (
   KEY `pid` (`pid`),
   KEY `status` (`status`),
   KEY `name` (`name`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=73 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=107 ;
 
 --
 -- 转存表中的数据 `aunet_node`
@@ -311,7 +390,16 @@ INSERT INTO `aunet_node` (`id`, `name`, `title`, `status`, `remark`, `sort`, `pi
 (69, 'editForecast', '修改预告', 1, NULL, 1, 62, 3),
 (70, 'addForecast', '添加预告', 1, NULL, 1, 62, 3),
 (71, 'lock', '锁定用户', 1, NULL, 1, 51, 3),
-(72, 'clearCache', '清除缓存', 1, NULL, 1, 34, 3);
+(72, 'clearCache', '清除缓存', 1, NULL, 1, 34, 3),
+(103, 'Material', '物资系统', 1, NULL, 1, 91, 2),
+(104, 'material_index', '物资系统界面', 1, NULL, 1, 103, 3),
+(94, 'Design', '设计委任', 1, NULL, 1, 0, 1),
+(105, 'Grade', '评分系统', 1, NULL, 1, 97, 2),
+(106, 'grade_index', '评分系统界面', 1, NULL, 1, 105, 3),
+(91, 'Material', '物资系统', 1, NULL, 1, 0, 1),
+(97, 'Grade', '评分系统', 1, NULL, 1, 0, 1),
+(101, 'design_index', '设计委任界面', 1, NULL, 1, 100, 3),
+(100, 'Design', '设计委任', 1, NULL, 1, 94, 2);
 
 -- --------------------------------------------------------
 
@@ -382,9 +470,9 @@ CREATE TABLE IF NOT EXISTS `aunet_user` (
 --
 
 INSERT INTO `aunet_user` (`id`, `username`, `password`, `logintime`, `loginip`, `lock`) VALUES
-(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 1424596220, '127.0.0.1', 0),
-(6, 'root', '63a9f0ea7bb98050796b649e85481845', 1424519625, '127.0.0.1', 0),
-(5, 'ted', '870fa8ee962d90af50c7eaed792b075a', 1424524151, '127.0.0.1', 0);
+(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 1429938674, '127.0.0.1', 0),
+(6, 'root', '63a9f0ea7bb98050796b649e85481845', 1429289666, '127.0.0.1', 0),
+(5, 'ted', '870fa8ee962d90af50c7eaed792b075a', 1429291798, '127.0.0.1', 0);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

@@ -3,7 +3,7 @@
 <head lang="en">
     <meta charset="UTF-8">
 
-    <link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsSrc/style/general.css">
+    <link type="text/css" rel="stylesheet" href="/AUNET/Public/general.css">
     <link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsSrc/style/top.css">
     <link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsSrc/style/banner.css">
     <link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsSrc/style/buttom.css">
@@ -164,7 +164,7 @@
                 </p>
 
                 <p>
-                    <a href="" class="downlistlink">FAQ</a>
+                    <a href="<?php echo U('/Home/FAQ/index');?>" class="downlistlink">FAQ</a>
                 </p>
             </td>
         </tr>

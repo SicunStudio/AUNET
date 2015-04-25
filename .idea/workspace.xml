@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="70255eca-b6cb-4432-88ee-fa4b2a2332f9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/App/Home/Controller/FAQController.class.php" />
-      <change type="MOVED" beforePath="C:\xampp\htdocs\AUNET\App\Home\View\FAQ\FAQ.html" afterPath="$PROJECT_DIR$/App/Home/View/FAQ/index.html" />
-      <change type="MOVED" beforePath="C:\xampp\htdocs\AUNET\App\Home\View\FAQ\FAQ_art.html" afterPath="$PROJECT_DIR$/App/Home/View/FAQ/faq_art.html" />
-      <change type="MOVED" beforePath="C:\xampp\htdocs\AUNET\App\Home\View\FAQ\FAQ_financial.html" afterPath="$PROJECT_DIR$/App/Home/View/FAQ/faq_financial.html" />
-      <change type="MOVED" beforePath="C:\xampp\htdocs\AUNET\App\Home\View\FAQ\FAQ_guide.html" afterPath="$PROJECT_DIR$/App/Home/View/FAQ/faq_guide.html" />
-      <change type="MOVED" beforePath="C:\xampp\htdocs\AUNET\App\Home\View\FAQ\FAQ_media.html" afterPath="$PROJECT_DIR$/App/Home/View/FAQ/faq_media.html" />
-      <change type="MOVED" beforePath="C:\xampp\htdocs\AUNET\App\Home\View\FAQ\FAQ_question.html" afterPath="$PROJECT_DIR$/App/Home/View/FAQ/faq_question.html" />
-      <change type="MOVED" beforePath="C:\xampp\htdocs\AUNET\App\Home\View\FAQ\FAQ_secretary.html" afterPath="$PROJECT_DIR$/App/Home/View/FAQ/faq_secretary.html" />
-      <change type="MOVED" beforePath="C:\xampp\htdocs\AUNET\App\Home\View\FAQ\FAQ_supervise.html" afterPath="$PROJECT_DIR$/App/Home/View/FAQ/faq_supervise.html" />
-      <change type="MOVED" beforePath="C:\xampp\htdocs\AUNET\Public\NewsSrc\js\jquery.js" afterPath="$PROJECT_DIR$/Public/js/jquery.js" />
-      <change type="MOVED" beforePath="C:\xampp\htdocs\AUNET\Public\NewsSrc\style\general.css" afterPath="$PROJECT_DIR$/Public/general.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Runtime/Cache/Home/00e52909bed743ea261af4b6823297ff.php" afterPath="$PROJECT_DIR$/App/Runtime/Cache/Home/00e52909bed743ea261af4b6823297ff.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Runtime/Logs/Home/15_04_25.log" afterPath="$PROJECT_DIR$/App/Runtime/Logs/Home/15_04_25.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Home/View/common_layout.html" afterPath="$PROJECT_DIR$/App/Home/View/common_layout.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Runtime/Cache/Home/e050d5619624146a648edb153a9a4fd8.php" afterPath="$PROJECT_DIR$/App/Runtime/Cache/Home/e050d5619624146a648edb153a9a4fd8.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Home/View/Index/index.html" afterPath="$PROJECT_DIR$/App/Home/View/Index/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="70255eca-b6cb-4432-88ee-fa4b2a2332f9" name="Default" comment="" />
     <ignored path="AUNET.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -131,10 +113,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="faq_question.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="faq_question.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/App/Home/View/FAQ/faq_question.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.2" vertical-offset="0" max-vertical-offset="2600">
+            <state vertical-scroll-proportion="-1.8280702" vertical-offset="1745" max-vertical-offset="2600">
               <caret line="7" column="48" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
               <folding />
             </state>
@@ -151,11 +133,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="common_layout.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="common_layout.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App/Home/View/common_layout.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.60818714" vertical-offset="0" max-vertical-offset="4784">
-              <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+            <state vertical-scroll-proportion="-87.65714" vertical-offset="936" max-vertical-offset="4784">
+              <caret line="154" column="55" selection-start-line="154" selection-start-column="55" selection-end-line="154" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -900,14 +882,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/Home/View/FAQ/faq_question.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.2" vertical-offset="0" max-vertical-offset="2600">
-          <caret line="7" column="48" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/App/Home/View/FAQ/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-23.028572" vertical-offset="1326" max-vertical-offset="2964">
@@ -966,8 +940,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/App/Home/View/common_layout.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.60818714" vertical-offset="0" max-vertical-offset="4784">
-          <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+        <state vertical-scroll-proportion="-87.65714" vertical-offset="936" max-vertical-offset="4784">
+          <caret line="154" column="55" selection-start-line="154" selection-start-column="55" selection-end-line="154" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Home/View/FAQ/faq_question.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.8280702" vertical-offset="1745" max-vertical-offset="2600">
+          <caret line="7" column="48" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
           <folding />
         </state>
       </provider>
