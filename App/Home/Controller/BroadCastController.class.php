@@ -14,7 +14,7 @@ use Think\Controller;
 class BroadCastController extends Controller{
     public function index(){
 
-        $this->broadcast=D('forecast')->order('time desc')->select();
+        $this->broadcast=M('announce')->order('time desc')->select();
 //        layout('news_layout');
         $this->display();
     }

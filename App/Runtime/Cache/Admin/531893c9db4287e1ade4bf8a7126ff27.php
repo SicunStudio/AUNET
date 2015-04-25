@@ -24,8 +24,8 @@
     </dl>
     <dl>
         <dt>发布公告</dt>
-        <dd><a href="#">添加公告</a></dd>
-        <dd><a href="<?php echo U('/Admin/Announce/annouce_index');?>">公告列表</a></dd>
+        <dd><a href="<?php echo U('/Admin/Announce/add_announce');?>">添加公告</a></dd>
+        <dd><a href="<?php echo U('/Admin/Announce/announce_index');?>">公告列表</a></dd>
     </dl>
     <dl>
         <dt>社团地带活动预告</dt>
@@ -79,11 +79,21 @@
     <title></title>
 </head>
 <body>
-<h1>
-    欢迎回来，<?php echo ($_SESSION['username']); ?>！
-</h1>
-<p>您上次登录的时间是<?php echo ($_SESSION['lastlogintime']); ?></p>
-<p>您上次登录的ip是<?php echo ($_SESSION['lastloginip']); ?></p>
+<form method="post" action="<?php echo U('add_announce_handle');?>">
+    <table class="table">
+        <tr>
+            <td align="right">公告内容</td>
+            <td>
+                <input type="text" name="title"/>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <input type="submit" value="提交"/>
+            </td>
+        </tr>
+    </table>
+</form>
 </body>
 </html>
 </body>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<table class="table">
+    <caption align="top">公告列表</caption>
+    <tr>
+        <th>ID</th>
+        <th>内容</th>
+        <th>时间</th>
+        <th>操作</th>
+    </tr>
+    <foreach name="data" item="v">
+        <tr>
+            <td width="8%">{$v.id}</td>
+            <td width="18%" align="center">{$v.title}</td>
+            <td width="12%" align="center">{$v.time|date='y-m-d H:i',###}</td>
+            <td width="18%" align="center">
+
+                <a href="{:U('/Admin/Announce/DelAnnounce',array('id'=>$v['id']))}">删除</a>
+            </td>
+        </tr>
+    </foreach>
+
+</table>
+<div align="center">
+    <span class="rows">共{$count}条记录</span>
+    {$page}
+</body>
+</html>

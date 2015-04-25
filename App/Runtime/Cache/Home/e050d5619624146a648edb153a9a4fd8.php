@@ -279,7 +279,7 @@
             </td>
             <td width="73%" align="center" valign="top">
 
-                <?php $__FOR_START_25335__=0;$__FOR_END_25335__=3;for($i=$__FOR_START_25335__;$i < $__FOR_END_25335__;$i+=1){ ?><div class="ActivityBlock box<?php echo ($i+1); ?>">
+                <?php $__FOR_START_2937__=0;$__FOR_END_2937__=3;for($i=$__FOR_START_2937__;$i < $__FOR_END_2937__;$i+=1){ ?><div class="ActivityBlock box<?php echo ($i+1); ?>">
                         <table width="95%" height="95%" border="0">
                             <tbody>
                             <tr>

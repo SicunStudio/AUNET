@@ -24,8 +24,8 @@
     </dl>
     <dl>
         <dt>发布公告</dt>
-        <dd><a href="#">添加公告</a></dd>
-        <dd><a href="<?php echo U('/Admin/Announce/annouce_index');?>">公告列表</a></dd>
+        <dd><a href="<?php echo U('/Admin/Announce/add_announce');?>">添加公告</a></dd>
+        <dd><a href="<?php echo U('/Admin/Announce/announce_index');?>">公告列表</a></dd>
     </dl>
     <dl>
         <dt>社团地带活动预告</dt>
@@ -79,11 +79,28 @@
     <title></title>
 </head>
 <body>
-<h1>
-    欢迎回来，<?php echo ($_SESSION['username']); ?>！
-</h1>
-<p>您上次登录的时间是<?php echo ($_SESSION['lastlogintime']); ?></p>
-<p>您上次登录的ip是<?php echo ($_SESSION['lastloginip']); ?></p>
+<table class="table">
+    <caption align="top">公告列表</caption>
+    <tr>
+        <th>ID</th>
+        <th>内容</th>
+        <th>时间</th>
+        <th>操作</th>
+    </tr>
+    <?php if(is_array($data)): foreach($data as $key=>$v): ?><tr>
+            <td width="8%"><?php echo ($v["id"]); ?></td>
+            <td width="18%" align="center"><?php echo ($v["title"]); ?></td>
+            <td width="12%" align="center"><?php echo (date('y-m-d H:i',$v["time"])); ?></td>
+            <td width="18%" align="center">
+
+                <a href="<?php echo U('/Admin/Announce/DelAnnounce',array('id'=>$v['id']));?>">删除</a>
+            </td>
+        </tr><?php endforeach; endif; ?>
+
+</table>
+<div align="center">
+    <span class="rows">共<?php echo ($count); ?>条记录</span>
+    <?php echo ($page); ?>
 </body>
 </html>
 </body>

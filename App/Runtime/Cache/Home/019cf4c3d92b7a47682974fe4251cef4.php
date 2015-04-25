@@ -175,9 +175,9 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>活动预告</title>
-    <link type="text/css" rel="stylesheet" href="/AUNET/Public/Src/style/general.css">
-    <script type="text/javascript" src="/AUNET/Public/Src/js/jquery.js"></script>
+    <title>最新动态</title>
+    <link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsSrc/style/general.css">
+    <script type="text/javascript" src="/AUNET/Public/NewsSrc/js/jquery.js"></script>
     <script>
         $(document).ready(
                 function () {
@@ -221,6 +221,40 @@
             color: #FFFFFF;
             background-color: #74b05c;
         }
+
+        .ActivityBlock {
+            width: 80%;
+            padding: 8px;
+            margin: 25px auto;
+            height: 150px;
+        }
+
+        .box1 {
+            background-color: #ffa968;
+        }
+
+        .box2 {
+            background-color: #addf7e
+        }
+
+        .box3 {
+            background-color: #7db3f1;
+        }
+
+        .titlefirst {
+            font-size: 32px;
+            color: #ffffff;
+        }
+
+        .titletext {
+            font-size: 24px;
+            color: #ffffff;
+        }
+
+        .normaltext {
+            font-size: 20px;
+            color: #ffffff;
+        }
     </style>
 
 </head>
@@ -233,43 +267,50 @@
         <tbody>
         <tr>
             <td height="59" colspan="2" align="left" valign="middle" style="color:#444e41"><span style="font-size:34px">&nbsp;&nbsp;&nbsp;&nbsp;新闻&nbsp;&nbsp;</span><span
-                    style="font-size:24px">&gt;&gt;&nbsp;&nbsp;活动预告</span></td>
+                    style="font-size:24px">&gt;&gt;&nbsp;&nbsp;最新动态</span></td>
         </tr>
         <tr>
-            <td width="27%" height="585" rowspan="2" valign="top">
-                <p><a href="<?php echo U('/Home/News/Index');?>" class="slidebarlink">&gt;最新动态</a></p>
+            <td width="27%" valign="top">
+                <p><a href="<?php echo U('/Home/News/Index');?>" class="slidebarlink now">▶&nbsp;最新动态</a></p>
 
-                <p><a href="<?php echo U('/Home/Activity/Index');?>" class="slidebarlink now">▶&nbsp;活动预告</a></p>
+                <p><a href="<?php echo U('/Home/Activity/Index');?>" class="slidebarlink">&gt;活动预告</a></p>
 
                 <p><a href="<?php echo U('/Home/BroadCast/Index');?>" class="slidebarlink">&gt;公告栏</a></p>
             </td>
-            <td width="79%" align="center"><img src="/AUNET/Public/NewsSrc/image/HDYG-Head.png" width="714" height="169"
-                                                alt=""/></td>
-        </tr>
+            <td width="73%" align="center" valign="top">
 
+                <?php $__FOR_START_25840__=0;$__FOR_END_25840__=3;for($i=$__FOR_START_25840__;$i < $__FOR_END_25840__;$i+=1){ ?><div class="ActivityBlock box<?php echo ($i+1); ?>">
+                        <table width="95%" height="95%" border="0">
+                            <tbody>
+                            <tr>
+                                <td width="30%" rowspan="2">
+                                    <?php if($news[$i]['pic'] == ' '): ?><img src="/AUNET/Public/NewsSrc/im/dh.png" width="180" />
+                                        <?php else: ?>
 
+                                        <img src="<?php echo ($news[$i]["pic"]); ?>" width="65%" /><?php endif; ?>
 
-            <td align="center" valign="top">
-                <table width="714px" border="0" style=" margin-top:20px; margin-bottom:20px;">
-                    <tbody>
-                    <?php if(is_array($forecast)): foreach($forecast as $key=>$v): ?><tr>
-                        <td bgcolor="#ffa968" width="30%"><?php echo (date('Y-m-d H:i',$v["time"])); ?></td>
-                        <td bgcolor="#addf7e" width="30%"><?php echo ($v["place"]); ?></td>
-                        <td bgcolor="#7db3f1" width="30%"><a href="<?php echo U('/Home/ActivityDetail/Index',array('id'=>$v['id']));?>"><?php echo ($v["title"]); ?></a> </td>
-                        <tr><?php endforeach; endif; ?>
+                                </td>
+                                <td width="70%" height="40" valign="top"><a href="#"><span class="titlefirst"><?php echo (substr($news[$i]["title"],0,1)); ?></span>
+                                    <span class="titletext"><?php echo substr($news[$i]['title'],1,strlen($news[$i]['title']));?></span>  </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td height="73"><span class="normaltext"><?php echo (replace_img($news[$i]["content"])); ?></span></td>
+                            </tr>
+                            </tbody>
+                        </table>
 
+                    </div><?php } ?>
 
-                    </tbody>
-                </table>
 
             </td>
-
-
-
-
+        </tr>
         </tbody>
     </table>
-
+    <div align="center">
+        <span class="rows">共<?php echo ($count); ?>条记录</span>
+        <?php echo ($page); ?>
+    </div>
 
 </div>
 
