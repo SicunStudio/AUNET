@@ -7,6 +7,7 @@
     <link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsSrc/style/top.css">
     <link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsSrc/style/banner.css">
     <link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsSrc/style/buttom.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
 
 
     <style>
@@ -23,7 +24,7 @@
     </style>
 
 
-    <script type="text/javascript" src="/AUNET/Public/NewsSrc/js/jquery.js"></script>
+    <script type="text/javascript" src="/AUNET/Public/js/jquery.js"></script>
     <script type="text/javascript" src="/AUNET/Public/NewsSrc/js/jquery.flexslider.js"></script>
     <script type="text/javascript" src="/AUNET/Public/NewsSrc/js/jquery.easing.min.js"></script>
 
@@ -125,23 +126,23 @@
             </td>
             <td width="13%" align="left" valign="top">
                 <p>
-                    <a href="" class="downlistlink">社联简介</a>
+                    <a href="<?php echo U('/Home/AU/index');?>" class="downlistlink">社联简介</a>
                 </p>
 
                 <p>
-                    <a href="" class="downlistlink">社联机构</a>
+                    <a href="<?php echo U('/Home/AU/department');?>" class="downlistlink">社联机构</a>
                 </p>
 
                 <p>
-                    <a href="" class="downlistlink">制度汇编</a>
+                    <a href="<?php echo U('/Home/AU/regulation');?>" class="downlistlink">制度汇编</a>
                 </p>
 
                 <p>
-                    <a href="" class="downlistlink">社联大事记</a>
+                    <a href="<?php echo U('/Home/AU/event');?>" class="downlistlink">社联大事记</a>
                 </p>
 
                 <p>
-                    <a href="" class="downlistlink">微仔说</a>
+                    <a href="#" class="downlistlink">微仔说</a>
                 </p>
 
                 <p>&nbsp;</p>
@@ -171,104 +172,132 @@
         </tbody>
     </table>
 </div>
-<!doctype html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>活动预告</title>
-    <link type="text/css" rel="stylesheet" href="/AUNET/Public/Src/style/general.css">
-    <script type="text/javascript" src="/AUNET/Public/Src/js/jquery.js"></script>
-    <script>
-        $(document).ready(
-                function () {
-
-                    $(".a-top").mouseenter(
-                            function (e) {
-                                $("#downlist").slideDown("fast");
-                            });
-
-                    $("#downlist").mouseenter(
-                            function (e) {
-                                $("#downlist").slideDown("fast");
-                            });
-
-
-                    $("#downlist").mouseleave(
-                            function (e) {
-                                $("#downlist").slideUp("fast");
-                            });
-
-                });
-    </script>
-    <style>
-        .slidebarlink {
-            padding: 12px 12px;
-            font-size: 22px;
-            margin: 15px;
-            display: block;
-            color: #444e41;
-            transition: .2s;
-            border-radius: 3px;
-
-        }
-
-        .now {
-            color: #FFFFFF;
-            background-color: #74b05c;
-        }
-
-        .slidebarlink:hover {
-            color: #FFFFFF;
-            background-color: #74b05c;
-        }
-    </style>
-
-</head>
-
-<body>
-
-
 <div id="wrap">
     <table width="99%" border="0" style="margin:25px 0px">
         <tbody>
         <tr>
-            <td height="59" colspan="2" align="left" valign="middle" style="color:#444e41"><span style="font-size:34px">&nbsp;&nbsp;&nbsp;&nbsp;新闻&nbsp;&nbsp;</span><span
-                    style="font-size:24px">&gt;&gt;&nbsp;&nbsp;活动预告</span></td>
+            <td height="59" colspan="2" align="left" valign="middle" style="color:#444e41"><span style="font-size:34px">&nbsp;&nbsp;&nbsp;&nbsp;社联&nbsp;&nbsp;</span><span style="font-size:24px">Association Union</span></td>
         </tr>
         <tr>
-            <td width="27%" height="585" valign="top">
-                <p><a href="<?php echo U('/Home/News/Index');?>" class="slidebarlink">&gt;最新动态</a></p>
-
-                <p><a href="<?php echo U('/Home/Activity/Index');?>" class="slidebarlink now">▶&nbsp;活动预告</a></p>
-
-                <p><a href="<?php echo U('/Home/BroadCast/Index');?>" class="slidebarlink">&gt;公告栏</a></p>
+            <td width="27%" valign="top">
+                <p><a href="<?php echo U('/Home/AU/index');?>" class="slidebarlink">&gt;社联简介</a></p>
+                <p><a href="<?php echo U('/Home/AU/department');?>" class="slidebarlink now">▶&nbsp;社联机构</a></p>
+                <p><a href="<?php echo U('/Home/AU/regulation');?>" class="slidebarlink">&gt;制度汇编</a></p>
+                <p><a href="<?php echo U('/Home/AU/event');?>" class="slidebarlink">&gt;社联大事记</a></p>
+                <p><a href="#" class="slidebarlink">&gt;微仔说</a></p>
             </td>
-            <td width="79%" align="center" valign="top"><img src="/AUNET/Public/NewsSrc/image/HDYG-Head.png" width="714" height="169"
-                                                alt=""/>
-                                                <table width="714px" border="0" style=" margin-top:10px; margin-bottom:20px;">
-                    <tbody>
-                    <?php if(is_array($forecast)): foreach($forecast as $key=>$v): ?><tr>
-                        <td bgcolor="#ffa968" width="33%"><?php echo (date('Y-m-d H:i',$v["time"])); ?></td>
-                        <td bgcolor="#addf7e" width="33%"><?php echo ($v["place"]); ?></td>
-                        <td bgcolor="#7db3f1" width="33%"><a style="text-decoration:none;color:#000000;" href="<?php echo U('/Home/ActivityDetail/Index',array('id'=>$v['id']));?>"><?php echo ($v["title"]); ?></a> </td>
-                        <tr><?php endforeach; endif; ?>
+            <!doctype html>
+<html>
+ <head>
+ <meta charset="utf-8">
+ <title>社联机构</title>
+ <script>
+  $(document).ready(
+	   function() {
+		 
+		   $(".a-top").mouseenter(
+		   function(e) {
+            $("#downlist").slideDown("fast");	
+        });
+		
+		$("#downlist").mouseenter(
+		   function(e) {
+            $("#downlist").slideDown("fast");	
+        });
+		
+	
+		
+		$("#downlist").mouseleave(
+		   function(e) {
+            $("#downlist").slideUp("fast");	
+        });
+		
+    });
+ </script>
+ <style>
+.slidebarlink {
+	padding: 12px 12px;
+	font-size: 22px;
+	margin: 15px;
+	display: block;
+	color: #444e41;
+	transition: .2s;
+	border-radius: 3px;
+}
+.now {
+	color: #FFFFFF;
+	background-color: #74b05c;
+}
+.slidebarlink:hover {
+	color: #FFFFFF;
+	background-color: #74b05c;
+}
+.de_link {
+	margin-top: 200px;
+	margin-left: 30px;
+	border: 1px solid red;
+}
+.content_table {
+	background: url(image/renzi.png);
+	background-size: contain;
+	background-position: 200px 0;
+	background-repeat: no-repeat;
+	font-family: 微软雅黑;
+	font-size: 18px;
+}
+.infor {
+	display: inline-block;
+	padding-left: 25px;
+	padding-top: 20px;
+}
+</style>
+ </head>
 
+ <body>
 
-                    </tbody>
-                </table>
-                                                </td>
+        <td width="73%" height="520px">
+           <table width="100%" class="content_table" cellspacing="0" cellpadding="0" height="500px">
+            <tr>
+               <td width="30%" align="center" valign="center" style="font-size:30px">社团外联企划小组</td>
+               <td>&nbsp;</td>
+             </tr>
+            <tr>
+               <td width="30%" align="center" valign="top">
+                <table cellspacing="0" cellpadding="0">
+                   <tr>
+                    <td>&nbsp;</td>
+                  </tr>
+                   <tr>
+                    <td height="200px" width="100%" valign="top" align="left"><img src="/AUNET/Public/AUSrc/photo/吴凌霄.jpg" width="120%"></td>
+                  </tr>
+                   <tr>
+                    <td height="50px" align="center">吴凌霄<br>
+                       数学学院</td>
+                  </tr>
+                 </table>
+              </td>
+               <td align="left" valign="top">&nbsp;&nbsp;&nbsp;&nbsp;学生社团联合会社团外联企划小组是为协助学校社团完成各类活动同时提升社会各界对于我校社团活动与社团文化产业关注度的协助中介小组。肩负着为社团争取活动资金与培养社团骨干精英的重要职责。主要工作职责具体如下：<br>
+                <span class="infor">1．协助社团完成各类社团活动的组织和策划，为社团提供指导以及建议。</span><br>
+                <span class="infor">2．与企业联系，为缺乏资金支持的优秀社团活动争取商业赞助使活动顺利成功进行。</span><br>
+                <span class="infor">3．与企业沟通并建立长期合作关系，为社团的发展提供平台，引导优秀社团文化产业走出校园，开拓市场。</span><br>
+                <span class="infor">4．加强各社团外联能力，通过与社团部的合作，规范、引导社团外联，逐步培养社团外联的自主性。</span><br>
+                <span class="infor">5．负责社团精英骨干的筛选与培养，提升社团人员的整体素质，为社团的未来发展奠定基础。</span><br>
+              </td>
+             </tr>
+          </table>
+         </td>
+
+</body>
+</html>
         </tr>
-
-
-
+        </tbody>
     </table>
-    
 
 
 </div>
 
-</body>
-</html>
+
+
 
 <div id="footer">
     <p class="friendlink">友情链接</p>

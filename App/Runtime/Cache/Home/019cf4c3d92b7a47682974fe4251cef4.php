@@ -152,15 +152,15 @@
             </td>
             <td width="10%" align="left" valign="top">
                 <p>
-                    <a href="" class="downlistlink">会员维权</a>
+                    <a href="<?php echo U('/Home/Other/contact');?>" class="downlistlink">会员维权</a>
                 </p>
 
                 <p>
-                    <a href="" class="downlistlink">投诉建议</a>
+                    <a href="<?php echo U('/Home/Other/advice');?>" class="downlistlink">投诉建议</a>
                 </p>
 
                 <p>
-                    <a href="" class="downlistlink">联系我们</a>
+                    <a href="<?php echo U('/Home/Other/member');?>" class="downlistlink">联系我们</a>
                 </p>
 
                 <p>
@@ -279,7 +279,7 @@
             </td>
             <td width="73%" align="center" valign="top">
 
-                <?php $__FOR_START_3928__=0;$__FOR_END_3928__=3;for($i=$__FOR_START_3928__;$i < $__FOR_END_3928__;$i+=1){ ?><div class="ActivityBlock box<?php echo ($i+1); ?>">
+                <?php $__FOR_START_23027__=0;$__FOR_END_23027__=3;for($i=$__FOR_START_23027__;$i < $__FOR_END_23027__;$i+=1){ ?><div class="ActivityBlock box<?php echo ($i+1); ?>">
                         <table width="95%" border="0">
                             <tbody>
                             <tr>
@@ -290,7 +290,7 @@
                                         <img src="<?php echo ($news[$i]["pic"]); ?>" width="65%" /><?php endif; ?>
 
                                 </td>
-                                <td width="70%" height="40" valign="top"><a href="#"><span class="titlefirst"><?php echo (substr($news[$i]["title"],0,1)); ?></span>
+                                <td width="70%" height="40" valign="top"><a href="<?php echo U('/Home/NewsDetail/index');?>"><span class="titlefirst"><?php echo (substr($news[$i]["title"],0,1)); ?></span>
                                     <span class="titletext"><?php echo substr($news[$i]['title'],1,strlen($news[$i]['title']));?></span>  </a>
                                 </td>
                             </tr>

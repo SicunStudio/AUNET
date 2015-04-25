@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>制度汇编</title>
+ <link type="text/css" rel="stylesheet" href="__PUBLIC__/general.css">
+ <script type="text/javascript" src="__PUBLIC__/js/jquery.js"></script>
+ <script>
+  $(document).ready(
+	   function() {
+		 
+		   $(".a-top").mouseenter(
+		   function(e) {
+            $("#downlist").slideDown("fast");	
+        });
+		
+		$("#downlist").mouseenter(
+		   function(e) {
+            $("#downlist").slideDown("fast");	
+        });
+		
+	
+		
+		$("#downlist").mouseleave(
+		   function(e) {
+            $("#downlist").slideUp("fast");	
+        });
+		
+    });
+	
+	
+ </script>
+ <style>
+ .slidebarlink{
+	 padding:12px 12px;
+	 font-size:22px;
+	 margin:15px;
+	 display:block;
+	 color:#444e41;
+	 transition:.2s;
+	 border-radius:3px;
+	 
+	 }
+	 
+	 .now{color:#FFFFFF;
+	background-color:#74b05c;}
+	 
+.slidebarlink:hover{
+	color:#FFFFFF;
+	background-color:#74b05c;
+}
+.regulation:hover{
+	text-decoration:underline;
+}
+
+ </style>
+ 
+</head>
+
+<body>
+
+
+ <div id="wrap">
+ <table width="99%" border="0" style="margin:25px 0px">
+  <tbody>
+    <tr>
+      <td height="59" colspan="2" align="left" valign="middle" style="color:#444e41"><span style="font-size:34px">&nbsp;&nbsp;&nbsp;&nbsp;社联&nbsp;&nbsp;</span><span style="font-size:24px">Association Union</span></td>
+      </tr>
+    <tr>
+      <td width="27%" valign="top">
+        <p><a href="{:U('/Home/AU/index')}" class="slidebarlink">&gt;社联简介</a></p>
+        <p><a href="{:U('/Home/AU/department')}" class="slidebarlink">&gt;社联机构</a></p>
+        <p><a href="{:U('/Home/AU/regulation')}" class="slidebarlink now">▶&nbsp;制度汇编</a></p>
+        <p><a href="{:U('/Home/AU/event')}" class="slidebarlink">&gt;社联大事记</a></p>
+        <p><a href="#" class="slidebarlink">&gt;微仔说</a></p>
+        </td>
+      <td width="73%" align="center" valign="top">
+      下载：<a href="#" name="DownloadRegulation" class="regulation">学生社团联合会制度汇编2015.doc</a>
+    </tr>
+    </tbody>
+</table>
+
+ 
+ </div>
+
+</body>
+</html>

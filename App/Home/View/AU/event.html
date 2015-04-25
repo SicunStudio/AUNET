@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <title>社联大事记</title>
- <link type="text/css" rel="stylesheet" href="style/general.css">
- <script type="text/javascript" src="js/jquery.js"></script>
+ <link type="text/css" rel="stylesheet" href="__PUBLIC__/general.css">
+ <script type="text/javascript" src="__PUBLIC__/js/jquery.js"></script>
  <script>
   $(document).ready(
 	   function() {
@@ -111,96 +111,6 @@ lilist[j].style.backgroundColor='#ffffff';
 <body>
 
 
-<!-- HeadAreaStart -->
-<div id="header">
-  
-    <table width="1200px" border="0" style="background:#74b05c;margin:0px auto;">
-      <tbody>
-        <tr>
-          <td width="33%" align="center" valign="middle"><img src="im/dh.png" width="380" height="106" alt=""/>
-          </td>
-          <td width="13%" align="center" valign="middle" class="NaviLinkContainer"><a class="a-top"   href="#"   style="color: #FFFFFF">首页</a></td>
-          <td width="13%" align="center" valign="middle" class="NaviLinkContainer"><a  class="a-top"   href="#"  style="color: #FFFFFF" >新闻</a></td>
-          <td width="13%" align="center" valign="middle" class="NaviLinkContainer"><a  class="a-top"   href="#" style="color: #FFFFFF">社联</a></td>
-          <td width="13%" align="center" valign="middle" class="NaviLinkContainer"><a   class="a-top"   href="#"  style="color: #FFFFFF">社团</a>
-         </td>
-          <td width="13%" align="center" valign="middle" class="NaviLinkContainer"><a  class="a-top" href="#"  style="color: #FFFFFF">其他</a></td>
-        </tr>
-      </tbody>
-    </table>
-</div>      
-    <div id="downlist" style="display:none;">
-     <table width="1200px" border="0" style="margin:0px auto;">
-      <tbody>
-        <tr>
-          <td width="36%" align="center" valign="middle">&nbsp;
-          
-          
-          </td>
-          <td width="13%" align="left" valign="top">
-            <p><a href="" class="downlistlink">评分系统</a>              </p>
-            <p><a href="" class="downlistlink">资源申请</a></p>
-            <p>
-              <a href="" class="downlistlink">设计委任栏</a></p>
-            <p>
-              <a href="" class="downlistlink">资料下载</a></p>
-          </td>
-          <td width="13%" align="left" valign="top">
-          <p>
-          	<a href="" class="downlistlink">最新动态</a>
-          </p>
-          <p>
-          	<a href="" class="downlistlink">活动预告</a>
-          </p>
-          <p>
-          	<a href="" class="downlistlink">通告栏</a>
-          </p>
-          
-          </td>
-          <td width="13%" align="left" valign="top">
-          <p>
-          	<a href="" class="downlistlink">社联简介</a>
-          </p>
-          <p>
-          	<a href="" class="downlistlink">社联机构</a>
-          </p>
-          <p>
-          	<a href="" class="downlistlink">制度汇编</a>
-          </p>
-          <p>
-          	<a href="" class="downlistlink">社联大事记</a>
-          </p>
-          <p>
-          	<a href="" class="downlistlink">微仔说</a>
-          </p>
-       
-          <p>&nbsp;</p>
-          
-          </td>
-          <td width="13%" align="left" valign="top">&nbsp;
-          
-          </td>
-          <td width="10%" align="left" valign="top">
-               <p>
-          	<a href="" class="downlistlink">会员维权</a>
-          </p>
-          <p>
-          	<a href="" class="downlistlink">投诉建议</a>
-          </p>
-          <p>
-          	<a href="" class="downlistlink">联系我们</a>
-          </p>
-          <p>
-          	<a href="" class="downlistlink">FAQ</a>
-          </p>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    </div>
-    
- <!-- HeadAreaEnd -->
- 
  <div id="wrap">
  <table width="99%" border="0" style="margin:25px 0px">
   <tbody>
@@ -209,11 +119,11 @@ lilist[j].style.backgroundColor='#ffffff';
       </tr>
     <tr>
       <td width="27%" valign="top">
-        <p><a href="au_info.html" class="slidebarlink">&gt;社联简介</a></p>
-        <p><a href="au_department.html" class="slidebarlink">&gt;社联机构</a></p> 
-        <p><a href="au_regulation.html" class="slidebarlink">&gt;制度汇编</a></p>
-        <p><a href="au_event.html" class="slidebarlink now">▶&nbsp;社联大事记</a></p>  
-        <p><a href="au_weizai.html" class="slidebarlink">&gt;微仔说</a></p>      
+        <p><a href="{:U('/Home/AU/index')}" class="slidebarlink">&gt;社联简介</a></p>
+        <p><a href="{:U('/Home/AU/department')}" class="slidebarlink">&gt;社联机构</a></p>
+        <p><a href="{:U('/Home/AU/regulation')}" class="slidebarlink">&gt;制度汇编</a></p>
+        <p><a href="{:U('/Home/AU/event')}" class="slidebarlink now">▶&nbsp;社联大事记</a></p>
+        <p><a href="#" class="slidebarlink">&gt;微仔说</a></p>
         </td>
       <td width="58%" align="left" valign="top">
       <div class="eventbox 2014 1">
@@ -279,11 +189,6 @@ lilist[j].style.backgroundColor='#ffffff';
 
  
  </div>
- 
- <!-- FootAreaStart -->
-<div id="footer">
-        <p class="friendlink">友情链接</p>
-</div>
-<!-- FootAreaEnd -->
+
 </body>
 </html>
