@@ -125,23 +125,23 @@
             </td>
             <td width="13%" align="left" valign="top">
                 <p>
-                    <a href="" class="downlistlink">社联简介</a>
+                    <a href="<?php echo U('/Home/AU/index');?>" class="downlistlink">社联简介</a>
                 </p>
 
                 <p>
-                    <a href="" class="downlistlink">社联机构</a>
+                    <a href="<?php echo U('/Home/AU/department');?>" class="downlistlink">社联机构</a>
                 </p>
 
                 <p>
-                    <a href="" class="downlistlink">制度汇编</a>
+                    <a href="<?php echo U('/Home/AU/regulation');?>" class="downlistlink">制度汇编</a>
                 </p>
 
                 <p>
-                    <a href="" class="downlistlink">社联大事记</a>
+                    <a href="<?php echo U('/Home/AU/event');?>" class="downlistlink">社联大事记</a>
                 </p>
 
                 <p>
-                    <a href="" class="downlistlink">微仔说</a>
+                    <a href="#" class="downlistlink">微仔说</a>
                 </p>
 
                 <p>&nbsp;</p>
@@ -152,15 +152,15 @@
             </td>
             <td width="10%" align="left" valign="top">
                 <p>
-                    <a href="" class="downlistlink">会员维权</a>
+                    <a href="<?php echo U('/Home/Other/contact');?>" class="downlistlink">会员维权</a>
                 </p>
 
                 <p>
-                    <a href="" class="downlistlink">投诉建议</a>
+                    <a href="<?php echo U('/Home/Other/advice');?>" class="downlistlink">投诉建议</a>
                 </p>
 
                 <p>
-                    <a href="" class="downlistlink">联系我们</a>
+                    <a href="<?php echo U('/Home/Other/member');?>" class="downlistlink">联系我们</a>
                 </p>
 
                 <p>
@@ -176,8 +176,8 @@
 <head>
     <meta charset="utf-8">
     <title>活动预告</title>
-    <link type="text/css" rel="stylesheet" href="/AUNET/Public/Src/style/general.css">
-    <script type="text/javascript" src="/AUNET/Public/Src/js/jquery.js"></script>
+    <link type="text/css" rel="stylesheet" href="/AUNET/Public/general.css">
+    <script type="text/javascript" src="/AUNET/Public/js/jquery.js"></script>
     <script>
         $(document).ready(
                 function () {

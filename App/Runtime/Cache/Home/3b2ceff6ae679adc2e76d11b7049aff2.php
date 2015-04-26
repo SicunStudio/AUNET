@@ -174,112 +174,116 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>公告栏</title>
+    <meta charset="utf-8">
+    <title>最新动态</title>
     <link type="text/css" rel="stylesheet" href="/AUNET/Public/general.css">
     <script type="text/javascript" src="/AUNET/Public/js/jquery.js"></script>
- <script>
-  $(document).ready(
-	   function() {
-		 
-		   $(".a-top").mouseenter(
-		   function(e) {
-            $("#downlist").slideDown("fast");	
-        });
-		
-		$("#downlist").mouseenter(
-		   function(e) {
-            $("#downlist").slideDown("fast");	
-        });
-		
-	
-		
-		$("#downlist").mouseleave(
-		   function(e) {
-            $("#downlist").slideUp("fast");	
-        });
-		
-    });
- </script>
- <style>
- .slidebarlink{
-	 padding:12px 12px;
-	 font-size:22px;
-	 margin:15px;
-	 display:block;
-	 color:#444e41;
-	 transition:.2s;
-	 border-radius:3px;
-	 
-	 }
-	 
-.slidebarlink:hover{
-	color:#FFFFFF;
-	background-color:#74b05c;
-}
-.now{color:#FFFFFF;
-	background-color:#74b05c;}
-	.boardtext{
-		font-size:18px;
-		color:#74b05c;}
- </style>
- 
+    <script>
+        $(document).ready(
+                function () {
+
+                    $(".a-top").mouseenter(
+                            function (e) {
+                                $("#downlist").slideDown("fast");
+                            });
+
+                    $("#downlist").mouseenter(
+                            function (e) {
+                                $("#downlist").slideDown("fast");
+                            });
+
+
+                    $("#downlist").mouseleave(
+                            function (e) {
+                                $("#downlist").slideUp("fast");
+                            });
+
+                });
+    </script>
+    <style>
+        .slidebarlink {
+            padding: 12px 12px;
+            font-size: 22px;
+            margin: 15px;
+            display: block;
+            color: #444e41;
+            transition: .2s;
+            border-radius: 3px;
+
+        }
+
+        .now {
+            color: #FFFFFF;
+            background-color: #74b05c;
+        }
+
+        .slidebarlink:hover {
+            color: #FFFFFF;
+            background-color: #74b05c;
+        }
+
+        .TextBlock {
+            width: 80%;
+            padding: 8px;
+            margin: 25px auto;
+            height: 150px;
+        }
+
+        .box1 {
+            background-color: #ffa968;
+        }
+
+        .box2 {
+            background-color: #addf7e
+        }
+
+        .box3 {
+            background-color: #7db3f1;
+        }
+    </style>
+
 </head>
 
 <body>
 
 
-<!-- HeadAreaStart -->
+<div id="wrap">
+    <table width="99%" border="0" style="margin:25px 0px">
+        <tbody>
+        <tr>
+            <td height="59" colspan="2" align="left" valign="middle" style="color:#444e41"><span style="font-size:34px">&nbsp;&nbsp;&nbsp;&nbsp;新闻&nbsp;&nbsp;</span><span
+                    style="font-size:24px">&gt;&gt;&nbsp;&nbsp;活动预告 &gt;&gt; 活动详情</span></td>
+        </tr>
+        <tr>
+            <td width="27%" height="585" valign="top">
+                <p><a href="<?php echo U('/Home/News/Index');?>" class="slidebarlink">&gt;最新动态</a></p>
 
- <!-- HeadAreaEnd -->
- 
- <div id="wrap">
- <table width="99%" border="0" style="margin:25px 0px">
-  <tbody>
-    <tr>
-      <td height="59" colspan="2" align="left" valign="middle" style="color:#444e41"><span style="font-size:34px">&nbsp;&nbsp;&nbsp;&nbsp;新闻&nbsp;&nbsp;</span><span style="font-size:24px">&gt;&gt;&nbsp;&nbsp;公告栏</span></td>
-      </tr>
-    <tr>
-      <td width="27%" height="585" valign="top">
-      <p><a href="<?php echo U('/Home/News/Index');?>" class="slidebarlink">&gt;最新动态</a></p>
-      <p><a href="<?php echo U('/Home/Activity/Index');?>" class="slidebarlink">&gt;活动预告</a></p>
-      <p><a href="<?php echo U('/Home/BroadCast/Index');?>" class="slidebarlink now">▶&nbsp;公告栏</a></p>
-      </td>
-      <td width="79%" align="center" valign="top"><div><img src="/AUNET/Public/NewsSrc/image/GGL.png" width="746" height="122" alt="" style="margin:0px auto;"/></div>
-      <div style="width:734px;margin:0px auto; border-left:solid #74b05c 6px;border-right:solid #74b05c 6px;border-bottom:solid #74b05c 6px">
-      
-      <p style="font-size:24px; margin:10px auto; color:#74b05c;">最新公告</p>
-      <table width="85%" border="0" class="boardtext">
-  <tbody>
-    <tr>
-      <td width="20%">序号</td>
-      <td width="50%">标题</td>
-      <td width="30%">日期</td>
-    </tr>
-    <?php if(is_array($broadcast)): foreach($broadcast as $key=>$v): ?><tr>
-            <td width="20%"><?php echo ($v["id"]); ?></td>
-            <td width="50%"><?php echo ($v["title"]); ?></td>
-            <td width="30%"><?php echo (date('y-m-d H:i',$v["time"])); ?></td>
-        </tr><?php endforeach; endif; ?>
+                <p><a href="<?php echo U('/Home/Activity/Index');?>" class="slidebarlink now">▶&nbsp;活动预告</a></p>
 
-  </tbody>
-</table>
- <hr style="width:95%;margin:10px auto"/>
-      </div>
-      
-      
-      
-      </td>
-    </tr>
-  </tbody>
-</table>
+                <p><a href="<?php echo U('/Home/BroadCast/Index');?>" class="slidebarlink">&gt;公告栏</a></p>
+            </td>
 
- 
- </div>
- 
- <!-- FootAreaStart -->
+            <td width="79%" align="center" valign="top">
+                <div><img src="/AUNET/Public/NewsSrc/image/GGL.png" width="746" height="122" alt=""
+                          style="margin:0px auto;"/></div>
+                <div style="width:734px;margin:0px auto; border-left:solid #74b05c 6px;border-right:solid #74b05c 6px;border-bottom:solid #74b05c 6px">
 
-<!-- FootAreaEnd -->
+                    <p style="font-size:24px; margin:10px auto; color:#74b05c;">活动详情</p>
+
+                    <hr style="width:95%;margin:10px auto"/>
+                    <div style="border-left: 6px;">
+                        <p style="font-size:24px; margin:10px auto; color:#74b05c;"><?php echo ($forecast["title"]); ?></p>
+                    </div>
+
+                </div>
+            </td>
+        </tbody>
+    </table>
+
+
+</div>
+
+
 </body>
 </html>
 

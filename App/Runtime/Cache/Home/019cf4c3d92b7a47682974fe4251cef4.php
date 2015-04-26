@@ -125,23 +125,23 @@
             </td>
             <td width="13%" align="left" valign="top">
                 <p>
-                    <a href="" class="downlistlink">社联简介</a>
+                    <a href="<?php echo U('/Home/AU/index');?>" class="downlistlink">社联简介</a>
                 </p>
 
                 <p>
-                    <a href="" class="downlistlink">社联机构</a>
+                    <a href="<?php echo U('/Home/AU/department');?>" class="downlistlink">社联机构</a>
                 </p>
 
                 <p>
-                    <a href="" class="downlistlink">制度汇编</a>
+                    <a href="<?php echo U('/Home/AU/regulation');?>" class="downlistlink">制度汇编</a>
                 </p>
 
                 <p>
-                    <a href="" class="downlistlink">社联大事记</a>
+                    <a href="<?php echo U('/Home/AU/event');?>" class="downlistlink">社联大事记</a>
                 </p>
 
                 <p>
-                    <a href="" class="downlistlink">微仔说</a>
+                    <a href="#" class="downlistlink">微仔说</a>
                 </p>
 
                 <p>&nbsp;</p>
@@ -279,7 +279,7 @@
             </td>
             <td width="73%" align="center" valign="top">
 
-                <?php $__FOR_START_23027__=0;$__FOR_END_23027__=3;for($i=$__FOR_START_23027__;$i < $__FOR_END_23027__;$i+=1){ ?><div class="ActivityBlock box<?php echo ($i+1); ?>">
+                <?php $__FOR_START_19900__=0;$__FOR_END_19900__=3;for($i=$__FOR_START_19900__;$i < $__FOR_END_19900__;$i+=1){ ?><div class="ActivityBlock box<?php echo ($i+1); ?>">
                         <table width="95%" border="0">
                             <tbody>
                             <tr>
@@ -290,7 +290,7 @@
                                         <img src="<?php echo ($news[$i]["pic"]); ?>" width="65%" /><?php endif; ?>
 
                                 </td>
-                                <td width="70%" height="40" valign="top"><a href="<?php echo U('/Home/NewsDetail/index');?>"><span class="titlefirst"><?php echo (substr($news[$i]["title"],0,1)); ?></span>
+                                <td width="70%" height="40" valign="top"><a href="<?php echo U('/Home/NewsDetail/index',array('id'=>$news[$i]['id']));?>"><span class="titlefirst"><?php echo (substr($news[$i]["title"],0,1)); ?></span>
                                     <span class="titletext"><?php echo substr($news[$i]['title'],1,strlen($news[$i]['title']));?></span>  </a>
                                 </td>
                             </tr>

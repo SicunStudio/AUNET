@@ -5,11 +5,11 @@
  * Date: 2015/2/28
  * Time: 15:26
  */
-/**create table aunet_advise (id int primary key auto_increment,name varchar(30),phone varchar(15),qq varchar(9),
- * title varchar(15) not null default '',content text,feedback tinyint(1) not null default 0,
- * time timestamp not null default CURRENT_TIMESTAMP)ENGINE=MyISAM,default charset=utf8;
- *
- */
+/*create table aunet_advise (id int primary key auto_increment,name varchar(30),phone varchar(15),qq varchar(9),
+ title varchar(15) not null default '',content text,feedback tinyint(1) not null default 0,
+  time timestamp not null default CURRENT_TIMESTAMP)ENGINE=MyISAM,default charset=utf8;*/
+
+
 namespace Admin\Controller;
 use Think\Page;
 

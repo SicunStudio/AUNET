@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: w.rdc.sae.sina.com.cn:3307
--- 生成日期: 2015 年 02 月 25 日 02:53
+-- 生成日期: 2015 年 04 月 27 日 02:27
 -- 服务器版本: 5.5.23
 -- PHP 版本: 5.3.3
 
@@ -16,7 +16,7 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 /*!40101 SET NAMES utf8 */;
 
 --
--- 数据库: `app_authinkphp`
+-- 数据库: `app_hustaunet`
 --
 
 -- --------------------------------------------------------
@@ -54,6 +54,53 @@ INSERT INTO `aunet_access` (`role_id`, `node_id`, `level`, `module`) VALUES
 (4, 62, 2, NULL),
 (4, 33, 1, NULL),
 (5, 35, 1, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `aunet_advise`
+--
+
+CREATE TABLE IF NOT EXISTS `aunet_advise` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(30) DEFAULT NULL,
+  `phone` varchar(15) DEFAULT NULL,
+  `qq` varchar(9) DEFAULT NULL,
+  `title` varchar(15) NOT NULL DEFAULT '',
+  `content` text,
+  `feedback` tinyint(1) NOT NULL DEFAULT '0',
+  `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- 转存表中的数据 `aunet_advise`
+--
+
+INSERT INTO `aunet_advise` (`id`, `name`, `phone`, `qq`, `title`, `content`, `feedback`, `time`) VALUES
+(1, '111', '111', '111', '111', '111', 1, '2015-04-27 01:12:25');
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `aunet_announce`
+--
+
+CREATE TABLE IF NOT EXISTS `aunet_announce` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `uid` int(10) unsigned NOT NULL DEFAULT '0',
+  `title` varchar(30) NOT NULL DEFAULT '',
+  `time` int(10) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uid` (`uid`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- 转存表中的数据 `aunet_announce`
+--
+
+INSERT INTO `aunet_announce` (`id`, `uid`, `title`, `time`) VALUES
+(1, 1, '测试', 1430072557);
 
 -- --------------------------------------------------------
 
@@ -139,20 +186,16 @@ CREATE TABLE IF NOT EXISTS `aunet_forecast` (
   `username` varchar(30) NOT NULL DEFAULT '',
   `time` int(10) NOT NULL DEFAULT '0',
   `title` text NOT NULL,
+  `place` varchar(40) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=23 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=25 ;
 
 --
 -- 转存表中的数据 `aunet_forecast`
 --
 
-INSERT INTO `aunet_forecast` (`id`, `username`, `time`, `title`) VALUES
-(16, 'admin', 1424421108, 'nvasdf'),
-(18, 'admin', 1424597534, '111'),
-(19, 'admin', 1424597539, '222'),
-(20, 'admin', 1424597544, '333'),
-(21, 'admin', 1424597549, '444'),
-(22, 'admin', 1424597554, '555');
+INSERT INTO `aunet_forecast` (`id`, `username`, `time`, `title`, `place`) VALUES
+(24, 'admin', 1430070842, '测试', '测试内容');
 
 -- --------------------------------------------------------
 
@@ -169,23 +212,18 @@ CREATE TABLE IF NOT EXISTS `aunet_news` (
   `del` tinyint(1) unsigned NOT NULL DEFAULT '0',
   `pic` text NOT NULL,
   `src` text NOT NULL,
+  `text` text,
   PRIMARY KEY (`id`),
   KEY `cid` (`cid`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=70 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=72 ;
 
 --
 -- 转存表中的数据 `aunet_news`
 --
 
-INSERT INTO `aunet_news` (`id`, `title`, `content`, `time`, `cid`, `del`, `pic`, `src`) VALUES
-(52, '111', '<p>111</p>', 1424600007, 10, 0, '', ''),
-(53, '222', '<p>222</p>', 1424600186, 10, 0, '', ''),
-(54, '333', '<p>333</p>', 1424601221, 18, 0, '', ''),
-(55, '444', '<p>444</p>', 1424601233, 10, 0, '', ''),
-(56, '555', '<p>555</p>', 1424601243, 0, 0, '', ''),
-(57, '666', '<p>666</p>', 1424601251, 13, 0, '', ''),
-(68, 'asdf', '<p><img src="http://authinkphp-upload.stor.sinaapp.com/news/image/1/20150225/54ecbc49a8a7b.jpg" style="" title="54ecbc49a8a7b.jpg"/></p><p><img src="http://authinkphp-upload.stor.sinaapp.com/news/image/1/20150225/54ecbc50975d5.jpg" style="" title="54ecbc50975d5.jpg"/></p><p><img src="http://authinkphp-upload.stor.sinaapp.com/news/image/1/20150225/54ecbc5345574.jpg" style="" title="54ecbc5345574.jpg"/></p><p><img src="http://authinkphp-upload.stor.sinaapp.com/news/image/1/20150225/54ecbc56f205f.jpg" style="" title="54ecbc56f205f.jpg"/></p><p><img src="http://authinkphp-upload.stor.sinaapp.com/news/image/1/20150225/54ecbc6939a25.jpg" style="" title="54ecbc6939a25.jpg"/></p><p><br/></p>', 1424800880, 0, 0, 'http://authinkphp-upload.stor.sinaapp.com/news/image/1/20150225/54ecbc49a8a7b.jpg', ' http://authinkphp-upload.stor.sinaapp.com/news/image/1/20150225/54ecbc6939a25.jpg http://authinkphp-upload.stor.sinaapp.com/news/image/1/20150225/54ecbc56f205f.jpg http://authinkphp-upload.stor.sinaapp.com/news/image/1/20150225/54ecbc5345574.jpg http://authinkphp-upload.stor.sinaapp.com/news/image/1/20150225/54ecbc50975d5.jpg http://authinkphp-upload.stor.sinaapp.com/news/image/1/20150225/54ecbc49a8a7b.jpg'),
-(69, 'ddd', '<p><img src="http://authinkphp-upload.stor.sinaapp.com/news/image/1/20150225/54ecbeb70b3af.jpg" style="" title="54ecbeb70b3af.jpg"/></p><p><img src="http://authinkphp-upload.stor.sinaapp.com/news/image/1/20150225/54ecbeb7e8cc4.jpg" style="" title="54ecbeb7e8cc4.jpg"/></p><p><br/></p>', 1424801469, 10, 0, 'http://authinkphp-upload.stor.sinaapp.com/news/image/1/20150225/54ecbeb70b3af.jpg', ' http://authinkphp-upload.stor.sinaapp.com/news/image/1/20150225/54ecbeb7e8cc4.jpg http://authinkphp-upload.stor.sinaapp.com/news/image/1/20150225/54ecbeb70b3af.jpg');
+INSERT INTO `aunet_news` (`id`, `title`, `content`, `time`, `cid`, `del`, `pic`, `src`, `text`) VALUES
+(71, '文章2', '<p>这是文章2</p>', 1430066848, 10, 0, ' ', '', '这是文章2'),
+(70, '社联PS干训', '<p>社联PS干训</p>', 1430066610, 10, 0, ' ', '', '社联PS干训');
 
 -- --------------------------------------------------------
 
@@ -253,7 +291,9 @@ INSERT INTO `aunet_news_attr` (`nid`, `aid`) VALUES
 (68, 2),
 (65, 2),
 (68, 4),
-(69, 2);
+(69, 2),
+(70, 2),
+(71, 2);
 
 -- --------------------------------------------------------
 
@@ -386,6 +426,6 @@ CREATE TABLE IF NOT EXISTS `aunet_user` (
 --
 
 INSERT INTO `aunet_user` (`id`, `username`, `password`, `logintime`, `loginip`, `lock`) VALUES
-(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 1424802658, '221.235.94.189', 0),
+(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 1430070641, '59.174.0.255', 0),
 (6, 'root', '63a9f0ea7bb98050796b649e85481845', 1424519625, '127.0.0.1', 0),
 (5, 'ted', '870fa8ee962d90af50c7eaed792b075a', 1424524151, '127.0.0.1', 0);
