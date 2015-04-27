@@ -266,7 +266,7 @@
                 <div class="new-small new1">
                   <div class="newsblock_container">
                     <a href="#">
-                        <p class="new-head1"><span class="first"><?php echo (substr($news[0]["title"],0,1)); ?></span><?php echo substr($news[0]['title'],1,strlen($news[0]['title']));?></p>
+                        <p class="new-head1"><span class="first"><?php echo (msubstr($news[0]["title"],0,1)); ?></span><?php echo msubstr($news[0]['title'],1,strlen($news[0]['title']));?></p>
                         <p class="new-xiaoxi1"><?php echo ($news[0]["text"]); ?></p>
                     </a>
                   </div>
@@ -276,7 +276,7 @@
               <div class="newsblock_container">
                 <div class="new-small new2">
                     <a href="#">
-                        <p class="new-head1"><span class="first"><?php echo (substr($news[1]["title"],0,1)); ?></span><?php echo substr($news[1]['title'],1,strlen($news[1]['title']));?></p>
+                        <p class="new-head1"><span class="first"><?php echo (msubstr($news[1]["title"],0,1)); ?></span><?php echo msubstr($news[1]['title'],1,strlen($news[1]['title']));?></p>
                         <p class="new-xiaoxi1"><?php echo ($news[1]["text"]); ?></p>
                     </a>
                 </div>
@@ -290,7 +290,7 @@
               <div class="newsblock_container">
                 <div class="new-small new3">
                     <a href="#">
-                        <p class="new-head1"><span class="first"><?php echo (substr($news[2]["title"],0,1)); ?></span><?php echo substr($news[2]['title'],1,strlen($news[2]['title']));?></p>
+                        <p class="new-head1"><span class="first"><?php echo (msubstr($news[2]["title"],0,1)); ?></span><?php echo msubstr($news[2]['title'],1,strlen($news[2]['title']));?></p>
                         <p class="new-xiaoxi1"><?php echo ($news[2]["text"]); ?></p>
                     </a>
                 </div>
@@ -300,7 +300,7 @@
               <div class="newsblock_container">
                 <div class="new-small new4">
                     <a href="#">
-                        <p class="new-head1"><span class="first"><?php echo (substr($news[3]["title"],0,1)); ?></span><?php echo substr($news[3]['title'],1,strlen($news[3]['title']));?></p>
+                        <p class="new-head1"><span class="first"><?php echo (msubstr($news[3]["title"],0,1)); ?></span><?php echo msubstr($news[3]['title'],1,strlen($news[3]['title']));?></p>
                         <p class="new-xiaoxi1"><?php echo ($news[3]["text"]); ?></p>
                     </a>
                 </div>

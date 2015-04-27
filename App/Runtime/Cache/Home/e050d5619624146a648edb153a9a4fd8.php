@@ -177,8 +177,6 @@
 <head>
     <meta charset="utf-8">
     <title>最新动态</title>
-    <link type="text/css" rel="stylesheet" href="/AUNET/Public/general.css">
-    <script type="text/javascript" src="/AUNET/Public/js/jquery.js"></script>
     <script>
         $(document).ready(
                 function () {
@@ -280,7 +278,7 @@
             </td>
             <td width="73%" align="center" valign="top">
 
-                <?php $__FOR_START_2829__=0;$__FOR_END_2829__=3;for($i=$__FOR_START_2829__;$i < $__FOR_END_2829__;$i+=1){ ?><div class="ActivityBlock box<?php echo ($i+1); ?>">
+                <?php $__FOR_START_23234__=0;$__FOR_END_23234__=3;for($i=$__FOR_START_23234__;$i < $__FOR_END_23234__;$i+=1){ ?><div class="ActivityBlock box<?php echo ($i+1); ?>">
                         <table width="95%" border="0">
                             <tbody>
                             <tr>

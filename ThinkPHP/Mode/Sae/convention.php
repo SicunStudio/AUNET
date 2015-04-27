@@ -30,7 +30,12 @@ return array(
     //更改模板替换变量，让普通能在所有平台下显示
     'TMPL_PARSE_STRING' =>  array(
         // __PUBLIC__/upload  -->  /Public/upload -->http://appname-public.stor.sinaapp.com/upload
-        '/Public/upload'    =>  $st->getUrl('public','upload')
+        '/Public/upload'    =>  $st->getUrl('public','upload'),
+        '/Public/AUSrc'     =>$st->getUrl('public','AUSrc'),
+        '/Public/general'   =>$st->getUrl('public','general'),
+        '/Public/NewsSrc'   =>$st->getUrl('public','NewsSrc'),
+        '/Public/FAQSrc'    =>$st->getUrl('public','FAQSrc'),
+        '/Public/js'    =>$st->getUrl('public','js'),
     ),
     'LOG_TYPE'          =>  'Sae',
     'DATA_CACHE_TYPE'   =>  'Memcachesae',
