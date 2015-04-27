@@ -176,7 +176,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>活动预告</title>
+    <title>最新动态</title>
     <script>
         $(document).ready(
                 function () {
@@ -220,6 +220,25 @@
             color: #FFFFFF;
             background-color: #74b05c;
         }
+
+        .TextBlock {
+            width: 80%;
+            padding: 8px;
+            margin: 25px auto;
+            height: 150px;
+        }
+
+        .box1 {
+            background-color: #ffa968;
+        }
+
+        .box2 {
+            background-color: #addf7e
+        }
+
+        .box3 {
+            background-color: #7db3f1;
+        }
     </style>
 
 </head>
@@ -232,7 +251,7 @@
         <tbody>
         <tr>
             <td height="59" colspan="2" align="left" valign="middle" style="color:#444e41"><span style="font-size:34px">&nbsp;&nbsp;&nbsp;&nbsp;新闻&nbsp;&nbsp;</span><span
-                    style="font-size:24px">&gt;&gt;&nbsp;&nbsp;活动预告</span></td>
+                    style="font-size:24px">&gt;&gt;&nbsp;&nbsp;活动预告 &gt;&gt; 活动详情</span></td>
         </tr>
         <tr>
             <td width="27%" height="585" valign="top">
@@ -242,29 +261,27 @@
 
                 <p><a href="<?php echo U('/Home/BroadCast/Index');?>" class="slidebarlink">&gt;公告栏</a></p>
             </td>
-            <td width="79%" align="center" valign="top"><img src="/AUNET/Public/NewsSrc/image/HDYG-Head.png" width="714" height="169"
-                                                alt=""/>
-                                                <table width="714px" border="0" style=" margin-top:10px; margin-bottom:20px;">
-                    <tbody>
-                    <?php if(is_array($forecast)): foreach($forecast as $key=>$v): ?><tr>
-                        <td bgcolor="#ffa968" width="33%"><?php echo (date('Y-m-d H:i',$v["time"])); ?></td>
-                        <td bgcolor="#addf7e" width="33%"><?php echo ($v["place"]); ?></td>
-                        <td bgcolor="#7db3f1" width="33%"><a style="text-decoration:none;color:#000000;" href="<?php echo U('/Home/ActivityDetail/Index',array('id'=>$v['id']));?>"><?php echo ($v["title"]); ?></a> </td>
-                        <tr><?php endforeach; endif; ?>
 
+            <td width="79%" align="center" valign="top">
+                <div><img src="/AUNET/Public/NewsSrc/image/GGL.png" width="746" height="122" alt=""
+                          style="margin:0px auto;"/></div>
+                <div style="width:734px;margin:0px auto; border-left:solid #74b05c 6px;border-right:solid #74b05c 6px;border-bottom:solid #74b05c 6px">
 
-                    </tbody>
-                </table>
-                                                </td>
-        </tr>
+                    <p style="font-size:24px; margin:10px auto; color:#74b05c;">活动详情</p>
 
+                    <hr style="width:95%;margin:10px auto"/>
+                    <div style="border-left: 6px;">
+                        <p style="font-size:24px; margin:10px auto; color:#74b05c;"><?php echo ($forecast["title"]); ?></p>
+                    </div>
 
-
+                </div>
+            </td>
+        </tbody>
     </table>
-    
 
 
 </div>
+
 
 </body>
 </html>

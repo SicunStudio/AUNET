@@ -3,10 +3,10 @@
 <head lang="en">
     <meta charset="UTF-8">
 
-    <link type="text/css" rel="stylesheet" href="/AUNET/Public/general.css">
-    <link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsSrc/style/top.css">
-    <link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsSrc/style/banner.css">
-    <link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsSrc/style/buttom.css">
+    <link type="text/css" rel="stylesheet" href="/AUNET/Public/general/general.css">
+    <link type="text/css" rel="stylesheet" href="/AUNET/Public/general/top.css">
+    <link type="text/css" rel="stylesheet" href="/AUNET/Public/general/banner.css">
+    <link type="text/css" rel="stylesheet" href="/AUNET/Public/general/buttom.css">
     <script type="text/javascript" src="js/jquery.js"></script>
 
 
@@ -25,42 +25,8 @@
 
 
     <script type="text/javascript" src="/AUNET/Public/js/jquery.js"></script>
-    <script type="text/javascript" src="/AUNET/Public/NewsSrc/js/jquery.flexslider.js"></script>
-    <script type="text/javascript" src="/AUNET/Public/NewsSrc/js/jquery.easing.min.js"></script>
-
-    <script>
-
-        $(function () {
-            $(".flexslider").flexslider({
-                animation: "slide",
-                slideshowSpeed: 4000, //展示时间间隔ms
-                animationSpeed: 400, //滚动时间ms
-                touch: true, //是否支持触屏滑动
-
-            });
-        });
-
-        $(document).ready(
-                function () {
-
-                    $(".a-top").mouseenter(
-                            function (e) {
-                                $("#downlist").slideDown("fast");
-                            });
-
-                    $("#downlist").mouseenter(
-                            function (e) {
-                                $("#downlist").slideDown("fast");
-                            });
 
 
-                    $("#downlist").mouseleave(
-                            function (e) {
-                                $("#downlist").slideUp("fast");
-                            });
-
-                });
-    </script>
     <title></title>
 </head>
 <body>

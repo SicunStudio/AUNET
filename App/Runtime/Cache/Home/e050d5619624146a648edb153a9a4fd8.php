@@ -3,10 +3,13 @@
 <head lang="en">
     <meta charset="UTF-8">
 
-    <link type="text/css" rel="stylesheet" href="/AUNET/Public/general.css">
-    <link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsSrc/style/top.css">
-    <link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsSrc/style/banner.css">
-    <link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsSrc/style/buttom.css">
+    <link type="text/css" rel="stylesheet" href="/AUNET/Public/general/general.css">
+    <link type="text/css" rel="stylesheet" href="/AUNET/Public/general/top.css">
+    <link type="text/css" rel="stylesheet" href="/AUNET/Public/general/banner.css">
+    <link type="text/css" rel="stylesheet" href="/AUNET/Public/general/buttom.css">
+    <script type="text/javascript" src="/AUNET/Public/js/jquery.js"></script>
+    <script type="text/javascript" src="/AUNET/Public/NewsSrc/js/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="/AUNET/Public/NewsSrc/js/jquery.easing.min.js"></script>
 
 
     <style>
@@ -23,9 +26,7 @@
     </style>
 
 
-    <script type="text/javascript" src="/AUNET/Public/NewsSrc/js/jquery.js"></script>
-    <script type="text/javascript" src="/AUNET/Public/NewsSrc/js/jquery.flexslider.js"></script>
-    <script type="text/javascript" src="/AUNET/Public/NewsSrc/js/jquery.easing.min.js"></script>
+
 
     <script>
 
@@ -125,23 +126,23 @@
             </td>
             <td width="13%" align="left" valign="top">
                 <p>
-                    <a href="" class="downlistlink">社联简介</a>
+                    <a href="<?php echo U('/Home/AU/index');?>" class="downlistlink">社联简介</a>
                 </p>
 
                 <p>
-                    <a href="" class="downlistlink">社联机构</a>
+                    <a href="<?php echo U('/Home/AU/department');?>" class="downlistlink">社联机构</a>
                 </p>
 
                 <p>
-                    <a href="" class="downlistlink">制度汇编</a>
+                    <a href="<?php echo U('/Home/AU/regulation');?>" class="downlistlink">制度汇编</a>
                 </p>
 
                 <p>
-                    <a href="" class="downlistlink">社联大事记</a>
+                    <a href="<?php echo U('/Home/AU/event');?>" class="downlistlink">社联大事记</a>
                 </p>
 
                 <p>
-                    <a href="" class="downlistlink">微仔说</a>
+                    <a href="#" class="downlistlink">微仔说</a>
                 </p>
 
                 <p>&nbsp;</p>
@@ -152,7 +153,7 @@
             </td>
             <td width="10%" align="left" valign="top">
                 <p>
-                    <a href="<?php echo U('/Home/Other/contact');?>" class="downlistlink">会员维权</a>
+                    <a href="<?php echo U('/Home/Other/member');?>" class="downlistlink">会员维权</a>
                 </p>
 
                 <p>
@@ -160,7 +161,7 @@
                 </p>
 
                 <p>
-                    <a href="<?php echo U('/Home/Other/member');?>" class="downlistlink">联系我们</a>
+                    <a href="<?php echo U('/Home/Other/contact');?>" class="downlistlink">联系我们</a>
                 </p>
 
                 <p>
@@ -279,7 +280,7 @@
             </td>
             <td width="73%" align="center" valign="top">
 
-                <?php $__FOR_START_6523__=0;$__FOR_END_6523__=3;for($i=$__FOR_START_6523__;$i < $__FOR_END_6523__;$i+=1){ ?><div class="ActivityBlock box<?php echo ($i+1); ?>">
+                <?php $__FOR_START_2829__=0;$__FOR_END_2829__=3;for($i=$__FOR_START_2829__;$i < $__FOR_END_2829__;$i+=1){ ?><div class="ActivityBlock box<?php echo ($i+1); ?>">
                         <table width="95%" border="0">
                             <tbody>
                             <tr>

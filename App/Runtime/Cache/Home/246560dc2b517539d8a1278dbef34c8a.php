@@ -3,10 +3,13 @@
 <head lang="en">
     <meta charset="UTF-8">
 
-    <link type="text/css" rel="stylesheet" href="/AUNET/Public/general.css">
-    <link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsSrc/style/top.css">
-    <link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsSrc/style/banner.css">
-    <link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsSrc/style/buttom.css">
+    <link type="text/css" rel="stylesheet" href="/AUNET/Public/general/general.css">
+    <link type="text/css" rel="stylesheet" href="/AUNET/Public/general/top.css">
+    <link type="text/css" rel="stylesheet" href="/AUNET/Public/general/banner.css">
+    <link type="text/css" rel="stylesheet" href="/AUNET/Public/general/buttom.css">
+    <script type="text/javascript" src="/AUNET/Public/js/jquery.js"></script>
+    <script type="text/javascript" src="/AUNET/Public/NewsSrc/js/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="/AUNET/Public/NewsSrc/js/jquery.easing.min.js"></script>
 
 
     <style>
@@ -23,9 +26,7 @@
     </style>
 
 
-    <script type="text/javascript" src="/AUNET/Public/NewsSrc/js/jquery.js"></script>
-    <script type="text/javascript" src="/AUNET/Public/NewsSrc/js/jquery.flexslider.js"></script>
-    <script type="text/javascript" src="/AUNET/Public/NewsSrc/js/jquery.easing.min.js"></script>
+
 
     <script>
 
@@ -152,7 +153,7 @@
             </td>
             <td width="10%" align="left" valign="top">
                 <p>
-                    <a href="<?php echo U('/Home/Other/contact');?>" class="downlistlink">会员维权</a>
+                    <a href="<?php echo U('/Home/Other/member');?>" class="downlistlink">会员维权</a>
                 </p>
 
                 <p>
@@ -160,7 +161,7 @@
                 </p>
 
                 <p>
-                    <a href="<?php echo U('/Home/Other/member');?>" class="downlistlink">联系我们</a>
+                    <a href="<?php echo U('/Home/Other/contact');?>" class="downlistlink">联系我们</a>
                 </p>
 
                 <p>
