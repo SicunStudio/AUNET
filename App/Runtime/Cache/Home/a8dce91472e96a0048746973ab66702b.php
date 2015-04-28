@@ -175,143 +175,205 @@
 <!doctype html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>最新动态</title>
-    <script>
-        $(document).ready(
-                function () {
+<meta charset="utf-8">
+<title>FAQ首页</title>
+ <style>
+ .slidebarlink{
+	 padding:12px 12px;
+	 font-size:22px;
+	 margin:15px;
+	 display:block;
+	 color:#444e41;
+	 transition:.2s;
+	 border-radius:3px;
 
-                    $(".a-top").mouseenter(
-                            function (e) {
-                                $("#downlist").slideDown("fast");
-                            });
+	 }
 
-                    $("#downlist").mouseenter(
-                            function (e) {
-                                $("#downlist").slideDown("fast");
-                            });
+.now{color:#FFFFFF;
+	background-color:#74b05c;}
+
+.slidebarlink:hover{
+	color:#FFFFFF;
+	background-color:#74b05c;
+}
+
+#note{
+	width:80%;
+	border:none;
+	margin-left:10px;
+	font-size:25px;
+	}
+
+.subtitle_container{
+	width:250px;
+	font-size:22px;
+	margin:20px auto;
+	background-color:#9bd288;
+	color:#ffffff;
+	border:none;
+	border-radius:2px;
+	line-height:50px;
+	text-align:center;
+}
+
+.namecontainer{
+	padding:10px auto;
+	overflow:auto;
+	margin-bottom:20px;
+
+}
 
 
-                    $("#downlist").mouseleave(
-                            function (e) {
-                                $("#downlist").slideUp("fast");
-                            });
+.name{
+	padding:10px;
+	line-height:30px;
+	height:30px;
+	font-size:20px;
+	display:block;
+	margin-left:10px;
+	margin-top:10px;
+	float:left;
+	background-color:#e6f6c5;
+	border-radius:5px;
+	}
 
-                });
-    </script>
-    <style>
-        .slidebarlink {
-            padding: 12px 12px;
-            font-size: 22px;
-            margin: 15px;
-            display: block;
-            color: #444e41;
-            transition: .2s;
-            border-radius: 3px;
 
-        }
 
-        .now {
-            color: #FFFFFF;
-            background-color: #74b05c;
-        }
-
-        .slidebarlink:hover {
-            color: #FFFFFF;
-            background-color: #74b05c;
-        }
-
-        .ActivityBlock {
-            width: 80%;
-            padding: 8px;
-            margin: 25px auto;
-            height: 150px;
-        }
-
-        .box1 {
-            background-color: #ffa968;
-        }
-
-        .box2 {
-            background-color: #addf7e
-        }
-
-        .box3 {
-            background-color: #7db3f1;
-        }
-
-        .titlefirst {
-            font-size: 32px;
-            color: #ffffff;
-        }
-
-        .titletext {
-            font-size: 24px;
-            color: #ffffff;
-        }
-
-        .normaltext {
-            font-size: 20px;
-            color: #ffffff;
-        }
-    </style>
-
+</style>
+ 
 </head>
 
 <body>
 
 
-<div id="wrap">
-    <table width="99%" border="0" style="margin:25px 0px">
-        <tbody>
-        <tr>
-            <td height="59" colspan="2" align="left" valign="middle" style="color:#444e41"><span style="font-size:34px">&nbsp;&nbsp;&nbsp;&nbsp;新闻&nbsp;&nbsp;</span><span
-                    style="font-size:24px">&gt;&gt;&nbsp;&nbsp;最新动态</span></td>
-        </tr>
-        <tr>
-            <td width="27%" valign="top">
-                <p><a href="<?php echo U('/Home/News/Index');?>" class="slidebarlink now">▶&nbsp;最新动态</a></p>
+ 
+ <div id="wrap">
+     <div id="title_container">
+         <p id="title">TODO:添加标题内容</p>
+     </div>
+     <div id="list">
+         <div class="subtitle_container">
+             科技创新类
+         </div>
+         
+         <div class="namecontainer">
+             <div class="name">A+U协会</div>
+             <div class="name">数学建模协会</div>
+             <div class="name">计算机协会</div>
+             <div class="name">电子商务协会</div>
+             <div class="name">科幻协会</div>
+             <div class="name">iRobot团队</div>
+         </div>
+         
+         <div class="subtitle_container">
+             科普公益类
+         </div>
+         <div class="namecontainer">
+           <div class="name">图书馆学生管理委员会</div>
+           <div class="name">援之缘支教协会</div>
+           <div class="name">安全知识普及协会</div>
+           <div class="name">碧水环保协会</div>
+           <div class="name">爱心协会</div>
+           <div class="name">国防协会</div>
+           <div class="name">红十字队</div>
+           <div class="name">微梦社会工作者空间协会</div>
+         </div>
+         <div class="subtitle_container">
+             理论研究类
+         </div>
+         <div class="namecontainer">
+             <div class="name">市场营销协会</div>
+             <div class="name">法律协会</div>
+             <div class="name">未来精英俱乐部</div>
+             <div class="name">创业者协会</div>
+             <div class="name">未来领导者协会</div>
+         </div>
+       
+         <div class="subtitle_container">
+             技能培养类
+         </div>
+         <div class="namecontainer">
+            <div class="name">大学生辩论社</div>
+            <div class="name">英语协会</div>
+            <div class="name">学生国际交流协会</div>
+            <div class="name">记忆协会</div>
+            <div class="name">服装设计与剪裁协会</div>
+            <div class="name">心语手语协会</div>
+            <div class="name">口语沙龙协会</div>
+            <div class="name">演讲与口才协会</div>
+            <div class="name">德语协会</div>
+            <div class="name">法语协会</div>
+            <div class="name">日语协会</div>
+            <div class="name">IS口语协会</div>
+            <div class="name">读书会</div>
+            <div class="name">海之盾海洋协会</div>
+            <div class="name">爱唱歌协会</div>
+            <div class="name">美食协会</div>
+            <div class="name">粤语协会</div>
+       </div>
+       
+         <div class="subtitle_container">
+             文艺表演类
+         </div>
+         <div class="namecontainer">
+            <div class="name">笛箫协会</div>
+            <div class="name">蓝天剧社</div>
+            <div class="name">魔术协会</div>
+            <div class="name">喻园舞社</div>
+            <div class="name">吉他协会</div>
+            <div class="name">风蓝动漫社</div>
+            <div class="name">拉丁舞协会</div>
+            <div class="name">博雅古典爱乐协会</div>
+         </div>
+       
+         <div class="subtitle_container">
+             艺术创作类
+         </div>
+       <div class="namecontainer">
+            <div class="name">陶艺学社</div>
+            <div class="name">摄影协会</div>
+            <div class="name">书画协会</div>
+            <div class="name">夏雨诗社</div>
+            <div class="name">铎声文学社</div>
+            <div class="name">华中篆刻社</div>
+            <div class="name">瑜山国学社</div>
+            <div class="name">手绘POP协会</div>
+            <div class="name">电影协会</div>
+       </div>
+       
+         <div class="subtitle_container">
+             体育休闲类
+         </div>
+         <div class="namecontainer">
+            <div class="name">华中科技大学网球社</div>
+            <div class="name">桥牌协会</div>
+            <div class="name">泊心瑜伽协会</div>
+            <div class="name">篮球协会</div>
+            <div class="name">乒乓球协会</div>
+            <div class="name">喻家山围棋社</div>
+            <div class="name">跆拳道协会</div>
+            <div class="name">武术协会</div>
+            <div class="name">羽毛球协会</div>
+            <div class="name">远征协会</div>
+            <div class="name">自行车协会</div>
+            <div class="name">滑板社</div>
+            <div class="name">排球协会</div>
+            <div class="name">566轮滑协会</div>
+            <div class="name">星空网球俱乐部</div>
+            <div class="name">台球协会</div>
+            <div class="name">象棋人生协会</div>
+         </div>
+       
+     
+     
+     
+     
+     </div><!-- 列表层结束 -->
 
-                <p><a href="<?php echo U('/Home/Activity/Index');?>" class="slidebarlink">&gt;活动预告</a></p>
-
-                <p><a href="<?php echo U('/Home/BroadCast/Index');?>" class="slidebarlink">&gt;公告栏</a></p>
-            </td>
-            <td width="73%" align="center" valign="top">
-
-                <?php $__FOR_START_13765__=0;$__FOR_END_13765__=3;for($i=$__FOR_START_13765__;$i < $__FOR_END_13765__;$i+=1){ ?><div class="ActivityBlock box<?php echo ($i+1); ?>">
-                        <table width="95%" border="0">
-                            <tbody>
-                            <tr>
-                                <td width="30%" rowspan="2">
-                                    <?php if($news[$i]['pic'] == ' '): ?><img src="/AUNET/Public/NewsSrc/im/dh.png" width="180" />
-                                        <?php else: ?>
-
-                                        <img src="<?php echo ($news[$i]["pic"]); ?>" width="65%" /><?php endif; ?>
-
-                                </td>
-                                <td width="70%" height="40" valign="top"><a href="<?php echo U('/Home/NewsDetail/index',array('id'=>$news[$i]['id']));?>"><span class="titlefirst"><?php echo (msubstr($news[$i]["title"],0,1)); ?></span>
-                                    <span class="titletext"><?php echo msubstr($news[$i]['title'],1,strlen($news[$i]['title']));?></span>  </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td height="73"><span class="normaltext"><?php echo ($news[$i]["text"]); ?></span></td>
-                            </tr>
-                            </tbody>
-                        </table>
-
-                    </div><?php } ?>
-
-
-            </td>
-        </tr>
-        </tbody>
-    </table>
-    <div align="center">
-        <span class="rows">共<?php echo ($count); ?>条记录</span>
-        <?php echo ($page); ?>
-    </div>
-
-</div>
+ 
+ </div>
+ <!-- wrap层结束 -->
+ 
 
 </body>
 </html>

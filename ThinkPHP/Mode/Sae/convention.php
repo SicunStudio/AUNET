@@ -36,6 +36,7 @@ return array(
         '/Public/NewsSrc'   =>$st->getUrl('public','NewsSrc'),
         '/Public/FAQSrc'    =>$st->getUrl('public','FAQSrc'),
         '/Public/js'    =>$st->getUrl('public','js'),
+        '/Public/OtherSrc'  =>$st->getUrl('public','OtherSrc'),
     ),
     'LOG_TYPE'          =>  'Sae',
     'DATA_CACHE_TYPE'   =>  'Memcachesae',

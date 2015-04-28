@@ -81,7 +81,7 @@
             <td width="13%" align="center" valign="middle" class="NaviLinkContainer"><a class="a-top" href="#"
                                                                                         style="color: #FFFFFF">社联</a>
             </td>
-            <td width="13%" align="center" valign="middle" class="NaviLinkContainer"><a class="a-top" href="#"
+            <td width="13%" align="center" valign="middle" class="NaviLinkContainer"><a class="a-top" href="<?php echo U('/Home/Association/index');?>"
                                                                                         style="color: #FFFFFF">社团</a>
             </td>
             <td width="13%" align="center" valign="middle" class="NaviLinkContainer"><a class="a-top" href="#"
