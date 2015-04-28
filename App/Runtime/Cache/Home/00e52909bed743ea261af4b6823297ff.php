@@ -184,13 +184,13 @@
     <style>
 
         .slideimgs {
-            height: 600px;
+            height: auto;
             overflow: hidden;
         }
 
         #flexsliderarea {
             width: 100%;
-            height: 600px;
+            height: auto;
         }
     </style>
 
@@ -265,7 +265,7 @@
             <td valign="middle">
                 <div class="new-small new1">
                   <div class="newsblock_container">
-                    <a href="#">
+                    <a href="<?php echo U('/Home/NewsDetail/index',array('id'=>$news[0]['id']));?>">
                         <p class="new-head1"><span class="first"><?php echo (msubstr($news[0]["title"],0,1)); ?></span><?php echo msubstr($news[0]['title'],1,strlen($news[0]['title']));?></p>
                         <p class="new-xiaoxi1"><?php echo ($news[0]["text"]); ?></p>
                     </a>
@@ -275,7 +275,7 @@
             <td align="left">
               <div class="newsblock_container">
                 <div class="new-small new2">
-                    <a href="#">
+                    <a href="<?php echo U('/Home/NewsDetail/index',array('id'=>$news[1]['id']));?>">
                         <p class="new-head1"><span class="first"><?php echo (msubstr($news[1]["title"],0,1)); ?></span><?php echo msubstr($news[1]['title'],1,strlen($news[1]['title']));?></p>
                         <p class="new-xiaoxi1"><?php echo ($news[1]["text"]); ?></p>
                     </a>
@@ -289,7 +289,7 @@
             <td valign="middle" >
               <div class="newsblock_container">
                 <div class="new-small new3">
-                    <a href="#">
+                    <a href="<?php echo U('/Home/NewsDetail/index',array('id'=>$news[2]['id']));?>">
                         <p class="new-head1"><span class="first"><?php echo (msubstr($news[2]["title"],0,1)); ?></span><?php echo msubstr($news[2]['title'],1,strlen($news[2]['title']));?></p>
                         <p class="new-xiaoxi1"><?php echo ($news[2]["text"]); ?></p>
                     </a>
@@ -299,7 +299,7 @@
             <td align="left">
               <div class="newsblock_container">
                 <div class="new-small new4">
-                    <a href="#">
+                    <a href="<?php echo U('/Home/NewsDetail/index',array('id'=>$news[3]['id']));?>">
                         <p class="new-head1"><span class="first"><?php echo (msubstr($news[3]["title"],0,1)); ?></span><?php echo msubstr($news[3]['title'],1,strlen($news[3]['title']));?></p>
                         <p class="new-xiaoxi1"><?php echo ($news[3]["text"]); ?></p>
                     </a>
