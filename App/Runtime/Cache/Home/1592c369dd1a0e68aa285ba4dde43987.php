@@ -142,7 +142,7 @@
                 </p>
 
                 <p>
-                    <a href="#" class="downlistlink">微仔说</a>
+                    <a href="<?php echo U('/Home/WeiZai/index');?>" class="downlistlink">微仔说</a>
                 </p>
 
                 <p>&nbsp;</p>
@@ -221,8 +221,6 @@
 		break;
 			}
 	};
-	
-	<!-- 设置默认接受反馈 -->
 
     ChangeRecFeedback(1);
 
@@ -324,7 +322,7 @@
         </td>
       <td width="73%" align="center" valign="top">
       
-      <form id="main" method="post" action="<?php echo U('/Admin/Advise/advise_handle');?>"><table width="90%" border="0">
+      <form id="main" method="post" action="<?php echo U('/Home/Other/advise_handle');?>"><table width="90%" border="0">
         <tbody>
           <tr>
             <td width="29%" height="71">
@@ -421,7 +419,6 @@
     </tr>
     </tbody>
 </table>
- <input type="text" class="inputbox" >
 
  
  </div>

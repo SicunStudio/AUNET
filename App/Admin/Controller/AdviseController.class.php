@@ -33,18 +33,6 @@ class AdviseController extends CommonController{
             $this->error('删除失败');
         }
     }
-    public function advise_handle(){
-        $data=array();
-        $data['name']=I('info_name');
-        $data['content']=I('text');
-        $data['phone']=I('info_phone');
-        $data['qq']=I('info_qq');
-        $data['feedback']=I('ReceiveFeedback',0,'intval');
-        $data['title']=I('subject');
-        if(M('advise')->add($data)){
-            $this->redirect('/Home/Other/advice');
-        }
 
-    }
 
 }

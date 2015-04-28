@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-
+    <title></title>
     <link type="text/css" rel="stylesheet" href="/AUNET/Public/general/general.css">
     <link type="text/css" rel="stylesheet" href="/AUNET/Public/general/top.css">
     <link type="text/css" rel="stylesheet" href="/AUNET/Public/general/banner.css">
@@ -61,7 +61,57 @@
 
                 });
     </script>
-    <title></title>
+    <script>
+        $(document).ready(
+                function () {
+
+                    $(".a-top").mouseenter(
+                            function (e) {
+                                $("#downlist").slideDown("fast");
+                            });
+
+                    $("#downlist").mouseenter(
+                            function (e) {
+                                $("#downlist").slideDown("fast");
+                            });
+
+
+                    $("#downlist").mouseleave(
+                            function (e) {
+                                $("#downlist").slideUp("fast");
+                            });
+
+                });
+    </script>
+    <style>
+        .slidebarlink {
+            padding: 12px 12px;
+            font-size: 22px;
+            margin: 15px;
+            display: block;
+            color: #444e41;
+            transition: .2s;
+            border-radius: 3px;
+
+        }
+
+        .now {
+            color: #FFFFFF;
+            background-color: #74b05c;
+        }
+
+        .slidebarlink:hover {
+            color: #FFFFFF;
+            background-color: #74b05c;
+        }
+
+        .photos {
+            height: 180px;
+            width: 180px;
+            border: 1px solid #74B05C;
+        }
+
+    </style>
 </head>
 <body>
 <div id="header">
@@ -172,12 +222,30 @@
         </tbody>
     </table>
 </div>
-<!doctype html>
+<div id="wrap">
+    <table width="99%" border="0" style="margin:25px 0px">
+        <tbody>
+        <tr>
+            <td height="59" colspan="2" align="left" valign="middle" style="color:#444e41"><span style="font-size:34px">&nbsp;&nbsp;&nbsp;&nbsp;社联&nbsp;&nbsp;</span><span
+                    style="font-size:24px">Association Union</span></td>
+        </tr>
+        <tr>
+            <td width="27%" valign="top">
+                <p><a href="<?php echo U('/Home/AU/index');?>" class="slidebarlink">&gt;社联简介</a></p>
+
+                <p><a href="<?php echo U('/Home/AU/department');?>" class="slidebarlink">&gt;社联机构</a></p>
+
+                <p><a href="<?php echo U('/Home/AU/regulation');?>" class="slidebarlink">&gt;制度汇编</a></p>
+
+                <p><a href="<?php echo U('/Home/AU/event');?>" class="slidebarlink">&gt;社联大事记</a></p>
+
+                <p><a href="<?php echo U('/Home/WeiZai/index');?>" class="slidebarlink now">▶&nbsp;微仔说</a></p>
+            </td>
+            <!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
-<title>FAQ首页</title>
-   <link href="/AUNET/Public/FAQSrc/content.css" rel="stylesheet" type="text/css">
+<title>微仔说</title>
  <script>
   $(document).ready(
 	   function() {
@@ -221,14 +289,13 @@
 	background-color:#74b05c;
 }
 
-#note{
-	width:80%;
-	border:none;
-	margin-left:10px;
-	font-size:25px;
-	}
+.photos{
+	height:180px;
+	width:180px;
+	border:1px solid #74B05C;
+}
 
-</style>
+ </style>
  
 </head>
 
@@ -236,51 +303,60 @@
 
 
 
- 
- <div id="wrap">
- <table width="99%" border="0" style="margin:25px 0px">
-  <tbody>
-    <tr>
-      <td height="59" colspan="2" align="left" valign="middle" style="color:#444e41"><span style="font-size:34px">&nbsp;&nbsp;&nbsp;&nbsp;FAQ&nbsp;&nbsp;</span><span style="font-size:24px">常见问题&amp;解答</span></td>
-      </tr>
-    <tr>
-      <td width="27%" valign="top">
-        <p><a href="<?php echo U('/Home/FAQ/index');?>" class="slidebarlink now">▶&nbsp;FAQ首页</a></p>
-        <p><a href="<?php echo U('/Home/FAQ/faq_question');?>" class="slidebarlink">&gt;常见问题</a></p>
-        <p><a href="<?php echo U('/Home/FAQ/faq_financial');?>" class="slidebarlink">&gt;财务部</a></p>
-        <p><a href="<?php echo U('/Home/FAQ/faq_secretary');?>" class="slidebarlink">&gt;秘书部</a></p>
-        <p><a href="<?php echo U('/Home/FAQ/faq_media');?>" class="slidebarlink">&gt;新媒体工作室</a></p>
-        <p><a href="<?php echo U('/Home/FAQ/faq_art');?>" class="slidebarlink">&gt;文艺拓展部</a></p>
-        <p><a href="<?php echo U('/Home/FAQ/faq_supervise');?>" class="slidebarlink">&gt;财监委</a></p>
-        <p><a href="<?php echo U('/Home/FAQ/faq_guide');?>" class="slidebarlink">&gt;社团成立指南</a></p>
-        </td>
-      <td width="73%" align="left" valign="top"><p>&nbsp;</p>
-        <p>
-        <div id="note">
-        <p>建议使用 Chrome IE9及以上 Opera Firefox等浏览器</p>
-        </div>
-        </p>
-      
-      
-      
-      
-      
-      
-      
-      </td>
-    </tr>
-    </tbody>
-</table>
+      <td width="73%" align="center" valign="top">
+		  <table width="800px">
+		  <tr><td colspan="3">
+			<span style="width:680px; border:ridge 3px #74B05C; display:block; margin-left:60px; float:left;"><p style=" margin:14px; font-size:20px; text-align:left; color:#74B05C;">大家好我是仔仔，大名微仔，是华中大社联的吉祥物。我圆圆的身体是嫩绿色，头上顶着@天线，小短腿和手都萌萌哒(&lt;_&gt;)。绿色是生机和活力的象征，我们社联就是这样一个积极向上的团体。天线是我用来接收各种新创意和新念头的工具，能用脑电波和大家沟通哦。关于我的作用嘛，我会变大变小变成各种身份出现在社联的活动中，大家看到我就能够认出和我一样萌萌哒的社联人啦。</p></span>
+		  </td></tr>
+		  <tr><td colspan="3">
+		    <span style=" width:800px; height:30px;display:block"></span>
+			<span style="display:inline">
+			<h2 style="float:left; margin-left:64px; margin-top:20px; clear:left; color:#444E41">微仔相册</h2>
+			<a style="float:right; margin-top:22px; margin-right:80px;" href="#">&lt;&lt;更多</a>
+			</span>
+		  </td></tr>
 
- 
- </div>
- 
+		  <tr><td colspan="3"><span style=" width:800px; height:30px;display:block"></span></td></tr>
+
+
+		  <tr>
+		  <td>
+			<span>
+			<a href="bumen.html" style="margin-left:60px;"><img src="/AUNET/Public/AUSrc/bumen/思存工作室.jpg" class="photos"/></a><br/>
+			<a href="bumen.html" style="color:#444E41; font:'幼圆'; font-size:20px; margin-left:106px;">部门微仔</a>
+			</span>
+		   </td>
+		   <td>
+			<span><a href="shetuan.html" style="margin-left:8px;"><img src="/AUNET/Public/AUSrc/shetuan/创业者协会.jpg" class="photos"/></a><br/>
+			<a href="shetuan.html" style="color:#444E41; font:'幼圆'; font-size:20px; margin-left:56px;">社团微仔</a>
+			</span>
+		   </td>
+		   <td>
+			<span><a href="heci.html" style="margin-left:18px;"><img src="/AUNET/Public/AUSrc/hetu/清明.jpg" class="photos"/></a><br/>
+			<a href="au_weizai_hetu.html" style="color:#444E41; font:'幼圆'; font-size:20px; margin-left:64px;">微仔贺词</a>
+			</span>			
+		  </td>
+		  </tr>
+
+
+		  </table>
+      </td>
+
+
+
 
 </body>
 </html>
 
+        </tr>
+        </tbody>
+    </table>
+
+
+</div>
 <div id="footer">
     <p class="friendlink">友情链接</p>
 </div>
+
 </body>
 </html>

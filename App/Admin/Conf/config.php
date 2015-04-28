@@ -7,7 +7,7 @@ return array(
     'USER_AUTH_KEY'         =>'uid',  //session用户识别号
     'NOT_AUTH_MODULE'      =>'Index,Download',     //无需验证的控制器
     'NOT_AUTH_ACTION'      =>'rbac_index,logout,addUserHandle,addNodeHandle,addRoleHandle,setAccess,editpwd,editpwdHandle,delNode,ueditor,
-                            runAddCate,sortCate,runAddAttr,editpwdByUser,editpwdByUserHandle,addForecastHandle,forecast_index,help',
+                            runAddCate,sortCate,runAddAttr,editpwdByUser,editpwdByUserHandle,addForecastHandle,forecast_index,help,advise_handle',
     'RBAC_ROLE_TABLE'       =>'aunet_role',
     'RBAC_USER_TABLE'       =>'aunet_role_user',
     'RBAC_ACCESS_TABLE'     =>'aunet_access',

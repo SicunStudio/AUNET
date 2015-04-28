@@ -142,7 +142,7 @@
                 </p>
 
                 <p>
-                    <a href="#" class="downlistlink">微仔说</a>
+                    <a href="<?php echo U('/Home/WeiZai/index');?>" class="downlistlink">微仔说</a>
                 </p>
 
                 <p>&nbsp;</p>

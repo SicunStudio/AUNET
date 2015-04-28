@@ -21,5 +21,20 @@ class OtherController extends Controller{
     public function member(){
         $this->display();
     }
+    public function advise_handle(){
+        $data=array();
+        $data['name']=I('info_name');
+        $data['content']=I('text');
+        $data['phone']=I('info_phone');
+        $data['qq']=I('info_qq');
+        $data['feedback']=I('ReceiveFeedback',0,'intval');
+        $data['title']=I('subject');
+        if(M('advise')->add($data)){
+            $this->success('您的建议已经被接受');
+        }else{
+            $this->error('提交错误');
+        }
+
+    }
 
 }

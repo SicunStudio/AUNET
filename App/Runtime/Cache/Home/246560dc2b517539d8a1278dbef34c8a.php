@@ -142,7 +142,7 @@
                 </p>
 
                 <p>
-                    <a href="#" class="downlistlink">微仔说</a>
+                    <a href="<?php echo U('/Home/WeiZai/index');?>" class="downlistlink">微仔说</a>
                 </p>
 
                 <p>&nbsp;</p>
@@ -295,7 +295,7 @@ lilist[j].style.backgroundColor='#ffffff';
         <p><a href="<?php echo U('/Home/AU/department');?>" class="slidebarlink">&gt;社联机构</a></p>
         <p><a href="<?php echo U('/Home/AU/regulation');?>" class="slidebarlink">&gt;制度汇编</a></p>
         <p><a href="<?php echo U('/Home/AU/event');?>" class="slidebarlink now">▶&nbsp;社联大事记</a></p>
-        <p><a href="#" class="slidebarlink">&gt;微仔说</a></p>
+        <p><a href="<?php echo U('/Home/WeiZai/index');?>" class="slidebarlink">&gt;微仔说</a></p>
         </td>
       <td width="58%" align="left" valign="top">
       <div class="eventbox 2014 1">

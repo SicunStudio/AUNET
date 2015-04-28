@@ -24,6 +24,8 @@ class AUController extends Controller{
     public function event(){
         $this->display();
     }
-
+    public function weizai(){
+        $this->display();
+    }
 
 }

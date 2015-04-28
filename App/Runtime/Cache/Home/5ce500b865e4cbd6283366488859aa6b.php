@@ -142,7 +142,7 @@
                 </p>
 
                 <p>
-                    <a href="#" class="downlistlink">微仔说</a>
+                    <a href="<?php echo U('/Home/WeiZai/index');?>" class="downlistlink">微仔说</a>
                 </p>
 
                 <p>&nbsp;</p>
@@ -244,7 +244,7 @@
         <p><a href="<?php echo U('/Home/AU/department');?>" class="slidebarlink">&gt;社联机构</a></p>
         <p><a href="<?php echo U('/Home/AU/regulation');?>" class="slidebarlink now">▶&nbsp;制度汇编</a></p>
         <p><a href="<?php echo U('/Home/AU/event');?>" class="slidebarlink">&gt;社联大事记</a></p>
-        <p><a href="#" class="slidebarlink">&gt;微仔说</a></p>
+        <p><a href="<?php echo U('/Home/WeiZai/index');?>" class="slidebarlink">&gt;微仔说</a></p>
         </td>
       <td width="73%" align="center" valign="top">
       下载：<a href="#" name="DownloadRegulation" class="regulation">学生社团联合会制度汇编2015.doc</a>
