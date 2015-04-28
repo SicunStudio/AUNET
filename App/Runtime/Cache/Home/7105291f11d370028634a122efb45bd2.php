@@ -177,9 +177,7 @@
 <head>
 <meta charset="utf-8">
 <title>FAQ首页</title>
- <link type="text/css" rel="stylesheet" href="/AUNET/Public/general.css">
    <link href="/AUNET/Public/FAQSrc/content.css" rel="stylesheet" type="text/css">
- <script type="text/javascript" src="/AUNET/Public/js/jquery.js"></script>
  <script>
   $(document).ready(
 	   function() {

@@ -177,8 +177,6 @@
 <head>
 <meta charset="utf-8">
 <title>社联大事记</title>
- <link type="text/css" rel="stylesheet" href="/AUNET/Public/general.css">
- <script type="text/javascript" src="/AUNET/Public/js/jquery.js"></script>
  <script>
   $(document).ready(
 	   function() {
