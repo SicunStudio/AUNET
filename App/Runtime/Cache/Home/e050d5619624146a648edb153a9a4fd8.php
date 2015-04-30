@@ -200,27 +200,6 @@
                 });
     </script>
     <style>
-        .slidebarlink {
-            padding: 12px 12px;
-            font-size: 22px;
-            margin: 15px;
-            display: block;
-            color: #444e41;
-            transition: .2s;
-            border-radius: 3px;
-
-        }
-
-        .now {
-            color: #FFFFFF;
-            background-color: #74b05c;
-        }
-
-        .slidebarlink:hover {
-            color: #FFFFFF;
-            background-color: #74b05c;
-        }
-
         .ActivityBlock {
             width: 80%;
             padding: 8px;
@@ -278,7 +257,7 @@
             </td>
             <td width="73%" align="center" valign="top">
 
-                <?php $__FOR_START_1161__=0;$__FOR_END_1161__=3;for($i=$__FOR_START_1161__;$i < $__FOR_END_1161__;$i+=1){ ?><div class="ActivityBlock box<?php echo ($i+1); ?>">
+                <?php $__FOR_START_6946__=0;$__FOR_END_6946__=3;for($i=$__FOR_START_6946__;$i < $__FOR_END_6946__;$i+=1){ ?><div class="ActivityBlock box<?php echo ($i+1); ?>">
                         <table width="95%" border="0">
                             <tbody>
                             <tr>
