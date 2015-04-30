@@ -1,0 +1,410 @@
+[ 2015-05-01T07:37:58+08:00 ] 127.0.0.1 /AUNET/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.010105s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000904s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000947s ]
+SQL: SHOW COLUMNS FROM `aunet_news` [ RunTime:0.0108s ]
+SQL: SELECT * FROM `aunet_news` ORDER BY time desc LIMIT 4   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000084s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000125s ]
+NOTIC: [8] Undefined offset: 1 D:\xampp\htdocs\AUNET\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 278 行.
+NOTIC: [8] Undefined offset: 1 D:\xampp\htdocs\AUNET\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 279 行.
+NOTIC: [8] Undefined offset: 1 D:\xampp\htdocs\AUNET\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 279 行.
+NOTIC: [8] Undefined offset: 1 D:\xampp\htdocs\AUNET\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 279 行.
+NOTIC: [8] Undefined offset: 1 D:\xampp\htdocs\AUNET\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 280 行.
+NOTIC: [8] Undefined offset: 2 D:\xampp\htdocs\AUNET\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 292 行.
+NOTIC: [8] Undefined offset: 2 D:\xampp\htdocs\AUNET\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 293 行.
+NOTIC: [8] Undefined offset: 2 D:\xampp\htdocs\AUNET\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 293 行.
+NOTIC: [8] Undefined offset: 2 D:\xampp\htdocs\AUNET\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 293 行.
+NOTIC: [8] Undefined offset: 2 D:\xampp\htdocs\AUNET\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 294 行.
+NOTIC: [8] Undefined offset: 3 D:\xampp\htdocs\AUNET\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 302 行.
+NOTIC: [8] Undefined offset: 3 D:\xampp\htdocs\AUNET\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 303 行.
+NOTIC: [8] Undefined offset: 3 D:\xampp\htdocs\AUNET\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 303 行.
+NOTIC: [8] Undefined offset: 3 D:\xampp\htdocs\AUNET\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 303 行.
+NOTIC: [8] Undefined offset: 3 D:\xampp\htdocs\AUNET\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 304 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021029s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021073s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000649s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000677s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000867s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000911s ]
+
+[ 2015-05-01T07:38:29+08:00 ] 127.0.0.1 /AUNET/index.php/Home/AU/event.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000444s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000516s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000561s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000142s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021775s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021822s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000333s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000371s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000518s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000562s ]
+
+[ 2015-05-01T07:38:29+08:00 ] 127.0.0.1 /AUNET/index.php/Home/AU/event_img/2008/%E9%A2%81%E5%A5%96%E6%99%9A%E4%BC%9A.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000422s ]
+
+[ 2015-05-01T07:38:29+08:00 ] 127.0.0.1 /AUNET/index.php/Home/AU/aaaa.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000410s ]
+
+[ 2015-05-01T07:38:31+08:00 ] 127.0.0.1 /AUNET/index.php/Home/AU/regulation.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000308s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000824s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000865s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000111s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.052889s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.052946s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000623s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000654s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000873s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000908s ]
+
+[ 2015-05-01T07:38:32+08:00 ] 127.0.0.1 /AUNET/index.php/Home/AU/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000332s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000390s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000425s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000108s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000151s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012281s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012324s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000305s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000331s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000484s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000516s ]
+
+[ 2015-05-01T07:41:27+08:00 ] 127.0.0.1 /AUNET/index.php/Home/AU/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000425s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000825s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000889s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000184s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000228s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009477s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009516s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000477s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000504s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000621s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000654s ]
+
+[ 2015-05-01T07:41:43+08:00 ] 127.0.0.1 /AUNET/index.php/Home/AU/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000569s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000950s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000148s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000210s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012957s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013013s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000508s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000538s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000637s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000676s ]
+
+[ 2015-05-01T07:42:18+08:00 ] 127.0.0.1 /AUNET/index.php/Home/AU/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000329s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000393s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000427s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000172s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000228s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008403s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008435s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000285s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000311s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000419s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000462s ]
+
+[ 2015-05-01T07:42:18+08:00 ] 127.0.0.1 /AUNET/index.php/Home/AU/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000428s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000646s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000687s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000110s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000156s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009638s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009690s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000600s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000634s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000684s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000721s ]
+
+[ 2015-05-01T07:44:33+08:00 ] 127.0.0.1 /AUNET/index.php/Home/AU/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000479s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000692s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000743s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000291s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000382s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013202s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013254s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000519s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000549s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000695s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000733s ]
+
+[ 2015-05-01T07:44:48+08:00 ] 127.0.0.1 /AUNET/index.php/Home/AU/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000407s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000688s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000732s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000132s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000206s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009914s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009977s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000510s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000539s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000686s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000729s ]
+
+[ 2015-05-01T07:45:58+08:00 ] 127.0.0.1 /AUNET/index.php/Home/AU/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000521s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000867s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000915s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000103s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000142s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010583s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010620s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000479s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000504s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000683s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000714s ]
+
+[ 2015-05-01T07:46:24+08:00 ] 127.0.0.1 /AUNET/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000485s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000673s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000712s ]
+SQL: SHOW COLUMNS FROM `aunet_news` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `aunet_news` ORDER BY time desc LIMIT 4   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000134s ]
+NOTIC: [8] Undefined offset: 1 D:\xampp\htdocs\AUNET\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 278 行.
+NOTIC: [8] Undefined offset: 1 D:\xampp\htdocs\AUNET\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 279 行.
+NOTIC: [8] Undefined offset: 1 D:\xampp\htdocs\AUNET\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 279 行.
+NOTIC: [8] Undefined offset: 1 D:\xampp\htdocs\AUNET\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 279 行.
+NOTIC: [8] Undefined offset: 1 D:\xampp\htdocs\AUNET\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 280 行.
+NOTIC: [8] Undefined offset: 2 D:\xampp\htdocs\AUNET\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 292 行.
+NOTIC: [8] Undefined offset: 2 D:\xampp\htdocs\AUNET\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 293 行.
+NOTIC: [8] Undefined offset: 2 D:\xampp\htdocs\AUNET\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 293 行.
+NOTIC: [8] Undefined offset: 2 D:\xampp\htdocs\AUNET\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 293 行.
+NOTIC: [8] Undefined offset: 2 D:\xampp\htdocs\AUNET\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 294 行.
+NOTIC: [8] Undefined offset: 3 D:\xampp\htdocs\AUNET\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 302 行.
+NOTIC: [8] Undefined offset: 3 D:\xampp\htdocs\AUNET\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 303 行.
+NOTIC: [8] Undefined offset: 3 D:\xampp\htdocs\AUNET\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 303 行.
+NOTIC: [8] Undefined offset: 3 D:\xampp\htdocs\AUNET\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 303 行.
+NOTIC: [8] Undefined offset: 3 D:\xampp\htdocs\AUNET\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 304 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008696s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008733s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000490s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000518s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000626s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000661s ]
+
+[ 2015-05-01T07:50:05+08:00 ] 127.0.0.1 /AUNET/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000410s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000668s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000705s ]
+SQL: SHOW COLUMNS FROM `aunet_news` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `aunet_news` ORDER BY time desc LIMIT 4   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000103s ]
+NOTIC: [8] Undefined offset: 1 D:\xampp\htdocs\AUNET\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 278 行.
+NOTIC: [8] Undefined offset: 1 D:\xampp\htdocs\AUNET\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 279 行.
+NOTIC: [8] Undefined offset: 1 D:\xampp\htdocs\AUNET\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 279 行.
+NOTIC: [8] Undefined offset: 1 D:\xampp\htdocs\AUNET\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 279 行.
+NOTIC: [8] Undefined offset: 1 D:\xampp\htdocs\AUNET\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 280 行.
+NOTIC: [8] Undefined offset: 2 D:\xampp\htdocs\AUNET\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 292 行.
+NOTIC: [8] Undefined offset: 2 D:\xampp\htdocs\AUNET\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 293 行.
+NOTIC: [8] Undefined offset: 2 D:\xampp\htdocs\AUNET\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 293 行.
+NOTIC: [8] Undefined offset: 2 D:\xampp\htdocs\AUNET\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 293 行.
+NOTIC: [8] Undefined offset: 2 D:\xampp\htdocs\AUNET\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 294 行.
+NOTIC: [8] Undefined offset: 3 D:\xampp\htdocs\AUNET\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 302 行.
+NOTIC: [8] Undefined offset: 3 D:\xampp\htdocs\AUNET\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 303 行.
+NOTIC: [8] Undefined offset: 3 D:\xampp\htdocs\AUNET\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 303 行.
+NOTIC: [8] Undefined offset: 3 D:\xampp\htdocs\AUNET\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 303 行.
+NOTIC: [8] Undefined offset: 3 D:\xampp\htdocs\AUNET\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 304 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008780s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008840s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000590s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000630s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000768s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000812s ]
+
+[ 2015-05-01T07:50:07+08:00 ] 127.0.0.1 /AUNET/index.php/Home/AU/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000532s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000883s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000930s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000138s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000185s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011759s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011818s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000770s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000813s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001008s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001074s ]
+
+[ 2015-05-01T07:50:54+08:00 ] 127.0.0.1 /AUNET/index.php/Home/AU/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000351s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000391s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000427s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000101s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000134s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007428s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007460s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000244s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000268s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000394s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000424s ]
+
+[ 2015-05-01T07:51:20+08:00 ] 127.0.0.1 /AUNET/index.php/Home/AU/department.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000409s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000530s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000583s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000086s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007740s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007777s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000245s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000271s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000391s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000423s ]
+
+[ 2015-05-01T07:51:22+08:00 ] 127.0.0.1 /AUNET/index.php/Home/Department/caiwu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000313s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000383s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000419s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000118s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008079s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008133s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000327s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000360s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000519s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000563s ]
+
+[ 2015-05-01T07:51:22+08:00 ] 127.0.0.1 /AUNET/index.php/Home/Department/js/jquery.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000444s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000655s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000733s ]
+ERR: 非法操作:js
+

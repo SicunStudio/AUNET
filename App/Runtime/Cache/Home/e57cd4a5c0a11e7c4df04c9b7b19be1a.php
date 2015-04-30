@@ -177,8 +177,6 @@
 <head>
 <meta charset="utf-8">
 <title>公告栏</title>
- <link type="text/css" rel="stylesheet" href="/AUNET/Public/NewsSrc/style/general.css">
- <script type="text/javascript" src="/AUNET/Public/NewsSrc/js/jquery.js"></script>
  <script>
   $(document).ready(
 	   function() {
@@ -203,24 +201,7 @@
     });
  </script>
  <style>
- .slidebarlink{
-	 padding:12px 12px;
-	 font-size:22px;
-	 margin:15px;
-	 display:block;
-	 color:#444e41;
-	 transition:.2s;
-	 border-radius:3px;
-	 
-	 }
-	 
-.slidebarlink:hover{
-	color:#FFFFFF;
-	background-color:#74b05c;
-}
-.now{color:#FFFFFF;
-	background-color:#74b05c;}
-	.boardtext{
+.boardtext{
 		font-size:18px;
 		color:#74b05c;}
  </style>

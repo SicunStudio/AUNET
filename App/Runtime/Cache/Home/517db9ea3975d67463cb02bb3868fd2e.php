@@ -8,7 +8,7 @@
     <link type="text/css" rel="stylesheet" href="/AUNET/Public/general/banner.css">
     <link type="text/css" rel="stylesheet" href="/AUNET/Public/general/buttom.css">
     <script type="text/javascript" src="js/jquery.js"></script>
-
+    <script type="text/javascript" src="/AUNET/Public/js/jquery.js"></script>
 
     <style>
 
@@ -24,7 +24,7 @@
     </style>
 
 
-    <script type="text/javascript" src="/AUNET/Public/js/jquery.js"></script>
+
 
 
     <title></title>
@@ -180,27 +180,6 @@
                 });
     </script>
     <style>
-        .slidebarlink {
-            padding: 12px 12px;
-            font-size: 22px;
-            margin: 15px;
-            display: block;
-            color: #444e41;
-            transition: .2s;
-            border-radius: 3px;
-
-        }
-
-        .now {
-            color: #FFFFFF;
-            background-color: #74b05c;
-        }
-
-        .slidebarlink:hover {
-            color: #FFFFFF;
-            background-color: #74b05c;
-        }
-
         .de_link {
             margin-top: 200px;
             margin-left: 30px;

@@ -177,8 +177,6 @@
 <head>
     <meta charset="utf-8">
     <title>活动预告</title>
-    <link type="text/css" rel="stylesheet" href="/AUNET/Public/Src/style/general.css">
-    <script type="text/javascript" src="/AUNET/Public/Src/js/jquery.js"></script>
     <script>
         $(document).ready(
                 function () {
@@ -201,28 +199,7 @@
 
                 });
     </script>
-    <style>
-        .slidebarlink {
-            padding: 12px 12px;
-            font-size: 22px;
-            margin: 15px;
-            display: block;
-            color: #444e41;
-            transition: .2s;
-            border-radius: 3px;
 
-        }
-
-        .now {
-            color: #FFFFFF;
-            background-color: #74b05c;
-        }
-
-        .slidebarlink:hover {
-            color: #FFFFFF;
-            background-color: #74b05c;
-        }
-    </style>
 
 </head>
 

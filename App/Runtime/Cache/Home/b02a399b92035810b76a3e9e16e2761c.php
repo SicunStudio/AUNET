@@ -200,27 +200,6 @@
 		
     });
  </script>
- <style>
- .slidebarlink{
-	 padding:12px 12px;
-	 font-size:22px;
-	 margin:15px;
-	 display:block;
-	 color:#444e41;
-	 transition:.2s;
-	 border-radius:3px;
-	 
-	 }
-	 
-	 .now{color:#FFFFFF;
-	background-color:#74b05c;}
-	 
-.slidebarlink:hover{
-	color:#FFFFFF;
-	background-color:#74b05c;
-}
-
-</style>
  
 </head>
 

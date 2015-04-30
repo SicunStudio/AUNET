@@ -1,4 +1,4 @@
-*{
+﻿*{
     margin: 0px;
     padding: 0px;
     font-family: "微软雅黑", "幼圆", "黑体";
@@ -70,3 +70,40 @@ a{
    margin-top: 30px;
 }
 
+
+#backtotop{
+	width:72px;
+	height:72px;
+	overflow:hidden;
+	position:fixed;
+	bottom:50px;
+	right:50px;
+		}
+	
+#backtotop_img{
+	position:relative;
+	top:0px;
+	transition:.3s;
+	}
+
+#backtotop_img:hover
+{ top:-72px;
+}
+
+.slidebarlink {
+	padding: 12px 12px;
+	font-size: 22px;
+	margin: 15px;
+	display: block;
+	color: #444e41;
+	transition: .2s;
+	border-radius: 3px;
+}
+.now {
+	color: #FFFFFF;
+	background-color: #74b05c;
+}
+.slidebarlink:hover {
+	color: #FFFFFF;
+	background-color: #74b05c;
+}

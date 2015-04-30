@@ -178,7 +178,6 @@
  <meta charset="utf-8">
  <title>社联简介</title>
  <link href="/AUNET/Public/AUSrc/style/catalog.css" type="text/css" rel="stylesheet">
- <link href="/AUNET/Public/AUSrc/style/public.css" type="text/css" rel="stylesheet">
  <script>
   $(document).ready(
 	   function() {
@@ -201,30 +200,68 @@
         });
 		
     });
+	
+	$(function() { 
+	$(window).change(function(){
+
+		})
+		
+		var lastswitch=1;
+		
+$(window).scroll(function() { 
+ var scrolldistance=$(window).scrollTop(); 
+ if(scrolldistance>=550)
+ {
+ document.getElementById("z_catalog").style.top=scrolldistance -550+"px";
+ }
+ else
+ {document.getElementById("z_catalog").style.top="5px";}
+
+		var permove=document.getElementById("z_catalog").height / 4;
+if(scrolldistance<=660 && lastswitch!=1)
+{
+	$("#catalog_indicator").animate({top:'3px'},'fast');
+	lastswitch=1;
+}
+
+if(scrolldistance<=1350 && scrolldistance>660 && lastswitch!=2)
+{
+	$("#catalog_indicator").animate({top:'34px'},'fast');
+	lastswitch=2;
+}
+
+if(scrolldistance<=3100 && scrolldistance>1350 && lastswitch!=3)
+{
+	$("#catalog_indicator").animate({top:'68px'},'fast');
+	lastswitch=3;}
+
+if(scrolldistance>3100 && lastswitch!=4)
+{
+	$("#catalog_indicator").animate({top:'97px'},'fast');
+	lastswitch=4;
+}
+		
+}); 
+})
  </script>
- <style>
-.slidebarlink {
-	padding: 12px 12px;
-	font-size: 22px;
-	margin: 15px;
-	display: block;
-	color: #444e41;
-	transition: .2s;
-	border-radius: 3px;
-}
-.now {
-	color: #FFFFFF;
-	background-color: #74b05c;
-}
-.slidebarlink:hover {
-	color: #FFFFFF;
-	background-color: #74b05c;
+<style>
+#catalog_indicator{
+	width:45px;
+	height:24px;
+	border-radius:2px 12px 12px 2px;
+	background-color:#74b05c;
+	position:absolute;
+	top:3px;
+	right:5px;
 }
 </style>
  </head>
 
  <body>
-
+<a name="#top"></a>
+<div id="backtotop">
+ <a href="#top"><img src="/AUNET/Public/general/backtotop.png" id="backtotop_img" width="100%"  alt="返回顶端"/></a>
+</div> 
 
 <div id="wrap">
    <table width="99%" border="0" style="margin:25px 0px">
@@ -235,18 +272,21 @@
        <tr>
         <td width="27%" valign="top">
            <p><a href="index.html" class="slidebarlink now">▶&nbsp;社联简介</a></p>
-           <div id="z_catalog">
+           
+           <p><a href="<?php echo U('/Home/AU/department');?>" class="slidebarlink">&gt;社联机构</a></p>
+           <p><a href="<?php echo U('/Home/AU/regulation');?>" class="slidebarlink">&gt;制度汇编</a></p>
+           <p><a href="<?php echo U('/Home/AU/event');?>" class="slidebarlink">&gt;社联大事记</a></p>
+           <p><a href="#" class="slidebarlink">&gt;微仔说</a></p>
+            <!-- 浮动分栏 -->
+  <div id="z_catalog">
             <dl id="catalog">
                <dd class="catalog_li"><span class="catalog_dot">▪</span><a href="#001">历史沿革</a></dd>
                <dd class="catalog_li"><span class="catalog_dot">▪</span><a href="#002">机构设置</a></dd>
                <dd class="catalog_li"><span class="catalog_dot">▪</span><a href="#003">主办活动</a></dd>
                <dd class="catalog_li"><span class="catalog_dot">▪</span><a href="#004">社联会歌</a></dd>
              </dl>
+             <div id="catalog_indicator"></div>
           </div>
-           <p><a href="<?php echo U('/Home/AU/department');?>" class="slidebarlink">&gt;社联机构</a></p>
-           <p><a href="<?php echo U('/Home/AU/regulation');?>" class="slidebarlink">&gt;制度汇编</a></p>
-           <p><a href="<?php echo U('/Home/AU/event');?>" class="slidebarlink">&gt;社联大事记</a></p>
-           <p><a href="#" class="slidebarlink">&gt;微仔说</a></p>
          </td>
         <td width="73%" align="left" valign="top">
            <div id="catalog_content">
