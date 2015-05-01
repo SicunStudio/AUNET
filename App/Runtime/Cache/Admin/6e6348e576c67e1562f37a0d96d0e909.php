@@ -74,16 +74,51 @@
 </div>
 <!DOCTYPE html>
 <html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>添加大事记</title>
+    <script type="text/javascript" src="/AUNET/Public/AUSrc/js/year_month_day.js"></script>
 </head>
 <body>
-<h1>
-    欢迎回来，<?php echo ($_SESSION['username']); ?>！
-</h1>
-<p>您上次登录的时间是<?php echo ($_SESSION['lastlogintime']); ?></p>
-<p>您上次登录的ip是<?php echo ($_SESSION['lastloginip']); ?></p>
+<form action="<?php echo U('add_event_handle');?>" method="post" enctype="multipart/form-data">
+    <table class="table">
+        <tr>
+            <td align="center">大事记内容</td>
+            <td>
+                <input type="text" name="content"/>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" align="center">选择时间
+                <select id="selYear" name="year">
+                </select>
+                <select id="selMonth" name="month">
+                </select>
+                <select id="selDay" name="day">
+                </select>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td align="center">上传图片
+            <input type="file" name="file"/>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <input type="submit" value="提交"/>
+            </td>
+        </tr>
+    </table>
+
+</form>
+<script type="text/javascript">
+    var selYear = window.document.getElementById("selYear");
+    var selMonth = window.document.getElementById("selMonth");
+    var selDay = window.document.getElementById("selDay");
+    new DateSelector(selYear, selMonth, selDay, 1989, 12, 16);
+</script>
 </body>
 </html>
 </body>

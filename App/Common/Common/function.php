@@ -57,3 +57,18 @@ function msubstr($str, $start=0, $length, $charset="utf-8") {
     }
     return $slice;
 }
+//转换event为多维数组
+function data_merge($event){
+    $arr=array();
+    $data=$event->distinct(true)->field('year')->select();
+    foreach($data as $v){
+        $month=$event->where(array('year'=>$v['year']))->select();
+        dump($month);
+        $arr['year'][]=$v['year'];
+//        foreach($arr['year'] as $k=>$v){
+//            $arr['year']=$event->where(array('year'=>$v))->select();
+//        }
+    }
+
+    return $arr;
+}

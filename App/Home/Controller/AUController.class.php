@@ -22,6 +22,7 @@ class AUController extends Controller{
         $this->display();
     }
     public function event(){
+        $this->data=M('event')->select();
         $this->display();
     }
     public function weizai(){
