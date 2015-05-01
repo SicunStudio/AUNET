@@ -223,6 +223,7 @@
         <p><a href="faq_secretary.html" class="slidebarlink">&gt;秘书部</a></p>
         <p><a href="faq_media.html" class="slidebarlink">&gt;新媒体工作室</a></p>
         <p><a href="faq_art.html" class="slidebarlink now">▶&nbsp;文艺拓展部</a></p>
+          <p><a href="faq_hr.html" class="slidebarlink">&gt;人力资源部</a></p>
         <p><a href="faq_supervise.html" class="slidebarlink">&gt;财监委</a></p>
         <p><a href="faq_guide.html" class="slidebarlink">&gt;社团成立指南</a></p>
         </td>
