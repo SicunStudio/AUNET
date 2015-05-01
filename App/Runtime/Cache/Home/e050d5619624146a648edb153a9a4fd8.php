@@ -257,7 +257,11 @@
             </td>
             <td width="73%" align="center" valign="top">
 
+<<<<<<< HEAD
+                <?php $__FOR_START_20151__=0;$__FOR_END_20151__=3;for($i=$__FOR_START_20151__;$i < $__FOR_END_20151__;$i+=1){ ?><div class="ActivityBlock box<?php echo ($i+1); ?>">
+=======
                 <?php $__FOR_START_25864__=0;$__FOR_END_25864__=3;for($i=$__FOR_START_25864__;$i < $__FOR_END_25864__;$i+=1){ ?><div class="ActivityBlock box<?php echo ($i+1); ?>">
+>>>>>>> 14c6d7ffe2a92758d65fe6f30e4866f88ca1dfbb
                         <table width="95%" border="0">
                             <tbody>
                             <tr>
