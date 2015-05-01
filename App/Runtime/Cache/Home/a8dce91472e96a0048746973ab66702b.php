@@ -75,16 +75,16 @@
             <td width="13%" align="center" valign="middle" class="NaviLinkContainer"><a class="a-top" href="<?php echo U('Home/Index/index');?>"
                                                                                         style="color: #FFFFFF">首页</a>
             </td>
-            <td width="13%" align="center" valign="middle" class="NaviLinkContainer"><a class="a-top" href="#"
+            <td width="13%" align="center" valign="middle" class="NaviLinkContainer"><a class="a-top" href="<?php echo U('/Home/News/index');?>"
                                                                                         style="color: #FFFFFF">新闻</a>
             </td>
-            <td width="13%" align="center" valign="middle" class="NaviLinkContainer"><a class="a-top" href="#"
+            <td width="13%" align="center" valign="middle" class="NaviLinkContainer"><a class="a-top" href="<?php echo U('/Home/AU/index');?>"
                                                                                         style="color: #FFFFFF">社联</a>
             </td>
             <td width="13%" align="center" valign="middle" class="NaviLinkContainer"><a class="a-top" href="<?php echo U('/Home/Association/index');?>"
                                                                                         style="color: #FFFFFF">社团</a>
             </td>
-            <td width="13%" align="center" valign="middle" class="NaviLinkContainer"><a class="a-top" href="#"
+            <td width="13%" align="center" valign="middle" class="NaviLinkContainer"><a class="a-top" href="<?php echo U('/Home/Other/index');?>"
                                                                                         style="color: #FFFFFF">其他</a>
             </td>
         </tr>
