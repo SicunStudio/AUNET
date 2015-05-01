@@ -350,40 +350,47 @@
             
       
        <!-- 写大事件的区域  -->
-      <div class="eventbox 2014 1">
-          <div class="eventbox_imgcontainer">
-          <img src="event_img/2008/颁奖晚会.jpg" class="eventbox_imgbox" height="100%" alt=""/>
-          </div>    
-          <div class="eventbox_time">2008.1.1</div>
-          <div class="eventbox_text">开展2007“感动社团十大人物”评选活动暨主席团换届大会，诞生以高一峰为领导的第十一届主席团。</div>     
-      </div>    
+      <!--<div class="eventbox 2014 1">-->
+          <!--<div class="eventbox_imgcontainer">-->
+          <!--<img src="/AUNET/Public/AUSrc/image/2008/颁奖晚会.jpg" class="eventbox_imgbox" height="100%" alt=""/>-->
+          <!--</div>    -->
+          <!--<div class="eventbox_time">2008.1.1</div>-->
+          <!--<div class="eventbox_text">开展2007“感动社团十大人物”评选活动暨主席团换届大会，诞生以高一峰为领导的第十一届主席团。</div>     -->
+      <!--</div>-->
+          <?php if(is_array($data)): foreach($data as $key=>$v): ?><div class="eventbox <?php echo ($v['year']); ?> <?php echo ($v['month']); ?>" >
+                          <div class="eventbox_imgcontainer">
+                              <img src="/AUNET/Public/AUSrc/image/2008/颁奖晚会.jpg" class="eventbox_imgbox" height="100%" alt=""/>
+                          </div>
+                          <div class="eventbox_time"><?php echo ($v['year']); ?>.<?php echo ($v['month']); ?>.<?php echo ($v['day']); ?></div>
+                          <div class="eventbox_text">开展2007“感动社团十大人物”评选活动暨主席团换届大会，诞生以高一峰为领导的第十一届主席团。</div>
+                      </div><?php endforeach; endif; ?>
       
       <!-- 样例 -->
-          <!-- EventBox包裹层 使用类：eventbox yyyy m -->
-      <div class="eventbox 2014 1">
-          <!-- 图片包裹层 使用类：eventbox_imgcontainer -->
-          <div class="eventbox_imgcontainer">
-                <!-- 图片标签 使用类：eventbox_imgbox  -->
-                <!-- 注意：标签中height="100%" width不要写 -->
-         		<img src="aaaa.jpg" class="eventbox_imgbox" height="100%" alt=""/>
-          </div>
-          <!-- 图片包裹层 结束 -->
-          <!-- 时间 使用类：eventbox_imgcontainer -->
-          <div class="eventbox_time">2008.1.1</div>
-          <!-- 内容 限定76中文字以内-->
-          <div class="eventbox_text">一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十</div>          
-      </div>
-          <!-- EventBox包裹层结束 -->
-          
-       <div class="eventbox 2014 5">201405</div>
-      <div class="eventbox 2014 3">201403</div>
-       <div class="eventbox 2015 1">201501</div>
-      <div class="eventbox 2014 6">201406</div>
-       <div class="eventbox 2015 1">201501</div>
-      <div class="eventbox 2014 1">201401</div>
-       <div class="eventbox 2015 1">201501</div>
-      <div class="eventbox 2015 12">201512</div>
-            <div class="eventbox 2009 12">200912</div>
+          <!--&lt;!&ndash; EventBox包裹层 使用类：eventbox yyyy m &ndash;&gt;-->
+      <!--<div class="eventbox 2014 1">-->
+          <!--&lt;!&ndash; 图片包裹层 使用类：eventbox_imgcontainer &ndash;&gt;-->
+          <!--<div class="eventbox_imgcontainer">-->
+                <!--&lt;!&ndash; 图片标签 使用类：eventbox_imgbox  &ndash;&gt;-->
+                <!--&lt;!&ndash; 注意：标签中height="100%" width不要写 &ndash;&gt;-->
+         		<!--<img src="aaaa.jpg" class="eventbox_imgbox" height="100%" alt=""/>-->
+          <!--</div>-->
+          <!--&lt;!&ndash; 图片包裹层 结束 &ndash;&gt;-->
+          <!--&lt;!&ndash; 时间 使用类：eventbox_imgcontainer &ndash;&gt;-->
+          <!--<div class="eventbox_time">2008.1.1</div>-->
+          <!--&lt;!&ndash; 内容 限定76中文字以内&ndash;&gt;-->
+          <!--<div class="eventbox_text">一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十</div>          -->
+      <!--</div>-->
+          <!--&lt;!&ndash; EventBox包裹层结束 &ndash;&gt;-->
+          <!---->
+       <!--<div class="eventbox 2014 5">201405</div>-->
+      <!--<div class="eventbox 2014 3">201403</div>-->
+       <!--<div class="eventbox 2015 1">201501</div>-->
+      <!--<div class="eventbox 2014 6">201406</div>-->
+       <!--<div class="eventbox 2015 1">201501</div>-->
+      <!--<div class="eventbox 2014 1">201401</div>-->
+       <!--<div class="eventbox 2015 1">201501</div>-->
+      <!--<div class="eventbox 2015 12">201512</div>-->
+            <!--<div class="eventbox 2009 12">200912</div>-->
       </td>
       
       <td width="15%" align="left" valign="top"> 

@@ -20,7 +20,7 @@
     <dl>
         <dt>社联大事记</dt>
         <dd><a href="<?php echo U('/Admin/Event/event_index');?>">大事记列表</a></dd>
-        <dd><a href="<?php echo U('/Admin/Event/add_event');?>">添加预告</a></dd>
+        <dd><a href="#">添加预告</a></dd>
     </dl>
     <dl>
         <dt>发布公告</dt>
@@ -76,14 +76,30 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
+    <title>大事记列表</title>
 </head>
 <body>
-<h1>
-    欢迎回来，<?php echo ($_SESSION['username']); ?>！
-</h1>
-<p>您上次登录的时间是<?php echo ($_SESSION['lastlogintime']); ?></p>
-<p>您上次登录的ip是<?php echo ($_SESSION['lastloginip']); ?></p>
+<table class="table">
+    <caption align="top">大事记列表</caption>
+    <tr>
+        <th>内容</th>
+        <th>年</th>
+        <th>月</th>
+        <th>日</th>
+        <th>操作</th>
+    </tr>
+    <?php if(is_array($data)): foreach($data as $key=>$v): ?><tr>
+            <td width="8%"><?php echo ($v["content"]); ?></td>
+            <td width="18%" align="center"><?php echo ($v['year']); ?></td>
+            <td width="18%" align="center"><?php echo ($v['month']); ?></td>
+            <td width="18%" align="center"><?php echo ($v['day']); ?></td>
+            <td width="18%" align="center">
+
+                <a href="<?php echo U('/Admin/Announce/DelAnnounce',array('id'=>$v['id']));?>">删除</a>
+            </td>
+        </tr><?php endforeach; endif; ?>
+
+</table>
 </body>
 </html>
 </body>
