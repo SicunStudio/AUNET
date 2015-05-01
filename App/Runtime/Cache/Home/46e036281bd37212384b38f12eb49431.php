@@ -232,7 +232,7 @@
       </tr>
     <tr>
       <td width="27%" valign="top">
-        <p><a href="FAQ.html" class="slidebarlink">&gt;FAQ首页</a></p>
+        <p><a href="index.html" class="slidebarlink">&gt;FAQ首页</a></p>
         <p><a href="FAQ_question.html" class="slidebarlink">&gt;常见问题</a></p>
         <p><a href="FAQ_financial.html" class="slidebarlink">&gt;财务部</a></p>
         <p><a href="FAQ_secretary.html" class="slidebarlink">&gt;秘书部</a></p>
