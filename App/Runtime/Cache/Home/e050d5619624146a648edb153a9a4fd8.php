@@ -75,16 +75,16 @@
             <td width="13%" align="center" valign="middle" class="NaviLinkContainer"><a class="a-top" href="<?php echo U('Home/Index/index');?>"
                                                                                         style="color: #FFFFFF">首页</a>
             </td>
-            <td width="13%" align="center" valign="middle" class="NaviLinkContainer"><a class="a-top" href="#"
+            <td width="13%" align="center" valign="middle" class="NaviLinkContainer"><a class="a-top" href="<?php echo U('/Home/News/index');?>"
                                                                                         style="color: #FFFFFF">新闻</a>
             </td>
-            <td width="13%" align="center" valign="middle" class="NaviLinkContainer"><a class="a-top" href="#"
+            <td width="13%" align="center" valign="middle" class="NaviLinkContainer"><a class="a-top" href="<?php echo U('/Home/AU/index');?>"
                                                                                         style="color: #FFFFFF">社联</a>
             </td>
             <td width="13%" align="center" valign="middle" class="NaviLinkContainer"><a class="a-top" href="<?php echo U('/Home/Association/index');?>"
                                                                                         style="color: #FFFFFF">社团</a>
             </td>
-            <td width="13%" align="center" valign="middle" class="NaviLinkContainer"><a class="a-top" href="#"
+            <td width="13%" align="center" valign="middle" class="NaviLinkContainer"><a class="a-top" href="<?php echo U('/Home/Other/index');?>"
                                                                                         style="color: #FFFFFF">其他</a>
             </td>
         </tr>
@@ -200,27 +200,6 @@
                 });
     </script>
     <style>
-        .slidebarlink {
-            padding: 12px 12px;
-            font-size: 22px;
-            margin: 15px;
-            display: block;
-            color: #444e41;
-            transition: .2s;
-            border-radius: 3px;
-
-        }
-
-        .now {
-            color: #FFFFFF;
-            background-color: #74b05c;
-        }
-
-        .slidebarlink:hover {
-            color: #FFFFFF;
-            background-color: #74b05c;
-        }
-
         .ActivityBlock {
             width: 80%;
             padding: 8px;
@@ -278,7 +257,7 @@
             </td>
             <td width="73%" align="center" valign="top">
 
-                <?php $__FOR_START_13765__=0;$__FOR_END_13765__=3;for($i=$__FOR_START_13765__;$i < $__FOR_END_13765__;$i+=1){ ?><div class="ActivityBlock box<?php echo ($i+1); ?>">
+                <?php $__FOR_START_3740__=0;$__FOR_END_3740__=3;for($i=$__FOR_START_3740__;$i < $__FOR_END_3740__;$i+=1){ ?><div class="ActivityBlock box<?php echo ($i+1); ?>">
                         <table width="95%" border="0">
                             <tbody>
                             <tr>

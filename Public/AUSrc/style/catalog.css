@@ -1,14 +1,16 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 /* CSS Document */
 #z_catalog{
-	margin-left:70px;
-	width:200px;
-	height:auto;
-	font-family:微软雅黑;
+	margin-left: 90px;
+	width: 210px;
+	height: 130px;
+	font-family: 微软雅黑;
+	position: relative;
+	
 	}
 .catalog_li{
 	color:#000;
-	font-size:18px;
+	font-size:24px;
 	padding-left:20px;
 	}
 .catalog_li a{
