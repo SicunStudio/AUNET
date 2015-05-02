@@ -25,12 +25,11 @@ class EventController extends CommonController
 
     public function add_event_handle()
     {
-        dump($_POST);
 
         $upload = new Upload();
         $upload->maxSize = 3145728;
         $upload->exts = array('jpg', 'png');
-        $upload->rootPath = './Upload/Event/';
+        $upload->rootPath ='./Public/Upload/Event/';
         $upload->subName = $_POST['year'] . '/' . $_POST['month'] . '/' . $_POST['day'] . '/';
         $path = $upload->rootPath . $upload->subName;
         if (!file_exists($path)) {
@@ -41,7 +40,7 @@ class EventController extends CommonController
             $this->error($upload->getError());
         } else {
             foreach ($info as $v) {
-                $data[] = array('pic' => $path . $v['savename'],      //$path.$v['savename'] to $v['url'] in Sae
+                $data[] = array('pic' => substr($path . $v['savename'],8,strlen($path . $v['savename'])),      //$path.$v['savename'] to $v['url'] in Sae
                     //add 'url'=>$v['url'] in Sae
                     'content' => $_POST['content'],
                     'year' => $_POST['year'],
@@ -51,7 +50,6 @@ class EventController extends CommonController
             }
 //            $data=array('content'=>$_POST['content'],'year'=>$_POST['year'],'month'=>$_POST['month'],'day'=>$_POST['day'],'time'=>time(),'pic'=>$path.$info['file']['savename']);
 
-            dump($data);
             if (M('event')->addAll($data)) {
                 $this->success('添加成功');
             } else {
@@ -59,6 +57,16 @@ class EventController extends CommonController
             }
 
 
+        }
+
+    }
+    public function remove_event(){
+        $id=I('id',0,'intval');
+        $event=M('event')->where(array('id'=>$id))->find();
+        if(M('event')->delete($id)&&unlink($event['pic'])){
+            $this->success('删除成功');
+        }else{
+            $this->error('删除失败');
         }
 
     }
