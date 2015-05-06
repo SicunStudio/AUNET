@@ -41,6 +41,9 @@
                     <td>
                         <a href="{:U('lock',array('id'=>$v['id'],'lock'=>$v['lock']))}"><if condition="$v['lock']">解锁<else />锁定</if></a>
                     </td>
+                        <td>
+                            <a href="{:U('Userdel',array('id'=>$v['id']))}">删除</a>
+                        </td>
                 </tr>
             </foreach>
             <td colspan="10" align="center">

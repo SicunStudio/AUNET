@@ -1,0 +1,557 @@
+[ 2015-05-06T23:51:13+08:00 ] 127.0.0.1 /AUNET/index.php/Admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.088005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.088005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-05-06T23:51:14+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/Index/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-05-06T23:51:17+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `aunet_user` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `aunet_user` WHERE `username` = 'admin' LIMIT 1   [ RunTime:0.0370s ]
+SQL: UPDATE `aunet_user` SET `logintime`='1430927477',`loginip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0675s ]
+
+[ 2015-05-06T23:51:17+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/Rbac/rbac_index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022502s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022502s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-06T23:51:24+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/Rbac/user.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `aunet_user` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`username`,`logintime`,`loginip`,`lock` FROM `aunet_user`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `aunet_role` [ RunTime:0.0305s ]
+NOTIC: [8] Undefined index: mapping_order C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 186 行.
+NOTIC: [8] Undefined index: mapping_limit C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 187 行.
+NOTIC: [8] Undefined index: relation_foreign_key C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 188 行.
+SQL: SELECT b.id,name,remark FROM aunet_role_user AS a, aunet_role AS b WHERE a.role_id = b.id AND a. user_id='1' [ RunTime:0.0210s ]
+NOTIC: [8] Undefined index: mapping_order C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 186 行.
+NOTIC: [8] Undefined index: mapping_limit C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 187 行.
+NOTIC: [8] Undefined index: relation_foreign_key C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 188 行.
+SQL: SELECT b.id,name,remark FROM aunet_role_user AS a, aunet_role AS b WHERE a.role_id = b.id AND a. user_id='6' [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: mapping_order C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 186 行.
+NOTIC: [8] Undefined index: mapping_limit C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 187 行.
+NOTIC: [8] Undefined index: relation_foreign_key C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 188 行.
+SQL: SELECT b.id,name,remark FROM aunet_role_user AS a, aunet_role AS b WHERE a.role_id = b.id AND a. user_id='5' [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038502s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038502s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-06T23:52:11+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/Rbac/user.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `aunet_user` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`username`,`logintime`,`loginip`,`lock` FROM `aunet_user`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `aunet_role` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: mapping_order C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 186 行.
+NOTIC: [8] Undefined index: mapping_limit C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 187 行.
+NOTIC: [8] Undefined index: relation_foreign_key C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 188 行.
+SQL: SELECT b.id,name,remark FROM aunet_role_user AS a, aunet_role AS b WHERE a.role_id = b.id AND a. user_id='1' [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: mapping_order C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 186 行.
+NOTIC: [8] Undefined index: mapping_limit C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 187 行.
+NOTIC: [8] Undefined index: relation_foreign_key C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 188 行.
+SQL: SELECT b.id,name,remark FROM aunet_role_user AS a, aunet_role AS b WHERE a.role_id = b.id AND a. user_id='6' [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: mapping_order C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 186 行.
+NOTIC: [8] Undefined index: mapping_limit C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 187 行.
+NOTIC: [8] Undefined index: relation_foreign_key C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 188 行.
+SQL: SELECT b.id,name,remark FROM aunet_role_user AS a, aunet_role AS b WHERE a.role_id = b.id AND a. user_id='5' [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-06T23:53:20+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/Rbac/user.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `aunet_user` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`username`,`logintime`,`loginip`,`lock` FROM `aunet_user`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `aunet_role` [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: mapping_order C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 186 行.
+NOTIC: [8] Undefined index: mapping_limit C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 187 行.
+NOTIC: [8] Undefined index: relation_foreign_key C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 188 行.
+SQL: SELECT b.id,name,remark FROM aunet_role_user AS a, aunet_role AS b WHERE a.role_id = b.id AND a. user_id='1' [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: mapping_order C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 186 行.
+NOTIC: [8] Undefined index: mapping_limit C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 187 行.
+NOTIC: [8] Undefined index: relation_foreign_key C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 188 行.
+SQL: SELECT b.id,name,remark FROM aunet_role_user AS a, aunet_role AS b WHERE a.role_id = b.id AND a. user_id='6' [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: mapping_order C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 186 行.
+NOTIC: [8] Undefined index: mapping_limit C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 187 行.
+NOTIC: [8] Undefined index: relation_foreign_key C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 188 行.
+SQL: SELECT b.id,name,remark FROM aunet_role_user AS a, aunet_role AS b WHERE a.role_id = b.id AND a. user_id='5' [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-06T23:53:22+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/Rbac/Userdel/id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-06T23:56:57+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/Rbac/user.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `aunet_user` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`username`,`logintime`,`loginip`,`lock` FROM `aunet_user`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `aunet_role` [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: mapping_order C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 186 行.
+NOTIC: [8] Undefined index: mapping_limit C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 187 行.
+NOTIC: [8] Undefined index: relation_foreign_key C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 188 行.
+SQL: SELECT b.id,name,remark FROM aunet_role_user AS a, aunet_role AS b WHERE a.role_id = b.id AND a. user_id='1' [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: mapping_order C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 186 行.
+NOTIC: [8] Undefined index: mapping_limit C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 187 行.
+NOTIC: [8] Undefined index: relation_foreign_key C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 188 行.
+SQL: SELECT b.id,name,remark FROM aunet_role_user AS a, aunet_role AS b WHERE a.role_id = b.id AND a. user_id='6' [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: mapping_order C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 186 行.
+NOTIC: [8] Undefined index: mapping_limit C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 187 行.
+NOTIC: [8] Undefined index: relation_foreign_key C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 188 行.
+SQL: SELECT b.id,name,remark FROM aunet_role_user AS a, aunet_role AS b WHERE a.role_id = b.id AND a. user_id='5' [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-06T23:57:24+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/Rbac/user.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `aunet_user` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`username`,`logintime`,`loginip`,`lock` FROM `aunet_user`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `aunet_role` [ RunTime:0.0090s ]
+NOTIC: [8] Undefined index: mapping_order C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 186 行.
+NOTIC: [8] Undefined index: mapping_limit C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 187 行.
+NOTIC: [8] Undefined index: relation_foreign_key C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 188 行.
+SQL: SELECT b.id,name,remark FROM aunet_role_user AS a, aunet_role AS b WHERE a.role_id = b.id AND a. user_id='1' [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: mapping_order C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 186 行.
+NOTIC: [8] Undefined index: mapping_limit C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 187 行.
+NOTIC: [8] Undefined index: relation_foreign_key C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 188 行.
+SQL: SELECT b.id,name,remark FROM aunet_role_user AS a, aunet_role AS b WHERE a.role_id = b.id AND a. user_id='6' [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: mapping_order C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 186 行.
+NOTIC: [8] Undefined index: mapping_limit C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 187 行.
+NOTIC: [8] Undefined index: relation_foreign_key C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 188 行.
+SQL: SELECT b.id,name,remark FROM aunet_role_user AS a, aunet_role AS b WHERE a.role_id = b.id AND a. user_id='5' [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015501s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015501s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-06T23:57:24+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/Rbac/user.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `aunet_user` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`username`,`logintime`,`loginip`,`lock` FROM `aunet_user`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `aunet_role` [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: mapping_order C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 186 行.
+NOTIC: [8] Undefined index: mapping_limit C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 187 行.
+NOTIC: [8] Undefined index: relation_foreign_key C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 188 行.
+SQL: SELECT b.id,name,remark FROM aunet_role_user AS a, aunet_role AS b WHERE a.role_id = b.id AND a. user_id='1' [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: mapping_order C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 186 行.
+NOTIC: [8] Undefined index: mapping_limit C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 187 行.
+NOTIC: [8] Undefined index: relation_foreign_key C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 188 行.
+SQL: SELECT b.id,name,remark FROM aunet_role_user AS a, aunet_role AS b WHERE a.role_id = b.id AND a. user_id='6' [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: mapping_order C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 186 行.
+NOTIC: [8] Undefined index: mapping_limit C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 187 行.
+NOTIC: [8] Undefined index: relation_foreign_key C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 188 行.
+SQL: SELECT b.id,name,remark FROM aunet_role_user AS a, aunet_role AS b WHERE a.role_id = b.id AND a. user_id='5' [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-06T23:57:24+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/Rbac/user.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `aunet_user` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`username`,`logintime`,`loginip`,`lock` FROM `aunet_user`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `aunet_role` [ RunTime:0.0025s ]
+NOTIC: [8] Undefined index: mapping_order C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 186 行.
+NOTIC: [8] Undefined index: mapping_limit C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 187 行.
+NOTIC: [8] Undefined index: relation_foreign_key C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 188 行.
+SQL: SELECT b.id,name,remark FROM aunet_role_user AS a, aunet_role AS b WHERE a.role_id = b.id AND a. user_id='1' [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: mapping_order C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 186 行.
+NOTIC: [8] Undefined index: mapping_limit C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 187 行.
+NOTIC: [8] Undefined index: relation_foreign_key C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 188 行.
+SQL: SELECT b.id,name,remark FROM aunet_role_user AS a, aunet_role AS b WHERE a.role_id = b.id AND a. user_id='6' [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: mapping_order C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 186 行.
+NOTIC: [8] Undefined index: mapping_limit C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 187 行.
+NOTIC: [8] Undefined index: relation_foreign_key C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 188 行.
+SQL: SELECT b.id,name,remark FROM aunet_role_user AS a, aunet_role AS b WHERE a.role_id = b.id AND a. user_id='5' [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-05-06T23:57:24+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/Rbac/user.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `aunet_user` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`username`,`logintime`,`loginip`,`lock` FROM `aunet_user`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `aunet_role` [ RunTime:0.0045s ]
+NOTIC: [8] Undefined index: mapping_order C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 186 行.
+NOTIC: [8] Undefined index: mapping_limit C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 187 行.
+NOTIC: [8] Undefined index: relation_foreign_key C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 188 行.
+SQL: SELECT b.id,name,remark FROM aunet_role_user AS a, aunet_role AS b WHERE a.role_id = b.id AND a. user_id='1' [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: mapping_order C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 186 行.
+NOTIC: [8] Undefined index: mapping_limit C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 187 行.
+NOTIC: [8] Undefined index: relation_foreign_key C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 188 行.
+SQL: SELECT b.id,name,remark FROM aunet_role_user AS a, aunet_role AS b WHERE a.role_id = b.id AND a. user_id='6' [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: mapping_order C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 186 行.
+NOTIC: [8] Undefined index: mapping_limit C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 187 行.
+NOTIC: [8] Undefined index: relation_foreign_key C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 188 行.
+SQL: SELECT b.id,name,remark FROM aunet_role_user AS a, aunet_role AS b WHERE a.role_id = b.id AND a. user_id='5' [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-05-06T23:57:26+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/Rbac/Userdel/id/5.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002500s ]
+SQL: SHOW COLUMNS FROM `aunet_user` [ RunTime:0.0000s ]
+SQL: DELETE FROM `aunet_user` WHERE `id` = 5 [ RunTime:0.0560s ]
+ERR: Think\Controller:sussess方法不存在！
+
+[ 2015-05-06T23:57:55+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/Rbac/Userdel/id/5.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `aunet_user` [ RunTime:0.0080s ]
+SQL: DELETE FROM `aunet_user` WHERE `id` = 5 [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026502s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026502s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-06T23:58:00+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/Rbac/user.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `aunet_user` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`username`,`logintime`,`loginip`,`lock` FROM `aunet_user`  [ RunTime:0.0025s ]
+SQL: SHOW COLUMNS FROM `aunet_role` [ RunTime:0.0060s ]
+NOTIC: [8] Undefined index: mapping_order C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 186 行.
+NOTIC: [8] Undefined index: mapping_limit C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 187 行.
+NOTIC: [8] Undefined index: relation_foreign_key C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 188 行.
+SQL: SELECT b.id,name,remark FROM aunet_role_user AS a, aunet_role AS b WHERE a.role_id = b.id AND a. user_id='1' [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: mapping_order C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 186 行.
+NOTIC: [8] Undefined index: mapping_limit C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 187 行.
+NOTIC: [8] Undefined index: relation_foreign_key C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 188 行.
+SQL: SELECT b.id,name,remark FROM aunet_role_user AS a, aunet_role AS b WHERE a.role_id = b.id AND a. user_id='6' [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-06T23:58:02+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/Rbac/Userdel/id/6.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `aunet_user` [ RunTime:0.0020s ]
+SQL: DELETE FROM `aunet_user` WHERE `id` = 6 [ RunTime:0.0010s ]
+ERR: Think\Controller:sussess方法不存在！
+
+[ 2015-05-06T23:58:12+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/Rbac/Userdel/id/6.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `aunet_user` [ RunTime:0.0030s ]
+SQL: DELETE FROM `aunet_user` WHERE `id` = 6 [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-05-06T23:58:17+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/Rbac/user.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `aunet_user` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`username`,`logintime`,`loginip`,`lock` FROM `aunet_user`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `aunet_role` [ RunTime:0.0095s ]
+NOTIC: [8] Undefined index: mapping_order C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 186 行.
+NOTIC: [8] Undefined index: mapping_limit C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 187 行.
+NOTIC: [8] Undefined index: relation_foreign_key C:\xampp\htdocs\AUNET\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 188 行.
+SQL: SELECT b.id,name,remark FROM aunet_role_user AS a, aunet_role AS b WHERE a.role_id = b.id AND a. user_id='1' [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026502s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026502s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-05-06T23:58:46+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/Rbac/node.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `aunet_node` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`status` FROM `aunet_node` ORDER BY sort  [ RunTime:0.0555s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-05-06T23:58:51+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/Rbac/addNode/pid/51/level/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.054003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.054003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-05-06T23:59:04+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/Rbac/addNodeHandle.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `aunet_node` [ RunTime:0.0020s ]
+SQL: INSERT INTO `aunet_node` (`name`,`title`,`status`,`sort`,`pid`,`level`,`id`) VALUES ('Userdel','删除用户','1','8','51','3','0') [ RunTime:0.0420s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-05-06T23:59:05+08:00 ] 127.0.0.1 /AUNET/index.php/Admin/Rbac/node.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `aunet_node` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`status` FROM `aunet_node` ORDER BY sort  [ RunTime:0.0260s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

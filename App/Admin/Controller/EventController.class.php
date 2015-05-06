@@ -25,7 +25,6 @@ class EventController extends CommonController
 
     public function add_event_handle()
     {
-
         $upload = new Upload();
         $upload->maxSize = 3145728;
         $upload->exts = array('jpg', 'png');

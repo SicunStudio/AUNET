@@ -202,6 +202,14 @@ class RbacController extends CommonController{
         }
     }
 
+    public function Userdel(){
+        $id=I('id',0,'intval');
+        if(M('user')->delete($id)){
+            $this->success('删除成功');
+        }else{
+            $this->error('删除失败');
+        }
+    }
     public function editpwd(){
 
         $this->id=I('id','0','intval');
