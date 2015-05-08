@@ -10,10 +10,9 @@
 <style type="text/css">
 *{ padding: 0; margin: 0; }
 html{ overflow-y: scroll; }
-body{ background: #fff; font-family: '微软雅黑'; color: #333; font-size: 16px; }
+body{ background: #baf4a1; font-family: '微软雅黑'; color: #333; font-size: 16px; }
 img{ border: 0; }
 .error{ padding: 24px 48px; }
-.face{ font-size: 100px; font-weight: normal; line-height: 120px; margin-bottom: 12px; }
 h1{ font-size: 32px; line-height: 48px; }
 .error .content{ padding-top: 10px}
 .error .info{ margin-bottom: 12px; }
@@ -26,7 +25,7 @@ h1{ font-size: 32px; line-height: 48px; }
 </head>
 <body>
 <div class="error">
-<p class="face">:(</p>
+    <img src="__PUBLIC__/general/fail.png" width="330" height="330"  alt="" style="margin-top:160px; margin-left:80px;"/><p class="error"><?php echo($error); ?></p>
 <h1><?php echo strip_tags($e['message']);?></h1>
 <div class="content">
 <?php if(isset($e['file'])) {?>

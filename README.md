@@ -7,7 +7,7 @@
 #   你的文件请将除html以外的文件用 "/Public/模块名+Src" 路径命名的文件夹保存，如新闻模块的css，jpg文件放在/Public/NewsSrc文件夹下
 #   html文件放入/App/Home/View中
 #   html文件避免出现大写(大写在SAE可能会出现未知错误)
-
+#   跳转页面及异常页面  /ThinkPHP/Tpl
 
 ##社团网入口http://serverName/AUNET/
 

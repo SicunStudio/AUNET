@@ -39,8 +39,8 @@
     </dl>
     <dl>
         <dt>属性管理</dt>
-        <dd><a href="<?php echo U('/Admin/Newsattribute/attr_index');?>">属性列表</a></dd>
-        <dd><a href="<?php echo U('/Admin/Newsattribute/addattr');?>">添加属性</a></dd>
+        <dd><a href="<?php echo U('/Admin/NewsAttribute/attr_index');?>">属性列表</a></dd>
+        <dd><a href="<?php echo U('/Admin/NewsAttribute/addattr');?>">添加属性</a></dd>
     </dl>
     <dl>
         <dt>文章管理</dt>
