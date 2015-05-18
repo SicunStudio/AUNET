@@ -36,5 +36,8 @@ class FAQController extends Controller{
     public function faq_guide(){
         $this->display();
     }
+    public function faq_hr(){
+        $this->display();
+    }
 
 }
