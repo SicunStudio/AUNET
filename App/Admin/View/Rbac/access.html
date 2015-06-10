@@ -64,7 +64,16 @@
         $('input[level=2]').click(function (){
             var inputs=$(this).parents('dl').find('input');
             $(this).attr('checked')?inputs.attr('checked','checked'):inputs.removeAttr('checked');
+            var inputsL1=$(this).parents('.app').find('input[level=1]');
+            $(this).attr('checked')?inputsL1.attr('checked','checked'):inputsL1.attr("checked");
         });
+        $('input[level=3]').click(function (){
+            var inputsL2=$(this).parents('dl').find('input[level=2]');
+            $(this).attr('checked')?inputsL2.attr('checked','checked'):inputsL2.attr("checked");
+            var inputsL1=$(this).parents('.app').find('input[level=1]');
+            $(this).attr('checked')?inputsL1.attr('checked','checked'):inputsL1.attr("checked");
+        });
+
     });
 </script>
 <body>
