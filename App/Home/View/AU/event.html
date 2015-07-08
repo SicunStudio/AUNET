@@ -158,20 +158,9 @@
 <body>
 
 
- <div id="wrap">
- <table width="99%" border="0" style="margin:25px 0px">
-  <tbody>
-    <tr>
-      <td height="59" colspan="3" align="left" valign="middle" style="color:#444e41"><span style="font-size:34px">&nbsp;&nbsp;&nbsp;&nbsp;社联&nbsp;&nbsp;</span><span style="font-size:24px">Association Union</span></td>
-      </tr>
-    <tr>
-      <td width="27%" valign="top">
-        <p><a href="{:U('/Home/AU/index')}" class="slidebarlink">&gt;社联简介</a></p>
-        <p><a href="{:U('/Home/AU/department')}" class="slidebarlink">&gt;社联机构</a></p>
-        <p><a href="{:U('/Home/AU/regulation')}" class="slidebarlink">&gt;制度汇编</a></p>
-        <p><a href="{:U('/Home/AU/event')}" class="slidebarlink now">▶&nbsp;社联大事记</a></p>
-        <p><a href="#" class="slidebarlink">&gt;微仔说</a></p>
-        </td>
+
+
+
       <td width="58%" align="left" valign="top">
 
           <foreach name="data" item="v">
@@ -188,10 +177,8 @@
 
           </foreach>
       </td>
-      
-      <td width="15%" align="left" valign="top"> 
-  
-      
+
+      <td width="15%" align="left" valign="top">
       <script>
 	  var mydate=new Date();
 	  var thisyear=mydate.getFullYear();
@@ -201,32 +188,30 @@
 	  document.writeln(" <ul id='"+ thisyear+"_month' class='monthlist' style='display:none'>");
 	  for(var mon=1;mon<=thismonth;mon++)
 	  {
-		  document.writeln("<li class='li_list' id='li_" + thisyear + "_" + mon + "' onClick='ShowBox("+thisyear+","+mon+")'>"+ "<div class='li_list_indicator ' id='li_list_indicator_id_" + thisyear+ "_" + mon + "'></div>" +mon+"月</li>");	  
+		  document.writeln("<li class='li_list' id='li_" + thisyear + "_" + mon + "' onClick='ShowBox("+thisyear+","+mon+")'>"+ "<div class='li_list_indicator ' id='li_list_indicator_id_" + thisyear+ "_" + mon + "'></div>" +mon+"月</li>");
 	 }
 	  document.writeln("</ul>");
 	  document.writeln("<br>");
-	  
+
       for(var yr=thisyear-1;yr>=2008;yr--)
 	  {
 		  document.writeln("<a onClick='ShowMonth(" + yr + ")'>" + yr + "年</a>");
 		   document.writeln(" <ul id='"+ yr+"_month' class='monthlist' style='display:none'>");
 	       for(var mon=1;mon<=12;mon++)
 	       {
-		     document.writeln("<li class='li_list' id='li_" + yr + "_" + mon + "' onClick='ShowBox("+yr+","+mon+")'>"+ "<div class='li_list_indicator' id='li_list_indicator_id_" + yr+ "_" + mon + "'></div>" +mon+"月</li>");	  
+		     document.writeln("<li class='li_list' id='li_" + yr + "_" + mon + "' onClick='ShowBox("+yr+","+mon+")'>"+ "<div class='li_list_indicator' id='li_list_indicator_id_" + yr+ "_" + mon + "'></div>" +mon+"月</li>");
 		   }
 	      document.writeln("</ul>");
 	  document.writeln("<br>");
-		  
+
 	  }
     </script>
-     
-      </td>     
-    </tr>
-    </tbody>
-</table>
 
- 
- </div>
+
+
+      </td>
+
+
 
 </body>
 </html>
