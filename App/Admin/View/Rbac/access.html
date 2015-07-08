@@ -77,6 +77,8 @@
     });
 </script>
 <body>
+<h4><ol class="breadcrumb"><li>权限管理</li><li><a href="{:U('/Admin/Rbac/role');}">角色列表</a></li><li class="active">配置权限</li></ol></h4>
+
 <div>
     <div>
         <form action="{:U('setAccess');}" method="post">
@@ -107,13 +109,14 @@
                 </foreach>
             </div>
             <input type="hidden" name="rid" value="{$rid}"/>
-            <input type="submit" value="保存修改" style="display: block; margin: 20px auto;cursor:pointer;"/>
+            <input type="submit" class="btn btn-primary btn-lg" value="保存修改" style="display: block; margin: 20px auto;cursor:pointer;"/>
         </form>
     </div>
-
 </div>
-
-
+<script>
+    var listitem=document.getElementById("rbac");
+    listitem.className="list-group-item active";
+</script>
 </body>
 
 </html>
