@@ -65,27 +65,26 @@
     }
 </style>
 <body>
-
-
-    <div id='wrap'>
+<h4><ol class="breadcrumb"><li>权限管理</li><li class="active">节点列表</li></ol></h4>
+   <div id='wrap'>
         <a href="{:U('addNode');}" class="add-app">添加应用</a>
         <foreach name="node" item="app">
             <div class='app'>
                 <p>
 
-                    <if condition="$app['status']"><strong>{$app.title}</strong>[<a href="{:U('addNode',array('pid'=>$app['id'],'level'=>2))}">添加控制器</a>]<else/>{$app.title}</if>
+                    <if condition="$app['status']"><strong>{$app.title}</strong>&nbsp;<a href="{:U('addNode',array('pid'=>$app['id'],'level'=>2))}" class="btn btn-default btn-xs">添加控制器</a><else/>{$app.title}</if>
                 </p>
                 <foreach name="app.child" item="action">
                     <dl>
                         <dt>
                             <if condition="$action['status']"><strong>{$action.title}</strong><else/>{$action.title}</if>
-                            [<a href="{:U('addNode',array('pid'=>$action['id'],'level'=>3));}">添加方法</a>]
+                            <a href="{:U('addNode',array('pid'=>$action['id'],'level'=>3));}" class="btn btn-default btn-xs">添加方法</a>
                         </dt>
                         <foreach name="action.child" item="method">
                             <dd>
                                 <if condition="$method['status']"><strong>{$method.title}</strong><else/>{$method.title}</if>
-                                [<a href="{:U('addNode',array('id'=>$method['id'],'level'=>3,'pid'=>$action['id']))}">修改</a>]
-                                [<a href="{:U('delNode',array('id'=>$method['id']))}">删除</a>]
+                                <a href="{:U('addNode',array('id'=>$method['id'],'level'=>3,'pid'=>$action['id']))}" class="btn btn-default btn-xs">修改</a>
+                                <a href="{:U('delNode',array('id'=>$method['id']))}" class="btn btn-default btn-xs">删除</a>
                             </dd>
                         </foreach>
                     </dl>
@@ -93,12 +92,13 @@
             </div>
         </foreach>
         <div id="cache">
-            <a href="{:U('/Admin/News/clearCache')}" class="clearcache">清空缓存</a>
+            <a href="{:U('/Admin/News/clearCache')}" class="clearcache" class="btn btn-defaults">清空缓存</a>
         </div>
     </div>
-
-
-
+<script>
+    var listitem=document.getElementById("rbac");
+    listitem.className="list-group-item active";
+</script>
 </body>
 
 </html>
