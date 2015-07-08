@@ -16,16 +16,20 @@ class AUController extends Controller{
         $this->display();
     }
     public function department(){
+        layout('AU/au_layout');
         $this->display();
     }
     public function regulation(){
+        layout('AU/au_layout');
         $this->display();
     }
     public function event(){
+        layout('AU/au_layout');
         $this->data=M('event')->select();
         $this->display();
     }
     public function weizai(){
+        layout('AU/au_layout');
         $this->display();
     }
 
