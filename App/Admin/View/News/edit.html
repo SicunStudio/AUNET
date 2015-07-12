@@ -2,18 +2,18 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
+    <style>
+        #edui1 { width: 100%;}
+    </style>
 </head>
 <js href="__PUBLIC__/js/jquery-2.0.2.js" />
 <js href="__PUBLIC__/ueditor/ueditor.config.js" />
 <js href="__PUBLIC__/ueditor/ueditor.all.min.js" />
 <script type="text/javascript" charset="utf-8" src="lang/zh-cn/zh-cn.js"></script>
 <script>
-
     var ue;
     $(function(){
         window.UEDITOR_CONFIG.initialFrameHeight=600;
-        window.UEDITOR_CONFIG.initialFrameWidth=1900;
          ue= UE.getEditor('ueditor',{serverUrl :'{:U('Admin/News/ueditor')}',onready: function () {
             this.setContent('{$text.content}');
         }});

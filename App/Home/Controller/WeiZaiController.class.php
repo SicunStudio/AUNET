@@ -13,11 +13,11 @@ use Think\Controller;
 
 class WeiZaiController extends Controller{
     public function index(){
-        layout('WeiZai/weizailayout');
+        layout('au_layout');
         $this->display();
     }
     public function bumen(){
-        layout('WeiZai/weizailayout');
+        layout('au_layout');
         $this->display();
     }
     public function shetuan(){

@@ -4,59 +4,13 @@
 <meta charset="utf-8">
 <title>财务部</title>
   <link href="__PUBLIC__/FAQSrc/content.css" rel="stylesheet" type="text/css">
- <script>
-  $(document).ready(
-	   function() {
-		 
-		   $(".a-top").mouseenter(
-		   function(e) {
-            $("#downlist").slideDown("fast");	
-        });
-		
-		$("#downlist").mouseenter(
-		   function(e) {
-            $("#downlist").slideDown("fast");	
-        });
-		
-	
-		
-		$("#downlist").mouseleave(
-		   function(e) {
-            $("#downlist").slideUp("fast");	
-        });
-		
-    });
- </script>
-
 </head>
-
 <body>
 
-
- <div id="wrap">
- <table width="99%" border="0" style="margin:25px 0px">
-  <tbody>
-    <tr>
-      <td height="59" colspan="2" align="left" valign="middle" style="color:#444e41"><span style="font-size:34px">&nbsp;&nbsp;&nbsp;&nbsp;FAQ&nbsp;&nbsp;</span><span style="font-size:24px">常见问题&amp;解答</span></td>
-      </tr>
-    <tr>
-      <td width="27%" valign="top">
-        <p><a href="index.html" class="slidebarlink">&gt;FAQ首页</a></p>
-        <p><a href="faq_question.html" class="slidebarlink">&gt;常见问题</a></p>
-        <p><a href="faq_financial.html" class="slidebarlink now">▶&nbsp;财务部</a></p>
-        <p><a href="faq_secretary.html" class="slidebarlink">&gt;秘书部</a></p>
-        <p><a href="faq_media.html" class="slidebarlink">&gt;新媒体工作室</a></p>
-        <p><a href="faq_art.html" class="slidebarlink">&gt;文艺拓展部</a></p>
-        <p><a href="{:U('/Home/FAQ/faq_hr')}" class="slidebarlink">&gt;人力资源部</a></p>
-        <p><a href="faq_supervise.html" class="slidebarlink">&gt;财监委</a></p>
-        <p><a href="faq_guide.html" class="slidebarlink">&gt;社团成立指南</a></p>
-        </td>
-      <td width="73%" valign="top">      
       <div class="content_container">
           <div class="content_title">Q：社联财务部值班时间？</div>
-          <div class="content_text">A：逢周一至周五中午12：40——13：30在大活413有财务部人员值班
-财务部公邮：caiwu@auhust.net
-</div>
+          <div class="content_text">A：逢周一至周五中午12：40——13：30在大活413有财务部人员值班<br>财务部公邮：caiwu@auhust.net
+          </div>
       </div>
       
       <div class="content_container">
@@ -86,13 +40,10 @@
           <div class="content_text">A：社团网专设一个社团财务专栏，让各协会每个月把财务情况在网上发布，让广大会员了解协会的资金运用情况，也可以促进各协会定期对自己的财务状况进行总结和规划。这一内容在社团评估中也将作为“社团财务公开”的一个评审标准。具体流程如下：<br>1、每月末，各社团财务负责人讲各自社团月度财务社团总结报表发至财务部公邮 caiwu@auhust.net。<br>2、财务部总结各协会月度表以后，会将月度财务总结以群邮形式在财务负责人专群进行公布。月度财务结果在年终评估评优中占一定比重。<br>3、六月份协会财务负责人自行总结协会年度财务报告，与协会年度财务报表一起发至财务部公邮。年度财务总结与月度财务总结共同构成年终评估评优中财务部分的评分。
 </div>
       </div>
-      </td>
-    </tr>
-    </tbody>
-</table>
-
- 
- </div>
+      <script>
+          document.getElementById("side-finance").className="sidelink active";
+          document.getElementById("navtitle-3").innerHTML="财务部";
+      </script>
 
 </body>
 </html>

@@ -13,23 +13,24 @@ use Think\Controller;
 
 class AUController extends Controller{
     public function index(){
+        layout('au_layout');
         $this->display();
     }
     public function department(){
-        layout('AU/au_layout');
+        layout('au_layout');
         $this->display();
     }
     public function regulation(){
-        layout('AU/au_layout');
+        layout('au_layout');
         $this->display();
     }
     public function event(){
-        layout('AU/au_layout');
+        layout('au_layout');
         $this->data=M('event')->select();
         $this->display();
     }
     public function weizai(){
-        layout('AU/au_layout');
+        layout('au_layout');
         $this->display();
     }
 

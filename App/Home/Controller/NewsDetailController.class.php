@@ -16,6 +16,7 @@ class NewsDetailController extends Controller{
         $id=I('id',0,'intval');
         if($id){
             $this->news=D('news')->where(array('id'=>$id))->find();
+            layout("newsdetail_layout");
             $this->display();
         }else{
             $this->error('页面不存在');

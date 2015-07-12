@@ -3,66 +3,11 @@
 <head>
     <meta charset="utf-8">
     <title>社联机构</title>
-
-    <script>
-        $(document).ready(
-                function () {
-
-                    $(".a-top").mouseenter(
-                            function (e) {
-                                $("#downlist").slideDown("fast");
-                            });
-
-                    $("#downlist").mouseenter(
-                            function (e) {
-                                $("#downlist").slideDown("fast");
-                            });
-
-
-                    $("#downlist").mouseleave(
-                            function (e) {
-                                $("#downlist").slideUp("fast");
-                            });
-
-                });
-    </script>
-    <style>
-        .de_link {
-            margin-top: 200px;
-            margin-left: 30px;
-            border: 1px solid red;
-        }
-
-        .content_table {
-            font-family: 微软雅黑;
-            font-size: 18px;
-        }
-
-        .intro {
-            display: inline-block;
-            padding-left: 20px;
-            font-size: 18px;
-            font-weight: 600;
-            padding-top: 20px;
-        }
-
-        .infor {
-            display: inline-block;
-        }
-
-        .background_content {
-            background: url(__PUBLIC__/NewsSrc/im/dh.png);
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: 200px 50px;
-        }
-    </style>
 </head>
 
 <body>
 
 
-<td width="73%" height="520px">
     <table width="100%" class="content_table" cellspacing="0" cellpadding="0" height="500px">
         <tr>
             <td width="30%" align="center" valign="center" style="font-size:30px" colspan="3">主席团</td>
@@ -249,13 +194,10 @@
             </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
-
         </tr>
-
-
     </table>
-</td>
-
-
+<script>
+    document.getElementById("navtitle-depart").innerHTML="主席团";
+</script>
 </body>
 </html>

@@ -3,28 +3,6 @@
 <head>
     <meta charset="utf-8">
     <title>社联机构</title>
-    <script>
-        $(document).ready(
-                function () {
-
-                    $(".a-top").mouseenter(
-                            function (e) {
-                                $("#downlist").slideDown("fast");
-                            });
-
-                    $("#downlist").mouseenter(
-                            function (e) {
-                                $("#downlist").slideDown("fast");
-                            });
-
-
-                    $("#downlist").mouseleave(
-                            function (e) {
-                                $("#downlist").slideUp("fast");
-                            });
-
-                });
-    </script>
     <style>
         .de_link {
             margin-top: 200px;
@@ -46,12 +24,6 @@
 </head>
 
 <body>
-
-
-
-
-            <td width="73%" height="520px">
-
                 <table width="100%" class="content_table" cellspacing="0" cellpadding="0" height="500px">
                     <tr>
                         <td width="30%" align="center" valign="center" style="font-size:30px">财务部</td>
@@ -82,14 +54,8 @@
                         <td>&nbsp;</td>
                     </tr>
                 </table>
-
-
-            </td>
-
-
-
-
-
-
+                <script>
+                    document.getElementById("navtitle-depart").innerHTML="财务部";
+                </script>
 </body>
 </html>
