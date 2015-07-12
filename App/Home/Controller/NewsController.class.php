@@ -23,6 +23,7 @@ class NewsController extends Controller{
         $this->page=$Page->show();
         $this->count=$count;
 //        dump($this->news);
+        layout('News_layout');
         $this->display();
     }
 }

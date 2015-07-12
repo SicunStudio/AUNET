@@ -3,37 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>社团成立指南</title>
- <script>
-  $(document).ready(
-	   function() {
-		 
-		   $(".a-top").mouseenter(
-		   function(e) {
-            $("#downlist").slideDown("fast");	
-        });
-		
-		$("#downlist").mouseenter(
-		   function(e) {
-            $("#downlist").slideDown("fast");	
-        });
-		
-	
-		
-		$("#downlist").mouseleave(
-		   function(e) {
-            $("#downlist").slideUp("fast");	
-        });
-		
-    });
- </script>
  <style>
-#note{
-	width:80%;
-	border:none;
-	margin-left:10px;
-	font-size:25px;
-	}
-
 .regularmodel{
 	margin:10px 5px;
 	}
@@ -44,35 +14,8 @@
 	}
 
 </style>
- 
 </head>
-
 <body>
-
-
- <div id="wrap">
- <table width="99%" border="0" style="margin:25px 0px">
-  <tbody>
-    <tr>
-      <td height="59" colspan="2" align="left" valign="middle" style="color:#444e41"><span style="font-size:34px">&nbsp;&nbsp;&nbsp;&nbsp;FAQ&nbsp;&nbsp;</span><span style="font-size:24px">常见问题&amp;解答</span></td>
-      </tr>
-    <tr>
-      <td width="27%" valign="top">
-        <p><a href="index.html" class="slidebarlink">&gt;FAQ首页</a></p>
-        <p><a href="FAQ_question.html" class="slidebarlink">&gt;常见问题</a></p>
-        <p><a href="FAQ_financial.html" class="slidebarlink">&gt;财务部</a></p>
-        <p><a href="FAQ_secretary.html" class="slidebarlink">&gt;秘书部</a></p>
-        <p><a href="FAQ_media.html" class="slidebarlink">&gt;新媒体工作室</a></p>
-        <p><a href="FAQ_art.html" class="slidebarlink">&gt;文艺拓展部</a></p>
-        <p><a href="{:U('/Home/FAQ/faq_hr')}" class="slidebarlink">&gt;人力资源部</a></p>
-        <p><a href="FAQ_supervise.html" class="slidebarlink">&gt;财监委</a></p>
-        <p><a href="FAQ_guide.html" class="slidebarlink now">▶&nbsp;社团成立指南</a></p>
-        </td>
-
-
-      <td width="73%" align="left" valign="top">
-
-
       <div class="content_container">
       	<div class="content_title">一 致社团朋友们</div>
         <div class="content_text">
@@ -204,14 +147,9 @@
             二○一三年九月十日 </p>
         </div>
       </div>
-     
-      </td>
-    </tr>
-    </tbody>
-</table>
-
-
- </div>
-
+      <script>
+          document.getElementById("side-guide").className="sidelink active";
+          document.getElementById("navtitle-3").innerHTML="社团成立指南";
+      </script>
 </body>
 </html>

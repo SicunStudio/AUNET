@@ -5,29 +5,6 @@
  <title>社联机构</title>
      <link type="text/css" rel="stylesheet" href="__PUBLIC__/general.css">
      <script type="text/javascript" src="__PUBLIC__/js/jquery.js"></script>
- <script>
-  $(document).ready(
-	   function() {
-		 
-		   $(".a-top").mouseenter(
-		   function(e) {
-            $("#downlist").slideDown("fast");	
-        });
-		
-		$("#downlist").mouseenter(
-		   function(e) {
-            $("#downlist").slideDown("fast");	
-        });
-		
-	
-		
-		$("#downlist").mouseleave(
-		   function(e) {
-            $("#downlist").slideUp("fast");	
-        });
-		
-    });
- </script>
  <style>
 .de_link {
 	margin-top: 200px;
@@ -53,9 +30,6 @@
  </head>
 
  <body>
-
-
-        <td width="73%" height="520px">
            <table width="100%" class="content_table" cellspacing="0" cellpadding="0" height="500px">
             <tr>
                <td width="30%" align="center" valign="top" style="font-size:30px">公共关系部</td>
@@ -89,8 +63,8 @@
                <td>&nbsp;</td>
              </tr>
           </table>
-         </td>
-
-
+           <script>
+               document.getElementById("navtitle-depart").innerHTML="公共关系部";
+           </script>
 </body>
 </html>

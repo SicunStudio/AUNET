@@ -2,7 +2,10 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
+    <title>添加文章</title>
+    <style>
+        #edui1 { width: 100%;}
+    </style>
 </head>
 <js href="__PUBLIC__/js/jquery-2.0.2.js" />
 <js href="__PUBLIC__/ueditor/ueditor.config.js" />
@@ -10,14 +13,13 @@
 <script type="text/javascript" charset="utf-8" src="lang/zh-cn/zh-cn.js"></script>
 <script>
     window.UEDITOR_CONFIG.initialFrameHeight=600;
-        window.UEDITOR_CONFIG.initialFrameWidth=1900;
+
 		var ue = UE.getEditor('content',{serverUrl :"{:U('Admin/News/ueditor')}"});
     
 	function ClearTags(){ 
 	var text=ue.getContentTxt();
 	document.getElementById("text").textContent=text;
 	}
-
 </script>
 <body>
 <h4><ol class="breadcrumb"><li>文章管理</li><li class="active">添加文章</li></ol></h4>

@@ -13,12 +13,15 @@ use Think\Controller;
 
 class OtherController extends Controller{
     public function advice(){
+    layout('Other_layout');
         $this->display();
     }
     public function contact(){
+    layout('Other_layout');
         $this->display();
     }
     public function member(){
+    layout('Other_layout');
         $this->display();
     }
     public function advise_handle(){
