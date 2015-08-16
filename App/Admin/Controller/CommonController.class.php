@@ -22,4 +22,5 @@ class CommonController extends Controller{
             Rbac::AccessDecision()||$this->error('没有权限');
         }
     }
+
 } 
