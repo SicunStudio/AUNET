@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: 127.0.0.1
--- 生成日期: 2015 �?07 �?08 �?15:41
+-- 生成日期: 2015 �?08 �?16 �?10:28
 -- 服务器版本: 5.6.11
 -- PHP 版本: 5.5.1
 
@@ -171,6 +171,29 @@ INSERT INTO `aunet_cate` (`id`, `name`, `pid`, `sort`) VALUES
 (10, '社联', 0, 100),
 (13, '社团', 0, 100),
 (18, '法语', 13, 100);
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `aunet_design`
+--
+
+CREATE TABLE IF NOT EXISTS `aunet_design` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `time` int(10) DEFAULT NULL,
+  `content` varchar(50) NOT NULL DEFAULT '',
+  `phone` int(10) NOT NULL,
+  `done` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+--
+-- 转存表中的数据 `aunet_design`
+--
+
+INSERT INTO `aunet_design` (`id`, `time`, `content`, `phone`, `done`) VALUES
+(1, 0, 'ggg', 2147483647, 0),
+(2, 1111, 'ggg', 2147483647, 0);
 
 -- --------------------------------------------------------
 
@@ -464,7 +487,7 @@ CREATE TABLE IF NOT EXISTS `aunet_user` (
 --
 
 INSERT INTO `aunet_user` (`id`, `username`, `password`, `logintime`, `loginip`, `lock`) VALUES
-(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 1436361085, '127.0.0.1', 0),
+(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 1439710970, '127.0.0.1', 0),
 (7, 'test', '098f6bcd4621d373cade4e832627b4f6', 1434380153, '127.0.0.1', 0);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
