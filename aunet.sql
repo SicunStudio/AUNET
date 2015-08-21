@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: 127.0.0.1
--- 生成日期: 2015 �?08 �?16 �?10:28
+-- 生成日期: 2015 �?08 �?21 �?13:45
 -- 服务器版本: 5.6.11
 -- PHP 版本: 5.5.1
 
@@ -42,6 +42,42 @@ CREATE TABLE IF NOT EXISTS `aunet_access` (
 --
 
 INSERT INTO `aunet_access` (`role_id`, `node_id`, `level`, `module`) VALUES
+(5, 59, 3, NULL),
+(5, 48, 2, NULL),
+(5, 47, 3, NULL),
+(4, 70, 3, NULL),
+(4, 68, 3, NULL),
+(4, 69, 3, NULL),
+(4, 62, 2, NULL),
+(5, 46, 3, NULL),
+(5, 60, 3, NULL),
+(5, 61, 3, NULL),
+(5, 45, 2, NULL),
+(5, 36, 3, NULL),
+(5, 37, 3, NULL),
+(5, 38, 3, NULL),
+(5, 72, 3, NULL),
+(5, 63, 3, NULL),
+(5, 34, 2, NULL),
+(5, 40, 3, NULL),
+(5, 41, 3, NULL),
+(5, 39, 2, NULL),
+(5, 70, 3, NULL),
+(5, 68, 3, NULL),
+(5, 69, 3, NULL),
+(5, 62, 2, NULL),
+(5, 33, 1, NULL),
+(5, 35, 1, NULL),
+(5, 89, 3, NULL),
+(5, 88, 2, NULL),
+(5, 86, 1, NULL),
+(4, 33, 1, NULL),
+(5, 58, 3, NULL),
+(5, 50, 3, NULL),
+(5, 49, 3, NULL),
+(4, 104, 3, NULL),
+(4, 103, 2, NULL),
+(4, 91, 1, NULL),
 (5, 59, 3, NULL),
 (5, 48, 2, NULL),
 (5, 47, 3, NULL),
@@ -180,20 +216,22 @@ INSERT INTO `aunet_cate` (`id`, `name`, `pid`, `sort`) VALUES
 
 CREATE TABLE IF NOT EXISTS `aunet_design` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
-  `time` int(10) DEFAULT NULL,
+  `time` varchar(15) NOT NULL DEFAULT '',
   `content` varchar(50) NOT NULL DEFAULT '',
-  `phone` int(10) NOT NULL,
+  `phone` varchar(15) DEFAULT NULL,
   `done` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
 
 --
 -- 转存表中的数据 `aunet_design`
 --
 
 INSERT INTO `aunet_design` (`id`, `time`, `content`, `phone`, `done`) VALUES
-(1, 0, 'ggg', 2147483647, 0),
-(2, 1111, 'ggg', 2147483647, 0);
+(7, '2015.3.1', '测试', '13018060139', 0),
+(6, '2015.2.1', '测试', '13018060139', 0),
+(9, '2015.1.2', '测试', '13018060139', 0),
+(10, '2015.1.1', '测试', '13018060139', 0);
 
 -- --------------------------------------------------------
 
@@ -487,7 +525,7 @@ CREATE TABLE IF NOT EXISTS `aunet_user` (
 --
 
 INSERT INTO `aunet_user` (`id`, `username`, `password`, `logintime`, `loginip`, `lock`) VALUES
-(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 1439710970, '127.0.0.1', 0),
+(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 1440145136, '127.0.0.1', 0),
 (7, 'test', '098f6bcd4621d373cade4e832627b4f6', 1434380153, '127.0.0.1', 0);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
