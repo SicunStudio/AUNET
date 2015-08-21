@@ -11,6 +11,7 @@ namespace Design\Controller;
 
 class DesignController extends CommonController{
     public function design_index(){
+        layout('Design_layout');
         $this->display();
     }
 }
