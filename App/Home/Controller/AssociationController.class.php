@@ -385,7 +385,7 @@ public function ysgxs(){
             layout('association_info_layout');
             $this->display();
         }
-public function zswxs(){
+    public function zswxs(){
             layout('association_info_layout');
             $this->display();
         }
