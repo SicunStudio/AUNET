@@ -62,12 +62,3 @@ function get_filetree($path='..'){
     }
     return $tree;
 }
-
-function convertArrayToTree($data) {
-    $rst = array();
-    $month = array();
-    foreach($data as $v) {
-        $month[]=$v["month"];
-    }
-    return $month;
-}
