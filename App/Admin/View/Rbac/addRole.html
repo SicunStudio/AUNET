@@ -5,40 +5,26 @@
     <title></title>
 </head>
 <body>
-<form action="{:U('addRoleHandle');}" method="post"/>
-    <table class="table"/>
-
-        <tr>
-            <th colspan="2">添加角色</th>
-        </tr>
-
-        <tr>
-            <td align="right">角色名称:</td>
-            <td>
-                <input type="text" name='name'/>
-            </td>
-        </tr>
-
-        <tr>
-            <td align="right">角色描述:</td>
-            <td>
-                <input type="text" name='remark'/>
-            </td>
-        </tr>
-        <tr>
-            <td align="right">是否开启:</td>
-            <td>
-                <input type="radio" name='status' value='1' checked='checked'/>&nbsp;开启&nbsp;
-                <input type="radio" name='status' value='0'/>&nbsp;关闭
-            </td>
-        </tr>
-    <tr>
-        <td colspan="2" align="center">
-            <input type="submit" value="保存添加"/>
-        </td>
-    </tr>
-
-
-    </table>
+<h4><ol class="breadcrumb"><li>权限管理</li><li><a href="{:U('/Admin/Rbac/role');}">角色列表</a></li><li class="active">添加角色</li></ol></h4>
+<form action="{:U('addRoleHandle');}" method="post" class="form-horizontal">
+    <div class="form-group">
+        <label class="col-sm-3 control-label">角色名称</label>
+        <div class="col-sm-9"><input type="text" name='name' class="form-control" /></div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-3 control-label">角色描述</label>
+        <div class="col-sm-9"><input type="text" name='remark' class="form-control" />
+    </div>
+    <div class="form-group">
+        <label class="col-sm-3 control-label">是否开启</label>
+        <div class="col-sm-9" ><input type="radio" name='status' value='1' checked='checked'/>&nbsp;开启&nbsp;
+        <input type="radio" name='status' value='0'/>&nbsp;关闭</div>
+    </div>
+    <div class="form-group" style="text-align:center;"><input type="submit" value="保存添加" class="btn btn-primary btn-lg" /></div>
+</form>
+<script>
+    var listitem=document.getElementById("rbac");
+    listitem.className="list-group-item active";
+</script>
 </body>
 </html>

@@ -4,55 +4,8 @@
 <meta charset="utf-8">
 <title>人力资源部</title>
    <link href="__PUBLIC__/FAQSrc/content.css" rel="stylesheet" type="text/css">
- <script>
-  $(document).ready(
-	   function() {
-		 
-		   $(".a-top").mouseenter(
-		   function(e) {
-            $("#downlist").slideDown("fast");	
-        });
-		
-		$("#downlist").mouseenter(
-		   function(e) {
-            $("#downlist").slideDown("fast");	
-        });
-		
-	
-		
-		$("#downlist").mouseleave(
-		   function(e) {
-            $("#downlist").slideUp("fast");	
-        });
-		
-    });
- </script>
- 
 </head>
-
 <body>
-
-
- 
- <div id="wrap">
- <table width="99%" border="0" style="margin:25px 0px">
-  <tbody>
-    <tr>
-      <td height="59" colspan="2" align="left" valign="middle" style="color:#444e41"><span style="font-size:34px">&nbsp;&nbsp;&nbsp;&nbsp;FAQ&nbsp;&nbsp;</span><span style="font-size:24px">常见问题&amp;解答</span></td>
-      </tr>
-    <tr>
-      <td width="27%" valign="top">
-        <p><a href="{:U('/Home/FAQ/index')}" class="slidebarlink">&gt;FAQ首页</a></p>
-        <p><a href="{:U('/Home/FAQ/faq_question')}" class="slidebarlink">&gt;常见问题</a></p>
-        <p><a href="{:U('/Home/FAQ/faq_financial')}" class="slidebarlink">&gt;财务部</a></p>
-        <p><a href="{:U('/Home/FAQ/faq_secretary')}" class="slidebarlink">&gt;秘书部</a></p>
-        <p><a href="{:U('/Home/FAQ/faq_media')}" class="slidebarlink">&gt;新媒体工作室</a></p>
-        <p><a href="{:U('/Home/FAQ/faq_art')}" class="slidebarlink">&gt;文艺拓展部</a></p>
-        <p><a href="{:U('/Home/FAQ/faq_hr')}" class="slidebarlink now">▶&nbsp;人力资源部</a></p>
-        <p><a href="{:U('/Home/FAQ/faq_supervise')}" class="slidebarlink">&gt;财监委</a></p>
-        <p><a href="{:U('/Home/FAQ/faq_guide')}" class="slidebarlink">&gt;社团成立指南</a></p>
-        </td>
-      <td width="73%" align="center" valign="top">
           <div class="content_container">
               <div class="content_title">1.协会内部管理层换届要求</div>
               <div class="content_text">
@@ -84,14 +37,9 @@
                   ，还需要提交指导老师的相关信息。
               </div>
           </div>
-
-      </td>
-    </tr>
-    </tbody>
-</table>
-
- 
- </div>
-
+          <script>
+              document.getElementById("side-hr").className="sidelink active";
+              document.getElementById("navtitle-3").innerHTML="人力资源部";
+          </script>
 </body>
 </html>

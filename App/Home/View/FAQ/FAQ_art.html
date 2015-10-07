@@ -4,68 +4,15 @@
 <meta charset="utf-8">
 <title>文艺拓展部</title>
     <link href="__PUBLIC__/FAQSrc/content.css" rel="stylesheet" type="text/css">
- <script>
-  $(document).ready(
-	   function() {
-		 
-		   $(".a-top").mouseenter(
-		   function(e) {
-            $("#downlist").slideDown("fast");	
-        });
-		
-		$("#downlist").mouseenter(
-		   function(e) {
-            $("#downlist").slideDown("fast");	
-        });
-		
-	
-		
-		$("#downlist").mouseleave(
-		   function(e) {
-            $("#downlist").slideUp("fast");	
-        });
-		
-    });
- </script>
- 
 </head>
-
 <body>
-
-
-
- 
- <div id="wrap">
- <table width="99%" border="0" style="margin:25px 0px">
-  <tbody>
-    <tr>
-      <td height="59" colspan="2" align="left" valign="middle" style="color:#444e41"><span style="font-size:34px">&nbsp;&nbsp;&nbsp;&nbsp;FAQ&nbsp;&nbsp;</span><span style="font-size:24px">常见问题&amp;解答</span></td>
-      </tr>
-    <tr>
-      <td width="27%" valign="top">
-        <p><a href="index.html" class="slidebarlink">&gt;FAQ首页</a></p>
-        <p><a href="faq_question.html" class="slidebarlink">&gt;常见问题</a></p>
-        <p><a href="faq_financial.html" class="slidebarlink">&gt;财务部</a></p>
-        <p><a href="faq_secretary.html" class="slidebarlink">&gt;秘书部</a></p>
-        <p><a href="faq_media.html" class="slidebarlink">&gt;新媒体工作室</a></p>
-        <p><a href="faq_art.html" class="slidebarlink now">▶&nbsp;文艺拓展部</a></p>
-        <p><a href="{:U('/Home/FAQ/faq_hr')}" class="slidebarlink">&gt;人力资源部</a></p>
-        <p><a href="faq_supervise.html" class="slidebarlink">&gt;财监委</a></p>
-        <p><a href="faq_guide.html" class="slidebarlink">&gt;社团成立指南</a></p>
-        </td>
-      <td width="73%" valign="top">
       <div class="content_container">
           <div class="content_title">Q：表演队和协会的区别？</div>
           <div class="content_text">A：二者相互独立，有的表演队不挂靠任何协会，也不是所有协会都有表演队，但挂靠协会的表演队可以从协会中吸纳优秀人才作为表演力量，其余没有表演队的协会在举办活动时也可邀请表演队前去表演。</div>
-      </div>   
-      </td>
-    </tr>
-    </tbody>
-</table>
-
- 
- </div>
- 
-
+      </div>
+      <script>
+          document.getElementById("side-art").className="sidelink active";
+          document.getElementById("navtitle-3").innerHTML="文艺拓展部";
+      </script>
 </body>
 </html>

@@ -15,7 +15,7 @@ class BroadCastController extends Controller{
     public function index(){
 
         $this->broadcast=M('announce')->order('time desc')->select();
-//        layout('news_layout');
+        layout('News_layout');
         $this->display();
     }
 }

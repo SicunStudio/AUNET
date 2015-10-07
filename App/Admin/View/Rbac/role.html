@@ -5,15 +5,15 @@
     <title></title>
 </head>
 <body>
-
+<h4><ol class="breadcrumb"><li>权限管理</li><li class="active">角色列表</li></ol></h4>
 <div>
-    <table class="table"/>
-    <caption align="top">角色列表</caption>
-    <tr>
-        <th>ID</th>
-        <th>角色名稱</th>
-        <th>角色描述</th>
-        <th>开启状态</th>
+    <table class="table table-striped table-hover"/>
+    <thead>
+        <td>ID</td>
+        <td>角色名称</td>
+        <td>角色描述</td>
+        <td>开启状态</td>
+    </thead>
         <foreach name="role" item="v">
             <tr>
                 <td>{$v.id}</td>
@@ -23,7 +23,7 @@
                     <if condition="$v['status']">开启<else/>关闭</if>
                 </td>
                 <td>
-                    <a href="{:U('access',array('rid'=>$v['id']));}">配置權限</a>
+                    <a href="{:U('access',array('rid'=>$v['id']));}" class="btn btn-info btn-sm">配置权限</a>
                 </td>
 
             </tr>
@@ -31,13 +31,14 @@
     </tr>
     <tr>
         <td colspan="5" align="center">
-            <a href="{:U('addRole')}">添加角色</a>
+            <a href="{:U('addRole')}" class="btn btn-success btn-lg">添加角色</a>
         </td>
     </tr>
-
-
     </table>
 </div>
-
+<script>
+    var listitem=document.getElementById("rbac");
+    listitem.className="list-group-item active";
+</script>
 </body>
 </html>

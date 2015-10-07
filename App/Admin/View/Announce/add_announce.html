@@ -5,20 +5,24 @@
     <title></title>
 </head>
 <body>
+<h4>
+<ol class="breadcrumb">
+  <li>发布公告</a></li>
+  <li class="active">添加公告</a></li>
+</ol>
+</h4>
 <form method="post" action="{:U('add_announce_handle')}">
-    <table class="table">
-        <tr>
-            <td align="right">公告内容</td>
-            <td>
-                <input type="text" name="title"/>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2" align="center">
-                <input type="submit" value="提交"/>
-            </td>
-        </tr>
-    </table>
+
+<div class="form-group">
+    <label class="font-size:28px;">公告内容</label>
+    <input type="text" name="title" class="form-control" />
+</div>
+<input type="submit" value="提交" class="btn btn-primary btn-lg" />
+
 </form>
+<script>
+    var listitem=document.getElementById("announce");
+    listitem.className="list-group-item active";
+</script>
 </body>
 </html>

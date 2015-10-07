@@ -3,87 +3,31 @@
 <head>
 <meta charset="utf-8">
 <title>会员维权</title>
- <script>
-  $(document).ready(
-	   function() {
-		 
-		   $(".a-top").mouseenter(
-		   function(e) {
-            $("#downlist").slideDown("fast");	
-        });
-		
-		$("#downlist").mouseenter(
-		   function(e) {
-            $("#downlist").slideDown("fast");	
-        });
-		
-	
-		
-		$("#downlist").mouseleave(
-		   function(e) {
-            $("#downlist").slideUp("fast");	
-        });
-		
-    });
- </script>
  <style>
 .context
-{display:block;
- width: 90%; 
+{/*display:block;
+ width: 90%; */
  margin:40px 20px; 
  font-size:22px; 
  color:#000000; 
  font-family:幼圆;
  font-weight:bold;
 	}
-
 </style>
  
 </head>
 
 <body>
-
-
- <div id="wrap">
- <table width="99%" border="0" style="margin:25px 0px">
-  <tbody>
-    <tr>
-      <td height="59" colspan="2" align="left" valign="middle" style="color:#444e41"><span style="font-size:34px">&nbsp;&nbsp;&nbsp;&nbsp;其他 Other&nbsp;&nbsp;</span><span style="font-size: 24px">&gt;&gt; 会员维权</span></td>
-      </tr>
-    <tr>
-      <td width="27%" valign="top">
-        <p><a href="{:U('/Home/Other/member')}" class="slidebarlink now">▶&nbsp;会员维权</a></p>
-        <p><a href="{:U('/Home/Other/advice')}" class="slidebarlink">&gt;投诉建议</a></p>
-        <p><a href="{:U('/Home/Other/contact')}" class="slidebarlink">&gt;联系我们</a></p>
-        <p><a href="{:U('/Home/FAQ/index')}" class="slidebarlink">&gt;FAQ</a></p>
-
-        </td>
-      <td width="73%" align="left" valign="top">
-      
-      <div style="width:400px; background-color:#9bd288; margin-top:35px; margin-left:25px; padding: 10px;">
-      <p style="display:block; width: 180px; margin:10px auto; font-size:21px; color:#ffffff; font-family:幼圆; font-weight:bold">会员维权方式</p>
-      </div>
-      
-      <div style="width:750px; background-color:#e6f6c5; margin-top:25px; margin-left:25px; padding: 10px;">
+      <p style="display:block; background-color:#9bd288; margin:10px auto; font-size:21px; color:#ffffff; font-family:幼圆; font-weight:bold; padding: 15px 30px;">会员维权方式</p>
+      <div style="background-color:#e6f6c5; margin:25px auto; padding: 10px;">
       <p class="context">社联办公室电话：027-87541242</p>
 <p class="context">行政监察部邮箱：xingzhengjiancha@auhust.net</p>
 <p class="context">社团网投诉建议：sau.hust.edu.cn</p>
   <p class="context">社联办公室：大学生活动中心B413</p>
       </div>
-      
-      
-      
-      
-      
-      
-      
-      </td>
-    </tr>
-    </tbody>
-</table>
-
- 
- </div>
-
+      <script>
+          document.getElementById("side-member").className="sidelink active";
+          document.getElementById("navtitle-3").innerHTML="会员维权";
+      </script>
 </body>
 </html>
