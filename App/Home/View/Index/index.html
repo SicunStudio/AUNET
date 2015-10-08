@@ -28,9 +28,10 @@
         #twd-container .col-sm-3:nth-child(4) a:hover
         { background: url("__PUBLIC__/IndexSrc/image/44.png") no-repeat ; background-size: 175px; text-decoration: none;}
         .weeklynews-box a :hover {background-color: #cd324c;}
-        .news-title { font-size: 36px; color:#fff; margin: 0px 8px 5px 8px; }
-        .first {font-size: 64px;}
-        .news-text { font-size: 16px; color:#fff;  margin: 15px 8px 0px 8px;}
+        .weeklynews-box { overflow:hidden; text-overflow:ellipsis; }
+        .news-title { font-size: 28px; color:#fff; margin: 8px 8px 5px 15px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
+        .first {font-size: 36px;}
+        .news-text { font-size: 16px; color:#fff;  margin: 5px 8px 5px 25px; text-overflow:ellipsis; /* height:100px;*/ overflow:hidden; display: inline-block; }
         a:hover {text-decoration: none;}
         .item img { width: 100%;}
 
@@ -47,9 +48,9 @@
         {
             .weeklynews-box
             {  width: 450px; height: 270px; }
-            .news-title { font-size: 48px; color:#fff; margin: 0px 8px 5px 8px; }
-            .first {font-size: 72px;}
-            .news-text { font-size: 24px; color:#fff;  margin: 20px 10px 0px 10px;}
+            .news-title { font-size: 28px; color:#fff; margin: 8px 8px 5px 15px; }
+            .first {font-size: 54px;}
+            .news-text { font-size: 16px; color:#fff;  margin: 5px 10px 0px 25px;}
         }
 
         @media screen and (max-width:340px)
@@ -135,7 +136,6 @@
             </div></a>
         </div>
         <div class="col-sm-6">
-
             <div class="weeklynews-box" style="background-color:#59a642;"><a href="{:U('/Home/NewsDetail/index',array('id'=>$news[3]['id']))}">
                 <p class="news-title"><span class="first">{$news[3].title|msubstr=###,0,1}</span><?php echo msubstr($news[3]['title'],1,strlen($news[3]['title']));?>&nbsp;</p>
                 <p class="news-text">{$news[3].text }&nbsp;</p>
