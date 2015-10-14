@@ -13,19 +13,19 @@ use Think\Controller;
 
 class WeiZaiController extends Controller{
     public function index(){
-        layout('weizailayout');
+        layout('au_layout');
         $this->display();
     }
     public function bumen(){
-        layout('weizailayout');
+        layout('au_layout');
         $this->display();
     }
     public function shetuan(){
-        layout('weizailayout');
+        layout('WeiZai/weizailayout');
         $this->display();
     }
     public function heci(){
-        layout('weizailayout');
+        layout('WeiZai/weizailayout');
         $this->display();
     }
 }
