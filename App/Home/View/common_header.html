@@ -13,8 +13,12 @@
     <style>
         *{font-family: "微软雅黑" ;}
 
+        .navbar {
+            height: 100px;
+        }
+
         #TopNaviBar a
-        { height:98px; font-size:30px;  line-height:100px;  padding-left: 15px; padding-right: 15px; color:#fff; }
+        { height:98px; font-size:30px;  line-height: 70px;  padding-left: 15px; padding-right: 15px; color:#fff; }
 
         #TopNaviBar a:hover
         { background-color: transparent; text-decoration: underline;  color: #fff; }
@@ -30,13 +34,41 @@
         .downlistlink:hover
         {text-decoration: none; color: #fff;}
 
+        .navbar-brand {
+            padding-top:20px; padding-bottom:20px; padding-left:0px; padding-right:0px;
+        }
+
+        .navbar-brand img {
+            height: 55px;
+        }
+
         @media screen and (max-width:765px)
         {
+            #TopNaviBar
+            { width: 200px; position:absolute; right: 0px; top: -1px;}
+
+            #TopNaviBar a
+            {font-size: 20px; !important; line-height: 35px; !important; height: 55px;}
             #navibar-link
             { width: 100%; }
 
             #navi-tab li
             { width: 100%; }
+
+            .navbar {
+                height: 60px;
+            }
+            .navbar-brand {
+                padding-top:10px; padding-bottom:10px; padding-left:0px; padding-right:0px;
+            }
+
+            .navbar-brand img {
+                height: 39px;
+            }
+
+            .navbar-toggle {
+                margin-bottom: 0px;
+            }
         }
     </style>
     <script src="__PUBLIC__/bootstrap/js/jquery.min.js"></script>
@@ -57,28 +89,28 @@
                         });
             });
 </script>
-<nav class="navbar" style="background-color:#74b05c; border-radius:0px; height:100px; z-index:1000; margin-bottom: 0px; font-family:  微软雅黑; !important; font-weight: normal; !important "><!-- 导航条开始 -->
+<nav class="navbar" style="background-color:#74b05c; border-radius:0px; /*height:100px;*/z-index:1000; margin-bottom: 0px; font-family:  微软雅黑; !important; font-weight: normal; !important "><!-- 导航条开始 -->
     <div class="container" style="height:100%;">
         <div class="col-sm-3 col-md-3 col-lg-3" style="padding-left:0px; padding-right:0px;">
             <div class="navbar-header" style="height:100%;"><!--navbar header-->
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#TopNaviBar" aria-expanded="false">
                     <span class="sr-only" style="border-color:rgba(255,255,255,0.6);">Toggle navigation</span>
-                    <span class="icon-bar" style="background-color:rgba(255,255,255,0.6); height:4px; width:35px; margin-top:10px; margin-bottom:10px;"></span>
-                    <span class="icon-bar" style="background-color:rgba(255,255,255,0.6); height:4px; width:35px; margin-top:10px; margin-bottom:10px;"></span>
-                    <span class="icon-bar" style="background-color:rgba(255,255,255,0.6); height:4px; width:35px; margin-top:10px; margin-bottom:10px;"></span>
+                    <span class="icon-bar" style="background-color:rgba(255,255,255,0.6); height:3px; width:25px; margin-top:6px; margin-bottom:6px;"></span>
+                    <span class="icon-bar" style="background-color:rgba(255,255,255,0.6); height:3px; width:25px; margin-top:6px; margin-bottom:6px;"></span>
+                    <span class="icon-bar" style="background-color:rgba(255,255,255,0.6); height:3px; width:25px; margin-top:6px; margin-bottom:6px;"></span>
                 </button>
-                <a class="navbar-brand" style="height:100%; padding-top:15px; padding-bottom:0px; padding-left:0px; padding-right:0px;" href="#"><img height="55px" src="__PUBLIC__/general/dh.png"></a>
+                <a class="navbar-brand" style="height:100%;/* padding-top:15px; padding-bottom:0px; padding-left:0px; padding-right:0px;*/" href="#"><img src="__PUBLIC__/general/dh.png"></a>
             </div><!--navbar header ends-->
         </div>
 
         <div class="col-sm-9 col-md-9 col-lg-9" style="padding-left:0px; padding-right:0px; margin-left:0px; margin-right:0px;">
-            <div style="height: 100px; border:none; width:100%;" id="TopNaviBar" class="collapse navbar-collapse"  >
+            <div style="height: 100px; border:none; /*width:100%;*/" id="TopNaviBar" class="collapse navbar-collapse"  >
                 <ul id="navi-tab" class="nav navbar-nav" style="background-color:#74b05c; margin-top:0px; margin-left:0px; margin-right:0px; width:100%" >
-                    <li><a class="navibar-link" style="line-height: 70px; text-align: center; width:100%" href="{:U('Home/Index/index')}">首页</a></li>
-                    <li><a class="navibar-link" style="line-height: 70px; text-align: center; width:100%" href="{:U('/Home/News/index')}">新闻</a></li>
-                    <li><a class="navibar-link" style="line-height: 70px; text-align: center; width:100%" href="{:U('/Home/AU/index')}">社联</a></li>
-                    <li><a class="navibar-link" style="line-height: 70px; text-align: center; width:100%" href="{:U('/Home/Association/index')}">社团</a></li>
-                    <li><a class="navibar-link" style="line-height: 70px; text-align: center; width:100%" href="{:U('/Home/Other/member')}">其他</a></li>
+                    <li><a class="navibar-link" style=" text-align: center; width:100%" href="{:U('Home/Index/index')}">首页</a></li>
+                    <li><a class="navibar-link" style=" text-align: center; width:100%" href="{:U('/Home/News/index')}">新闻</a></li>
+                    <li><a class="navibar-link" style=" text-align: center; width:100%" href="{:U('/Home/AU/index')}">社联</a></li>
+                    <li><a class="navibar-link" style=" text-align: center; width:100%" href="{:U('/Home/Association/index')}">社团</a></li>
+                    <li><a class="navibar-link" style=" text-align: center; width:100%" href="{:U('/Home/Other/member')}">其他</a></li>
                 </ul>
             </div>
         </div>

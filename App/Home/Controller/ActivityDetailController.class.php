@@ -17,6 +17,7 @@ class ActivityDetailController extends Controller {
 //        dump($post);
         $this->forecast=D('forecast')->where(array('id'=>$post))->find();
 //        dump($this->forecast);
+        layout('News_layout');
         $this->display();
     }
 
