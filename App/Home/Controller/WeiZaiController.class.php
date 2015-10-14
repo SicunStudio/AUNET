@@ -16,7 +16,7 @@ class WeiZaiController extends Controller{
         layout('au_layout');
         $this->display();
     }
-    public function bumen(){
+    public function Bumen(){
         layout('au_layout');
         $this->display();
     }
