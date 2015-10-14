@@ -39,7 +39,8 @@ function ShowBox(yr,mon)
     var liindicatorid="li_list_indicator_id_" +yr + "_" + mon;
     //alert(liindicatorid);
     document.getElementById(liindicatorid).style.backgroundColor="#59a642";
-
+    var str=yr+'.'+mon;
+    document.getElementById("SelTime").innerText=str;
 }
 
 function HideBox(avoidyr)
