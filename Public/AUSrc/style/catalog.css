@@ -5,8 +5,8 @@
 	height: 130px;
 	font-family: 微软雅黑;
 	position: fixed;
-	right: 10px;
-	bottom: 160px;
+	left: 20px;
+	bottom: 100px;
 	}
 
 #z_catalog ul {list-style-type: none; padding-left: 0px; }
