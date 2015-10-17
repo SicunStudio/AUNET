@@ -28,7 +28,7 @@ class EventController extends CommonController
         $upload = new Upload();
         $upload->maxSize = 3145728;
         $upload->exts = array('jpg', 'png');
-        $upload->rootPath ='./Public/Upload/Event/';
+        $upload->rootPath ='./Upload/Event/';
         $upload->subName = $_POST['year'] . '/' . $_POST['month'] . '/' . $_POST['day'] . '/';
         $path = $upload->rootPath . $upload->subName;
         if (!file_exists($path)) {

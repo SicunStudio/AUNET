@@ -20,7 +20,7 @@
             <td width="5%">{$v.id}</td>
             <td width="35%" align="center">{$v.title}</td>
             <td width="15%" align="center">{$v.place}</td>
-            <td width="10%" align="center">{$v.time|date='y-m-d H:i',###}</td>
+            <td width="10%" align="center">{$v.time}</td>
             <td width="15%" align="center">{$v.username}</td>
             <td width="20%" align="center">
                 <a href="{:U('editForecast',array('id'=>$v['id'],'name'=>$v['username']))}" class="btn btn-primary btn-sm">修改</a>

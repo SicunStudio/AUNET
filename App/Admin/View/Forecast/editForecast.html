@@ -2,6 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
+    <script type="text/javascript" src="__PUBLIC__/AUSrc/js/year_month_day.js"></script>
     <title></title>
 </head>
 <body>
@@ -18,8 +19,23 @@
     <label>活动地点</label>
     <input type="text" name="place" class="form-control" value="{$data.place}" />
 </div>
+    <div class="form-group">
+        <label>选择时间</label>
+        <select id="selYear" name="year">{$time[0]}
+        </select>
+        <select id="selMonth" name="month">{$time[1]}
+        </select>
+        <select id="selDay" name="day">{$time[2]}
+        </select>
+    </div>
 <input type="submit" value="保存修改" class="btn btn-success btn-lg" />    
 </form>
+<script type="text/javascript">
+    var selYear = window.document.getElementById("selYear");
+    var selMonth = window.document.getElementById("selMonth");
+    var selDay = window.document.getElementById("selDay");
+    new DateSelector(selYear, selMonth, selDay, {$time[0]}, {$time[1]}, {$time[2]});
+</script>
 <script>
     var listitem=document.getElementById("forecast");
     listitem.className="list-group-item active";

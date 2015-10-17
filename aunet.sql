@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: 127.0.0.1
--- 生成日期: 2015 �?10 �?11 �?16:12
+-- 生成日期: 2015 �?10 �?15 �?15:24
 -- 服务器版本: 5.6.11
 -- PHP 版本: 5.5.1
 
@@ -208,6 +208,41 @@ CREATE TABLE IF NOT EXISTS `aunet_buildingclassroom` (
 -- --------------------------------------------------------
 
 --
+-- 表的结构 `aunet_buildingclassroom2`
+--
+
+CREATE TABLE IF NOT EXISTS `aunet_buildingclassroom2` (
+  `Faculty` varchar(256) NOT NULL,
+  `ClassroomCapacity` varchar(256) NOT NULL,
+  `ApplicantName` varchar(256) NOT NULL,
+  `ApplicantTypeSelect` varchar(256) NOT NULL,
+  `ClassroomTypeSelect` varchar(256) NOT NULL,
+  `OfficePhoneNumber` varchar(256) NOT NULL,
+  `CellphoneNumber` varchar(256) NOT NULL,
+  `Time` varchar(256) NOT NULL,
+  `PlaceSelect` varchar(256) NOT NULL,
+  `Week` varchar(256) NOT NULL,
+  `Day` varchar(256) NOT NULL,
+  `LessonSelect` varchar(256) NOT NULL,
+  `ActivityContent` varchar(256) NOT NULL,
+  `Compere` varchar(256) NOT NULL,
+  `Unit` varchar(256) NOT NULL,
+  `Occupation` varchar(256) NOT NULL,
+  `LectureContent` varchar(256) NOT NULL,
+  `LectureName` varchar(256) NOT NULL,
+  `LectureUnit` varchar(256) NOT NULL,
+  `LectureOccupation` varchar(256) NOT NULL,
+  `id` int(16) NOT NULL AUTO_INCREMENT,
+  `Username` varchar(64) NOT NULL,
+  `ReviewState` int(4) NOT NULL,
+  `ReviewAdvice` varchar(256) NOT NULL,
+  `CreateTime` char(23) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
 -- 表的结构 `aunet_cate`
 --
 
@@ -265,18 +300,20 @@ CREATE TABLE IF NOT EXISTS `aunet_design` (
   `content` varchar(50) NOT NULL DEFAULT '',
   `phone` varchar(15) DEFAULT NULL,
   `done` tinyint(1) NOT NULL DEFAULT '0',
+  `qq` varchar(15) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=12 ;
 
 --
 -- 转存表中的数据 `aunet_design`
 --
 
-INSERT INTO `aunet_design` (`id`, `time`, `content`, `phone`, `done`) VALUES
-(7, '2015.3.1', '测试', '13018060139', 0),
-(6, '2015.2.1', '测试', '13018060139', 0),
-(9, '2015.1.2', '测试', '13018060139', 0),
-(10, '2015.1.1', '测试', '13018060139', 0);
+INSERT INTO `aunet_design` (`id`, `time`, `content`, `phone`, `done`, `qq`) VALUES
+(7, '2015.3.1', '测试', '13018060139', 0, ''),
+(6, '2015.2.1', '测试', '13018060139', 0, ''),
+(9, '2015.1.2', '测试', '13018060139', 0, ''),
+(10, '2015.1.1', '测试', '13018060139', 0, ''),
+(11, '2015.9.15', '111', NULL, 0, '111');
 
 -- --------------------------------------------------------
 
@@ -291,19 +328,19 @@ CREATE TABLE IF NOT EXISTS `aunet_doc` (
   `user` varchar(20) NOT NULL DEFAULT '',
   `time` int(10) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=32 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=33 ;
 
 --
 -- 转存表中的数据 `aunet_doc`
 --
 
 INSERT INTO `aunet_doc` (`id`, `filename`, `remark`, `user`, `time`) VALUES
-(30, './Upload/UploadsDoc/test/54e07c4258005.docx', '社团网总体需求.docx', 'test', 1423998018),
 (29, './Upload/UploadsDoc/admin/54e05d1a08a86.docx', '社团网总体需求.docx', 'admin', 1423990042),
 (28, './Upload/UploadsDoc/admin/54e05d1a0869d.docx', '社团网.docx', 'admin', 1423990042),
 (27, './Upload/UploadsDoc/admin/54e05d1a07ecd.docx', '[社团部]社团网场地物资借用及相关功能与要求.docx', 'admin', 1423990042),
 (26, './Upload/UploadsDoc/admin/54e05b90b5a1f.docx', '社团网.docx', 'admin', 1423989648),
-(31, './Upload/UploadsDoc/admin/54e093cf597e7.docx', '社团网总体需求.docx', 'admin', 1424004047);
+(31, './Upload/UploadsDoc/admin/54e093cf597e7.docx', '社团网总体需求.docx', 'admin', 1424004047),
+(32, './Upload/UploadsDoc/admin/561f8435d2c28.doc', '华科公选课指南.doc', 'admin', 1444906037);
 
 -- --------------------------------------------------------
 
@@ -399,7 +436,7 @@ CREATE TABLE IF NOT EXISTS `aunet_news` (
   `text` text,
   PRIMARY KEY (`id`),
   KEY `cid` (`cid`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=69 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=76 ;
 
 --
 -- 转存表中的数据 `aunet_news`
@@ -408,7 +445,7 @@ CREATE TABLE IF NOT EXISTS `aunet_news` (
 INSERT INTO `aunet_news` (`id`, `title`, `content`, `time`, `cid`, `del`, `pic`, `src`, `text`) VALUES
 (67, '111', '<p>11111<br/></p>', 1430066145, 10, 0, ' ', '', '11111'),
 (66, 'asdf', '<p>asdfasdf<img src="/AUNET./Upload/news/image/1/20150425/553b4cfb36ae5.png" title="553b4cfb36ae5.png" alt="下载.png"/>asdf11111</p>', 1429949702, 10, 0, '/AUNET./Upload/news/image/1/20150425/553b4cfb36ae5.png', ' /AUNET./Upload/news/image/1/20150425/553b4cfb36ae5.png', 'asdfasdfasdf11111'),
-(68, 'aaa', '<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>', 1444571014, 10, 0, ' ', '', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
+(68, 'aaa', '<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>', 1444571014, 10, 1, ' ', '', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
 
 -- --------------------------------------------------------
 
@@ -819,7 +856,7 @@ CREATE TABLE IF NOT EXISTS `aunet_user` (
 --
 
 INSERT INTO `aunet_user` (`id`, `username`, `password`, `logintime`, `loginip`, `lock`, `remark`) VALUES
-(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 1444571724, '127.0.0.1', 0, NULL),
+(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 1444915403, '127.0.0.1', 0, NULL),
 (7, 'test', '098f6bcd4621d373cade4e832627b4f6', 1434380153, '127.0.0.1', 0, NULL);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
