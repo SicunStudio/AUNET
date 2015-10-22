@@ -8,13 +8,13 @@ namespace Org\Util;
 
 class Ueditor{
 	
-	//public $uid;//要操作的用户id 如有登录需要则去掉注释
+	public $uid;//要操作的用户id 如有登录需要则去掉注释
 	
 	private $output;//要输出的数据
 	
 	private $st;
 	
-	private $rootpath = '/Uploads';
+	private $rootpath = '/Upload';
 	
 	public function __construct($uid = ''){
 		//uid 为空则导入当前会话uid
@@ -22,7 +22,7 @@ class Ueditor{
 		
 		\Vin\FileStorage::connect(STORAGE_TYPE);
 		//导入设置
-		$CONFIG = json_decode(preg_replace("/\/\*[\s\S]+?\*\//", "", file_get_contents(CONF_PATH."config.json")), true);
+		$CONFIG = json_decode(preg_replace("/\/\*[\s\S]+?\*\//", "", file_get_contents(CONF_PATH."ueditor.json")), true);
 		
 		$action = htmlspecialchars($_GET['action']);
 		
@@ -32,13 +32,11 @@ class Ueditor{
 		        break;
 		        
 		    case 'uploadimage':
-
 				$config = array(
 		            "pathFormat" => $CONFIG['imagePathFormat'],
 		            "maxSize" => $CONFIG['imageMaxSize'],
 		            "allowFiles" => $CONFIG['imageAllowFiles']
 				);
-                dump($config);
 				$fieldName = $CONFIG['imageFieldName'];
 				$result = $this->uploadFile($config, $fieldName);
 				break;

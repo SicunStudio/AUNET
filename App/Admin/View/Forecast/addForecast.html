@@ -2,6 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
+    <script type="text/javascript" src="__PUBLIC__/AUSrc/js/year_month_day.js"></script>
     <title></title>
 </head>
 <body>
@@ -15,11 +16,26 @@
     <label>活动地点</label>
     <input type="text" name="place" class="form-control" >
 </div>
+    <div class="form-group">
+    <label>选择时间</label>
+    <select id="selYear" name="year">
+    </select>
+    <select id="selMonth" name="month">
+    </select>
+    <select id="selDay" name="day">
+    </select>
+</div>
 <input type="submit" value="提交" class="btn btn-primary btn-lg" />
 </form>
 <script>
     var listitem=document.getElementById("forecast");
     listitem.className="list-group-item active";
+</script>
+<script type="text/javascript">
+    var selYear = window.document.getElementById("selYear");
+    var selMonth = window.document.getElementById("selMonth");
+    var selDay = window.document.getElementById("selDay");
+    new DateSelector(selYear, selMonth, selDay, 1989, 12, 16);
 </script>
 </body>
 </html>

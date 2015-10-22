@@ -25,10 +25,11 @@ class EventController extends CommonController
 
     public function add_event_handle()
     {
+//        dump($_POST);die;
         $upload = new Upload();
         $upload->maxSize = 3145728;
         $upload->exts = array('jpg', 'png');
-        $upload->rootPath ='./Public/Upload/Event/';
+        $upload->rootPath ='./Upload/Event/';
         $upload->subName = $_POST['year'] . '/' . $_POST['month'] . '/' . $_POST['day'] . '/';
         $path = $upload->rootPath . $upload->subName;
         if (!file_exists($path)) {
@@ -36,7 +37,11 @@ class EventController extends CommonController
         }
         $info = $upload->upload();
         if (!$info) {
-            $this->error($upload->getError());
+            $data[] = array('pic'=>'error','content' => $_POST['content'],
+                'year' => $_POST['year'],
+                'month' => $_POST['month'],
+                'day' => $_POST['day'],
+                'time' => time());
         } else {
             foreach ($info as $v) {
                 $data[] = array('pic' => substr($path . $v['savename'],8,strlen($path . $v['savename'])),      //$path.$v['savename'] to $v['url'] in Sae
@@ -46,16 +51,16 @@ class EventController extends CommonController
                     'month' => $_POST['month'],
                     'day' => $_POST['day'],
                     'time' => time());
+
             }
+        }
+
+
 //            $data=array('content'=>$_POST['content'],'year'=>$_POST['year'],'month'=>$_POST['month'],'day'=>$_POST['day'],'time'=>time(),'pic'=>$path.$info['file']['savename']);
-
-            if (M('event')->addAll($data)) {
-                $this->success('添加成功');
-            } else {
-                $this->error('添加失败');
-            }
-
-
+        if (M('event')->addAll($data)) {
+            $this->success('添加成功');
+        } else {
+            $this->error('添加失败');
         }
 
     }

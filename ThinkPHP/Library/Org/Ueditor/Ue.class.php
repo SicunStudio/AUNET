@@ -87,7 +87,7 @@ class Ue {
    * @param array  $config 配置
    * @param string $save_extend 文件保存规则扩展
    * @param string $root_path 上传根路径 默认为：'./Uploads/'
-   * @param string $config_path UE配置文件地址，相对于当前模块配置目录 MODULE_PATH.'Conf/',默认为 MODULE_PATH.'Conf/config.json'
+   * @param string $config_path UE配置文件地址，相对于当前模块配置目录 MODULE_PATH.'Conf/',默认为 MODULE_PATH.'Conf/ueditor.json'
    * @param string $driver 要使用的UE驱动 LOCAL-本地驱动，SAE-SAE驱动
    */
   public function __construct($config = array(), $save_extend = '', $root_path = '', $config_path = '', $driver = ''){
@@ -613,7 +613,7 @@ class Ue {
    * @param string $config_path 配置文件相对于当前模块配置目录的路径
    */
   private function getConfig($config_path = null) {
-  	$name = $config_path ? ltrim('./', $config_path) : 'config.json';
+  	$name = $config_path ? ltrim('./', $config_path) : 'ueditor.json';
   	$config_path = MODULE_PATH . 'Conf/' . $name;
   	if (is_file($config_path)) {
   		// $this->config = load_config($config_path); 这种方法加载失败，难道注释影响？ !--

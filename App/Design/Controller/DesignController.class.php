@@ -27,7 +27,7 @@ class DesignController extends CommonController{
     }
 
     public function add() {
-        if(M("Design")->add(array('time'=>$_POST['wt_time'],'content'=>$_POST['wt_content'],'phone'=>$_POST['wt_contacts']))) {
+        if(M("Design")->add(array('time'=>$_POST['wt_time'],'content'=>$_POST['wt_content'],'phone'=>$_POST['wt_contacts'],'qq'=>$_POST['wt_qq']))) {
             $this->success("提交成功");
         } else {
             $this->error("提交失败");

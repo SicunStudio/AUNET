@@ -96,6 +96,7 @@ class NewsController extends CommonController{
         }else{
             $data['cid']=(int)$_POST['cid'];
             if(D('NewsRelation')->relation(true)->add($data)){
+
                 $this->success('添加成功',U('news_index'));
             }else{
                 $this->error('添加失败');
@@ -151,14 +152,16 @@ class NewsController extends CommonController{
 
     //删除新闻
     public function delete(){
-        $id=I('id','','intval');
-        $data=M('news')->where(array('id'=>$id))->getField('src');
-        $src=explode(" ",substr($data,1));
-        foreach($src as $v=>$k){
-            if(file_exists(substr($k,6))){
-                unlink(substr($k,6));
+            $id=I('id','','intval');
+            $data=M('news')->where(array('id'=>$id))->getField('src');
+            $src=explode(" ",substr($data,1));
+            foreach($src as $v=>$k){
+                if(file_exists(substr($k, 7))){
+                    unlink(substr($k, 7));
+                } else {
+                    echo ('null');
+                }
             }
-        }
         D('NewsRelation')->relation('attr')->where(array('id'=>$id))->delete();
 
         $this->redirect('news_index');
