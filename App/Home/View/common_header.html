@@ -45,7 +45,7 @@
         @media screen and (max-width:765px)
         {
             #TopNaviBar
-            { width: 200px; position:absolute; right: 0px; top: -1px;}
+            { width: 100px; position:absolute; right: 0px; top: -1px;}
 
             #TopNaviBar a
             {font-size: 20px; !important; line-height: 35px; !important; height: 55px;}
@@ -93,7 +93,7 @@
     <div class="container" style="height:100%;">
         <div class="col-sm-3 col-md-3 col-lg-3" style="padding-left:0px; padding-right:0px;">
             <div class="navbar-header" style="height:100%;"><!--navbar header-->
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#TopNaviBar" aria-expanded="false">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#TopNaviBar" aria-expanded="false" style="padding-right:20px;">
                     <span class="sr-only" style="border-color:rgba(255,255,255,0.6);">Toggle navigation</span>
                     <span class="icon-bar" style="background-color:rgba(255,255,255,0.6); height:3px; width:25px; margin-top:6px; margin-bottom:6px;"></span>
                     <span class="icon-bar" style="background-color:rgba(255,255,255,0.6); height:3px; width:25px; margin-top:6px; margin-bottom:6px;"></span>
@@ -104,7 +104,7 @@
         </div>
 
         <div class="col-sm-9 col-md-9 col-lg-9" style="padding-left:0px; padding-right:0px; margin-left:0px; margin-right:0px;">
-            <div style="height: 100px; border:none; /*width:100%;*/" id="TopNaviBar" class="collapse navbar-collapse"  >
+            <div style="height: 100px; border:none; /*width:100%;*/ padding-left: 0px; padding-right: 0px;" id="TopNaviBar" class="collapse navbar-collapse"  >
                 <ul id="navi-tab" class="nav navbar-nav" style="background-color:#74b05c; margin-top:0px; margin-left:0px; margin-right:0px; width:100%" >
                     <li><a class="navibar-link" style=" text-align: center; width:100%" href="{:U('Home/Index/index')}">首页</a></li>
                     <li><a class="navibar-link" style=" text-align: center; width:100%" href="{:U('/Home/News/index')}">新闻</a></li>
