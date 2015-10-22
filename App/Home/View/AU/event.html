@@ -51,9 +51,7 @@
 			  var element="#"+i+"_month";
 			  $(element).slideUp("fast");
 			  }
-			  
 		  }
-		
 	}
  </script>
  <style>
@@ -88,6 +86,7 @@
 	list-style-type:none;
 	font-size:25px;
 	margin-top:5px;
+	padding-left: 10px;;
 	}
 	
 .eventbox{
@@ -100,17 +99,17 @@
 		}
 
 .eventbox_time{
-	float:left;
-	font-size:34px;
+	/*float:left;*/
+	font-size:24px;
 	margin:5px 8px;
 	}
 
 .eventbox_imgcontainer{
-	width:35%;
-	height:80%;
+	/*width:35%;
+	height:80%;*/
 	overflow:hidden;
-	float:left;
-	margin:15px 5px 15px 15px;
+	/*float:left;*/
+	/*margin:15px 5px 15px 15px;*/
 	}
 
 .eventbox_imgbox{
@@ -118,12 +117,13 @@
 	display:block;}
 
 .eventbox_text{
-	width:60%;
-	height:40%;
-	right:10px;
+	/*width:60%;
+	height:40%;*/
+	/*right:10px;*/
+	padding-left: 10px;
+	padding-right: 10px;
 	font-size:17px;
-	float:right;
-	
+	/*float:right;*/
 	}
 
  </style>
@@ -135,26 +135,30 @@
 	document.getElementById("side-event").className="sidelink active";
 	document.getElementById("navtitle-3").innerHTML="社联大事记";
 </script>
-<table>
+<table width="100%">
 	<tbody>
-	<td width="58%" align="left" valign="top">
-
+	<td width="70%" align="left" valign="top">
+    &nbsp;
 		<foreach name="data" item="v">
 
 
 			<div class="eventbox {$v['year']} {$v['month']}" >
-				<div class="eventbox_imgcontainer">
-					<img src="/AUNET/Upload{$v['pic']}" class="eventbox_imgbox" height="100%" alt=""/>
+
+				<div class="col-sm-4 eventbox_imgcontainer">
+					<img src="/AUNET/Upload{$v['pic']}" class="eventbox_imgbox hidden-xs" height="100%" alt=""/>
 				</div>
-				<div class="eventbox_time">{$v['year']}.{$v['month']}.{$v['day']}</div>
-				<div class="eventbox_text">{$v['content']}</div>
+				<div class="col-sm-8">
+					<div class="row eventbox_time">{$v['year']}.{$v['month']}.{$v['day']}</div>
+					<div class="row eventbox_text"><p>{$v['content']}</p></div>
+				</div>
+
 			</div>
 
 
 		</foreach>
 	</td>
 
-	<td width="15%" align="left" valign="top">
+	<td width="30%" align="left" valign="top">
 		<script>
 			var mydate=new Date();
 			var thisyear=mydate.getFullYear();
