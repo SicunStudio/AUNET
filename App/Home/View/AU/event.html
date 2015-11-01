@@ -145,7 +145,7 @@
 			<div class="eventbox {$v['year']} {$v['month']}" >
 
 				<div class="col-sm-4 eventbox_imgcontainer">
-					<img src="/AUNET/Upload{$v['pic']}" class="eventbox_imgbox hidden-xs" height="100%" alt=""/>
+					<img <if condition = "$v['pic'] eq 'error'">src = "__PUBLIC__/general/dh.png"<else /> src="__ROOT__/Upload{$v['pic']}"</if> class="eventbox_imgbox hidden-xs" height="100%" alt=""/>
 				</div>
 				<div class="col-sm-8">
 					<div class="row eventbox_time">{$v['year']}.{$v['month']}.{$v['day']}</div>
