@@ -1,21 +1,1 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
-<h4><ol class="breadcrumb"><li>文章管理</li><li><a href="{:U('/Admin/News/news_index')}">文章列表</a></li><li class="active">预览</li></ol></h4>
-    <h2 style="text-align:center;">{$title}</h2>
-    <p style="text-align:center;"><foreach name="attr" item="v">
-        <strong style='color:{$v.color}'>[{$v.name}]</strong>
-    </foreach></p>
-    <p style="text-align:center;">{$cate}</p>
-    <p style="text-align:center;">{$time}</p>
-    <P>{$text}</P>
-<script>
-    var listitem=document.getElementById("news");
-    listitem.className="list-group-item active";
-</script>
-</body>
-</html>
+<!DOCTYPE html><html><head lang="en">    <meta charset="UTF-8">    <title></title></head><body><h4><ol class="breadcrumb"><li>文章管理</li><li><a href="{:U('/Admin/News/news_index')}">文章列表</a></li><li class="active">预览</li></ol></h4>    <h2 style="text-align:center;">{$title}</h2>    <p style="text-align:center;"><foreach name="attr" item="v">        <strong style='color:{$v.color}'>[{$v.name}]</strong>    </foreach></p>    <p style="text-align:center;">{$cate}</p>    <p style="text-align:center;">{$time}</p>    <P>{$text}</P><script>    var listitem=document.getElementById("news");    listitem.className="list-group-item active";</script></body></html>

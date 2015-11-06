@@ -1,56 +1,1 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <style>
-        #edui1 { width: 100%;}
-    </style>
-</head>
-<js href="__PUBLIC__/js/jquery-2.0.2.js" />
-<js href="__PUBLIC__/ueditor/ueditor.config.js" />
-<js href="__PUBLIC__/ueditor/ueditor.all.min.js" />
-<script type="text/javascript" charset="utf-8" src="lang/zh-cn/zh-cn.js"></script>
-<script>
-    var ue;
-    $(function(){
-        window.UEDITOR_CONFIG.initialFrameHeight=600;
-         ue= UE.getEditor('ueditor',{serverUrl :'{:U('Admin/News/ueditor')}',onready: function () {
-            this.setContent('{$text.content}');
-        }});
-    })
-    function ClearTags(){
-        var text=ue.getContentTxt();
-        document.getElementById("text").textContent=text;
-    }
-
-</script>
-<body>
-<h4><ol class="breadcrumb"><li>文章管理</li><li><a href="{:U('/Admin/News/news_index')}">文章列表</a></li><li class="active">编辑</li></ol></h4>
-    <form action="{:U('addNewsHandle')}" method="post">
-    <h3>博文修改</h3>
-    <div class="form-group">
-        <label class="col-sm-2 control-label">博文属性</label>
-        <div class="col-sm-10">
-            <foreach name="attr" item="v">
-                        <label style="margin-right:10px;">
-                            <input type="checkbox" name="aid[]" value="{$v.id}"/>&nbsp{$v.name}
-                        </label>
-                    </foreach>
-        </div>
-    </div>
-    <div class="form-group">
-        <label class="col-sm-2 control-label">标题</label>
-        <input type="text" name="title" value="{$text.title}" class="form-control" />
-    </div>
-    <textarea name="content" id="ueditor"></textarea>
-    <input type="hidden" name="id" value="{$text.id}"/>
-    <input onClick="ClearTags()" type="submit" value="保存提交"/>
-    <textarea style="display:none" name="text" id="text" ></textarea>
-              
-    </form>
-<script>
-    var listitem=document.getElementById("news");
-    listitem.className="list-group-item active";
-</script>
-</body>
-</html>
+<!DOCTYPE html><html><head lang="en">    <meta charset="UTF-8">    <style>        #edui1 { width: 100%;}    </style></head><js href="__PUBLIC__/js/jquery-2.0.2.js" /><js href="__PUBLIC__/ueditor/ueditor.config.js" /><js href="__PUBLIC__/ueditor/ueditor.all.min.js" /><script type="text/javascript" charset="utf-8" src="lang/zh-cn/zh-cn.js"></script><script>    var ue;    $(function(){        window.UEDITOR_CONFIG.initialFrameHeight=600;         ue= UE.getEditor('ueditor',{serverUrl :'{:U('Admin/News/ueditor')}',onready: function () {            this.setContent('{$text.content}');        }});    })    function ClearTags(){        var text=ue.getContentTxt();        document.getElementById("text").textContent=text;    }</script><body><h4><ol class="breadcrumb"><li>文章管理</li><li><a href="{:U('/Admin/News/news_index')}">文章列表</a></li><li class="active">编辑</li></ol></h4>    <form action="{:U('addNewsHandle')}" method="post">    <h3>博文修改</h3>    <div class="form-group">        <label class="col-sm-2 control-label">博文属性</label>        <div class="col-sm-10">            <foreach name="attr" item="v">                        <label style="margin-right:10px;">                            <input type="checkbox" name="aid[]" value="{$v.id}"/>&nbsp{$v.name}                        </label>                    </foreach>        </div>    </div>    <div class="form-group">        <label class="col-sm-2 control-label">标题</label>        <input type="text" name="title" value="{$text.title}" class="form-control" />    </div>    <textarea name="content" id="ueditor"></textarea>    <input type="hidden" name="id" value="{$text.id}"/>    <input onClick="ClearTags()" type="submit" value="保存提交"/>    <textarea style="display:none" name="text" id="text" ></textarea>                  </form><script>    var listitem=document.getElementById("news");    listitem.className="list-group-item active";</script></body></html>

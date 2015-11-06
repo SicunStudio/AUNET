@@ -1,32 +1,1 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
-<h4><ol class="breadcrumb"><li>分类管理</li>
-<if condition="$cate['id']"><li><a href="{:U('/Admin/Category/cate_index');}">分类列表</a></if>
-<li class="active"><if condition="$cate['id']">修改<else/>添加</if>分类</li></ol></h4>
-<form action="{:U('runAddCate')}" method="post" class="form-horizontal">
-   <h3>栏目分类</h3>
-   <div class="form-group">
-       <label class="col-sm-3 control-label">分类栏目名称</label>
-       <div class="col-sm-9"><input type="text" class="form-control" name="name" <if condition="$cate['id']">value="{$cate.name}"</if>/></div>
-   </div>
-   <div class="form-group">
-       <label class="col-sm-3 control-label">排序</label>
-       <div class="col-sm-9"><input type="text" class="form-control" name="sort" <if condition="$cate['id']">value="{$cate.sort}"<else/>value="100"</if>/></div>
-   </div>
-    <div class="form-group" style="text-align:center;">
-        <input type="hidden" name="id" <if condition="$cate['id']">value="{$cate.id}"</if>/>
-        <input type="hidden" name="pid" <if condition="$cate['id']">value="{$cate.pid}"<else/>value="{$pid}"</if>/>
-        <input type="submit" class="btn btn-primary btn-lg" <if condition="$cate['id']">value="保存修改"<else/>value="保存添加"</if>/>
-    </div>
-</form>
-<script>
-    var listitem=document.getElementById("cate");
-    listitem.className="list-group-item active";
-</script>
-</body>
-</html>
+<!DOCTYPE html><html><head lang="en">    <meta charset="UTF-8">    <title></title></head><body><h4><ol class="breadcrumb"><li>分类管理</li><if condition="$cate['id']"><li><a href="{:U('/Admin/Category/cate_index');}">分类列表</a></if><li class="active"><if condition="$cate['id']">修改<else/>添加</if>分类</li></ol></h4><form action="{:U('runAddCate')}" method="post" class="form-horizontal">   <h3>栏目分类</h3>   <div class="form-group">       <label class="col-sm-3 control-label">分类栏目名称</label>       <div class="col-sm-9"><input type="text" class="form-control" name="name" <if condition="$cate['id']">value="{$cate.name}"</if>/></div>   </div>   <div class="form-group">       <label class="col-sm-3 control-label">排序</label>       <div class="col-sm-9"><input type="text" class="form-control" name="sort" <if condition="$cate['id']">value="{$cate.sort}"<else/>value="100"</if>/></div>   </div>    <div class="form-group" style="text-align:center;">        <input type="hidden" name="id" <if condition="$cate['id']">value="{$cate.id}"</if>/>        <input type="hidden" name="pid" <if condition="$cate['id']">value="{$cate.pid}"<else/>value="{$pid}"</if>/>        <input type="submit" class="btn btn-primary btn-lg" <if condition="$cate['id']">value="保存修改"<else/>value="保存添加"</if>/>    </div></form><script>    var listitem=document.getElementById("cate");    listitem.className="list-group-item active";</script></body></html>

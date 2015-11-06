@@ -1,19 +1,1 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 2015/2/14
- * Time: 23:01
- */
-
-namespace Admin\Controller;
-
-
-class DownloadController extends CommonController{
-    public function download_index(){
-        $id=I('id',0,'intval');
-        if(!downloadFileById($id)){
-            $this->error('下载失败');
-        }
-    }
-} 
+<?php/** * Created by PhpStorm. * User: Administrator * Date: 2015/2/14 * Time: 23:01 */namespace Admin\Controller;class DownloadController extends CommonController{    public function download_index(){        $id=I('id',0,'intval');        if(!downloadFileById($id)){            $this->error('下载失败');        }    }} 

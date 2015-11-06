@@ -1,39 +1,1 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
-<h4><ol class="breadcrumb"><li>权限管理</li><li><a href="{:U('/Admin/Rbac/node');}">节点列表</a></li><li class="active">添加{$type}</li></ol></h4>
-    <form action="{:U('addNodeHandle');}" method="post" class="form-horizontal">
-    <div class="form-group">
-        <label class="col-sm-3 control-label">{$type}名称</label>
-        <div class="col-sm-9"><input type="text" class="form-control" name="name"<if condition="isset($node)">value="{$node.name}"</if>/></div>
-    </div>
-    <div class="form-group">
-        <label class="col-sm-3 control-label">{$type}描述</label>
-        <div class="col-sm-9"><input type="text" class="form-control" name="title"<if condition="isset($node)">value="{$node['title']}"</if>/></div>
-    </div>
-    <div class="form-group">
-        <label class="col-sm-3 control-label">是否开启</label>
-        <div class="col-sm-9"><input type="radio" name='status' value='1' checked='checked'/>&nbsp;开启&nbsp;
-                <input type="radio" name='status' value='0'/>&nbsp;关闭</div>
-    </div>
-    <div class="form-group">
-        <label class="col-sm-3 control-label">排序</label>
-        <div class="col-sm-9"><input type="text" class="form-control" name="sort" value="1"<if condition="isset($node)">value="{$node['sort']}"</if>/></div>
-    </div>
-     <div class="form-group" style="text-align:center;">      
-            <input type="hidden" name="pid" value="{$pid}"/>
-            <input type="hidden" name="level" value="{$level}"/>
-            <input type="hidden" name="id" <if condition="isset($node)">value="{$node['id']}"</if>/>
-            <input class="btn btn-primary btn-lg" type="submit" <if condition="isset($node)">value="保存修改"<else />value="添加"</if>/>
-            </else>
-    </form>
-    <script>
-    var listitem=document.getElementById("rbac");
-    listitem.className="list-group-item active";
-</script>
-</body>
-</html>
+<!DOCTYPE html><html><head lang="en">    <meta charset="UTF-8">    <title></title></head><body><h4><ol class="breadcrumb"><li>权限管理</li><li><a href="{:U('/Admin/Rbac/node');}">节点列表</a></li><li class="active">添加{$type}</li></ol></h4>    <form action="{:U('addNodeHandle');}" method="post" class="form-horizontal">    <div class="form-group">        <label class="col-sm-3 control-label">{$type}名称</label>        <div class="col-sm-9"><input type="text" class="form-control" name="name"<if condition="isset($node)">value="{$node.name}"</if>/></div>    </div>    <div class="form-group">        <label class="col-sm-3 control-label">{$type}描述</label>        <div class="col-sm-9"><input type="text" class="form-control" name="title"<if condition="isset($node)">value="{$node['title']}"</if>/></div>    </div>    <div class="form-group">        <label class="col-sm-3 control-label">是否开启</label>        <div class="col-sm-9"><input type="radio" name='status' value='1' checked='checked'/>&nbsp;开启&nbsp;                <input type="radio" name='status' value='0'/>&nbsp;关闭</div>    </div>    <div class="form-group">        <label class="col-sm-3 control-label">排序</label>        <div class="col-sm-9"><input type="text" class="form-control" name="sort" value="1"<if condition="isset($node)">value="{$node['sort']}"</if>/></div>    </div>     <div class="form-group" style="text-align:center;">                  <input type="hidden" name="pid" value="{$pid}"/>            <input type="hidden" name="level" value="{$level}"/>            <input type="hidden" name="id" <if condition="isset($node)">value="{$node['id']}"</if>/>            <input class="btn btn-primary btn-lg" type="submit" <if condition="isset($node)">value="保存修改"<else />value="添加"</if>/>            </else>    </form>    <script>    var listitem=document.getElementById("rbac");    listitem.className="list-group-item active";</script></body></html>

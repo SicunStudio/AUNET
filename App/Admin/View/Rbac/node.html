@@ -1,104 +1,1 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<style type="text/css">
-    #wrap.clearcache{
-        display: block;
-        width: 100px;
-        height: 28px;
-        line-height: 28px;
-        text-align: center;
-        background: #670768;
-        color: #fff;
-        border-radius: 4px;
-    }
-    #wrap{
-        height: auto;
-        overflow: hidden;
-        margin: 20px auto;
-        padding: 10px 20px;
-        border: 1px solid #ccc;
-    }
-    #wrap .add-app{
-        display: block;
-        width: 100px;
-        height: 28px;
-        line-height: 28px;
-        text-align: center;
-        background: #670768;
-        color: #fff;
-        border-radius: 4px;
-    }
-    #wrap .app{
-        padding: 10px;
-        margin-top: 20px;
-        border: 1px solid #f6f6f6;
-        border-radius: 4px;
-    }
-    #wrap .app p{
-        height: 30px;
-        line-height: 30px;
-    }
-    #wrap .app p strong{
-        font-size: 20px;
-        color: #0b99d8;
-    }
-    #wrap .app dl{
-        margin: 10px 0;
-        border: 1px solid #dcdcdc;
-        height: auto;
-        overflow: hidden;
-    }
-    #wrap .app dl dt{
-        display: block;
-        height: 36px;
-        line-height: 36px;
-        background: #e6e6fa;
-        text-indent: 10px;
-    }
-    #wrap .app dl dd{
-        padding: 10px;
-        float: left;
-    }
-</style>
-<body>
-<h4><ol class="breadcrumb"><li>权限管理</li><li class="active">节点列表</li></ol></h4>
-   <div id='wrap'>
-        <a href="{:U('addNode');}" class="add-app">添加应用</a>
-        <foreach name="node" item="app">
-            <div class='app'>
-                <p>
-
-                    <if condition="$app['status']"><strong>{$app.title}</strong>&nbsp;<a href="{:U('addNode',array('pid'=>$app['id'],'level'=>2))}" class="btn btn-default btn-xs">添加控制器</a><else/>{$app.title}</if>
-                </p>
-                <foreach name="app.child" item="action">
-                    <dl>
-                        <dt>
-                            <if condition="$action['status']"><strong>{$action.title}</strong><else/>{$action.title}</if>
-                            <a href="{:U('addNode',array('pid'=>$action['id'],'level'=>3));}" class="btn btn-default btn-xs">添加方法</a>
-                        </dt>
-                        <foreach name="action.child" item="method">
-                            <dd>
-                                <if condition="$method['status']"><strong>{$method.title}</strong><else/>{$method.title}</if>
-                                <a href="{:U('addNode',array('id'=>$method['id'],'level'=>3,'pid'=>$action['id']))}" class="btn btn-default btn-xs">修改</a>
-                                <a href="{:U('delNode',array('id'=>$method['id']))}" class="btn btn-default btn-xs">删除</a>
-                            </dd>
-                        </foreach>
-                    </dl>
-                </foreach>
-            </div>
-        </foreach>
-        <div id="cache">
-            <a href="{:U('/Admin/News/clearCache')}" class="clearcache" class="btn btn-defaults">清空缓存</a>
-        </div>
-    </div>
-<script>
-    var listitem=document.getElementById("rbac");
-    listitem.className="list-group-item active";
-</script>
-</body>
-
-</html>
+<!DOCTYPE html><html><head lang="en">    <meta charset="UTF-8">    <title></title></head><style type="text/css">    #wrap.clearcache{        display: block;        width: 100px;        height: 28px;        line-height: 28px;        text-align: center;        background: #670768;        color: #fff;        border-radius: 4px;    }    #wrap{        height: auto;        overflow: hidden;        margin: 20px auto;        padding: 10px 20px;        border: 1px solid #ccc;    }    #wrap .add-app{        display: block;        width: 100px;        height: 28px;        line-height: 28px;        text-align: center;        background: #670768;        color: #fff;        border-radius: 4px;    }    #wrap .app{        padding: 10px;        margin-top: 20px;        border: 1px solid #f6f6f6;        border-radius: 4px;    }    #wrap .app p{        height: 30px;        line-height: 30px;    }    #wrap .app p strong{        font-size: 20px;        color: #0b99d8;    }    #wrap .app dl{        margin: 10px 0;        border: 1px solid #dcdcdc;        height: auto;        overflow: hidden;    }    #wrap .app dl dt{        display: block;        height: 36px;        line-height: 36px;        background: #e6e6fa;        text-indent: 10px;    }    #wrap .app dl dd{        padding: 10px;        float: left;    }</style><body><h4><ol class="breadcrumb"><li>权限管理</li><li class="active">节点列表</li></ol></h4>   <div id='wrap'>        <a href="{:U('addNode');}" class="add-app">添加应用</a>        <foreach name="node" item="app">            <div class='app'>                <p>                    <if condition="$app['status']"><strong>{$app.title}</strong>&nbsp;<a href="{:U('addNode',array('pid'=>$app['id'],'level'=>2))}" class="btn btn-default btn-xs">添加控制器</a><else/>{$app.title}</if>                </p>                <foreach name="app.child" item="action">                    <dl>                        <dt>                            <if condition="$action['status']"><strong>{$action.title}</strong><else/>{$action.title}</if>                            <a href="{:U('addNode',array('pid'=>$action['id'],'level'=>3));}" class="btn btn-default btn-xs">添加方法</a>                        </dt>                        <foreach name="action.child" item="method">                            <dd>                                <if condition="$method['status']"><strong>{$method.title}</strong><else/>{$method.title}</if>                                <a href="{:U('addNode',array('id'=>$method['id'],'level'=>3,'pid'=>$action['id']))}" class="btn btn-default btn-xs">修改</a>                                <a href="{:U('delNode',array('id'=>$method['id']))}" class="btn btn-default btn-xs">删除</a>                            </dd>                        </foreach>                    </dl>                </foreach>            </div>        </foreach>        <div id="cache">            <a href="{:U('/Admin/News/clearCache')}" class="clearcache" class="btn btn-defaults">清空缓存</a>        </div>    </div><script>    var listitem=document.getElementById("rbac");    listitem.className="list-group-item active";</script></body></html>
