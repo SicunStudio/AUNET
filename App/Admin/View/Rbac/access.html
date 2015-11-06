@@ -1,122 +1,1 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<style type="text/css">
-    #wrap{
-        height: auto;
-        overflow: hidden;
-        margin: 20px auto;
-        padding: 10px 20px;
-        border: 1px solid #ccc;
-    }
-    #wrap .add-app{
-        display: block;
-        width: 100px;
-        height: 28px;
-        line-height: 28px;
-        text-align: center;
-        background: #670768;
-        color: #fff;
-        border-radius: 4px;
-    }
-    #wrap .app{
-        padding: 10px;
-        margin-top: 20px;
-        border: 1px solid #f6f6f6;
-        border-radius: 4px;
-    }
-    #wrap .app p{
-        height: 30px;
-        line-height: 30px;
-    }
-    #wrap .app p strong{
-        font-size: 20px;
-        color: #0b99d8;
-    }
-    #wrap .app dl{
-        margin: 10px 0;
-        border: 1px solid #dcdcdc;
-        height: auto;
-        overflow: hidden;
-    }
-    #wrap .app dl dt{
-        display: block;
-        height: 36px;
-        line-height: 36px;
-        background: #e6e6fa;
-        text-indent: 10px;
-    }
-    #wrap .app dl dd{
-        padding: 10px;
-        float: left;
-    }
-</style>
-<script type="text/javascript" src="__PUBLIC__/jquery-1.8.0.min.js"></script>
-<script type="text/javascript">
-    $(function (){
-        $('input[level=1]').click(function (){
-            var inputs=$(this).parents('.app').find('input');
-            $(this).attr('checked')?inputs.attr('checked','checked'):inputs.removeAttr('checked');
-        });
-        $('input[level=2]').click(function (){
-            var inputs=$(this).parents('dl').find('input');
-            $(this).attr('checked')?inputs.attr('checked','checked'):inputs.removeAttr('checked');
-            var inputsL1=$(this).parents('.app').find('input[level=1]');
-            $(this).attr('checked')?inputsL1.attr('checked','checked'):inputsL1.attr("checked");
-        });
-        $('input[level=3]').click(function (){
-            var inputsL2=$(this).parents('dl').find('input[level=2]');
-            $(this).attr('checked')?inputsL2.attr('checked','checked'):inputsL2.attr("checked");
-            var inputsL1=$(this).parents('.app').find('input[level=1]');
-            $(this).attr('checked')?inputsL1.attr('checked','checked'):inputsL1.attr("checked");
-        });
-
-    });
-</script>
-<body>
-<h4><ol class="breadcrumb"><li>权限管理</li><li><a href="{:U('/Admin/Rbac/role');}">角色列表</a></li><li class="active">配置权限</li></ol></h4>
-
-<div>
-    <div>
-        <form action="{:U('setAccess');}" method="post">
-            <div id='wrap'>
-                <a href="{:U('role');}" class="add-app">返回</a>
-
-                <foreach name="node" item="app">
-                    <div class='app'>
-                        <p>
-                            <strong>{$app.title}</strong>
-                            <input type="checkbox" name="access[]"  level="1" value="{$app.id}_1"<if condition="$app['access']">checked="checked"</if><if condition="!$app['status']">hidden="hidden"</if>/>
-                        </p>
-                        <foreach name="app.child" item="action">
-                            <dl>
-                                <dt>
-                                    <strong>{$action.title}</strong>
-                                    <input type="checkbox" name="access[]" value="{$action.id}_2" level="2"<if condition="$action['access']">checked="checked"</if><if condition="!$action['status']">hidden="hidden"</if>/>
-                                </dt>
-                                <foreach name="action.child" item="method">
-                                    <dd>
-                                        <span>{$method.title}</span>
-                                        <input type="checkbox" name="access[]" value="{$method.id}_3" level="3"<if condition="$method['access']">checked="checked"</if><if condition="!$method['status']">hidden="hidden"</if>/>
-                                    </dd>
-                                </foreach>
-                            </dl>
-                        </foreach>
-                    </div>
-                </foreach>
-            </div>
-            <input type="hidden" name="rid" value="{$rid}"/>
-            <input type="submit" class="btn btn-primary btn-lg" value="保存修改" style="display: block; margin: 20px auto;cursor:pointer;"/>
-        </form>
-    </div>
-</div>
-<script>
-    var listitem=document.getElementById("rbac");
-    listitem.className="list-group-item active";
-</script>
-</body>
-
-</html>
+<!DOCTYPE html><html><head lang="en">    <meta charset="UTF-8">    <title></title></head><style type="text/css">    #wrap{        height: auto;        overflow: hidden;        margin: 20px auto;        padding: 10px 20px;        border: 1px solid #ccc;    }    #wrap .add-app{        display: block;        width: 100px;        height: 28px;        line-height: 28px;        text-align: center;        background: #670768;        color: #fff;        border-radius: 4px;    }    #wrap .app{        padding: 10px;        margin-top: 20px;        border: 1px solid #f6f6f6;        border-radius: 4px;    }    #wrap .app p{        height: 30px;        line-height: 30px;    }    #wrap .app p strong{        font-size: 20px;        color: #0b99d8;    }    #wrap .app dl{        margin: 10px 0;        border: 1px solid #dcdcdc;        height: auto;        overflow: hidden;    }    #wrap .app dl dt{        display: block;        height: 36px;        line-height: 36px;        background: #e6e6fa;        text-indent: 10px;    }    #wrap .app dl dd{        padding: 10px;        float: left;    }</style><script type="text/javascript" src="__PUBLIC__/jquery-1.8.0.min.js"></script><script type="text/javascript">    $(function (){        $('input[level=1]').click(function (){            var inputs=$(this).parents('.app').find('input');            $(this).attr('checked')?inputs.attr('checked','checked'):inputs.removeAttr('checked');        });        $('input[level=2]').click(function (){            var inputs=$(this).parents('dl').find('input');            $(this).attr('checked')?inputs.attr('checked','checked'):inputs.removeAttr('checked');            var inputsL1=$(this).parents('.app').find('input[level=1]');            $(this).attr('checked')?inputsL1.attr('checked','checked'):inputsL1.attr("checked");        });        $('input[level=3]').click(function (){            var inputsL2=$(this).parents('dl').find('input[level=2]');            $(this).attr('checked')?inputsL2.attr('checked','checked'):inputsL2.attr("checked");            var inputsL1=$(this).parents('.app').find('input[level=1]');            $(this).attr('checked')?inputsL1.attr('checked','checked'):inputsL1.attr("checked");        });    });</script><body><h4><ol class="breadcrumb"><li>权限管理</li><li><a href="{:U('/Admin/Rbac/role');}">角色列表</a></li><li class="active">配置权限</li></ol></h4><div>    <div>        <form action="{:U('setAccess');}" method="post">            <div id='wrap'>                <a href="{:U('role');}" class="add-app">返回</a>                <foreach name="node" item="app">                    <div class='app'>                        <p>                            <strong>{$app.title}</strong>                            <input type="checkbox" name="access[]"  level="1" value="{$app.id}_1"<if condition="$app['access']">checked="checked"</if><if condition="!$app['status']">hidden="hidden"</if>/>                        </p>                        <foreach name="app.child" item="action">                            <dl>                                <dt>                                    <strong>{$action.title}</strong>                                    <input type="checkbox" name="access[]" value="{$action.id}_2" level="2"<if condition="$action['access']">checked="checked"</if><if condition="!$action['status']">hidden="hidden"</if>/>                                </dt>                                <foreach name="action.child" item="method">                                    <dd>                                        <span>{$method.title}</span>                                        <input type="checkbox" name="access[]" value="{$method.id}_3" level="3"<if condition="$method['access']">checked="checked"</if><if condition="!$method['status']">hidden="hidden"</if>/>                                    </dd>                                </foreach>                            </dl>                        </foreach>                    </div>                </foreach>            </div>            <input type="hidden" name="rid" value="{$rid}"/>            <input type="submit" class="btn btn-primary btn-lg" value="保存修改" style="display: block; margin: 20px auto;cursor:pointer;"/>        </form>    </div></div><script>    var listitem=document.getElementById("rbac");    listitem.className="list-group-item active";</script></body></html>

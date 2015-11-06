@@ -1,149 +1,1 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>投诉建议</title>
- <script>
-	function ChangeRecFeedback(subject)
-	{
-		switch (subject)
-		{ 
-		case 1:
-		document.getElementById("ReceiveInfo").style.display="block";
-		break;
-		
-		case 0:
-		document.getElementById("ReceiveInfo").style.display="none";
-		break;
-			}
-	};
- </script>
- <style>
-.subtitle_container{
-	background-color:#9bd288;
-	margin-top:5px;
-	margin-left:5px;
-	padding:5px;
-	border-radius:2px;
-	}
-	
-.subtitle{
-		color:#ffffff;
-		font-family:幼圆;
-		font-size:20px;
-		font-weight:bold;
-		display:block;
-		margin:5px auto;
-		}
-
-input[type="radio"] {width: 30px; height: 30px;background-color:#e6f6c5;}
-
-.inputbox{
-	background-color:#e6f6c5;
-	border:none;
-	font-size:22px;
-	padding:5px;
-	width:90%;
-	height:auto;
-	margin:5px;
-	border-radius:2px;}
-	
-#submitbtn{
-	width:70%;
-	background-color:#9bd288;
-	font-size:20px;
-	color:#ffffff;
-	border:none;
-	border-radius:2px;
-	height:50px;
-	margin:10px auto;
-	padding:10px auto;
-}
-	
-</style>
- 
-</head>
-
-<body>
-      <form id="main" method="post" action="{:U('/Home/Other/advise_handle')}"><table width="90%" border="0">
-          <table>
-        <tbody>
-          <tr>
-            <td width="29%" height="71">
-            <div class="subtitle_container" style="width:200px;">
-                <p class="subtitle" >投诉（建议）主题</p>
-            </div>
-            </td>
-            <td width="71%">
-              <input type="text" name="subject" class="inputbox" id="subject"></td>
-          </tr>
-          <tr>
-            <td height="65" colspan="2"> 
-            <div class="subtitle_container" style="width:150px;">
-                <p class="subtitle">内容</p>
-            </div>
-            </td>
-            </tr>
-          <tr>
-            <td height="255" colspan="2">
-              <textarea name="text" id="text" class="inputbox" style="height:90%"></textarea>
-              </td>
-            </tr>
-          <tr>
-            <td height="78" colspan="2">
-             <div class="subtitle_container" style="width:150px;">
-                <p class="subtitle" >是否接受反馈</p>
-            </div>
-            </td>
-            </tr>
-          <tr>
-            <td align="center" valign="middle">
-
-                  <input name="ReceiveFeedback" type="radio" id="ReceiveFeedback_Yes" value="1" checked style="" onclick="ChangeRecFeedback(1)" ><label for="ReceiveFeedback_Yes">是</label>
-              </td>
-              <td align="center" valign="middle">
-
-                  <input type="radio" name="ReceiveFeedback" value="0" id="ReceiveFeedback_No" style="" onclick="ChangeRecFeedback(0)"><label for="ReceiveFeedback_No">否</label>
-
-              </td>
-            </tr>
-        </tbody>
-          </table>
-      
-      <div id="ReceiveInfo">
-      <table width="80%" border="0">
-  <tbody>
-    <tr>
-      <td width="25%" height="41">
-      <div class="subtitle_container">
-      <p class="subtitle" style="width:60px;">姓名</p>
-      </div>
-      </td>
-      <td width="75%" valign="middle">
-      
-      <input name="info_name" type="text" class="inputbox" id="info_name" ></td>
-    </tr>
-    <tr>
-      <td height="37"><div class="subtitle_container">
-      <p class="subtitle" style="width:60px;">电话</p>
-      </div></td>
-      <td valign="middle"><input name="info_phone" type="text" class="inputbox" id="info_phone" ></td>
-    </tr>
-    <tr>
-      <td height="42"><div class="subtitle_container">
-      <p class="subtitle"  style="width:60px;">QQ</p>
-      </div></td>
-      <td valign="middle"><input name="info_qq" type="text" class="inputbox" id="info_qq"> </td>
-    </tr>
-  </tbody>
-</table>
-      </div>
-      <input name="submit" type="submit" id="submitbtn" value="提交">
-
-      </form>
-      <script>
-          document.getElementById("side-advice").className="sidelink active";
-          document.getElementById("navtitle-3").innerHTML="投诉建议";
-      </script>
-</body>
-</html>
+<!doctype html><html><head><meta charset="utf-8"><title>投诉建议</title> <script>	function ChangeRecFeedback(subject)	{		switch (subject)		{ 		case 1:		document.getElementById("ReceiveInfo").style.display="block";		break;				case 0:		document.getElementById("ReceiveInfo").style.display="none";		break;			}	}; </script> <style>.subtitle_container{	background-color:#9bd288;	margin-top:5px;	margin-left:5px;	padding:5px;	border-radius:2px;	}	.subtitle{		color:#ffffff;		font-family:幼圆;		font-size:20px;		font-weight:bold;		display:block;		margin:5px auto;		}input[type="radio"] {width: 30px; height: 30px;background-color:#e6f6c5;}.inputbox{	background-color:#e6f6c5;	border:none;	font-size:22px;	padding:5px;	width:90%;	height:auto;	margin:5px;	border-radius:2px;}	#submitbtn{	width:70%;	background-color:#9bd288;	font-size:20px;	color:#ffffff;	border:none;	border-radius:2px;	height:50px;	margin:10px auto;	padding:10px auto;}	</style> </head><body>      <form id="main" method="post" action="{:U('/Home/Other/advise_handle')}"><table width="90%" border="0">          <table>        <tbody>          <tr>            <td width="29%" height="71">            <div class="subtitle_container" style="width:200px;">                <p class="subtitle" >投诉（建议）主题</p>            </div>            </td>            <td width="71%">              <input type="text" name="subject" class="inputbox" id="subject"></td>          </tr>          <tr>            <td height="65" colspan="2">             <div class="subtitle_container" style="width:150px;">                <p class="subtitle">内容</p>            </div>            </td>            </tr>          <tr>            <td height="255" colspan="2">              <textarea name="text" id="text" class="inputbox" style="height:90%"></textarea>              </td>            </tr>          <tr>            <td height="78" colspan="2">             <div class="subtitle_container" style="width:150px;">                <p class="subtitle" >是否接受反馈</p>            </div>            </td>            </tr>          <tr>            <td align="center" valign="middle">                  <input name="ReceiveFeedback" type="radio" id="ReceiveFeedback_Yes" value="1" checked style="" onclick="ChangeRecFeedback(1)" ><label for="ReceiveFeedback_Yes">是</label>              </td>              <td align="center" valign="middle">                  <input type="radio" name="ReceiveFeedback" value="0" id="ReceiveFeedback_No" style="" onclick="ChangeRecFeedback(0)"><label for="ReceiveFeedback_No">否</label>              </td>            </tr>        </tbody>          </table>            <div id="ReceiveInfo">      <table width="80%" border="0">  <tbody>    <tr>      <td width="25%" height="41">      <div class="subtitle_container">      <p class="subtitle" style="width:60px;">姓名</p>      </div>      </td>      <td width="75%" valign="middle">            <input name="info_name" type="text" class="inputbox" id="info_name" ></td>    </tr>    <tr>      <td height="37"><div class="subtitle_container">      <p class="subtitle" style="width:60px;">电话</p>      </div></td>      <td valign="middle"><input name="info_phone" type="text" class="inputbox" id="info_phone" ></td>    </tr>    <tr>      <td height="42"><div class="subtitle_container">      <p class="subtitle"  style="width:60px;">QQ</p>      </div></td>      <td valign="middle"><input name="info_qq" type="text" class="inputbox" id="info_qq"> </td>    </tr>  </tbody></table>      </div>      <input name="submit" type="submit" id="submitbtn" value="提交">      </form>      <script>          document.getElementById("side-advice").className="sidelink active";          document.getElementById("navtitle-3").innerHTML="投诉建议";      </script></body></html>

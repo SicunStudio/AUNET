@@ -1,16 +1,1 @@
-<!DOCTYPE html>
-<html>
-
-<body>
-<h4><ol class="breadcrumb"><li>资料上传</li><li class="active">上传附件</li></ol></h4>
-    <form action="{:U('upload')}" method="post" enctype="multipart/form-data">
-    <div class="form-group">
-    <input type="file" class="form-control" name="file[]" multiple/></div>
-    <input type="submit" value="提交" class="btn btn-primary btn-lg" />
-</form>
-<script>
-    var listitem=document.getElementById("upload");
-    listitem.className="list-group-item active";
-</script>
-</body>
-</html>
+<!DOCTYPE html><html><body><h4><ol class="breadcrumb"><li>资料上传</li><li class="active">上传附件</li></ol></h4>    <form action="{:U('upload')}" method="post" enctype="multipart/form-data">    <div class="form-group">    <input type="file" class="form-control" name="file[]" multiple/></div>    <input type="submit" value="提交" class="btn btn-primary btn-lg" /></form><script>    var listitem=document.getElementById("upload");    listitem.className="list-group-item active";</script></body></html>
