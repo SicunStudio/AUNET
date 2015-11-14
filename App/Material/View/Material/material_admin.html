@@ -1,0 +1,461 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>物资系统_管理人员</title>
+    <script src='__PUBLIC__/MaterialSrc/jquery-2.1.1.js'></script>
+<link href="__PUBLIC__/MaterialSrc/public.css" type="text/css" rel="stylesheet">
+<link href="__PUBLIC__/MaterialSrc/admin.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="__PUBLIC__/MaterialSrc/admin.js">
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("input").focus(function(){
+    if ($(this).val() == "无") {  
+                $(this).val("");  
+           }  
+  });
+  $("input").blur(function(){
+        if ($(this).val() == "") {  
+                $(this).val("无");  
+           }  
+  });
+});
+</script>
+</head>
+
+<body>
+<div id="slider">
+    <ul>
+      <li id="sliderTop1"></li>
+      <li id="sliderTop2"></li>
+    </ul>
+    <dl id="apply">
+      <dt>
+        <ul>
+          <li class="applyText">申请</li>
+          <li class="applyTriangle"><img src="__PUBLIC__/MaterialSrc/images/hehe_03.png" /></li>
+        </ul>
+      </dt>
+      <dd id="stuff" onclick="show_stuffCondition()">物资借用</dd>
+      <dd id="place" onclick="show_boPlace()">场地借用</dd>
+      <ul id="boPlace">
+        <li>
+          <input type="radio"  name="apply_place" id="colPrinting" onclick="show_colPrintingCondition()" />
+          <label for=
+            "colPrinting">彩喷悬挂</label>
+        </li>
+        <li>
+          <input type="radio"  name="apply_place" id="colClass" onclick="show_colClassCondition()" />
+          <label for=
+            "colClass">大活教室</label>
+        </li>
+        <li>
+          <input type="radio"  name="apply_place" id="roShow" onclick="show_roShowCondition()" />
+          <label for=
+            "roShow">路演场地</label>
+        </li>
+        <li>
+          <input type="radio"  name="apply_place" id="buClass" onclick="show_buClassCondition()" />
+          <label for=
+            "buClass">教学楼教室-教工</label>
+        </li>
+		<li>
+          <input type="radio"  name="apply_place" id="buclass2" onclick="show_buclass2Condition()" />
+          <label for=
+            "buclass2">教学楼教室-学生</label>
+        </li>
+        <li>
+          <input type="radio"  name="apply_place" id="spPlace" onclick="show_spPlaceCondition()" />
+          <label for=
+            "spPlace">特殊场地</label>
+        </li>
+        <li>
+          <input type="radio"  name="apply_place" id="spoCourt" onclick="show_spoCourtCondition()" />
+          <label for=
+            "spoCourt">体育场馆</label>
+        </li>
+        <li>
+          <input type="radio"  name="apply_place" id="eaThird" onclick="show_eaThirdCondition()" />
+          <label for=
+            "eaThird">东四三楼</label>
+        </li>
+        <li>
+          <input type="radio"  name="apply_place" id="othPlace" onclick="show_othPlaceCondition()" />
+          <label for=
+            "othPlace">其他场地</label>
+        </li>
+      </ul>
+      <dd id="other" onclick="show_bo_othStuffCondition()">其他借用</dd>
+    </dl>
+  </div>
+<div id="mainbody">
+  <div id="header">
+    <p>物资管理系统</p>
+  </div>
+  <div id="applyTable">
+    <form action="{:U('material_adupload')}" method="post" id="myForm">
+        <input type="hidden" name="action_type" id="action_type" value="none"/>
+      <div id="tableApply_Stuff">
+        <table border="1">
+          <tr style="background-color:rgb(217,217,217);font-size:20px;  vertical-align:top;">
+            <th width="20%">&nbsp;提交时间</th>
+            <th width="20%">&nbsp;社团名</th>
+            <th width="12%">&nbsp;状态</th>
+            <th width="28%">&nbsp;下载表格</th>
+			  <th width="20%">&nbsp;修改意见</th>
+          </tr>
+            <foreach name="value['Stuff']" item="u">
+                <tr>
+                    <td width="20%">{$u.createtime}</td>
+                    <td width="20%">{$u.associationname}</td>
+                    <td width="12%">&nbsp;
+                        <select name="Stuff_{$u.id}">
+                            <option value="0">未审核</option>
+                            <option value="1">审核通过</option>
+                            <option value="2">审核不通过</option>
+                        </select>
+                    </td>
+                    <td width="28%"><a href="{:U('Material/Download/Stuff',array('id'=>$u['id']))}">下载</a></td>
+			<td width="20%">
+			<input type="text" name="Stuff_Review_{$u.id}" style="width:99%;height:100%; border:0;" value="无" />
+			</td>
+                </tr>
+            </foreach>
+        </table>
+        <input type="button" value="提交" id="tableApply_Stuff_buttonSubmit" name="tableApply_Stuff_buttonSubmit" onclick="condition_submit()"/>
+        <input type="button" value="取消" id="tableApply_Stuff_buttonReset" onclick="formReset()"/>
+        
+      </div>
+	  <div id="tableApply_Place">
+      <div id="tableApply_colPrinting">
+        <table border="1">
+          <tr style="background-color:rgb(217,217,217);font-size:20px;  vertical-align:top;">
+            <th width="20%">&nbsp;提交时间</th>
+            <th width="20%">&nbsp;社团名</th>
+            <th width="12%">&nbsp;状态</th>
+            <th width="28%">&nbsp;下载表格</th>
+			<th width="20%">&nbsp;修改意见</th>
+          </tr>
+            <foreach name="value['ColorPrinting']" item="u">
+                <tr>
+                    <td width="30%">{$u.createtime}</td>
+                    <td width="30%">{$u.associationname}</td>
+                    <td width="12%">&nbsp;
+                        <select name="ColorPrinting_{$u.id}">
+                            <option value="0">未审核</option>
+                            <option value="1">审核通过</option>
+                            <option value="2">审核不通过</option>
+                        </select>
+                    </td>
+                    <td width="28%"><a href="{:U('Material/Download/ColorPrinting',array('id'=>$u['id']))}">下载</a></td>
+			<td width="20%" >
+			<input type="text" name="ColorPrinting_Review_{$u.id}" style="width:99%;height:100%; border:0;" value="无" />
+			</td>
+                </tr>
+            </foreach>
+        </table>
+        <input type="button" value="提交" id="tableApply_colPrinting_buttonSubmit" name="tableApply_colPrinting_buttonSubmit" onclick="condition_submit()"/>
+        <input type="button" value="取消" id="tableApply_colPrinting_buttonReset" onclick="formReset()"/>
+        
+      </div>
+      <div id="tableApply_colClass">
+        <table border="1">
+          <tr style="background-color:rgb(217,217,217);font-size:20px;  vertical-align:top;">
+            <th width="20%">&nbsp;提交时间</th>
+            <th width="20%">&nbsp;社团名</th>
+            <th width="12%">&nbsp;状态</th>
+            <th width="28%">&nbsp;下载表格</th>
+			<th width="20%">&nbsp;修改意见</th>
+          </tr>
+            <foreach name="value['StudentCenter']" item="u">
+                <tr>
+                    <td width="20%">{$u.createtime}</td>
+                    <td width="20%">{$u.associationname}</td>
+                    <td width="12%">&nbsp;
+                        <select name="StudentCenter_{$u.id}">
+                            <option value="0">未审核</option>
+                            <option value="1">审核通过</option>
+                            <option value="2">审核不通过</option>
+                        </select>
+                    </td>
+                    <td width="28%"><a href="{:U('Material/Download/StudentCenter',array('id'=>$u['id']))}">下载</a></td>
+			<td width="20%" >
+			<input type="text" name="StudentCenter_Review_{$u.id}" style="width:99%;height:100%; border:0;" value="无" />
+			</td>
+                </tr>
+            </foreach>
+        </table>
+        <input type="button" value="提交" id="tableApply_colClass_buttonSubmit" name="tableApply_colClass_buttonSubmit" onclick="condition_submit()"/>
+        <input type="button" value="取消" id="tableApply_colClass_buttonReset" onclick="formReset()"/>
+        
+      </div>
+	  <div id="tableApply_roShow">
+        <table border="1">
+          <tr style="background-color:rgb(217,217,217);font-size:20px;  vertical-align:top;">
+            <th width="20%">&nbsp;提交时间</th>
+            <th width="20%">&nbsp;社团名</th>
+            <th width="12%">&nbsp;状态</th>
+            <th width="28%">&nbsp;下载表格</th>
+			<th width="20%">&nbsp;修改意见</th>
+          </tr>
+            <foreach name="value['RoadShow']" item="u">
+                <tr>
+                    <td width="20%">{$u.createtime}</td>
+                    <td width="20%">{$u.associationname}</td>
+                    <td width="12%">&nbsp;
+                        <select name="RoadShow_{$u.id}">
+                            <option value="0">未审核</option>
+                            <option value="1">审核通过</option>
+                            <option value="2">审核不通过</option>
+                        </select>
+                    </td>
+                    <td width="28%"><a href="{:U('Material/Download/RoadShow',array('id'=>$u['id']))}">下载</a></td>
+			<td width="20%" >
+			<input type="text" name="RoadShow_Review_{$u.id}" style="width:99%;height:100%; border:0;" value="无" />
+			</td>
+                </tr>
+            </foreach>
+        </table>
+       <input type="button" value="提交" id="tableApply_roShow_buttonSubmit" name="tableApply_roShow_buttonSubmit" onclick="condition_submit()"/>
+        <input type="button" value="取消" id="tableApply_roShow_buttonReset" onclick="formReset()"/>
+        
+      </div>
+      <div id="tableApply_buClass">
+        <table border="1">
+          <tr style="background-color:rgb(217,217,217);font-size:20px;  vertical-align:top;">
+            <th width="20%">&nbsp;提交时间</th>
+            <th width="20%">&nbsp;社团名</th>
+            <th width="12%">&nbsp;状态</th>
+            <th width="28%">&nbsp;下载表格</th>
+			<th width="20%">&nbsp;修改意见</th>
+          </tr>
+            <foreach name="value['BuildingClassroom']" item="u">
+                <tr>
+                    <td width="20%">{$u.createtime}</td>
+                    <td width="20%">{$u.associationname}</td>
+                    <td width="12%">&nbsp;
+                        <select name="BuildingClassroom_{$u.id}">
+                            <option value="0">未审核</option>
+                            <option value="1">审核通过</option>
+                            <option value="2">审核不通过</option>
+                        </select>
+                    </td>
+                    <td width="28%"><a href="{:U('Material/Download/BuildingClassroom',array('id'=>$u['id']))}">下载</a></td>
+			<td width="20%" >
+			<input type="text" name="BuildingClassroom_Review_{$u.id}" style="width:99%;height:100%; border:0;" value="无" />
+			</td>
+                </tr>
+            </foreach>
+        </table>
+       <input type="button" value="提交" id="tableApply_buclass2buttonSubmit" name="tableApply_buclass2buttonSubmit" onclick="condition_submit()"/>
+        <input type="button" value="取消" id="tableApply_buclass2buttonReset" onclick="formReset()"/>
+        
+      </div>
+      <div id="tableApply_buclass2">
+        <table border="1">
+          <tr style="background-color:rgb(217,217,217);font-size:20px;  vertical-align:top;">
+            <th width="20%">&nbsp;提交时间</th>
+            <th width="20%">&nbsp;社团名</th>
+            <th width="12%">&nbsp;状态</th>
+            <th width="28%">&nbsp;下载表格</th>
+			<th width="20%">&nbsp;修改意见</th>
+          </tr>
+            <foreach name="value['BuildingClassroom2']" item="u">
+                <tr>
+                    <td width="20%">{$u.createtime}</td>
+                    <td width="20%">{$u.associationname}</td>
+                    <td width="12%">&nbsp;
+                        <select name="BuildingClassroom2_{$u.id}">
+                            <option value="0">未审核</option>
+                            <option value="1">审核通过</option>
+                            <option value="2">审核不通过</option>
+                        </select>
+                    </td>
+                    <td width="28%"><a href="{:U('Material/Download/BuildingClassroom2',array('id'=>$u['id']))}">下载</a></td>
+			<td width="20%" >
+			<input type="text" name="BuildingClassroom2_Review_{$u.id}" style="width:99%;height:100%; border:0;" value="无" />
+			</td>
+                </tr>
+            </foreach>
+        </table>
+        <input type="button" value="提交" id="tableApply_buclass2_buttonSubmit" name="tableApply_buclass2_buttonSubmit" onclick="condition_submit()"/>
+        <input type="button" value="取消" id="tableApply_buclass2_buttonReset" onclick="formReset()"/>
+        
+      </div>
+	  <div id="tableApply_spPlace">
+        <table border="1">
+          <tr style="background-color:rgb(217,217,217);font-size:20px;  vertical-align:top;">
+            <th width="20%">&nbsp;提交时间</th>
+            <th width="20%">&nbsp;社团名</th>
+            <th width="12%">&nbsp;状态</th>
+            <th width="28%">&nbsp;下载表格</th>
+			<th width="20%">&nbsp;修改意见</th>
+          </tr>
+            <foreach name="value['SpecialPlace']" item="u">
+                <tr>
+                    <td width="20%">{$u.createtime}</td>
+                    <td width="20%">{$u.associationname}</td>
+                    <td width="12%">&nbsp;
+                        <select name="SpecialPlace_{$u.id}">
+                            <option value="0">未审核</option>
+                            <option value="1">审核通过</option>
+                            <option value="2">审核不通过</option>
+                        </select>
+                    </td>
+                    <td width="28%"><a href="{:U('Material/Download/SpecialPlace',array('id'=>$u['id']))}">下载</a></td>
+			<td width="20%" >
+			<input type="text" name="SpecialPlace_Review_{$u.id}" style="width:99%;height:100%; border:0;" value="无" />
+			</td>
+                </tr>
+            </foreach>
+        </table>
+        <input type="button" value="提交" id="tableApply_spPlace_buttonSubmit" name="tableApply_spPlace_buttonSubmit" onclick="condition_submit()"/>
+        <input type="button" value="取消" id="tableApply_spPlace_buttonReset" onclick="formReset()"/>
+        
+      </div>
+	  <div id="tableApply_spoCourt">
+        <table border="1">
+          <tr style="background-color:rgb(217,217,217);font-size:20px;  vertical-align:top;">
+            <th width="20%">&nbsp;提交时间</th>
+            <th width="20%">&nbsp;社团名</th>
+            <th width="12%">&nbsp;状态</th>
+            <th width="28%">&nbsp;下载表格</th>
+			<th width="20%">&nbsp;修改意见</th>
+          </tr>
+            <foreach name="value['SportCourt']" item="u">
+                <tr>
+                    <td width="20%">{$u.createtime}</td>
+                    <td width="20%">{$u.associationname}</td>
+                    <td width="12%">&nbsp;
+                        <select name="SportCourt_{$u.id}">
+                            <option value="0">未审核</option>
+                            <option value="1">审核通过</option>
+                            <option value="2">审核不通过</option>
+                        </select>
+                    </td>
+                    <td width="28%"><a href="{:U('Material/Download/SportCourt',array('id'=>$u['id']))}">下载</a></td>
+			<td width="20%" >
+			<input type="text" name="SportCourt_Review_{$u.id}" style="width:99%;height:100%; border:0;" value="无" />
+			</td>
+                </tr>
+            </foreach>
+        </table>
+        <input type="button" value="提交" id="tableApply_spoCourt_buttonSubmit" name="tableApply_spoCourt_buttonSubmit" onclick="condition_submit()"/>
+        <input type="button" value="取消" id="tableApply_spoCourt_buttonReset" onclick="formReset()"/>
+        
+      </div>
+	  <div id="tableApply_eaThird">
+        <table border="1">
+          <tr style="background-color:rgb(217,217,217);font-size:20px;  vertical-align:top;">
+            <th width="20%">&nbsp;提交时间</th>
+            <th width="20%">&nbsp;社团名</th>
+            <th width="12%">&nbsp;状态</th>
+            <th width="28%">&nbsp;下载表格</th>
+			<th width="20%">&nbsp;修改意见</th>
+          </tr>
+            <foreach name="value['EastThird']" item="u">
+                <tr>
+                    <td width="20%">{$u.createtime}</td>
+                    <td width="20%">{$u.associationname}</td>
+                    <td width="12%">&nbsp;
+                        <select name="EastThird_{$u.id}">
+                            <option value="0">未审核</option>
+                            <option value="1">审核通过</option>
+                            <option value="2">审核不通过</option>
+                        </select>
+                    </td>
+                    <td width="28%"><a href="{:U('Material/Download/EastThird',array('id'=>$u['id']))}">下载</a></td>
+			<td width="20%" >
+			<input type="text" name="EastThird_Review_{$u.id}" style="width:99%;height:100%; border:0;" value="无" />
+			</td>
+                </tr>
+            </foreach>
+        </table>
+        <input type="button" value="提交" id="tableApply_eaThird_buttonSubmit" name="tableApply_eaThird_buttonSubmit" onclick="condition_submit()"/>
+        <input type="button" value="取消" id="tableApply_eaThird_buttonReset" onclick="formReset()"/>
+        
+      </div>
+	  <div id="tableApply_othPlace">
+        <table border="1">
+          <tr style="background-color:rgb(217,217,217);font-size:20px;  vertical-align:top;">
+            <th width="20%">&nbsp;提交时间</th>
+            <th width="20%">&nbsp;社团名</th>
+            <th width="12%">&nbsp;状态</th>
+            <th width="28%">&nbsp;下载表格</th>
+			<th width="20%">&nbsp;修改意见</th>
+          </tr>
+            <foreach name="value['OtherPlace']" item="u">
+                <tr>
+                    <td width="20%">{$u.createtime}</td>
+                    <td width="20%">{$u.associationname}</td>
+                    <td width="12%">&nbsp;
+                        <select name="OtherPlace_{$u.id}">
+                            <option value="0">未审核</option>
+                            <option value="1">审核通过</option>
+                            <option value="2">审核不通过</option>
+                        </select>
+                    </td>
+                    <td width="28%"><a href="{:U('Material/Download/OtherPlace',array('id'=>$u['id']))}">下载</a></td>
+			<td width="20%" >
+			<input type="text" name="OtherPlace_Review_{$u.id}" style="width:99%;height:100%; border:0;" value="无" />
+			</td>
+                </tr>
+            </foreach>
+        </table>
+        <input type="button" value="提交" id="tableApply_othPlace_buttonSubmit" name="tableApply_othPlace_buttonSubmit" onclick="condition_submit()"/>
+        <input type="button" value="取消" id="tableApply_othPlace_buttonReset" onclick="formReset()"/>
+        
+      </div>
+	  </div>
+	  <div id="tableApply_bo_othStuff">
+        <table border="1">
+          <tr style="background-color:rgb(217,217,217);font-size:20px;  vertical-align:top;">
+            <th width="20%">&nbsp;提交时间</th>
+            <th width="20%">&nbsp;社团名</th>
+            <th width="12%">&nbsp;状态</th>
+            <th width="28%">&nbsp;下载表格</th>
+			<th width="20%">&nbsp;修改意见</th>
+          </tr>
+            <foreach name="value['OtherStuff']" item="u">
+                <tr>
+                    <td width="20%">{$u.createtime}</td>
+                    <td width="20%">{$u.associationname}</td>
+                    <td width="12%">&nbsp;
+                        <select name="OtherStuff_{$u.id}">
+                            <option value="0">未审核</option>
+                            <option value="1">审核通过</option>
+                            <option value="2">审核不通过</option>
+                        </select>
+                    </td>
+                    <td width="28%"><a href="{:U('Material/Download/OtherStuff',array('id'=>$u['id']))}">下载</a></td>
+			<td width="20%" >
+			<input type="text" name="OtherStuff_Review_{$u.id}" style="width:99%;height:100%; border:0;" value="无" />
+			</td>
+                </tr>
+            </foreach>
+        </table>
+        <input type="button" value="提交" id="tableApply_bo_othStuff_buttonSubmit" name="tableApply_bo_othStuff_buttonSubmit" onclick="condition_submit()"/>
+        <input type="button" value="取消" id="tableApply_bo_othStuff_buttonReset" onclick="formReset()"/>
+        
+      </div>
+    </form>
+  </div>
+</div>
+<div id="logo"> <img src="__PUBLIC__/MaterialSrc/images/bottom.jpg" width="100%" height="100px"> </div>
+<div id="footer">
+  <table>
+    <tr>
+      <td valign="middle" width="15%" align="right"><img src="__PUBLIC__/MaterialSrc/images/mark_address.png"></td>
+      <td valign="middle" width="25%" align="left">武汉市洪山区珞喻路1037号华中科技大学大学生活动中心</td>
+      <td valign="middle" width="6%" align="right"><img src="__PUBLIC__/MaterialSrc/images/mark_call.png"></td>
+      <td valign="middle" width="9%" align="left">XXXXXXXXXX</td>
+      <td valign="middle" width="6%" align="right"><img src="__PUBLIC__/MaterialSrc/images/mark_email.png"></td>
+      <td valign="middle" width="9%" align="left">XXXXXXX@hust.edu.cn</td>
+      <td valign="middle" width="6%" align="right"><img src="__PUBLIC__/MaterialSrc/images/mark_email.png"></td>
+      <td valign="middle" width="24%" align="left">XXXXXXXXX@qq.com</td>
+    </tr>
+  </table>
+</div>
+</body>
+</html>
