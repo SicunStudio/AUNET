@@ -1,88 +1,1 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>微仔说</title>
- <script>
-  $(document).ready(
-	   function() {
-		 
-		   $(".a-top").mouseenter(
-		   function(e) {
-            $("#downlist").slideDown("fast");	
-        });
-		
-		$("#downlist").mouseenter(
-		   function(e) {
-            $("#downlist").slideDown("fast");	
-        });
-		
-	
-		
-		$("#downlist").mouseleave(
-		   function(e) {
-            $("#downlist").slideUp("fast");	
-        });
-		
-    });
- </script>
- <script type="text/javascript">
- function showPic(){
- 	var picnames = new Array("14年万圣节","光棍节1","光棍节2","教师节","考试周（罗晨坤）","清明","社团文化节游园会大门","万圣节","五四青年节（张雅倩）","五一（陈高杰）","五一圆珠笔画（张静丽）","中秋","助考贺图（周嘉玥）");
-	
- 	var lists = document.getElementById("piclists");
-	for(var i=0;i<picnames.length;i++){
-		var picnode = document.createElement("div");
-		picnode.className = "photolists";
-		picname = picnames[i];
-		picnode.innerHTML = "<a href='__PUBLIC__/AUSrc/hetu/"+picname+".jpg' target='_blank/'><img src='__PUBLIC__/AUSrc/hetu/"+picname+".jpg'/></a>";
-		lists.appendChild(picnode);
-	}
- }
- </script>
- <style>
- .slidebarlink{
-	 padding:12px 12px;
-	 font-size:22px;
-	 margin:15px;
-	 display:block;
-	 color:#444e41;
-	 transition:.2s;
-	 border-radius:3px;
-	 
-	 }
-	 
-	 .now{color:#FFFFFF;
-	background-color:#74b05c;}
-	 
-.slidebarlink:hover{
-	color:#FFFFFF;
-	background-color:#74b05c;
-}
-
-
-.photolists{
-	height:180px;
-	width:180px;
-	border:1px solid #74B05C;
-	display:inline-block;
-	margin:10px;
-}
-
-.photolists img{
-	width:180px;
-	height:180px;
-}
- </style>
- 
-</head>
-
-<body onload="showPic();">
-
-
-      <td width="73%" align="center" valign="top" id="piclists">
-	  <div style="text-align:right; margin-right:70px;"><a href="index.html" >&lt;&lt;返回</a><br/></div>
-      </td>
-
-</body>
-</html>
+<!doctype html><html><head><meta charset="utf-8"><title>微仔说 - 微仔贺词</title>	 <script type="text/javascript">		 var picnames = new Array("14年万圣节","光棍节1","光棍节2","教师节","考试周（罗晨坤）","清明","社团文化节游园会大门","万圣节","五四青年节（张雅倩）","五一（陈高杰）","五一圆珠笔画（张静丽）","中秋","助考贺图（周嘉玥）");		 function showPic(){			var lists = document.getElementById("piclists");			for(var i=0;i<picnames.length;i++){				var picnode = document.createElement("div");				picnode.className = "photolists";				picname = picnames[i];				picnode.innerHTML = "<img onclick='setMod(\"hetu\","+i+")' data-toggle='modal' data-target='.modal_pic' src='__PUBLIC__/AUSrc/hetu/"+picname+".jpg'/>";				lists.appendChild(picnode);			}		 }		 function setMod(mod,picid){			 document.getElementById("modpic").src="__PUBLIC__/AUSrc/"+mod+"/"+picnames[picid]+".jpg";			 document.getElementById("img_text").innerHTML=picnames[picid];		 }	 </script> </head><body onload="showPic();">      <div id="piclists">	  <div style="text-align:right; margin-right:70px;"><a href="index.html" >&lt;&lt;返回</a><br/></div>      </div>	  <script>		  document.getElementById("side-wz").className="sidelink active";		  document.getElementById("navtitle-3").innerHTML="微仔说";		  document.getElementById("navtitle-4").innerHTML="微仔贺词";	  </script></body></html>

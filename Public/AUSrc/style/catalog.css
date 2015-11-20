@@ -1,88 +1,1 @@
-﻿@charset "utf-8";
-/* CSS Document */
-#z_catalog{
-	width: 150px;
-	height: 130px;
-	font-family: 微软雅黑;
-	position: fixed;
-	right: 10px;
-	bottom: 160px;
-	}
-
-#z_catalog ul {list-style-type: none; padding-left: 0px; }
-#z_catalog ul li {padding-left: 5px; }
-.catalog_li{
-	color:#000;
-	font-size:24px;
-	padding-left:20px;
-	}
-.catalog_li a{
-	color:#000;
-	text-decoration:none;
-	}
-.catalog_li a:hover{
-	text-decoration:underline;
-	}
-.catalog_li a:visited{
-	color:#000;
-	}
-.catalog_dot{
-	/*padding-right:5px;*/
-	color:#CCC;
-	}
-#catalog_content{
-	margin-top:10px;
-	}
-
-.content_num{
-    width: 25px;
-    height: 24px;
-    line-height:24px;
-    font-size: 16px;
-    display: block;
-    float: left;
-    margin: 1px 0 0 0;
-    background: #519cea;
-    color: #fff;
-    text-align: center;
-    border-radius: 0 2px 2px 0;
-	}
-.content_item{
-    line-height: 24px;
-    display: block;
-    float: left;
-    padding: 0 8px 0 5px;
-    background: #fff;
-	font-size: 24px;
-	font-family:微软雅黑;
-	}
-.content_line{
-	display: block;
-	padding-top:11px;
-	border-bottom:2px solid #CCC;
-	}
-.para{
-	color: #333;
-    margin: 15px 0 5px 0;
-    text-indent: 2em;
-    line-height: 24px;
-	}
-#content_diagram{
-	margin-left:50px;
-	width:500px;
-	height:500px;
-	}
-#jgsz{
-	margin-top:30px;
-	}
-#zbhd{
-	margin-top:70px;
-	}
-#slhg{
-	margin-top:30px;
-	}
-.content_leadword{
-	display:block;
-	margin:20px 0 0 10px;
-	font-size:20px;
-	}
+﻿@charset "utf-8";/* CSS Document */#z_catalog{	width: 150px;	height: 130px;	font-family: 微软雅黑;	position: fixed;	left: 20px;	bottom: 100px;	}#z_catalog ul {list-style-type: none; padding-left: 0px; }#z_catalog ul li {padding-left: 5px; }.catalog_li{	color:#000;	font-size:24px;	padding-left:20px;	}.catalog_li a{	color:#000;	text-decoration:none;	}.catalog_li a:hover{	text-decoration:underline;	}.catalog_li a:visited{	color:#000;	}.catalog_dot{	/*padding-right:5px;*/	color:#CCC;	}#catalog_content{	margin-top:10px;	}.content_num{    width: 25px;    height: 24px;    line-height:24px;    font-size: 16px;    display: block;    float: left;    margin: 1px 0 0 0;    background: #519cea;    color: #fff;    text-align: center;    border-radius: 0 2px 2px 0;	}.content_item{    line-height: 24px;    display: block;    float: left;    padding: 0 8px 0 5px;    background: #fff;	font-size: 24px;	font-family:微软雅黑;	}.content_line{	display: block;	padding-top:11px;	border-bottom:2px solid #CCC;	}.para{	color: #333;    margin: 15px 0 5px 0;    text-indent: 2em;    line-height: 24px;	}#content_diagram{	margin-left:50px;	width:500px;	height:500px;	}#jgsz{	margin-top:30px;	}#zbhd{	margin-top:70px;	}#slhg{	margin-top:30px;	}.content_leadword{	display:block;	margin:20px 0 0 10px;	font-size:20px;	}

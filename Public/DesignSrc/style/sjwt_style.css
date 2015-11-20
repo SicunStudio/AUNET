@@ -1,110 +1,1 @@
-body, ol, ul, h1, h2, h3, h4, h5, h6, p, th, td, dl, dd,
-form, fieldset, legend, input, textarea, select{margin:0;padding:0 ;font-weight:normal}
-body{font:12px "ËÎÌå","Arial Narrow",HELVETICA;background:white;-webkit-text-size-adjust:100%; }
-a{text-decoration:none;color:#333333;font-size:12px}a:hover{text-decoration:underline;color:#333333}
-em{font-style:normal}
-li{list-style:none}
-img{border:0;vertical-align:middle}
-table{border-collapse:collapse;border-spacing:0}
-p{word-wrap:break-word}
-input{bordr:0px;}
-
-.sjwt_nav{
-    width:100%;
-    height: 112.8px;
-    background-color: #74b05c;
-}
-
-.sjwt_main{
-   /* background: white;
-    margin: 0 auto;
-    overflow:hidden; *//*zoom:1;*/
-}
-
-.sjwt_title{
-    width: 100%;
-    height: 60px;
-    background-color: #9bd288;
-    text-align: center;
-    line-height: 60px;
-    font-family: "Microsoft YaHei" ! important;
-    color: white;
-    font-size: 20px;
-    margin-top: 30px;
-    margin-bottom: 50px;
-}
-
-.sjwt_time_right{
-    margin-left: 6%;
-}
-
-.sjwt_sqc h3{
-    display: block;
-    width: 180px;
-    height: 44px;
-    background-color: #9bd288 ;
-    text-align: center;
-    line-height: 44px;
-    font-size: 18px;
-    color: white;
-    font-family: "Microsoft YaHei" ! important;
-    margin-left: 44px;
-    margin-top: 60px;
-}
-
-.sjwt_sqc_jt{
-
-    margin:30px  auto 0px  ;
-    width:88% ;
-    height: 200px;
-}
-.sjwt_sqc_jt div{
-    height: 38px;
-    clear: both;
-    margin-bottom: 18px;
-
-}
-
-.sjwt_sqc_jt span{
-    display: block;
-    width:140px ;
-   height: 38px;
-    line-height: 38px;
-    font-size: 17px;
-    color: white;
-    text-align: center;
-    background:#9bd288 ;
-    font-family: "Microsoft YaHei" ! important;
-    float:left;
-    margin-right: 18px;
-}
-
-.sjwt_sqc_jt .inputbox{
-    border: 0px;
-    float:left;
-    width: 480px;
-    height: 38px;
-    background-color: #e6f6c5;
-    margin-right: 80px;
-}
-
-.sjwt_sqc_jt .submit{
-    display: block;
-    width:140px ;
-    height: 38px;
-    border: 0px;
-    background-color: #9bd288;
-    font-family: "Microsoft YaHei" ! important;
-    font-size: 17px;
-    color: white;
-    text-align: center;
-
-}
-
-.sjwt_sqc_jt{
-    font-size: 14px;
-    color: #9bd288;
-    text-align:center;
-}
-
-
+body, ol, ul, h1, h2, h3, h4, h5, h6, p, th, td, dl, dd,form, fieldset, legend, input, textarea, select{margin:0;padding:0 ;font-weight:normal}body{font:12px "ï¿½ï¿½ï¿½ï¿½","Arial Narrow",HELVETICA;background:white;-webkit-text-size-adjust:100%; }a{text-decoration:none;color:#333333;font-size:12px}a:hover{text-decoration:underline;color:#333333}em{font-style:normal}li{list-style:none}img{border:0;vertical-align:middle}table{border-collapse:collapse;border-spacing:0}p{word-wrap:break-word}input{bordr:0px;}.sjwt_nav{    width:100%;    height: 112.8px;    background-color: #74b05c;}.sjwt_main{   /* background: white;    margin: 0 auto;    overflow:hidden; *//*zoom:1;*/}.sjwt_title{    width: 100%;    height: 60px;    background-color: #9bd288;    text-align: center;    line-height: 60px;    font-family: "Microsoft YaHei" ! important;    color: white;    font-size: 20px;    margin-top: 30px;    margin-bottom: 50px;}.sjwt_time_right{    margin-left: 6%;}.sqc {    display: block;    width: 180px;    height: 44px;    background-color: #9bd288 ;    text-align: center;    line-height: 44px;    font-size: 18px;    color: white;    font-family: "Microsoft YaHei" ! important;    margin-left: 44px;    margin-top: 60px;}.sjwt_sqc_jt{    margin:30px  auto 0px  ;    width:88% ;    height: 200px;}.sjwt_sqc_jt div{    height: 38px;    clear: both;    margin-bottom: 18px;}.newsq label{    /*display: block;*/    width:140px ;    height: 38px;    line-height: 38px;    font-size: 17px;    color: white;    text-align: center;    background:#9bd288 ;    font-family: "Microsoft YaHei" ! important;    /*float:left;*/    /*margin-left: auto;    margin-right: auto;*/}.newsq .inputbox{    border: 0px;    float:left;    width: 100%;    font-size: 18px;    height: 38px;    line-height: 38px;    background-color: #e6f6c5;    /*margin-right: 80px;*/}.newsq select {    width: 80px;    height: 36px;    line-height: 36px;}.newsq .submit{    display: block;    width:160px ;    height: 50px;    line-height: 50px;    border: 0px;    background-color: #9bd288;    font-family: "Microsoft YaHei" ! important;    font-size: 20px;    color: white;    text-align: center;    margin-left: auto;    margin-right: auto;}

@@ -1,29 +1,1 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link href="__PUBLIC__/general/side_layout.css" rel="stylesheet">
-</head>
-<body>
-<include file="./common_header" />
-<div class="container">
-    <div class="row">
-        <p class="navtitle"><span id="navtitle-1">新闻</span><span id="navtitle-eng">News</span><span id="navtitle-2">&gt;&gt;</span><span id="navtitle-3">动态详情</span></p>
-    </div>
-    <div class="row">
-        <div class="col-sm-3 slide">
-            <ul class="menulist">
-                <a href="{:U('/Home/News/Index')}" class="sidelink active" id="side-latest">最新动态</a>
-                <a href="{:U('/Home/Activity/Index')}" class="sidelink" id="side-fore">活动预告</a>
-                <a href="{:U('/Home/BroadCast/Index')}" class="sidelink" id="side-broad">公告栏</a>
-            </ul>
-        </div>
-        <div class="col-sm-9">
-            {__CONTENT__}
-        </div>
-    </div>
-</div>
-
-<include file="./common_footer" />
-</body>
-</html>
+<!DOCTYPE html><html lang="en"><head>    <meta charset="UTF-8">    <link href="__PUBLIC__/general/side_layout.css" rel="stylesheet"></head><body><include file="./common_header" /><div class="container">    <div class="row">        <p class="navtitle"><span id="navtitle-1">新闻</span><span id="navtitle-eng">News</span><span id="navtitle-2">&gt;&gt;</span><span id="navtitle-3">动态详情</span></p>    </div>    <div class="row">        <div class="col-sm-3 slide">            <ul class="menulist">                <a href="{:U('/Home/News/Index')}" class="sidelink active" id="side-latest">最新动态</a>                <a href="{:U('/Home/Activity/Index')}" class="sidelink" id="side-fore">活动预告</a>                <a href="{:U('/Home/BroadCast/Index')}" class="sidelink" id="side-broad">公告栏</a>            </ul>        </div>        <div class="col-sm-9">            {__CONTENT__}        </div>    </div></div><include file="./common_footer" /></body></html>

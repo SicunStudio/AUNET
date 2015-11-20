@@ -1,50 +1,1 @@
-<!doctype html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>最新动态</title>
-    <style>
-        .ActivityBlock { width: 80%; padding: 8px; margin: 25px auto;  height: 150px; }
-        .box1 { background-color: #ffa968; }
-        .box2 { background-color: #addf7e; }
-        .box3 { background-color: #7db3f1; }
-        .titlefirst { font-size: 32px; color: #ffffff; }
-        .titletext { font-size: 24px; color: #ffffff; }
-        .normaltext { font-size: 20px; color: #ffffff; }
-    </style>
-</head>
-
-<body>
-                <for start="0" end="3">
-                    <div class="ActivityBlock box{$i+1}">
-                        <table width="95%" border="0">
-                            <tbody>
-                            <tr>
-                                <td width="30%" rowspan="2">
-                                    <if condition="$news[$i]['pic'] eq ' '">
-                                        <img src="__PUBLIC__/NewsSrc/im/dh.png" width="180" />
-                                        <else/>
-                                        <img src="{$news[$i].pic}" width="65%" />
-                                    </if>
-                                </td>
-                                <td width="70%" height="40" valign="top"><a href="{:U('/Home/NewsDetail/index',array('id'=>$news[$i]['id']))}"><span class="titlefirst">{$news[$i].title|msubstr=###,0,1}</span>
-                                    <span class="titletext"><?php echo msubstr($news[$i]['title'],1,strlen($news[$i]['title']));?></span>  </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td height="73"><span class="normaltext">{$news[$i].text}</span></td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </for>
-    <div align="center">
-        <span class="rows">共{$count}条记录</span>
-        {$page}
-    </div>
-<script>
-    document.getElementById("side-latest").className="sidelink active";
-    document.getElementById("navtitle-3").innerHTML="最新动态";
-</script>
-</body>
-</html>
+<!doctype html><html><head>    <meta charset="utf-8">    <title>最新动态</title>    <style>        .ActivityBlock { width: 90%; padding:  3px; margin: 20px auto;  height: 150px; overflow: hidden; }        a:hover {text-decoration: none;}        .box1 { background-color: #ffa968; }        .box2 { background-color: #addf7e; }        .box3 { background-color: #7db3f1; }        .titlefirst { font-size: 2em; color: #ffffff; }        .titletext { font-size: 1.5em; color: #ffffff; }        .titletext:hover {text-decoration: none;}        .normaltext { font-size: 1.17em; color: #ffffff; }        @media screen and (max-width:768px ) {            .titlefirst { font-size: 1.7em; }            .titletext { font-size: 1.3em;  }            .title_p { white-space: nowrap; text-overflow: ellipsis; }            .normaltext { font-size: 1.1em; }        }    </style></head><body>                <for start="0" end="3">                    <div class="ActivityBlock box{$i+1}">                        <div class="col-xs-4">                            <if condition="$news[$i]['pic'] eq ' '">                                <img src="__PUBLIC__/NewsSrc/im/dh.png" width="100%" />                                <else/>                                <img src="{$news[$i].pic}" width="65%" />                            </if>                        </div>                        <div class="col-xs-8">                            <p class="title_p"><a href="{:U('/Home/NewsDetail/index',array('id'=>$news[$i]['id']))}"><span class="titlefirst">{$news[$i].title|msubstr=###,0,1}</span>                            <span class="titletext"><?php echo msubstr($news[$i]['title'],1,strlen($news[$i]['title']));?></span>  </a></p>                            <p class="normaltext">{$news[$i].text}</p>                        </div>                    </div>                </for>    <div align="center">        <span class="rows">共{$count}条记录</span>        {$page}    </div><script>    document.getElementById("side-latest").className="sidelink active";    document.getElementById("navtitle-3").innerHTML="最新动态";</script></body></html>

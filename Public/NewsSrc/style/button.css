@@ -1,84 +1,1 @@
-*{
-    margin: 0px;
-    padding: 0px;
-}
-
-
-
-.wedo{
-    font-size: 2.3em;
-	display:block;
-    margin: 80px auto;
-    color:#59A642;
-   /* text-align:center;*/
-    margin-top:40px ;
-    margin-bottom: 45px;
-}
-
-
-
-.button{
-  
-    width:200px;
-    height:300px;
-
-    background:red;
-    margin-left: 25px;
-    margin-right:  25px;
-    /*padding-right: 3%;*/
-}
-
-.button1{
-    background:url(../im/1.png) no-repeat ;
-    background-size:200px ;
-}
-
-.button2{
-
-    background:url(../im/2.png) no-repeat ;
-    background-size:200px ;
-}
-
-.button3{
-
-    background:url(../im/3.png) no-repeat ;
-    background-size:200px ;
-}
-
-.button4{
-    background:url(../im/4.png) no-repeat ;
-    background-size:200px ;
-}
-
-.buttonlink{
-    display:block;
-    width:200px;
-    height:300px;
-    /*background: chartreuse;*/
-}
-
-
-.button1:hover{
-    background:url(../im/11.png) no-repeat ;
-    background-size:200px ;
-
-}
-
-.button2:hover{
-    background:url(../im/22.png) no-repeat ;
-    background-size:200px ;
-
-}
-
-.button3:hover{
-    /*clear: left;*/
-    background:url(../im/33.png) no-repeat ;
-    background-size:200px ;
-
-}
-
-.button4:hover{
-    background:url(../im/44.png) no-repeat ;
-    background-size:200px ;
-
-}
+*{    margin: 0px;    padding: 0px;}.wedo{    font-size: 2.3em;	display:block;    margin: 80px auto;    color:#59A642;   /* text-align:center;*/    margin-top:40px ;    margin-bottom: 45px;}.button{      width:200px;    height:300px;    background:red;    margin-left: 25px;    margin-right:  25px;    /*padding-right: 3%;*/}.button1{    background:url(../im/1.png) no-repeat ;    background-size:200px ;}.button2{    background:url(../im/2.png) no-repeat ;    background-size:200px ;}.button3{    background:url(../im/3.png) no-repeat ;    background-size:200px ;}.button4{    background:url(../im/4.png) no-repeat ;    background-size:200px ;}.buttonlink{    display:block;    width:200px;    height:300px;    /*background: chartreuse;*/}.button1:hover{    background:url(../im/11.png) no-repeat ;    background-size:200px ;}.button2:hover{    background:url(../im/22.png) no-repeat ;    background-size:200px ;}.button3:hover{    /*clear: left;*/    background:url(../im/33.png) no-repeat ;    background-size:200px ;}.button4:hover{    background:url(../im/44.png) no-repeat ;    background-size:200px ;}

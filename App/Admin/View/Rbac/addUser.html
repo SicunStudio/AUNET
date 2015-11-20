@@ -1,67 +1,1 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<style type="text/css">
-    .add_role{
-        display: inline-block;
-        width: 100px;
-        height: 28px;
-        line-height: 26px;
-        text-align: center;
-        border: 1px solid blue;
-        border-radius: 4px;
-        margin-left: 20px;
-        cursor: pointer;
-    }
-</style>
-<js file="__PUBLIC__/jquery-1.8.0.min.js"/>
-<script type="text/javascript">
-   $(function (){
-       $('.add_role').click(function (){
-           var obj=$(this).parents('.selectrole').clone();
-           obj.find('.add_role').remove();
-           
-           $('#last').before(obj);
-       })
-   })
-</script>
-<body>
-<h4><ol class="breadcrumb"><li>权限管理</li><li><a href="{:U('/Admin/Rbac/user');}">用户列表</a></li><li class="active">添加用户</li></ol></h4>
-<form action="{:U('addUserHandle');}" method="post" class="form-horizontal">
-<div class="form-group">
-    <label class="col-sm-3 control-label">用户账号</label>
-    <div class="col-sm-9"><input type="text" name="username" class="form-control" /></div>
-</div>
-<div class="form-group">
-    <label class="col-sm-3 control-label">密码</label>
-    <div class="col-sm-9"><input type="password" name="password" class="form-control"/></div>
-</div>
-<div class="form-group">
-    <label class="col-sm-3 control-label"></label>
-    <div class="col-sm-9"></div>
-</div>
-<div class="form-group selectrole">
-    <label class="col-sm-3 control-label">所属角色</label>
-<div class="col-sm-9">
-        <select name="role_id[]" class="form-control" style="display:inline-block; width:50%;">
-            <option value="">请选择角色</option>
-                <foreach name="role" item="v">
-                <if condition="$v['status']">  <option value="{$v['id']}">{$v.name}({$v.remark})</option>
-                </if>
-                </foreach>
-            </select>
-            <span class="add_role">添加一个角色</span></div>
-</div>
-    <div id="last" style="text-align:center;">
-    <input type="submit" name="保存添加" value="保存添加" class="btn btn-primary btn-lg" />
-    </div>
-<script>
-    var listitem=document.getElementById("rbac");
-    listitem.className="list-group-item active";
-</script>
-</form>
-</body>
-</html>
+<!DOCTYPE html><html><head lang="en">    <meta charset="UTF-8">    <title></title></head><style type="text/css">    .add_role{        display: inline-block;        width: 100px;        height: 28px;        line-height: 26px;        text-align: center;        border: 1px solid blue;        border-radius: 4px;        margin-left: 20px;        cursor: pointer;    }</style><js file="__PUBLIC__/jquery-1.8.0.min.js"/><script type="text/javascript">   $(function (){       $('.add_role').click(function (){           var obj=$(this).parents('.selectrole').clone();           obj.find('.add_role').remove();                      $('#last').before(obj);       })   })</script><body><h4><ol class="breadcrumb"><li>权限管理</li><li><a href="{:U('/Admin/Rbac/user');}">用户列表</a></li><li class="active">添加用户</li></ol></h4><form action="{:U('addUserHandle');}" method="post" class="form-horizontal"><div class="form-group">    <label class="col-sm-3 control-label">用户账号</label>    <div class="col-sm-9"><input type="text" name="username" class="form-control" /></div></div><div class="form-group">    <label class="col-sm-3 control-label">密码</label>    <div class="col-sm-9"><input type="password" name="password" class="form-control"/></div></div><div class="form-group">    <label class="col-sm-3 control-label"></label>    <div class="col-sm-9"></div></div><div class="form-group selectrole">    <label class="col-sm-3 control-label">所属角色</label><div class="col-sm-9">        <select name="role_id[]" class="form-control" style="display:inline-block; width:50%;">            <option value="">请选择角色</option>                <foreach name="role" item="v">                <if condition="$v['status']">  <option value="{$v['id']}">{$v.name}({$v.remark})</option>                </if>                </foreach>            </select>            <span class="add_role">添加一个角色</span></div></div>    <div id="last" style="text-align:center;">    <input type="submit" name="保存添加" value="保存添加" class="btn btn-primary btn-lg" />    </div><script>    var listitem=document.getElementById("rbac");    listitem.className="list-group-item active";</script></form></body></html>

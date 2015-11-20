@@ -1,43 +1,1 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link href="__PUBLIC__/general/side_layout.css" rel="stylesheet">
-    <link href="__PUBLIC__/AUSrc/style/department.css" rel="stylesheet">
-    <style>
-        #backtoau { font-size: 18px; line-height: 18px; color:#444e41; background-color: #ffffff; padding: 5px 8px; border-radius: 2px; margin-left: 10px;
-            -webkit-transition: 0.2s;
-            -moz-transition: 0.2s;
-            -ms-transition: 0.2s;
-            -o-transition: 0.2s;
-            transition: 0.2s; }
-        #backtoau:hover {  color: #ffffff; background-color: #74b05c; text-decoration: none; margin-left: 0px; }
-        #navtitle-3 a {transition: 0.2s; background-color: #ffffff; border-radius: 2px; padding: 3px; color: #444e41;}
-        #navtitle-3 a:hover {background-color:#74b05c; color: #ffffff; text-decoration: none; }
-    </style>
-</head>
-<body>
-<include file="./common_header" />
-<div class="container">
-    <div class="row">
-        <p class="navtitle"><span id="navtitle-1">社联</span><span id="navtitle-eng">Association Union</span><span id="navtitle-2">&gt;&gt;</span><span id="navtitle-3"><a href="{:U('/Home/AU/department')}">社联机构</a></span><span id="navtitle-4">&gt;&gt;</span><span id="navtitle-depart"></span></p>
-    </div>
-    <div class="row">
-        <div class="col-sm-3 slide">
-            <ul class="menulist">
-                <a href="{:U('/Home/AU/Index')}" class="sidelink" id="side-info">社联简介</a>
-                <a href="{:U('/Home/AU/department')}" class="sidelink active" id="side-depart">社联机构</a>
-                <a href="{:U('/Home/AU/regulation')}" class="sidelink" id="side-regu">制度汇编</a>
-                <a href="{:U('/Home/AU/event')}" class="sidelink" id="side-event">社联大事记</a>
-                <a href="{:U('/Home/WeiZai')}" class="sidelink" id="side-wz">微仔说</a>
-            </ul>
-        </div>
-        <div class="col-sm-9">
-            <a href="{:U('/Home/AU/department')}" id="backtoau">返回上一页</a>
-            {__CONTENT__}
-        </div>
-    </div>
-</div>
-<include file="./common_footer" />
-</body>
-</html>
+<!DOCTYPE html><html lang="en"><head>    <meta charset="UTF-8">    <link href="__PUBLIC__/general/side_layout.css" rel="stylesheet">    <link href="__PUBLIC__/AUSrc/style/department.css" rel="stylesheet">    <style>        #backtoau { font-size: 18px; line-height: 18px; color:#444e41; background-color: #ffffff; padding: 5px 8px; border-radius: 2px; margin-left: 10px;            -webkit-transition: 0.2s;            -moz-transition: 0.2s;            -ms-transition: 0.2s;            -o-transition: 0.2s;            transition: 0.2s; }        #backtoau:hover {  color: #ffffff; background-color: #74b05c; text-decoration: none; margin-left: 0px; }        #navtitle-3 a {transition: 0.2s; background-color: #ffffff; border-radius: 2px; padding: 3px; color: #444e41;}        #navtitle-3 a:hover {background-color:#74b05c; color: #ffffff; text-decoration: none; }    </style></head><body><include file="./common_header" /><div class="container">    <div class="row">        <p class="navtitle"><span id="navtitle-1">社联</span><span id="navtitle-eng">Association Union</span><span id="navtitle-2">&gt;&gt;</span><span id="navtitle-3"><a href="{:U('/Home/AU/department')}">社联机构</a></span><span id="navtitle-4">&gt;&gt;</span><span id="navtitle-depart"></span></p>    </div>    <div class="row">        <div class="col-sm-3 slide">            <ul class="menulist">                <a href="{:U('/Home/AU/Index')}" class="sidelink" id="side-info">社联简介</a>                <a href="{:U('/Home/AU/department')}" class="sidelink active" id="side-depart">社联机构</a>                <a href="{:U('/Home/AU/regulation')}" class="sidelink" id="side-regu">制度汇编</a>                <a href="{:U('/Home/AU/event')}" class="sidelink" id="side-event">社联大事记</a>                <a href="{:U('/Home/WeiZai')}" class="sidelink" id="side-wz">微仔说</a>            </ul>        </div>        <div class="col-sm-9">            <a href="{:U('/Home/AU/department')}" id="backtoau">返回上一页</a>            {__CONTENT__}        </div>    </div></div><include file="./common_footer" /></body></html>

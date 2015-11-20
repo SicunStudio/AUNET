@@ -1,15 +1,1 @@
-.slide /*�����*/
-{ padding: 5px;}
-.menulist /*�˵���ul��ǩ*/
-{ list-style: none; padding-left: 0px;}
-.sidelink
-{  padding:12px 12px; font-size:20px; margin:15px; display:block; color:#444e41; transition:.2s; border-radius:3px;text-decoration: none; color:#444e41; }
-.sidelink:hover { color:#FFFFFF;text-decoration: none;  background-color:#74b05c;}
-.active {background-color:#74b05c; color:#fff; }
-.navtitle {padding: 20px 0px 5px 30px; }
-#navtitle-1 {font-size: 34px; word-break: keep-all;}
-#navtitle-eng {font-size: 26px; margin-left: 10px; word-break: keep-all;}
-#navtitle-2 {font-size: 24px; margin-left: 15px; margin-right: 15px; word-break: keep-all;}
-#navtitle-3 {font-size: 24px; word-break: keep-all;}
-#navtitle-4 {font-size: 24px; margin-left: 15px; margin-right: 15px; word-break: keep-all;}
-#navtitle-depart {font-size: 24px; word-break: keep-all;}
+.slide /*�����*/{ padding: 5px;}.menulist /*�˵���ul��ǩ*/{ list-style: none; padding-left: 0px;}.sidelink{  padding:12px 12px; font-size:20px; margin:15px; display:block; color:#444e41; transition:.2s; border-radius:3px;text-decoration: none; color:#444e41; }.sidelink:hover { color:#FFFFFF;text-decoration: none;  background-color:#74b05c;}.active {background-color:#74b05c; color:#fff; }.navtitle {padding: 20px 0px 5px 30px; }#navtitle-1 {font-size: 34px; word-break: keep-all;}#navtitle-eng {font-size: 26px; margin-left: 10px; word-break: keep-all;}#navtitle-2 {font-size: 24px; margin-left: 15px; margin-right: 15px; word-break: keep-all;}#navtitle-3 {font-size: 24px; word-break: keep-all;}#navtitle-4 {font-size: 24px; margin-left: 15px; margin-right: 15px; word-break: keep-all;}#navtitle-depart {font-size: 24px; word-break: keep-all;}@media screen and (max-width:768px ) {    .sidelink { display: inline-block; font-size:18px; margin:1px 5px; word-break: keep-all; padding:7px 7px; }    .slide {padding:0px;}    .navtitle {padding: 10px 0px 5px 10px; }    #navtitle-1 {font-size: 26px; word-break: keep-all;}    #navtitle-eng {font-size: 24px; margin-left: 8px; word-break: keep-all;}    #navtitle-2 {font-size: 20px; margin-left: 10px; margin-right: 10px; word-break: keep-all;}    #navtitle-3 {font-size: 20px; word-break: keep-all;}    #navtitle-4 {font-size: 20px; margin-left: 10px; margin-right: 15px; word-break: keep-all;}    #navtitle-depart {font-size: 24px; word-break: keep-all;}}

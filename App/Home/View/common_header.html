@@ -1,130 +1,1 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="__PUBLIC__/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <style>
-        *{font-family: "微软雅黑" ;}
-
-        #TopNaviBar a
-        { height:98px; font-size:30px;  line-height:100px;  padding-left: 15px; padding-right: 15px; color:#fff; }
-
-        #TopNaviBar a:hover
-        { background-color: transparent; text-decoration: underline;  color: #fff; }
-
-        #downlist{ width:100%; background:#74b05c;  padding:10px auto 50px auto; opacity:.9; position:absolute; top:90px; z-index:100; display: none; font-family: 幼圆; }
-
-        #navi-tab li
-        { width: 20%; }
-
-        .downlistlink
-        {margin-top: 5px; margin-bottom: 5px; color: #fff; font-size: 20px; line-height: 30px;}
-
-        .downlistlink:hover
-        {text-decoration: none; color: #fff;}
-
-        @media screen and (max-width:765px)
-        {
-            #navibar-link
-            { width: 100%; }
-
-            #navi-tab li
-            { width: 100%; }
-        }
-    </style>
-    <script src="__PUBLIC__/bootstrap/js/jquery.min.js"></script>
-    <script src="__PUBLIC__/bootstrap/js/bootstrap.min.js"></script>
-</head>
-<body>
-<script>
-    $(document).ready(
-            function(){
-                $("#TopNaviBar").mouseenter(
-                        function(e){
-                            $("#downlist").slideDown("fast");
-                        }
-                );
-                $("#downlist").mouseleave(
-                        function(e) {
-                            $("#downlist").slideUp("fast");
-                        });
-            });
-</script>
-<nav class="navbar" style="background-color:#74b05c; border-radius:0px; height:100px; z-index:1000; margin-bottom: 0px; font-family:  微软雅黑; !important; font-weight: normal; !important "><!-- 导航条开始 -->
-    <div class="container" style="height:100%;">
-        <div class="col-sm-3 col-md-3 col-lg-3" style="padding-left:0px; padding-right:0px;">
-            <div class="navbar-header" style="height:100%;"><!--navbar header-->
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#TopNaviBar" aria-expanded="false">
-                    <span class="sr-only" style="border-color:rgba(255,255,255,0.6);">Toggle navigation</span>
-                    <span class="icon-bar" style="background-color:rgba(255,255,255,0.6); height:4px; width:35px; margin-top:10px; margin-bottom:10px;"></span>
-                    <span class="icon-bar" style="background-color:rgba(255,255,255,0.6); height:4px; width:35px; margin-top:10px; margin-bottom:10px;"></span>
-                    <span class="icon-bar" style="background-color:rgba(255,255,255,0.6); height:4px; width:35px; margin-top:10px; margin-bottom:10px;"></span>
-                </button>
-                <a class="navbar-brand" style="height:100%; padding-top:15px; padding-bottom:0px; padding-left:0px; padding-right:0px;" href="#"><img height="55px" src="__PUBLIC__/general/dh.png"></a>
-            </div><!--navbar header ends-->
-        </div>
-
-        <div class="col-sm-9 col-md-9 col-lg-9" style="padding-left:0px; padding-right:0px; margin-left:0px; margin-right:0px;">
-            <div style="height: 100px; border:none; width:100%;" id="TopNaviBar" class="collapse navbar-collapse"  >
-                <ul id="navi-tab" class="nav navbar-nav" style="background-color:#74b05c; margin-top:0px; margin-left:0px; margin-right:0px; width:100%" >
-                    <li><a class="navibar-link" style="line-height: 70px; text-align: center; width:100%" href="{:U('Home/Index/index')}">首页</a></li>
-                    <li><a class="navibar-link" style="line-height: 70px; text-align: center; width:100%" href="{:U('/Home/News/index')}">新闻</a></li>
-                    <li><a class="navibar-link" style="line-height: 70px; text-align: center; width:100%" href="{:U('/Home/AU/index')}">社联</a></li>
-                    <li><a class="navibar-link" style="line-height: 70px; text-align: center; width:100%" href="{:U('/Home/Association/index')}">社团</a></li>
-                    <li><a class="navibar-link" style="line-height: 70px; text-align: center; width:100%" href="{:U('/Home/Other/member')}">其他</a></li>
-                </ul>
-            </div>
-        </div>
-    </div><!-- 导航层container结束 -->
-    <div id="downlist" class="hidden-xs"><!-- 下拉框 -->
-        <div class="container">
-            <div class="col-sm-9 col-md-9 col-lg-9 col-sm-offset-3 col-md-offset-3 col-lg-offset-3" >
-                <ul style="list-style-type: none; padding-left:0px; float:left; width:100%; text-align:center; padding-top:20px; padding-bottom:20px; " class="nav navbar-nav" id="downlist-linktable">
-                    <li style=" width: 20%;">
-                        <ul style="list-style-type: none; padding-left:0px; font-size:18px; color:#fff; width:100%">
-                            <li><a href="{:U('/Grade/Index/index')}" class="downlistlink">评分系统</a>
-                            <li><a href="{:U('/Material/Index/index')}" class="downlistlink">资源申请</a></li>
-                            <li><a href="{:U('/Design/Index/index')}" class="downlistlink">设计委任栏</a></li>
-                            <li><a href="" class="downlistlink">资料下载</a></li>
-                        </ul>
-                    </li>
-                    <li style=" width: 20%;">
-                        <ul style="list-style-type: none; padding-left:0px; font-size:18px; color:#fff; width:100%;">
-                            <li><a href="{:U('/Home/News/index')}" class="downlistlink">最新动态</a>
-                            <li><a href="{:U('/Home/Activity/index')}" class="downlistlink">活动预告</a></li>
-                            <li><a href="{:U('/Home/BroadCast/index')}" class="downlistlink">公告栏</a></li>
-                        </ul>
-                    </li>
-                    <li style=" width: 20%;">
-                        <ul style="list-style-type: none; padding-left:0px; font-size:18px; color:#fff; width:100%;">
-                            <li><a href="{:U('/Home/AU/index')}" class="downlistlink">社联简介</a>
-                            <li><a href="{:U('/Home/AU/department')}" class="downlistlink">社联机构</a></li>
-                            <li><a href="{:U('/Home/AU/regulation')}" class="downlistlink">制度汇编</a></li>
-                            <li><a href="{:U('/Home/AU/event')}" class="downlistlink">社联大事记</a></li>
-                            <li><a href="{:U('/Home/WeiZai/index')}" class="downlistlink">微仔说</a></li>
-                        </ul>
-                    </li>
-                    <li style=" width: 20%;"> &nbsp; </li>
-                    <li style=" width: 20%;">
-                        <ul style="list-style-type: none; padding-left:0px; font-size:18px; color:#fff; width:100%;">
-                            <li><a href="{:U('/Home/Other/member')}" class="downlistlink">会员维权</a>
-                            <li><a href="{:U('/Home/Other/advice')}" class="downlistlink">投诉建议</a></li>
-                            <li><a href="{:U('/Home/Other/contact')}" class="downlistlink">联系我们</a></li>
-                            <li><a href="{:U('/Home/FAQ/index')}" class="downlistlink">FAQ</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>	<!-- 下拉框结束 -->
-</nav><!-- 导航条结束 -->
-<!--全局页面 导航 结束-->
-</body>
-</html>
+<!DOCTYPE html><html lang="zh-CN"><head>    <meta charset="UTF-8">    <meta http-equiv="X-UA-Compatible" content="IE=edge">    <meta name="viewport" content="width=device-width, initial-scale=1">    <link href="__PUBLIC__/bootstrap/css/bootstrap.min.css" rel="stylesheet">    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->    <!--[if lt IE 9]>    <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>    <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>    <![endif]-->    <style>        *{font-family: "微软雅黑" ;}        .navbar {            height: 100px;        }        #TopNaviBar a        { height:98px; font-size:30px;  line-height: 70px;  padding-left: 15px; padding-right: 15px; color:#fff; }        #TopNaviBar a:hover        { background-color: transparent; text-decoration: underline;  color: #fff; }        #downlist{ width:100%; background:#74b05c;  padding:10px auto 50px auto; opacity:.9; position:absolute; top:90px; z-index:100; display: none; font-family: 幼圆; }        #navi-tab li        { width: 20%; }        .downlistlink        {margin-top: 5px; margin-bottom: 5px; color: #fff; font-size: 20px; line-height: 30px;}        .downlistlink:hover        {text-decoration: none; color: #fff;}        .navbar-brand {            padding-top:20px; padding-bottom:20px; padding-left:0px; padding-right:0px;        }        .navbar-brand img {            height: 55px;        }        @media screen and (max-width:765px)        {            #TopNaviBar            { width: 100px; position:absolute; right: 0px; top: -1px;}            #TopNaviBar a            {font-size: 20px; !important; line-height: 35px; !important; height: 55px;}            #navibar-link            { width: 100%; }            #navi-tab li            { width: 100%; }            .navbar {                height: 60px;            }            .navbar-brand {                padding-top:10px; padding-bottom:10px; padding-left:0px; padding-right:0px;            }            .navbar-brand img {                height: 39px;            }            .navbar-toggle {                margin-bottom: 0px;            }        }    </style>    <script src="__PUBLIC__/bootstrap/js/jquery.min.js"></script>    <script src="__PUBLIC__/bootstrap/js/bootstrap.min.js"></script></head><body><script>    $(document).ready(            function(){                $("#TopNaviBar").mouseenter(                        function(e){                            $("#downlist").slideDown("fast");                        }                );                $("#downlist").mouseleave(                        function(e) {                            $("#downlist").slideUp("fast");                        });            });</script><nav class="navbar" style="background-color:#74b05c; border-radius:0px; /*height:100px;*/z-index:1000; margin-bottom: 0px; font-family:  微软雅黑; !important; font-weight: normal; !important "><!-- 导航条开始 -->    <div class="container" style="height:100%;">        <div class="col-sm-3 col-md-3 col-lg-3" style="padding-left:0px; padding-right:0px;">            <div class="navbar-header" style="height:100%;"><!--navbar header-->                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#TopNaviBar" aria-expanded="false" style="padding-right:20px;">                    <span class="sr-only" style="border-color:rgba(255,255,255,0.6);">Toggle navigation</span>                    <span class="icon-bar" style="background-color:rgba(255,255,255,0.6); height:3px; width:25px; margin-top:6px; margin-bottom:6px;"></span>                    <span class="icon-bar" style="background-color:rgba(255,255,255,0.6); height:3px; width:25px; margin-top:6px; margin-bottom:6px;"></span>                    <span class="icon-bar" style="background-color:rgba(255,255,255,0.6); height:3px; width:25px; margin-top:6px; margin-bottom:6px;"></span>                </button>                <a class="navbar-brand" style="height:100%;/* padding-top:15px; padding-bottom:0px; padding-left:0px; padding-right:0px;*/" href="#"><img src="__PUBLIC__/general/dh.png"></a>            </div><!--navbar header ends-->        </div>        <div class="col-sm-9 col-md-9 col-lg-9" style="padding-left:0px; padding-right:0px; margin-left:0px; margin-right:0px;">            <div style="height: 100px; border:none; /*width:100%;*/ padding-left: 0px; padding-right: 0px;" id="TopNaviBar" class="collapse navbar-collapse"  >                <ul id="navi-tab" class="nav navbar-nav" style="background-color:#74b05c; margin-top:0px; margin-left:0px; margin-right:0px; width:100%" >                    <li><a class="navibar-link" style=" text-align: center; width:100%" href="{:U('Home/Index/index')}">首页</a></li>                    <li><a class="navibar-link" style=" text-align: center; width:100%" href="{:U('/Home/News/index')}">新闻</a></li>                    <li><a class="navibar-link" style=" text-align: center; width:100%" href="{:U('/Home/AU/index')}">社联</a></li>                    <li><a class="navibar-link" style=" text-align: center; width:100%" href="{:U('/Home/Association/index')}">社团</a></li>                    <li><a class="navibar-link" style=" text-align: center; width:100%" href="{:U('/Home/Other/member')}">其他</a></li>                </ul>            </div>        </div>    </div><!-- 导航层container结束 -->    <div id="downlist" class="hidden-xs"><!-- 下拉框 -->        <div class="container">            <div class="col-sm-9 col-md-9 col-lg-9 col-sm-offset-3 col-md-offset-3 col-lg-offset-3" >                <ul style="list-style-type: none; padding-left:0px; float:left; width:100%; text-align:center; padding-top:20px; padding-bottom:20px; " class="nav navbar-nav" id="downlist-linktable">                    <li style=" width: 20%;">                        <ul style="list-style-type: none; padding-left:0px; font-size:18px; color:#fff; width:100%">                            <li><a href="{:U('/Grade/Index/index')}" class="downlistlink">评分系统</a>                            <li><a href="{:U('/Material/Index/index')}" class="downlistlink">资源申请</a></li>                            <li><a href="{:U('/Design/Index/index')}" class="downlistlink">设计委任栏</a></li>                            <li><a href="" class="downlistlink">资料下载</a></li>                            <li><a href="{:U('/AssociationCard/Index/index')}" class="downlistlink">社团卡</a></li>                        </ul>                    </li>                    <li style=" width: 20%;">                        <ul style="list-style-type: none; padding-left:0px; font-size:18px; color:#fff; width:100%;">                            <li><a href="{:U('/Home/News/index')}" class="downlistlink">最新动态</a>                            <li><a href="{:U('/Home/Activity/index')}" class="downlistlink">活动预告</a></li>                            <li><a href="{:U('/Home/BroadCast/index')}" class="downlistlink">公告栏</a></li>                        </ul>                    </li>                    <li style=" width: 20%;">                        <ul style="list-style-type: none; padding-left:0px; font-size:18px; color:#fff; width:100%;">                            <li><a href="{:U('/Home/AU/index')}" class="downlistlink">社联简介</a>                            <li><a href="{:U('/Home/AU/department')}" class="downlistlink">社联机构</a></li>                            <li><a href="{:U('/Home/AU/regulation')}" class="downlistlink">制度汇编</a></li>                            <li><a href="{:U('/Home/AU/event')}" class="downlistlink">社联大事记</a></li>                            <li><a href="{:U('/Home/WeiZai/index')}" class="downlistlink">微仔说</a></li>                        </ul>                    </li>                    <li style=" width: 20%;"> &nbsp; </li>                    <li style=" width: 20%;">                        <ul style="list-style-type: none; padding-left:0px; font-size:18px; color:#fff; width:100%;">                            <li><a href="{:U('/Home/Other/member')}" class="downlistlink">会员维权</a>                            <li><a href="{:U('/Home/Other/advice')}" class="downlistlink">投诉建议</a></li>                            <li><a href="{:U('/Home/Other/contact')}" class="downlistlink">联系我们</a></li>                            <li><a href="{:U('/Home/FAQ/index')}" class="downlistlink">FAQ</a></li>                        </ul>                    </li>                </ul>            </div>        </div>    </div>	<!-- 下拉框结束 --></nav><!-- 导航条结束 --><!--全局页面 导航 结束--></body></html>

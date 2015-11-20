@@ -1,188 +1,1 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>社联大事记</title>
- <script>
-	 function ShowMonth(yr){
-		
-		HideBox(yr);
-		var elementid="#"+yr+"_month";		
-			$(elementid).slideToggle("fast");	
-					
-		}
-		
-	function ShowBox(yr,mon)
-	{
-		var allbox = document.getElementsByClassName("eventbox");
-		
-		for(var j=0;j<allbox.length;j=j+1){
-		allbox[j].style.display='none';
-		}
-		
-		var box = document.getElementsByClassName("eventbox "+ yr+" "+mon);
-		for(var i=0;i<box.length;i=i+1){
-				box[i].style.display='block';
-		}
-        
-		var allindicator=document.getElementsByClassName("li_list_indicator");
-		
-		for(var i=0;i<allindicator.length;i=i+1)
-		{
-			//alert("indicator i: "+i)
-			allindicator[i].style.backgroundColor="transparent";
-		}
-		
-		var liindicatorid="li_list_indicator_id_" +yr + "_" + mon;
-		//alert(liindicatorid);
-		document.getElementById(liindicatorid).style.backgroundColor="#59a642";
-
-     }
-    
-	function HideBox(avoidyr)
-	{
-		
-		 var mydate=new Date();
-	  var thisyear=mydate.getFullYear();
-	  
-	      for(var i=2008;i<=thisyear;i++)
-		  {
-			  if(i!=avoidyr){
-			  var element="#"+i+"_month";
-			  $(element).slideUp("fast");
-			  }
-			  
-		  }
-		
-	}
- </script>
- <style>
-.li_list
-{
-	width:55px;
-	font-size:18px;
-	transition:.2s;
-	color:#000000;
-	margin-top:3px;
-	padding:5px auto;
-	border-radius:2px;
-	}
-
-.li_list:hover
-{
-	color:#ffffff;
-	background-color:#59a642;
-}
-
-.li_list_indicator
-{
-	background-color: transparent;
-    width:12px; 
-	height:12px;
-    border-radius:6px; 
-    float:left;
-	margin-top:7px;
-	margin-right:3px;}
-
-.monthlist{
-	list-style-type:none;
-	font-size:25px;
-	margin-top:5px;
-	}
-	
-.eventbox{
-		width:80%;
-		height:150px;
-		margin:20px auto;
-		display:none; 
-		background-color:#ffd739;
-		color:#FFFFFF;
-		}
-
-.eventbox_time{
-	float:left;
-	font-size:34px;
-	margin:5px 8px;
-	}
-
-.eventbox_imgcontainer{
-	width:35%;
-	height:80%;
-	overflow:hidden;
-	float:left;
-	margin:15px 5px 15px 15px;
-	}
-
-.eventbox_imgbox{
-	margin:0px auto;
-	display:block;}
-
-.eventbox_text{
-	width:60%;
-	height:40%;
-	right:10px;
-	font-size:17px;
-	float:right;
-	
-	}
-
- </style>
- 
-</head>
-
-<body>
-<script>
-	document.getElementById("side-event").className="sidelink active";
-	document.getElementById("navtitle-3").innerHTML="社联大事记";
-</script>
-<table>
-	<tbody>
-	<td width="58%" align="left" valign="top">
-
-		<foreach name="data" item="v">
-
-
-			<div class="eventbox {$v['year']} {$v['month']}" >
-				<div class="eventbox_imgcontainer">
-					<img src="__PUBLIC__.{$v['pic']}" class="eventbox_imgbox" height="100%" alt=""/>
-				</div>
-				<div class="eventbox_time">{$v['year']}.{$v['month']}.{$v['day']}</div>
-				<div class="eventbox_text">{$v['content']}</div>
-			</div>
-
-
-		</foreach>
-	</td>
-
-	<td width="15%" align="left" valign="top">
-		<script>
-			var mydate=new Date();
-			var thisyear=mydate.getFullYear();
-			var thismonth=mydate.getMonth();
-			thismonth++;
-			document.writeln("<a onClick='ShowMonth(" + thisyear + ")'>" + thisyear + "年</a>");
-			document.writeln(" <ul id='"+ thisyear+"_month' class='monthlist' style='display:none'>");
-			for(var mon=1;mon<=thismonth;mon++)
-			{
-				document.writeln("<li class='li_list' id='li_" + thisyear + "_" + mon + "' onClick='ShowBox("+thisyear+","+mon+")'>"+ "<div class='li_list_indicator ' id='li_list_indicator_id_" + thisyear+ "_" + mon + "'></div>" +mon+"月</li>");
-			}
-			document.writeln("</ul>");
-			document.writeln("<br>");
-
-			for(var yr=thisyear-1;yr>=2008;yr--)
-			{
-				document.writeln("<a onClick='ShowMonth(" + yr + ")'>" + yr + "年</a>");
-				document.writeln(" <ul id='"+ yr+"_month' class='monthlist' style='display:none'>");
-				for(var mon=1;mon<=12;mon++)
-				{
-					document.writeln("<li class='li_list' id='li_" + yr + "_" + mon + "' onClick='ShowBox("+yr+","+mon+")'>"+ "<div class='li_list_indicator' id='li_list_indicator_id_" + yr+ "_" + mon + "'></div>" +mon+"月</li>");
-				}
-				document.writeln("</ul>");
-				document.writeln("<br>");
-			}
-		</script>
-	</td>
-	</tbody>
-</table>
-</body>
-</html>
+<!doctype html><html><head><meta charset="utf-8"><title>社联大事记</title> <script>	 function ShowMonth(yr){				HideBox(yr);		var elementid="#"+yr+"_month";					$(elementid).slideToggle("fast");								}			function ShowBox(yr,mon)	{		var allbox = document.getElementsByClassName("eventbox");				for(var j=0;j<allbox.length;j=j+1){		allbox[j].style.display='none';		}				var box = document.getElementsByClassName("eventbox "+ yr+" "+mon);		for(var i=0;i<box.length;i=i+1){				box[i].style.display='block';		}        		var allindicator=document.getElementsByClassName("li_list_indicator");				for(var i=0;i<allindicator.length;i=i+1)		{			//alert("indicator i: "+i)			allindicator[i].style.backgroundColor="transparent";		}				var liindicatorid="li_list_indicator_id_" +yr + "_" + mon;		//alert(liindicatorid);		document.getElementById(liindicatorid).style.backgroundColor="#59a642";     }    	function HideBox(avoidyr)	{				 var mydate=new Date();	  var thisyear=mydate.getFullYear();	  	      for(var i=2008;i<=thisyear;i++)		  {			  if(i!=avoidyr){			  var element="#"+i+"_month";			  $(element).slideUp("fast");			  }		  }	} </script> <style>.li_list{	width:55px;	font-size:18px;	transition:.2s;	color:#000000;	margin-top:3px;	padding:5px auto;	border-radius:2px;	}.li_list:hover{	color:#ffffff;	background-color:#59a642;}.li_list_indicator{	background-color: transparent;    width:12px; 	height:12px;    border-radius:6px;     float:left;	margin-top:7px;	margin-right:3px;}.monthlist{	list-style-type:none;	font-size:25px;	margin-top:5px;	padding-left: 10px;;	}	.eventbox{		width:80%;		height:150px;		margin:20px auto;		display:none; 		background-color:#ffd739;		color:#FFFFFF;		}.eventbox_time{	/*float:left;*/	font-size:24px;	margin:5px 8px;	}.eventbox_imgcontainer{	/*width:35%;	height:80%;*/	overflow:hidden;	/*float:left;*/	/*margin:15px 5px 15px 15px;*/	}.eventbox_imgbox{	margin:0px auto;	display:block;}.eventbox_text{	/*width:60%;	height:40%;*/	/*right:10px;*/	padding-left: 10px;	padding-right: 10px;	font-size:17px;	/*float:right;*/	} </style> </head><body><script>	document.getElementById("side-event").className="sidelink active";	document.getElementById("navtitle-3").innerHTML="社联大事记";</script><table width="100%">	<tbody>	<td width="70%" align="left" valign="top">    &nbsp;		<foreach name="data" item="v">			<div class="eventbox {$v['year']} {$v['month']}" >				<div class="col-sm-4 eventbox_imgcontainer">					<img <if condition = "$v['pic'] eq 'error'">src = "__PUBLIC__/general/dh.png"<else /> src="__ROOT__/Upload{$v['pic']}"</if> class="eventbox_imgbox hidden-xs" height="100%" alt=""/>				</div>				<div class="col-sm-8">					<div class="row eventbox_time">{$v['year']}.{$v['month']}.{$v['day']}</div>					<div class="row eventbox_text"><p>{$v['content']}</p></div>				</div>			</div>		</foreach>	</td>	<td width="30%" align="left" valign="top">		<script>			var mydate=new Date();			var thisyear=mydate.getFullYear();			var thismonth=mydate.getMonth();			thismonth++;			document.writeln("<a onClick='ShowMonth(" + thisyear + ")'>" + thisyear + "年</a>");			document.writeln(" <ul id='"+ thisyear+"_month' class='monthlist' style='display:none'>");			for(var mon=1;mon<=thismonth;mon++)			{				document.writeln("<li class='li_list' id='li_" + thisyear + "_" + mon + "' onClick='ShowBox("+thisyear+","+mon+")'>"+ "<div class='li_list_indicator ' id='li_list_indicator_id_" + thisyear+ "_" + mon + "'></div>" +mon+"月</li>");			}			document.writeln("</ul>");			document.writeln("<br>");			for(var yr=thisyear-1;yr>=2008;yr--)			{				document.writeln("<a onClick='ShowMonth(" + yr + ")'>" + yr + "年</a>");				document.writeln(" <ul id='"+ yr+"_month' class='monthlist' style='display:none'>");				for(var mon=1;mon<=12;mon++)				{					document.writeln("<li class='li_list' id='li_" + yr + "_" + mon + "' onClick='ShowBox("+yr+","+mon+")'>"+ "<div class='li_list_indicator' id='li_list_indicator_id_" + yr+ "_" + mon + "'></div>" +mon+"月</li>");				}				document.writeln("</ul>");				document.writeln("<br>");			}		</script>	</td>	</tbody></table></body></html>

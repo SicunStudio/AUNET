@@ -1,34 +1,1 @@
-<!DOCTYPE html>
-<html>
-
-<body>
-<h4><ol class="breadcrumb"><li>资料上传</li><li class="active">资料列表</li></ol></h4>
-<div>
-    <table class="table table-striped table-hover">
-        <thead>
-            <td>文件名</td>
-            <td>上传时间</td>
-            <td>操作</td>
-            <td <if condition="$_SESSION['username'] eq C('RBAC_SUPERADMIN')"><else/>hidden="hidden"</if>>上传用户</td>
-        </thead>
-        <foreach name="doc" item="v">
-            <tr>
-                <td>{$v.remark}</td>
-                <td>{$v.time|date='y-m-d H:i',###}</td>
-                <td>
-                    <a href="{:U('Download/download_index',array('id'=>$v['id']))}" class="btn btn-success btn-sm">下载</a>
-                    <a href="{:U('remove',array('id'=>$v['id']))}" class="btn btn-danger btn-sm">删除</a>
-                </td>
-                <td<if condition="$_SESSION['username'] eq C('RBAC_SUPERADMIN')"><else/>hidden="hidden"</if>>
-                {$v.user}
-                </td>
-            </tr>
-        </foreach>
-    </table>
-</div>
-<script>
-    var listitem=document.getElementById("upload");
-    listitem.className="list-group-item active";
-</script>
-</body>
-</html>
+<!DOCTYPE html><html><body><h4><ol class="breadcrumb"><li>资料上传</li><li class="active">资料列表</li></ol></h4><div>    <table class="table table-striped table-hover">        <thead>            <td>文件名</td>            <td>上传时间</td>            <td>操作</td>            <td <if condition="$_SESSION['username'] eq C('RBAC_SUPERADMIN')"><else/>hidden="hidden"</if>>上传用户</td>        </thead>        <foreach name="doc" item="v">            <tr>                <td>{$v.remark}</td>                <td>{$v.time|date='y-m-d H:i',###}</td>                <td>                    <a href="{:U('Download/download_index',array('id'=>$v['id']))}" class="btn btn-success btn-sm">下载</a>                    <a href="{:U('remove',array('id'=>$v['id']))}" class="btn btn-danger btn-sm">删除</a>                </td>                <td<if condition="$_SESSION['username'] eq C('RBAC_SUPERADMIN')"><else/>hidden="hidden"</if>>                {$v.user}                </td>            </tr>        </foreach>    </table></div><script>    var listitem=document.getElementById("upload");    listitem.className="list-group-item active";</script></body></html>

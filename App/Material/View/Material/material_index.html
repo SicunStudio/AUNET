@@ -1,1046 +1,1 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta name="generator" content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>物资系统_用户</title>
-    <script src='__PUBLIC__/MaterialSrc/jquery-2.1.1.js'></script>
-<link href="__PUBLIC__/MaterialSrc/public.css" type="text/css" rel="stylesheet" />
-<link href="__PUBLIC__/MaterialSrc/user.css" type="text/css" rel="stylesheet" />
-<script type="text/javascript" src="__PUBLIC__/MaterialSrc/user.js">
-</script>
-</head>
-<body>
-<form id="Form" method="post" name="Form" action="{:U('Material/Material/material_upload')}"  enctype="multipart/form-data">
-  <input type="hidden" name="action_type" id="action_type" value="none"/>
-  <div id="slider">
-    <ul>
-      <li id="sliderTop1"></li>
-      <li id="sliderTop2"></li>
-    </ul>
-    <dl id="apply">
-      <dt>
-        <ul>
-          <li class="applyText">申请</li>
-          <li class="applyTriangle"><img src="__PUBLIC__/MaterialSrc/images/hehe_03.png" /></li>
-        </ul>
-      </dt>
-      <dd id="stuff" onclick="show_stuff()">物资借用</dd>
-      <dd id="place" onclick="show_boPlace()">场地借用</dd>
-      <ul id="boPlace">
-        <li>
-          <input type="radio"  name="apply_place" id="colPrinting" onclick="show_colPrinting()" />
-          <label for=
-            "colPrinting">彩喷悬挂</label>
-        </li>
-        <li>
-          <input type="radio"  name="apply_place" id="colClass" onclick="show_colClass()" />
-          <label for=
-            "colClass">大活教室</label>
-        </li>
-        <li>
-          <input type="radio"  name="apply_place" id="roShow" onclick="show_roShow()" />
-          <label for=
-            "roShow">路演场地</label>
-        </li>
-        <li>
-          <input type="radio"  name="apply_place" id="buClass" onclick="show_buClass()" />
-          <label for=
-            "buClass">教学楼教室-教工</label>
-        </li>
-		<li>
-          <input type="radio"  name="apply_place" id="buclass2" onclick="show_buclass2()" />
-          <label for=
-            "buclass2">教学楼教室-学生</label>
-        </li>
-        <li>
-          <input type="radio"  name="apply_place" id="spPlace" onclick="show_spPlace()" />
-          <label for=
-            "spPlace">特殊场地</label>
-        </li>
-        <li>
-          <input type="radio"  name="apply_place" id="spoCourt" onclick="show_spoCourt()" />
-          <label for=
-            "spoCourt">体育场馆</label>
-        </li>
-        <li>
-          <input type="radio"  name="apply_place" id="eaThird" onclick="show_eaThird()" />
-          <label for=
-            "eaThird">东四三楼</label>
-        </li>
-        <li>
-          <input type="radio"  name="apply_place" id="othPlace" onclick="show_othPlace()" />
-          <label for=
-            "othPlace">其他场地</label>
-        </li>
-      </ul>
-      <dd id="other" onclick="show_bo_othStuff_table()">其他借用</dd>
-    </dl>
-    <dl id="stateQuery">
-      <dt>
-        <ul>
-          <li class="stateQueryText" onclick="show_query()">状态查询</li>
-          <li class="stateQueryTriangle"><img src="__PUBLIC__/MaterialSrc/images/hehe_03.png" /></li>
-        </ul>
-      </dt>
-    </dl>
-  </div>
-  <div id="mainbody">
-    <div id="header">
-      <p>物资管理系统</p>
-    </div>
-    <div id="center">
-      <dl id="systemMsg">
-        <dt>系统消息</dt>
-        <dd>消息1：XXXXXXXXXXXXXXX</dd>
-        <dd>消息2：XXXXXXXXXXXXXXX</dd>
-        <dd>消息3：XXXXXXXXXXXXXXX</dd>
-      </dl>
-      <dl id="help">
-        <dt>帮助</dt>
-        <dd>借用流程规范说明</dd>
-        <dd>策划书写规范</dd>
-        <dd>更多...</dd>
-      </dl>
-    </div>
-    <div id="tableContent">
-      <div id="boStuff_table">
-        <p align="center" style=" font-size:24px; font-weight:bold; font-family:宋体; ">物资申请表</p>
-        <table border="1" cellpadding="0" cellspacing="0" style="font-family:宋体;">
-          <tr>
-            <td colspan="2" height="60px" width="20%" style="background-color:#B5B5B5; border:0;" align="center">协会名称</td>
-            <td width="25%" colspan="2" style="border-top:0;">
-              <input type="text" name="AssociationName_Stuff" style="width:99%;height:100%; border:0;" />
-            </td>
-            <td width="20%" style="background-color:#B5B5B5; border-top:0;" align="center">活动名称</td>
-            <td width="35%" colspan="4" style="border-top:0; border-right:0;">
-              <input type="text" name="ActivityName_Stuff" style="width:99%;height:100%; border:0;border-right:1;" />
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2" height="60px" width="20%" style="background-color:#B5B5B5; border-left:0;" align="center">活动地点</td>
-            <td colspan="2" width="25%">
-              <input type="text" name="Place_Stuff" style="width:100%;height:100%; border:0;" />
-            </td>
-            <td width="15%" style="background-color:#B5B5B5;" align="center">借用日期</td>
-            <td colspan="2">
-              <input type="text" name="UseDate_Stuff" style="width:100%;height:100%; border:0;" />
-            </td>
-            <td width="10%" align="center" style="background-color:#B5B5B5;">参与人数</td>
-            <td width="10%" style="border:0;">
-              <input type="text" name="ParticipantNumber_Stuff" style="width:99%;height:100%; border:0;" />
-            </td>
-          </tr>
-          <tr>
-            <td colspan="9" height="40px" style="font-size:18px; background-color:#B5B5B5; font-weight:bold; border:0;" align="center";>注：每张申请表只能借用一种物资</td>
-          </tr>
-          <tr>
-            <td width="10%" height="50px" rowspan="4" style="background-color:#B5B5B5; font-size:16px; font-weight:bold; border-left:0;" align="center">物<br />
-              资<br />
-              种<br />
-              类</td>
-            <td width="10%" style="background-color:#B5B5B5;" align="center">投影仪</td>
-            <td width="15%" align="center">台数</td>
-            <td width="30%" colspan="2">
-              <input type="text" name="ProjectorNumber_Stuff" style="width:99%;height:100%; border:0;" />
-            </td>
-            <td width="10%" align="center">归还日期</td>
-            <td width="20%" colspan="3" style="border:0;">
-              <input type="text" name="ProjectorDate_Stuff" style="width:99%;height:100%; border:0;" />
-            </td>
-          </tr>
-          <tr>
-            <td width="10%" style="background-color:#B5B5B5; border-left:0;" align="center">电力</td>
-            <td width="15%" align="center">瓦数</td>
-            <td width="30%" colspan="2" style="border-bottom:1;">
-              <input type="text" name="Electricity_Stuff" style="width:99%;height:100%; border:0;" />
-            </td>
-            <td width="35%" colspan="4" style="border-right:0; border-left:0;" align="center">（注：瓦数超过2000W须要到主校区配电房签字）</td>
-          </tr>
-          <tr>
-            <td width="10%" style="background-color:#B5B5B5; border-left:0;" align="center">大量桌椅</td>
-            <td width="15%" align="center">桌子数量</td>
-            <td width="10%">
-              <input type="text" name="DeskNumber_Stuff" style="width:99%;height:100%; border:0;" />
-            </td>
-            <td width="20%" align="center">椅子数量</td>
-            <td width="10%">
-              <input type="text" name="ChairNumber_Stuff" style="width:100%;height:100%; border:0;" />
-            </td>
-            <td width="5%" align="center">归还日期</td>
-            <td width="20%" colspan="2" style="border-right:0;">
-              <input type="text" name="ReturnDate_Stuff" style="width:99%;height:100%; border:0;" />
-            </td>
-          </tr>
-          <tr>
-            <td width="10%" style="background-color:#B5B5B5; border-left:0;" align="center">校车</td>
-            <td width="15%" align="center">运送桌子数量</td>
-            <td width="30%" colspan="2">
-              <input type="text" name="SchoolbusDesk_Stuff" style="width:99%;height:100%; border:0;" />
-            </td>
-            <td width="10%" align="center">运送椅子数量</td>
-            <td width="20%" colspan="3" style="border-right:0;">
-              <input type="text" name="SchoolbusChair_Stuff" style="width:99%;height:100%; border:0;" />
-            </td>
-          </tr>
-          <tr>
-            <td width="20%" height="60px" colspan="2" style="background-color:#B5B5B5; border-left:0;" align="center">活动负责人</td>
-            <td width="25%" colspan="2">
-              <input type="text" name="ResponsiblePeople_Stuff" style="width:100%;height:100%; border:0;" />
-            </td>
-            <td width="20%" style="background-color:#B5B5B5;" align="center">联系电话</td>
-            <td colspan="4" width="35%" style="border-right:0;">
-              <input type="text" name="Phone_Stuff" style="width:99%;height:100%; border:0;" />
-            </td>
-          </tr>
-          <tr>
-            <td width="20%" height="80px" colspan="2" style="background-color:#B5B5B5; border-left:0;" align="center">社团意见</td>
-            <td width="25%" colspan="2">
-              <input type="text" name="AssociationOpinion_Stuff" style="width:100%;height:100%; border:0;" />
-            </td>
-            <td width="20%" style="background-color:#B5B5B5;" align="center">社联意见</td>
-            <td colspan="4" width="35%" style="border-right:0;">
-              <input type="text" name="AUOpinion_Stuff" style="width:99%;height:100%; border:0;" />
-            </td>
-          </tr>
-          <tr>
-            <td width="20%" height="80px" colspan="2" style="background-color:#B5B5B5; border-left:0;" align="center">社联经手人</td>
-            <td width="25%" colspan="2">
-              <input type="text" name="AUResponsiblePeople_Stuff" style="width:100%;height:100%; border:0;" />
-            </td>
-            <td width="20%" style="background-color:#B5B5B5;" align="center">联系电话</td>
-            <td colspan="4" width="35%" style="border-top:0;">
-              <input type="text" name="AUPhone_Stuff" style="width:99%;height:100%; border:0;" />
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2" width="20%" style="background-color:#B5B5B5; border-left:0; border-bottom:0;" height="130px" align="center">共青团<br />
-              华中科技大学<br />
-              委员会意见</td>
-            <td colspan="7" width="80%" style="border:0;"></td>
-          </tr>
-        </table>
-        <input type="button" value="策划提交" id="boStuff_table_submit" onclick="boStuff_submit()" />
-        <input type="button" value="检查" id="boStuff_table_confirm" onclick="boStuff_confirm()" />
-      </div>
-      <div id="boPlace_table">
-        <div id="ta_colPrinting">
-          <p align="center" style=" font-size:24px; font-weight:bold; font-family:宋体; ">彩喷横幅悬挂申请表</p>
-          <table border="1" cellpadding="0" cellspacing="0" style="font-family:宋体; font-weight:bold;">
-            <tr>
-              <td width="30%" height="60px" align="center" style="border-left:0;">申请单位</td>
-              <td width="70%" height="60px" colspan="5" style="border-right:0;">
-                <input type="text" name="AssociationName_ColorPrinting" style="width:99%;height:100%; border:0;"/>
-              </td>
-            </tr>
-            <tr>
-              <td width="30%" height="60px" align="center" style="border-left:0;">经办人信息</td>
-              <td height="60px" width="10%" align="center">姓名</td>
-              <td height="60px" width="10%">
-                <input type="text" name="Name_ColorPrinting"style="width:100%;height:100%; border:0;"/>
-              </td>
-              <td width="15%" height="60px" align="center">联系方式</td>
-              <td height="60px" width="35%" colspan="2" style="border-right:0;">
-                <input type="text" name="Phone_ColorPrinting" style="width:99%;height:100%; border:0;"/>
-              </td>
-            </tr>
-            <tr>
-              <td width="30%" height="60px" align="center" style="border-left:0;">活动内容</td>
-              <td colspan="5" style="border-right:0;">
-                <textarea cols="30" rows="7" name="ActivityContent_ColorPrinting" style="width:99%;height:100%; border:0;"></textarea>
-              </td>
-            </tr>
-            <tr>
-              <td width="30%" height="60px" align="center" style="border-left:0;">活动日期</td>
-              <td colspan="2">
-                <input type="text" name="ActivityDate_ColorPrinting" style="width:100%;height:100%; border:0;" />
-              </td>
-              <td width="15%" height="60px" align="center">使用时间</td>
-              <td height="60px" width="35%" colspan="2" style="border-right:0;">
-                <input type="text" name="UseTime_ColorPrinting" style="width:99%;height:100%; border:0;"/>
-              </td>
-            </tr>
-            <tr>
-              <td width="30%" height="60px" align="center" style="border-left:0;">使用地点</td>
-              <td colspan="2" width="20%">
-                <input type="text" name="UsePlace_ColorPrinting" style="width:100%;height:100%; border:0;"/>
-              </td>
-              <td height="60px" align="center" colspan="2" style="border-right:0;">彩喷是否具有商业性质</td>
-              <td height="60px" width="20%" style="border-right:1">
-                <input type="text" name="Commercial_ColorPrinting"  style="width:99%;height:90%;border:0;" />
-              </td>
-            </tr>
-            <tr>
-              <td width="30%" height="60px" align="center" style="border-left:0;border-right:0;">备注</td>
-              <td colspan="5" style="border-left:1;border-top:1;" width="70%">
-                <textarea cols="30" rows="5" name="Remarks_ColorPrinting" style="width:99%;height:100%; border:0;"></textarea>
-              </td>
-            </tr>
-            <tr>
-              <td colspan="3" height="160px" align="right" valign="bottom" width="50%" style="border-bottom:0; border-left:0;">校团委意见（盖章）<br />
-              </td>
-              <td colspan="3" height="160px" align="right" valign="bottom" width="50%" style="border-right:0;border-bottom:0;">场地审批单位意见（盖章）<br />
-              </td>
-            </tr>
-            <tr>
-              <td colspan="2" width="30%" style="border:0"></td>
-              <td height="30px" width="20%" align="center" valign="middle" style="border-bottom:0; border-left:0; border-top:0;">年&nbsp;月&nbsp;日</td>
-              <td colspan="2" width="20%" style="border:0;"></td>
-              <td height="30px" width="30%" align="center" valign="middle" style="border:0;">年&nbsp;月&nbsp;日</td>
-            </tr>
-          </table>
-        </div>
-        <div id="ta_colClass">
-          <table border="1" cellpadding="0" cellspacing="0" style="font-family:宋体;">
-            <p align="center" style=" font-size:24px; font-weight:bold; font-family:宋体; ">大学生活动中心教室申请表</p>
-            <tr>
-              <td style="background-color:#B5B5B5; border:0;" width="15%" height="40" align="center">协会名称</td>
-              <td width="20%">
-                <input type="text" name="AssociationName_StudentCenter" style="width:100%;height:100%; border:0;" />
-              </td>
-              <td width="15%" style="background-color:#B5B5B5;" align="center">活动名称</td>
-              <td width="20%">
-                <input type="text" name="ActivityName_StudentCenter" style="width:100%;height:100%; border:0;" />
-              </td>
-              <td width="15%" style="background-color:#B5B5B5;" align="center">参与人数</td>
-              <td width="15%" style="border-right:0;">
-                <input type="text" name="ParticipantNumber_StudentCenter" style="width:99%;height:100%; border:0;" />
-              </td>
-            </tr>
-            <tr>
-              <td style="background-color:#B5B5B5; border-left:0;" width="15%" height="40" align="center">活动日期</td>
-              <td width="20%">
-                <input type="text" name="Date_StudentCenter" style="width:100%;height:100%; border:0;" />
-              </td>
-              <td style="background-color:#B5B5B5;" width="15%" align="center">活动时间</td>
-              <td width="20%" style="border:1;border-right:0;">
-                <input type="text" name="Time_StudentCenter" style="border-left:0; border-right:0; border-top:0; border-bottom:1 solid; border-bottom-color:#000; border-bottom-width:thin; margin-left:5px; width:90%;height:20px;"/>
-              </td>
-              <td width="30%" colspan="2" style="border:0;">（上午/下午/晚上）</td>
-            </tr>
-            <tr>
-              <td style="background-color:#B5B5B5; border-left:0;" width="15%" height="60" align="center">普通教室<br />
-                (50人)</td>
-              <td width="20%" style="border:0;">
-                <input type="text" name="NomalClassrom_StudentCenter" style="border-left:0; border-right:0; border-top:0; border-bottom:1 solid; border-bottom-color:#000; border-bottom-width:thin; margin-left:5px; width:90%;height:20px;"/>
-              </td>
-              <td colspan="2" width="35%" style="border:0;">（302/303/304/603）</td>
-              <td rowspan="2" width="15%" style="background-color:#B5B5B5;" align="center">是否经系统查询</td>
-              <td rowspan="2" width="15%" style="border-right:0;">
-                <input type="text" name="SystemInquire_StudentCenter" style="width:99%;height:100%; border:0;" />
-              </td>
-            </tr>
-            <tr>
-              <td style="background-color:#B5B5B5; border-left:0;" width="15%" height="60" align="center">阶梯教室<br />
-                (300人)</td>
-              <td width="20%" style="border-right:0;">
-                <input type="text" name="LectureClassrom_StudentCenter" style="border-left:0; border-right:0; border-top:0; border-bottom:1 solid; border-bottom-color:#000; border-bottom-width:thin; margin-left:5px; width:90%;height:20px;"/>
-              </td>
-              <td width="30%" colspan="2" style="border-left:0;">（305/513）</td>
-            </tr>
-            <tr>
-              <td width="15%" style="background-color:#B5B5B5; border-left:0;" height="150px" align="cneter">活动内容（目的，流程，安全负责人）</td>
-              <td colspan="5" style="border-right:0;">
-                <textarea rows="10" cols="100" name="ActivityContent_StudentCenter" style="width:99%;height:100%; border:0;"></textarea>
-              </td>
-            <tr>
-              <td style="background-color:#B5B5B5; border-left:0;" width="15%" height="50" align="center">有无商业赞助</td>
-              <td width="20%">
-                <input type="text" name="Sponsor_StudentCenter" style="width:100%;height:100%; border:0;" />
-              </td>
-              <td width="15%" style="background-color:#B5B5B5;" align="center">赞助方名及赞助方式（如有）</td>
-              <td colspan="3" style="border-right:0;">
-                <textarea rows="5" cols="100" name="SponsorWay_StudentCenter" style="width:99%;height:100%; border:0;"></textarea>
-              </td>
-            </tr>
-            <tr>
-              <td width="15%" style="background-color:#B5B5B5; border-left:0;" height="40px" align="center">活动负责人</td>
-              <td colspan="2">
-                <input type="text" name="ResponsiblePeople_StudentCenter" style="width:100%;height:100%; border:0;" />
-              </td>
-              <td width="20%" style="background-color:#B5B5B5; border-left:0;" align="center">联系电话</td>
-              <td colspan="2" style="border-right:0;">
-                <input type="text" name="Phone_StudentCenter" style="width:99%;height:100%; border:0;" />
-              </td>
-            </tr>
-            <tr>
-              <td width="15%" style="background-color:#B5B5B5; border-left:0;" height="60px" align="center">社团意见</td>
-              <td colspan="2">
-                <input type="text" name="AssociationOpinion_StudentCenter" style="width:100%;height:100%; border:0;" />
-              </td>
-              <td width="20%" style="background-color:#B5B5B5;" align="center">社联意见</td>
-              <td colspan="2" style="border-right:0;">
-                <input type="text" name="AUOpnion_StudentCenter" style="width:99%;height:100%; border:0;" />
-              </td>
-            </tr>
-            <tr>
-              <td width="15%" style="background-color:#B5B5B5; border-left:0;" height="40px" align="center">社联经手人</td>
-              <td colspan="2">
-                <input type="text" name="AUer_StudentCenter" style="width:100%;height:100%; border:0;" />
-              </td>
-              <td width="20%" style="background-color:#B5B5B5;" align="center">联系电话</td>
-              <td colspan="2" style="border-right:0;">
-                <input type="text" name="AUPhone_StudentCenter" style="width:99%;height:100%; border:0;" />
-              </td>
-            </tr>
-            <tr>
-              <td width="15%" style="background-color:#B5B5B5; border-left:0; border-bottom:0;" height="130px" align="center">共青团<br />
-                华中科技大学委员会意见</td>
-              <td colspan="5" style="border-right:0;border-bottom:0;"></td>
-            </tr>
-          </table>
-        </div>
-        <div id="ta_roShow">
-          <table border="1" cellpadding="0" cellspacing="0" style="font-family:宋体;">
-            <p align="center" style=" font-size:24px; font-weight:bold; font-family:宋体; ">户外路演场地申请表</p>
-            <tr>
-              <td style="background-color:#B5B5B5; border:0;" width="15%" height="40" align="center">协会名称</td>
-              <td width="20%">
-                <input type="text" name="AssociationName_RoadShow" style="width:100%;height:100%; border:0;" />
-              </td>
-              <td width="15%" style="background-color:#B5B5B5;" align="center">活动名称</td>
-              <td width="20%">
-                <input type="text" name="ActivityName_RoadShow" style="width:100%;height:100%; border:0;" />
-              </td>
-              <td width="15%" style="background-color:#B5B5B5;" align="center">参与人数</td>
-              <td width="15%" style="border-right:1;">
-                <input type="text" name="ParticipantNumber_RoadShow" style="width:99%;height:100%; border:0;" />
-              </td>
-            </tr>
-            <tr>
-              <td style="background-color:#B5B5B5; border-left:0;" width="15%" height="40" align="center">活动日期</td>
-              <td width="20%">
-                <input type="text" name="Date_RoadShow" style="width:100%;height:100%; border:0;" />
-              </td>
-              <td style="background-color:#B5B5B5;" width="15%" align="center">活动时间</td>
-              <td width="20%" style="border:1;border-right:0;">
-                <input type="text" name="Time_RoadShow" style="border-left:0; border-right:0; border-top:0; border-bottom:1 solid; border-bottom-color:#000; border-bottom-width:thin; margin-left:5px; width:90%;height:20px;"/>
-              </td>
-              <td width="30%" colspan="2" style="border:1;border-left:0;">（上午/下午/晚上）</td>
-            </tr>
-            <tr>
-              <td style="background-color:#B5B5B5; border-left:0;" width="15%" height="60" align="center">活动地点<br />
-                (50人)</td>
-              <td width="20%" style="border:1;border-right:0;">
-                <input type="text" name="NomalClassrom_RoadShow" style="border-left:0; border-right:0; border-top:0; border-bottom:1 solid; border-bottom-color:#000; border-bottom-width:thin; margin-left:5px; width:90%;height:20px;"/>
-              </td>
-              <td colspan="5" width="35%" style="border:1;border-left:0;">（韵苑路口/紫菘路口/沁苑路口）</td>
-            </tr>
-            <tr>
-              <td width="15%" style="background-color:#B5B5B5; border-left:0;" height="150px" align="cneter">活动内容（目的，流程，安全负责人）</td>
-              <td colspan="5" style="border-right:1;">
-                <textarea rows="10" cols="100" name="ActivityContent_RoadShow" style="width:99%;height:100%; border:0;"></textarea>
-              </td>
-            <tr>
-              <td style="background-color:#B5B5B5; border-left:0;" width="15%" height="60" align="center">有无商业赞助</td>
-              <td width="20%">
-                <input type="text" name="Sponsor_RoadShow" style="width:100%;height:100%; border:0;" />
-              </td>
-              <td width="15%" style="background-color:#B5B5B5;" align="center">赞助方名及赞助方式（如有）</td>
-              <td colspan="3" style="border-right:1;">
-                <textarea rows="6" cols="100" name="SponsorWay_RoadShow" style="width:99%;height:100%; border:0;"></textarea>
-              </td>
-            </tr>
-            <tr>
-              <td width="15%" style="background-color:#B5B5B5; border-left:0;" height="40px" align="center">活动负责人</td>
-              <td colspan="2">
-                <input type="text" name="ResponsiblePeople_RoadShow" style="width:100%;height:100%; border:0;" />
-              </td>
-              <td width="20%" style="background-color:#B5B5B5; border-left:0;" align="center">联系电话</td>
-              <td colspan="2" style="border-right:1;">
-                <input type="text" name="Phone_RoadShow" style="width:99%;height:100%; border:0;" />
-              </td>
-            </tr>
-            <tr>
-              <td width="15%" style="background-color:#B5B5B5; border-left:0;" height="60px" align="center">社团意见</td>
-              <td colspan="2">
-                <input type="text" name="AssociationOpinion_RoadShow" style="width:100%;height:100%; border:0;" />
-              </td>
-              <td width="20%" style="background-color:#B5B5B5;" align="center">社联意见</td>
-              <td colspan="2" style="border-right:1;">
-                <input type="text" name="AUOpnion_RoadShow" style="width:99%;height:100%; border:0;" />
-              </td>
-            </tr>
-            <tr>
-              <td width="15%" style="background-color:#B5B5B5; border-left:0;" height="40px" align="center">社联经手人</td>
-              <td colspan="2">
-                <input type="text" name="AUer_RoadShow" style="width:100%;height:100%; border:0;" />
-              </td>
-              <td width="20%" style="background-color:#B5B5B5;" align="center">联系电话</td>
-              <td colspan="2" style="border-right:1;">
-                <input type="text" name="AUPhone_RoadShow" style="width:99%;height:100%; border:0;" />
-              </td>
-            </tr>
-            <tr>
-              <td width="15%" style="background-color:#B5B5B5; border-left:0; border-bottom:0;" height="130px" align="center">共青团<br />
-                华中科技大学<br />
-                委员会意见</td>
-              <td colspan="2" style="border-bottom:0;"></td>
-              <td style="background-color:#B5B5B5; border-bottom:0;" height="100px" align="center">华中科技大学<br />
-                保卫处意见</td>
-              <td colspan="2" style="border-right:1;border-bottom:0;"></td>
-            </tr>
-          </table>
-        </div>
-        <div id="ta_buClass">
-          <p style="font-size:32px; font-family:宋体;" align="center">社团活动申请表<br />
-            <span style="font-size:26px; font-weight:bold;">(教学楼专用)</span></p>
-          <table border="1" cellpadding="0" cellspacing="0" style="font-family:宋体; font-weight:bold;">
-            <tr>
-              <td width="15%" height="60px" align="center" style="border-left:0;">社团名称</td>
-              <td width="30%" colspan="2">
-                <input type="text" name="AssociationName_BuildingClassroom"style="width:100%;height:100%; border:0;"/>
-              </td>
-              <td width="15%" align="center">活动名称</td>
-              <td width="40%" colspan="2">
-                <input type="text" name="ActivityName_BuildingClassroom"style="width:99%;height:100%; border:0;"/>
-              </td>
-            </tr>
-            <tr>
-              <td width="15%" height="60px" align="center" style="border-left:0;">活动时间</td>
-              <td width="15%">
-                <input type="text" name="Time_BuildingClassroom"style="width:100%;height:100%; border:0;"/>
-              </td>
-              <td width="15%" align="center">活动地点</td>
-              <td width="15%">
-                <input type="text" name="Place_BuildingClassroom"style="width:100%;height:100%; border:0;"/>
-              </td>
-              <td align="center" width="20%">参与人数</td>
-              <td width="20%">
-                <input type="text" name="ParticipantNumber_BuildingClassroom"style="width:99%;height:100%; border:0;"/>
-              </td>
-            </tr>
-            <tr>
-              <td colspan="6" align="center" height="50px">活动内容（目的，流程，安全负责人，主讲人简介等）</td>
-            </tr>
-            <tr>
-              <td colspan="6">
-                <textarea cols="100" rows="25" name="ActivityContent_BuildingClassroom" style="width:99%;height:100%; border:0;"></textarea>
-              </td>
-            </tr>
-            <tr>
-              <td width="15%" height="120px" align="center" style="border-left:0;">会长签字</td>
-              <td colspan="2"></td>
-              <td width="15%" align="center">社联<br />
-                审批意见</td>
-              <td colspan="2"></td>
-            </tr>
-          </table>
-        </div>
-		<div id="ta_buclass2">
-			<p style="font-size:32px; font-family:宋体;" align="center">华中科技大学教室申表表<br />
-			<span style="font-size:26px; font-weight:bold;">(非计划内教学—学生专用)</span></p>
-			<table  border="1" cellpadding="0" cellspacing="0">
-			<tr >
-				<td width="20%" align="center" colspan="2" height="40">院（系）名称</td>
-				<td width="40%" colspan="4" >
-					<input type="text" name="Faculty_BuildingClassroom2" style="width:100%;height:100%; border:0;" />
-				</td>
-				<td width="15%" align="center" >教室容量 </td>
-				<td colspan="3">
-					<input type="text" name="ClassroomCapacity_BuildingClassroom2" style="width:95%;height:100%; border:0;" />
-				</td>
-			</tr>
-			<tr >
-				<td width="20%" align="center" colspan="2" height="40">申请人姓名 </td>
-				<td width="25%" colspan="2" >
-					<input type="text" name="ApplicantName_BuildingClassroom2" style="width:100%;height:100%; border:0;" />
-				</td>
-				<td width="15%" colspan="2" >
-					<select name="ApplicantTypeSelect_BuildingClassroom2"  style="width:100%;height:100%; border:0;">
-						<option value="本科生">本科生</option>
-						<option value="研究生">研究生</option>
-						<option value="助教">助教</option>
-						<option value="教师">教师</option>
-					</select>
-				</td>
-				<td width="15%" align="center" >功能教室 </td>
-				<td width="25%"  colspan="3">
-					<select name="ClassroomTypeSelect_BuildingClassroom2" style="width:100%;height:100%; border:0;">
-						<option value="A、多媒体教室">A、多媒体教室</option>
-						<option value="B、普通教室">B、普通教室</option>
-						<option value="C、阶梯教室">C、阶梯教室</option>
-						<option value="D、联体教室">D、联体教室</option>
-					</select>
-				</td>
-			</tr>
-			<tr >
-				<td width="20%" align="center" colspan="2" height="40">申请人联系电话</td>
-				<td width="15%" align="center" >办公电话号码 </td>
-				<td width="25%" colspan="3" >
-					<input type="text" name="OfficePhoneNumber_BuildingClassroom2" style="width:100%;height:100%; border:0;" />
-				</td>
-				<td width="15%" align="center" >手机号码</td>
-				<td width="25%" colspan="3">
-					<input type="text" name="CellphoneNumber_BuildingClassroom2" style="width:95%;height:100%; border:0;" />
-				</td>
-			</tr>
-			<tr >
-				<td width="20%" align="center" colspan="2" height="40">活动、讲座时间 </td>
-				<td width="40%" colspan="4" >
-					<input type="text" name="Time_BuildingClassroom2" style="width:100%;height:100%; border:0;" />
-				</td>
-				<td width="15%" align="center" >教学楼选择</td>
-				<td width="25%" colspan="3">
-					<select name="PlaceSelect_BuildingClassroom2" style="width:100%;height:100%; border:0;">
-						<option value="1、西十二楼">1、西十二楼</option>
-						<option value="2、西五楼">2、西五楼</option>
-						<option value="3、东五楼">3、东五楼</option>
-						<option value="4、东九楼">4、东九楼</option>
-						<option value="5、东十二楼">5、东十二楼</option>
-					</select>
-				</td>
-			</tr>
-			<tr >
-				<td width="20%" align="center" colspan="2" height="40">周次</td>
-				<td width="10%" colspan="2" >
-					<input type="text" name="Week_BuildingClassroom2" style="width:100%;height:100%; border:0;" />
-				</td>
-				<td width="20%" align="center" colspan="1" >星期</td>
-				<td width="10%" colspan="2" >
-					<input type="text" name="Day_BuildingClassroom2" style="width:100%;height:100%; border:0;" />
-				</td>
-				<td width="15%" align="center" ><p >节次 </p></td>
-				<td width="25%" colspan="2">
-					<select name="LessonSelect_BuildingClassroom2" style="width:100%;height:100%; border:0;">
-						<option value="1-2节">1-2节</option>
-						<option value="3-4节">3-4节</option>
-						<option value="5-6节">5-6节</option>
-						<option value="7-8节">7-8节</option>
-						<option value="9-11节">9-11节</option>
-					</select>
-				</td>
-			</tr>
-			<tr >
-				<td width="20%" align="center" colspan="2" height="80">说明</td>
-				<td width="80%" colspan="8" >节次说明：1&#8212;4节为上午；5&#8212;8节为下午；9&#8212;11节为晚上<br>作息时间：秋、夏季1&#8212;4节：8：00-11：50；秋季5&#8212;8节：14：00&#8212;17：30；夏季5&#8212;8节：14：30&#8212;18：00；秋季9&#8212;11节：18：30&#8212;21：50；夏季9&#8212;11节：19：00&#8212;22：20 </td>
-			</tr>
-			<tr >
-				<td width="5%" align="center" rowspan="4" height="80">形式和内容 </p></td>
-				<td width="15%" height="40" rowspan="2" align="center">一般活动、会议</td>
-				<td width="80%" colspan="8" >
-					<textarea cols="100" rows="5" name="ActivityContent_BuildingClassroom2" style="width:99%;height:100%; border:0;"></textarea>
-				</td>
-			</tr>
-			<tr >
-				<td align="center" colspan="2"  width="15%" height="10">主持人姓名</td>
-				<td align="center"  width="10%" colspan="1">
-					<input type="text" name="Compere_BuildingClassroom2" style="width:100%;height:100%; border:0;" />
-				</td>
-				<td align="center"  width="10%">单位</td>
-				<td width="15%">
-					<input type="text" name="Unit_BuildingClassroom2" style="width:100%;height:100%; border:0;" />
-				</td>
-				<td align="center" width="15%">职务职称</td>
-				<td width="15%" colspan="2">
-					<input type="text" name="Occupation_BuildingClassroom2" style="width:95%;height:100%; border:0;" />
-				</td>
-			</tr>
-			<tr >
-				<td width="15%" height="40" rowspan="2" align="center">授课、讲座人员情况(申请多媒体教室)</td>
-				<td width="80%" align="top" colspan="8" >授课（讲座）内容:
-					<textarea cols="100" rows="3" name="LectureContent_BuildingClassroom2" style="width:99%;height:60%; border:0;"></textarea>
-				</td>
-			</tr>
-			<tr >
-				<td align="center" colspan="2" height="10" width="15%" style="border:1;">授课（讲座）姓名</td>
-				<td height="10" width="10%" style="border:1;">
-					<input type="text" name="LectureName_BuildingClassroom2" style="width:95%;height:90%;border:0;" />
-				</td>
-				<td align="center" height="10" width="10%">单位</td>
-				<td height="10" width="15%">
-					<input type="text" name="LectureUnit_BuildingClassroom2" style="width:100%;height:90%; border:0;" />
-				</td>
-				<td align="center" height="10" width="15%">职务职称</td>
-				<td height="10" width="15%" colspan="2">
-					<input type="text" name="LectureOccupation_BuildingClassroom2" style="width:95%;height:90%; border:0;" />
-				</td>
-			</tr>
-			<tr >
-				<td width="20%" colspan="2" rowspan="5" height="130">院（系）审核意见</td>
-				<td width="40%" colspan="3" height="30" style="border-bottom:0;border-top:1;">院（系）分管辅导员意见：</td>
-				<td width="40%" colspan="5" style="border-bottom:0;">院（系）学工组意见：</td>
-			</tr>
-			<tr >
-				<td  colspan="3" height="20" style="border-top:0;">签名：</td>
-				<td width="40%" colspan="5" style="border-top:0;">签名：</td>
-			</tr>
-			<tr >
-				<td width="80%" colspan="8" height="30" style="border-bottom:0;">团委领导审核结果和意见：</td>
-			</tr>
-			<tr >
-				<td  colspan="5" height="20" width="20%" style="border-top:0;border-right:0;border-bottom:0;">职 务：</td>
-				<td  height="20" colspan="3" style="border-top:0;border-left:0;border-bottom:0;">签名</td>
-			</tr>
-			<tr >
-				<td  colspan="7" height="30" style="border-right:0;border-top:0;">盖章</td>
-				<td  style="border-left:0;border-top:0;">&nbsp;年&nbsp;月&nbsp;日</td>
-			</tr>
-			<tr >
-				<td width="20%"  colspan="2" height="60">教务处审批意见</td>
-				<td width="55%"  colspan="7" style="border-right:0;">&nbsp;</td>
-				<td width="25%"  style="border-left:0;">&nbsp;年&nbsp;月&nbsp;日</td>
-			</tr>
-			</table>
-		</div>
-        <div id="ta_spPlace">
-          <table border="1" cellpadding="0" cellspacing="0" style="font-family:宋体;">
-            <p align="center" style=" font-size:24px; font-weight:bold; font-family:宋体; ">特殊场地申请表</p>
-            <tr>
-              <td style="background-color:#B5B5B5; border:0;" width="15%" height="40" align="center">协会名称</td>
-              <td width="20%">
-                <input type="text" name="AssociationName_SpecialPlace" style="width:100%;height:100%; border:0;" />
-              </td>
-              <td width="15%" style="background-color:#B5B5B5;" align="center">活动名称</td>
-              <td width="20%">
-                <input type="text" name="ActivityName_SpecialPlace" style="width:100%;height:100%; border:0;" />
-              </td>
-              <td width="15%" style="background-color:#B5B5B5;" align="center">参与人数</td>
-              <td width="15%" style="border-right:0;">
-                <input type="text" name="ParticipantNumber_SpecialPlace" style="width:99%;height:100%; border:0;" />
-              </td>
-            </tr>
-            <tr>
-              <td style="background-color:#B5B5B5; border-left:0;" width="15%" height="40" align="center">活动日期</td>
-              <td width="20%">
-                <input type="text" name="Date_SpecialPlace" style="width:100%;height:100%; border:0;" />
-              </td>
-              <td style="background-color:#B5B5B5;" width="15%" align="center">活动时间</td>
-              <td width="20%" style="border:1;border-right:0;">
-                <input type="text" name="Time_SpecialPlace" style="border-left:0; border-right:0; border-top:0; border-bottom:1 solid; border-bottom-color:#000; border-bottom-width:thin; margin-left:5px; width:90%;height:20px;"/>
-              </td>
-              <td width="30%" colspan="2" style="border:1;border-left:0;">（上午/下午/晚上）</td>
-            </tr>
-            <tr>
-              <td style="background-color:#B5B5B5; border-left:0;" width="15%" height="60" align="center">活动地点</td>
-              <td colspan="3" style="border:1;">
-                <input type="text" name="NomalClassrom_SpecialPlace" style="border:0; width:100%;height:100%;"/>
-              </td>
-              <td width="15%" style="background-color:#B5B5B5;" align="center">是否经系统查询</td>
-              <td width="15%" style="border-right:0;">
-                <input type="text" name="SystemInquire_SpecialPlace" style="width:99%;height:100%; border:0;" />
-              </td>
-            </tr>
-            <tr>
-              <td width="15%" style="background-color:#B5B5B5; border-left:0;" height="150px" align="cneter">活动内容（目的，流程，安全负责人）</td>
-              <td colspan="5" style="border-right:0;">
-                <textarea rows="10" cols="100" name="ActivityContent_SpecialPlace" style="width:99%;height:100%; border:0;"></textarea>
-              </td>
-			 </tr>
-            <tr>
-              <td style="background-color:#B5B5B5; border-left:0;" width="15%" height="50" align="center">有无商业赞助</td>
-              <td width="20%">
-                <input type="text" name="Sponsor_SpecialPlace" style="width:100%;height:100%; border:0;" />
-              </td>
-              <td width="15%" style="background-color:#B5B5B5;" align="center">赞助方名及赞助方式（如有）</td>
-              <td colspan="3" style="border-right:0;">
-                <textarea rows="5" cols="100" name="SponsorWay_SpecialPlace" style="width:99%;height:100%; border:0;"></textarea>
-              </td>
-            </tr>
-            <tr>
-              <td width="15%" style="background-color:#B5B5B5; border-left:0;" height="40px" align="center">活动负责人</td>
-              <td colspan="2">
-                <input type="text" name="ResponsiblePeople_SpecialPlace" style="width:100%;height:100%; border:0;" />
-              </td>
-              <td width="20%" style="background-color:#B5B5B5; border-left:0;" align="center">联系电话</td>
-              <td colspan="2" style="border-right:0;">
-                <input type="text" name="Phone_SpecialPlace" style="width:99%;height:100%; border:0;" />
-              </td>
-            </tr>
-            <tr>
-              <td width="15%" style="background-color:#B5B5B5; border-left:0;" height="60px" align="center">社团意见</td>
-              <td colspan="2">
-                <input type="text" name="AssociationOpinion_SpecialPlace" style="width:100%;height:100%; border:0;" />
-              </td>
-              <td width="20%" style="background-color:#B5B5B5;" align="center">社联意见</td>
-              <td colspan="2" style="border-right:0;">
-                <input type="text" name="AUOpnion_SpecialPlace" style="width:99%;height:100%; border:0;" />
-              </td>
-            </tr>
-            <tr>
-              <td width="15%" style="background-color:#B5B5B5; border-left:0;" height="40px" align="center">社联经手人</td>
-              <td colspan="2">
-                <input type="text" name="AUer_SpecialPlace" style="width:100%;height:100%; border:0;" />
-              </td>
-              <td width="20%" style="background-color:#B5B5B5;" align="center">联系电话</td>
-              <td colspan="2" style="border-right:0;">
-                <input type="text" name="AUPhone_SpecialPlace" style="width:99%;height:100%; border:0;" />
-              </td>
-            </tr>
-            <tr>
-              <td width="15%" style="background-color:#B5B5B5; border-left:0; border-bottom:0;" height="130px" align="center">共青团<br />
-                华中科技大学<br />
-                委员会意见</td>
-              <td style="border-right:0;border-bottom:0;"></td>
-              <td style="background-color:#B5B5B5; border-bottom:0;">审批单位意见</td>
-              <td style="border:0;"></td>
-              <td style="background-color:#B5B5B5; border-bottom:0;">审批单位意见</td>
-              <td style="border:0;"></td>
-            </tr>
-          </table>
-        </div>
-        <div id="ta_spoCourt">
-          <p align="center" style=" font-size:24px; font-weight:bold; font-family:宋体; ">韵苑体育馆场地申请表</p>
-          <table border="1" width="100%" cellpadding="0" cellspacing="0" style="font-family:宋体;">
-            <tr>
-              <td width="30%" height="40px" align="center" style="border-left:0;">申请单位</td>
-              <td height="40px" colspan="4" style="border-right:0;">
-                <input type="text" name="AssociationName_SportCourt" style="width:99%;height:100%; border:0;"/>
-              </td>
-            </tr>
-            <tr>
-              <td width="30%" rowspan="2" align="center" style="border-left:0;">经办人信息</td>
-              <td width="10%" height="40px" align="center">姓名</td>
-              <td>
-                <input type="text" name="Name_SportCourt"style="width:100%;height:100%; border:0;"/>
-              </td>
-              <td width="15%" align="center">联系方式</td>
-              <td width="35%" style="border-right:0;">
-                <input type="text" name="Phone_SportCourt" style="width:99%;height:100%; border:0;"/>
-              </td>
-            </tr>
-            <tr>
-              <td height="40px" align="center">学号</td>
-              <td>
-                <input type="text" name="StudentNumber_SportCourt" style="width:100%;height:100%; border:0;"/>
-              </td>
-              <td width="15%" align="center">所在院（系）</td>
-              <td width="35%" style="border-right:0;">
-                <input type="text" name="School_SportCourt" style="width:99%;height:100%; border:0;"/>
-              </td>
-            </tr>
-            <tr>
-              <td width="30%" align="center" style="border-left:0;">活动内容</td>
-              <td colspan="4" style="border-right:0;">
-                <textarea cols="30" rows="6" name="ActivityContent_SportCourt" style="width:99%;height:100%; border:0;"></textarea>
-              </td>
-            </tr>
-            <tr>
-              <td width="30%" height="40px" align="center" style="border-left:0;">活动日期</td>
-              <td colspan="2">
-                <input type="text" name="ActivityDate_SportCourt" style="width:100%;height:100%; border:0;" />
-              </td>
-              <td width="15%"  align="center">租借时间</td>
-              <td width="35%" style="border-right:0;">
-                <input type="text" name="UseTime_SportCourt" style="width:99%;height:100%; border:0;"/>
-              </td>
-            </tr>
-            <tr>
-              <td width="30%" height="60px" align="center" style="border-left:0;">备注</td>
-              <td colspan="4" style="border-bottom:1;">
-                <textarea cols="30" rows="5" name="Remarks_SportCourt" style="width:99%;height:100%; border:0;"></textarea>
-              </td>
-            </tr>
-            <tr>
-              <td colspan="5" height="40px" style="font-weight:bold; border-left:0; border-bottom:0;">院（系）或部门负责人意见</td>
-            </tr>
-            <tr>
-              <td colspan="5" height="100px" style="font-weight:bold; border:0;" align="right" valign="bottom">院（系）或部门公章&nbsp;&nbsp;</td>
-            </tr>
-            <tr>
-              <td colspan="5" height="30px" valign="middle" align="right" style="font-weight:bold; border:0;">年&nbsp;月&nbsp;日&nbsp;&nbsp;</td>
-            </tr>
-            <tr>
-              <td height="160px" align="right" valign="bottom" style="border-bottom:0; border-left:0;">校团委审批意见<br />
-                （盖章）</td>
-              <td colspan="3" align="right" valign="bottom">体育场馆中心审批意见<br />
-                (盖章)</td>
-              <td align="right" valign="bottom" style="border:1;">保卫处审批意见<br />
-                （盖章）<br />
-              </td>
-            </tr>
-            <tr>
-              <td height="30px" valign="middle" align="right">年&nbsp;月&nbsp;日</td>
-              <td colspan="3" align="right" valign="middle" style="border-bottom:0; border-left:0; border-top:0;">年&nbsp;月&nbsp;日</td>
-              <td align="right" valign="middle">年&nbsp;月&nbsp;日</td>
-            </tr>
-          </table>
-        </div>
-        <div id="ta_eaThird">
-          <table border="1" cellpadding="0" cellspacing="0" style="font-family:宋体;">
-            <p align="center" style=" font-size:24px; font-weight:bold; font-family:宋体; ">东四食堂三楼申请表</p>
-            <tr>
-              <td style="background-color:#B5B5B5; border:0;" width="15%" height="40" align="center">协会名称</td>
-              <td width="20%">
-                <input type="text" name="AssociationName_EastThird" style="width:100%;height:100%; border:0;" />
-              </td>
-              <td width="15%" style="background-color:#B5B5B5;" align="center">活动名称</td>
-              <td width="20%">
-                <input type="text" name="ActivityName_EastThird" style="width:100%;height:100%; border:0;" />
-              </td>
-              <td width="15%" style="background-color:#B5B5B5;" align="center">参与人数</td>
-              <td width="15%" style="border-right:0;">
-                <input type="text" name="ParticipantNumber_EastThird" style="width:99%;height:100%; border:0;" />
-              </td>
-            </tr>
-            <tr>
-              <td style="background-color:#B5B5B5; border-left:0;" width="15%" height="40" align="center">活动日期</td>
-              <td width="20%">
-                <input type="text" name="Date_EastThird" style="width:100%;height:100%; border:0;" />
-              </td>
-              <td style="background-color:#B5B5B5;" width="15%" align="center">活动时间</td>
-              <td width="20%" style="border:1;border-right:0;">
-                <input type="text" name="Time_EastThird" style="border-left:0; border-right:0; border-top:0; border-bottom:1 solid; border-bottom-color:#000; border-bottom-width:thin; margin-left:5px; width:90%;height:20px;"/>
-              </td>
-              <td width="30%" colspan="2" style="border:1;border-left:0;">（上午/下午/晚上）</td>
-            </tr>
-            <tr>
-              <td style="background-color:#B5B5B5; border:1 width="15%" height="60" align="center">活动地点<br />
-                (50人)</td>
-              <td  colspan="5" width="20%" style="border:1; font-size:18px;" align="center">东四食堂三楼</td>
-            </tr>
-            <tr>
-              <td width="15%" style="background-color:#B5B5B5; border-left:0;" height="150px" align="cneter">活动内容（目的，流程，安全负责人）</td>
-              <td colspan="5" style="border-right:0;">
-                <textarea rows="10" cols="100" name="ActivityContent_EastThird" style="width:99%;height:100%; border:0;"></textarea>
-              </td>
-			 </tr>
-            <tr>
-              <td style="background-color:#B5B5B5; border-left:0;" width="15%" height="60" align="center">有无商业赞助</td>
-              <td width="20%">
-                <input type="text" name="Sponsor_EastThird" style="width:100%;height:100%; border:0;" />
-              </td>
-              <td width="15%" style="background-color:#B5B5B5;" align="center">赞助方名及赞助方式（如有）</td>
-              <td colspan="3" style="border-right:0;">
-                <textarea rows="6" cols="100" name="SponsorWay_EastThird" style="width:99%;height:100%; border:0;"></textarea>
-              </td>
-            </tr>
-            <tr>
-              <td width="15%" style="background-color:#B5B5B5; border-left:0;" height="40px" align="center">活动负责人</td>
-              <td colspan="2">
-                <input type="text" name="ResponsiblePeople_EastThird" style="width:100%;height:100%; border:0;" />
-              </td>
-              <td width="20%" style="background-color:#B5B5B5; border-left:0;" align="center">联系电话</td>
-              <td colspan="2" style="border-right:0;">
-                <input type="text" name="Phone_EastThird" style="width:99%;height:100%; border:0;" />
-              </td>
-            </tr>
-            <tr>
-              <td width="15%" style="background-color:#B5B5B5; border-left:0;" height="60px" align="center">社团意见</td>
-              <td colspan="2">
-                <input type="text" name="AssociationOpinion_EastThird" style="width:100%;height:100%; border:0;" />
-              </td>
-              <td width="20%" style="background-color:#B5B5B5;" align="center">社联意见</td>
-              <td colspan="2" style="border-right:0;">
-                <input type="text" name="AUOpnion_EastThird" style="width:99%;height:100%; border:0;" />
-              </td>
-            </tr>
-            <tr>
-              <td width="15%" style="background-color:#B5B5B5; border-left:0;" height="40px" align="center">社联经手人</td>
-              <td colspan="2">
-                <input type="text" name="AUer_EastThird" style="width:100%;height:100%; border:0;" />
-              </td>
-              <td width="20%" style="background-color:#B5B5B5;" align="center">联系电话</td>
-              <td colspan="2" style="border-right:0;">
-                <input type="text" name="AUPhone_EastThird" style="width:99%;height:100%; border:0;" />
-              </td>
-            </tr>
-            <tr>
-              <td width="15%" style="background-color:#B5B5B5; border-left:0; border-bottom:0;" height="130px" align="center">共青团<br />
-                华中科技大学<br />
-                委员会意见</td>
-              <td colspan="2" style="border-bottom:0;"></td>
-              <td style="background-color:#B5B5B5; border-bottom:0;" height="100px" align="center">华中科技大学<br />
-                学生工作处意见</td>
-              <td colspan="2" style="border-right:0;border-bottom:0;"></td>
-            </tr>
-          </table>
-        </div>
-		  <input type="button" value="策划提交" id="boPlace_table_submit" name="boPlace_table_submit"  onclick="boPlace_submit()"/>
-         <input type="button" value="检查" id="boPlace_table_confirm" onclick="boPlace_confirm()" />
-		</form>
-		<div id="ta_othPlace">
-		<!-- <form id="Form1" method="post"  action="http://pyy1996.sinaapp.com/upload/file.php" enctype="multipart/form-data"> -->
-        <table  width="130px;">
-          <tr>
-            <td>其他场地：</td>
-          </tr>
-		   <tr>
-				<td><input id="wordFile_otherplace" type="file"  name="file_OtherPlace" class="fileInput"/></td>
-		   </tr>
-          <tr>
-            <td>请上传word文件</td>
-          </tr>
-        </table>
-		  <input type="submit" value="策划提交" id="boPlace_file_submit" name="boPlace_flie_submit"  />
-         <input type="button" value="检查" id="boPlace_file_confirm" onclick="boPlace_confirm()" />
-       <!-- </form> -->
-	   
-	   </div>
-      </div>
-
-        <!--<form id="bo_othStuff_table" method="post"  action="http://pyy1996.sinaapp.com/upload/file.php" enctype="multipart/form-data">-->
-          <div id="bo_othStuff_table">
-        <table  width="130px;">
-          <tr>
-            <td>其他借用：</td>
-          </tr>
-		   <tr>
-				<td><input id="wordFile_bo_other" type="file"  name="file_OtherStuff" class="fileInput"/></td>
-		   </tr>
-          <tr>
-            <td>请上传word文件</td>
-          </tr>
-        </table>
-
-        <input type="submit" value="策划提交" id="bo_othStuff_table_submit" name="bo_othStuff_table_submit"  />
-        <input type="button" value="检查" id="bo_othStuff_table_confirm" onclick="bo_othStuff_confirm()" />
-      </div>
-        <!--</form>-->
-
-
-
-
-      <div id="stateQuery_table">
-        <table width="80%" border="1" cellspacing="0" cellpadding="0">
-            <tr>
-                <th>提交时间</th>
-                <th>审核状态</th>
-                <th>种类</th>
-                <th>浏览</th>
-                <th>审核意见</th>
-            </tr>
-
-            <foreach name="list" item="v" key="lm">
-                <foreach name="v[1]" item="u">
-                    <tr>
-                        <td>{$u.createtime}</td>
-
-                        <eq name="u.reviewstate" value="0"><td>未审核</td></eq>
-                        <eq name="u.reviewstate" value="1"><td>审核通过</td></eq>
-                        <eq name="u.reviewstate" value="2"><td>审核未通过</td></eq>
-
-                        <td>{$v[0]}</td>
-                        <td><a href="{:U('Material/Download/' . $lm,array('id'=>$u['id']))}">下载</a></td>
-                        <td>{$u.reviewadvice}</td>
-                    </tr>
-                </foreach>
-            </foreach>
-        </table>
-      </div>
-    </div>
-
-  <div id="logo"> <img src="__PUBLIC__/MaterialSrc/images/bottom.jpg" width="100%" height="100px"> </div>
-  <div id="footer">
-  <table>
-    <tr>
-      <td valign="middle" width="15%" align="right"><img src="__PUBLIC__/MaterialSrc/images/mark_address.png"></td>
-      <td valign="middle" width="25%" align="left">武汉市洪山区珞喻路1037号华中科技大学大学生活动中心</td>
-      <td valign="middle" width="6%" align="right"><img src="__PUBLIC__/MaterialSrc/images/mark_call.png"></td>
-      <td valign="middle" width="9%" align="left">XXXXXXXXXX</td>
-      <td valign="middle" width="6%" align="right"><img src="__PUBLIC__/MaterialSrc/images/mark_email.png"></td>
-      <td valign="middle" width="9%" align="left">XXXXXXX@hust.edu.cn</td>
-      <td valign="middle" width="6%" align="right"><img src="__PUBLIC__/MaterialSrc/images/mark_email.png"></td>
-      <td valign="middle" width="24%" align="left">XXXXXXXXX@qq.com</td>
-    </tr>
-  </table>
-</div>
-  <div id="tips" style="border:0;">
-        <p style="color:#989797;font-size:20px;">提示栏</p>
-        <p id="p1" style="color:#989797;background-color:#eaeaea;">提示栏</p>
-
-  </div>
-</form>
-</body>
-</html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta name="generator" content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>物资系统_用户</title>    <script src='__PUBLIC__/MaterialSrc/jquery-2.1.1.js'></script><link href="__PUBLIC__/MaterialSrc/public.css" type="text/css" rel="stylesheet" /><link href="__PUBLIC__/MaterialSrc/user.css" type="text/css" rel="stylesheet" /><script type="text/javascript" src="__PUBLIC__/MaterialSrc/user.js"></script></head><body><form id="Form" method="post" name="Form" action="{:U('Material/Material/material_upload')}"  enctype="multipart/form-data">  <input type="hidden" name="action_type" id="action_type" value="none"/>  <div id="slider">    <ul>      <li id="sliderTop1"></li>      <li id="sliderTop2"></li>    </ul>    <dl id="apply">      <dt>        <ul>          <li class="applyText">申请</li>          <li class="applyTriangle"><img src="__PUBLIC__/MaterialSrc/images/hehe_03.png" /></li>        </ul>      </dt>      <dd id="stuff" onclick="show_stuff()">物资借用</dd>      <dd id="place" onclick="show_boPlace()">场地借用</dd>      <ul id="boPlace">        <li>          <input type="radio"  name="apply_place" id="colPrinting" onclick="show_colPrinting()" />          <label for=            "colPrinting">彩喷悬挂</label>        </li>        <li>          <input type="radio"  name="apply_place" id="colClass" onclick="show_colClass()" />          <label for=            "colClass">大活教室</label>        </li>        <li>          <input type="radio"  name="apply_place" id="roShow" onclick="show_roShow()" />          <label for=            "roShow">路演场地</label>        </li>        <li>          <input type="radio"  name="apply_place" id="buClass" onclick="show_buClass()" />          <label for=            "buClass">教学楼教室-教工</label>        </li>		<li>          <input type="radio"  name="apply_place" id="buclass2" onclick="show_buclass2()" />          <label for=            "buclass2">教学楼教室-学生</label>        </li>        <li>          <input type="radio"  name="apply_place" id="spPlace" onclick="show_spPlace()" />          <label for=            "spPlace">特殊场地</label>        </li>        <li>          <input type="radio"  name="apply_place" id="spoCourt" onclick="show_spoCourt()" />          <label for=            "spoCourt">体育场馆</label>        </li>        <li>          <input type="radio"  name="apply_place" id="eaThird" onclick="show_eaThird()" />          <label for=            "eaThird">东四三楼</label>        </li>        <li>          <input type="radio"  name="apply_place" id="othPlace" onclick="show_othPlace()" />          <label for=            "othPlace">其他场地</label>        </li>      </ul>      <dd id="other" onclick="show_bo_othStuff_table()">其他借用</dd>    </dl>    <dl id="stateQuery">      <dt>        <ul>          <li class="stateQueryText" onclick="show_query()">状态查询</li>          <li class="stateQueryTriangle"><img src="__PUBLIC__/MaterialSrc/images/hehe_03.png" /></li>        </ul>      </dt>    </dl>  </div>  <div id="mainbody">    <div id="header">      <p>物资管理系统</p>    </div>    <div id="center">      <dl id="systemMsg">        <dt>系统消息</dt>        <dd>消息1：XXXXXXXXXXXXXXX</dd>        <dd>消息2：XXXXXXXXXXXXXXX</dd>        <dd>消息3：XXXXXXXXXXXXXXX</dd>      </dl>      <dl id="help">        <dt>帮助</dt>        <dd>借用流程规范说明</dd>        <dd>策划书写规范</dd>        <dd>更多...</dd>      </dl>    </div>    <div id="tableContent">      <div id="boStuff_table">        <p align="center" style=" font-size:24px; font-weight:bold; font-family:宋体; ">物资申请表</p>        <table border="1" cellpadding="0" cellspacing="0" style="font-family:宋体;">          <tr>            <td colspan="2" height="60px" width="20%" style="background-color:#B5B5B5; border:0;" align="center">协会名称</td>            <td width="25%" colspan="2" style="border-top:0;">              <input type="text" name="AssociationName_Stuff" style="width:99%;height:100%; border:0;" />            </td>            <td width="20%" style="background-color:#B5B5B5; border-top:0;" align="center">活动名称</td>            <td width="35%" colspan="4" style="border-top:0; border-right:0;">              <input type="text" name="ActivityName_Stuff" style="width:99%;height:100%; border:0;border-right:1;" />            </td>          </tr>          <tr>            <td colspan="2" height="60px" width="20%" style="background-color:#B5B5B5; border-left:0;" align="center">活动地点</td>            <td colspan="2" width="25%">              <input type="text" name="Place_Stuff" style="width:100%;height:100%; border:0;" />            </td>            <td width="15%" style="background-color:#B5B5B5;" align="center">借用日期</td>            <td colspan="2">              <input type="text" name="UseDate_Stuff" style="width:100%;height:100%; border:0;" />            </td>            <td width="10%" align="center" style="background-color:#B5B5B5;">参与人数</td>            <td width="10%" style="border:0;">              <input type="text" name="ParticipantNumber_Stuff" style="width:99%;height:100%; border:0;" />            </td>          </tr>          <tr>            <td colspan="9" height="40px" style="font-size:18px; background-color:#B5B5B5; font-weight:bold; border:0;" align="center";>注：每张申请表只能借用一种物资</td>          </tr>          <tr>            <td width="10%" height="50px" rowspan="4" style="background-color:#B5B5B5; font-size:16px; font-weight:bold; border-left:0;" align="center">物<br />              资<br />              种<br />              类</td>            <td width="10%" style="background-color:#B5B5B5;" align="center">投影仪</td>            <td width="15%" align="center">台数</td>            <td width="30%" colspan="2">              <input type="text" name="ProjectorNumber_Stuff" style="width:99%;height:100%; border:0;" />            </td>            <td width="10%" align="center">归还日期</td>            <td width="20%" colspan="3" style="border:0;">              <input type="text" name="ProjectorDate_Stuff" style="width:99%;height:100%; border:0;" />            </td>          </tr>          <tr>            <td width="10%" style="background-color:#B5B5B5; border-left:0;" align="center">电力</td>            <td width="15%" align="center">瓦数</td>            <td width="30%" colspan="2" style="border-bottom:1;">              <input type="text" name="Electricity_Stuff" style="width:99%;height:100%; border:0;" />            </td>            <td width="35%" colspan="4" style="border-right:0; border-left:0;" align="center">（注：瓦数超过2000W须要到主校区配电房签字）</td>          </tr>          <tr>            <td width="10%" style="background-color:#B5B5B5; border-left:0;" align="center">大量桌椅</td>            <td width="15%" align="center">桌子数量</td>            <td width="10%">              <input type="text" name="DeskNumber_Stuff" style="width:99%;height:100%; border:0;" />            </td>            <td width="20%" align="center">椅子数量</td>            <td width="10%">              <input type="text" name="ChairNumber_Stuff" style="width:100%;height:100%; border:0;" />            </td>            <td width="5%" align="center">归还日期</td>            <td width="20%" colspan="2" style="border-right:0;">              <input type="text" name="ReturnDate_Stuff" style="width:99%;height:100%; border:0;" />            </td>          </tr>          <tr>            <td width="10%" style="background-color:#B5B5B5; border-left:0;" align="center">校车</td>            <td width="15%" align="center">运送桌子数量</td>            <td width="30%" colspan="2">              <input type="text" name="SchoolbusDesk_Stuff" style="width:99%;height:100%; border:0;" />            </td>            <td width="10%" align="center">运送椅子数量</td>            <td width="20%" colspan="3" style="border-right:0;">              <input type="text" name="SchoolbusChair_Stuff" style="width:99%;height:100%; border:0;" />            </td>          </tr>          <tr>            <td width="20%" height="60px" colspan="2" style="background-color:#B5B5B5; border-left:0;" align="center">活动负责人</td>            <td width="25%" colspan="2">              <input type="text" name="ResponsiblePeople_Stuff" style="width:100%;height:100%; border:0;" />            </td>            <td width="20%" style="background-color:#B5B5B5;" align="center">联系电话</td>            <td colspan="4" width="35%" style="border-right:0;">              <input type="text" name="Phone_Stuff" style="width:99%;height:100%; border:0;" />            </td>          </tr>          <tr>            <td width="20%" height="80px" colspan="2" style="background-color:#B5B5B5; border-left:0;" align="center">社团意见</td>            <td width="25%" colspan="2">              <input type="text" name="AssociationOpinion_Stuff" style="width:100%;height:100%; border:0;" />            </td>            <td width="20%" style="background-color:#B5B5B5;" align="center">社联意见</td>            <td colspan="4" width="35%" style="border-right:0;">              <input type="text" name="AUOpinion_Stuff" style="width:99%;height:100%; border:0;" />            </td>          </tr>          <tr>            <td width="20%" height="80px" colspan="2" style="background-color:#B5B5B5; border-left:0;" align="center">社联经手人</td>            <td width="25%" colspan="2">              <input type="text" name="AUResponsiblePeople_Stuff" style="width:100%;height:100%; border:0;" />            </td>            <td width="20%" style="background-color:#B5B5B5;" align="center">联系电话</td>            <td colspan="4" width="35%" style="border-top:0;">              <input type="text" name="AUPhone_Stuff" style="width:99%;height:100%; border:0;" />            </td>          </tr>          <tr>            <td colspan="2" width="20%" style="background-color:#B5B5B5; border-left:0; border-bottom:0;" height="130px" align="center">共青团<br />              华中科技大学<br />              委员会意见</td>            <td colspan="7" width="80%" style="border:0;"></td>          </tr>        </table>        <input type="button" value="策划提交" id="boStuff_table_submit" onclick="boStuff_submit()" />        <input type="button" value="检查" id="boStuff_table_confirm" onclick="boStuff_confirm()" />      </div>      <div id="boPlace_table">        <div id="ta_colPrinting">          <p align="center" style=" font-size:24px; font-weight:bold; font-family:宋体; ">彩喷横幅悬挂申请表</p>          <table border="1" cellpadding="0" cellspacing="0" style="font-family:宋体; font-weight:bold;">            <tr>              <td width="30%" height="60px" align="center" style="border-left:0;">申请单位</td>              <td width="70%" height="60px" colspan="5" style="border-right:0;">                <input type="text" name="AssociationName_ColorPrinting" style="width:99%;height:100%; border:0;"/>              </td>            </tr>            <tr>              <td width="30%" height="60px" align="center" style="border-left:0;">经办人信息</td>              <td height="60px" width="10%" align="center">姓名</td>              <td height="60px" width="10%">                <input type="text" name="Name_ColorPrinting"style="width:100%;height:100%; border:0;"/>              </td>              <td width="15%" height="60px" align="center">联系方式</td>              <td height="60px" width="35%" colspan="2" style="border-right:0;">                <input type="text" name="Phone_ColorPrinting" style="width:99%;height:100%; border:0;"/>              </td>            </tr>            <tr>              <td width="30%" height="60px" align="center" style="border-left:0;">活动内容</td>              <td colspan="5" style="border-right:0;">                <textarea cols="30" rows="7" name="ActivityContent_ColorPrinting" style="width:99%;height:100%; border:0;"></textarea>              </td>            </tr>            <tr>              <td width="30%" height="60px" align="center" style="border-left:0;">活动日期</td>              <td colspan="2">                <input type="text" name="ActivityDate_ColorPrinting" style="width:100%;height:100%; border:0;" />              </td>              <td width="15%" height="60px" align="center">使用时间</td>              <td height="60px" width="35%" colspan="2" style="border-right:0;">                <input type="text" name="UseTime_ColorPrinting" style="width:99%;height:100%; border:0;"/>              </td>            </tr>            <tr>              <td width="30%" height="60px" align="center" style="border-left:0;">使用地点</td>              <td colspan="2" width="20%">                <input type="text" name="UsePlace_ColorPrinting" style="width:100%;height:100%; border:0;"/>              </td>              <td height="60px" align="center" colspan="2" style="border-right:0;">彩喷是否具有商业性质</td>              <td height="60px" width="20%" style="border-right:1">                <input type="text" name="Commercial_ColorPrinting"  style="width:99%;height:90%;border:0;" />              </td>            </tr>            <tr>              <td width="30%" height="60px" align="center" style="border-left:0;border-right:0;">备注</td>              <td colspan="5" style="border-left:1;border-top:1;" width="70%">                <textarea cols="30" rows="5" name="Remarks_ColorPrinting" style="width:99%;height:100%; border:0;"></textarea>              </td>            </tr>            <tr>              <td colspan="3" height="160px" align="right" valign="bottom" width="50%" style="border-bottom:0; border-left:0;">校团委意见（盖章）<br />              </td>              <td colspan="3" height="160px" align="right" valign="bottom" width="50%" style="border-right:0;border-bottom:0;">场地审批单位意见（盖章）<br />              </td>            </tr>            <tr>              <td colspan="2" width="30%" style="border:0"></td>              <td height="30px" width="20%" align="center" valign="middle" style="border-bottom:0; border-left:0; border-top:0;">年&nbsp;月&nbsp;日</td>              <td colspan="2" width="20%" style="border:0;"></td>              <td height="30px" width="30%" align="center" valign="middle" style="border:0;">年&nbsp;月&nbsp;日</td>            </tr>          </table>        </div>        <div id="ta_colClass">          <table border="1" cellpadding="0" cellspacing="0" style="font-family:宋体;">            <p align="center" style=" font-size:24px; font-weight:bold; font-family:宋体; ">大学生活动中心教室申请表</p>            <tr>              <td style="background-color:#B5B5B5; border:0;" width="15%" height="40" align="center">协会名称</td>              <td width="20%">                <input type="text" name="AssociationName_StudentCenter" style="width:100%;height:100%; border:0;" />              </td>              <td width="15%" style="background-color:#B5B5B5;" align="center">活动名称</td>              <td width="20%">                <input type="text" name="ActivityName_StudentCenter" style="width:100%;height:100%; border:0;" />              </td>              <td width="15%" style="background-color:#B5B5B5;" align="center">参与人数</td>              <td width="15%" style="border-right:0;">                <input type="text" name="ParticipantNumber_StudentCenter" style="width:99%;height:100%; border:0;" />              </td>            </tr>            <tr>              <td style="background-color:#B5B5B5; border-left:0;" width="15%" height="40" align="center">活动日期</td>              <td width="20%">                <input type="text" name="Date_StudentCenter" style="width:100%;height:100%; border:0;" />              </td>              <td style="background-color:#B5B5B5;" width="15%" align="center">活动时间</td>              <td width="20%" style="border:1;border-right:0;">                <input type="text" name="Time_StudentCenter" style="border-left:0; border-right:0; border-top:0; border-bottom:1 solid; border-bottom-color:#000; border-bottom-width:thin; margin-left:5px; width:90%;height:20px;"/>              </td>              <td width="30%" colspan="2" style="border:0;">（上午/下午/晚上）</td>            </tr>            <tr>              <td style="background-color:#B5B5B5; border-left:0;" width="15%" height="60" align="center">普通教室<br />                (50人)</td>              <td width="20%" style="border:0;">                <input type="text" name="NomalClassrom_StudentCenter" style="border-left:0; border-right:0; border-top:0; border-bottom:1 solid; border-bottom-color:#000; border-bottom-width:thin; margin-left:5px; width:90%;height:20px;"/>              </td>              <td colspan="2" width="35%" style="border:0;">（302/303/304/603）</td>              <td rowspan="2" width="15%" style="background-color:#B5B5B5;" align="center">是否经系统查询</td>              <td rowspan="2" width="15%" style="border-right:0;">                <input type="text" name="SystemInquire_StudentCenter" style="width:99%;height:100%; border:0;" />              </td>            </tr>            <tr>              <td style="background-color:#B5B5B5; border-left:0;" width="15%" height="60" align="center">阶梯教室<br />                (300人)</td>              <td width="20%" style="border-right:0;">                <input type="text" name="LectureClassrom_StudentCenter" style="border-left:0; border-right:0; border-top:0; border-bottom:1 solid; border-bottom-color:#000; border-bottom-width:thin; margin-left:5px; width:90%;height:20px;"/>              </td>              <td width="30%" colspan="2" style="border-left:0;">（305/513）</td>            </tr>            <tr>              <td width="15%" style="background-color:#B5B5B5; border-left:0;" height="150px" align="cneter">活动内容（目的，流程，安全负责人）</td>              <td colspan="5" style="border-right:0;">                <textarea rows="10" cols="100" name="ActivityContent_StudentCenter" style="width:99%;height:100%; border:0;"></textarea>              </td>            <tr>              <td style="background-color:#B5B5B5; border-left:0;" width="15%" height="50" align="center">有无商业赞助</td>              <td width="20%">                <input type="text" name="Sponsor_StudentCenter" style="width:100%;height:100%; border:0;" />              </td>              <td width="15%" style="background-color:#B5B5B5;" align="center">赞助方名及赞助方式（如有）</td>              <td colspan="3" style="border-right:0;">                <textarea rows="5" cols="100" name="SponsorWay_StudentCenter" style="width:99%;height:100%; border:0;"></textarea>              </td>            </tr>            <tr>              <td width="15%" style="background-color:#B5B5B5; border-left:0;" height="40px" align="center">活动负责人</td>              <td colspan="2">                <input type="text" name="ResponsiblePeople_StudentCenter" style="width:100%;height:100%; border:0;" />              </td>              <td width="20%" style="background-color:#B5B5B5; border-left:0;" align="center">联系电话</td>              <td colspan="2" style="border-right:0;">                <input type="text" name="Phone_StudentCenter" style="width:99%;height:100%; border:0;" />              </td>            </tr>            <tr>              <td width="15%" style="background-color:#B5B5B5; border-left:0;" height="60px" align="center">社团意见</td>              <td colspan="2">                <input type="text" name="AssociationOpinion_StudentCenter" style="width:100%;height:100%; border:0;" />              </td>              <td width="20%" style="background-color:#B5B5B5;" align="center">社联意见</td>              <td colspan="2" style="border-right:0;">                <input type="text" name="AUOpnion_StudentCenter" style="width:99%;height:100%; border:0;" />              </td>            </tr>            <tr>              <td width="15%" style="background-color:#B5B5B5; border-left:0;" height="40px" align="center">社联经手人</td>              <td colspan="2">                <input type="text" name="AUer_StudentCenter" style="width:100%;height:100%; border:0;" />              </td>              <td width="20%" style="background-color:#B5B5B5;" align="center">联系电话</td>              <td colspan="2" style="border-right:0;">                <input type="text" name="AUPhone_StudentCenter" style="width:99%;height:100%; border:0;" />              </td>            </tr>            <tr>              <td width="15%" style="background-color:#B5B5B5; border-left:0; border-bottom:0;" height="130px" align="center">共青团<br />                华中科技大学委员会意见</td>              <td colspan="5" style="border-right:0;border-bottom:0;"></td>            </tr>          </table>        </div>        <div id="ta_roShow">          <table border="1" cellpadding="0" cellspacing="0" style="font-family:宋体;">            <p align="center" style=" font-size:24px; font-weight:bold; font-family:宋体; ">户外路演场地申请表</p>            <tr>              <td style="background-color:#B5B5B5; border:0;" width="15%" height="40" align="center">协会名称</td>              <td width="20%">                <input type="text" name="AssociationName_RoadShow" style="width:100%;height:100%; border:0;" />              </td>              <td width="15%" style="background-color:#B5B5B5;" align="center">活动名称</td>              <td width="20%">                <input type="text" name="ActivityName_RoadShow" style="width:100%;height:100%; border:0;" />              </td>              <td width="15%" style="background-color:#B5B5B5;" align="center">参与人数</td>              <td width="15%" style="border-right:1;">                <input type="text" name="ParticipantNumber_RoadShow" style="width:99%;height:100%; border:0;" />              </td>            </tr>            <tr>              <td style="background-color:#B5B5B5; border-left:0;" width="15%" height="40" align="center">活动日期</td>              <td width="20%">                <input type="text" name="Date_RoadShow" style="width:100%;height:100%; border:0;" />              </td>              <td style="background-color:#B5B5B5;" width="15%" align="center">活动时间</td>              <td width="20%" style="border:1;border-right:0;">                <input type="text" name="Time_RoadShow" style="border-left:0; border-right:0; border-top:0; border-bottom:1 solid; border-bottom-color:#000; border-bottom-width:thin; margin-left:5px; width:90%;height:20px;"/>              </td>              <td width="30%" colspan="2" style="border:1;border-left:0;">（上午/下午/晚上）</td>            </tr>            <tr>              <td style="background-color:#B5B5B5; border-left:0;" width="15%" height="60" align="center">活动地点<br />                (50人)</td>              <td width="20%" style="border:1;border-right:0;">                <input type="text" name="NomalClassrom_RoadShow" style="border-left:0; border-right:0; border-top:0; border-bottom:1 solid; border-bottom-color:#000; border-bottom-width:thin; margin-left:5px; width:90%;height:20px;"/>              </td>              <td colspan="5" width="35%" style="border:1;border-left:0;">（韵苑路口/紫菘路口/沁苑路口）</td>            </tr>            <tr>              <td width="15%" style="background-color:#B5B5B5; border-left:0;" height="150px" align="cneter">活动内容（目的，流程，安全负责人）</td>              <td colspan="5" style="border-right:1;">                <textarea rows="10" cols="100" name="ActivityContent_RoadShow" style="width:99%;height:100%; border:0;"></textarea>              </td>            <tr>              <td style="background-color:#B5B5B5; border-left:0;" width="15%" height="60" align="center">有无商业赞助</td>              <td width="20%">                <input type="text" name="Sponsor_RoadShow" style="width:100%;height:100%; border:0;" />              </td>              <td width="15%" style="background-color:#B5B5B5;" align="center">赞助方名及赞助方式（如有）</td>              <td colspan="3" style="border-right:1;">                <textarea rows="6" cols="100" name="SponsorWay_RoadShow" style="width:99%;height:100%; border:0;"></textarea>              </td>            </tr>            <tr>              <td width="15%" style="background-color:#B5B5B5; border-left:0;" height="40px" align="center">活动负责人</td>              <td colspan="2">                <input type="text" name="ResponsiblePeople_RoadShow" style="width:100%;height:100%; border:0;" />              </td>              <td width="20%" style="background-color:#B5B5B5; border-left:0;" align="center">联系电话</td>              <td colspan="2" style="border-right:1;">                <input type="text" name="Phone_RoadShow" style="width:99%;height:100%; border:0;" />              </td>            </tr>            <tr>              <td width="15%" style="background-color:#B5B5B5; border-left:0;" height="60px" align="center">社团意见</td>              <td colspan="2">                <input type="text" name="AssociationOpinion_RoadShow" style="width:100%;height:100%; border:0;" />              </td>              <td width="20%" style="background-color:#B5B5B5;" align="center">社联意见</td>              <td colspan="2" style="border-right:1;">                <input type="text" name="AUOpnion_RoadShow" style="width:99%;height:100%; border:0;" />              </td>            </tr>            <tr>              <td width="15%" style="background-color:#B5B5B5; border-left:0;" height="40px" align="center">社联经手人</td>              <td colspan="2">                <input type="text" name="AUer_RoadShow" style="width:100%;height:100%; border:0;" />              </td>              <td width="20%" style="background-color:#B5B5B5;" align="center">联系电话</td>              <td colspan="2" style="border-right:1;">                <input type="text" name="AUPhone_RoadShow" style="width:99%;height:100%; border:0;" />              </td>            </tr>            <tr>              <td width="15%" style="background-color:#B5B5B5; border-left:0; border-bottom:0;" height="130px" align="center">共青团<br />                华中科技大学<br />                委员会意见</td>              <td colspan="2" style="border-bottom:0;"></td>              <td style="background-color:#B5B5B5; border-bottom:0;" height="100px" align="center">华中科技大学<br />                保卫处意见</td>              <td colspan="2" style="border-right:1;border-bottom:0;"></td>            </tr>          </table>        </div>        <div id="ta_buClass">          <p style="font-size:32px; font-family:宋体;" align="center">社团活动申请表<br />            <span style="font-size:26px; font-weight:bold;">(教学楼专用)</span></p>          <table border="1" cellpadding="0" cellspacing="0" style="font-family:宋体; font-weight:bold;">            <tr>              <td width="15%" height="60px" align="center" style="border-left:0;">社团名称</td>              <td width="30%" colspan="2">                <input type="text" name="AssociationName_BuildingClassroom"style="width:100%;height:100%; border:0;"/>              </td>              <td width="15%" align="center">活动名称</td>              <td width="40%" colspan="2">                <input type="text" name="ActivityName_BuildingClassroom"style="width:99%;height:100%; border:0;"/>              </td>            </tr>            <tr>              <td width="15%" height="60px" align="center" style="border-left:0;">活动时间</td>              <td width="15%">                <input type="text" name="Time_BuildingClassroom"style="width:100%;height:100%; border:0;"/>              </td>              <td width="15%" align="center">活动地点</td>              <td width="15%">                <input type="text" name="Place_BuildingClassroom"style="width:100%;height:100%; border:0;"/>              </td>              <td align="center" width="20%">参与人数</td>              <td width="20%">                <input type="text" name="ParticipantNumber_BuildingClassroom"style="width:99%;height:100%; border:0;"/>              </td>            </tr>            <tr>              <td colspan="6" align="center" height="50px">活动内容（目的，流程，安全负责人，主讲人简介等）</td>            </tr>            <tr>              <td colspan="6">                <textarea cols="100" rows="25" name="ActivityContent_BuildingClassroom" style="width:99%;height:100%; border:0;"></textarea>              </td>            </tr>            <tr>              <td width="15%" height="120px" align="center" style="border-left:0;">会长签字</td>              <td colspan="2"></td>              <td width="15%" align="center">社联<br />                审批意见</td>              <td colspan="2"></td>            </tr>          </table>        </div>		<div id="ta_buclass2">			<p style="font-size:32px; font-family:宋体;" align="center">华中科技大学教室申表表<br />			<span style="font-size:26px; font-weight:bold;">(非计划内教学—学生专用)</span></p>			<table  border="1" cellpadding="0" cellspacing="0">			<tr >				<td width="20%" align="center" colspan="2" height="40">院（系）名称</td>				<td width="40%" colspan="4" >					<input type="text" name="Faculty_BuildingClassroom2" style="width:100%;height:100%; border:0;" />				</td>				<td width="15%" align="center" >教室容量 </td>				<td colspan="3">					<input type="text" name="ClassroomCapacity_BuildingClassroom2" style="width:95%;height:100%; border:0;" />				</td>			</tr>			<tr >				<td width="20%" align="center" colspan="2" height="40">申请人姓名 </td>				<td width="25%" colspan="2" >					<input type="text" name="ApplicantName_BuildingClassroom2" style="width:100%;height:100%; border:0;" />				</td>				<td width="15%" colspan="2" >					<select name="ApplicantTypeSelect_BuildingClassroom2"  style="width:100%;height:100%; border:0;">						<option value="本科生">本科生</option>						<option value="研究生">研究生</option>						<option value="助教">助教</option>						<option value="教师">教师</option>					</select>				</td>				<td width="15%" align="center" >功能教室 </td>				<td width="25%"  colspan="3">					<select name="ClassroomTypeSelect_BuildingClassroom2" style="width:100%;height:100%; border:0;">						<option value="A、多媒体教室">A、多媒体教室</option>						<option value="B、普通教室">B、普通教室</option>						<option value="C、阶梯教室">C、阶梯教室</option>						<option value="D、联体教室">D、联体教室</option>					</select>				</td>			</tr>			<tr >				<td width="20%" align="center" colspan="2" height="40">申请人联系电话</td>				<td width="15%" align="center" >办公电话号码 </td>				<td width="25%" colspan="3" >					<input type="text" name="OfficePhoneNumber_BuildingClassroom2" style="width:100%;height:100%; border:0;" />				</td>				<td width="15%" align="center" >手机号码</td>				<td width="25%" colspan="3">					<input type="text" name="CellphoneNumber_BuildingClassroom2" style="width:95%;height:100%; border:0;" />				</td>			</tr>			<tr >				<td width="20%" align="center" colspan="2" height="40">活动、讲座时间 </td>				<td width="40%" colspan="4" >					<input type="text" name="Time_BuildingClassroom2" style="width:100%;height:100%; border:0;" />				</td>				<td width="15%" align="center" >教学楼选择</td>				<td width="25%" colspan="3">					<select name="PlaceSelect_BuildingClassroom2" style="width:100%;height:100%; border:0;">						<option value="1、西十二楼">1、西十二楼</option>						<option value="2、西五楼">2、西五楼</option>						<option value="3、东五楼">3、东五楼</option>						<option value="4、东九楼">4、东九楼</option>						<option value="5、东十二楼">5、东十二楼</option>					</select>				</td>			</tr>			<tr >				<td width="20%" align="center" colspan="2" height="40">周次</td>				<td width="10%" colspan="2" >					<input type="text" name="Week_BuildingClassroom2" style="width:100%;height:100%; border:0;" />				</td>				<td width="20%" align="center" colspan="1" >星期</td>				<td width="10%" colspan="2" >					<input type="text" name="Day_BuildingClassroom2" style="width:100%;height:100%; border:0;" />				</td>				<td width="15%" align="center" ><p >节次 </p></td>				<td width="25%" colspan="2">					<select name="LessonSelect_BuildingClassroom2" style="width:100%;height:100%; border:0;">						<option value="1-2节">1-2节</option>						<option value="3-4节">3-4节</option>						<option value="5-6节">5-6节</option>						<option value="7-8节">7-8节</option>						<option value="9-11节">9-11节</option>					</select>				</td>			</tr>			<tr >				<td width="20%" align="center" colspan="2" height="80">说明</td>				<td width="80%" colspan="8" >节次说明：1&#8212;4节为上午；5&#8212;8节为下午；9&#8212;11节为晚上<br>作息时间：秋、夏季1&#8212;4节：8：00-11：50；秋季5&#8212;8节：14：00&#8212;17：30；夏季5&#8212;8节：14：30&#8212;18：00；秋季9&#8212;11节：18：30&#8212;21：50；夏季9&#8212;11节：19：00&#8212;22：20 </td>			</tr>			<tr >				<td width="5%" align="center" rowspan="4" height="80">形式和内容 </p></td>				<td width="15%" height="40" rowspan="2" align="center">一般活动、会议</td>				<td width="80%" colspan="8" >					<textarea cols="100" rows="5" name="ActivityContent_BuildingClassroom2" style="width:99%;height:100%; border:0;"></textarea>				</td>			</tr>			<tr >				<td align="center" colspan="2"  width="15%" height="10">主持人姓名</td>				<td align="center"  width="10%" colspan="1">					<input type="text" name="Compere_BuildingClassroom2" style="width:100%;height:100%; border:0;" />				</td>				<td align="center"  width="10%">单位</td>				<td width="15%">					<input type="text" name="Unit_BuildingClassroom2" style="width:100%;height:100%; border:0;" />				</td>				<td align="center" width="15%">职务职称</td>				<td width="15%" colspan="2">					<input type="text" name="Occupation_BuildingClassroom2" style="width:95%;height:100%; border:0;" />				</td>			</tr>			<tr >				<td width="15%" height="40" rowspan="2" align="center">授课、讲座人员情况(申请多媒体教室)</td>				<td width="80%" align="top" colspan="8" >授课（讲座）内容:					<textarea cols="100" rows="3" name="LectureContent_BuildingClassroom2" style="width:99%;height:60%; border:0;"></textarea>				</td>			</tr>			<tr >				<td align="center" colspan="2" height="10" width="15%" style="border:1;">授课（讲座）姓名</td>				<td height="10" width="10%" style="border:1;">					<input type="text" name="LectureName_BuildingClassroom2" style="width:95%;height:90%;border:0;" />				</td>				<td align="center" height="10" width="10%">单位</td>				<td height="10" width="15%">					<input type="text" name="LectureUnit_BuildingClassroom2" style="width:100%;height:90%; border:0;" />				</td>				<td align="center" height="10" width="15%">职务职称</td>				<td height="10" width="15%" colspan="2">					<input type="text" name="LectureOccupation_BuildingClassroom2" style="width:95%;height:90%; border:0;" />				</td>			</tr>			<tr >				<td width="20%" colspan="2" rowspan="5" height="130">院（系）审核意见</td>				<td width="40%" colspan="3" height="30" style="border-bottom:0;border-top:1;">院（系）分管辅导员意见：</td>				<td width="40%" colspan="5" style="border-bottom:0;">院（系）学工组意见：</td>			</tr>			<tr >				<td  colspan="3" height="20" style="border-top:0;">签名：</td>				<td width="40%" colspan="5" style="border-top:0;">签名：</td>			</tr>			<tr >				<td width="80%" colspan="8" height="30" style="border-bottom:0;">团委领导审核结果和意见：</td>			</tr>			<tr >				<td  colspan="5" height="20" width="20%" style="border-top:0;border-right:0;border-bottom:0;">职 务：</td>				<td  height="20" colspan="3" style="border-top:0;border-left:0;border-bottom:0;">签名</td>			</tr>			<tr >				<td  colspan="7" height="30" style="border-right:0;border-top:0;">盖章</td>				<td  style="border-left:0;border-top:0;">&nbsp;年&nbsp;月&nbsp;日</td>			</tr>			<tr >				<td width="20%"  colspan="2" height="60">教务处审批意见</td>				<td width="55%"  colspan="7" style="border-right:0;">&nbsp;</td>				<td width="25%"  style="border-left:0;">&nbsp;年&nbsp;月&nbsp;日</td>			</tr>			</table>		</div>        <div id="ta_spPlace">          <table border="1" cellpadding="0" cellspacing="0" style="font-family:宋体;">            <p align="center" style=" font-size:24px; font-weight:bold; font-family:宋体; ">特殊场地申请表</p>            <tr>              <td style="background-color:#B5B5B5; border:0;" width="15%" height="40" align="center">协会名称</td>              <td width="20%">                <input type="text" name="AssociationName_SpecialPlace" style="width:100%;height:100%; border:0;" />              </td>              <td width="15%" style="background-color:#B5B5B5;" align="center">活动名称</td>              <td width="20%">                <input type="text" name="ActivityName_SpecialPlace" style="width:100%;height:100%; border:0;" />              </td>              <td width="15%" style="background-color:#B5B5B5;" align="center">参与人数</td>              <td width="15%" style="border-right:0;">                <input type="text" name="ParticipantNumber_SpecialPlace" style="width:99%;height:100%; border:0;" />              </td>            </tr>            <tr>              <td style="background-color:#B5B5B5; border-left:0;" width="15%" height="40" align="center">活动日期</td>              <td width="20%">                <input type="text" name="Date_SpecialPlace" style="width:100%;height:100%; border:0;" />              </td>              <td style="background-color:#B5B5B5;" width="15%" align="center">活动时间</td>              <td width="20%" style="border:1;border-right:0;">                <input type="text" name="Time_SpecialPlace" style="border-left:0; border-right:0; border-top:0; border-bottom:1 solid; border-bottom-color:#000; border-bottom-width:thin; margin-left:5px; width:90%;height:20px;"/>              </td>              <td width="30%" colspan="2" style="border:1;border-left:0;">（上午/下午/晚上）</td>            </tr>            <tr>              <td style="background-color:#B5B5B5; border-left:0;" width="15%" height="60" align="center">活动地点</td>              <td colspan="3" style="border:1;">                <input type="text" name="NomalClassrom_SpecialPlace" style="border:0; width:100%;height:100%;"/>              </td>              <td width="15%" style="background-color:#B5B5B5;" align="center">是否经系统查询</td>              <td width="15%" style="border-right:0;">                <input type="text" name="SystemInquire_SpecialPlace" style="width:99%;height:100%; border:0;" />              </td>            </tr>            <tr>              <td width="15%" style="background-color:#B5B5B5; border-left:0;" height="150px" align="cneter">活动内容（目的，流程，安全负责人）</td>              <td colspan="5" style="border-right:0;">                <textarea rows="10" cols="100" name="ActivityContent_SpecialPlace" style="width:99%;height:100%; border:0;"></textarea>              </td>			 </tr>            <tr>              <td style="background-color:#B5B5B5; border-left:0;" width="15%" height="50" align="center">有无商业赞助</td>              <td width="20%">                <input type="text" name="Sponsor_SpecialPlace" style="width:100%;height:100%; border:0;" />              </td>              <td width="15%" style="background-color:#B5B5B5;" align="center">赞助方名及赞助方式（如有）</td>              <td colspan="3" style="border-right:0;">                <textarea rows="5" cols="100" name="SponsorWay_SpecialPlace" style="width:99%;height:100%; border:0;"></textarea>              </td>            </tr>            <tr>              <td width="15%" style="background-color:#B5B5B5; border-left:0;" height="40px" align="center">活动负责人</td>              <td colspan="2">                <input type="text" name="ResponsiblePeople_SpecialPlace" style="width:100%;height:100%; border:0;" />              </td>              <td width="20%" style="background-color:#B5B5B5; border-left:0;" align="center">联系电话</td>              <td colspan="2" style="border-right:0;">                <input type="text" name="Phone_SpecialPlace" style="width:99%;height:100%; border:0;" />              </td>            </tr>            <tr>              <td width="15%" style="background-color:#B5B5B5; border-left:0;" height="60px" align="center">社团意见</td>              <td colspan="2">                <input type="text" name="AssociationOpinion_SpecialPlace" style="width:100%;height:100%; border:0;" />              </td>              <td width="20%" style="background-color:#B5B5B5;" align="center">社联意见</td>              <td colspan="2" style="border-right:0;">                <input type="text" name="AUOpnion_SpecialPlace" style="width:99%;height:100%; border:0;" />              </td>            </tr>            <tr>              <td width="15%" style="background-color:#B5B5B5; border-left:0;" height="40px" align="center">社联经手人</td>              <td colspan="2">                <input type="text" name="AUer_SpecialPlace" style="width:100%;height:100%; border:0;" />              </td>              <td width="20%" style="background-color:#B5B5B5;" align="center">联系电话</td>              <td colspan="2" style="border-right:0;">                <input type="text" name="AUPhone_SpecialPlace" style="width:99%;height:100%; border:0;" />              </td>            </tr>            <tr>              <td width="15%" style="background-color:#B5B5B5; border-left:0; border-bottom:0;" height="130px" align="center">共青团<br />                华中科技大学<br />                委员会意见</td>              <td style="border-right:0;border-bottom:0;"></td>              <td style="background-color:#B5B5B5; border-bottom:0;">审批单位意见</td>              <td style="border:0;"></td>              <td style="background-color:#B5B5B5; border-bottom:0;">审批单位意见</td>              <td style="border:0;"></td>            </tr>          </table>        </div>        <div id="ta_spoCourt">          <p align="center" style=" font-size:24px; font-weight:bold; font-family:宋体; ">韵苑体育馆场地申请表</p>          <table border="1" width="100%" cellpadding="0" cellspacing="0" style="font-family:宋体;">            <tr>              <td width="30%" height="40px" align="center" style="border-left:0;">申请单位</td>              <td height="40px" colspan="4" style="border-right:0;">                <input type="text" name="AssociationName_SportCourt" style="width:99%;height:100%; border:0;"/>              </td>            </tr>            <tr>              <td width="30%" rowspan="2" align="center" style="border-left:0;">经办人信息</td>              <td width="10%" height="40px" align="center">姓名</td>              <td>                <input type="text" name="Name_SportCourt"style="width:100%;height:100%; border:0;"/>              </td>              <td width="15%" align="center">联系方式</td>              <td width="35%" style="border-right:0;">                <input type="text" name="Phone_SportCourt" style="width:99%;height:100%; border:0;"/>              </td>            </tr>            <tr>              <td height="40px" align="center">学号</td>              <td>                <input type="text" name="StudentNumber_SportCourt" style="width:100%;height:100%; border:0;"/>              </td>              <td width="15%" align="center">所在院（系）</td>              <td width="35%" style="border-right:0;">                <input type="text" name="School_SportCourt" style="width:99%;height:100%; border:0;"/>              </td>            </tr>            <tr>              <td width="30%" align="center" style="border-left:0;">活动内容</td>              <td colspan="4" style="border-right:0;">                <textarea cols="30" rows="6" name="ActivityContent_SportCourt" style="width:99%;height:100%; border:0;"></textarea>              </td>            </tr>            <tr>              <td width="30%" height="40px" align="center" style="border-left:0;">活动日期</td>              <td colspan="2">                <input type="text" name="ActivityDate_SportCourt" style="width:100%;height:100%; border:0;" />              </td>              <td width="15%"  align="center">租借时间</td>              <td width="35%" style="border-right:0;">                <input type="text" name="UseTime_SportCourt" style="width:99%;height:100%; border:0;"/>              </td>            </tr>            <tr>              <td width="30%" height="60px" align="center" style="border-left:0;">备注</td>              <td colspan="4" style="border-bottom:1;">                <textarea cols="30" rows="5" name="Remarks_SportCourt" style="width:99%;height:100%; border:0;"></textarea>              </td>            </tr>            <tr>              <td colspan="5" height="40px" style="font-weight:bold; border-left:0; border-bottom:0;">院（系）或部门负责人意见</td>            </tr>            <tr>              <td colspan="5" height="100px" style="font-weight:bold; border:0;" align="right" valign="bottom">院（系）或部门公章&nbsp;&nbsp;</td>            </tr>            <tr>              <td colspan="5" height="30px" valign="middle" align="right" style="font-weight:bold; border:0;">年&nbsp;月&nbsp;日&nbsp;&nbsp;</td>            </tr>            <tr>              <td height="160px" align="right" valign="bottom" style="border-bottom:0; border-left:0;">校团委审批意见<br />                （盖章）</td>              <td colspan="3" align="right" valign="bottom">体育场馆中心审批意见<br />                (盖章)</td>              <td align="right" valign="bottom" style="border:1;">保卫处审批意见<br />                （盖章）<br />              </td>            </tr>            <tr>              <td height="30px" valign="middle" align="right">年&nbsp;月&nbsp;日</td>              <td colspan="3" align="right" valign="middle" style="border-bottom:0; border-left:0; border-top:0;">年&nbsp;月&nbsp;日</td>              <td align="right" valign="middle">年&nbsp;月&nbsp;日</td>            </tr>          </table>        </div>        <div id="ta_eaThird">          <table border="1" cellpadding="0" cellspacing="0" style="font-family:宋体;">            <p align="center" style=" font-size:24px; font-weight:bold; font-family:宋体; ">东四食堂三楼申请表</p>            <tr>              <td style="background-color:#B5B5B5; border:0;" width="15%" height="40" align="center">协会名称</td>              <td width="20%">                <input type="text" name="AssociationName_EastThird" style="width:100%;height:100%; border:0;" />              </td>              <td width="15%" style="background-color:#B5B5B5;" align="center">活动名称</td>              <td width="20%">                <input type="text" name="ActivityName_EastThird" style="width:100%;height:100%; border:0;" />              </td>              <td width="15%" style="background-color:#B5B5B5;" align="center">参与人数</td>              <td width="15%" style="border-right:0;">                <input type="text" name="ParticipantNumber_EastThird" style="width:99%;height:100%; border:0;" />              </td>            </tr>            <tr>              <td style="background-color:#B5B5B5; border-left:0;" width="15%" height="40" align="center">活动日期</td>              <td width="20%">                <input type="text" name="Date_EastThird" style="width:100%;height:100%; border:0;" />              </td>              <td style="background-color:#B5B5B5;" width="15%" align="center">活动时间</td>              <td width="20%" style="border:1;border-right:0;">                <input type="text" name="Time_EastThird" style="border-left:0; border-right:0; border-top:0; border-bottom:1 solid; border-bottom-color:#000; border-bottom-width:thin; margin-left:5px; width:90%;height:20px;"/>              </td>              <td width="30%" colspan="2" style="border:1;border-left:0;">（上午/下午/晚上）</td>            </tr>            <tr>              <td style="background-color:#B5B5B5; border:1 width="15%" height="60" align="center">活动地点<br />                (50人)</td>              <td  colspan="5" width="20%" style="border:1; font-size:18px;" align="center">东四食堂三楼</td>            </tr>            <tr>              <td width="15%" style="background-color:#B5B5B5; border-left:0;" height="150px" align="cneter">活动内容（目的，流程，安全负责人）</td>              <td colspan="5" style="border-right:0;">                <textarea rows="10" cols="100" name="ActivityContent_EastThird" style="width:99%;height:100%; border:0;"></textarea>              </td>			 </tr>            <tr>              <td style="background-color:#B5B5B5; border-left:0;" width="15%" height="60" align="center">有无商业赞助</td>              <td width="20%">                <input type="text" name="Sponsor_EastThird" style="width:100%;height:100%; border:0;" />              </td>              <td width="15%" style="background-color:#B5B5B5;" align="center">赞助方名及赞助方式（如有）</td>              <td colspan="3" style="border-right:0;">                <textarea rows="6" cols="100" name="SponsorWay_EastThird" style="width:99%;height:100%; border:0;"></textarea>              </td>            </tr>            <tr>              <td width="15%" style="background-color:#B5B5B5; border-left:0;" height="40px" align="center">活动负责人</td>              <td colspan="2">                <input type="text" name="ResponsiblePeople_EastThird" style="width:100%;height:100%; border:0;" />              </td>              <td width="20%" style="background-color:#B5B5B5; border-left:0;" align="center">联系电话</td>              <td colspan="2" style="border-right:0;">                <input type="text" name="Phone_EastThird" style="width:99%;height:100%; border:0;" />              </td>            </tr>            <tr>              <td width="15%" style="background-color:#B5B5B5; border-left:0;" height="60px" align="center">社团意见</td>              <td colspan="2">                <input type="text" name="AssociationOpinion_EastThird" style="width:100%;height:100%; border:0;" />              </td>              <td width="20%" style="background-color:#B5B5B5;" align="center">社联意见</td>              <td colspan="2" style="border-right:0;">                <input type="text" name="AUOpnion_EastThird" style="width:99%;height:100%; border:0;" />              </td>            </tr>            <tr>              <td width="15%" style="background-color:#B5B5B5; border-left:0;" height="40px" align="center">社联经手人</td>              <td colspan="2">                <input type="text" name="AUer_EastThird" style="width:100%;height:100%; border:0;" />              </td>              <td width="20%" style="background-color:#B5B5B5;" align="center">联系电话</td>              <td colspan="2" style="border-right:0;">                <input type="text" name="AUPhone_EastThird" style="width:99%;height:100%; border:0;" />              </td>            </tr>            <tr>              <td width="15%" style="background-color:#B5B5B5; border-left:0; border-bottom:0;" height="130px" align="center">共青团<br />                华中科技大学<br />                委员会意见</td>              <td colspan="2" style="border-bottom:0;"></td>              <td style="background-color:#B5B5B5; border-bottom:0;" height="100px" align="center">华中科技大学<br />                学生工作处意见</td>              <td colspan="2" style="border-right:0;border-bottom:0;"></td>            </tr>          </table>        </div>		  <input type="button" value="策划提交" id="boPlace_table_submit" name="boPlace_table_submit"  onclick="boPlace_submit()"/>         <input type="button" value="检查" id="boPlace_table_confirm" onclick="boPlace_confirm()" />		</form>		<div id="ta_othPlace">		<!-- <form id="Form1" method="post"  action="http://pyy1996.sinaapp.com/upload/file.php" enctype="multipart/form-data"> -->        <table  width="130px;">          <tr>            <td>其他场地：</td>          </tr>		   <tr>				<td><input id="wordFile_otherplace" type="file"  name="file_OtherPlace" class="fileInput"/></td>		   </tr>          <tr>            <td>请上传word文件</td>          </tr>        </table>		  <input type="submit" value="策划提交" id="boPlace_file_submit" name="boPlace_flie_submit"  />         <input type="button" value="检查" id="boPlace_file_confirm" onclick="boPlace_confirm()" />       <!-- </form> -->	   	   </div>      </div>        <!--<form id="bo_othStuff_table" method="post"  action="http://pyy1996.sinaapp.com/upload/file.php" enctype="multipart/form-data">-->          <div id="bo_othStuff_table">        <table  width="130px;">          <tr>            <td>其他借用：</td>          </tr>		   <tr>				<td><input id="wordFile_bo_other" type="file"  name="file_OtherStuff" class="fileInput"/></td>		   </tr>          <tr>            <td>请上传word文件</td>          </tr>        </table>        <input type="submit" value="策划提交" id="bo_othStuff_table_submit" name="bo_othStuff_table_submit"  />        <input type="button" value="检查" id="bo_othStuff_table_confirm" onclick="bo_othStuff_confirm()" />      </div>        <!--</form>-->      <div id="stateQuery_table">        <table width="80%" border="1" cellspacing="0" cellpadding="0">            <tr>                <th>提交时间</th>                <th>审核状态</th>                <th>种类</th>                <th>浏览</th>                <th>审核意见</th>            </tr>            <foreach name="list" item="v" key="lm">                <foreach name="v[1]" item="u">                    <tr>                        <td>{$u.createtime}</td>                        <eq name="u.reviewstate" value="0"><td>未审核</td></eq>                        <eq name="u.reviewstate" value="1"><td>审核通过</td></eq>                        <eq name="u.reviewstate" value="2"><td>审核未通过</td></eq>                        <td>{$v[0]}</td>                        <td><a href="{:U('Material/Download/' . $lm,array('id'=>$u['id']))}">下载</a></td>                        <td>{$u.reviewadvice}</td>                    </tr>                </foreach>            </foreach>        </table>      </div>    </div>  <div id="logo"> <img src="__PUBLIC__/MaterialSrc/images/bottom.jpg" width="100%" height="100px"> </div>  <div id="footer">  <table>    <tr>      <td valign="middle" width="15%" align="right"><img src="__PUBLIC__/MaterialSrc/images/mark_address.png"></td>      <td valign="middle" width="25%" align="left">武汉市洪山区珞喻路1037号华中科技大学大学生活动中心</td>      <td valign="middle" width="6%" align="right"><img src="__PUBLIC__/MaterialSrc/images/mark_call.png"></td>      <td valign="middle" width="9%" align="left">027-87541242</td>      <td valign="middle" width="6%" align="right"><img src="__PUBLIC__/MaterialSrc/images/mark_email.png"></td>      <td valign="middle" width="9%" align="left">auweizai@auhust.net</td>      <td valign="middle" width="6%" align="right"><img src="__PUBLIC__/MaterialSrc/images/mark_email.png"></td>      <td valign="middle" width="24%" align="left">2434075395@qq.com</td>    </tr>  </table></div>  <div id="tips" style="border:0;">        <p style="color:#989797;font-size:20px;">提示栏</p>        <p id="p1" style="color:#989797;background-color:#eaeaea;">提示栏</p>  </div></form></body></html>

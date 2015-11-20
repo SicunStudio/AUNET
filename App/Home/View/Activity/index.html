@@ -1,29 +1,1 @@
-<!doctype html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>活动预告</title>
-</head>
-
-<body>
-<table width="714px" border="0" style=" margin-top:10px; margin-bottom:20px;">
-    <tbody>
-    <tr><td colspan="3">
-        <img src="__PUBLIC__/NewsSrc/image/HDYG-Head.png" width="714" height="169"
-                             alt=""/></td>
-    </tr>
-    <foreach name="forecast" item="v">
-        <tr>
-            <td bgcolor="#ffa968" width="33%">{$v.time|date='Y-m-d H:i',###}</td>
-            <td bgcolor="#addf7e" width="33%">{$v.place}</td>
-            <td bgcolor="#7db3f1" width="33%"><a style="text-decoration:none;color:#000000;" href="{:U('/Home/ActivityDetail/Index',array('id'=>$v['id']))}">{$v.title}</a> </td>
-        <tr>
-    </foreach>
-    </tbody>
-</table>
-<script>
-    document.getElementById("side-fore").className="sidelink active";
-    document.getElementById("navtitle-3").innerHTML="活动预告";
-</script>
-</body>
-</html>
+<!doctype html><html><head>    <meta charset="utf-8">    <title>活动预告</title></head><body><table  width="100%" border="0" style=" margin-top:10px; margin-bottom:20px;">    <tbody>    <tr><td colspan="3">        <img src="__PUBLIC__/NewsSrc/image/HDYG-Head.png" width="100%" alt=""/></td>    </tr>    <foreach name="forecast" item="v">        <tr>            <td bgcolor="#ffa968" width="33%">{$v.time|date='Y-m-d H:i',###}</td>            <td bgcolor="#addf7e" width="33%">{$v.place}</td>            <td bgcolor="#7db3f1" width="33%"><a style="text-decoration:none;color:#000000;" href="{:U('/Home/ActivityDetail/Index',array('id'=>$v['id']))}">{$v.title}</a> </td>        <tr>    </foreach>    </tbody></table><script>    document.getElementById("side-fore").className="sidelink active";    document.getElementById("navtitle-3").innerHTML="活动预告";</script></body></html>

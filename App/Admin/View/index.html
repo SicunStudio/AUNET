@@ -1,131 +1,1 @@
-<!DOCTYPE html>
-<html>
-<head lang="zh-cn">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>社团网后台管理系统</title>
-    <link href="__PUBLIC__/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <script src="__PUBLIC__/bootstrap/js/jquery.min.js"></script>
-    <script src="__PUBLIC__/bootstrap/js/bootstrap.min.js"></script>
-    <style>
-      *{font-family: "微软雅黑"}
-
-      a
-      {
-        text-decoration: none;
-        color: inherit;
-      }
-      a:hover
-      { text-decoration: none;}
-
-      .list-group-item .list-group-item-text
-      { margin-left: 1em;}
-
-      .leftbaritem
-      { font-size: 1.1em;}
-
-      .list-group-item-heading
-      { font-size: 1.4em; font-weight: 500;}
-
-      .SideMenu .list-group .list-group-item
-      {padding-left: 3em;}
-
-
-    </style>
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-</head>
-<body>
-<nav class="navbar navbar-default">
-    <div class="container">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#">社团网后台管理系统</a>
-        </div>  
-        <div class="navbar-text navbar-right">欢迎你，<a href="{:U('/Admin/Rbac/help');}">{$_SESSION['username']}</a><a href="{:U('/Admin/Rbac/logout');}" class="btn btn-danger btn-xs" style="margin-left:10px;">退出登录</a></div>
-    </div>
-</nav>
-
-<div class="container">
-    <div class="col-md-3 SideMenu">
-        <div class="list-group">
-            <div class="list-group-item" id="manage-index">
-                <h3 class="list-group-item-heading">管理首页</h3>
-                <a class="list-group-item-text leftbaritem" href="{:U('/Admin/Rbac/rbac_index')}">管理首页</a>
-            </div><!--group-index-->
-            <div class="list-group-item" id="advise">
-                <h3 class="list-group-item-heading">建议管理</h3>
-                <p class="list-group-item-text leftbaritem"><a href="{:U('/Admin/Advise/advise_index')}">建议列表</a></p>
-            </div><!--group-advice-->
-            <div class="list-group-item" id="event">
-                <h3 class="list-group-item-heading">社联大事记</h3>
-                <p class="list-group-item-text leftbaritem"><a href="{:U('/Admin/Event/event_index')}">大事记列表</a></p>
-                <p class="list-group-item-text leftbaritem"><a href="{:U('/Admin/Event/add_event')}">添加大事记</a></p>
-            </div><!--group-event-->
-            <div class="list-group-item" id="announce">
-              <h3 class="list-group-item-heading">发布公告</h3>
-              <p class="list-group-item-text leftbaritem"><a href="{:U('/Admin/Announce/add_announce')}">添加公告</a></p>
-              <p class="list-group-item-text leftbaritem"><a href="{:U('/Admin/Announce/announce_index')}">公告列表</a></p>
-            </div><!--group-announce-->
-            <div class="list-group-item" id="forecast">
-              <h3 class="list-group-item-heading">活动预告</h3>
-              <p class="list-group-item-text leftbaritem"><A href="{:U('/Admin/Forecast/forecast_index')}">预告列表</A></p>
-              <p class="list-group-item-text leftbaritem"><A href="{:U('/Admin/Forecast/addforecast')}">添加预告</A></p>
-            </div><!--group-forecast-->
-            <div class="list-group-item" id="upload">
-              <h3 class="list-group-item-heading">资料上传</h3>
-              <p class="list-group-item-text leftbaritem"><a href="{:U('/Admin/Upload/upload_index')}">上传附件</a></p>
-              <p class="list-group-item-text leftbaritem"><a href="{:U('/Admin/Upload/doc_list')}">资料列表</a></p>
-            </div><!--group-upload-->
-            <div class="list-group-item" id="attr">
-              <h3 class="list-group-item-heading">属性管理</h3>
-              <p class="list-group-item-text leftbaritem"><a href="{:U('/Admin/NewsAttribute/attr_index')}">属性列表</a></p>
-              <p class="list-group-item-text leftbaritem"><a href="{:U('/Admin/NewsAttribute/addattr')}">添加属性</a></p>
-            </div><!--group-attr-->
-            <div class="list-group-item" id="news">
-              <h3 class="list-group-item-heading">文章管理</h3>
-              <p class="list-group-item-text leftbaritem"><a href="{:U('/Admin/News/news_index')}">文章列表</a></p>
-              <p class="list-group-item-text leftbaritem"><a href="{:U('/Admin/News/addnews');}">添加文章</a></p>
-              <p class="list-group-item-text leftbaritem"><a href="{:U('/Admin/News/trash');}">回收站</a></p>
-            </div><!--group-news-->
-            <div class="list-group-item" id="rbac">
-              <h3 class="list-group-item-heading">权限管理</h3>
-              <p class="list-group-item-text leftbaritem"><a href="{:U('/Admin/Rbac/role');}">角色列表</a></p>
-              <p class="list-group-item-text leftbaritem"><a href="{:U('/Admin/Rbac/user');}">用户列表</a></p>
-              <p class="list-group-item-text leftbaritem"><a href="{:U('/Admin/Rbac/node');}">节点列表</a></p>
-            </div><!--group-rbac-->
-            <div class="list-group-item" id="cate">
-              <h3 class="list-group-item-heading">分类管理</h3>
-              <p class="list-group-item-text leftbaritem"><a href="{:U('/Admin/Category/addcate');}">添加分类</a></p>
-              <p class="list-group-item-text leftbaritem"><a href="{:U('/Admin/Category/cate_index');}">分类列表</a></p>
-            </div><!--group-cate-->
-            <div class="list-group-item" id="acc">
-              <h3 class="list-group-item-heading">账户管理</h3>
-              <p class="list-group-item-text leftbaritem"><a href="{:U('/Admin/Rbac/help');}">用户帮助</a></p>
-              <p class="list-group-item-text leftbaritem"><a href="{:U('/Admin/Rbac/editpwdbyuser')}">修改密码</a></p>
-              <p class="list-group-item-text leftbaritem"><a href="{:U('/Admin/Rbac/logout');}">退出登录</a></p>
-            </div><!--group-acc-->
-            <div class="list-group-item" id="material">
-              <h3 class="list-group-item-heading">物资系统管理</h3>
-              <p class="list-group-item-text leftbaritem"><a href="{:U('/Admin/Material/material_index');}">物资系统管理</a></p>
-            </div><!--group-material-->
-            <div class="list-group-item" id="design">
-                <h3 class="list-group-item-heading">设计委托</h3>
-                <p class="list-group-item-text leftbaritem"><a href="{:U('/Admin/Design/design_index');}">设计委托管理</a></p>
-            </div><!--group-material-->
-        </div><!--listgroup-->
-    </div><!--sidemenu-->
-
-    <!-- 右侧内容 -->
-    <div class="col-md-9">
-  {__CONTENT__}
-    </div><!-- 右侧栏div结束 -->
-
-</div><!--container-->
-
-</body>
-</html>
+<!DOCTYPE html><html><head lang="zh-cn">    <meta charset="UTF-8">    <meta http-equiv="X-UA-Compatible" content="IE=edge">    <meta name="viewport" content="width=device-width, initial-scale=1">    <title>社团网后台管理系统</title>    <link href="__PUBLIC__/bootstrap/css/bootstrap.min.css" rel="stylesheet">    <script src="__PUBLIC__/bootstrap/js/jquery.min.js"></script>    <script src="__PUBLIC__/bootstrap/js/bootstrap.min.js"></script>    <style>      *{font-family: "微软雅黑"}      a      {        text-decoration: none;        color: inherit;      }      a:hover      { text-decoration: none;}      .list-group-item .list-group-item-text      { margin-left: 1em;}      .leftbaritem      { font-size: 1.1em;}      .list-group-item-heading      { font-size: 1.4em; font-weight: 500;}      .SideMenu .list-group .list-group-item      {padding-left: 3em;}    </style>    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->    <!--[if lt IE 9]>      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>    <![endif]--></head><body><nav class="navbar navbar-default">    <div class="container">        <div class="navbar-header">            <a class="navbar-brand" href="#">社团网后台管理系统</a>        </div>          <div class="navbar-text navbar-right">欢迎你，<a href="{:U('/Admin/Rbac/help');}">{$_SESSION['username']}</a><a href="{:U('/Admin/Rbac/logout');}" class="btn btn-danger btn-xs" style="margin-left:10px;">退出登录</a></div>    </div></nav><div class="container">    <div class="col-md-3 SideMenu">        <div class="list-group">            <div class="list-group-item" id="manage-index">                <h3 class="list-group-item-heading">管理首页</h3>                <a class="list-group-item-text leftbaritem" href="{:U('/Admin/Rbac/rbac_index')}">管理首页</a>            </div><!--group-index-->            <div class="list-group-item" id="advise">                <h3 class="list-group-item-heading">建议管理</h3>                <p class="list-group-item-text leftbaritem"><a href="{:U('/Admin/Advise/advise_index')}">建议列表</a></p>            </div><!--group-advice-->            <div class="list-group-item" id="event">                <h3 class="list-group-item-heading">社联大事记</h3>                <p class="list-group-item-text leftbaritem"><a href="{:U('/Admin/Event/event_index')}">大事记列表</a></p>                <p class="list-group-item-text leftbaritem"><a href="{:U('/Admin/Event/add_event')}">添加大事记</a></p>            </div><!--group-event-->            <div class="list-group-item" id="announce">              <h3 class="list-group-item-heading">发布公告</h3>              <p class="list-group-item-text leftbaritem"><a href="{:U('/Admin/Announce/add_announce')}">添加公告</a></p>              <p class="list-group-item-text leftbaritem"><a href="{:U('/Admin/Announce/announce_index')}">公告列表</a></p>            </div><!--group-announce-->            <div class="list-group-item" id="forecast">              <h3 class="list-group-item-heading">活动预告</h3>              <p class="list-group-item-text leftbaritem"><A href="{:U('/Admin/Forecast/forecast_index')}">预告列表</A></p>              <p class="list-group-item-text leftbaritem"><A href="{:U('/Admin/Forecast/addforecast')}">添加预告</A></p>            </div><!--group-forecast-->            <div class="list-group-item" id="upload">              <h3 class="list-group-item-heading">资料上传</h3>              <p class="list-group-item-text leftbaritem"><a href="{:U('/Admin/Upload/upload_index')}">上传附件</a></p>              <p class="list-group-item-text leftbaritem"><a href="{:U('/Admin/Upload/doc_list')}">资料列表</a></p>            </div><!--group-upload-->            <div class="list-group-item" id="attr">              <h3 class="list-group-item-heading">属性管理</h3>              <p class="list-group-item-text leftbaritem"><a href="{:U('/Admin/NewsAttribute/attr_index')}">属性列表</a></p>              <p class="list-group-item-text leftbaritem"><a href="{:U('/Admin/NewsAttribute/addattr')}">添加属性</a></p>            </div><!--group-attr-->            <div class="list-group-item" id="news">              <h3 class="list-group-item-heading">文章管理</h3>              <p class="list-group-item-text leftbaritem"><a href="{:U('/Admin/News/news_index')}">文章列表</a></p>              <p class="list-group-item-text leftbaritem"><a href="{:U('/Admin/News/addnews');}">添加文章</a></p>              <p class="list-group-item-text leftbaritem"><a href="{:U('/Admin/News/trash');}">回收站</a></p>            </div><!--group-news-->            <div class="list-group-item" id="rbac">              <h3 class="list-group-item-heading">权限管理</h3>              <p class="list-group-item-text leftbaritem"><a href="{:U('/Admin/Rbac/role');}">角色列表</a></p>              <p class="list-group-item-text leftbaritem"><a href="{:U('/Admin/Rbac/user');}">用户列表</a></p>              <p class="list-group-item-text leftbaritem"><a href="{:U('/Admin/Rbac/node');}">节点列表</a></p>            </div><!--group-rbac-->            <div class="list-group-item" id="cate">              <h3 class="list-group-item-heading">分类管理</h3>              <p class="list-group-item-text leftbaritem"><a href="{:U('/Admin/Category/addcate');}">添加分类</a></p>              <p class="list-group-item-text leftbaritem"><a href="{:U('/Admin/Category/cate_index');}">分类列表</a></p>            </div><!--group-cate-->            <div class="list-group-item" id="acc">              <h3 class="list-group-item-heading">账户管理</h3>              <p class="list-group-item-text leftbaritem"><a href="{:U('/Admin/Rbac/help');}">用户帮助</a></p>              <p class="list-group-item-text leftbaritem"><a href="{:U('/Admin/Rbac/editpwdbyuser')}">修改密码</a></p>              <p class="list-group-item-text leftbaritem"><a href="{:U('/Admin/Rbac/logout');}">退出登录</a></p>            </div><!--group-acc-->            <div class="list-group-item" id="material">              <h3 class="list-group-item-heading">物资系统管理</h3>              <p class="list-group-item-text leftbaritem"><a href="{:U('/Admin/Material/material_index');}">物资系统管理</a></p>            </div><!--group-material-->            <div class="list-group-item" id="design">                <h3 class="list-group-item-heading">设计委托</h3>                <p class="list-group-item-text leftbaritem"><a href="{:U('/Admin/Design/design_index');}">设计委托管理</a></p>            </div><!--group-material-->        </div><!--listgroup-->    </div><!--sidemenu-->    <!-- 右侧内容 -->    <div class="col-md-9">  {__CONTENT__}    </div><!-- 右侧栏div结束 --></div><!--container--></body></html>

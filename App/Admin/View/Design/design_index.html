@@ -1,31 +1,1 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
-<table class="table table-striped table-hover">
-    <tbody>
-    <thead align="center" valign="center">
-    <td>委托时间</td>
-    <td>内容</td>
-    <td>电话</td>
-    <td>状态</td>
-    </thead>
-    <foreach name="design" item="v">
-        <tr>
-            <td width="8%" align="center">{$v.time}</td>
-            <td width="15%" align="center">{$v.content}</td>
-            <td width="12%" align="center">{$v.phone}</td>
-            <td width="15%" align="center"><if condition="$v['done']"><strong>完成</strong><else/>未完成</if></td>
-        </tr>
-    </foreach>
-    </tbody>
-</table>
-<div align="center">
-    <span class="rows">共{$count}条记录</span>
-    {$page}
-</div>
-</body>
-</html>
+<!DOCTYPE html><html><head lang="en">    <meta charset="UTF-8">    <title></title></head><body><table class="table table-striped table-hover">    <tbody>    <thead align="center" valign="center">    <td>委托时间</td>    <td>内容</td>    <td>电话</td>    <td>状态</td>    </thead>    <foreach name="design" item="v">        <tr>            <td width="8%" align="center">{$v.time}</td>            <td width="15%" align="center">{$v.content}</td>            <td width="12%" align="center">{$v.phone}</td>            <td width="15%" align="center"><if condition="$v['done']"><strong>完成</strong><else/>未完成</if></td>        </tr>    </foreach>    </tbody></table><div align="center">    <span class="rows">共{$count}条记录</span>    {$page}</div></body></html>
