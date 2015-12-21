@@ -31,6 +31,10 @@
     }
 }
 
+.table-wrapper {
+    overflow-x: auto;
+}
+
 .Slidelist {
     padding: 5px 10px;
 }
@@ -61,3 +65,21 @@
     top: 16px;
 }
 
+.FormSwitcher{
+    padding: 2px 5px;
+    display: block;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.FormSwitcher.active {
+    background-color: #00a0e9;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.FormSwitcher:hover {
+    text-decoration: none;
+    cursor: pointer;
+    border: solid 1px #00a0e9;
+}
