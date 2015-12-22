@@ -26,8 +26,10 @@ function generateDateSelector(ToY,ToM,ToD,StY,StM,StD,IfSelToday,Up,targetName,p
      * cssStyle 创建选单的样式，如没有请赋值 ""
      *
      */
-
-
+    var ChangeNum=-1; //每次增加或者减少的量
+    if(Up){
+        ChangeNum=1;
+    }
 }
 
 function IsPingYear(year)//判断是否闰平年

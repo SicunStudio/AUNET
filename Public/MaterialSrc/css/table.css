@@ -1,3 +1,8 @@
+.FillForm {
+    table-layout: fixed;
+    margin: 5px auto;
+}
+
 .FillForm .inputArea {
     border: none;
     width: 100%;
@@ -7,6 +12,10 @@
     height: 35px;
     line-height: 35px;
     font-size: 16px;
+}
+
+.ErrorInput {
+    background-color: #ffe3e3;
 }
 
 .FillForm input[type="text"].inputArea.h50 {
@@ -33,4 +42,14 @@
 
 .disable-area:hover {
     cursor: no-drop;
+}
+
+.tableContainer {
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.tableWrapper {
+    width:710px;
+    margin: 5px auto;
 }

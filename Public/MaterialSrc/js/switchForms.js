@@ -38,12 +38,12 @@ $(document).on("click",".FormSwitcher",function(){
     $("#FormArea").html("");
 
     if(tableURL=="None"){
-        $("#FormArea").html(errorMsg);
+        $("#FormArea").html(errorMsg + "<h4>此表格不存在</h4>");
     }
     else{
         $("#FormArea").load(tableURL,function(response,status,xhr){
             if(status!="success"){
-                $("#FormArea").html(errorMsg);
+                $("#FormArea").html(errorMsg + "<h4>表格错误</h4>");
             }
         });
     }
