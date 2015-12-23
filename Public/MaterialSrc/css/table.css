@@ -1,6 +1,12 @@
+.FillForm {
+    table-layout: fixed;
+    margin: 5px auto;
+}
+
 .FillForm .inputArea {
     border: none;
     width: 100%;
+    padding-left: 10px;
 }
 
 .FillForm input[type="text"].inputArea.h35 {
@@ -9,15 +15,46 @@
     font-size: 16px;
 }
 
+.FillForm input[type="text"].inputArea.h35.underlined {
+    height: 30px;
+    line-height: 30px;
+    border-bottom: solid 1px #000000;
+    margin-bottom: 3px;
+}
+
+
 .FillForm input[type="text"].inputArea.h50 {
-    height: 50px;
-    line-height: 50px;
+     height: 50px;
+     line-height: 50px;
+     font-size: 16px;
+ }
+
+.FillForm input[type="text"].inputArea.h50.underlined {
+    height: 45px;
+    line-height: 45px;
+    border-bottom: solid 1px #000000;
+    margin-bottom: 3px;
+}
+
+.FillForm input[type="text"].inputArea.h80 {
+    height: 80px;
+    line-height: 80px;
     font-size: 16px;
+}
+
+.FillForm input[type="text"].inputArea.h100 {
+    height: 100px;
+    line-height: 100px;
+    font-size: 54px;
 }
 
 .FillForm textarea.inputArea {
     height: 100%;
-    line-height: 24px;
+    line-height: 20px;
+}
+
+.ErrorInput {
+    background-color: #ffe3e3;
 }
 
 .FillForm td {
@@ -33,4 +70,14 @@
 
 .disable-area:hover {
     cursor: no-drop;
+}
+
+.tableContainer {
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.tableWrapper {
+    width:710px;
+    margin: 5px auto;
 }
