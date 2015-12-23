@@ -15,7 +15,7 @@ function check_null(){
     var MsgString="";
     $("input[data-check-null='notnull']").each(function(){
         //console.log($(this).attr("value"));
-        if($(this).val()==""||$(this).val()==undefined){
+        if(check_value_null($(this).val())){
             MsgString+=$(this).attr("data-check-notice");
             MsgString+=": 不能为空&nbsp;&nbsp;";
             $(this).addClass("ErrorInput");
@@ -38,4 +38,21 @@ function check_number(){
         }
     });
     return MsgString;
+}
+
+/**
+ *单个值测试
+ *
+ */
+
+/**
+ * 检查是否为空
+ * 为空则返回true，不为空则返回false
+ */
+function check_value_null(str){
+    return str==""||str==undefined;
+}
+
+function check_value_num(){
+
 }

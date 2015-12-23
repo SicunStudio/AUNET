@@ -15,6 +15,10 @@ var loadingMsg="<h2>请稍候，正在加载</h2><h4>若长时间未响应，请
 var errorMsg="<h2>抱歉，加载失败</h2><h3>该表格不可用</h3>";
 $(document).on("click",".FormSwitcher",function(){
     //TODO 如果当前表格已经填写，询问是否离开
+    //收起警告框
+    $("#alert-danger").html("");
+    $("#alert-danger").slideUp("fast");
+
     //切换背景
 
     $(".FormSwitcher").removeClass("active");
@@ -43,7 +47,7 @@ $(document).on("click",".FormSwitcher",function(){
     else{
         $("#FormArea").load(tableURL,function(response,status,xhr){
             if(status!="success"){
-                $("#FormArea").html(errorMsg + "<h4>表格错误</h4>");
+                $("#FormArea").html(errorMsg + "<h4>表格错误或网络有问题</h4>");
             }
         });
     }
@@ -51,4 +55,7 @@ $(document).on("click",".FormSwitcher",function(){
 
     //Set Switch Active
     $(this).addClass("active");
+
+    //Add DateSelector if necessary
+
 });

@@ -1,7 +1,7 @@
 /**
  * Created by Brian on 2015/12/21.
  */
-function generateDateSelector(ToY,ToM,ToD,StY,StM,StD,IfSelToday,Up,targetName,prefix,cssClass,cssStyle){
+function generateDateSelector(ToY,StY,IfSelToday,Up,targetName,prefix,cssClass,cssStyle){
     /**
      * 参数解释
      *
@@ -26,13 +26,65 @@ function generateDateSelector(ToY,ToM,ToD,StY,StM,StD,IfSelToday,Up,targetName,p
      * cssStyle 创建选单的样式，如没有请赋值 ""
      *
      */
-    var ChangeNum=-1; //每次增加或者减少的量
-    if(Up){
-        ChangeNum=1;
+    console.log(typeof (Up?StY:ToY));
+    var mydate=new Date();
+    var i=0;
+    var htmlstr="";
+    var YearSelectorID=(prefix?prefix+"-" : "")+"DateSelector-Year";
+    var MonthSelectorID=(prefix?prefix+"-" : "")+"DateSelector-Month";
+    var DaySelectorID=(prefix?prefix+"-" : "")+"DateSelector-Day";
+    htmlstr+="<input name='"+targetName+"' type='hidden'>";
+    htmlstr+="<select class='" + (cssClass?cssClass:"") + "' style='"+(cssStyle?cssStyle:"")+"' data-element-type='DateSelector' data-DateSelector-role='Year'  id='"+ YearSelectorID +"' data-DateSelector-DayListID='"+DaySelectorID+"' data-DateSelector-MonthListID='"+MonthSelectorID+"' data-DateSelector-YearListID='"+YearSelectorID+"' >";
+    for(i=(Up?StY:ToY);i<=(Up?ToY:StY); )
+    {
+        console.log(i);
+        if(IfSelToday && i==mydate.getFullYear()){
+            htmlstr+="<option value='"+ i.toString()+"' selected>" + i.toString() + "</option>";
+        }
+        else
+        {
+            htmlstr+="<option value='"+ i.toString()+"'>" + i.toString() + "</option>";
+        }
+        Up?(i++):(i--);
     }
+    htmlstr+="</select>年";
+
+    htmlstr+="<select data-element-type='DateSelector' data-DateSelector-role='Month'  id='"+ MonthSelectorID +"' data-DateSelector-DayListID='"+DaySelectorID+"' data-DateSelector-MonthListID='"+MonthSelectorID+"' data-DateSelector-YearListID='"+YearSelectorID+"' >";
+    for(i=(Up?1:12);i<=(Up?12:1);(Up?(i++):(i--)))
+    {
+        if(IfSelToday && i==mydate.getMonth()){
+            htmlstr+="<option value='"+ i.toString()+"' selected>" + i.toString() + "</option>";
+        }
+        else
+        {
+            htmlstr+="<option value='"+ i.toString()+"'>" + i.toString() + "</option>";
+        }
+    }
+    htmlstr+="</select>月";
+    htmlstr+="<select data-element-type='DateSelector' data-DateSelector-role='Day'  id='"+ DaySelectorID +"' data-DateSelector-DayListID='"+DaySelectorID+"' data-DateSelector-MonthListID='"+MonthSelectorID+"' data-DateSelector-YearListID='"+YearSelectorID+"' >";
+    if(IfSelToday){
+        var Daylist=new Array(0,31,28,31,30,31,30,31,31,30,31,30,31);
+        Daylist[2]=(IsPingYear(mydate.getFullYear()) && mydate.getMonth()==2)?28:29;
+        for(i=(Up?1:Daylist[mydate.getDate()]);i<=(Up?Daylist[mydate.getDate()]:1);i=(Up?(i+1):(i-1)))
+        {
+            if(IfSelToday && i==mydate.getDate()){
+                htmlstr+="<option value='"+ i.toString()+"' selected>" + i.toString() + "</option>";
+            }
+            else
+            {
+                htmlstr+="<option value='"+ i.toString()+"'>" + i.toString() + "</option>";
+            }
+        }
+    }
+    htmlstr+="</select>日";
+    return htmlstr;
 }
 
 function IsPingYear(year)//判断是否闰平年
 {
     return(0 == year%4 && (year%100 !=0 || year%400 == 0));
 }
+
+$(document).on("changed","[data-element-type='DateSelector']",function(){
+    $("#" + "$(this).attr['data-DateSelector-DayListID']").html();
+});
