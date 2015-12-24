@@ -1,0 +1,1 @@
+/*页码指示*/.pagination a:before{content: <li>;}.pagination a:after{    content: </li>;}
