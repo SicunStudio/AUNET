@@ -245,6 +245,19 @@ CREATE TABLE IF NOT EXISTS `aunet_material_colorprinting` (
   `ID` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 --
+-- 表的结构 `aunet_material_plan`
+--
+
+CREATE TABLE IF NOT EXISTS `aunet_material_plan` (
+  `AssociationName` varchar(15) NOT NULL,
+  `ActivityName` varchar(15) NOT NULL, 
+  `ApproveState` varchar(8) NOT NULL DEFAULT '未审批',
+  `ApproveNote` text NOT NULL,
+  `StoreURL` varchar(40) NOT NULL,
+  `UserName` varchar(10) NOT NULL,
+  `ID` int(5) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+--
 -- Indexes for dumped tables
 --
 
@@ -284,10 +297,15 @@ ALTER TABLE `aunet_material_eaast4`
 --
 ALTER TABLE `aunet_material_sacenter`
   ADD PRIMARY KEY (`ID`);
-  --
+--
 -- Indexes for table `aunet_material_colorprinting`
 --
 ALTER TABLE `aunet_material_colorprinting`
+  ADD PRIMARY KEY (`ID`);
+--
+-- Indexes for table `aunet_material_plan`
+--
+ALTER TABLE `aunet_material_plan`
   ADD PRIMARY KEY (`ID`);
 --
 -- AUTO_INCREMENT for dumped tables
@@ -332,6 +350,11 @@ ALTER TABLE `aunet_material_sacenter`
 -- AUTO_INCREMENT for table `aunet_material_colorprinting`
 --
 ALTER TABLE `aunet_material_colorprinting`
+  MODIFY `ID` int(5) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `aunet_material_plan`
+--
+ALTER TABLE `aunet_material_plan`
   MODIFY `ID` int(5) NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
