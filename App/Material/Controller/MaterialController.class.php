@@ -163,15 +163,15 @@ class MaterialController extends CommonController
 	//后台管理显示函数
     public function admin_table()
     {
-        $name_list = array('sports' => '体育场馆申请',
-            'materialapply' => '物资申请',
-            'special' => '特殊场地申请',
-			'teachingbuilding' => '教学楼教室申请',
-			'outdoor' => '户外路演场地申请',
-			'east4' => '东四三楼申请',
-			'sacenter' => '大活教室申请',
-			'colorprinting' => '彩喷悬挂申请',
-        );
+        $name_list = array('material_sports' => '体育场馆申请',
+            'material_materialapply' => '物资申请',
+            'material_special' => '特殊场地申请',
+			'material_teachingbuilding' => '教学楼教室申请',
+			'material_outdoor' => '户外路演场地申请',
+			'material_east4' => '东四三楼申请',
+			'material_sacenter' => '大活教室申请',
+			'material_colorprinting' => '彩喷悬挂申请',
+		);
 
         $ans = array();
         foreach ($name_list as $name_en => $name_cn)
