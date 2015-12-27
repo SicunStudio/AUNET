@@ -10,6 +10,7 @@ FormAddress[4]=new Array("special","../ApplicationForms/special.html");
 FormAddress[5]=new Array("teachingbuilding","../ApplicationForms/teachingbuilding.html");
 FormAddress[6]=new Array("outdoor","../ApplicationForms/outdoor.html");
 FormAddress[7]=new Array("sacenter","../ApplicationForms/sacenter.html");
+FormAddress[8]=new Array("apply_state","apply_state.html");
 
 var loadingMsg="<h2>请稍候，正在加载</h2><h4>若长时间未响应，请在左侧重新选择表格</h4>";
 var errorMsg="<h2>抱歉，加载失败</h2><h3>该表格不可用</h3>";
@@ -45,11 +46,22 @@ $(document).on("click",".FormSwitcher",function(){
         $("#FormArea").html(errorMsg + "<h4>此表格不存在</h4>");
     }
     else{
-        $("#FormArea").load(tableURL,function(response,status,xhr){
-            if(status!="success"){
-                $("#FormArea").html(errorMsg + "<h4>表格错误或网络有问题</h4>");
-            }
-        });
+        if(FormName!="apply_state"){
+            $("#FormArea").load(tableURL,function(response,status,xhr){
+                if(status!="success"){
+                    $("#FormArea").html(errorMsg + "<h4>表格错误或网络有问题</h4>");
+                }
+            });
+        }
+        else
+        {
+            $("#FormArea").get(tableURL,function(response,status,xhr){
+                if(status!="success"){
+                    $("#FormArea").html(errorMsg + "<h4>表格错误或网络有问题</h4>");
+                }
+            });
+        }
+
     }
 
 
