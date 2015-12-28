@@ -7,7 +7,8 @@
         <ol class="breadcrumb">
             <li><h4>特殊场地申请</h4></li>
         </ol>
-        <form action="" method="POST">
+        <form action="{:U('Material/Material/material_upload')}" enctype="multipart/form-data" method="POST">
+            <input type="hidden" name="action_type" value="special">
             <div class="tableContainer">
                 <table width="700" class="table-bordered FillForm">
                     <tbody>
@@ -102,6 +103,8 @@
                     </tbody>
                 </table>
             </div>
+            <input type="file" name="file">
+            <input type="submit">
         </form>
 
     </body>

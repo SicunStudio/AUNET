@@ -7,7 +7,8 @@
         <ol class="breadcrumb">
             <li><h4>教学楼教室申请</h4></li>
         </ol>
-        <form action="" method="POST">
+        <form action="{:U('Material/Material/material_upload')}" enctype="multipart/form-data" method="POST">
+            <input type="hidden" name="action_type" value="teachingbuilding">
             <div style="text-align: center">
                 <h2>社团活动申请表</h2>
                 <h3>（教学楼专用）</h3>
@@ -29,7 +30,7 @@
                     <tr>
                         <td height="50" align="center" valign="middle">活动时间</td>
                         <td width="124" height="50" align="center" valign="middle">
-                            <input type="text" name="ActivityTime" class="inputArea h50" data-check-notice="活动时间" data-check-null="notnull">
+                            <input type="text" name="ActivityTimeA" class="inputArea h50" data-check-notice="活动时间" data-check-null="notnull">
                         </td>
                         <td width="112" height="50" align="center" valign="middle">活动地点</td>
                         <td height="50" align="center" valign="middle">
@@ -119,9 +120,10 @@
                         <tr>
                             <td height="50" colspan="2" align="center" valign="middle">活动、讲座时间</td>
                             <td height="50" colspan="5" align="center" valign="middle" id="hhhh">
+                                <input type="text" data-check-notice="活动、讲座时间" name="ActivityTimeB" class="inputArea h50">
                                 <script>
-                                    var mydate=new Date();
-                                    $("#hhhh").html(generateDateSelector(mydate.getFullYear()+1,mydate.getFullYear(),true,false,"ActivityDate","uu","asdf","join"));
+                                    /*var mydate=new Date();
+                                    $("#hhhh").html(generateDateSelector(mydate.getFullYear()+1,mydate.getFullYear(),true,false,"ActivityTimeB","uu","asdf","join"));*/
                                 </script>
                             </td>
                             <td width="73" height="50" rowspan="2" align="center" valign="middle">节次</td>
@@ -237,6 +239,8 @@
                     </table>
                 </div>
             </div>
+            <input type="file" name="file">
+            <input type="submit">
         </form>
 
 
