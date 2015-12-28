@@ -80,7 +80,7 @@ class MaterialController extends CommonController
             }
             print_r($info);
             $table=strtolower(I('POST.action_type'));
-			$sql = M("aunet_material.$table" , 'aunet_material_');
+			$sql = M("aunet.$table" , 'aunet_material_');
             $data = array();
             $data['UserName'] = I('session.username', '');
             //$data['ApproveState'] = '未审批';
@@ -99,7 +99,7 @@ class MaterialController extends CommonController
         }
 		//上传数据
 		$table=strtolower(I('POST.action_type'));
-        $sql = M("aunet_material.$table" , 'aunet_material_');
+        $sql = M("aunet.$table" , 'aunet_material_');
         $all_data = I('POST.');
         $data = array();
         foreach ($all_data as $key => $value)
@@ -132,7 +132,7 @@ class MaterialController extends CommonController
 		$type = $pre.$pretype;*/
 		$type = I('POST.action_type');
 		$table = strtolower($type);
-        $sql = M("aunet_material.$table" , 'aunet_material_');
+        $sql = M("aunet.$table" , 'aunet_material_');
         $all_data = I('POST.');
         $data = array();
         $data[0] = array();
