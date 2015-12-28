@@ -2,12 +2,21 @@
 <html lang="zh-CN">
     <head>
         <meta charset="utf-8">
+        <script>
+            $(document).on("click","#ajax_submit",function(){
+                alert("get");$("#myModal").modal('show');
+                $.post("{:U('Material/Material/material_upload')}",$("#applicationForm").serializeArray(),function(){
+
+                });
+            });
+
+        </script>
     </head>
     <body>
         <ol class="breadcrumb">
             <li><h4>彩喷悬挂申请</h4></li>
         </ol>
-        <form action="{:U('Material/Material/material_upload')}" enctype="multipart/form-data" method="POST">
+        <form id="applicationForm" action="{:U('Material/Material/material_upload')}" enctype="multipart/form-data" method="POST">
             <input type="hidden" name="action_type" value="colorprinting">
             <div class="tableContainer">
                 <table class="table-bordered FillForm" width="700" border="0">
@@ -59,7 +68,7 @@
                     </tbody>
                 </table>
             </div>
-            <input type="file" name="file">
+            <input type="file" name="file" id="inputUploadFile"><input type="hidden" name="ifUploadFile" id="ifUploadFile" value="none">
             <input type="submit">
         </form>
 

@@ -15,3 +15,12 @@ $(document).on("click","[data-role='submit']",function(){
     }
 });
 
+$(document).on("change","#inputUploadFile",function(){
+    if($("#inputUploadFile").val()!=undefined && $("#inputUploadFile").val()!=""){
+        $("#ifUploadFile").val("file");
+    }else {
+        $("#ifUploadFile").val("none");
+    }
+});
+
+
