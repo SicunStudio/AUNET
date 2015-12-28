@@ -50,7 +50,7 @@ class MaterialController extends CommonController
         {
             //print("$list_name</br>");
             $list = D(strtolower($name_en));
-            $tmp = $list->where("username='%s'", $user_name)->getField('ID,ApproveState,CreateTime,ApproveNote');
+            $tmp = $list->where("UserName='%s'", $user_name)->getField('ID,ApproveState,CreateTime,ApproveNote');
             //print_r($tmp);
             if ($tmp)
             {
@@ -82,7 +82,7 @@ class MaterialController extends CommonController
             $table=strtolower(I('POST.action_type'));
 			$sql = M("aunet_material.$table" , 'aunet_material_');
             $data = array();
-            $data['Username'] = I('session.username', '');
+            $data['UserName'] = I('session.username', '');
             //$data['ApproveState'] = '未审批';
             //$data['CreateTime'] = date("Y-m-d G:i:s");
             $data['StoreURL'] = './Upload/' . substr($info[$name]['savepath'], 1)  . $info[$name]['savename'];
