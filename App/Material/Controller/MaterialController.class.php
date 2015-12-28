@@ -62,45 +62,23 @@ class MaterialController extends CommonController
 
         $this->display();
     }
-	//前台申请上传数据
+	//前台申请上传附件和数据函数
     public function material_upload()
     {
 		$type = I('POST.action_type');
-		//上传附件
-        if (($type == 'OtherStuff') || ($type == 'OtherPlace'))
-        {
-            $name = 'file_' . $type;
-            $upload = new Upload();// 实例化上传类
-            $upload->maxSize  = 3145728;// 设置附件上传大小
-            $upload->allowExts  = array('doc', 'docx');// 设置附件上传类型
-            $upload->savePath =  './Material/' . $type . '/';// 设置附件上传目录
-            if(!($info = $upload->upload()))
-            {// 上传错误提示错误信息
+		if(ifUploadFile == 'file'){
+			$name = 'file_' . $type;
+			$upload = new Upload();// 实例化上传类
+			$upload->maxSize  = 3145728;// 设置附件上传大小
+			$upload->allowExts  = array('doc', 'docx');// 设置附件上传类型
+			$upload->savePath =  './Material/' . $type . '/';// 设置附件上传目录
+			if(!($info = $upload->upload())){// 上传错误提示错误信息
                 $this->error($upload->getError());
-            }
-            print_r($info);
-            $table=strtolower(I('POST.action_type'));
-			$sql = M("aunet_material.$table" , 'aunet_material_');
-            $data = array();
-            $data['UserName'] = I('session.username', '');
-            //$data['ApproveState'] = '未审批';
-            //$data['CreateTime'] = date("Y-m-d G:i:s");
-            $data['StoreURL'] = './Upload/' . substr($info[$name]['savepath'], 1)  . $info[$name]['savename'];
-            //$data['Name'] = $info[$name]['name'];
-            //$data['AssociationName'] = '';
-
-            $result = $sql->data($data)->add();
-            if($result) {
-                $this->success(L('操作成功！'));
-            }else{
-                $this->error($sql->getError());
-            }
-            return;
-        }
-		//上传数据
-		$table=strtolower(I('POST.action_type'));
-        $sql = M("aunet_material.$table" , 'aunet_material_');
-        $all_data = I('POST.');
+			}
+		}
+        $table=strtolower(I('POST.action_type'));
+		$sql = M("aunet.$table" , 'aunet_material_');
+		$all_data = I('POST.');
         $data = array();
         foreach ($all_data as $key => $value)
         {
@@ -109,13 +87,10 @@ class MaterialController extends CommonController
                 $data[$match[1]] = $value;
             }
         }
-        /*if ($type == 'BuildingClassroom2')
-        {
-            $data['AssociationName'] = $data['Faculty'];
-        }*/
+		if(ifUploadFile == 'file'){
+			$data['StoreURL'] = './Upload/' . substr($info['file']['savepath'], 1)  . $info['file']['savename'];
+		}
         $data['UserName'] = I('session.username', '');
-        //$data['ApproveState'] = '未审批';
-        //$data['CreateTime'] = date("Y-m-d");
         $result = $sql->data($data)->add();
         if($result) {
             $this->success(L('操作成功！'));
@@ -132,7 +107,7 @@ class MaterialController extends CommonController
 		$type = $pre.$pretype;*/
 		$type = I('POST.action_type');
 		$table = strtolower($type);
-        $sql = M("aunet_material.$table" , 'aunet_material_');
+        $sql = M("aunet.$table" , 'aunet_material_');
         $all_data = I('POST.');
         $data = array();
         $data[0] = array();
