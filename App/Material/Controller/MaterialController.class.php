@@ -18,6 +18,7 @@ class MaterialController extends CommonController
     private static $ON_CHECKED = 0;
     private static $IS_PASSED = 1;
     private static $PASSED_FAILED = 2;
+	private static $db = 'aunet_material';
 
 	//天知道这个type数组是干什么的
     private static $type = array('power' => 0,
@@ -34,14 +35,14 @@ class MaterialController extends CommonController
 	//前台申请显示函数
     public function apply_state()
     {
-        $name_list = array('material_sports' => '体育场馆申请',
-            'material_materialapply' => '物资申请',
-            'material_special' => '特殊场地申请',
-			'material_teachingbuilding' => '教学楼教室申请',
-			'material_outdoor' => '户外路演场地申请',
-			'material_east4' => '东四三楼申请',
-			'material_sacenter' => '大活教室申请',
-			'material_colorprinting' => '彩喷悬挂申请',
+        $name_list = array('aunet_material_sports' => '体育场馆申请',
+            'aunet_material_materialapply' => '物资申请',
+            'aunet_material_special' => '特殊场地申请',
+			'aunet_material_teachingbuilding' => '教学楼教室申请',
+			'aunet_material_outdoor' => '户外路演场地申请',
+			'aunet_material_east4' => '东四三楼申请',
+			'aunet_material_sacenter' => '大活教室申请',
+			'aunet_material_colorprinting' => '彩喷悬挂申请',
 		);
         $user_name = I('session.username', '');
         $ans = array();
@@ -61,10 +62,10 @@ class MaterialController extends CommonController
 
         $this->display();
     }
-	//前台申请删除数据
+	//前台申请上传数据
     public function material_upload()
     {
-        $type = I('POST.action_type');
+		$type = I('POST.action_type');
 		//上传附件
         if (($type == 'OtherStuff') || ($type == 'OtherPlace'))
         {
@@ -78,7 +79,8 @@ class MaterialController extends CommonController
                 $this->error($upload->getError());
             }
             print_r($info);
-            $sql = M(strtolower($type));
+            $table=strtolower(I('POST.action_type'));
+			$sql = M("aunet_material.$table" , 'aunet_material_');
             $data = array();
             $data['Username'] = I('session.username', '');
             //$data['ApproveState'] = '未审批';
@@ -96,12 +98,13 @@ class MaterialController extends CommonController
             return;
         }
 		//上传数据
-        $sql = M(strtolower(I('POST.action_type')));
+		$table=strtolower(I('POST.action_type'));
+        $sql = M("aunet_material.$table" , 'aunet_material_');
         $all_data = I('POST.');
         $data = array();
         foreach ($all_data as $key => $value)
         {
-            if (preg_match('/(.*)_' . $type . '$/', $key, $match))
+            if (preg_match('/^(.*)$/', $key, $match))
             {
                 $data[$match[1]] = $value;
             }
@@ -110,7 +113,7 @@ class MaterialController extends CommonController
         {
             $data['AssociationName'] = $data['Faculty'];
         }*/
-        $data['Username'] = I('session.username', '');
+        $data['UserName'] = I('session.username', '');
         //$data['ApproveState'] = '未审批';
         //$data['CreateTime'] = date("Y-m-d");
         $result = $sql->data($data)->add();
@@ -123,8 +126,13 @@ class MaterialController extends CommonController
 	//后台管理审批状态修改函数
     public function material_adupload()
     {
-        $type = I('POST.action_type');
-        $sql = M(strtolower($type));
+		/*
+        $pretype = I('POST.action_type');
+		$pre = 'aunet_material_';
+		$type = $pre.$pretype;*/
+		$type = I('POST.action_type');
+		$table = strtolower($type);
+        $sql = M("aunet_material.$table" , 'aunet_material_');
         $all_data = I('POST.');
         $data = array();
         $data[0] = array();
@@ -141,18 +149,18 @@ class MaterialController extends CommonController
         if (count($data[1]) > 0)
         {
             $map['id'] = array('in', $data[1]);
-            $sql->where($map)->setField('ApproveState', '1');
+            $sql->where($map)->setField('ApproveState', '已通过审批');
         }
 
         if (count($data[2]) > 0)
         {
             $map['id'] = array('in', $data[2]);
-            $sql->where($map)->setField('ApproveState', '2');
+            $sql->where($map)->setField('ApproveState', '未通过审批');
         }
 
         foreach ($all_data as $key => $value)
         {
-            if (preg_match('/' . $type . '_Review_(\d*)$/', $key, $match))
+            if (preg_match('/' . $type . '_Approve_(\d*)$/', $key, $match))
             {
                 $sql->where('id=' . $match[1])->setField('ApproveNote', $value);
             }
@@ -163,14 +171,14 @@ class MaterialController extends CommonController
 	//后台管理显示函数
     public function admin_table()
     {
-        $name_list = array('material_sports' => '体育场馆申请',
-            'material_materialapply' => '物资申请',
-            'material_special' => '特殊场地申请',
-			'material_teachingbuilding' => '教学楼教室申请',
-			'material_outdoor' => '户外路演场地申请',
-			'material_east4' => '东四三楼申请',
-			'material_sacenter' => '大活教室申请',
-			'material_colorprinting' => '彩喷悬挂申请',
+        $name_list = array('aunet_material_sports' => '体育场馆申请',
+            'aunet_material_materialapply' => '物资申请',
+            'aunet_material_special' => '特殊场地申请',
+			'aunet_material_teachingbuilding' => '教学楼教室申请',
+			'aunet_material_outdoor' => '户外路演场地申请',
+			'aunet_material_east4' => '东四三楼申请',
+			'aunet_material_sacenter' => '大活教室申请',
+			'aunet_material_colorprinting' => '彩喷悬挂申请',
 		);
 
         $ans = array();
