@@ -7,7 +7,7 @@
         <ol class="breadcrumb">
             <li><h4>彩喷悬挂申请</h4></li>
         </ol>
-        <form action="{:U('Material/Material/material_upload')}" method="POST">
+        <form action="{:U('Material/Material/material_upload')}" enctype="multipart/form-data" method="POST">
             <input type="hidden" name="action_type" value="colorprinting">
             <div class="tableContainer">
                 <table class="table-bordered FillForm" width="700" border="0">
@@ -59,6 +59,7 @@
                     </tbody>
                 </table>
             </div>
+            <input type="file" name="file">
             <input type="submit">
         </form>
 

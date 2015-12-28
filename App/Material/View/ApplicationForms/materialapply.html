@@ -10,7 +10,8 @@
 <ol class="breadcrumb">
     <li><h4>物资借用</h4></li>
 </ol>
-<form action="POST">
+<form action="{:U('Material/Material/material_upload')}" enctype="multipart/form-data" method="POST">
+    <input type="hidden" name="action_type" value="materialapply">
     <div class="tableContainer">
         <table class="table-bordered FillForm" width="700px">
     <tbody>
@@ -123,6 +124,8 @@
             <input type="button" class="btn btn-primary btn-lg" data-role="submit" value="提交申请">
         </div>
     </div>
+    <input type="file" name="file">
+    <input type="submit">
 </form>
 </body>
 </html>
