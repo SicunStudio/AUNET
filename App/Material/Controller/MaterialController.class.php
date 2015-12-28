@@ -35,14 +35,14 @@ class MaterialController extends CommonController
 	//前台申请显示函数
     public function apply_state()
     {
-        $name_list = array('aunet_material_sports' => '体育场馆申请',
-            'aunet_material_materialapply' => '物资申请',
-            'aunet_material_special' => '特殊场地申请',
-			'aunet_material_teachingbuilding' => '教学楼教室申请',
-			'aunet_material_outdoor' => '户外路演场地申请',
-			'aunet_material_east4' => '东四三楼申请',
-			'aunet_material_sacenter' => '大活教室申请',
-			'aunet_material_colorprinting' => '彩喷悬挂申请',
+        $name_list = array('material_sports' => '体育场馆申请',
+            'material_materialapply' => '物资申请',
+            'material_special' => '特殊场地申请',
+			'material_teachingbuilding' => '教学楼教室申请',
+			'material_outdoor' => '户外路演场地申请',
+			'material_east4' => '东四三楼申请',
+			'material_sacenter' => '大活教室申请',
+			'material_colorprinting' => '彩喷悬挂申请',
 		);
         $user_name = I('session.username', '');
         $ans = array();
@@ -66,7 +66,8 @@ class MaterialController extends CommonController
     public function material_upload()
     {
 		$type = I('POST.action_type');
-		if(ifUploadFile == 'file'){
+        $ifUploadFile = I('POST.ifUploadFile');
+		if($ifUploadFile == 'file'){
 			$name = 'file_' . $type;
 			$upload = new Upload();// 实例化上传类
 			$upload->maxSize  = 3145728;// 设置附件上传大小
@@ -87,8 +88,8 @@ class MaterialController extends CommonController
                 $data[$match[1]] = $value;
             }
         }
-		if(ifUploadFile == 'file'){
-			$data['StoreURL'] = './Upload/' . substr($info['file']['savepath'], 1)  . $info['file']['savename'];
+		if($ifUploadFile == 'file'){
+			$data['StoreURL'] = './Upload' . substr($info['file']['savepath'], 1)  . $info['file']['savename'];
 		}
         $data['UserName'] = I('session.username', '');
         $result = $sql->data($data)->add();
