@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>物资申请表</title>
-    <script src="__PUBLIC__/MaterialSrc/js/check_material.js"></script>
+    <script src="__PUBLIC__/MaterialSrc/js/check_materialapply.js"></script>
 </head>
 <body>
 
@@ -62,7 +62,7 @@
         <td height="35" align="center" valign="middle" width="71">电力<br></td>
         <td height="35" align="center" valign="middle" width="90">瓦数</td>
         <td height="35" colspan="2" align="center" valign="middle" width="90">
-            <input type="text" class="inputArea h35" data-check-null="notnull" data-check-notice="瓦数" data-check-type="number" name="PowerWattage">
+            <input type="text" class="inputArea h35" data-check-notice="瓦数" data-check-type="number" id="PowerWattage" name="PowerWattage">
         </td>
         <td height="35" colspan="3" align="center" valign="middle">（注：瓦数超过2000W须要到主校区配电房签字）</td>
     </tr>
@@ -70,11 +70,11 @@
         <td height="35" align="center" valign="middle" width="71">大量桌椅</td>
         <td height="35" align="center" valign="middle" width="90">桌子数量</td>
         <td width="90" height="35" align="center" valign="middle" width="90">
-            <input type="text" class="inputArea h35"  data-check-type="number" data-check-notice="桌子数量" name="DeskNumber">
+            <input type="text" class="inputArea h35"  data-check-type="number" data-check-notice="桌子数量" id="DeskNumber" name="DeskNumber">
         </td>
         <td height="35" align="center" valign="middle" width="89">椅子数量</td>
         <td height="35" align="center" valign="middle" width="109">
-            <input type="text" class="inputArea h35" data-check-notice="椅子数量" data-check-type="number" name="ChairNumber">
+            <input type="text" class="inputArea h35" data-check-notice="椅子数量" data-check-type="number" id="ChairNumber" name="ChairNumber">
         </td>
         <td height="35" align="center" valign="middle" width="86">归还日期</td>
         <td height="35" align="center" valign="middle" width="92" id="DCReturnTimeArea">
@@ -89,11 +89,11 @@
         <td height="35" align="center" valign="middle" width="71">校车</td>
         <td height="35" align="center" valign="middle" width="90">运送桌子数量</td>
         <td height="35" colspan="2" align="center" valign="middle" width="90">
-            <input type="text" class="inputArea h35" data-check-notice="运送桌子数量" data-check-type="number" name="CarryDeskNumber">
+            <input type="text" class="inputArea h35" data-check-notice="运送桌子数量" data-check-type="number" name="CarryDeskNumber" id="CarryDeskNumber">
         </td>
         <td height="35" align="center" valign="middle" width="109">运送椅子数量</td>
         <td height="35" colspan="2" align="center" valign="middle" width="86">
-            <input type="text" class="inputArea h35" data-check-notice="运送椅子数量" data-check-type="number" name="CarryChairNumber">
+            <input type="text" class="inputArea h35" data-check-notice="运送椅子数量" data-check-type="number" name="CarryChairNumber" id="CarryChairNumber">
         </td>
     </tr>
     <tr>

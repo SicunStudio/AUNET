@@ -1,17 +1,23 @@
 /**
- * Created by Brian on 2015/12/22.
+ * Created by Litingjun on 2015/12/22.
  */
+
+/* 检查表单 */
 $(document).on("click","[data-role='submit']",function(){
-    $("input").removeClass("ErrorInput");
+    $("[class*='ErrorInput']").removeClass("ErrorInput");
     $("#alert-danger").html("");
     $("#alert-danger").slideUp("fast");
     var msgNull=check_null();
     var msgNum=check_number();
-    if(msgNull || msgNum){
-        $("#alert-danger").html(msgNull + "<br>" + msgNum);
+    var msgUnique=check_unique();
+    if(msgNull || msgNum || msgUnique){
+        $("#alert-danger").html((msgNull!=""?msgNull+"<br>":"") + (msgNum!=""?msgNum+"<br>":"")+(msgUnique!=""?msgUnique:""));
 
         $("#alert-danger").slideDown("fast");
         //alert(msg);
+    }
+    else {
+        //TODO 提交表单
     }
 });
 
