@@ -122,8 +122,9 @@
                             <td height="50" colspan="5" align="center" valign="middle" id="hhhh">
                                 <input type="text" data-check-notice="活动、讲座时间" name="ActivityTimeB" class="inputArea h50">
                                 <script>
-                                    /*var mydate=new Date();
-                                    $("#hhhh").html(generateDateSelector(mydate.getFullYear()+1,mydate.getFullYear(),true,false,"ActivityTimeB","uu","asdf","join"));*/
+                                    var mydate=new Date();
+                                    $("#hhhh").html(generateDateSelector(2016,2015,true,false,"ActivityTimeB","ActivityTimeB_DateInput","YY年MM月DD日","uu","asdf","join"));
+                                    $(document).ready(InitializeInputStr("ActivityTimeB_DateInput","YY年MM月DD日","uu"));
                                 </script>
                             </td>
                             <td width="73" height="50" rowspan="2" align="center" valign="middle">节次</td>
@@ -243,6 +244,9 @@
             <input type="submit">
         </form>
 
+        <script>
+
+        </script>
 
     </body>
 </html>
