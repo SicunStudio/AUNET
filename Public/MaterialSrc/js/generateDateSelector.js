@@ -1,7 +1,7 @@
 /**
  * Created by Brian on 2015/12/21.
  */
-function generateDateSelector(ToY,StY,IfSelToday,Up,targetName,targetID,format,prefix,cssClass,cssStyle){
+function generateDateSelector(ToY,StY,IfSelToday,Up,targetName,targetID,format,prefix,cssClass,cssStyle,appendAttr){
     /**
      * 参数解释
      *
@@ -36,16 +36,18 @@ function generateDateSelector(ToY,StY,IfSelToday,Up,targetName,targetID,format,p
     var YearSelectorID=(prefix?prefix+"-" : "")+"DateSelector-Year";
     var MonthSelectorID=(prefix?prefix+"-" : "")+"DateSelector-Month";
     var DaySelectorID=(prefix?prefix+"-" : "")+"DateSelector-Day";
+    IfSelToday=false;
     if(IfSelToday){
         StY=mydate.getFullYear();
     }
     var infostr="class='" + (cssClass?cssClass:"") + "' style='"+(cssStyle?cssStyle:"")+"' data-element-type='DateSelector' data-DateSelector-Up='"+Up+"' data-DateSelector-DayListID='"+DaySelectorID+"' data-DateSelector-MonthListID='"+MonthSelectorID+"' data-DateSelector-YearListID='"+YearSelectorID+"' data-DateSelector-TargetInputID='"+targetID+"'   data-DateSelector-DateStringFormat='"+format+"'";
 
-    htmlstr+="<input id='"+targetID+"' name='"+targetName+"' type='hidden'>";
+    htmlstr+="<input id='"+targetID+"' name='"+targetName+"' type='hidden' "+(appendAttr!=undefined?appendAttr:"")+">";
     htmlstr+="<select data-DateSelector-role='Year' id='"+ YearSelectorID +"' " + infostr + " >";
+    htmlstr+="<option value=''>--</option>";
     for(i=(Up?StY:ToY);(Up?i<=ToY:i>=StY); )
     {
-        console.log(i);
+
         if(IfSelToday && i==mydate.getFullYear()){
             htmlstr+="<option value='"+ i.toString()+"' selected='selected'>" + i.toString() + "</option>";
         }
@@ -58,18 +60,21 @@ function generateDateSelector(ToY,StY,IfSelToday,Up,targetName,targetID,format,p
     htmlstr+="</select>年";
 
     htmlstr+="<select data-DateSelector-role='Month' id='"+ MonthSelectorID +"' " + infostr + " >";
+    htmlstr+="<option value=''>--</option>";
     for(i=(Up?1:12);(Up?i<=12:i>=1);(Up?(i++):(i--)))
     {
-        if(IfSelToday){
+        /*if(IfSelToday){
             htmlstr+="<option value='"+ i+"'"+(i==(mydate.getMonth()+1)?" selected":"")+">" + i.toString() + "</option>";
         }
         else
         {
             htmlstr+="<option value='"+ i+"'"+(i==1?" selected='selected'":"")+">" + i.toString() + "</option>";
-        }
+        }*/
+        htmlstr+="<option value='"+ i+"'>" + i.toString() + "</option>";
     }
     htmlstr+="</select>月";
     htmlstr+="<select data-DateSelector-role='Day' id='"+ DaySelectorID +"'  " + infostr + " >";
+    htmlstr+="<option value=''>--</option>";
     if(IfSelToday){
         var Daylist=new Array(0,31,28,31,30,31,30,31,31,30,31,30,31);
         Daylist[2]=(IsRunYear(mydate.getFullYear()) && (mydate.getMonth()+1)==2)?29:28;

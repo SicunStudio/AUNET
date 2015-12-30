@@ -29,8 +29,12 @@
                     </tr>
                     <tr>
                         <td height="50" align="center" valign="middle">活动时间</td>
-                        <td width="124" height="50" align="center" valign="middle">
+                        <td width="124" height="50" align="center" valign="middle" id="dateSelAreaA">
                             <input type="text" name="ActivityTimeA" class="inputArea h50" data-check-notice="活动时间" data-check-null="notnull">
+                            <script>
+                                var mydate=new Date();
+                                $("#dateSelAreaA").html(generateDateSelector(2016,2015,true,false,"ActivityTimeA","ActivityTimeA_DateInput","YY年MM月DD日","ata","","","data-check-notice='活动时间' data-check-null='notnull'"));
+                            </script>
                         </td>
                         <td width="112" height="50" align="center" valign="middle">活动地点</td>
                         <td height="50" align="center" valign="middle">
@@ -119,12 +123,11 @@
                         </tr>
                         <tr>
                             <td height="50" colspan="2" align="center" valign="middle">活动、讲座时间</td>
-                            <td height="50" colspan="5" align="center" valign="middle" id="hhhh">
+                            <td height="50" colspan="5" align="center" valign="middle" id="dateSelAreaB">
                                 <input type="text" data-check-notice="活动、讲座时间" name="ActivityTimeB" class="inputArea h50">
                                 <script>
                                     var mydate=new Date();
-                                    $("#hhhh").html(generateDateSelector(2016,2015,true,false,"ActivityTimeB","ActivityTimeB_DateInput","YY年MM月DD日","uu","asdf","join"));
-                                    $(document).ready(InitializeInputStr("ActivityTimeB_DateInput","YY年MM月DD日","uu"));
+                                    $("#dateSelAreaB").html(generateDateSelector(2016,2015,true,false,"ActivityTimeB","ActivityTimeB_DateInput","YY年MM月DD日","atb","","","data-check-notice='活动时间' data-check-null='notnull'"));
                                 </script>
                             </td>
                             <td width="73" height="50" rowspan="2" align="center" valign="middle">节次</td>
@@ -243,10 +246,5 @@
             <input type="file" name="file" id="inputUploadFile"><input type="hidden" name="ifUploadFile" id="ifUploadFile" value="none">
             <input type="submit">
         </form>
-
-        <script>
-
-        </script>
-
     </body>
 </html>
