@@ -20,17 +20,17 @@
                     <tr>
                         <td width="100" height="50" align="center" valign="middle">社团名称</td>
                         <td height="50" colspan="2" align="center" valign="middle">
-                            <input type="text" name="AssociationNameA" class="inputArea h50" data-check-notice="社团名称" data-check-null="notnull">
+                            <input type="text" name="AssociationNameA" class="inputArea h50" data-check-notice="社团名称" data-check-null="notnull" >
                         </td>
                         <td width="112" height="50" align="center" valign="middle">活动名称</td>
                         <td height="50" colspan="2" align="center" valign="middle">
-                            <input type="text" name="ActivityName" class="inputArea h50" data-check-notice="活动名称" data-check-null="notnull">
+                            <input type="text" name="ActivityName" class="inputArea h50" data-check-notice="活动名称" data-check-null="notnull" >
                         </td>
                     </tr>
                     <tr>
                         <td height="50" align="center" valign="middle">活动时间</td>
                         <td width="124" height="50" align="center" valign="middle" id="dateSelAreaA">
-                            <input type="text" name="ActivityTimeA" class="inputArea h50" data-check-notice="活动时间" data-check-null="notnull">
+                            <input type="text" name="ActivityTimeA" class="inputArea h50" data-check-notice="活动时间" data-check-null="notnull" >
                             <script>
                                 var mydate=new Date();
                                 $("#dateSelAreaA").html(generateDateSelector(mydate.getFullYear()+1,mydate.getFullYear(),true,true,"ActivityTimeA","ActivityTimeA_DateInput","YY年MM月DD日","ata","","","data-check-notice='活动时间' data-check-null='notnull'"));
@@ -38,11 +38,11 @@
                         </td>
                         <td width="112" height="50" align="center" valign="middle">活动地点</td>
                         <td height="50" align="center" valign="middle">
-                            <input type="text" name="ActivityLocation" class="inputArea h50" data-check-notice="活动地点" data-check-null="notnull">
+                            <input type="text" name="ActivityLocation" class="inputArea h50" data-check-notice="活动地点" data-check-null="notnull" >
                         </td>
                         <td width="112" height="50" align="center" valign="middle">参与人数</td>
                         <td width="114" height="50" align="center" valign="middle">
-                            <input type="text" name="JoinNumber" class="inputArea h50" data-check-notice="参与人数" data-check-null="notnull">
+                            <input type="text" name="JoinNumber" class="inputArea h50" data-check-notice="参与人数" data-check-null="notnull" data-check-type="number">
                         </td>
                     </tr>
                     <tr>
@@ -50,7 +50,7 @@
                     </tr>
                     <tr>
                         <td height="550" colspan="6" align="center" valign="middle">
-                            <textarea name="ActivityContent"  data-check-notice="活动内容" class="inputArea"></textarea>
+                            <textarea name="ActivityContent"  data-check-notice="活动内容" data-check-null="notnull" class="inputArea"></textarea>
                         </td>
                     </tr>
                     <tr>
@@ -80,7 +80,7 @@
                             <td width="73" height="50" align="center" valign="middle">教室容量</td>
                             <td width="234" height="50" align="center" valign="middle">
                             <span style="width: 150px; height: 100%">
-                                <input type="text" name="ClassroomCapacity" data-check-notice="教室容量" data-check-null="notnull" class="inputArea h50 underlined" style="display: inline-block; width: 150px;">
+                                <input type="text" name="ClassroomCapacity" data-check-notice="教室容量" data-check-null="notnull" class="inputArea h50 underlined" data-check-type="number" style="display: inline-block; width: 150px;">
                             </span>
                                 <span>人</span>
                             </td>
@@ -89,7 +89,7 @@
                             <td height="50" colspan="2" align="center" valign="middle">申请人姓名</td>
                             <td height="50" colspan="5" align="center" valign="middle">
                             <span style="width: 150px; height: 100%">
-                                <input type="text" name="ApplyerName" data-check-notice="申请人姓名" class="inputArea h50 underlined" style="display: inline-block; width: 150px;">
+                                <input type="text" name="ApplyerName" data-check-notice="申请人姓名" data-check-null="notnull" class="inputArea h50 underlined" style="display: inline-block; width: 150px;">
                             </span>
                             <span>
                                 <select name="ApplyerAttr" style="display: inline-block;">
@@ -142,11 +142,11 @@
                         <tr>
                             <td height="50" colspan="2" align="center" valign="middle">周次</td>
                             <td width="80" height="50" align="center" valign="middle">
-                                <input type="text" name="Week" class="inputArea h50">
+                                <input type="text" name="Week" class="inputArea h50" data-check-notice="周次" data-check-type="number" data-check-null="notnull">
                             </td>
                             <td width="72" height="50" align="center" valign="middle">星期</td>
                             <td height="50" colspan="3" align="center" valign="middle">
-                                <input type="hidden" name="" class="inputArea h50">
+
                                 <select name="Day" id="" class="form-control">
                                     <option value="一" selected>一</option>
                                     <option value="二">二</option>
@@ -241,6 +241,14 @@
                         </tr>
                         </tbody>
                     </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <input type="button" class="btn btn-success btn-lg" data-role="addDoc" value="提交策划">
+                </div>
+                <div class="col-sm-6">
+                    <input type="button" class="btn btn-primary btn-lg" data-role="submit" value="提交申请">
                 </div>
             </div>
             <input type="file" name="file" id="inputUploadFile"><input type="hidden" name="ifUploadFile" id="ifUploadFile" value="none">

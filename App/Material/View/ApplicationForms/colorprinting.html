@@ -23,18 +23,26 @@
                     <tbody>
                     <tr>
                         <td width="98" height="50" align="center" valign="middle" scope="col">申请单位</td>
-                        <td height="50" colspan="5" align="center" valign="middle" scope="col"><input type="text" name="AssociationName" class="inputArea h50"></td>
+                        <td height="50" colspan="5" align="center" valign="middle" scope="col">
+                            <input type="text" name="AssociationName" class="inputArea h50" data-check-notice="申请单位" data-check-null="notnull">
+                        </td>
                     </tr>
                     <tr>
                         <td height="50" align="center" valign="middle">经办人信息</td>
                         <td width="53" height="50" align="center" valign="middle">姓名</td>
-                        <td width="178" height="50" align="center" valign="middle"><input type="text" name="Name" class="inputArea h50"></td>
+                        <td width="178" height="50" align="center" valign="middle">
+                            <input type="text" name="Name" class="inputArea h50" data-check-notice="姓名" data-check-null="notnull">
+                        </td>
                         <td width="41" height="50" align="center" valign="middle">联系方式</td>
-                        <td height="50" colspan="2" align="center" valign="middle"><input type="text" name="Phone" class="inputArea h50"></td>
+                        <td height="50" colspan="2" align="center" valign="middle">
+                            <input type="text" name="Phone" class="inputArea h50" data-check-notice="联系方式" data-check-null="notnull">
+                        </td>
                     </tr>
                     <tr>
                         <td align="center" valign="middle">活动内容</td>
-                        <td height="120" colspan="5" align="center" valign="middle"><textarea name="ActivityContent" id="" class="inputArea"></textarea></td>
+                        <td height="120" colspan="5" align="center" valign="middle">
+                            <textarea name="ActivityContent" class="inputArea" data-check-notice="活动内容" data-check-null="notnull"></textarea>
+                        </td>
                     </tr>
                     <tr>
                         <td height="50" align="center" valign="middle">活动日期</td>
@@ -46,11 +54,15 @@
                             </script>
                         </td>
                         <td height="50" align="center" valign="middle">使用时间</td>
-                        <td height="50" colspan="2" align="center" valign="middle"><input type="text" name="UseTime" class="inputArea h50"></td>
+                        <td height="50" colspan="2" align="center" valign="middle">
+                            <input type="text" name="UseTime" class="inputArea h50" data-check-notice="使用时间" data-check-null="notnull">
+                        </td>
                     </tr>
                     <tr>
                         <td height="50" align="center" valign="middle">使用地点</td>
-                        <td height="50" colspan="2" align="center" valign="middle"><input type="text" name="Location" class="inputArea h50"></td>
+                        <td height="50" colspan="2" align="center" valign="middle">
+                            <input type="text" name="Location" class="inputArea h50" data-check-notice="使用地点" data-check-null="notnull">
+                        </td>
                         <td height="50" colspan="2" align="center" valign="middle">彩喷是否具有商业性质</td>
                         <td width="166" height="50" align="center" valign="middle">
                             <select name="Commercial" id="" class="form-control">
@@ -73,6 +85,14 @@
                     </tr>
                     </tbody>
                 </table>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <input type="button" class="btn btn-success btn-lg" data-role="addDoc" value="提交策划">
+                </div>
+                <div class="col-sm-6">
+                    <input type="button" class="btn btn-primary btn-lg" data-role="submit" value="提交申请">
+                </div>
             </div>
             <input type="file" name="file" id="inputUploadFile"><input type="hidden" name="ifUploadFile" id="ifUploadFile" value="none">
             <input type="submit">
