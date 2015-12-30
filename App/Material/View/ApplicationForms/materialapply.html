@@ -27,8 +27,12 @@
             <input type="text" class="inputArea h50" data-check-null="notnull" data-check-notice="活动地点" name="ActivityLocation">
         </td>
         <td height="50" align="center" valign="middle">借用日期</td>
-        <td width="98" height="50" align="center" valign="middle">
+        <td width="98" height="50" align="center" valign="middle" id="borrowTimeArea">
             <input type="text" class="inputArea h50" data-check-null="notnull" data-check-notice="借用日期" name="BorrowTime">
+            <script>
+                var mydate=new Date();
+                $("#borrowTimeArea").html(generateDateSelector(mydate.getFullYear()+1,mydate.getFullYear(),true,true,"BorrowTime","borrowTimeArea_DateInput","YY年MM月DD日","bt","","","data-check-notice='借用日期' data-check-null='notnull'"));
+            </script>
         </td>
         <td width="82" height="50" align="center" valign="middle">参与人数</td>
         <td width="90" height="50" align="center" valign="middle">
@@ -46,8 +50,12 @@
             <input type="text" id="inputProjectorNum" class="inputArea h35" data-check-type="number" data-check-notice="投影仪台数" name="ProjectorNumber">
         </td>
         <td height="35" align="center" valign="middle" width="109">归还日期</td>
-        <td height="35" colspan="2" align="center" valign="middle" width="86">
+        <td height="35" colspan="2" align="center" valign="middle" width="86" id="PReturnTimeArea">
             <input type="text" id="inputProjectorReturn" class="inputArea h35"  data-check-notice="投影仪归还日期" name="PReturnTime">
+            <script>
+                var mydate=new Date();
+                $("#PReturnTimeArea").html(generateDateSelector(mydate.getFullYear()+1,mydate.getFullYear(),true,true,"PReturnTime","PReturnTime_DateInput","YY年MM月DD日","prt","","","data-check-notice='投影仪归还日期'"));
+            </script>
         </td>
     </tr>
     <tr>
@@ -69,8 +77,12 @@
             <input type="text" class="inputArea h35" data-check-notice="椅子数量" data-check-type="number" name="ChairNumber">
         </td>
         <td height="35" align="center" valign="middle" width="86">归还日期</td>
-        <td height="35" align="center" valign="middle" width="92">
-            <input type="text" class="inputArea h35" data-check-notice="归还日期" name="DCReturnTime">
+        <td height="35" align="center" valign="middle" width="92" id="DCReturnTimeArea">
+            <input type="text" class="inputArea h35" data-check-notice="桌椅归还日期" name="DCReturnTime">
+            <script>
+                var mydate=new Date();
+                $("#DCReturnTimeArea").html(generateDateSelector(mydate.getFullYear()+1,mydate.getFullYear(),true,true,"DCReturnTime","DCReturnTime_DateInput","YY年MM月DD日","dcrt","","","data-check-notice='桌椅归还日期'"));
+            </script>
         </td>
     </tr>
     <tr>

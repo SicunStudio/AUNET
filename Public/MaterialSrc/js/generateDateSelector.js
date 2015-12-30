@@ -75,7 +75,7 @@ function generateDateSelector(ToY,StY,IfSelToday,Up,targetName,targetID,format,p
     htmlstr+="</select>月";
     htmlstr+="<select data-DateSelector-role='Day' id='"+ DaySelectorID +"'  " + infostr + " >";
     htmlstr+="<option value=''>--</option>";
-    if(IfSelToday){
+    /*if(IfSelToday){
         var Daylist=new Array(0,31,28,31,30,31,30,31,31,30,31,30,31);
         Daylist[2]=(IsRunYear(mydate.getFullYear()) && (mydate.getMonth()+1)==2)?29:28;
         for(i=(Up?1:Daylist[mydate.getMonth()+1]);(Up?i<=Daylist[mydate.getMonth()+1]:i>=1);i=(Up?(i+1):(i-1)))
@@ -88,7 +88,7 @@ function generateDateSelector(ToY,StY,IfSelToday,Up,targetName,targetID,format,p
                 htmlstr+="<option value='"+ i+"'>" + i.toString() + "</option>";
             }
         }
-    }
+    }*/
 
     htmlstr+="</select>日";
     return htmlstr;
@@ -106,7 +106,7 @@ function generateDaySelector(YearSelectorID,MonthSelectorID,DaySelectorID,Up) //
 {
     var year=$("#"+YearSelectorID).val();
     var month=$("#"+MonthSelectorID).val();
-    var htmlstr="";
+    var htmlstr="<option value=''>--</option>";
     var Daylist=new Array(0,31,28,31,30,31,30,31,31,30,31,30,31);
     Daylist[2]=(IsRunYear(year) && (month==2)?29:28);
     for(i=(Up?1:Daylist[month]);(Up?i<=Daylist[month]:i>=1);i=(Up?(i+1):(i-1)))
@@ -126,6 +126,7 @@ function generateDateString(YearSelectorID,MonthSelectorID,DaySelectorID,format)
     str=str.replace(/YY/g,(year!=undefined?year:""));
     str=str.replace(/MM/g,(month!=undefined?month:""));
     str=str.replace(/DD/g,(day!=undefined?day:""));
+    if(year==undefined || month == undefined || day==undefined || year=="" || month == "" || day=="") str="";
     return str;
 }
 

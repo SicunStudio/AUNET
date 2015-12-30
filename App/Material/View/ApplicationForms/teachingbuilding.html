@@ -33,7 +33,7 @@
                             <input type="text" name="ActivityTimeA" class="inputArea h50" data-check-notice="活动时间" data-check-null="notnull">
                             <script>
                                 var mydate=new Date();
-                                $("#dateSelAreaA").html(generateDateSelector(2016,2015,true,false,"ActivityTimeA","ActivityTimeA_DateInput","YY年MM月DD日","ata","","","data-check-notice='活动时间' data-check-null='notnull'"));
+                                $("#dateSelAreaA").html(generateDateSelector(mydate.getFullYear()+1,mydate.getFullYear(),true,true,"ActivityTimeA","ActivityTimeA_DateInput","YY年MM月DD日","ata","","","data-check-notice='活动时间' data-check-null='notnull'"));
                             </script>
                         </td>
                         <td width="112" height="50" align="center" valign="middle">活动地点</td>
@@ -127,7 +127,7 @@
                                 <input type="text" data-check-notice="活动、讲座时间" name="ActivityTimeB" class="inputArea h50">
                                 <script>
                                     var mydate=new Date();
-                                    $("#dateSelAreaB").html(generateDateSelector(2016,2015,true,false,"ActivityTimeB","ActivityTimeB_DateInput","YY年MM月DD日","atb","","","data-check-notice='活动时间' data-check-null='notnull'"));
+                                    $("#dateSelAreaB").html(generateDateSelector(mydate.getFullYear()+1,mydate.getFullYear(),true,true,"ActivityTimeB","ActivityTimeB_DateInput","YY年MM月DD日","atb","","","data-check-notice='活动时间' data-check-null='notnull'"));
                                 </script>
                             </td>
                             <td width="73" height="50" rowspan="2" align="center" valign="middle">节次</td>
