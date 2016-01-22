@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 --
 -- Database: `aunet_material`
 --
-
+use aunet;
 -- --------------------------------------------------------
 
 --
@@ -44,12 +44,13 @@ CREATE TABLE IF NOT EXISTS `aunet_material_materialapply` (
   `ActivityPhone` varchar(20) ,
   `AssociationComment` text ,
   `CreateTime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `ApproveTime` datetime(6),
+  `ApproveTime` date,
   `ApproveState` varchar(8) NOT NULL DEFAULT '未审批',
   `ApproveNote` text ,
   `StoreURL` varchar(100),
   `UserName` varchar(40) NOT NULL,
-  `ID` int(5) NOT NULL
+  `ID` int(5) NOT NULL AUTO_INCREMENT,
+  primary key (ID)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -75,7 +76,8 @@ CREATE TABLE IF NOT EXISTS `aunet_material_sports` (
   `ApproveNote` text,
   `StoreURL` varchar(100),
   `UserName` varchar(40) NOT NULL,
-  `ID` int(5) NOT NULL
+  `ID` int(5) NOT NULL AUTO_INCREMENT,
+  primary key (ID)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -97,12 +99,13 @@ CREATE TABLE IF NOT EXISTS `aunet_material_special` (
   `ActivityPhone` varchar(20) , 
   `AssociationComment` text ,
   `CreateTime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `ApproveTime` datetime(6),
+  `ApproveTime` date,
   `ApproveState` varchar(8) NOT NULL DEFAULT '未审批',
   `ApproveNote` text,
   `StoreURL` varchar(100),
   `UserName` varchar(40) NOT NULL,
-  `ID` int(5) NOT NULL
+  `ID` int(5) NOT NULL AUTO_INCREMENT,
+  primary key (ID)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 --
 -- 表的结构 `aunet_material_teachingbuilding`
@@ -137,12 +140,13 @@ CREATE TABLE IF NOT EXISTS `aunet_material_teachingbuilding` (
   `SpeakerCompany` varchar(100) ,
   `SpeakerPost` varchar(100) ,
   `CreateTime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `ApproveTime` datetime(6),
+  `ApproveTime` date,
   `ApproveState` varchar(8) NOT NULL DEFAULT '未审批',
   `ApproveNote` text,
   `StoreURL` varchar(100),
   `UserName` varchar(40) NOT NULL,
-  `ID` int(5) NOT NULL
+  `ID` int(5) NOT NULL AUTO_INCREMENT,
+  primary key (ID)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 --
 -- 表的结构 `aunet_material_outdoor`
@@ -162,12 +166,13 @@ CREATE TABLE IF NOT EXISTS `aunet_material_outdoor` (
   `ActivityPhone` varchar(20) NOT NULL, 
   `AssociationComment` text NOT NULL,
   `CreateTime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `ApproveTime` datetime(6),
+  `ApproveTime` date,
   `ApproveState` varchar(8) NOT NULL DEFAULT '未审批',
   `ApproveNote` text,
   `StoreURL` varchar(100),
   `UserName` varchar(40) NOT NULL,
-  `ID` int(5) NOT NULL
+  `ID` int(5) NOT NULL AUTO_INCREMENT,
+  primary key (ID)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 --
 -- 表的结构 `aunet_material_eaast4`
@@ -187,12 +192,13 @@ CREATE TABLE IF NOT EXISTS `aunet_material_east4` (
   `ActivityPhone` varchar(20) , 
   `AssociationComment` text,
   `CreateTime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `ApproveTime` datetime(6),
+  `ApproveTime` date,
   `ApproveState` varchar(8) NOT NULL DEFAULT '未审批',
   `ApproveNote` text,
   `StoreURL` varchar(100),
   `UserName` varchar(40) NOT NULL,
-  `ID` int(5) NOT NULL
+  `ID` int(5) NOT NULL AUTO_INCREMENT,
+  primary key (ID)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 --
 -- 表的结构 `aunet_material_sacenter`
@@ -214,12 +220,13 @@ CREATE TABLE IF NOT EXISTS `aunet_material_sacenter` (
   `ActivityPhone` varchar(20) , 
   `AssociationComment` text,
   `CreateTime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `ApproveTime` datetime(6),
+  `ApproveTime` date,
   `ApproveState` varchar(8) NOT NULL DEFAULT '未审批',
   `ApproveNote` text,
   `StoreURL` varchar(100),
   `UserName` varchar(40) NOT NULL,
-  `ID` int(5) NOT NULL
+  `ID` int(5) NOT NULL AUTO_INCREMENT,
+  primary key (ID)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 --
 -- 表的结构 `aunet_material_colorprinting`
@@ -236,12 +243,13 @@ CREATE TABLE IF NOT EXISTS `aunet_material_colorprinting` (
   `Commercial` varchar(2) ,
   `Remark` text ,
   `CreateTime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `ApproveTime` datetime(6),
+  `ApproveTime` date,
   `ApproveState` varchar(10) NOT NULL DEFAULT '未审批',
   `ApproveNote` text,
   `StoreURL` varchar(100),
   `UserName` varchar(40) NOT NULL,
-  `ID` int(5) NOT NULL
+  `ID` int(5) NOT NULL AUTO_INCREMENT,
+  primary key (ID)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 --
 -- 表的结构 `aunet_material_plan`
@@ -254,107 +262,10 @@ CREATE TABLE IF NOT EXISTS `aunet_material_plan` (
   `ApproveNote` text,
   `StoreURL` varchar(100),
   `UserName` varchar(40) NOT NULL,
-  `ID` int(5) NOT NULL
+  `ID` int(5) NOT NULL AUTO_INCREMENT,
+  primary key (ID)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
---
--- Indexes for dumped tables
---
 
---
--- Indexes for table `aunet_material_materialapply`
---
-ALTER TABLE `aunet_material_materialapply`
-  ADD PRIMARY KEY (`ID`);
-
---
--- Indexes for table `aunet_material_sports`
---
-ALTER TABLE `aunet_material_sports`
-  ADD PRIMARY KEY (`ID`);
---
--- Indexes for table `aunet_material_special`
---
-ALTER TABLE `aunet_material_special`
-  ADD PRIMARY KEY (`ID`);
---
--- Indexes for table `aunet_material_teachingbuilding`
---
-ALTER TABLE `aunet_material_teachingbuilding`
-  ADD PRIMARY KEY (`ID`);
---
--- Indexes for table `aunet_material_outdoor`
---
-ALTER TABLE `aunet_material_outdoor`
-  ADD PRIMARY KEY (`ID`);
---
--- Indexes for table `aunet_material_eaast4`
---
-ALTER TABLE `aunet_material_east4`
-  ADD PRIMARY KEY (`ID`);
---
--- Indexes for table `aunet_material_sacenter`
---
-ALTER TABLE `aunet_material_sacenter`
-  ADD PRIMARY KEY (`ID`);
---
--- Indexes for table `aunet_material_colorprinting`
---
-ALTER TABLE `aunet_material_colorprinting`
-  ADD PRIMARY KEY (`ID`);
---
--- Indexes for table `aunet_material_plan`
---
-ALTER TABLE `aunet_material_plan`
-  ADD PRIMARY KEY (`ID`);
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `aunet_material_materialapply`
---
-ALTER TABLE `aunet_material_materialapply`
-  MODIFY `ID` int(5) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `aunet_material_sports`
---
-ALTER TABLE `aunet_material_sports`
-  MODIFY `ID` int(5) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `aunet_material_special`
---
-ALTER TABLE `aunet_material_special`
-  MODIFY `ID` int(5) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `aunet_material_teachingbuilding`
---
-ALTER TABLE `aunet_material_teachingbuilding`
-  MODIFY `ID` int(5) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `aunet_material_outdoor`
---
-ALTER TABLE `aunet_material_outdoor`
-  MODIFY `ID` int(5) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `aunet_material_eaast4`
---
-ALTER TABLE `aunet_material_east4`
-  MODIFY `ID` int(5) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `aunet_material_sacenter`
---
-ALTER TABLE `aunet_material_sacenter`
-  MODIFY `ID` int(5) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `aunet_material_colorprinting`
---
-ALTER TABLE `aunet_material_colorprinting`
-  MODIFY `ID` int(5) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `aunet_material_plan`
---
-ALTER TABLE `aunet_material_plan`
-  MODIFY `ID` int(5) NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

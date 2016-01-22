@@ -83,3 +83,17 @@
     cursor: pointer;
     border: solid 1px #00a0e9;
 }
+
+
+/* 申请状态未审核、已通过、未通过 */
+.ApproveState-Rejected {
+    color: #ff6f6f;
+    font-weight: 800;
+}
+.ApproveState-Pass {
+    color: #00b026;
+    font-weight: 600;
+}
+.ApproveState-Wait {
+    color: #000000;
+}

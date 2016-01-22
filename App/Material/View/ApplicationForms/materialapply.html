@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>物资申请表</title>
-    <script src="__PUBLIC__/MaterialSrc/js/check_material.js"></script>
+    <script src="__PUBLIC__/MaterialSrc/js/check_materialapply.js"></script>
 </head>
 <body>
 
 <ol class="breadcrumb">
     <li><h4>物资借用</h4></li>
 </ol>
-<form action="POST">
+<form action="{:U('Material/Material/material_upload')}" enctype="multipart/form-data" method="POST">
+    <input type="hidden" name="action_type" value="materialapply">
     <div class="tableContainer">
         <table class="table-bordered FillForm" width="700px">
     <tbody>
@@ -26,8 +27,12 @@
             <input type="text" class="inputArea h50" data-check-null="notnull" data-check-notice="活动地点" name="ActivityLocation">
         </td>
         <td height="50" align="center" valign="middle">借用日期</td>
-        <td width="98" height="50" align="center" valign="middle">
+        <td width="98" height="50" align="center" valign="middle" id="borrowTimeArea">
             <input type="text" class="inputArea h50" data-check-null="notnull" data-check-notice="借用日期" name="BorrowTime">
+            <script>
+                var mydate=new Date();
+                $("#borrowTimeArea").html(generateDateSelector(mydate.getFullYear()+1,mydate.getFullYear(),true,true,"BorrowTime","borrowTimeArea_DateInput","YY年MM月DD日","bt","","","data-check-notice='借用日期' data-check-null='notnull'"));
+            </script>
         </td>
         <td width="82" height="50" align="center" valign="middle">参与人数</td>
         <td width="90" height="50" align="center" valign="middle">
@@ -45,15 +50,19 @@
             <input type="text" id="inputProjectorNum" class="inputArea h35" data-check-type="number" data-check-notice="投影仪台数" name="ProjectorNumber">
         </td>
         <td height="35" align="center" valign="middle" width="109">归还日期</td>
-        <td height="35" colspan="2" align="center" valign="middle" width="86">
+        <td height="35" colspan="2" align="center" valign="middle" width="86" id="PReturnTimeArea">
             <input type="text" id="inputProjectorReturn" class="inputArea h35"  data-check-notice="投影仪归还日期" name="PReturnTime">
+            <script>
+                var mydate=new Date();
+                $("#PReturnTimeArea").html(generateDateSelector(mydate.getFullYear()+1,mydate.getFullYear(),true,true,"PReturnTime","PReturnTime_DateInput","YY年MM月DD日","prt","","","data-check-notice='投影仪归还日期'"));
+            </script>
         </td>
     </tr>
     <tr>
         <td height="35" align="center" valign="middle" width="71">电力<br></td>
         <td height="35" align="center" valign="middle" width="90">瓦数</td>
         <td height="35" colspan="2" align="center" valign="middle" width="90">
-            <input type="text" class="inputArea h35" data-check-null="notnull" data-check-notice="瓦数" data-check-type="number" name="PowerWattage">
+            <input type="text" class="inputArea h35" data-check-notice="瓦数" data-check-type="number" id="PowerWattage" name="PowerWattage">
         </td>
         <td height="35" colspan="3" align="center" valign="middle">（注：瓦数超过2000W须要到主校区配电房签字）</td>
     </tr>
@@ -61,26 +70,30 @@
         <td height="35" align="center" valign="middle" width="71">大量桌椅</td>
         <td height="35" align="center" valign="middle" width="90">桌子数量</td>
         <td width="90" height="35" align="center" valign="middle" width="90">
-            <input type="text" class="inputArea h35" data-check-null="notnull" data-check-type="number" data-check-notice="桌子数量" name="DeskNumber">
+            <input type="text" class="inputArea h35"  data-check-type="number" data-check-notice="桌子数量" id="DeskNumber" name="DeskNumber">
         </td>
         <td height="35" align="center" valign="middle" width="89">椅子数量</td>
         <td height="35" align="center" valign="middle" width="109">
-            <input type="text" class="inputArea h35" data-check-null="notnull" data-check-notice="椅子数量" data-check-type="number" name="ChairNumber">
+            <input type="text" class="inputArea h35" data-check-notice="椅子数量" data-check-type="number" id="ChairNumber" name="ChairNumber">
         </td>
         <td height="35" align="center" valign="middle" width="86">归还日期</td>
-        <td height="35" align="center" valign="middle" width="92">
-            <input type="text" class="inputArea h35" data-check-null="notnull" data-check-notice="归还日期" name="DCReturnTime">
+        <td height="35" align="center" valign="middle" width="92" id="DCReturnTimeArea">
+            <input type="text" class="inputArea h35" data-check-notice="桌椅归还日期" name="DCReturnTime">
+            <script>
+                var mydate=new Date();
+                $("#DCReturnTimeArea").html(generateDateSelector(mydate.getFullYear()+1,mydate.getFullYear(),true,true,"DCReturnTime","DCReturnTime_DateInput","YY年MM月DD日","dcrt","","","data-check-notice='桌椅归还日期'"));
+            </script>
         </td>
     </tr>
     <tr>
         <td height="35" align="center" valign="middle" width="71">校车</td>
         <td height="35" align="center" valign="middle" width="90">运送桌子数量</td>
         <td height="35" colspan="2" align="center" valign="middle" width="90">
-            <input type="text" class="inputArea h35" data-check-null="notnull" data-check-notice="运送桌子数量" data-check-type="number" name="CarryDeskNumber">
+            <input type="text" class="inputArea h35" data-check-notice="运送桌子数量" data-check-type="number" name="CarryDeskNumber" id="CarryDeskNumber">
         </td>
         <td height="35" align="center" valign="middle" width="109">运送椅子数量</td>
         <td height="35" colspan="2" align="center" valign="middle" width="86">
-            <input type="text" class="inputArea h35" data-check-null="notnull" data-check-notice="运送椅子数量" data-check-type="number" name="CarryChairNumber">
+            <input type="text" class="inputArea h35" data-check-notice="运送椅子数量" data-check-type="number" name="CarryChairNumber" id="CarryChairNumber">
         </td>
     </tr>
     <tr>
@@ -123,6 +136,8 @@
             <input type="button" class="btn btn-primary btn-lg" data-role="submit" value="提交申请">
         </div>
     </div>
+    <input type="file" name="file" id="inputUploadFile"><input type="hidden" name="ifUploadFile" id="ifUploadFile" value="none">
+    <input type="submit">
 </form>
 </body>
 </html>

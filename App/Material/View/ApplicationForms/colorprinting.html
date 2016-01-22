@@ -2,12 +2,22 @@
 <html lang="zh-CN">
     <head>
         <meta charset="utf-8">
+        <script>
+            $(document).on("click","#ajax_submit",function(){
+                alert("get");$("#myModal").modal('show');
+                $.post("{:U('Material/Material/material_upload')}",$("#applicationForm").serializeArray(),function(){
+
+                });
+            });
+
+        </script>
     </head>
     <body>
         <ol class="breadcrumb">
             <li><h4>彩喷悬挂申请</h4></li>
         </ol>
-        <form action="" method="POST">
+        <form id="applicationForm" action="{:U('Material/Material/material_upload')}" enctype="multipart/form-data" method="POST">
+            <input type="hidden" name="action_type" value="colorprinting">
             <div class="tableContainer">
                 <table class="table-bordered FillForm" width="700" border="0">
                     <tbody>
@@ -28,7 +38,13 @@
                     </tr>
                     <tr>
                         <td height="50" align="center" valign="middle">活动日期</td>
-                        <td height="50" colspan="2" align="center" valign="middle"><input type="text" name="ActivityDate" class="inputArea h50"></td>
+                        <td height="50" colspan="2" align="center" valign="middle" id="ActivityDateArea">
+                            <input type="text" name="ActivityDate" class="inputArea h50">
+                            <script>
+                                var mydate=new Date();
+                                $("#ActivityDateArea").html(generateDateSelector(mydate.getFullYear()+1,mydate.getFullYear(),true,true,"ActivityDate","ActivityDateArea_DateInput","YY年MM月DD日","adt","","","data-check-notice='活动日期' data-check-null='notnull'"));
+                            </script>
+                        </td>
                         <td height="50" align="center" valign="middle">使用时间</td>
                         <td height="50" colspan="2" align="center" valign="middle"><input type="text" name="UseTime" class="inputArea h50"></td>
                     </tr>
@@ -58,6 +74,8 @@
                     </tbody>
                 </table>
             </div>
+            <input type="file" name="file" id="inputUploadFile"><input type="hidden" name="ifUploadFile" id="ifUploadFile" value="none">
+            <input type="submit">
         </form>
 
     </body>

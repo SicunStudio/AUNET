@@ -7,7 +7,8 @@
         <ol class="breadcrumb">
             <li><h4>东四食堂三楼申请</h4></li>
         </ol>
-        <form action="" method="POST">
+        <form action="{:U('Material/Material/material_upload')}" enctype="multipart/form-data" method="POST">
+            <input type="hidden" name="action_type" value="east4">
             <div class="tableContainer">
                 <table width="700" class="table-bordered FillForm">
                     <tbody>
@@ -27,8 +28,12 @@
                     </tr>
                     <tr>
                         <td height="50" align="center" valign="middle">活动日期</td>
-                        <td height="50" align="center" valign="middle">
+                        <td height="50" align="center" valign="middle" id="ActivityDateArea">
                             <input type="text" name="ActivityDate" class="inputArea h50" data-check-null="notnull">
+                            <script>
+                                var mydate=new Date();
+                                $("#ActivityDateArea").html(generateDateSelector(mydate.getFullYear()+1,mydate.getFullYear(),true,true,"ActivityDate","ActivityDateArea_DateInput","YY年MM月DD日","adt","","","data-check-notice='活动日期' data-check-null='notnull'"));
+                            </script>
                         </td>
                         <td height="50" align="center" valign="middle">活动时间</td>
                         <td height="50" colspan="4" align="left" valign="middle">
@@ -95,6 +100,8 @@
                     </tbody>
                 </table>
             </div>
+            <input type="file" name="file" id="inputUploadFile"><input type="hidden" name="ifUploadFile" id="ifUploadFile" value="none">
+            <input type="submit">
         </form>
 
     </body>

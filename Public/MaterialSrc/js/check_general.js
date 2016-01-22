@@ -18,7 +18,7 @@ function check_null(){
         if(check_value_null($(this).val())){
             MsgString+=$(this).attr("data-check-notice");
             MsgString+=": 不能为空&nbsp;&nbsp;";
-            $(this).addClass("ErrorInput");
+            $(this).parent().addClass("ErrorInput");
         }
     });
     return MsgString;
@@ -34,7 +34,7 @@ function check_number(){
         if($(this).val()!="" && $(this).val()!=undefined && isNaN($(this).val()) ){
             MsgString+=$(this).attr("data-check-notice");
             MsgString+=": 必须为数字&nbsp;&nbsp;";
-            $(this).addClass("ErrorInput");
+            $(this).parent().addClass("ErrorInput");
         }
     });
     return MsgString;
