@@ -4,7 +4,8 @@
 
 /* 检查表单 */
 $(document).on("click","[data-role='submit']",function(){
-    $("[class*='ErrorInput']").removeClass("ErrorInput");
+    //移除错误标记
+    RemoveErrorMark();
     $("#alert-danger").html("");
     $("#alert-danger").slideUp("fast");
     var msgNull=check_null();
