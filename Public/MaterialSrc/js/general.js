@@ -13,12 +13,15 @@ $(document).on("click","[data-role='submit']",function(){
     var msgUnique=check_unique();
     if(msgNull || msgNum || msgUnique){
         $("#alert-danger").html((msgNull!=""?msgNull+"<br>":"") + (msgNum!=""?msgNum+"<br>":"")+(msgUnique!=""?msgUnique:""));
-
+        $("body").animate({scrollTop: $("#TableArea").offset().top}, 500,"swing");
         $("#alert-danger").slideDown("fast");
+
+        //return false;// 返回false可以避免在原链接后加上#
         //alert(msg);
     }
     else {
         //TODO 提交表单
+        $("form").submit();
     }
 });
 
