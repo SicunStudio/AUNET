@@ -124,13 +124,13 @@ class MaterialController extends CommonController
 
         if (count($data[1]) > 0)
         {
-            $map['id'] = array('in', $data[1]);
+            $map['ID'] = array('in', $data[1]);
             $sql->where($map)->setField('ApproveState', '已通过审批');
         }
 
         if (count($data[2]) > 0)
         {
-            $map['id'] = array('in', $data[2]);
+            $map['ID'] = array('in', $data[2]);
             $sql->where($map)->setField('ApproveState', '未通过审批');
         }
 
@@ -138,7 +138,7 @@ class MaterialController extends CommonController
         {
             if (preg_match('/' . $type . '_Approve_(\d*)$/', $key, $match))
             {
-                $sql->where('id=' . $match[1])->setField('ApproveNote', $value);
+                $sql->where('ID=' . $match[1])->setField('ApproveNote', $value);
             }
         }
 
@@ -147,14 +147,14 @@ class MaterialController extends CommonController
 	//后台管理显示函数
     public function admin_table()
     {
-        $name_list = array('aunet_material_sports' => '体育场馆申请',
-            'aunet_material_materialapply' => '物资申请',
-            'aunet_material_special' => '特殊场地申请',
-			'aunet_material_teachingbuilding' => '教学楼教室申请',
-			'aunet_material_outdoor' => '户外路演场地申请',
-			'aunet_material_east4' => '东四三楼申请',
-			'aunet_material_sacenter' => '大活教室申请',
-			'aunet_material_colorprinting' => '彩喷悬挂申请',
+        $name_list = array('material_sports' => '体育场馆申请',
+            'material_materialapply' => '物资申请',
+            'material_special' => '特殊场地申请',
+			'material_teachingbuilding' => '教学楼教室申请',
+			'material_outdoor' => '户外路演场地申请',
+			'material_east4' => '东四三楼申请',
+			'material_sacenter' => '大活教室申请',
+			'material_colorprinting' => '彩喷悬挂申请',
 		);
 
         $ans = array();
