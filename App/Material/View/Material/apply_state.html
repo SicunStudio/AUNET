@@ -3,15 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script>
-        //为审批状态文字设置颜色
-        $(document).ready(function(){
-            $("[data-approvestate='未通过']").addClass("ApproveState-Rejected");
-            $("[data-approvestate='已通过']").addClass("ApproveState-Pass");
-            $("[data-approvestate='未审核']").addClass("ApproveState-Wait");
-        });
-
-    </script>
 </head>
 <body>
 <ol class="breadcrumb">
@@ -20,9 +11,10 @@
 <div class="table-responsive">
     <table class="table-bordered table" width="700px">
         <tr>
-            <th width="150px">提交时间</th>
-            <th width="80px">审核状态</th>
-            <th width="170px">种类</th>
+            <th width="100px">提交时间</th>
+            <th width="50px">审核状态</th>
+            <th width="150px">种类</th>
+            <th width="100px">审批时间</th>
             <th width="300px">审核意见</th>
         </tr>
 
@@ -33,12 +25,21 @@
                     <td><span data-approvestate="{$u.approvestate}">{$u.approvestate}</span></td>
                     <td>{$v[0]}</td>
                     <!--<td><a href="{:U('Material/Download/' . $lm,array('id'=>$u['id']))}">下载</a></td>-->
+                    <td>{$u.approvetime}</td>
                     <td>{$u.approvenote}</td>
                 </tr>
             </foreach>
         </foreach>
     </table>
 </div>
-</div>
+
+<script>
+    //为审批状态文字设置颜色
+    $(document).ready(function(){
+        $("[data-approvestate='未通过']").addClass("ApproveState-Rejected");
+        $("[data-approvestate='已通过']").addClass("ApproveState-Pass");
+        $("[data-approvestate='未审核']").addClass("ApproveState-Wait");
+    });
+</script>
 </body>
 </html>
