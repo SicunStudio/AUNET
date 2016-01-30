@@ -58,6 +58,7 @@ class MaterialController extends CommonController
             }
         }
         //print_r($ans);
+		
         $this->list = $ans;
 
         $this->display();
