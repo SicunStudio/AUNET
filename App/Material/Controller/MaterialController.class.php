@@ -112,7 +112,8 @@ class MaterialController extends CommonController
         $sql = M("aunet.$table" , 'aunet_material_');
         $all_data = I('POST.');
         $data = array();
-        $data[0] = array();
+        
+		/*$data[0] = array();
         $data[1] = array();
         $data[2] = array();
         foreach ($all_data as $key => $value)
@@ -123,16 +124,16 @@ class MaterialController extends CommonController
             }
         }
 
-        if (count($data[1]) > 0)
-        {
+        if (count($data[1]) > 0){
             $map['ID'] = array('in', $data[1]);
-            $sql->where($map)->setField('ApproveState', '已通过审批');
-        }
-
-        if (count($data[2]) > 0)
-        {
+            $data['ApproveState']= '已通过审批';
+			$data['AprroveTime'] = date("Y年n月j日 G:i:s");
+			$sql->where($map)->save($data);
+        }else{
             $map['ID'] = array('in', $data[2]);
-            $sql->where($map)->setField('ApproveState', '未通过审批');
+            $data['ApproveState'] = '未通过审批';
+			$time = date("Y年n月j日 G:i:s");
+			$sql->where($map)->save($data);
         }
 
         foreach ($all_data as $key => $value)
@@ -142,7 +143,18 @@ class MaterialController extends CommonController
                 $sql->where('ID=' . $match[1])->setField('ApproveNote', $value);
             }
         }
-
+		*/
+		if($all_data[ApproveState]){
+			$data['ApproveState']= '已通过审批';
+			$data['AprroveTime'] = date("Y年n月j日 G:i:s");
+			$data['ApproveNote'] = $all_data['ApproveNote']
+			$sql->where($map)->save($data);
+		}else{
+			$data['ApproveState']= '未通过审批';
+			$data['AprroveTime'] = date("Y年n月j日 G:i:s");
+			$data['ApproveNote'] = $all_data['ApproveNote']
+			$sql->where($map)->save($data);
+		}
         $this->success(L('操作成功！'));
     }
 	//后台管理显示函数
