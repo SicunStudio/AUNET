@@ -11,8 +11,9 @@ FormAddress[5]=new Array("teachingbuilding","../ApplicationForms/teachingbuildin
 FormAddress[6]=new Array("outdoor","../ApplicationForms/outdoor.html");
 FormAddress[7]=new Array("sacenter","../ApplicationForms/sacenter.html");
 FormAddress[8]=new Array("apply_state","apply_state.html");
+FormAddress[9]=new Array("apply_procedure","apply_procedure.html");
 
-var loadingMsg="<h2>请稍候，正在加载</h2><h4>若长时间未响应，请在左侧重新选择表格</h4>";
+var loadingMsg="<h2>请稍候，正在加载</h2><h4>若长时间未响应，请在左侧重新选择表格或刷新再试</h4>";
 var errorMsg="<h2>抱歉，加载失败</h2><h3>该表格不可用</h3>";
 $(document).on("click",".FormSwitcher",function(){
     //TODO 如果当前表格已经填写，询问是否离开

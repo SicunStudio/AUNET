@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
+<!doctype html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="__PUBLIC__/MaterialSrc/css/admin_style.css">
@@ -150,33 +150,5 @@
     });
 
 </script>
-
-<form action="{:U('material_adupload')}" method="post" id="myForm">
-    <table name="table table-bordered">
-        <tr>
-            <th>提交时间</th>
-            <th>协会</th>
-            <th>申请类型</th>
-            <th>申请表</th>
-            <th>策划</th>
-            <th>审批状态</th>
-            <th>审批意见</th>
-        </tr>
-        <foreach name="value" item="v">
-            <foreach  name="v[1]" item="u">
-                <td>{$u.createtime}</td>
-                <td>{$u.username}</td>
-                <td>{$v[0]}</td>
-                <td><a href="#">下载</a></td>
-                <td><a href="{$u.storeurl}">下载</a></td>
-                <td>{$u.approvestate}</td>
-                <td>{$u.approvenote}</td>
-            </foreach>
-            <td>{}</td>
-        </foreach>
-
-    </table>
-</form>
-
 </body>
 </html>

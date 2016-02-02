@@ -1,0 +1,105 @@
+.list-container {
+    background-color: #fdfdfd;
+    border-radius: 2px;
+    /*height: 80px;*/
+    margin: 10px;
+    box-shadow: 0px 0px 4px 1px #e0e0e0;
+    z-index: 100;
+}
+
+.list-container>.row>div>div {
+    margin: 5px;
+    padding-left: 5px;
+}
+
+.Applylist {
+    position: relative;
+}
+
+.Applylist .Applylist-Nodata {
+    display: none;
+    text-align: center;
+    font-size: 32px;
+    color: #a2a2a2;
+    position: absolute;
+    top: 5px;
+    width: 100%;
+    z-index: 1;
+}
+
+.Applylist-UserName {
+    margin: 5px;
+    padding-left: 5px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 20px;
+    white-space:nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    width: 100%;
+}
+
+.Applylist-FormType {
+    margin: 5px;
+    height: 30px;
+    padding-left: 5px;
+    line-height: 30px;
+    font-size: 16px;
+}
+
+.Applylist-CreateTime {
+    padding-left: 10px;
+    margin: 5px;
+    height: 35px;
+    font-size: 14px;
+}
+.Applylist-CreateTime span {
+    padding-left: 10px;
+    word-break: keep-all;
+}
+
+.Applylist-ApproveTime {
+    padding-left: 10px;
+    margin: 5px;
+    height: 35px;
+    font-size: 14px;
+}
+
+.Applylist-ApproveTime span {
+    padding-left: 10px;
+    word-break: keep-all;
+}
+
+.Applylist-ApproveState {
+    height: 30px;
+    line-height: 30px;
+    font-size: 20px;
+}
+.Applylist-ApproveNote {
+    height: 40px;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.Applylist-Approve {
+    height: 35px;
+}
+
+
+.Applylist-Approve button {
+    margin: 0px auto;
+    display: block;
+    width: 80px;
+}
+
+
+.Applylist-Download {
+    height: 35px;
+}
+
+.Applylist-Download button {
+    margin: 0px auto;
+    display: block;
+    width: 80px;
+}

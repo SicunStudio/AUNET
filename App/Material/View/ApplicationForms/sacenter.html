@@ -129,16 +129,18 @@
                 </div>
                        
             </div>
-            <div class="row">
-                <div class="col-sm-6">
-                    <input type="button" class="btn btn-success btn-lg" data-role="addDoc" value="提交策划">
-                </div>
-                <div class="col-sm-6">
-                    <input type="button" class="btn btn-primary btn-lg" data-role="submit" value="提交申请">
+            <div class="form-group">
+                <label for="" class="col-sm-2 control-label">策划提交<br>（可选）</label>
+                <div class="col-sm-10">
+                    <input type="file" name="file" class="btn btn-success" id="inputUploadFile">
+                    <input type="hidden" name="ifUploadFile" id="ifUploadFile" value="none">
                 </div>
             </div>
-            <input type="file" name="file" id="inputUploadFile"><input type="hidden" name="ifUploadFile" id="ifUploadFile" value="none">
-            <input type="submit">
+            <div class="row">
+                <div class="col-sm-12">
+                    <input type="button" class="btn btn-primary btn-lg" style="display:block; width: 150px; margin: 5px auto" data-role="submit" value="提交申请">
+                </div>
+            </div>
         </form>
 
     </body>
