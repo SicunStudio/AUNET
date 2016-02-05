@@ -33,7 +33,10 @@
             </div>
 
             <div class="modal-footer">
-                <form enctype="multipart/form-data" action="{:U('material_adupload')}" class="form" method="POST">
+                <form enctype="multipart/form-data" action="{:U('material_adupload')}" id="approveform" class="form" method="POST">
+                    <input type="hidden" id="modal-footer-action-type" name="action_type" value="">
+                    <input type="hidden" id="modal-footer-ID" name="ID" value="">
+                    <input type="hidden" id="modal-footer-UserName" name="UserName" value="">
                     <div class="col-sm-3" style="text-align: left">
                         <h4>审批结果</h4>
                         <select name="ApproveState" class="form-control">
@@ -47,7 +50,7 @@
                         <textarea name="ApproveNote" id="" class="form-control"></textarea>
                     </div>
                     <div class="col-sm-3">
-                        <button type="button" class="btn btn-info btn-lg">保存</button>
+                        <button type="button" class="btn btn-info btn-lg" id="approveform-save">保存</button>
                         <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
                     </div>
                 </form>
