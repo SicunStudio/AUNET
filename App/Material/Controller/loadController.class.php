@@ -1111,9 +1111,10 @@ class LoadController extends CommonController
 			";
 			break;
 		}
-		$this->html=$html;
-		$this->display();
-		echo $html;
+		//$this->html=$html;
+		//$this->display();
+		//echo $html;
+		$this->show($html);
 	}
 	
 	public function downloadword(){
