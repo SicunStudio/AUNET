@@ -2,16 +2,8 @@
 namespace Material\Controller;
 use Think\Upload;
 use Think\Controller;
-class loadController extends CommonController
+class LoadController extends CommonController
 {
-	$ID = I('POST.ID');
-	$type = I('POST.action_type');
-	$table=strtolower($type);
-	$sql = M("aunet.$table" , 'aunet_material_');
-	$file_data = $type ->where("ID = $ID")->limit(1)->select()[0];
-	foreach($file_data as $key => $val){
-            $file_data[$key] = mb_convert_encoding($val, "HTML-ENTITIES", "UTF-8");
-	}
 	public function start(){
 		ob_start();
 		echo '<html xmlns:o="urn:schemas-microsoft-com:office:office"
@@ -31,6 +23,15 @@ class loadController extends CommonController
 	}
 	
 	public function preview(){
+		$ID = I('POST.ID');
+		$type = I('POST.action_type');
+		$table = strtolower($type);
+		$sql = M("aunet.$table" , 'aunet_material_');
+		$file_data = $sql->where("id=".$ID)->limit(1)->select()[0];
+		foreach($file_data as $key => $val){
+            $file_data[$key] = mb_convert_encoding($val, "HTML-ENTITIES", "UTF-8");
+		}
+	
 		switch($type){
 			case colorprinting:
 			$html ="
@@ -707,7 +708,7 @@ class loadController extends CommonController
                     <tr>
                         <td height=\"80\" align=\"center\" valign=\"middle\">有无商业赞助</td>
                         <td height=\"80\" align=\"center\" valign=\"middle\">
-                            <select name=\"\" id=\"\" class=\"form-control\" value=\"$file_data[]\">
+                            <select name=\"\" id=\"\" class=\"form-control\" value=\"$file_data[Commercial]\">
                                 <option value=\"有\" selected>有</option>
                                 <option value=\"无\">无</option>
                             </select>
@@ -1005,7 +1006,7 @@ class loadController extends CommonController
                             </td>
                             <td width=\"72\" height=\"50\" align=\"center\" valign=\"middle\">星期</td>
                             <td height=\"50\" colspan=\"3\" align=\"center\" valign=\"middle\">
-                                <input type=\"hidden\" name=\"\" class=\"inputArea h50\" value=\"$file_data[]\">
+                                <input type=\"hidden\" name=\"\" class=\"inputArea h50\" >
                                 <select name=\"Day\" id=\"\" class=\"form-control\" value=\"$file_data[Day]\">
                                     <option value=\"一\" selected>一</option>
                                     <option value=\"二\">二</option>
@@ -1112,20 +1113,35 @@ class loadController extends CommonController
 		}
 		$this->html=$html;
 		$this->display();
-		//echo $html;
+		echo $html;
 	}
 	
-	public function downloadword(){ 
+	public function downloadword(){
+		/*
 		$this->start(); 
 		$wordname = $table.$ID.".doc";
 		$this->preview();
+		echo $this->html;
 		//$this->value = $file_data;
 		//$this->wordname = $wordname;
-		echo $html; 
+		//echo $this->html; 
 		$this->save($wordname); 
 		$this->display();
 		ob_flush();//每次执行前刷新缓存 
-		flush(); 
+		flush();*/
+		$ID = I('POST.ID');
+		$type = I('POST.action_type');
+		$table = strtolower($type);
+		$sql = M("aunet.$table" , 'aunet_material_');
+		$file_data = $sql->where("id = $ID")->limit(1)->select()[0];
+        foreach($file_data as $key => $val)
+        {
+            $file_data[$key] = mb_convert_encoding($val, "HTML-ENTITIES", "UTF-8");
+        }
+        $this->value = $file_data;
+        $this->ID = $ID;
+        header("Content-Disposition:attachment;filename='$type-$ID.doc'");
+        $this->display();
 	}
 }
 ?>
