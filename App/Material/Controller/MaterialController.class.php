@@ -178,7 +178,7 @@ class MaterialController extends CommonController
             $tmp = $list->getField('ID,UserName,CreateTime,ApproveTime,ApproveState,ApproveNote,StoreURL');
 			if ($tmp)
             {
-                $ans[$name_en] = array($name_cn,$tmp);
+                $ans[$name_en] = array(substr($name_en,9),$name_cn,$tmp);
             }
 			
         }
@@ -190,5 +190,7 @@ class MaterialController extends CommonController
 
         $this->display();
     }
+
+
 }
 ?>
