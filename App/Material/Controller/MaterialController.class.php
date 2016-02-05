@@ -126,12 +126,12 @@ class MaterialController extends CommonController
 
         if (count($data[1]) > 0){
             $map['ID'] = array('in', $data[1]);
-            $data['ApproveState']= '已通过审批';
+            $data['ApproveState']= '已通过';
 			$data['AprroveTime'] = date("Y年n月j日 G:i:s");
 			$sql->where($map)->save($data);
         }else{
             $map['ID'] = array('in', $data[2]);
-            $data['ApproveState'] = '未通过审批';
+            $data['ApproveState'] = '未通过';
 			$time = date("Y年n月j日 G:i:s");
 			$sql->where($map)->save($data);
         }
@@ -145,12 +145,12 @@ class MaterialController extends CommonController
         }
 		*/
 		if($all_data[ApproveState]){
-			$data['ApproveState']= '已通过审批';
+			$data['ApproveState']= '已通过';
 			$data['AprroveTime'] = date("Y-n-j G:i:s");
 			$data['ApproveNote'] = $all_data['ApproveNote'];
 			$sql->where('ID=' .$all_data[ID])->save($data);
 		}else{
-			$data['ApproveState']= '未通过审批';
+			$data['ApproveState']= '未通过';
 			$data['AprroveTime'] = date("Y-n-j G:i:s");
 			$data['ApproveNote'] = $all_data['ApproveNote'];
 			$sql->where('ID=' .$all_data[ID])->save($data);
@@ -175,11 +175,12 @@ class MaterialController extends CommonController
         {
             //print("$list_name</br>");
             $list = D(strtolower($name_en));
-            $tmp = $list->where("ApproveState='未审批'")->getField('ID,UserName,AssociationName,CreateTime,AprroveTime,ApproveState,ApproveNote,StoreURL');
+            $tmp = $list->getField('ID,UserName,CreateTime,ApproveTime,ApproveState,ApproveNote,StoreURL');
 			if ($tmp)
             {
                 $ans[$name_en] = $tmp;
             }
+			
         }
         //print_r($ans);
         $this->value = $ans;
