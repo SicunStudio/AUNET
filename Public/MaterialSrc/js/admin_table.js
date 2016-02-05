@@ -21,9 +21,9 @@ $(document).ready(function(){
 $(document).on("click",".btn-approve", function() {
     var dom=$(this);
     $("#modalPreview-UserName").text(dom.attr("data-username"));
-    $("#modal-footer-UserName").text(dom.attr("data-username"));
-    $("#modal-footer-ID").text(dom.attr("data-id"));
-    $("#modal-footer-action-type").text(dom.attr("data-action-type"));
+    $("#modal-footer-UserName").val(dom.attr("data-username"));
+    $("#modal-footer-ID").val(dom.attr("data-id"));
+    $("#modal-footer-action-type").val(dom.attr("data-action-type"));
     $.post(dom.attr("data-action-target"),
         {
             ID:dom.attr("data-id"),
