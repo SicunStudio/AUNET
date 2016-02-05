@@ -1115,6 +1115,8 @@ class LoadController extends CommonController
 		//$this->html=$html;
 		//$this->display();
 		//echo $html;
+
+		//Show into html
 		$this->show($html);
 	}
 	
