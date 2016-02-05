@@ -69,11 +69,11 @@
     padding: 2px 5px;
     display: block;
     font-size: 16px;
-    border-radius: 4px;
+    border-radius: 3px;
 }
 
 .FormSwitcher.active {
-    background-color: #00a0e9;
+    background-color: #03A9F4;
     color: #ffffff;
     margin-bottom: 5px;
 }
@@ -81,7 +81,7 @@
 .FormSwitcher:hover {
     text-decoration: none;
     cursor: pointer;
-    border: solid 1px #00a0e9;
+    background-color: #90CAF9;
 }
 
 
@@ -96,4 +96,8 @@
 }
 .ApproveState-Wait {
     color: #000000;
+}
+
+.form-control {
+    border-radius: 0px;
 }

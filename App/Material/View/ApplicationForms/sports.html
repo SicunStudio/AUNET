@@ -7,84 +7,70 @@
         <ol class="breadcrumb">
             <li><h4>体育场馆使用申请</h4></li>
         </ol>
-        <form action="{:U('Material/Material/material_upload')}" enctype="multipart/form-data" method="POST">
+        <form action="{:U('Material/Material/material_upload')}" class="form-horizontal" enctype="multipart/form-data" method="POST">
             <input type="hidden" name="action_type" value="sports">
-            <div class="tableContainer">
-                <table width="700" class="table-bordered FillForm">
-                    <tbody>
-                    <tr>
-                        <td width="88" height="50" align="center" valign="middle">申请单位</td>
-                        <td height="50" colspan="7" align="center" valign="middle">
-                            <input type="text" name="ApplyName" class="inputArea h50" data-check-null="notnull">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td rowspan="2" align="center" valign="middle">经办人信息</td>
-                        <td width="62" height="35" align="center" valign="middle">姓名</td>
-                        <td height="35" colspan="3" align="center" valign="middle">
-                            <input type="text" name="OperatorName" class="inputArea h35" data-check-null="notnull">
-                        </td>
-                        <td width="111" height="35" align="center" valign="middle">联系方式</td>
-                        <td height="35" colspan="2" align="center" valign="middle">
-                            <input type="text" name="OperatorPhone" class="inputArea h35" data-check-null="notnull">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td height="35" align="center" valign="middle">学号</td>
-                        <td height="35" colspan="3" align="center" valign="middle">
-                            <input type="text" name="OperatorID" class="inputArea h35" data-check-null="notnull">
-                        </td>
-                        <td height="35" align="center" valign="middle">所在院（系）</td>
-                        <td height="35" colspan="2" align="center" valign="middle">
-                            <input type="text" name="OperatorDepartment" class="inputArea h35" data-check-null="notnull">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td height="120" align="center" valign="middle">活动内容</td>
-                        <td height="120" colspan="7" align="center" valign="middle">
-                            <textarea name="ActivityContent" class="inputArea"></textarea>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td height="50" align="center" valign="middle">活动日期</td>
-                        <td height="50" colspan="2" align="center" valign="middle" id="ActivityDateArea">
-                            <input type="text" name="ActivityDate" class="inputArea h50" data-check-null="notnull">
-                            <script>
-                                var mydate=new Date();
-                                $("#ActivityDateArea").html(generateDateSelector(mydate.getFullYear()+1,mydate.getFullYear(),true,true,"ActivityDate","ActivityDateArea_DateInput","YY年MM月DD日","adt","","","data-check-notice='活动日期' data-check-null='notnull'"));
-                            </script>
-                        </td>
-                        <td width="76" height="50" align="center" valign="middle">使用时间</td>
-                        <td height="50" colspan="2" align="center" valign="middle">
-                            <input type="text" name="UseTime" class="inputArea h50" data-check-null="notnull">
-                        </td>
-                        <td width="74" height="50" align="center" valign="middle">使用地点</td>
-                        <td width="153" height="50" align="center" valign="middle">
-                            <input type="text" name="UseLocation" class="inputArea h50" data-check-null="notnull">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td height="100" align="center" valign="middle">备注</td>
-                        <td height="100" colspan="7" align="center" valign="middle">
-                            <textarea name="Remark" class="inputArea"></textarea>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td height="150" colspan="8" align="left" valign="top">
-                            <p>院（系）或部门负责人意见</p><br><br>
-                            <p style="text-align:right">院（系）或部门公章</p>
-                            <p style="text-align:right">年&nbsp;&nbsp;&nbsp;&nbsp;月&nbsp;&nbsp;&nbsp;&nbsp;日 </p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td height="150" colspan="5" align="right" valign="bottom"> 保卫处审批意见(盖章)<br>年&nbsp;&nbsp;&nbsp;&nbsp;月&nbsp;&nbsp;&nbsp;&nbsp;日 </td>
-                        <td height="150" colspan="3" align="right" valign="bottom"> 体育场管中心审批意见(盖章)<br>年&nbsp;&nbsp;&nbsp;&nbsp;月&nbsp;&nbsp;&nbsp;&nbsp;日 </td>
-                    </tr>
-                    </tbody>
-                </table>
+            <div class="FillForm">
+                <div class="form-group">
+                    <label for="" class="col-sm-2 control-label">申请单位</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="ApplyName" class="form-control" data-check-null="notnull" data-check-notice="申请单位">
+                    </div>
+                </div>
+
+                <div class="form-group" style="margin-left: 10px"><h3>经办人信息</h3></div>
+                <div class="form-group"><label for="" class="col-sm-2 control-label">姓名</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="OperatorName" class="form-control" data-check-null="notnull" data-check-notice="经办人姓名">
+                    </div>
+                </div>
+                <div class="form-group"><label for="" class="col-sm-2 control-label">联系方式</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="OperatorPhone" class="form-control" data-check-null="notnull" data-check-notice="经办人联系方式">
+                    </div>
+                </div>
+                <div class="form-group"><label for="" class="col-sm-2 control-label">学号</label>
+                    <div class="col-sm-10"><input type="text" name="OperatorID" class="form-control" data-check-null="notnull"></div>
+                </div>
+                <div class="form-group"><label for="" class="col-sm-2 control-label">所在院（系）</label>
+                    <div class="col-sm-10"><input type="text" name="OperatorDepartment" class="form-control" data-check-null="notnull"></div>
+                </div>
+                <p>&nbsp;</p>
+                <div class="form-group"><label for="" class="col-sm-2 control-label">活动内容</label>
+                    <div class="col-sm-10"><textarea style="height: 150px;" name="ActivityContent" class=" h150 form-control"></textarea></div>
+                </div>
+                <div class="form-group"><label for="" class="col-sm-2 control-label">活动日期</label>
+                    <div class="col-sm-10" id="ActivityDateArea">
+                        <input type="hidden" name="ActivityDate" class="inputArea h50" data-check-null="notnull" data-check-notice="活动日期">
+                        <script>
+                            var mydate=new Date();
+                            $("#ActivityDateArea").html(generateDateSelector(mydate.getFullYear()+1,mydate.getFullYear(),true,true,"ActivityDate","ActivityDateArea_DateInput","YY年MM月DD日","adt","form-control","width:100px; display:inline-block;margin:5px;","data-check-notice='活动日期' data-check-null='notnull'"));
+                        </script>
+                    </div>
+                </div>
+                <div class="form-group"><label for="" class="col-sm-2 control-label">使用时间</label>
+                    <div class="col-sm-10"><input type="text" name="UseTime" class="form-control" data-check-null="notnull" data-check-notice="使用时间"></div>
+                </div>
+                <div class="form-group"><label for="" class="col-sm-2 control-label">使用地点</label>
+                    <div class="col-sm-10"><input type="text" name="UseLocation" class="form-control" data-check-null="notnull" data-check-notice="使用地点"></div>
+                </div>
+                <div class="form-group"><label for="" class="col-sm-2 control-label">备注</label>
+                    <div class="col-sm-10"><textarea style="height: 150px;" name="Remark" class="form-control h100"></textarea></div>
+                </div>
+
+
             </div>
-            <input type="file" name="file" id="inputUploadFile"><input type="hidden" name="ifUploadFile" id="ifUploadFile" value="none">
-            <input type="submit">
+            <div class="form-group">
+                <label for="" class="col-sm-2 control-label">策划提交<br>（可选）</label>
+                <div class="col-sm-10">
+                    <input type="file" name="file" class="btn btn-success" id="inputUploadFile">
+                    <input type="hidden" name="ifUploadFile" id="ifUploadFile" value="none">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <input type="button" class="btn btn-primary btn-lg" style="display:block; width: 150px; margin: 5px auto" data-role="submit" value="提交申请">
+                </div>
+            </div>
         </form>
 
     </body>

@@ -3,6 +3,18 @@
     margin: 5px auto;
 }
 
+.h150 {
+    height: 150px;
+}
+
+.h100 {
+    height: 100px;
+}
+
+.FillForm input {
+    background-color: transparent;
+}
+
 .FillForm .inputArea {
     border: none;
     width: 100%;
