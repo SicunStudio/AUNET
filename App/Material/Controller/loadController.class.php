@@ -28,13 +28,14 @@ class LoadController extends CommonController
 		$table = strtolower($type);
 		$sql = M("aunet.$table" , 'aunet_material_');
 		$file_data = $sql->where("id=".$ID)->limit(1)->select()[0];
+
 		foreach($file_data as $key => $val){
             $file_data[$key] = mb_convert_encoding($val, "HTML-ENTITIES", "UTF-8");
 		}
-	
+		//print_r($file_data);
 		switch($type){
 			case colorprinting:
-			$html ="
+			$html = "
 			<!DOCTYPE html>
 <html lang=\"zh-CN\">
     <head>
@@ -49,7 +50,7 @@ class LoadController extends CommonController
 
         </script>
     </head>
-    <body>
+    <body
         <ol class=\"breadcrumb\">
             <li><h4>彩喷悬挂申请</h4></li>
         </ol>
@@ -60,37 +61,37 @@ class LoadController extends CommonController
                     <tbody>
                     <tr>
                         <td width=\"98\" height=\"50\" align=\"center\" valign=\"middle\" scope=\"col\">申请单位</td>
-                        <td height=\"50\" colspan=\"5\" align=\"center\" valign=\"middle\" scope=\"col\"><input type=\"text\" name=\"AssociationName\" class=\"inputArea h50\" value=\"$file_data[AssociationName]\"></td>
+                        <td height=\"50\" colspan=\"5\" align=\"center\" valign=\"middle\" scope=\"col\"><input type=\"text\" name=\"AssociationName\" class=\"inputArea h50\" value=\"$file_data[associationname]\"> </td>
                     </tr>
                     <tr>
                         <td height=\"50\" align=\"center\" valign=\"middle\">经办人信息</td>
                         <td width=\"53\" height=\"50\" align=\"center\" valign=\"middle\">姓名</td>
-                        <td width=\"178\" height=\"50\" align=\"center\" valign=\"middle\"><input type=\"text\" name=\"Name\" class=\"inputArea h50\" value=\"$file_data[Name]\"></td>
+                        <td width=\"178\" height=\"50\" align=\"center\" valign=\"middle\"><input type=\"text\" name=\"Name\" class=\"inputArea h50\" value=\"$file_data[name]\"></td>
                         <td width=\"41\" height=\"50\" align=\"center\" valign=\"middle\">联系方式</td>
-                        <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\"><input type=\"text\" name=\"Phone\" class=\"inputArea h50\" value=\"$file_data[Phone]\"></td>
+                        <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\"><input type=\"text\" name=\"Phone\" class=\"inputArea h50\" value=\"$file_data[phone]\"></td>
                     </tr>
                     <tr>
                         <td align=\"center\" valign=\"middle\">活动内容</td>
-                        <td height=\"120\" colspan=\"5\" align=\"center\" valign=\"middle\"><textarea name=\"ActivityContent\" id=\"\" class=\"inputArea\" value=\"$file_data[ActivityContent]\"></textarea></td>
+                        <td height=\"120\" colspan=\"5\" align=\"center\" valign=\"middle\"><textarea name=\"ActivityContent\" id=\"\" class=\"inputArea\" value=\"$file_data[activitycontent]\"></textarea></td>
                     </tr>
                     <tr>
                         <td height=\"50\" align=\"center\" valign=\"middle\">活动日期</td>
                         <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\" id=\"ActivityDateArea\">
-                            <input type=\"text\" name=\"ActivityDate\" class=\"inputArea h50\" value=\"$file_data[ActivityDate]\">
+                            <input type=\"text\" name=\"ActivityDate\" class=\"inputArea h50\" value=\"$file_data[activitydate]\">
                             <script>
                                 var mydate=new Date();
                                 $(\"#ActivityDateArea\").html(generateDateSelector(mydate.getFullYear()+1,mydate.getFullYear(),true,true,\"ActivityDate\",\"ActivityDateArea_DateInput\",\"YY年MM月DD日\",\"adt\",\"\",\"\",\"data-check-notice='活动日期' data-check-null='notnull'\"));
                             </script>
                         </td>
                         <td height=\"50\" align=\"center\" valign=\"middle\">使用时间</td>
-                        <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\"><input type=\"text\" name=\"UseTime\" class=\"inputArea h50\" value=\"$file_data[UseTime]\"></td>
+                        <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\"><input type=\"text\" name=\"UseTime\" class=\"inputArea h50\" value=\"$file_data[usetime]\"></td>
                     </tr>
                     <tr>
                         <td height=\"50\" align=\"center\" valign=\"middle\">使用地点</td>
-                        <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\"><input type=\"text\" name=\"Location\" class=\"inputArea h50\" value=\"$file_data[Location]\"></td>
+                        <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\"><input type=\"text\" name=\"Location\" class=\"inputArea h50\" value=\"$file_data[location]\"></td>
                         <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">彩喷是否具有商业性质</td>
                         <td width=\"166\" height=\"50\" align=\"center\" valign=\"middle\">
-                            <select name=\"Commercial\" id=\"\" class=\"form-control\" value=\"$file_data[Commercial]\">
+                            <select name=\"Commercial\" id=\"\" class=\"form-control\" value=\"$file_data[commercial]\">
                                 <option value=\"有\" selected>有</option>
                                 <option value=\"无\">无</option>
                             </select>
@@ -99,7 +100,7 @@ class LoadController extends CommonController
                     <tr>
                         <td align=\"center\" valign=\"middle\">备注</td>
                         <td height=\"100\" colspan=\"5\" align=\"center\" valign=\"middle\">
-                            <textarea name=\"Remark\" id=\"\" class=\"inputArea\" value=\"$file_data[Remark]\"></textarea>
+                            <textarea name=\"Remark\" id=\"\" class=\"inputArea\" value=\"$file_data[remark]\"></textarea>
                         </td>
                     </tr>
                     <tr>
@@ -138,21 +139,21 @@ class LoadController extends CommonController
                     <tr>
                         <td width=\"95\" height=\"50\" align=\"center\" valign=\"middle\">协会名称</td>
                         <td width=\"171\" height=\"50\" align=\"center\" valign=\"middle\">
-                            <input type=\"text\" name=\"AssociationName\" class=\"inputArea h50\" data-check-null=\"notnull\" value=\"$file_data[AssociationName]\">
+                            <input type=\"text\" name=\"AssociationName\" class=\"inputArea h50\" data-check-null=\"notnull\" value=\"$file_data[associationname]\">
                         </td>
                         <td width=\"82\" height=\"50\" align=\"center\" valign=\"middle\">活动名称</td>
                         <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">
-                            <input type=\"text\" name=\"ActivityName\" class=\"inputArea h50\" data-check-null=\"notnull\" value=\"$file_data[ActivityName]\">
+                            <input type=\"text\" name=\"ActivityName\" class=\"inputArea h50\" data-check-null=\"notnull\" value=\"$file_data[activityname]\">
                         </td>
                         <td width=\"81\" height=\"50\" align=\"center\" valign=\"middle\">参与人数</td>
                         <td width=\"92\" height=\"50\" align=\"center\" valign=\"middle\">
-                            <input type=\"text\" name=\"JoinNumber\" class=\"inputArea h50\" data-check-null=\"notnull\" value=\"$file_data[JoinNumber]\">
+                            <input type=\"text\" name=\"JoinNumber\" class=\"inputArea h50\" data-check-null=\"notnull\" value=\"$file_data[joinnumber]\">
                         </td>
                     </tr>
                     <tr>
                         <td height=\"50\" align=\"center\" valign=\"middle\">活动日期</td>
                         <td height=\"50\" align=\"center\" valign=\"middle\" id=\"ActivityDateArea\">
-                            <input type=\"text\" name=\"ActivityDate\" class=\"inputArea h50\" data-check-null=\"notnull\" value=\"$file_data[ActivityDate]\">
+                            <input type=\"text\" name=\"ActivityDate\" class=\"inputArea h50\" data-check-null=\"notnull\" value=\"$file_data[activitydate]\">
                             <script>
                                 var mydate=new Date();
                                 $(\"#ActivityDateArea\").html(generateDateSelector(mydate.getFullYear()+1,mydate.getFullYear(),true,true,\"ActivityDate\",\"ActivityDateArea_DateInput\",\"YY年MM月DD日\",\"adt\",\"\",\"\",\"data-check-notice='活动日期' data-check-null='notnull'\"));
@@ -160,7 +161,7 @@ class LoadController extends CommonController
                         </td>
                         <td height=\"50\" align=\"center\" valign=\"middle\">活动时间</td>
                         <td height=\"50\" colspan=\"4\" align=\"left\" valign=\"middle\">
-                            <select name=\"ActivityTime\" class=\"form-control\" value=\"$file_data[ActivityTime]\">
+                            <select name=\"ActivityTime\" class=\"form-control\" value=\"$file_data[activitytime]\">
                                 <option value=\"上午\" selected>上午</option>
                                 <option value=\"下午\">下午</option>
                                 <option value=\"晚上\">晚上</option>
@@ -174,36 +175,36 @@ class LoadController extends CommonController
                     <tr>
                         <td height=\"150\" align=\"center\" valign=\"middle\"><p>活动内容（主题， 目的， 流程， 安全负责人） </p></td>
                         <td height=\"150\" colspan=\"6\" align=\"center\" valign=\"middle\">
-                            <textarea name=\"ActivityContent\" id=\"\" class=\"inputArea\" data-check-null=\"notnull\" value=\"$file_data[ActivityContent]\"></textarea>
+                            <textarea name=\"ActivityContent\" id=\"\" class=\"inputArea\" data-check-null=\"notnull\" value=\"$file_data[activitycontent]\"></textarea>
                         </td>
                     </tr>
                     <tr>
                         <td height=\"80\" align=\"center\" valign=\"middle\">有无商业赞助</td>
                         <td height=\"80\" align=\"center\" valign=\"middle\">
-                            <select name=\"Commercial\" class=\"form-control\" value=\"$file_data[Commercial]\">
+                            <select name=\"Commercial\" class=\"form-control\" value=\"$file_data[commercial]\">
                                 <option value=\"有\" selected>有</option>
                                 <option value=\"无\">无</option>
                             </select>
                         </td>
                         <td height=\"80\" align=\"center\" valign=\"middle\">赞助方名及赞助方式（如有） </td>
                         <td height=\"80\" colspan=\"4\" align=\"center\" valign=\"middle\">
-                            <textarea name=\"CommercialPart\" id=\"\" class=\"inputArea\" value=\"$file_data[CommercialPart]\"></textarea>
+                            <textarea name=\"CommercialPart\" id=\"\" class=\"inputArea\" value=\"$file_data[commercialpart]\"></textarea>
                         </td>
                     </tr>
                     <tr>
                         <td height=\"50\" align=\"center\" valign=\"middle\">活动负责人</td>
                         <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">
-                            <input type=\"text\" name=\"ActivityChargePerson\" class=\"inputArea h50\" data-check-null=\"notnull\" value=\"$file_data[ActivityChargePerson]\">
+                            <input type=\"text\" name=\"ActivityChargePerson\" class=\"inputArea h50\" data-check-null=\"notnull\" value=\"$file_data[activitychargeperson]\">
                         </td>
                         <td width=\"100\" height=\"50\" align=\"center\" valign=\"middle\">联系电话</td>
                         <td height=\"50\" colspan=\"3\" align=\"center\" valign=\"middle\">
-                            <input type=\"text\" name=\"ActivityPhone\" class=\"inputArea h50\" data-check-null=\"notnull\" value=\"$file_data[ActivityPhone]\">
+                            <input type=\"text\" name=\"ActivityPhone\" class=\"inputArea h50\" data-check-null=\"notnull\" value=\"$file_data[activityphone]\">
                         </td>
                     </tr>
                     <tr>
                         <td height=\"80\" align=\"center\" valign=\"middle\">社团意见</td>
                         <td height=\"80\" colspan=\"2\" align=\"center\" valign=\"middle\">
-                            <textarea name=\"AssociationComment\" id=\"\" class=\"inputArea\" value=\"$file_data[AssociationName]\"></textarea>
+                            <textarea name=\"AssociationComment\" id=\"\" class=\"inputArea\" value=\"$file_data[associationname]\"></textarea>
                         </td>
                         <td height=\"80\" align=\"center\" valign=\"middle\">社联意见</td>
                         <td height=\"80\" colspan=\"3\" align=\"center\" valign=\"middle\"><span class=\"disable-area\"></span></td>
@@ -252,18 +253,18 @@ class LoadController extends CommonController
     <tbody>
     <tr>
         <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">协会名称</td>
-        <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\"><input type=\"text\" class=\"inputArea h50\" data-check-null=\"notnull\" data-check-notice=\"协会名称\" name=\"AssociationName\" value=\"$file_data[AssociationName]\"></td>
+        <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\"><input type=\"text\" class=\"inputArea h50\" data-check-null=\"notnull\" data-check-notice=\"协会名称\" name=\"AssociationName\" value=\"$file_data[associationname]\"></td>
         <td width=\"86\" height=\"50\" align=\"center\" valign=\"middle\">活动名称</td>
-        <td height=\"50\" colspan=\"3\" align=\"center\" valign=\"middle\"><input type=\"text\" class=\"inputArea h50\" data-check-null=\"notnull\" data-check-notice=\"活动名称\" name=\"ActivityName\" value=\"$file_data[ActivityName]\"></td>
+        <td height=\"50\" colspan=\"3\" align=\"center\" valign=\"middle\"><input type=\"text\" class=\"inputArea h50\" data-check-null=\"notnull\" data-check-notice=\"活动名称\" name=\"ActivityName\" value=\"$file_data[activityname]\"></td>
     </tr>
     <tr>
         <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">活动地点</td>
         <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">
-            <input type=\"text\" class=\"inputArea h50\" data-check-null=\"notnull\" data-check-notice=\"活动地点\" name=\"ActivityLocation\" value=\"$file_data[ActivityLocation]\">
+            <input type=\"text\" class=\"inputArea h50\" data-check-null=\"notnull\" data-check-notice=\"活动地点\" name=\"ActivityLocation\" value=\"$file_data[activitylocation]\">
         </td>
         <td height=\"50\" align=\"center\" valign=\"middle\">借用日期</td>
         <td width=\"98\" height=\"50\" align=\"center\" valign=\"middle\" id=\"borrowTimeArea\">
-            <input type=\"text\" class=\"inputArea h50\" data-check-null=\"notnull\" data-check-notice=\"借用日期\" name=\"BorrowTime\" value=\"$file_data[BorrowTime]\">
+            <input type=\"text\" class=\"inputArea h50\" data-check-null=\"notnull\" data-check-notice=\"借用日期\" name=\"BorrowTime\" value=\"$file_data[borrowtime]\">
             <script>
                 var mydate=new Date();
                 $(\"#borrowTimeArea\").html(generateDateSelector(mydate.getFullYear()+1,mydate.getFullYear(),true,true,\"BorrowTime\",\"borrowTimeArea_DateInput\",\"YY年MM月DD日\",\"bt\",\"\",\"\",\"data-check-notice='借用日期' data-check-null='notnull'\"));
@@ -271,7 +272,7 @@ class LoadController extends CommonController
         </td>
         <td width=\"82\" height=\"50\" align=\"center\" valign=\"middle\">参与人数</td>
         <td width=\"90\" height=\"50\" align=\"center\" valign=\"middle\">
-            <input type=\"text\" class=\"inputArea h50\" data-check-null=\"notnull\" data-check-notice=\"参与人数\" data-check-type=\"number\" name=\"JoinNumber\" value=\"$file_data[JoinNumber]\">
+            <input type=\"text\" class=\"inputArea h50\" data-check-null=\"notnull\" data-check-notice=\"参与人数\" data-check-type=\"number\" name=\"JoinNumber\" value=\"$file_data[joinnumber]\">
         </td>
     </tr>
     <tr>
@@ -282,11 +283,11 @@ class LoadController extends CommonController
         <td width=\"69\" height=\"35\" align=\"center\" valign=\"middle\" width=\"71\">投影仪</td>
         <td width=\"111\" height=\"35\" align=\"center\" valign=\"middle\" width=\"90\">台数</td>
         <td height=\"35\" colspan=\"2\" align=\"center\" valign=\"middle\" width=\"90\">
-            <input type=\"text\" id=\"inputProjectorNum\" class=\"inputArea h35\" data-check-type=\"number\" data-check-notice=\"投影仪台数\" name=\"ProjectorNumber\" value=\"$file_data[ProjectorNumber]\">
+            <input type=\"text\" id=\"inputProjectorNum\" class=\"inputArea h35\" data-check-type=\"number\" data-check-notice=\"投影仪台数\" name=\"ProjectorNumber\" value=\"$file_data[projectornumber]\">
         </td>
         <td height=\"35\" align=\"center\" valign=\"middle\" width=\"109\">归还日期</td>
         <td height=\"35\" colspan=\"2\" align=\"center\" valign=\"middle\" width=\"86\" id=\"PReturnTimeArea\">
-            <input type=\"text\" id=\"inputProjectorReturn\" class=\"inputArea h35\"  data-check-notice=\"投影仪归还日期\" name=\"PReturnTime\" value=\"$file_data[PReturnTime]\">
+            <input type=\"text\" id=\"inputProjectorReturn\" class=\"inputArea h35\"  data-check-notice=\"投影仪归还日期\" name=\"PReturnTime\" value=\"$file_data[preturntime]\">
             <script>
                 var mydate=new Date();
                 $(\"#PReturnTimeArea\").html(generateDateSelector(mydate.getFullYear()+1,mydate.getFullYear(),true,true,\"PReturnTime\",\"PReturnTime_DateInput\",\"YY年MM月DD日\",\"prt\",\"\",\"\",\"data-check-notice='投影仪归还日期'\"));
@@ -297,7 +298,7 @@ class LoadController extends CommonController
         <td height=\"35\" align=\"center\" valign=\"middle\" width=\"71\">电力<br></td>
         <td height=\"35\" align=\"center\" valign=\"middle\" width=\"90\">瓦数</td>
         <td height=\"35\" colspan=\"2\" align=\"center\" valign=\"middle\" width=\"90\">
-            <input type=\"text\" class=\"inputArea h35\" data-check-notice=\"瓦数\" data-check-type=\"number\" id=\"PowerWattage\" name=\"PowerWattage\" value=\"$file_data[PowerWattage]\">
+            <input type=\"text\" class=\"inputArea h35\" data-check-notice=\"瓦数\" data-check-type=\"number\" id=\"PowerWattage\" name=\"PowerWattage\" value=\"$file_data[powerwattage]\">
         </td>
         <td height=\"35\" colspan=\"3\" align=\"center\" valign=\"middle\">（注：瓦数超过2000W须要到主校区配电房签字）</td>
     </tr>
@@ -305,15 +306,15 @@ class LoadController extends CommonController
         <td height=\"35\" align=\"center\" valign=\"middle\" width=\"71\">大量桌椅</td>
         <td height=\"35\" align=\"center\" valign=\"middle\" width=\"90\">桌子数量</td>
         <td width=\"90\" height=\"35\" align=\"center\" valign=\"middle\" width=\"90\">
-            <input type=\"text\" class=\"inputArea h35\"  data-check-type=\"number\" data-check-notice=\"桌子数量\" id=\"DeskNumber\" name=\"DeskNumber\" value=\"$file_data[DeskNumber]\">
+            <input type=\"text\" class=\"inputArea h35\"  data-check-type=\"number\" data-check-notice=\"桌子数量\" id=\"DeskNumber\" name=\"DeskNumber\" value=\"$file_data[desknumber]\">
         </td>
         <td height=\"35\" align=\"center\" valign=\"middle\" width=\"89\">椅子数量</td>
         <td height=\"35\" align=\"center\" valign=\"middle\" width=\"109\">
-            <input type=\"text\" class=\"inputArea h35\" data-check-notice=\"椅子数量\" data-check-type=\"number\" id=\"ChairNumber\" name=\"ChairNumber\" value=\"$file_data[ChairNumber]\">
+            <input type=\"text\" class=\"inputArea h35\" data-check-notice=\"椅子数量\" data-check-type=\"number\" id=\"ChairNumber\" name=\"ChairNumber\" value=\"$file_data[chairnumber]\">
         </td>
         <td height=\"35\" align=\"center\" valign=\"middle\" width=\"86\">归还日期</td>
         <td height=\"35\" align=\"center\" valign=\"middle\" width=\"92\" id=\"DCReturnTimeArea\">
-            <input type=\"text\" class=\"inputArea h35\" data-check-notice=\"桌椅归还日期\" name=\"DCReturnTime\" value=\"$file_data[DCReturnTime]\">
+            <input type=\"text\" class=\"inputArea h35\" data-check-notice=\"桌椅归还日期\" name=\"DCReturnTime\" value=\"$file_data[dcreturntime]\">
             <script>
                 var mydate=new Date();
                 $(\"#DCReturnTimeArea\").html(generateDateSelector(mydate.getFullYear()+1,mydate.getFullYear(),true,true,\"DCReturnTime\",\"DCReturnTime_DateInput\",\"YY年MM月DD日\",\"dcrt\",\"\",\"\",\"data-check-notice='桌椅归还日期'\"));
@@ -324,27 +325,27 @@ class LoadController extends CommonController
         <td height=\"35\" align=\"center\" valign=\"middle\" width=\"71\">校车</td>
         <td height=\"35\" align=\"center\" valign=\"middle\" width=\"90\">运送桌子数量</td>
         <td height=\"35\" colspan=\"2\" align=\"center\" valign=\"middle\" width=\"90\">
-            <input type=\"text\" class=\"inputArea h35\" data-check-notice=\"运送桌子数量\" data-check-type=\"number\" name=\"CarryDeskNumber\" id=\"CarryDeskNumber\" value=\"$file_data[CarryDeskNumber]\">
+            <input type=\"text\" class=\"inputArea h35\" data-check-notice=\"运送桌子数量\" data-check-type=\"number\" name=\"CarryDeskNumber\" id=\"CarryDeskNumber\" value=\"$file_data[carrydesknumber]\">
         </td>
         <td height=\"35\" align=\"center\" valign=\"middle\" width=\"109\">运送椅子数量</td>
         <td height=\"35\" colspan=\"2\" align=\"center\" valign=\"middle\" width=\"86\">
-            <input type=\"text\" class=\"inputArea h35\" data-check-notice=\"运送椅子数量\" data-check-type=\"number\" name=\"CarryChairNumber\" id=\"CarryChairNumber\" value=\"$file_data[CarryChairNumber]\">
+            <input type=\"text\" class=\"inputArea h35\" data-check-notice=\"运送椅子数量\" data-check-type=\"number\" name=\"CarryChairNumber\" id=\"CarryChairNumber\" value=\"$file_data[carrychairnumber]\">
         </td>
     </tr>
     <tr>
         <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">活动负责人</td>
         <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">
-            <input type=\"text\" class=\"inputArea h50\" data-check-null=\"notnull\" data-check-notice=\"活动负责人\" name=\"ActivityChargePerson\" value=\"$file_data[ActivityChargePerson]\">
+            <input type=\"text\" class=\"inputArea h50\" data-check-null=\"notnull\" data-check-notice=\"活动负责人\" name=\"ActivityChargePerson\" value=\"$file_data[activitychargeperson]\">
         </td>
         <td width=\"50\" height=\"50\" align=\"center\" valign=\"middle\">联系电话</td>
         <td height=\"50\" colspan=\"3\" align=\"center\" valign=\"middle\">
-            <input type=\"text\" class=\"inputArea h50\" data-check-null=\"notnull\" data-check-notice=\"联系电话\" name=\"ActivityPhone\" value=\"$file_data[ActivityPhone]\">
+            <input type=\"text\" class=\"inputArea h50\" data-check-null=\"notnull\" data-check-notice=\"联系电话\" name=\"ActivityPhone\" value=\"$file_data[activityphone]\">
         </td>
     </tr>
     <tr>
         <td height=\"80\" colspan=\"2\" align=\"center\" valign=\"middle\">社团意见</td>
         <td height=\"80\" colspan=\"2\" align=\"center\" valign=\"middle\">
-            <textarea type=\"text\" class=\"inputArea\" data-check-notice=\"社团意见\" name=\"AssociationComment\" value=\"$file_data[AssociationComment]\"></textarea>
+            <textarea type=\"text\" class=\"inputArea\" data-check-notice=\"社团意见\" name=\"AssociationComment\" value=\"$file_data[associationcomment]\"></textarea>
         </td>
         <td height=\"80\" align=\"center\" valign=\"middle\">社联意见</td>
         <td height=\"80\" colspan=\"3\" align=\"center\" valign=\"middle\"><span class=\"disable-area\"></span></td>
@@ -397,21 +398,21 @@ class LoadController extends CommonController
                     <tr>
                         <td width=\"112\" height=\"50\" align=\"center\" valign=\"middle\">协会名称</td>
                         <td width=\"139\" height=\"50\" align=\"center\" valign=\"middle\">
-                            <input type=\"text\" name=\"AssociationName\" class=\"inputArea h50\" data-check-null=\"notnull\" value=\"$file_data[AssociationName]\">
+                            <input type=\"text\" name=\"AssociationName\" class=\"inputArea h50\" data-check-null=\"notnull\" value=\"$file_data[associationname]\">
                         </td>
                         <td width=\"84\" height=\"50\" align=\"center\" valign=\"middle\">活动名称</td>
                         <td width=\"111\" height=\"50\" align=\"center\" valign=\"middle\">
-                            <input type=\"text\" name=\"ActivityName\" class=\"inputArea h50\" data-check-null=\"notnull\" value=\"$file_data[ActivityName]\">
+                            <input type=\"text\" name=\"ActivityName\" class=\"inputArea h50\" data-check-null=\"notnull\" value=\"$file_data[activityname]\">
                         </td>
                         <td width=\"75\" height=\"50\" align=\"center\" valign=\"middle\">参与人数</td>
                         <td width=\"153\" height=\"50\" align=\"center\" valign=\"middle\">
-                            <input type=\"text\" name=\"JoinNumber\" class=\"inputArea h50\" data-check-null=\"notnull\" value=\"$file_data[JoinNumber]\">
+                            <input type=\"text\" name=\"JoinNumber\" class=\"inputArea h50\" data-check-null=\"notnull\" value=\"$file_data[joinnumber]\">
                         </td>
                     </tr>
                     <tr>
                         <td height=\"50\" align=\"center\" valign=\"middle\">活动日期</td>
                         <td height=\"50\" align=\"center\" valign=\"middle\" id=\"ActivityDateArea\">
-                            <input type=\"text\" name=\"ActivityDate\" class=\"inputArea h50\" data-check-null=\"notnull\" value=\"$file_data[ActivityDate]\">
+                            <input type=\"text\" name=\"ActivityDate\" class=\"inputArea h50\" data-check-null=\"notnull\" value=\"$file_data[activitydate]\">
                             <script>
                                 var mydate=new Date();
                                 $(\"#ActivityDateArea\").html(generateDateSelector(mydate.getFullYear()+1,mydate.getFullYear(),true,true,\"ActivityDate\",\"ActivityDateArea_DateInput\",\"YY年MM月DD日\",\"adt\",\"\",\"\",\"data-check-notice='活动日期' data-check-null='notnull'\"));
@@ -419,7 +420,7 @@ class LoadController extends CommonController
                         </td>
                         <td height=\"50\" align=\"center\" valign=\"middle\">活动时间</td>
                         <td height=\"50\" colspan=\"3\" align=\"center\" valign=\"middle\">
-                            <select name=\"ActivityTime\" class=\"form-control\" value=\"$file_data[ActivityTime]\">
+                            <select name=\"ActivityTime\" class=\"form-control\" value=\"$file_data[activitytime]\">
                                 <option value=\"上午\" selected>上午</option>
                                 <option value=\"下午\">下午</option>
                                 <option value=\"晚上\">晚上</option>
@@ -429,7 +430,7 @@ class LoadController extends CommonController
                     <tr>
                         <td height=\"50\" align=\"center\" valign=\"middle\">活动地点</td>
                         <td height=\"50\" colspan=\"5\" align=\"center\" valign=\"middle\">
-                            <select name=\"ActivityLocation\" id=\"\" class=\"form-control\" value=\"$file_data[ActivityLocation]\">
+                            <select name=\"ActivityLocation\" id=\"\" class=\"form-control\" value=\"$file_data[activitylocation]\">
                                 <option value=\"韵苑路口\" selected>韵苑路口</option>
                                 <option value=\"紫菘路口\">紫菘路口</option>
                                 <option value=\"沁苑路口\">沁苑路口</option>
@@ -439,36 +440,36 @@ class LoadController extends CommonController
                     <tr>
                         <td height=\"120\" align=\"center\" valign=\"middle\">活动内容 （主题， 目的， 流程， 安全负责人） </td>
                         <td height=\"120\" colspan=\"5\" align=\"center\" valign=\"middle\">
-                            <textarea name=\"ActivityContent\" class=\"inputArea\" data-check-null=\"notnull\" value=\"$file_data[ActivityContent]\"></textarea>
+                            <textarea name=\"ActivityContent\" class=\"inputArea\" data-check-null=\"notnull\" value=\"$file_data[activitycontent]\"></textarea>
                         </td>
                     </tr>
                     <tr>
                         <td height=\"80\" align=\"center\" valign=\"middle\">有无商业赞助</td>
                         <td height=\"80\" align=\"center\" valign=\"middle\">
-                            <select name=\"Commercial\" id=\"\" class=\"form-control\" value=\"$file_data[Commercial]\">
+                            <select name=\"Commercial\" id=\"\" class=\"form-control\" value=\"$file_data[commercial]\">
                                 <option value=\"有\" selected>有</option>
                                 <option value=\"无\">无</option>
                             </select>
                         </td>
                         <td height=\"80\" align=\"center\" valign=\"middle\">赞助方名 及赞助方式（如有） </td>
                         <td height=\"80\" colspan=\"3\" align=\"center\" valign=\"middle\">
-                            <textarea name=\"CommercialPart\" class=\"inputArea\" value=\"$file_data[CommercialPart]\"></textarea>
+                            <textarea name=\"CommercialPart\" class=\"inputArea\" value=\"$file_data[commercialpart]\"></textarea>
                         </td>
                     </tr>
                     <tr>
                         <td height=\"50\" align=\"center\" valign=\"middle\">活动负责人</td>
                         <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">
-                            <input type=\"text\" name=\"ActivityChargePerson\" class=\"inputArea h50\" data-check-null=\"notnull\" value=\"$file_data[ActivityChargePerson]\">
+                            <input type=\"text\" name=\"ActivityChargePerson\" class=\"inputArea h50\" data-check-null=\"notnull\" value=\"$file_data[activitychargeperson]\">
                         </td>
                         <td height=\"50\" align=\"center\" valign=\"middle\">联系电话</td>
                         <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">
-                            <input type=\"text\" name=\"ActivityPhone\" class=\"inputArea h50\" data-check-null=\"notnull\" value=\"$file_data[ActivityPhone]\">
+                            <input type=\"text\" name=\"ActivityPhone\" class=\"inputArea h50\" data-check-null=\"notnull\" value=\"$file_data[activityphone]\">
                         </td>
                     </tr>
                     <tr>
                         <td height=\"80\" align=\"center\" valign=\"middle\">社团意见</td>
                         <td height=\"80\" colspan=\"2\" align=\"center\" valign=\"middle\">
-                            <textarea name=\"AssociationComment\" class=\"inputArea\" data-check-null=\"notnull\" value=\"$file_data[AssociationName]\"></textarea>
+                            <textarea name=\"AssociationComment\" class=\"inputArea\" data-check-null=\"notnull\" value=\"$file_data[associationname]\"></textarea>
                         </td>
                         <td height=\"80\" align=\"center\" valign=\"middle\">社联意见</td>
                         <td height=\"80\" colspan=\"2\" align=\"center\" valign=\"middle\">
@@ -525,21 +526,21 @@ class LoadController extends CommonController
                     <tr>
                         <td width=\"104\" height=\"50\" align=\"center\" valign=\"middle\">协会名称</td>
                         <td width=\"122\" height=\"50\" align=\"center\" valign=\"middle\">
-                            <input type=\"text\" name=\"AssociationName\" class=\"inputArea h50\" data-check-null=\"notnull\" value=\"$file_data[AssociationName]\">
+                            <input type=\"text\" name=\"AssociationName\" class=\"inputArea h50\" data-check-null=\"notnull\" value=\"$file_data[associationname]\">
                         </td>
                         <td width=\"89\" height=\"50\" align=\"center\" valign=\"middle\">活动名称</td>
                         <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">
-                            <input type=\"text\" name=\"ActivityName\" class=\"inputArea h50\" data-check-null=\"notnull\" value=\"$file_data[ActivityName]\">
+                            <input type=\"text\" name=\"ActivityName\" class=\"inputArea h50\" data-check-null=\"notnull\" value=\"$file_data[activityname]\">
                         </td>
                         <td width=\"112\" height=\"50\" align=\"center\" valign=\"middle\">参与人数</td>
                         <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">
-                            <input type=\"text\" name=\"JoinNumber\" class=\"inputArea h50\" data-check-null=\"notnull\" value=\"$file_data[JoinNumber]\">
+                            <input type=\"text\" name=\"JoinNumber\" class=\"inputArea h50\" data-check-null=\"notnull\" value=\"$file_data[joinnumber]\">
                         </td>
                     </tr>
                     <tr>
                         <td height=\"50\" align=\"center\" valign=\"middle\">活动日期</td>
                         <td height=\"50\" align=\"center\" valign=\"middle\" id=\"ActivityDateArea\">
-                            <input type=\"text\" name=\"ActivityDate\" class=\"inputArea h50\" data-check-null=\"notnull\" value=\"$file_data[ActivityDate]\">
+                            <input type=\"text\" name=\"ActivityDate\" class=\"inputArea h50\" data-check-null=\"notnull\" value=\"$file_data[activitydate]\">
                             <script>
                                 var mydate=new Date();
                                 $(\"#ActivityDateArea\").html(generateDateSelector(mydate.getFullYear()+1,mydate.getFullYear(),true,true,\"ActivityDate\",\"ActivityDateArea_DateInput\",\"YY年MM月DD日\",\"adt\",\"\",\"\",\"data-check-notice='活动日期' data-check-null='notnull'\"));
@@ -547,7 +548,7 @@ class LoadController extends CommonController
                         </td>
                         <td height=\"50\" align=\"center\" valign=\"middle\">活动时间</td>
                         <td height=\"50\" colspan=\"5\" align=\"center\" valign=\"middle\">
-                            <select name=\"ActivityTime\" class=\"form-control\" value=\"$file_data[ActivityTime]\">
+                            <select name=\"ActivityTime\" class=\"form-control\" value=\"$file_data[activitytime]\">
                                 <option value=\"上午\" selected>上午</option>
                                 <option value=\"下午\">下午</option>
                                 <option value=\"晚上\">晚上</option>
@@ -557,7 +558,7 @@ class LoadController extends CommonController
                     <tr>
                         <td height=\"50\" align=\"center\" valign=\"middle\">普通教室<br>（50人） </td>
                         <td height=\"50\" colspan=\"4\" align=\"center\" valign=\"middle\">
-                            <select name=\"NormalClassroom\" id=\"\" class=\"form-control\" value=\"$file_data[NormalClassroom]\">
+                            <select name=\"NormalClassroom\" id=\"\" class=\"form-control\" value=\"$file_data[normalclassroom]\">
                                 <option value=\"\" selected>-</option>
                                 <option value=\"302\">302</option>
                                 <option value=\"303\">303</option>
@@ -568,7 +569,7 @@ class LoadController extends CommonController
                         </td>
                         <td colspan=\"2\" rowspan=\"2\" align=\"center\" valign=\"middle\">是否经系统查询</td>
                         <td width=\"114\" rowspan=\"2\" align=\"center\" valign=\"middle\">
-                            <select name=\"Queried\" id=\"\" class=\"form-control\" value=\"$file_data[Queried]\">
+                            <select name=\"Queried\" id=\"\" class=\"form-control\" value=\"$file_data[queried]\">
                                 <option value=\"否\" selected>否</option>
                                 <option value=\"是\">是</option>
                             </select>
@@ -577,7 +578,7 @@ class LoadController extends CommonController
                     <tr>
                         <td height=\"50\" align=\"center\" valign=\"middle\">阶梯教室<br>（300人） </td>
                         <td height=\"50\" colspan=\"4\" align=\"center\" valign=\"middle\">
-                            <select name=\"LadderClassroom\" id=\"\" class=\"form-control\" value=\"$file_data[LadderClassroom]\">
+                            <select name=\"LadderClassroom\" id=\"\" class=\"form-control\" value=\"$file_data[ladderclassroom]\">
                                 <option value=\"\" selected>-</option>
                                 <option value=\"305\">305</option>
                                 <option value=\"513\">513</option>
@@ -587,36 +588,36 @@ class LoadController extends CommonController
                     <tr>
                         <td height=\"120\" align=\"center\" valign=\"middle\">活动内容<br>（主题， 目的， 流程， 安全负责人） </td>
                         <td height=\"120\" colspan=\"7\" align=\"center\" valign=\"middle\">
-                            <textarea name=\"ActivityContent\" class=\"inputArea\" value=\"$file_data[ActivityContent]\"></textarea>
+                            <textarea name=\"ActivityContent\" class=\"inputArea\" value=\"$file_data[activitycontent]\"></textarea>
                         </td>
                     </tr>
                     <tr>
                         <td height=\"80\" align=\"center\" valign=\"middle\">有无商业赞助</td>
                         <td height=\"80\" align=\"center\" valign=\"middle\">
-                            <select name=\"Commercial\" id=\"\" class=\"form-control\" value=\"$file_data[Commercial]\">
+                            <select name=\"Commercial\" id=\"\" class=\"form-control\" value=\"$file_data[commercial]\">
                                 <option value=\"有\" selected>有</option>
                                 <option value=\"无\">无</option>
                             </select>
                         </td>
                         <td height=\"80\" align=\"center\" valign=\"middle\">赞助方名及赞助方式（如有） </td>
                         <td height=\"80\" colspan=\"5\" align=\"center\" valign=\"middle\">
-                            <textarea name=\"CommercialPart\" class=\"inputArea\" value=\"$file_data[CommercialPart]\"></textarea>
+                            <textarea name=\"CommercialPart\" class=\"inputArea\" value=\"$file_data[commercialpart]\"></textarea>
                         </td>
                     </tr>
                     <tr>
                         <td height=\"50\" align=\"center\" valign=\"middle\">活动负责人</td>
                         <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">
-                            <input type=\"text\" name=\"ActivityChargePerson\" class=\"inputArea h50\" data-check-null=\"notnull\" value=\"$file_data[ActivityChargePerson]\">
+                            <input type=\"text\" name=\"ActivityChargePerson\" class=\"inputArea h50\" data-check-null=\"notnull\" value=\"$file_data[activitychargeperson]\">
                         </td>
                         <td width=\"91\" align=\"center\" valign=\"middle\">联系电话</td>
                         <td height=\"50\" colspan=\"4\" align=\"center\" valign=\"middle\">
-                            <input type=\"text\" name=\"ActivityPhone\" class=\"inputArea h50\" data-check-null=\"notnull\" value=\"$file_data[ActivityPhone]\">
+                            <input type=\"text\" name=\"ActivityPhone\" class=\"inputArea h50\" data-check-null=\"notnull\" value=\"$file_data[activityphone]\">
                         </td>
                     </tr>
                     <tr>
                         <td height=\"100\" align=\"center\" valign=\"middle\">社团意见</td>
                         <td height=\"100\" colspan=\"2\" align=\"center\" valign=\"middle\">
-                            <textarea name=\"AssociationComment\" class=\"inputArea\" value=\"$file_data[AssociationComment]\"></textarea>
+                            <textarea name=\"AssociationComment\" class=\"inputArea\" value=\"$file_data[associationcomment]\"></textarea>
                         </td>
                         <td align=\"center\" valign=\"middle\">社联意见</td>
                         <td height=\"100\" colspan=\"4\" align=\"center\" valign=\"middle\"><span class=\"disable-area\"></span></td>
@@ -661,21 +662,21 @@ class LoadController extends CommonController
                     <tr>
                         <td width=\"104\" height=\"50\" align=\"center\" valign=\"middle\">协会名称</td>
                         <td width=\"122\" height=\"50\" align=\"center\" valign=\"middle\">
-                            <input type=\"text\" name=\"AssociationName\" class=\"inputArea h50\" data-check-null=\"notnull\" value=\"$file_data[AssociationName]\">
+                            <input type=\"text\" name=\"AssociationName\" class=\"inputArea h50\" data-check-null=\"notnull\" value=\"$file_data[associationname]\">
                         </td>
                         <td width=\"89\" height=\"50\" align=\"center\" valign=\"middle\">活动名称</td>
                         <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">
-                            <input type=\"text\" name=\"ActivityTime\" class=\"inputArea h50\" data-check-null=\"notnull\" value=\"$file_data[ActivityTime]\">
+                            <input type=\"text\" name=\"ActivityTime\" class=\"inputArea h50\" data-check-null=\"notnull\" value=\"$file_data[activitytime]\">
                         </td>
                         <td width=\"112\" height=\"50\" align=\"center\" valign=\"middle\">参与人数</td>
                         <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">
-                            <input type=\"text\" name=\"JoinNumber\" class=\"inputArea h50\" data-check-null=\"notnull\" value=\"$file_data[JoinNumber]\">
+                            <input type=\"text\" name=\"JoinNumber\" class=\"inputArea h50\" data-check-null=\"notnull\" value=\"$file_data[joinnumber]\">
                         </td>
                     </tr>
                     <tr>
                         <td height=\"50\" align=\"center\" valign=\"middle\">活动日期</td>
                         <td height=\"50\" align=\"center\" valign=\"middle\" id=\"ActivityDateArea\">
-                            <input type=\"text\" name=\"ActivityDate\" class=\"inputArea h50\" data-check-null=\"notnull\" value=\"$file_data[ActivityDate]\">
+                            <input type=\"text\" name=\"ActivityDate\" class=\"inputArea h50\" data-check-null=\"notnull\" value=\"$file_data[activitydate]\">
                             <script>
                                 var mydate=new Date();
                                 $(\"#ActivityDateArea\").html(generateDateSelector(mydate.getFullYear()+1,mydate.getFullYear(),true,true,\"ActivityDate\",\"ActivityDateArea_DateInput\",\"YY年MM月DD日\",\"adt\",\"\",\"\",\"data-check-notice='活动日期' data-check-null='notnull'\"));
@@ -683,17 +684,17 @@ class LoadController extends CommonController
                         </td>
                         <td height=\"50\" align=\"center\" valign=\"middle\">活动时间</td>
                         <td height=\"50\" colspan=\"5\" align=\"center\" valign=\"middle\">
-                            <input type=\"text\" name=\"ActivityTime\" class=\"inputArea h50\" data-check-null=\"notnull\" value=\"$file_data[ActivityTime]\">
+                            <input type=\"text\" name=\"ActivityTime\" class=\"inputArea h50\" data-check-null=\"notnull\" value=\"$file_data[activitytime]\">
                         </td>
                     </tr>
                     <tr>
                         <td height=\"50\" align=\"center\" valign=\"middle\">活动地点</td>
                         <td height=\"50\" colspan=\"4\" align=\"center\" valign=\"middle\">
-                            <input type=\"text\" name=\"ActivityLocation\" class=\"inputArea h50\" data-check-null=\"notnull\" value=\"$file_data[ActivityLocation]\">
+                            <input type=\"text\" name=\"ActivityLocation\" class=\"inputArea h50\" data-check-null=\"notnull\" value=\"$file_data[activitylocation]\">
                         </td>
                         <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">是否经系统查询</td>
                         <td width=\"114\" height=\"50\" align=\"center\" valign=\"middle\">
-                            <select name=\"Queried\" id=\"\" class=\"form-control\" value=\"$file_data[Queried]\">
+                            <select name=\"Queried\" id=\"\" class=\"form-control\" value=\"$file_data[queried]\">
                                 <option value=\"否\" selected>否</option>
                                 <option value=\"是\">是</option>
                             </select>
@@ -708,30 +709,30 @@ class LoadController extends CommonController
                     <tr>
                         <td height=\"80\" align=\"center\" valign=\"middle\">有无商业赞助</td>
                         <td height=\"80\" align=\"center\" valign=\"middle\">
-                            <select name=\"\" id=\"\" class=\"form-control\" value=\"$file_data[Commercial]\">
+                            <select name=\"\" id=\"\" class=\"form-control\" value=\"$file_data[commercial]\">
                                 <option value=\"有\" selected>有</option>
                                 <option value=\"无\">无</option>
                             </select>
                         </td>
                         <td height=\"80\" align=\"center\" valign=\"middle\">赞助方名及赞助方式（如有） </td>
                         <td height=\"80\" colspan=\"5\" align=\"center\" valign=\"middle\">//少了
-                            <textarea name=\"ActivityContent\" class=\"inputArea\" value=\"$file_data[ActivityContent]\"></textarea>
+                            <textarea name=\"ActivityContent\" class=\"inputArea\" value=\"$file_data[activitycontent]\"></textarea>
                         </td>
                     </tr>
                     <tr>
                         <td height=\"50\" align=\"center\" valign=\"middle\">活动负责人</td>
                         <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">
-                            <input type=\"text\" name=\"ActivityChargePerson\" class=\"inputArea h50\" data-check-null=\"notnull\" value=\"$file_data[ActivityChargePerson]\">
+                            <input type=\"text\" name=\"ActivityChargePerson\" class=\"inputArea h50\" data-check-null=\"notnull\" value=\"$file_data[activitychargeperson]\">
                         </td>
                         <td width=\"91\" align=\"center\" valign=\"middle\">联系电话</td>
                         <td height=\"50\" colspan=\"4\" align=\"center\" valign=\"middle\">
-                            <input type=\"text\" name=\"ActivityPhone\" class=\"inputArea h50\" data-check-null=\"notnull\" value=\"$file_data[ActivityPhone]\">
+                            <input type=\"text\" name=\"ActivityPhone\" class=\"inputArea h50\" data-check-null=\"notnull\" value=\"$file_data[activityphone]\">
                         </td>
                     </tr>
                     <tr>
                         <td height=\"100\" align=\"center\" valign=\"middle\">社团意见</td>
                         <td height=\"100\" colspan=\"2\" align=\"center\" valign=\"middle\">
-                            <textarea name=\"AssociationComment\" class=\"inputArea\" value=\"$file_data[AssociationComment]\"></textarea>
+                            <textarea name=\"AssociationComment\" class=\"inputArea\" value=\"$file_data[associationcomment]\"></textarea>
                         </td>
                         <td align=\"center\" valign=\"middle\">社联意见</td>
                         <td height=\"100\" colspan=\"4\" align=\"center\" valign=\"middle\"><span class=\"disable-area\"></span></td>
@@ -780,40 +781,40 @@ class LoadController extends CommonController
                     <tr>
                         <td width=\"88\" height=\"50\" align=\"center\" valign=\"middle\">申请单位</td>
                         <td height=\"50\" colspan=\"7\" align=\"center\" valign=\"middle\">
-                            <input type=\"text\" name=\"ApplyName\" class=\"inputArea h50\" data-check-null=\"notnull\" value=\"$file_data[ApplyName]\">
+                            <input type=\"text\" name=\"ApplyName\" class=\"inputArea h50\" data-check-null=\"notnull\" value=\"$file_data[applyname]\">
                         </td>
                     </tr>
                     <tr>
                         <td rowspan=\"2\" align=\"center\" valign=\"middle\">经办人信息</td>
                         <td width=\"62\" height=\"35\" align=\"center\" valign=\"middle\">姓名</td>
                         <td height=\"35\" colspan=\"3\" align=\"center\" valign=\"middle\">
-                            <input type=\"text\" name=\"OperatorName\" class=\"inputArea h35\" data-check-null=\"notnull\" value=\"$file_data[OperatorName]\">
+                            <input type=\"text\" name=\"OperatorName\" class=\"inputArea h35\" data-check-null=\"notnull\" value=\"$file_data[operatorname]\">
                         </td>
                         <td width=\"111\" height=\"35\" align=\"center\" valign=\"middle\">联系方式</td>
                         <td height=\"35\" colspan=\"2\" align=\"center\" valign=\"middle\">
-                            <input type=\"text\" name=\"OperatorPhone\" class=\"inputArea h35\" data-check-null=\"notnull\" value=\"$file_data[OperatorPhone]\">
+                            <input type=\"text\" name=\"OperatorPhone\" class=\"inputArea h35\" data-check-null=\"notnull\" value=\"$file_data[operatorphone]\">
                         </td>
                     </tr>
                     <tr>
                         <td height=\"35\" align=\"center\" valign=\"middle\">学号</td>
                         <td height=\"35\" colspan=\"3\" align=\"center\" valign=\"middle\">
-                            <input type=\"text\" name=\"OperatorID\" class=\"inputArea h35\" data-check-null=\"notnull\" value=\"$file_data[OperatorID]\">
+                            <input type=\"text\" name=\"OperatorID\" class=\"inputArea h35\" data-check-null=\"notnull\" value=\"$file_data[operatorid]\">
                         </td>
                         <td height=\"35\" align=\"center\" valign=\"middle\">所在院（系）</td>
                         <td height=\"35\" colspan=\"2\" align=\"center\" valign=\"middle\">
-                            <input type=\"text\" name=\"OperatorDepartment\" class=\"inputArea h35\" data-check-null=\"notnull\" value=\"$file_data[OperatorDepartment]\">
+                            <input type=\"text\" name=\"OperatorDepartment\" class=\"inputArea h35\" data-check-null=\"notnull\" value=\"$file_data[operatordepartment]\">
                         </td>
                     </tr>
                     <tr>
                         <td height=\"120\" align=\"center\" valign=\"middle\">活动内容</td>
                         <td height=\"120\" colspan=\"7\" align=\"center\" valign=\"middle\">
-                            <textarea name=\"ActivityContent\" class=\"inputArea\" value=\"$file_data[ActivityContent]\"></textarea>
+                            <textarea name=\"ActivityContent\" class=\"inputArea\" value=\"$file_data[activitycontent]\"></textarea>
                         </td>
                     </tr>
                     <tr>
                         <td height=\"50\" align=\"center\" valign=\"middle\">活动日期</td>
                         <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\" id=\"ActivityDateArea\">
-                            <input type=\"text\" name=\"ActivityDate\" class=\"inputArea h50\" data-check-null=\"notnull\" value=\"$file_data[ActivityDate]\">
+                            <input type=\"text\" name=\"ActivityDate\" class=\"inputArea h50\" data-check-null=\"notnull\" value=\"$file_data[activitydate]\">
                             <script>
                                 var mydate=new Date();
                                 $(\"#ActivityDateArea\").html(generateDateSelector(mydate.getFullYear()+1,mydate.getFullYear(),true,true,\"ActivityDate\",\"ActivityDateArea_DateInput\",\"YY年MM月DD日\",\"adt\",\"\",\"\",\"data-check-notice='活动日期' data-check-null='notnull'\"));
@@ -821,17 +822,17 @@ class LoadController extends CommonController
                         </td>
                         <td width=\"76\" height=\"50\" align=\"center\" valign=\"middle\">使用时间</td>
                         <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">
-                            <input type=\"text\" name=\"UseTime\" class=\"inputArea h50\" data-check-null=\"notnull\" value=\"$file_data[UseTime]\">
+                            <input type=\"text\" name=\"UseTime\" class=\"inputArea h50\" data-check-null=\"notnull\" value=\"$file_data[usetime]\">
                         </td>
                         <td width=\"74\" height=\"50\" align=\"center\" valign=\"middle\">使用地点</td>
                         <td width=\"153\" height=\"50\" align=\"center\" valign=\"middle\">
-                            <input type=\"text\" name=\"UseLocation\" class=\"inputArea h50\" data-check-null=\"notnull\" value=\"$file_data[UseLocation]\">
+                            <input type=\"text\" name=\"UseLocation\" class=\"inputArea h50\" data-check-null=\"notnull\" value=\"$file_data[uselocation]\">
                         </td>
                     </tr>
                     <tr>
                         <td height=\"100\" align=\"center\" valign=\"middle\">备注</td>
                         <td height=\"100\" colspan=\"7\" align=\"center\" valign=\"middle\">
-                            <textarea name=\"Remark\" class=\"inputArea\" value=\"$file_data[Remark]\"></textarea>
+                            <textarea name=\"Remark\" class=\"inputArea\" value=\"$file_data[remark]\"></textarea>
                         </td>
                     </tr>
                     <tr>
@@ -880,17 +881,17 @@ class LoadController extends CommonController
                     <tr>
                         <td width=\"100\" height=\"50\" align=\"center\" valign=\"middle\">社团名称</td>
                         <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">
-                            <input type=\"text\" name=\"AssociationNameA\" class=\"inputArea h50\" data-check-notice=\"社团名称\" data-check-null=\"notnull\" value=\"$file_data[AssociationNameA]\">
+                            <input type=\"text\" name=\"AssociationNameA\" class=\"inputArea h50\" data-check-notice=\"社团名称\" data-check-null=\"notnull\" value=\"$file_data[associationnamea]\">
                         </td>
                         <td width=\"112\" height=\"50\" align=\"center\" valign=\"middle\">活动名称</td>
                         <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">
-                            <input type=\"text\" name=\"ActivityName\" class=\"inputArea h50\" data-check-notice=\"活动名称\" data-check-null=\"notnull\" value=\"$file_data[ActivityName]\">
+                            <input type=\"text\" name=\"ActivityName\" class=\"inputArea h50\" data-check-notice=\"活动名称\" data-check-null=\"notnull\" value=\"$file_data[activityname]\">
                         </td>
                     </tr>
                     <tr>
                         <td height=\"50\" align=\"center\" valign=\"middle\">活动时间</td>
                         <td width=\"124\" height=\"50\" align=\"center\" valign=\"middle\" id=\"dateSelAreaA\">
-                            <input type=\"text\" name=\"ActivityTimeA\" class=\"inputArea h50\" data-check-notice=\"活动时间\" data-check-null=\"notnull\" value=\"$file_data[ActivityTimeA]\">
+                            <input type=\"text\" name=\"ActivityTimeA\" class=\"inputArea h50\" data-check-notice=\"活动时间\" data-check-null=\"notnull\" value=\"$file_data[activitytimea]\">
                             <script>
                                 var mydate=new Date();
                                 $(\"#dateSelAreaA\").html(generateDateSelector(mydate.getFullYear()+1,mydate.getFullYear(),true,true,\"ActivityTimeA\",\"ActivityTimeA_DateInput\",\"YY年MM月DD日\",\"ata\",\"\",\"\",\"data-check-notice='活动时间' data-check-null='notnull'\"));
@@ -898,11 +899,11 @@ class LoadController extends CommonController
                         </td>
                         <td width=\"112\" height=\"50\" align=\"center\" valign=\"middle\">活动地点</td>
                         <td height=\"50\" align=\"center\" valign=\"middle\">
-                            <input type=\"text\" name=\"ActivityLocation\" class=\"inputArea h50\" data-check-notice=\"活动地点\" data-check-null=\"notnull\" value=\"$file_data[ActivityLocation]\">
+                            <input type=\"text\" name=\"ActivityLocation\" class=\"inputArea h50\" data-check-notice=\"活动地点\" data-check-null=\"notnull\" value=\"$file_data[activitylocation]\">
                         </td>
                         <td width=\"112\" height=\"50\" align=\"center\" valign=\"middle\">参与人数</td>
                         <td width=\"114\" height=\"50\" align=\"center\" valign=\"middle\">
-                            <input type=\"text\" name=\"JoinNumber\" class=\"inputArea h50\" data-check-notice=\"参与人数\" data-check-null=\"notnull\" value=\"$file_data[JoinNumber]\">
+                            <input type=\"text\" name=\"JoinNumber\" class=\"inputArea h50\" data-check-notice=\"参与人数\" data-check-null=\"notnull\" value=\"$file_data[joinnumber]\">
                         </td>
                     </tr>
                     <tr>
@@ -910,13 +911,13 @@ class LoadController extends CommonController
                     </tr>
                     <tr>
                         <td height=\"550\" colspan=\"6\" align=\"center\" valign=\"middle\">
-                            <textarea name=\"ActivityContent\"  data-check-notice=\"活动内容\" class=\"inputArea\" value=\"$file_data[ActivityContent]\"></textarea>
+                            <textarea name=\"ActivityContent\"  data-check-notice=\"活动内容\" class=\"inputArea\" value=\"$file_data[activitycontent]\"></textarea>
                         </td>
                     </tr>
                     <tr>
                         <td height=\"100\" align=\"center\" valign=\"middle\">会长签字</td>
                         <td height=\"100\" align=\"center\" valign=\"middle\">
-                            <input type=\"text\" name=\"PresidentSignal\" class=\"inputArea h100\" data-check-notice=\"会长签字\" data-check-null=\"notnull\" value=\"$file_data[PresidentSignal]\">
+                            <input type=\"text\" name=\"PresidentSignal\" class=\"inputArea h100\" data-check-notice=\"会长签字\" data-check-null=\"notnull\" value=\"$file_data[presidentsignal]\">
                         </td>
                         <td height=\"100\" align=\"center\" valign=\"middle\">社联<br>审批意见 </td>
                         <td height=\"100\" align=\"center\" valign=\"middle\">&nbsp;</td>
@@ -935,12 +936,12 @@ class LoadController extends CommonController
                         <tr>
                             <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">院（系）名称 </td>
                             <td height=\"50\" colspan=\"5\" align=\"center\" valign=\"middle\">
-                                <input type=\"text\" name=\"AssociationNameB\" data-check-notice=\"院（系）名称\" data-check-null=\"notnull\" placeholder=\"请填写协会名称\" class=\"inputArea h50\"  value=\"$file_data[AssociationNameB]\">
+                                <input type=\"text\" name=\"AssociationNameB\" data-check-notice=\"院（系）名称\" data-check-null=\"notnull\" placeholder=\"请填写协会名称\" class=\"inputArea h50\"  value=\"$file_data[associationnameb]\">
                             </td>
                             <td width=\"73\" height=\"50\" align=\"center\" valign=\"middle\">教室容量</td>
                             <td width=\"234\" height=\"50\" align=\"center\" valign=\"middle\">
                             <span style=\"width: 150px; height: 100%\">
-                                <input type=\"text\" name=\"ClassroomCapacity\" data-check-notice=\"教室容量\" data-check-null=\"notnull\" class=\"inputArea h50 underlined\" style=\"display: inline-block; width: 150px;\" value=\"$file_data[ClassroomCapacity]\">
+                                <input type=\"text\" name=\"ClassroomCapacity\" data-check-notice=\"教室容量\" data-check-null=\"notnull\" class=\"inputArea h50 underlined\" style=\"display: inline-block; width: 150px;\" value=\"$file_data[classroomcapacity]\">
                             </span>
                                 <span>人</span>
                             </td>
@@ -949,10 +950,10 @@ class LoadController extends CommonController
                             <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">申请人姓名</td>
                             <td height=\"50\" colspan=\"5\" align=\"center\" valign=\"middle\">
                             <span style=\"width: 150px; height: 100%\">
-                                <input type=\"text\" name=\"ApplyerName\" data-check-notice=\"申请人姓名\" class=\"inputArea h50 underlined\" style=\"display: inline-block; width: 150px;\" value=\"$file_data[ApplyerName]\">
+                                <input type=\"text\" name=\"ApplyerName\" data-check-notice=\"申请人姓名\" class=\"inputArea h50 underlined\" style=\"display: inline-block; width: 150px;\" value=\"$file_data[applyername]\">
                             </span>
                             <span>
-                                <select name=\"ApplyerAttr\" style=\"display: inline-block;\" value=\"$file_data[ApplyerAttr]\">
+                                <select name=\"ApplyerAttr\" style=\"display: inline-block;\" value=\"$file_data[applyerattr]\">
                                     <option selected>本科生</option>
                                     <option>研究生</option>
                                     <option>助管</option>
@@ -962,7 +963,7 @@ class LoadController extends CommonController
                             </td>
                             <td height=\"50\" align=\"center\" valign=\"middle\">教室功能</td>
                             <td height=\"50\" align=\"center\" valign=\"middle\">
-                                <select name=\"ClassroomFunction\" class=\"form-control\" value=\"$file_data[ClassroomFunction]\">
+                                <select name=\"ClassroomFunction\" class=\"form-control\" value=\"$file_data[classroomfunction]\">
                                     <option selected>多媒体教室</option>
                                     <option>普通教室</option>
                                     <option>阶梯教室</option>
@@ -974,17 +975,17 @@ class LoadController extends CommonController
                             <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">申请人<br>联系电话</td>
                             <td width=\"80\" height=\"50\" align=\"center\" valign=\"middle\">办公电话号码</td>
                             <td height=\"50\" colspan=\"4\" align=\"center\" valign=\"middle\">
-                                <input type=\"text\" data-check-notice=\"办公电话号码\" name=\"OfficePhone\" class=\"inputArea h50\" value=\"$file_data[OfficePhone]\">
+                                <input type=\"text\" data-check-notice=\"办公电话号码\" name=\"OfficePhone\" class=\"inputArea h50\" value=\"$file_data[officephone]\">
                             </td>
                             <td width=\"73\" height=\"50\" align=\"center\" valign=\"middle\">手机号码</td>
                             <td width=\"234\" height=\"50\" align=\"center\" valign=\"middle\">
-                                <input type=\"text\" data-check-notice=\"手机号码\" name=\"MobilePhone\" class=\"inputArea h50\" value=\"$file_data[MobilePhone]\">
+                                <input type=\"text\" data-check-notice=\"手机号码\" name=\"MobilePhone\" class=\"inputArea h50\" value=\"$file_data[mobilephone]\">
                             </td>
                         </tr>
                         <tr>
                             <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">活动、讲座时间</td>
                             <td height=\"50\" colspan=\"5\" align=\"center\" valign=\"middle\" id=\"dateSelAreaB\">
-                                <input type=\"text\" data-check-notice=\"活动、讲座时间\" name=\"ActivityTimeB\" class=\"inputArea h50\" value=\"$file_data[ActivityTimeB]\">
+                                <input type=\"text\" data-check-notice=\"活动、讲座时间\" name=\"ActivityTimeB\" class=\"inputArea h50\" value=\"$file_data[activitytimeb]\">
                                 <script>
                                     var mydate=new Date();
                                     $(\"#dateSelAreaB\").html(generateDateSelector(mydate.getFullYear()+1,mydate.getFullYear(),true,true,\"ActivityTimeB\",\"ActivityTimeB_DateInput\",\"YY年MM月DD日\",\"atb\",\"\",\"\",\"data-check-notice='活动时间' data-check-null='notnull'\"));
@@ -992,7 +993,7 @@ class LoadController extends CommonController
                             </td>
                             <td width=\"73\" height=\"50\" rowspan=\"2\" align=\"center\" valign=\"middle\">节次</td>
                             <td width=\"234\" height=\"50\" rowspan=\"2\" align=\"center\" valign=\"middle\">
-                                <input type=\"text\" name=\"ClassTime\" class=\"inputArea h50\" value=\"$file_data[ClassTime]\">
+                                <input type=\"text\" name=\"ClassTime\" class=\"inputArea h50\" value=\"$file_data[classtime]\">
                                 A、1—    2节（   ） <br>
                                 B、3—    4节（   ） <br>
                                 C、5—    6节（   ） <br>
@@ -1002,12 +1003,12 @@ class LoadController extends CommonController
                         <tr>
                             <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">周次</td>
                             <td width=\"80\" height=\"50\" align=\"center\" valign=\"middle\">
-                                <input type=\"text\" name=\"Week\" class=\"inputArea h50\" value=\"$file_data[Week]\">
+                                <input type=\"text\" name=\"Week\" class=\"inputArea h50\" value=\"$file_data[week]\">
                             </td>
                             <td width=\"72\" height=\"50\" align=\"center\" valign=\"middle\">星期</td>
                             <td height=\"50\" colspan=\"3\" align=\"center\" valign=\"middle\">
                                 <input type=\"hidden\" name=\"\" class=\"inputArea h50\" >
-                                <select name=\"Day\" id=\"\" class=\"form-control\" value=\"$file_data[Day]\">
+                                <select name=\"Day\" id=\"\" class=\"form-control\" value=\"$file_data[day]\">
                                     <option value=\"一\" selected>一</option>
                                     <option value=\"二\">二</option>
                                     <option value=\"三\">三</option>
@@ -1021,7 +1022,7 @@ class LoadController extends CommonController
                         <tr>
                             <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">教学楼选择 </td>
                             <td height=\"50\" colspan=\"7\" align=\"center\" valign=\"middle\">
-                                <select name=\"TeachingBuilding\" class=\"form-control\" value=\"$file_data[TeachingBuilding]\">
+                                <select name=\"TeachingBuilding\" class=\"form-control\" value=\"$file_data[teachingbuilding]\">
                                     <option selected>西十二楼</option>
                                     <option>西五</option>
                                     <option>东五</option>
@@ -1039,16 +1040,16 @@ class LoadController extends CommonController
                             <td width=\"82\" height=\"120\" align=\"center\" valign=\"middle\">一般活动、会议 </td>
                             <td height=\"120\" colspan=\"7\" align=\"left\" valign=\"top\">
                                 <div style=\"height:83px;margin-bottom: 2px\">
-                                    <textarea name=\"NormalConferenceContent\" class=\"inputArea\" value=\"$file_data[NormalConferenceContent]\"></textarea>
+                                    <textarea name=\"NormalConferenceContent\" class=\"inputArea\" value=\"$file_data[normalconferencecontent]\"></textarea>
                                 </div>
                                 <div style=\"height:36px\">
                                     <span>主持人姓名</span>
                                 <span>
-                                    <input type=\"text\" name=\"HostName\" class=\"inputArea h35 underlined\" style=\"width: 100px; display: inline-block;\" value=\"$file_data[HostName]\">
+                                    <input type=\"text\" name=\"HostName\" class=\"inputArea h35 underlined\" style=\"width: 100px; display: inline-block;\" value=\"$file_data[hostname]\">
                                 </span>
                                     <span>单位</span>
                                 <span>
-                                    <input type=\"text\" name=\"HostCompany\" class=\"inputArea h35 underlined\" style=\"width: 140px; display: inline-block;\" value=\"$file_data[HostCompany]\">
+                                    <input type=\"text\" name=\"HostCompany\" class=\"inputArea h35 underlined\" style=\"width: 140px; display: inline-block;\" value=\"$file_data[hostcompany]\">
                                 </span>
                                     <span>职务（职称）</span>
                                 <span>
@@ -1061,20 +1062,20 @@ class LoadController extends CommonController
                             <td width=\"82\" height=\"120\" align=\"center\" valign=\"middle\">授课、讲座人员情况(申请多媒体教室) </td>
                             <td height=\"120\" colspan=\"7\" align=\"left\" valign=\"top\">授课（讲座）内容:
                                 <div style=\"height:83px;margin-bottom: 2px\">
-                                    <textarea name=\"LectureContent\" class=\"inputArea\" value=\"$file_data[LectureContent]\"></textarea>
+                                    <textarea name=\"LectureContent\" class=\"inputArea\" value=\"$file_data[lecturecontent]\"></textarea>
                                 </div>
                                 <div style=\"height:36px\">
                                     <span>授课（讲座）姓名</span>
                                 <span>
-                                    <input type=\"text\" name=\"SpeakerName\" class=\"inputArea h35 underlined\" style=\"width: 100px; display: inline-block;\" value=\"$file_data[SpeakerName]\">
+                                    <input type=\"text\" name=\"SpeakerName\" class=\"inputArea h35 underlined\" style=\"width: 100px; display: inline-block;\" value=\"$file_data[speakername]\">
                                 </span>
                                     <span>单位</span>
                                 <span>
-                                    <input type=\"text\" name=\"SpeakerCompany\" class=\"inputArea h35 underlined\" style=\"width: 120px; display: inline-block;\" value=\"$file_data[SpeakerCompany]\">
+                                    <input type=\"text\" name=\"SpeakerCompany\" class=\"inputArea h35 underlined\" style=\"width: 120px; display: inline-block;\" value=\"$file_data[speakercompany]\">
                                 </span>
                                     <span>职务（职称）</span>
                                 <span>
-                                    <input type=\"text\" name=\"SpeakerPost\" class=\"inputArea h35 underlined\" style=\"width: 120px; display: inline-block;\" value=\"$file_data[SpeakerPost]\">
+                                    <input type=\"text\" name=\"SpeakerPost\" class=\"inputArea h35 underlined\" style=\"width: 120px; display: inline-block;\" value=\"$file_data[speakerpost]\">
                                 </span>
                                 </div>
                             </td>
