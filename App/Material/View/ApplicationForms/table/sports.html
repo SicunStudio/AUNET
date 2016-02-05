@@ -7,66 +7,62 @@
         <ol class="breadcrumb">
             <li><h4>体育场馆使用申请</h4></li>
         </ol>
-        <form action="{:U('Material/Material/material_upload')}" enctype="multipart/form-data" method="POST">
-            <input type="hidden" name="action_type" value="sports">
+        <!--<form action="{:U('Material/Material/material_upload')}" enctype="multipart/form-data" method="POST">-->
+            <!--<input type="hidden" name="action_type" value="sports">-->
             <div class="tableContainer">
                 <table width="700" class="table-bordered FillForm">
                     <tbody>
                     <tr>
                         <td width="88" height="50" align="center" valign="middle">申请单位</td>
                         <td height="50" colspan="7" align="center" valign="middle">
-                            <input type="text" name="ApplyName" class="inputArea h50" data-check-null="notnull">
+                            ApplyName
                         </td>
                     </tr>
                     <tr>
                         <td rowspan="2" align="center" valign="middle">经办人信息</td>
                         <td width="62" height="35" align="center" valign="middle">姓名</td>
                         <td height="35" colspan="3" align="center" valign="middle">
-                            <input type="text" name="OperatorName" class="inputArea h35" data-check-null="notnull">
+                            OperatorName
                         </td>
                         <td width="111" height="35" align="center" valign="middle">联系方式</td>
                         <td height="35" colspan="2" align="center" valign="middle">
-                            <input type="text" name="OperatorPhone" class="inputArea h35" data-check-null="notnull">
+                            OperatorPhone
                         </td>
                     </tr>
                     <tr>
                         <td height="35" align="center" valign="middle">学号</td>
                         <td height="35" colspan="3" align="center" valign="middle">
-                            <input type="text" name="OperatorID" class="inputArea h35" data-check-null="notnull">
+                            OperatorID
                         </td>
                         <td height="35" align="center" valign="middle">所在院（系）</td>
                         <td height="35" colspan="2" align="center" valign="middle">
-                            <input type="text" name="OperatorDepartment" class="inputArea h35" data-check-null="notnull">
+                            OperatorDepartment
                         </td>
                     </tr>
                     <tr>
                         <td height="120" align="center" valign="middle">活动内容</td>
                         <td height="120" colspan="7" align="center" valign="middle">
-                            <textarea name="ActivityContent" class="inputArea"></textarea>
+                            ActivityContent
                         </td>
                     </tr>
                     <tr>
                         <td height="50" align="center" valign="middle">活动日期</td>
                         <td height="50" colspan="2" align="center" valign="middle" id="ActivityDateArea">
-                            <input type="text" name="ActivityDate" class="inputArea h50" data-check-null="notnull">
-                            <script>
-                                var mydate=new Date();
-                                $("#ActivityDateArea").html(generateDateSelector(mydate.getFullYear()+1,mydate.getFullYear(),true,true,"ActivityDate","ActivityDateArea_DateInput","YY年MM月DD日","adt","","","data-check-notice='活动日期' data-check-null='notnull'"));
-                            </script>
+                            ActivityDate
                         </td>
                         <td width="76" height="50" align="center" valign="middle">使用时间</td>
                         <td height="50" colspan="2" align="center" valign="middle">
-                            <input type="text" name="UseTime" class="inputArea h50" data-check-null="notnull">
+                            UseTime
                         </td>
                         <td width="74" height="50" align="center" valign="middle">使用地点</td>
                         <td width="153" height="50" align="center" valign="middle">
-                            <input type="text" name="UseLocation" class="inputArea h50" data-check-null="notnull">
+                            UseLocation
                         </td>
                     </tr>
                     <tr>
                         <td height="100" align="center" valign="middle">备注</td>
                         <td height="100" colspan="7" align="center" valign="middle">
-                            <textarea name="Remark" class="inputArea"></textarea>
+                            Remark
                         </td>
                     </tr>
                     <tr>
@@ -83,9 +79,9 @@
                     </tbody>
                 </table>
             </div>
-            <input type="file" name="file" id="inputUploadFile"><input type="hidden" name="ifUploadFile" id="ifUploadFile" value="none">
-            <input type="submit">
-        </form>
+            <!--<input type="file" name="file" id="inputUploadFile"><input type="hidden" name="ifUploadFile" id="ifUploadFile" value="none">-->
+            <!--<input type="submit">-->
+        <!--</form>-->
 
     </body>
 </html>

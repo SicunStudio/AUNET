@@ -7,8 +7,8 @@
         <ol class="breadcrumb">
             <li><h4>教学楼教室申请</h4></li>
         </ol>
-        <form action="{:U('Material/Material/material_upload')}" enctype="multipart/form-data" method="POST">
-            <input type="hidden" name="action_type" value="teachingbuilding">
+        <!--<form action="{:U('Material/Material/material_upload')}" enctype="multipart/form-data" method="POST">-->
+            <!--<input type="hidden" name="action_type" value="teachingbuilding">-->
             <div style="text-align: center">
                 <h2>社团活动申请表</h2>
                 <h3>（教学楼专用）</h3>
@@ -20,29 +20,25 @@
                     <tr>
                         <td width="100" height="50" align="center" valign="middle">社团名称</td>
                         <td height="50" colspan="2" align="center" valign="middle">
-                            <input type="text" name="AssociationNameA" class="inputArea h50" data-check-notice="社团名称" data-check-null="notnull">
+                            AssociationNameA
                         </td>
                         <td width="112" height="50" align="center" valign="middle">活动名称</td>
                         <td height="50" colspan="2" align="center" valign="middle">
-                            <input type="text" name="ActivityName" class="inputArea h50" data-check-notice="活动名称" data-check-null="notnull">
+                            ActivityName
                         </td>
                     </tr>
                     <tr>
                         <td height="50" align="center" valign="middle">活动时间</td>
                         <td width="124" height="50" align="center" valign="middle" id="dateSelAreaA">
-                            <input type="text" name="ActivityTimeA" class="inputArea h50" data-check-notice="活动时间" data-check-null="notnull">
-                            <script>
-                                var mydate=new Date();
-                                $("#dateSelAreaA").html(generateDateSelector(mydate.getFullYear()+1,mydate.getFullYear(),true,true,"ActivityTimeA","ActivityTimeA_DateInput","YY年MM月DD日","ata","","","data-check-notice='活动时间' data-check-null='notnull'"));
-                            </script>
+                            ActivityTimeA
                         </td>
                         <td width="112" height="50" align="center" valign="middle">活动地点</td>
                         <td height="50" align="center" valign="middle">
-                            <input type="text" name="ActivityLocation" class="inputArea h50" data-check-notice="活动地点" data-check-null="notnull">
+                            ActivityLocation
                         </td>
                         <td width="112" height="50" align="center" valign="middle">参与人数</td>
                         <td width="114" height="50" align="center" valign="middle">
-                            <input type="text" name="JoinNumber" class="inputArea h50" data-check-notice="参与人数" data-check-null="notnull">
+                            JoinNumber
                         </td>
                     </tr>
                     <tr>
@@ -50,13 +46,13 @@
                     </tr>
                     <tr>
                         <td height="550" colspan="6" align="center" valign="middle">
-                            <textarea name="ActivityContent"  data-check-notice="活动内容" class="inputArea"></textarea>
+                            ActivityContent
                         </td>
                     </tr>
                     <tr>
                         <td height="100" align="center" valign="middle">会长签字</td>
                         <td height="100" align="center" valign="middle">
-                            <input type="text" name="PresidentSignal" class="inputArea h100" data-check-notice="会长签字" data-check-null="notnull">
+                            PresidentSignal
                         </td>
                         <td height="100" align="center" valign="middle">社联<br>审批意见 </td>
                         <td height="100" align="center" valign="middle">&nbsp;</td>
@@ -75,13 +71,11 @@
                         <tr>
                             <td height="50" colspan="2" align="center" valign="middle">院（系）名称 </td>
                             <td height="50" colspan="5" align="center" valign="middle">
-                                <input type="text" name="AssociationNameB" data-check-notice="院（系）名称" data-check-null="notnull" placeholder="请填写协会名称" class="inputArea h50">
+                                AssociationNameB
                             </td>
                             <td width="73" height="50" align="center" valign="middle">教室容量</td>
                             <td width="234" height="50" align="center" valign="middle">
-                            <span style="width: 150px; height: 100%">
-                                <input type="text" name="ClassroomCapacity" data-check-notice="教室容量" data-check-null="notnull" class="inputArea h50 underlined" style="display: inline-block; width: 150px;">
-                            </span>
+                                ClassroomCapacity
                                 <span>人</span>
                             </td>
                         </tr>
@@ -89,85 +83,52 @@
                             <td height="50" colspan="2" align="center" valign="middle">申请人姓名</td>
                             <td height="50" colspan="5" align="center" valign="middle">
                             <span style="width: 150px; height: 100%">
-                                <input type="text" name="ApplyerName" data-check-notice="申请人姓名" class="inputArea h50 underlined" style="display: inline-block; width: 150px;">
+                                ApplyerName
                             </span>
                             <span>
-                                <select name="ApplyerAttr" style="display: inline-block;">
-                                    <option selected>本科生</option>
-                                    <option>研究生</option>
-                                    <option>助管</option>
-                                    <option>教师</option>
-                                </select>
+                                ApplyerAttr
                             </span>
                             </td>
                             <td height="50" align="center" valign="middle">教室功能</td>
                             <td height="50" align="center" valign="middle">
-                                <select name="ClassroomFunction" class="form-control">
-                                    <option selected>多媒体教室</option>
-                                    <option>普通教室</option>
-                                    <option>阶梯教室</option>
-                                    <option>联体教室</option>
-                                </select>
+                                ClassroomFunction
                             </td>
                         </tr>
                         <tr>
                             <td height="50" colspan="2" align="center" valign="middle">申请人<br>联系电话</td>
                             <td width="80" height="50" align="center" valign="middle">办公电话号码</td>
                             <td height="50" colspan="4" align="center" valign="middle">
-                                <input type="text" data-check-notice="办公电话号码" name="OfficePhone" class="inputArea h50">
+                                OfficePhone
                             </td>
                             <td width="73" height="50" align="center" valign="middle">手机号码</td>
                             <td width="234" height="50" align="center" valign="middle">
-                                <input type="text" data-check-notice="手机号码" name="MobilePhone" class="inputArea h50">
+                                MobilePhone
                             </td>
                         </tr>
                         <tr>
                             <td height="50" colspan="2" align="center" valign="middle">活动、讲座时间</td>
                             <td height="50" colspan="5" align="center" valign="middle" id="dateSelAreaB">
-                                <input type="text" data-check-notice="活动、讲座时间" name="ActivityTimeB" class="inputArea h50">
-                                <script>
-                                    var mydate=new Date();
-                                    $("#dateSelAreaB").html(generateDateSelector(mydate.getFullYear()+1,mydate.getFullYear(),true,true,"ActivityTimeB","ActivityTimeB_DateInput","YY年MM月DD日","atb","","","data-check-notice='活动时间' data-check-null='notnull'"));
-                                </script>
+                                ActivityTimeB
                             </td>
                             <td width="73" height="50" rowspan="2" align="center" valign="middle">节次</td>
                             <td width="234" height="50" rowspan="2" align="center" valign="middle">
-                                <input type="text" name="ClassTime" class="inputArea h50">
-                                A、1—    2节（   ） <br>
-                                B、3—    4节（   ） <br>
-                                C、5—    6节（   ） <br>
-                                D、7—    8节（   ） <br>
-                                E、9—11节（   ） </td>
+                                ClassTime
+                            </td>
                         </tr>
                         <tr>
                             <td height="50" colspan="2" align="center" valign="middle">周次</td>
                             <td width="80" height="50" align="center" valign="middle">
-                                <input type="text" name="Week" class="inputArea h50">
+                                Week
                             </td>
                             <td width="72" height="50" align="center" valign="middle">星期</td>
                             <td height="50" colspan="3" align="center" valign="middle">
-                                <input type="hidden" name="" class="inputArea h50">
-                                <select name="Day" id="" class="form-control">
-                                    <option value="一" selected>一</option>
-                                    <option value="二">二</option>
-                                    <option value="三">三</option>
-                                    <option value="四">四</option>
-                                    <option value="五">五</option>
-                                    <option value="六">六</option>
-                                    <option value="日">日</option>
-                                </select>
+                                Day
                             </td>
                         </tr>
                         <tr>
                             <td height="50" colspan="2" align="center" valign="middle">教学楼选择 </td>
                             <td height="50" colspan="7" align="center" valign="middle">
-                                <select name="TeachingBuilding" class="form-control">
-                                    <option selected>西十二楼</option>
-                                    <option>西五</option>
-                                    <option>东五</option>
-                                    <option>东九</option>
-                                    <option>东十二</option>
-                                </select>
+                                TeachingBuilding
                             </td>
                         </tr>
                         <tr>
@@ -179,20 +140,20 @@
                             <td width="82" height="120" align="center" valign="middle">一般活动、会议 </td>
                             <td height="120" colspan="7" align="left" valign="top">
                                 <div style="height:83px;margin-bottom: 2px">
-                                    <textarea name="NormalConferenceContent" class="inputArea"></textarea>
+                                    NormalConferenceContent
                                 </div>
                                 <div style="height:36px">
                                     <span>主持人姓名</span>
                                 <span>
-                                    <input type="text" name="HostName" class="inputArea h35 underlined" style="width: 100px; display: inline-block;">
+                                    HostName
                                 </span>
                                     <span>单位</span>
                                 <span>
-                                    <input type="text" name="HostCompany" class="inputArea h35 underlined" style="width: 140px; display: inline-block;">
+                                    HostCompany
                                 </span>
                                     <span>职务（职称）</span>
                                 <span>
-                                    <input type="text" class="inputArea h35 underlined" style="width: 120px; display: inline-block;">
+                                    HostPost
                                 </span>
                                 </div>
                             </td>
@@ -201,20 +162,20 @@
                             <td width="82" height="120" align="center" valign="middle">授课、讲座人员情况(申请多媒体教室) </td>
                             <td height="120" colspan="7" align="left" valign="top">授课（讲座）内容:
                                 <div style="height:83px;margin-bottom: 2px">
-                                    <textarea name="LectureContent" class="inputArea"></textarea>
+                                    LectureContent
                                 </div>
                                 <div style="height:36px">
                                     <span>授课（讲座）姓名</span>
                                 <span>
-                                    <input type="text" name="SpeakerName" class="inputArea h35 underlined" style="width: 100px; display: inline-block;">
+                                    SpeakerName
                                 </span>
                                     <span>单位</span>
                                 <span>
-                                    <input type="text" name="SpeakerCompany" class="inputArea h35 underlined" style="width: 120px; display: inline-block;">
+                                    SpeakerCompany
                                 </span>
                                     <span>职务（职称）</span>
                                 <span>
-                                    <input type="text" name="SpeakerPost" class="inputArea h35 underlined" style="width: 120px; display: inline-block;">
+                                    SpeakerPost
                                 </span>
                                 </div>
                             </td>
@@ -243,8 +204,8 @@
                     </table>
                 </div>
             </div>
-            <input type="file" name="file" id="inputUploadFile"><input type="hidden" name="ifUploadFile" id="ifUploadFile" value="none">
-            <input type="submit">
-        </form>
+            <!--<input type="file" name="file" id="inputUploadFile"><input type="hidden" name="ifUploadFile" id="ifUploadFile" value="none">-->
+            <!--<input type="submit">-->
+        <!--</form>-->
     </body>
 </html>
