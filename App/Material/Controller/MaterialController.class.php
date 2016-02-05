@@ -178,11 +178,14 @@ class MaterialController extends CommonController
             $tmp = $list->getField('ID,UserName,CreateTime,ApproveTime,ApproveState,ApproveNote,StoreURL');
 			if ($tmp)
             {
-                $ans[$name_en] = $tmp;
+                $ans[$name_en] = $tmp[$name_cn,$tmp];
             }
 			
         }
         //print_r($ans);
+		/*foreach($ans as $key => $val){
+            $file_data[$key] = mb_convert_encoding($val, "HTML-ENTITIES", "UTF-8");
+		}*/
         $this->value = $ans;
 
         $this->display();
