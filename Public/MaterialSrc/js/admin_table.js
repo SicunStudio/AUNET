@@ -18,6 +18,13 @@ $(document).ready(function(){
     $(".list-container[data-approvestate!='未审批'] .Applylist-Approve button").addClass("btn-default");
 });
 
+$('#modalPreview').on("hide.bs.modal",function(e){
+    $("#modalPreview-UserName").text("---");
+    $("#modalPreview-TableContainer").html("&nbsp;");
+    $("#modalPreview-ApproveState").val("未审批");
+    $("#modalPreview-ApproveNote").val("");
+});
+
 $(document).on("click",".btn-approve", function() {
     var dom=$(this);
     $("#modalPreview-UserName").text(dom.attr("data-username"));

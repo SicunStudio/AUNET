@@ -101,3 +101,8 @@
 .form-control {
     border-radius: 0px;
 }
+
+/* footer */
+html,body {
+    height: 100%;
+}

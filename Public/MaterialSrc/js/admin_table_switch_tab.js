@@ -1,33 +1,48 @@
 $(document).on("click",".switchTab",function(){
-    var tabtype=$(this).attr("data-tabtype");
-    var num=0;
-    $(".list-container").css("display","none");
-    $(".Applylist .Applylist-Nodata").css("display","none");
-    switch (tabtype){
-        case "未审批":
-            $(".list-container[data-approvestate='未审批']").css("display","block");
-            num=$(".list-container[data-approvestate='未审批']").size();
-            break;
-        case "已通过":
-            $(".list-container[data-approvestate='已通过']").css("display","block");
-            num=$(".list-container[data-approvestate='已通过']").size();
-            break;
-        case "未通过":
-            $(".list-container[data-approvestate='未通过']").css("display","block");
-            num=$(".list-container[data-approvestate='未通过']").size();
-            break;
-        case "已审批":
-            $(".list-container[data-approvestate!='未审批']").css("display","block");
-            num=$(".list-container[data-approvestate!='未审批']").size();
-            break;
-        case "所有":
-            $(".list-container").css("display","block");
-            num=$(".list-container").size();
-            break;
-    }
-    //console.log($(".list-container[data-approvestate='"+tabtype+"']").size());
-    if(num==0){
-        $(".Applylist .Applylist-Nodata").css("display","block");
-    }
+    filterDOM();
+    //console.log($("li[role='presentation'].active a").attr("data-tabtype"));
 });
+
+$(document).on("change","#filter-type",function(){
+    filterDOM();
+    //console.log($("#filter-type").val());
+});
+
+function filterDOM(){
+    var approveState=$("li[role='presentation'].active a").attr("data-tabtype");
+    var type=$("#filter-type").val();
+    var num=0;
+
+    $(".Applylist .Applylist-Nodata").hide("fast");
+    $(".list-container").css("display","none");
+    $(".list-container").each(function(){
+        var dom_approvestate=$(this).attr("data-approvestate");
+        var dom_type=$(this).attr("data-action-type");
+
+        var bool_as=false;
+        switch (approveState){
+            case "所有":
+                bool_as=true;
+                break;
+            case "已审批":
+                bool_as=(dom_approvestate!="未审批");
+                break;
+            default:
+                bool_as=(dom_approvestate==approveState);
+                break;
+        }
+        var bool_type=(type=="__ALL__"? 1 : dom_type==type);
+        if(approveState==undefined){ bool_as=true; }
+        if(type==undefined) { bool_type=true; }
+        if(bool_as && bool_type){
+            $(this).fadeIn("fast");
+            num=num+1;
+        }
+    });
+    //console.log(num);
+    if(num==0){
+        $(".Applylist .Applylist-Nodata").fadeIn(100);
+    }
+
+}
 
