@@ -2,6 +2,11 @@
 namespace Material\Controller;
 use Think\Upload;
 use Think\Controller;
+//Import PHPWord Lib
+require_once 'ThinkPHP\Library\Org\phpword\Autoloader.php';
+use PhpOffice\PhpWord\Autoloader;
+use PhpOffice\PhpWord\Settings;
+
 class LoadController extends CommonController
 {
 	/*
@@ -981,6 +986,9 @@ class LoadController extends CommonController
 	}
 	
 	public function downloadword(){
+		// Initialize PHPWord Class
+		Autoloader::register();
+		//Settings::setTempDir("D:\\xampp\\htdocs\\AUNET\\App\\Runtime\\Temp\\");
 		$ID = I('POST.ID');
 		$type = I('POST.action_type');
 		$table = strtolower($type);
@@ -989,10 +997,33 @@ class LoadController extends CommonController
 		foreach($file_data as $key => $val){
             $file_data[$key] = mb_convert_encoding($val, "HTML-ENTITIES", "UTF-8");
 		}
-		
+		$docroot = "";
+		$modroot = "";
+		$fileName = "";
 		switch($type){
 			case colorprinting:
-			$html = "
+				//模板路径
+				$modroot ='http://'.$_SERVER['HTTP_HOST'].__ROOT__.'/Public/MaterialSrc/docx/colorprinting.docx';
+				//最终生成文件路径
+				$docroot ='App\Runtime\Temp\colorprinting-'.$ID.'.docx'; //最终生成文件路径
+				$fileName = "colorprinting".$ID.".docx";
+
+				$document = new \PhpOffice\PhpWord\TemplateProcessor($modroot);
+
+				//替换值
+				$document->setValue('name',$file_data[name]);
+				$document->setValue('associationname',$file_data[associationname]);
+				$document->setValue('phone',$file_data[phone]);
+				$document->setValue('activitycontent',$file_data[activitycontent]);
+				$document->setValue('activitydate',$file_data[activitydate]);
+				$document->setValue('usetime',$file_data[usetime]);
+				$document->setValue('location',$file_data[location]);
+				$document->setValue('commercial',$file_data[commercial]);
+				$document->setValue('remark',$file_data[remark]);
+
+				$document->saveAs($docroot);
+
+			/* $html = "
 			<!DOCTYPE html>
 <html lang=\"zh-CN\">
     <head>
@@ -1056,7 +1087,7 @@ class LoadController extends CommonController
 
     </body>
 </html>
-			";
+			";*/
 			break;
 			case east4:
 			$html = "
@@ -1920,14 +1951,26 @@ class LoadController extends CommonController
 			";
 			break;
 		}
-		
-		$this->start(); 
+		/*$this->start();
 		$wordname = $table.$ID.".doc";
 		//$this->preview();
 		echo $html;
-		$this->save($wordname); 
-		$this->display();
-		ob_flush();//每次执行前刷新缓存 
+		$this->save($wordname); */
+		//$this->show('http://'.$_SERVER['HTTP_HOST'].__ROOT__.'/'.str_replace("\\","/",$docroot));
+		/*$sendDownload= new \PhpOffice\PhpWord\PhpWord('http://'.$_SERVER['HTTP_HOST'].__ROOT__.'/'.str_replace("\\","/",$docroot));
+		header("Content-type: application/vnd.ms-word");
+		header("Content-Disposition:attachment;filename=".$fileName);
+		header('Cache-Control: max-age=0');
+		$objCreate=\PhpOffice\PhpWord\IOFactory::createWriter($sendDownload , 'Word2007');
+		$objCreate->save("php://output");
+		unlink('http://'.$_SERVER['HTTP_HOST'].__ROOT__.'/'.str_replace("\\","/",$docroot));*/
+		$fileurl='http://'.$_SERVER['HTTP_HOST'].__ROOT__.'/'.str_replace("\\","/",$docroot);
+ 		header("Content-type: application/vnd.ms-word");
+		header("Content-Disposition:attachment;filename=".$fileName);
+		header('Content-Transfer-Encodeing: binary');
+		readfile($fileurl);
+		//$this->show($fileurl);
+		ob_flush();//每次执行前刷新缓存
 		flush();
 		
        // header("Content-Disposition:attachment;filename='$type-$ID.doc'");
