@@ -6,7 +6,6 @@
 </head>
 <body>
 <!--模态框区域-->
-<!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalPreview">Large modal</button>-->
 
 <div class="modal fade" id="modalPreview" tabindex="-1" role="dialog" style="border-radius: 0px">
     <div class="modal-dialog modal-lg" role="document">
@@ -18,17 +17,19 @@
 
             <div class="modal-body container-fluid">
                 <div class="row">
-                    <div class="col-sm-2"><h4>申请者：</h4></div>
-                    <h4 class="col-sm-6" id="modalPreview-UserName">table.UserName</h4>
+                    <div class="col-sm-8"><h4>申请者：<span id="modalPreview-UserName">table.UserName</span></h4></div>
+
                     <div class="col-sm-4">
                         <!--此处换成表格下载地址//TODO-->
+                        <form action="{:U('Material/Load/downloadword')}" enctype="multipart/form-data" method="POST">
+                            <input type="hidden" class="modal-input-action-type" name="action_type" value="">
+                            <input type="hidden" class="modal-input-ID" name="ID" value="">
 
-                        <div class="btn-group" role="group" aria-label="...">
-                            <button href="javascript:void(0)" class="btn btn-success">下载表格</button>
-                            <button type="button" class="btn btn-default">下载策划</button>
-
-                        </div>
-
+                            <div class="btn-group" role="group" aria-label="...">
+                                <input type="submit" value="下载表格" class="btn btn-success">
+                                <a href="" class="btn btn-warning modal-input-storeurl">下载策划</a>
+                            </div>
+                        </form>
                     </div>
                 </div>
                 <!--表格主体-->
@@ -40,9 +41,9 @@
 
             <div class="modal-footer">
                 <form enctype="multipart/form-data" action="{:U('material_adupload')}" id="approveform" class="form" method="POST">
-                    <input type="hidden" id="modal-footer-action-type" name="action_type" value="">
-                    <input type="hidden" id="modal-footer-ID" name="ID" value="">
-                    <input type="hidden" id="modal-footer-UserName" name="UserName" value="">
+                    <input type="hidden" class="modal-input-action-type" name="action_type" value="">
+                    <input type="hidden" class="modal-input-ID" name="ID" value="">
+                    <input type="hidden" class="modal-input-UserName" name="UserName" value="">
                     <div class="col-sm-3" style="text-align: left">
                         <h4>审批结果</h4>
                         <select name="ApproveState" id="modalPreview-ApproveState" class="form-control">
@@ -119,26 +120,31 @@
                                 <input type="hidden" name="action_type" value="{$v[0]}">
                                 <input type="hidden" name="ID" value="{$u.id}">
                             </form>
-                            <button class="btn btn-info btn-approve" data-toggle="modal" data-action-target="{:U('Material/Load/preview')}" data-target="#modalPreview" data-action-type="{$v[0]}" data-id="{$u.id}" data-username="{$u.username}">审批</button>
+                            <button class="btn btn-info btn-approve" data-toggle="modal" data-action-target="{:U('Material/Load/preview')}" data-target="#modalPreview" data-action-type="{$v[0]}" data-id="{$u.id}" data-username="{$u.username}" data-storeurl="{$u.storeurl}">审批</button>
                         </div>
 
                         <div class="Applylist-Download">
-                            <div class="dropdown">
-                            <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                下载
-                                <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                <li>
-                                    <form action="{:U('Material/load/downloadword')}" enctype="multipart/form-data" method="POST">
-                                        <input type="hidden" name="action_type" value="{$v[0]}">
-                                        <input type="hidden" name="ID" value="{$u.id}"><input type="submit">表格</input>
-                                    </form>
-                                </li>
-                                <li><a href="{$u.storeurl}">策划</a></li>
-                            </ul>
-                        </div>
-                            <!--<button class="btn btn-success">下载表格</button><a  href="{$u.storeurl}" class="btn btn-success">下载策划</a>-->
+
+                                <div class="dropdown">
+                                    <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                        下载
+                                        <span class="caret"></span>
+                                    </button>
+
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                    <li>
+                                        <a href="javascript:void(0)" class="download-table">
+                                            表格
+                                        </a>
+                                        <form action="{:U('Material/load/downloadword')}" enctype="multipart/form-data" method="POST">
+                                            <input type="hidden" name="action_type" value="{$v[0]}">
+                                            <input type="hidden" name="ID" value="{$u.id}">
+                                        </form>
+                                    </li>
+                                    <li><a href="{$u.storeurl}">策划</a></li>
+                                </ul>
+
+                                </div>
                         </div>
 
                     </div>

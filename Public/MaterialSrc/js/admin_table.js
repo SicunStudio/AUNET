@@ -18,7 +18,12 @@ $(document).ready(function(){
     $(".list-container[data-approvestate!='未审批'] .Applylist-Approve button").addClass("btn-default");
 });
 
-$('#modalPreview').on("hide.bs.modal",function(e){
+$(document).on("click",".download-table",function(){
+    var dom=$(this);
+    dom.next().submit();
+});
+
+$('#modalPreview').on("hidden.bs.modal",function(e){
     $("#modalPreview-UserName").text("---");
     $("#modalPreview-TableContainer").html("&nbsp;");
     $("#modalPreview-ApproveState").val("未审批");
@@ -28,9 +33,10 @@ $('#modalPreview').on("hide.bs.modal",function(e){
 $(document).on("click",".btn-approve", function() {
     var dom=$(this);
     $("#modalPreview-UserName").text(dom.attr("data-username"));
-    $("#modal-footer-UserName").val(dom.attr("data-username"));
-    $("#modal-footer-ID").val(dom.attr("data-id"));
-    $("#modal-footer-action-type").val(dom.attr("data-action-type"));
+    $(".modal-input-UserName").val(dom.attr("data-username"));
+    $(".modal-input-ID").val(dom.attr("data-id"));
+    $(".modal-input-action-type").val(dom.attr("data-action-type"));
+    $(".modal-input-storeurl").val(dom.attr("data-storeurl"));
     $.post(dom.attr("data-action-target"),
         {
             ID:dom.attr("data-id"),
