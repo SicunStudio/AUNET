@@ -50,7 +50,7 @@ class MaterialController extends CommonController
         {
             //print("$list_name</br>");
             $list = D(strtolower($name_en));
-            $tmp = $list->where("UserName='%s'", $user_name)->getField('ID,ApproveState,CreateTime,ApproveNote');
+            $tmp = $list->where("UserName='%s'", $user_name)->getField('ID,ApproveState,CreateTime,ApproveNote,ApproveTime');
             //print_r($tmp);
             if ($tmp)
             {
@@ -144,17 +144,12 @@ class MaterialController extends CommonController
             }
         }
 		*/
-		if($all_data[ApproveState]){
-			$data['ApproveState']= '已通过';
-			$data['AprroveTime'] = date("Y-n-j G:i:s");
-			$data['ApproveNote'] = $all_data['ApproveNote'];
-			$sql->where('ID=' .$all_data[ID])->save($data);
-		}else{
-			$data['ApproveState']= '未通过';
-			$data['AprroveTime'] = date("Y-n-j G:i:s");
-			$data['ApproveNote'] = $all_data['ApproveNote'];
-			$sql->where('ID=' .$all_data[ID])->save($data);
-		}
+
+        $data['ApproveState']= $all_data['ApproveState'];
+        $data['ApproveTime'] = date("Y-m-d H:i:s");
+        $data['ApproveNote'] = $all_data['ApproveNote'];
+        $sql->where('ID=' .$all_data[ID])->save($data);
+
         $this->success(L('操作成功！'));
     }
 	//后台管理显示函数
