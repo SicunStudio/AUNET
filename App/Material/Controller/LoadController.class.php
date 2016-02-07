@@ -1050,7 +1050,18 @@ class LoadController extends CommonController
 
 			break;
 			case outdoor:
-
+				$document->setValue('associationname',$file_data[associationname]);
+				$document->setValue('activityname',$file_data[activityname]);
+				$document->setValue('joinnumber',$file_data[joinnumber]);
+				$document->setValue('activitydate',$file_data[activitydate]);
+				$document->setValue('activitytime',$file_data[activitytime]);
+				$document->setValue('activitylocation',$file_data[activitylocation]);
+				$document->setValue('activitycontent',$file_data[activitycontent]);
+				$document->setValue('commercial',$file_data[commercial]);
+				$document->setValue('commercialpart',$file_data[commercialpart]);
+				$document->setValue('activitychargeperson',$file_data[activitychargeperson]);
+				$document->setValue('activityphone',$file_data[activityphone]);
+				$document->setValue('associationcomment',$file_data[associationcomment]);
 
 			break;
 			case sacenter:
