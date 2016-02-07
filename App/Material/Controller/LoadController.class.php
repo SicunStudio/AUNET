@@ -149,10 +149,6 @@ class LoadController extends CommonController
                         <td height=\"50\" align=\"center\" valign=\"middle\">活动日期</td>
                         <td height=\"50\" align=\"center\" valign=\"middle\" id=\"ActivityDateArea\">
                             $file_data[activitydate]
-                            <script>
-                                var mydate=new Date();
-                                $(\"#ActivityDateArea\").html(generateDateSelector(mydate.getFullYear()+1,mydate.getFullYear(),true,true,\"ActivityDate\",\"ActivityDateArea_DateInput\",\"YY年MM月DD日\",\"adt\",\"\",\"\",\"data-check-notice='活动日期' data-check-null='notnull'\"));
-                            </script>
                         </td>
                         <td height=\"50\" align=\"center\" valign=\"middle\">活动时间</td>
                         <td height=\"50\" colspan=\"4\" align=\"left\" valign=\"middle\">
@@ -1033,239 +1029,29 @@ class LoadController extends CommonController
 				$document->setValue('associationcomment',$file_data[associationcomment]);
 
 			break;
-			case materialapply:
-			$html = "
-			<!DOCTYPE html>
-<html lang=\"zh-CN\">
-<head>
-    <meta charset=\"UTF-8\">
-</head>
-<body>
 
-<ol class=\"breadcrumb\">
-    <li><h4>物资借用</h4></li>
-</ol>
-<form action=\"{:U('Material/Material/material_upload')}\" enctype=\"multipart/form-data\" method=\"POST\">
-    <input type=\"hidden\" name=\"action_type\" value=\"materialapply\">
-    <div class=\"tableContainer\">
-        <table class=\"table-bordered FillForm\" width=\"700px\">
-    <tbody>
-    <tr>
-        <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">协会名称</td>
-        <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">$file_data[associationname]</td>
-        <td width=\"86\" height=\"50\" align=\"center\" valign=\"middle\">活动名称</td>
-        <td height=\"50\" colspan=\"3\" align=\"center\" valign=\"middle\">$file_data[activityname]</td>
-    </tr>
-    <tr>
-        <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">活动地点</td>
-        <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">
-            $file_data[activitylocation]
-        </td>
-        <td height=\"50\" align=\"center\" valign=\"middle\">借用日期</td>
-        <td width=\"98\" height=\"50\" align=\"center\" valign=\"middle\" id=\"borrowTimeArea\">
-            $file_data[borrowtime]
-        </td>
-        <td width=\"82\" height=\"50\" align=\"center\" valign=\"middle\">参与人数</td>
-        <td width=\"90\" height=\"50\" align=\"center\" valign=\"middle\">
-            $file_data[joinnumber]
-        </td>
-    </tr>
-    <tr>
-        <td height=\"50\" colspan=\"8\" align=\"center\" valign=\"middle\">注：每张申请表只能借用一种物资</td>
-    </tr>
-    <tr>
-        <td width=\"40\" rowspan=\"4\" align=\"center\" valign=\"middle\" width=\"39\">物资种类</td>
-        <td width=\"69\" height=\"35\" align=\"center\" valign=\"middle\" width=\"71\">投影仪</td>
-        <td width=\"111\" height=\"35\" align=\"center\" valign=\"middle\" width=\"90\">台数</td>
-        <td height=\"35\" colspan=\"2\" align=\"center\" valign=\"middle\" width=\"90\">
-            $file_data[projectornumber]
-        </td>
-        <td height=\"35\" align=\"center\" valign=\"middle\" width=\"109\">归还日期</td>
-        <td height=\"35\" colspan=\"2\" align=\"center\" valign=\"middle\" width=\"86\" id=\"PReturnTimeArea\">
-            $file_data[preturntime]
-        </td>
-    </tr>
-    <tr>
-        <td height=\"35\" align=\"center\" valign=\"middle\" width=\"71\">电力<br></td>
-        <td height=\"35\" align=\"center\" valign=\"middle\" width=\"90\">瓦数</td>
-        <td height=\"35\" colspan=\"2\" align=\"center\" valign=\"middle\" width=\"90\">
-            $file_data[powerwattage]
-        </td>
-        <td height=\"35\" colspan=\"3\" align=\"center\" valign=\"middle\">（注：瓦数超过2000W须要到主校区配电房签字）</td>
-    </tr>
-    <tr>
-        <td height=\"35\" align=\"center\" valign=\"middle\" width=\"71\">大量桌椅</td>
-        <td height=\"35\" align=\"center\" valign=\"middle\" width=\"90\">桌子数量</td>
-        <td width=\"90\" height=\"35\" align=\"center\" valign=\"middle\" width=\"90\">
-            $file_data[desknumber]
-        </td>
-        <td height=\"35\" align=\"center\" valign=\"middle\" width=\"89\">椅子数量</td>
-        <td height=\"35\" align=\"center\" valign=\"middle\" width=\"109\">
-            $file_data[chairnumber]
-        </td>
-        <td height=\"35\" align=\"center\" valign=\"middle\" width=\"86\">归还日期</td>
-        <td height=\"35\" align=\"center\" valign=\"middle\" width=\"92\" id=\"DCReturnTimeArea\">
-            $file_data[dcreturntime]
-        </td>
-    </tr>
-    <tr>
-        <td height=\"35\" align=\"center\" valign=\"middle\" width=\"71\">校车</td>
-        <td height=\"35\" align=\"center\" valign=\"middle\" width=\"90\">运送桌子数量</td>
-        <td height=\"35\" colspan=\"2\" align=\"center\" valign=\"middle\" width=\"90\">
-            $file_data[carrydesknumber]
-        </td>
-        <td height=\"35\" align=\"center\" valign=\"middle\" width=\"109\">运送椅子数量</td>
-        <td height=\"35\" colspan=\"2\" align=\"center\" valign=\"middle\" width=\"86\">
-            $file_data[carrychairnumber]
-        </td>
-    </tr>
-    <tr>
-        <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">活动负责人</td>
-        <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">
-            $file_data[activitychargeperson]
-        </td>
-        <td width=\"50\" height=\"50\" align=\"center\" valign=\"middle\">联系电话</td>
-        <td height=\"50\" colspan=\"3\" align=\"center\" valign=\"middle\">
-            $file_data[activityphone]
-        </td>
-    </tr>
-    <tr>
-        <td height=\"80\" colspan=\"2\" align=\"center\" valign=\"middle\">社团意见</td>
-        <td height=\"80\" colspan=\"2\" align=\"center\" valign=\"middle\">
-            $file_data[associationcomment]
-        </td>
-        <td height=\"80\" align=\"center\" valign=\"middle\">社联意见</td>
-        <td height=\"80\" colspan=\"3\" align=\"center\" valign=\"middle\"><span class=\"disable-area\"></span></td>
-    </tr>
-    <tr>
-        <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">社联经手人</td>
-        <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\"><span class=\"disable-area\"></span></td>
-        <td height=\"50\" align=\"center\" valign=\"middle\">联系电话</td>
-        <td height=\"50\" colspan=\"3\" align=\"center\" valign=\"middle\"><span class=\"disable-area\"></span></td>
-    </tr>
-    <tr>
-        <td height=\"100\" colspan=\"2\" align=\"center\" valign=\"middle\">共青团<br>华中科技大学委员会意见</td>
-        <td height=\"100\" colspan=\"6\" align=\"center\" valign=\"middle\"><span class=\"disable-area\"></span></td>
-    </tr>
-    </tbody>
-</table>
-    </div>
-</form>
-</body>
-</html>
-			";
+			case materialapply:
+				$document->setValue('associationname',$file_data[associationname]);
+				$document->setValue('activityname',$file_data[activityname]);
+				$document->setValue('activitylocation',$file_data[activitylocation]);
+				$document->setValue('joinnumber',$file_data[joinnumber]);
+				$document->setValue('borrowtime',$file_data[borrowtime]);
+				$document->setValue('projectornumber',$file_data[projectornumber]);
+				$document->setValue('preturntime',$file_data[preturntime]);
+				$document->setValue('powerwattage',$file_data[powerwattage]);
+				$document->setValue('desknumber',$file_data[desknumber]);
+				$document->setValue('chairnumber',$file_data[chairnumber]);
+				$document->setValue('dcreturntime',$file_data[dcreturntime]);
+				$document->setValue('carrydesknumber',$file_data[carrydesknumber]);
+				$document->setValue('carrychairnumber',$file_data[carrychairnumber]);
+				$document->setValue('activitychargeperson',$file_data[activitychargeperson]);
+				$document->setValue('activityphone',$file_data[activityphone]);
+				$document->setValue('associationcomment',$file_data[associationcomment]);
+
 			break;
 			case outdoor:
-			$html = "
-			<!DOCTYPE html>
-<html lang=\"zh-CN\">
-    <head>
-        <meta charset=\"utf-8\">
-    </head>
-    <body>
-        <ol class=\"breadcrumb\">
-            <li><h4>户外路演场地</h4></li>
-        </ol>
-        <form action=\"{:U('Material/Material/material_upload')}\" enctype=\"multipart/form-data\" method=\"POST\">
-            <input type=\"hidden\" name=\"action_type\" value=\"outdoor\">
-            <div class=\"tableContainer\">
-                <table width=\"700\" class=\"table-bordered FillForm\">
-                    <tbody>
-                    <tr>
-                        <td width=\"112\" height=\"50\" align=\"center\" valign=\"middle\">协会名称</td>
-                        <td width=\"139\" height=\"50\" align=\"center\" valign=\"middle\">
-                            $file_data[associationname]
-                        </td>
-                        <td width=\"84\" height=\"50\" align=\"center\" valign=\"middle\">活动名称</td>
-                        <td width=\"111\" height=\"50\" align=\"center\" valign=\"middle\">
-                            $file_data[activityname]
-                        </td>
-                        <td width=\"75\" height=\"50\" align=\"center\" valign=\"middle\">参与人数</td>
-                        <td width=\"153\" height=\"50\" align=\"center\" valign=\"middle\">
-                            $file_data[joinnumber]
-                        </td>
-                    </tr>
-                    <tr>
-                        <td height=\"50\" align=\"center\" valign=\"middle\">活动日期</td>
-                        <td height=\"50\" align=\"center\" valign=\"middle\" id=\"ActivityDateArea\">
-                            $file_data[activitydate]
-                        </td>
-                        <td height=\"50\" align=\"center\" valign=\"middle\">活动时间</td>
-                        <td height=\"50\" colspan=\"3\" align=\"center\" valign=\"middle\">
-                            $file_data[activitytime]
-                        </td>
-                    </tr>
-                    <tr>
-                        <td height=\"50\" align=\"center\" valign=\"middle\">活动地点</td>
-                        <td height=\"50\" colspan=\"5\" align=\"center\" valign=\"middle\">
-                            $file_data[activitylocation]
-                        </td>
-                    </tr>
-                    <tr>
-                        <td height=\"120\" align=\"center\" valign=\"middle\">活动内容 （主题， 目的， 流程， 安全负责人） </td>
-                        <td height=\"120\" colspan=\"5\" align=\"center\" valign=\"middle\">
-                            <textarea name=\"ActivityContent\" class=\"inputArea\" data-check-null=\"notnull\" value=\"$file_data[activitycontent]\"></textarea>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td height=\"80\" align=\"center\" valign=\"middle\">有无商业赞助</td>
-                        <td height=\"80\" align=\"center\" valign=\"middle\">
-                            $file_data[commercial]
-                        </td>
-                        <td height=\"80\" align=\"center\" valign=\"middle\">赞助方名 及赞助方式（如有） </td>
-                        <td height=\"80\" colspan=\"3\" align=\"center\" valign=\"middle\">
-                            $file_data[commercialpart]
-                        </td>
-                    </tr>
-                    <tr>
-                        <td height=\"50\" align=\"center\" valign=\"middle\">活动负责人</td>
-                        <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">
-                            $file_data[activitychargeperson]
-                        </td>
-                        <td height=\"50\" align=\"center\" valign=\"middle\">联系电话</td>
-                        <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">
-                            $file_data[activityphone]
-                        </td>
-                    </tr>
-                    <tr>
-                        <td height=\"80\" align=\"center\" valign=\"middle\">社团意见</td>
-                        <td height=\"80\" colspan=\"2\" align=\"center\" valign=\"middle\">
-                            $file_data[associationname]
-                        </td>
-                        <td height=\"80\" align=\"center\" valign=\"middle\">社联意见</td>
-                        <td height=\"80\" colspan=\"2\" align=\"center\" valign=\"middle\">
-                            <span class=\"disable-area\"></span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td height=\"50\" align=\"center\" valign=\"middle\">社联经手人</td>
-                        <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">
-                            <span class=\"disable-area\"></span>
-                        </td>
-                        <td height=\"50\" align=\"center\" valign=\"middle\">联系电话</td>
-                        <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">
-                            <span class=\"disable-area\"></span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td height=\"100\" align=\"center\" valign=\"middle\">共青团 华中科技大学委员会意见 </td>
-                        <td height=\"100\" colspan=\"2\" align=\"center\" valign=\"middle\">
-                            <span class=\"disable-area\"></span>
-                        </td>
-                        <td height=\"100\" align=\"center\" valign=\"middle\">华中科技大学 保卫处意见 </td>
-                        <td height=\"100\" colspan=\"2\" align=\"center\" valign=\"middle\">
-                            <span class=\"disable-area\"></span>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-            
-        </form>
 
-    </body>
-</html>
-			";
+
 			break;
 			case sacenter:
 			$html = "
