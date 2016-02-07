@@ -1203,221 +1203,35 @@ class LoadController extends CommonController
 				break;
 
 			case teachingbuilding:
-			$html = "
-			<!DOCTYPE html>
-<html lang=\"zh-CN\">
-    <head>
-        <meta charset=\"utf-8\">
-    </head>
-    <body>
-        <ol class=\"breadcrumb\">
-            <li><h4>教学楼教室申请</h4></li>
-        </ol>
-        <form action=\"{:U('Material/Material/material_upload')}\" enctype=\"multipart/form-data\" method=\"POST\">
-            <input type=\"hidden\" name=\"action_type\" value=\"teachingbuilding\">
-            <div style=\"text-align: center\">
-                <h2>社团活动申请表</h2>
-                <h3>（教学楼专用）</h3>
-            </div>
+				$document->setValue('associationnamea',$file_data[associationnamea]);
+				$document->setValue('activityname',$file_data[activityname]);
+				$document->setValue('activitylocation',$file_data[activitylocation]);
+				$document->setValue('joinnumber',$file_data[joinnumber]);
+				$document->setValue('activitytimea',$file_data[activitytimea]);
+				$document->setValue('activitycontent',$file_data[activitycontent]);
+				$document->setValue('presidentsignal',$file_data[presidentsignal]);
+				$document->setValue('associationnameb',$file_data[associationnameb]);
+				$document->setValue('classroomcapacity',$file_data[classroomcapacity]);
+				$document->setValue('applyername',$file_data[applyername]);
+				$document->setValue('applyerattr',$file_data[applyerattr]);
+				$document->setValue('classroomfunction',$file_data[classroomfunction]);
+				$document->setValue('officephone',$file_data[officephone]);
+				$document->setValue('mobilephone',$file_data[mobilephone]);
+				$document->setValue('activitytimeb',$file_data[activitytimeb]);
+				$document->setValue('week',$file_data[week]);
+				$document->setValue('day',$file_data[day]);
+				$document->setValue('classtime',$file_data[classtime]);
+				$document->setValue('teachingbuilding',$file_data[teachingbuilding]);
+				$document->setValue('normalconferencecontent',$file_data[normalconferencecontent]);
+				$document->setValue('hostname',$file_data[hostname]);
+				$document->setValue('hostpost',$file_data[hostpost]);
+				$document->setValue('hostcompany',$file_data[hostcompany]);
+				$document->setValue('lecturecontent',$file_data[lecturecontent]);
+				$document->setValue('speakername',$file_data[speakername]);
+				$document->setValue('speakercompany',$file_data[speakercompany]);
+				$document->setValue('speakerpost',$file_data[speakerpost]);
 
-            <div class=\"tableContainer\">
-                <table width=\"700\" class=\"table-bordered FillForm\">
-                    <tbody>
-                    <tr>
-                        <td width=\"100\" height=\"50\" align=\"center\" valign=\"middle\">社团名称</td>
-                        <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">
-                            $file_data[associationnamea]
-                        </td>
-                        <td width=\"112\" height=\"50\" align=\"center\" valign=\"middle\">活动名称</td>
-                        <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">
-                            $file_data[activityname]
-                        </td>
-                    </tr>
-                    <tr>
-                        <td height=\"50\" align=\"center\" valign=\"middle\">活动时间</td>
-                        <td width=\"124\" height=\"50\" align=\"center\" valign=\"middle\" id=\"dateSelAreaA\">
-                            $file_data[activitytimea]
-                        </td>
-                        <td width=\"112\" height=\"50\" align=\"center\" valign=\"middle\">活动地点</td>
-                        <td height=\"50\" align=\"center\" valign=\"middle\">
-                            $file_data[activitylocation]
-                        </td>
-                        <td width=\"112\" height=\"50\" align=\"center\" valign=\"middle\">参与人数</td>
-                        <td width=\"114\" height=\"50\" align=\"center\" valign=\"middle\">
-                            $file_data[joinnumber]
-                        </td>
-                    </tr>
-                    <tr>
-                        <td height=\"40\" colspan=\"6\" align=\"center\" valign=\"middle\">活动内容（目的，流程，安全负责人，主讲人简介等）</td>
-                    </tr>
-                    <tr>
-                        <td height=\"550\" colspan=\"6\" align=\"center\" valign=\"middle\">
-                            $file_data[activitycontent]
-                        </td>
-                    </tr>
-                    <tr>
-                        <td height=\"100\" align=\"center\" valign=\"middle\">会长签字</td>
-                        <td height=\"100\" align=\"center\" valign=\"middle\">
-                            $file_data[presidentsignal]
-                        </td>
-                        <td height=\"100\" align=\"center\" valign=\"middle\">社联<br>审批意见 </td>
-                        <td height=\"100\" align=\"center\" valign=\"middle\">&nbsp;</td>
-                        <td height=\"100\" align=\"center\" valign=\"middle\">团委<br>审批意见 </td>
-                        <td height=\"100\" align=\"center\" valign=\"middle\">&nbsp;</td>
-                    </tr>
-                    </tbody>
-                </table>
-
-                <div style=\"text-align: center; margin-top: 20px;\">
-                    <span style=\"font-size: 30px\">华中科技大学教室申请表</span><span style=\"font-size: 20px\">（非计划内教学—学生专用）</span>
-                </div>
-                <div class=\"tableContainer\">
-                    <table width=\"700\" class=\"table-bordered FillForm\">
-                        <tbody>
-                        <tr>
-                            <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">院（系）名称 </td>
-                            <td height=\"50\" colspan=\"5\" align=\"center\" valign=\"middle\">
-                                $file_data[associationnameb]
-                            </td>
-                            <td width=\"73\" height=\"50\" align=\"center\" valign=\"middle\">教室容量</td>
-                            <td width=\"234\" height=\"50\" align=\"center\" valign=\"middle\">
-                            <span style=\"width: 150px; height: 100%\">
-                                $file_data[classroomcapacity]
-                            </span>
-                                <span>人</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">申请人姓名</td>
-                            <td height=\"50\" colspan=\"5\" align=\"center\" valign=\"middle\">
-                            <span style=\"width: 150px; height: 100%\">
-                                $file_data[applyername]
-                            </span>
-                            <span>
-                                $file_data[applyerattr]
-                            </span>
-                            </td>
-                            <td height=\"50\" align=\"center\" valign=\"middle\">教室功能</td>
-                            <td height=\"50\" align=\"center\" valign=\"middle\">
-                                $file_data[classroomfunction]
-                            </td>
-                        </tr>
-                        <tr>
-                            <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">申请人<br>联系电话</td>
-                            <td width=\"80\" height=\"50\" align=\"center\" valign=\"middle\">办公电话号码</td>
-                            <td height=\"50\" colspan=\"4\" align=\"center\" valign=\"middle\">
-                                $file_data[officephone]
-                            </td>
-                            <td width=\"73\" height=\"50\" align=\"center\" valign=\"middle\">手机号码</td>
-                            <td width=\"234\" height=\"50\" align=\"center\" valign=\"middle\">
-                                $file_data[mobilephone]
-                            </td>
-                        </tr>
-                        <tr>
-                            <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">活动、讲座时间</td>
-                            <td height=\"50\" colspan=\"5\" align=\"center\" valign=\"middle\" id=\"dateSelAreaB\">
-                                $file_data[activitytimeb]
-                            </td>
-                            <td width=\"73\" height=\"50\" rowspan=\"2\" align=\"center\" valign=\"middle\">节次</td>
-                            <td width=\"234\" height=\"50\" rowspan=\"2\" align=\"center\" valign=\"middle\">
-                                $file_data[classtime]
-                            </td>
-                        </tr>
-                        <tr>
-                            <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">周次</td>
-                            <td width=\"80\" height=\"50\" align=\"center\" valign=\"middle\">
-                                $file_data[week]
-                            </td>
-                            <td width=\"72\" height=\"50\" align=\"center\" valign=\"middle\">星期</td>
-                            <td height=\"50\" colspan=\"3\" align=\"center\" valign=\"middle\">
-                                $file_data[day]
-                            </td>
-                        </tr>
-                        <tr>
-                            <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">教学楼选择 </td>
-                            <td height=\"50\" colspan=\"7\" align=\"center\" valign=\"middle\">
-                                $file_data[teachingbuilding]
-                            </td>
-                        </tr>
-                        <tr>
-                            <td height=\"101\" colspan=\"2\" align=\"center\" valign=\"middle\">说明 </td>
-                            <td colspan=\"7\" align=\"left\" valign=\"middle\">节次说明：1—4节为上午；5—8节为下午；9—11节为晚上。<br>作息时间：秋、夏季1—4节：8：00-11：50；<br>秋季5—8节：14：00—17：30；<br>夏季5—8节：14：30—18：00；<br>秋季9—11节：18：30—21：50；<br>夏季9—11节：19：00—22：20</td>
-                        </tr>
-                        <tr>
-                            <td width=\"16\" height=\"120\" rowspan=\"2\" align=\"center\" valign=\"middle\">形式和内容 </td>
-                            <td width=\"82\" height=\"120\" align=\"center\" valign=\"middle\">一般活动、会议 </td>
-                            <td height=\"120\" colspan=\"7\" align=\"left\" valign=\"top\">
-                                <div style=\"height:83px;margin-bottom: 2px\">
-                                    $file_data[normalconferencecontent]
-                                </div>
-                                <div style=\"height:36px\">
-                                    <span>主持人姓名</span>
-                                <span>
-                                    $file_data[hostname]
-                                </span>
-                                    <span>单位</span>
-                                <span>
-                                   $file_data[hostcompany]
-                                </span>
-                                    <span>职务（职称）</span>
-                                <span>
-                                    $file_data[hostpost]
-                                </span>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td width=\"82\" height=\"120\" align=\"center\" valign=\"middle\">授课、讲座人员情况(申请多媒体教室) </td>
-                            <td height=\"120\" colspan=\"7\" align=\"left\" valign=\"top\">授课（讲座）内容:
-                                <div style=\"height:83px;margin-bottom: 2px\">
-                                    $file_data[lecturecontent]
-                                </div>
-                                <div style=\"height:36px\">
-                                    <span>授课（讲座）姓名</span>
-                                <span>
-                                    $file_data[speakername]
-                                </span>
-                                    <span>单位</span>
-                                <span>
-                                    $file_data[speakercompany]
-                                </span>
-                                    <span>职务（职称）</span>
-                                <span>
-                                    $file_data[speakerpost]
-                                </span>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td height=\"100\" colspan=\"2\" rowspan=\"2\" align=\"center\" valign=\"middle\">
-                                院（系）<br>
-                                审核意见
-                            </td>
-                            <td height=\"100\" colspan=\"5\" align=\"left\" valign=\"top\">院（系）分管辅导员意见：<br><br><br>签名： </td>
-                            <td height=\"100\" colspan=\"2\" align=\"left\" valign=\"top\">院（系）学工组意见：<br>
-                                <br>
-                                <br>
-                                签名：</td>
-                        </tr>
-                        <tr>
-                            <td height=\"100\" colspan=\"7\">团委领导审核结果和意见： <br>
-                                职 务：               签 名： <br>
-                                盖 章：                      年    月    日 </td>
-                        </tr>
-                        <tr>
-                            <td height=\"120\" colspan=\"2\" align=\"center\" valign=\"middle\">教务处<br>审批意见</td>
-                            <td height=\"120\" colspan=\"7\" align=\"center\" valign=\"middle\">                                                                                                                                                               年    月    日 </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-        </form>
-    </body>
-</html>
-			";
-			break;
+				break;
 		}
 		/*$this->start();
 		$wordname = $table.$ID.".doc";
