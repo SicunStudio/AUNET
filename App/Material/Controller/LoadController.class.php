@@ -586,7 +586,7 @@ class LoadController extends CommonController
                         </td>
                         <td width=\"89\" height=\"50\" align=\"center\" valign=\"middle\">活动名称</td>
                         <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">
-                            $file_data[activitytime]
+                            $file_data[activityname]
                         </td>
                         <td width=\"112\" height=\"50\" align=\"center\" valign=\"middle\">参与人数</td>
                         <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">
@@ -606,7 +606,7 @@ class LoadController extends CommonController
                     <tr>
                         <td height=\"50\" align=\"center\" valign=\"middle\">活动地点</td>
                         <td height=\"50\" colspan=\"4\" align=\"center\" valign=\"middle\">
-                            $file_data[activitylocation]\">
+                            $file_data[activitylocation]
                         </td>
                         <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">是否经系统查询</td>
                         <td width=\"114\" height=\"50\" align=\"center\" valign=\"middle\">
@@ -997,19 +997,16 @@ class LoadController extends CommonController
 		foreach($file_data as $key => $val){
             $file_data[$key] = mb_convert_encoding($val, "HTML-ENTITIES", "UTF-8");
 		}
-		$docroot = "";
-		$modroot = "";
-		$fileName = "";
+
+		//模板路径
+		$modroot ='http://'.$_SERVER['HTTP_HOST'].__ROOT__.'/Public/MaterialSrc/docx/'.$type.'.docx';
+		//最终生成文件路径
+		$docroot ='App\\Runtime\\Temp\\'.$type.'-'.$ID.'.docx'; //最终生成文件路径
+
+		$document = new \PhpOffice\PhpWord\TemplateProcessor($modroot);
+
 		switch($type){
 			case colorprinting:
-				//模板路径
-				$modroot ='http://'.$_SERVER['HTTP_HOST'].__ROOT__.'/Public/MaterialSrc/docx/colorprinting.docx';
-				//最终生成文件路径
-				$docroot ='App\Runtime\Temp\colorprinting-'.$ID.'.docx'; //最终生成文件路径
-				$fileName = "colorprinting".$ID.".docx";
-
-				$document = new \PhpOffice\PhpWord\TemplateProcessor($modroot);
-
 				//替换值
 				$document->setValue('name',$file_data[name]);
 				$document->setValue('associationname',$file_data[associationname]);
@@ -1020,178 +1017,21 @@ class LoadController extends CommonController
 				$document->setValue('location',$file_data[location]);
 				$document->setValue('commercial',$file_data[commercial]);
 				$document->setValue('remark',$file_data[remark]);
-
-				$document->saveAs($docroot);
-
-			/* $html = "
-			<!DOCTYPE html>
-<html lang=\"zh-CN\">
-    <head>
-        <meta charset=\"utf-8\">
-    </head>
-    <body>
-        <ol class=\"breadcrumb\">
-            <li><h4>彩喷悬挂申请</h4></li>
-        </ol>
-        <form id=\"applicationForm\" action=\"{:U('Material/Material/material_upload')}\" enctype=\"multipart/form-data\" method=\"POST\">
-            <input type=\"hidden\" name=\"action_type\" value=\"colorprinting\">
-            <div class=\"tableContainer\">
-                <table class=\"table-bordered table FillForm\" width=\"700\" border=\"0\">
-                    <tbody>
-                    <tr>
-                        <td width=\"98\" height=\"50\" align=\"center\" valign=\"middle\" scope=\"col\">申请单位</td>
-                        <td height=\"50\" colspan=\"5\" align=\"center\" valign=\"middle\" scope=\"col\">$file_data[associationname]</td>
-                    </tr>
-                    <tr>
-                        <td height=\"50\" align=\"center\" valign=\"middle\">经办人信息</td>
-                        <td width=\"53\" height=\"50\" align=\"center\" valign=\"middle\">姓名</td>
-                        <td width=\"178\" height=\"50\" align=\"center\" valign=\"middle\">$file_data[name]</td>
-                        <td width=\"41\" height=\"50\" align=\"center\" valign=\"middle\">联系方式</td>
-                        <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">$file_data[phone]</td>
-                    </tr>
-                    <tr>
-                        <td align=\"center\" valign=\"middle\">活动内容</td>
-                        <td height=\"120\" colspan=\"5\" align=\"center\" valign=\"middle\">$file_data[activitycontent]</td>
-                    </tr>
-                    <tr>
-                        <td height=\"50\" align=\"center\" valign=\"middle\">活动日期</td>
-                        <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\" id=\"ActivityDateArea\">
-                            $file_data[activitydate]
-                        </td>
-                        <td height=\"50\" align=\"center\" valign=\"middle\">使用时间</td>
-                        <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">$file_data[usetime]</td>
-                    </tr>
-                    <tr>
-                        <td height=\"50\" align=\"center\" valign=\"middle\">使用地点</td>
-                        <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">$file_data[location]</td>
-                        <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">彩喷是否具有商业性质</td>
-                        <td width=\"166\" height=\"50\" align=\"center\" valign=\"middle\">$file_data[commercial]
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align=\"center\" valign=\"middle\">备注</td>
-                        <td height=\"100\" colspan=\"5\" align=\"center\" valign=\"middle\">
-                            $file_data[remark]
-                        </td>
-                    </tr>
-                    <tr>
-                        <td height=\"208\" colspan=\"3\" align=\"right\" valign=\"bottom\"><span class=\"disable-area\"></span><p>校团委意见（盖章）</p>
-                            <p>年&nbsp;&nbsp;&nbsp;&nbsp;月&nbsp;&nbsp;&nbsp;&nbsp;日 </p></td>
-                        <td height=\"208\" colspan=\"3\" align=\"right\" valign=\"bottom\"><span class=\"disable-area\"></span><p>场地审批单位意见（盖章）</p>
-                            <p>年&nbsp;&nbsp;&nbsp;&nbsp;月&nbsp;&nbsp;&nbsp;&nbsp;日 </p></td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-        </form>
-
-    </body>
-</html>
-			";*/
 			break;
-			case east4:
-			$html = "
-			<!DOCTYPE html>
-<html lang=\"zh-CN\">
-    <head>
-        <meta charset=\"utf-8\">
-    </head>
-    <body>
-        <ol class=\"breadcrumb\">
-            <li><h4>东四食堂三楼申请</h4></li>
-        </ol>
-        <form action=\"{:U('Material/Material/material_upload')}\" enctype=\"multipart/form-data\" method=\"POST\">
-            <input type=\"hidden\" name=\"action_type\" value=\"east4\">
-            <div class=\"tableContainer\">
-                <table width=\"700\" class=\"table-bordered FillForm\">
-                    <tbody>
-                    <tr>
-                        <td width=\"95\" height=\"50\" align=\"center\" valign=\"middle\">协会名称</td>
-                        <td width=\"171\" height=\"50\" align=\"center\" valign=\"middle\">
-                            $file_data[associationname]
-                        </td>
-                        <td width=\"82\" height=\"50\" align=\"center\" valign=\"middle\">活动名称</td>
-                        <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">
-                            $file_data[activityname]
-                        </td>
-                        <td width=\"81\" height=\"50\" align=\"center\" valign=\"middle\">参与人数</td>
-                        <td width=\"92\" height=\"50\" align=\"center\" valign=\"middle\">
-                            $file_data[joinnumber]
-                        </td>
-                    </tr>
-                    <tr>
-                        <td height=\"50\" align=\"center\" valign=\"middle\">活动日期</td>
-                        <td height=\"50\" align=\"center\" valign=\"middle\" id=\"ActivityDateArea\">
-                            $file_data[activitydate]
-                            <script>
-                                var mydate=new Date();
-                                $(\"#ActivityDateArea\").html(generateDateSelector(mydate.getFullYear()+1,mydate.getFullYear(),true,true,\"ActivityDate\",\"ActivityDateArea_DateInput\",\"YY年MM月DD日\",\"adt\",\"\",\"\",\"data-check-notice='活动日期' data-check-null='notnull'\"));
-                            </script>
-                        </td>
-                        <td height=\"50\" align=\"center\" valign=\"middle\">活动时间</td>
-                        <td height=\"50\" colspan=\"4\" align=\"left\" valign=\"middle\">
-                            $file_data[activitytime]
-                        </td>
-                    </tr>
-                    <tr>
-                        <td height=\"50\" align=\"center\" valign=\"middle\">活动地点</td>
-                        <td height=\"50\" colspan=\"6\" align=\"center\" valign=\"middle\">东四食堂三楼</td>
-                    </tr>
-                    <tr>
-                        <td height=\"150\" align=\"center\" valign=\"middle\"><p>活动内容（主题， 目的， 流程， 安全负责人） </p></td>
-                        <td height=\"150\" colspan=\"6\" align=\"center\" valign=\"middle\">
-                            $file_data[activitycontent]
-                        </td>
-                    </tr>
-                    <tr>
-                        <td height=\"80\" align=\"center\" valign=\"middle\">有无商业赞助</td>
-                        <td height=\"80\" align=\"center\" valign=\"middle\">
-                            $file_data[commercial]
-                        </td>
-                        <td height=\"80\" align=\"center\" valign=\"middle\">赞助方名及赞助方式（如有） </td>
-                        <td height=\"80\" colspan=\"4\" align=\"center\" valign=\"middle\">
-                            $file_data[commercialpart]
-                        </td>
-                    </tr>
-                    <tr>
-                        <td height=\"50\" align=\"center\" valign=\"middle\">活动负责人</td>
-                        <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">
-                            $file_data[activitychargeperson]
-                        </td>
-                        <td width=\"100\" height=\"50\" align=\"center\" valign=\"middle\">联系电话</td>
-                        <td height=\"50\" colspan=\"3\" align=\"center\" valign=\"middle\">
-                            $file_data[activityphone]
-                        </td>
-                    </tr>
-                    <tr>
-                        <td height=\"80\" align=\"center\" valign=\"middle\">社团意见</td>
-                        <td height=\"80\" colspan=\"2\" align=\"center\" valign=\"middle\">
-                            $file_data[associationname]
-                        </td>
-                        <td height=\"80\" align=\"center\" valign=\"middle\">社联意见</td>
-                        <td height=\"80\" colspan=\"3\" align=\"center\" valign=\"middle\"><span class=\"disable-area\"></span></td>
-                    </tr>
-                    <tr>
-                        <td height=\"50\" align=\"center\" valign=\"middle\">社联经手人</td>
-                        <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\"><span class=\"disable-area\"></span></td>
-                        <td height=\"50\" align=\"center\" valign=\"middle\">联系电话</td>
-                        <td height=\"50\" colspan=\"3\" align=\"center\" valign=\"middle\"><span class=\"disable-area\"></span></td>
-                    </tr>
-                    <tr>
-                        <td height=\"120\" align=\"center\" valign=\"middle\">共青团<br>华中科技大学委员会意见 </td>
-                        <td height=\"120\" colspan=\"2\" align=\"center\" valign=\"middle\"><span class=\"disable-area\"></span></td>
-                        <td height=\"120\" align=\"center\" valign=\"middle\">华中科技大学<br>学生工作处意见 </td>
-                        <td height=\"120\" colspan=\"3\" align=\"center\" valign=\"middle\"><span class=\"disable-area\"></span></td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-            
-        </form>
 
-    </body>
-</html>
-			";
+			case east4:
+				$document->setValue('associationname',$file_data[associationname]);
+				$document->setValue('activityname',$file_data[activityname]);
+				$document->setValue('joinnumber',$file_data[joinnumber]);
+				$document->setValue('activitycontent',$file_data[activitycontent]);
+				$document->setValue('activitydate',$file_data[activitydate]);
+				$document->setValue('activitytime',$file_data[activitytime]);
+				$document->setValue('commercial',$file_data[commercial]);
+				$document->setValue('commercialpart',$file_data[commercialpart]);
+				$document->setValue('activitychargeperson',$file_data[activitychargeperson]);
+				$document->setValue('activityphone',$file_data[activityphone]);
+				$document->setValue('associationcomment',$file_data[associationcomment]);
+
 			break;
 			case materialapply:
 			$html = "
@@ -1964,6 +1804,8 @@ class LoadController extends CommonController
 		$objCreate=\PhpOffice\PhpWord\IOFactory::createWriter($sendDownload , 'Word2007');
 		$objCreate->save("php://output");
 		unlink('http://'.$_SERVER['HTTP_HOST'].__ROOT__.'/'.str_replace("\\","/",$docroot));*/
+		// SaveFileToServer
+		$document->saveAs($docroot);
 
 		$fileurl='http://'.$_SERVER['HTTP_HOST'].__ROOT__.'/'.str_replace("\\","/",$docroot);
 
