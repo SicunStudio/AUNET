@@ -90,7 +90,7 @@ class MaterialController extends CommonController
             }
         }
 		if($ifUploadFile == 'file'){
-			$data['StoreURL'] = './Upload' . substr($info['file']['savepath'], 1)  . $info['file']['savename'];
+			$data['StoreURL'] = '/Upload' . substr($info['file']['savepath'], 1)  . $info['file']['savename'];
 		}
         $data['UserName'] = I('session.username', '');
         $result = $sql->data($data)->add();

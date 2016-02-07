@@ -46,7 +46,7 @@
             <div class="form-group">
                 <label for="" class="col-sm-2 control-label">参与人数</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" data-check-null="notnull" data-check-notice="参与人数" data-check-type="number" name="JoinNumber">
+                    <input type="text" maxlength="8" class="form-control" data-check-null="notnull" data-check-notice="参与人数" data-check-type="number" name="JoinNumber">
                 </div>
             </div>
 
@@ -144,8 +144,6 @@
                     <textarea type="text" class="form-control" style="height: 100px" data-check-notice="社团意见" name="AssociationComment"></textarea>
                 </div>
             </div>
-           
-         
         </div>
 
         <div class="form-group">
@@ -154,7 +152,7 @@
                 <div class="input-group file-selection-container">
                     <div class="file-selection-filePath">
 
-                        <div type="text" class="form-control " placeholder="选择文件..."></div>
+                        <div id="file-location" class="form-control">选择文件...</div>
                     </div>
                     <div class="file-selection-btn-container input-group-btn">
                         <button class="file-selection-btn-info btn btn-success"><span class="glyphicon glyphicon glyphicon-open" aria-hidden="true"></span> 选择文件</button>

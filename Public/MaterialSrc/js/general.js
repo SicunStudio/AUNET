@@ -28,8 +28,10 @@ $(document).on("click","[data-role='submit']",function(){
 $(document).on("change","#inputUploadFile",function(){
     if($("#inputUploadFile").val()!=undefined && $("#inputUploadFile").val()!=""){
         $("#ifUploadFile").val("file");
+        $("#file-location").text($("#inputUploadFile").val());
     }else {
         $("#ifUploadFile").val("none");
+        $("#file-location").text("选择文件...");
     }
 });
 

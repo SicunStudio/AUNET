@@ -134,3 +134,8 @@
     color: transparent;
     background-color: transparent;
 }
+
+#file-location {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
