@@ -1065,114 +1065,21 @@ class LoadController extends CommonController
 
 			break;
 			case sacenter:
-			$html = "
-			<!DOCTYPE html>
-<html lang=\"zh-CN\">
-    <head>
-        <meta charset=\"utf-8\">
-    </head>
-    <body>
-        <ol class=\"breadcrumb\">
-            <li><h4>大学生活动中心教室申请</h4></li>
-        </ol>
-        <form action=\"{:U('Material/Material/material_upload')}\" enctype=\"multipart/form-data\" method=\"POST\">
-            <input type=\"hidden\" name=\"action_type\" value=\"sacenter\">
-            <div class=\"tableContainer\">
-                <table width=\"700\" class=\"table-bordered FillForm\">
-                    <tbody>
-                    <tr>
-                        <td width=\"104\" height=\"50\" align=\"center\" valign=\"middle\">协会名称</td>
-                        <td width=\"122\" height=\"50\" align=\"center\" valign=\"middle\">
-                            $file_data[associationname]
-                        </td>
-                        <td width=\"89\" height=\"50\" align=\"center\" valign=\"middle\">活动名称</td>
-                        <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">
-                            $file_data[activityname]
-                        </td>
-                        <td width=\"112\" height=\"50\" align=\"center\" valign=\"middle\">参与人数</td>
-                        <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">
-                            $file_data[joinnumber]
-                        </td>
-                    </tr>
-                    <tr>
-                        <td height=\"50\" align=\"center\" valign=\"middle\">活动日期</td>
-                        <td height=\"50\" align=\"center\" valign=\"middle\" id=\"ActivityDateArea\">
-                            $file_data[activitydate]
-                        </td>
-                        <td height=\"50\" align=\"center\" valign=\"middle\">活动时间</td>
-                        <td height=\"50\" colspan=\"5\" align=\"center\" valign=\"middle\">
-                            $file_data[activitytime]
-                        </td>
-                    </tr>
-                    <tr>
-                        <td height=\"50\" align=\"center\" valign=\"middle\">普通教室<br>（50人） </td>
-                        <td height=\"50\" colspan=\"4\" align=\"center\" valign=\"middle\">
-                            $file_data[normalclassroom]
-                        </td>
-                        <td colspan=\"2\" rowspan=\"2\" align=\"center\" valign=\"middle\">是否经系统查询</td>
-                        <td width=\"114\" rowspan=\"2\" align=\"center\" valign=\"middle\">
-                            $file_data[queried]
-                        </td>
-                    </tr>
-                    <tr>
-                        <td height=\"50\" align=\"center\" valign=\"middle\">阶梯教室<br>（300人） </td>
-                        <td height=\"50\" colspan=\"4\" align=\"center\" valign=\"middle\">
-                            $file_data[ladderclassroom]
-                        </td>
-                    </tr>
-                    <tr>
-                        <td height=\"120\" align=\"center\" valign=\"middle\">活动内容<br>（主题， 目的， 流程， 安全负责人） </td>
-                        <td height=\"120\" colspan=\"7\" align=\"center\" valign=\"middle\">
-                            $file_data[activitycontent]
-                        </td>
-                    </tr>
-                    <tr>
-                        <td height=\"80\" align=\"center\" valign=\"middle\">有无商业赞助</td>
-                        <td height=\"80\" align=\"center\" valign=\"middle\">
-                            $file_data[commercial]
-                        </td>
-                        <td height=\"80\" align=\"center\" valign=\"middle\">赞助方名及赞助方式（如有） </td>
-                        <td height=\"80\" colspan=\"5\" align=\"center\" valign=\"middle\">
-                            $file_data[commercialpart]
-                        </td>
-                    </tr>
-                    <tr>
-                        <td height=\"50\" align=\"center\" valign=\"middle\">活动负责人</td>
-                        <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">
-                            $file_data[activitychargeperson]
-                        </td>
-                        <td width=\"91\" align=\"center\" valign=\"middle\">联系电话</td>
-                        <td height=\"50\" colspan=\"4\" align=\"center\" valign=\"middle\">
-                            $file_data[activityphone]
-                        </td>
-                    </tr>
-                    <tr>
-                        <td height=\"100\" align=\"center\" valign=\"middle\">社团意见</td>
-                        <td height=\"100\" colspan=\"2\" align=\"center\" valign=\"middle\">
-                            $file_data[associationcomment]
-                        </td>
-                        <td align=\"center\" valign=\"middle\">社联意见</td>
-                        <td height=\"100\" colspan=\"4\" align=\"center\" valign=\"middle\"><span class=\"disable-area\"></span></td>
-                    </tr>
-                    <tr>
-                        <td height=\"50\" align=\"center\" valign=\"middle\">社联经手人</td>
-                        <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\"><span class=\"disable-area\"></span></td>
-                        <td align=\"center\" valign=\"middle\">联系电话</td>
-                        <td height=\"50\" colspan=\"4\" align=\"center\" valign=\"middle\"><span class=\"disable-area\"></span></td>
-                    </tr>
-                    <tr>
-                        <td height=\"120\" align=\"center\" valign=\"middle\">共青团<br>华中科技大学<br>委员会意见 </td>
-                        <td height=\"120\" colspan=\"7\" align=\"center\" valign=\"middle\"><span class=\"disable-area\"></span></td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
+				$document->setValue('associationname',$file_data[associationname]);
+				$document->setValue('activityname',$file_data[activityname]);
+				$document->setValue('joinnumber',$file_data[joinnumber]);
+				$document->setValue('activitydate',$file_data[activitydate]);
+				$document->setValue('activitytime',$file_data[activitytime]);
+				$document->setValue('normalclassroom',$file_data[normalclassroom]);
+				$document->setValue('ladderclassroom',$file_data[ladderclassroom]);
+				$document->setValue('queried',$file_data[queried]);
+				$document->setValue('activitycontent',$file_data[activitycontent]);
+				$document->setValue('commercial',$file_data[commercial]);
+				$document->setValue('commercialpart',$file_data[commercialpart]);
+				$document->setValue('activitychargeperson',$file_data[activitychargeperson]);
+				$document->setValue('activityphone',$file_data[activityphone]);
+				$document->setValue('associationcomment',$file_data[associationcomment]);
 
-        </form>
-
-    </body>
-</html>
-			";
 			break;
 			case special:
 			$html = "
