@@ -50,19 +50,9 @@ class LoadController extends CommonController
 		switch($type){
 			case colorprinting:
 			$html = "
-			<!DOCTYPE html>
-<html lang=\"zh-CN\">
-    <head>
-        <meta charset=\"utf-8\">
-    </head>
-    <body>
-        <ol class=\"breadcrumb\">
-            <li><h4>彩喷悬挂申请</h4></li>
-        </ol>
-        <form id=\"applicationForm\" action=\"{:U('Material/Material/material_upload')}\" enctype=\"multipart/form-data\" method=\"POST\">
-            <input type=\"hidden\" name=\"action_type\" value=\"colorprinting\">
+        <ol class=\"breadcrumb\"><li><h4>彩喷悬挂申请</h4></li></ol>
             <div class=\"tableContainer\">
-                <table class=\"table-bordered table FillForm\" width=\"700\" border=\"0\">
+                <table class=\"table-bordered FillForm\" width=\"700\" border=\"0\">
                     <tbody>
                     <tr>
                         <td width=\"98\" height=\"50\" align=\"center\" valign=\"middle\" scope=\"col\">申请单位</td>
@@ -109,25 +99,12 @@ class LoadController extends CommonController
                     </tbody>
                 </table>
             </div>
-        </form>
 
-    </body>
-</html>
 			";
 			break;
 			case east4:
 			$html = "
-			<!DOCTYPE html>
-<html lang=\"zh-CN\">
-    <head>
-        <meta charset=\"utf-8\">
-    </head>
-    <body>
-        <ol class=\"breadcrumb\">
-            <li><h4>东四食堂三楼申请</h4></li>
-        </ol>
-        <form action=\"{:U('Material/Material/material_upload')}\" enctype=\"multipart/form-data\" method=\"POST\">
-            <input type=\"hidden\" name=\"action_type\" value=\"east4\">
+        <ol class=\"breadcrumb\"><li><h4>东四食堂三楼申请</h4></li></ol>
             <div class=\"tableContainer\">
                 <table width=\"700\" class=\"table-bordered FillForm\">
                     <tbody>
@@ -208,27 +185,11 @@ class LoadController extends CommonController
                     </tbody>
                 </table>
             </div>
-            
-        </form>
-
-    </body>
-</html>
 			";
 			break;
 			case materialapply:
 			$html = "
-			<!DOCTYPE html>
-<html lang=\"zh-CN\">
-<head>
-    <meta charset=\"UTF-8\">
-</head>
-<body>
-
-<ol class=\"breadcrumb\">
-    <li><h4>物资借用</h4></li>
-</ol>
-<form action=\"{:U('Material/Material/material_upload')}\" enctype=\"multipart/form-data\" method=\"POST\">
-    <input type=\"hidden\" name=\"action_type\" value=\"materialapply\">
+<ol class=\"breadcrumb\"><li><h4>物资借用</h4></li></ol>
     <div class=\"tableContainer\">
         <table class=\"table-bordered FillForm\" width=\"700px\">
     <tbody>
@@ -332,24 +293,11 @@ class LoadController extends CommonController
     </tbody>
 </table>
     </div>
-</form>
-</body>
-</html>
 			";
 			break;
 			case outdoor:
 			$html = "
-			<!DOCTYPE html>
-<html lang=\"zh-CN\">
-    <head>
-        <meta charset=\"utf-8\">
-    </head>
-    <body>
-        <ol class=\"breadcrumb\">
-            <li><h4>户外路演场地</h4></li>
-        </ol>
-        <form action=\"{:U('Material/Material/material_upload')}\" enctype=\"multipart/form-data\" method=\"POST\">
-            <input type=\"hidden\" name=\"action_type\" value=\"outdoor\">
+        <ol class=\"breadcrumb\"><li><h4>户外路演场地</h4></li></ol>
             <div class=\"tableContainer\">
                 <table width=\"700\" class=\"table-bordered FillForm\">
                     <tbody>
@@ -442,26 +390,11 @@ class LoadController extends CommonController
                     </tbody>
                 </table>
             </div>
-            
-        </form>
-
-    </body>
-</html>
 			";
 			break;
 			case sacenter:
 			$html = "
-			<!DOCTYPE html>
-<html lang=\"zh-CN\">
-    <head>
-        <meta charset=\"utf-8\">
-    </head>
-    <body>
-        <ol class=\"breadcrumb\">
-            <li><h4>大学生活动中心教室申请</h4></li>
-        </ol>
-        <form action=\"{:U('Material/Material/material_upload')}\" enctype=\"multipart/form-data\" method=\"POST\">
-            <input type=\"hidden\" name=\"action_type\" value=\"sacenter\">
+        <ol class=\"breadcrumb\"><li><h4>大学生活动中心教室申请</h4></li></ol>
             <div class=\"tableContainer\">
                 <table width=\"700\" class=\"table-bordered FillForm\">
                     <tbody>
@@ -552,24 +485,11 @@ class LoadController extends CommonController
                     </tbody>
                 </table>
             </div>
-
-        </form>
-
-    </body>
-</html>
 			";
 			break;
 			case special:
 			$html = "
-			<!DOCTYPE html>
-<html lang=\"zh-CN\">
-    <head>
-        <meta charset=\"utf-8\">
-    </head>
-    <body>
-        <ol class=\"breadcrumb\">
-            <li><h4>特殊场地申请</h4></li>
-        </ol>
+			<ol class=\"breadcrumb\"><li><h4>特殊场地申请</h4></li></ol>
         <form action=\"{:U('Material/Material/material_upload')}\" enctype=\"multipart/form-data\" method=\"POST\">
             <input type=\"hidden\" name=\"action_type\" value=\"special\">
             <div class=\"tableContainer\">
@@ -660,25 +580,11 @@ class LoadController extends CommonController
                     </tbody>
                 </table>
             </div>
-        </form>
-
-    </body>
-</html>
 			";
 			break;
 			case sports:
 			$html = "
-			<!DOCTYPE html>
-<html lang=\"zh-CN\">
-    <head>
-        <meta charset=\"utf-8\">
-    </head>
-    <body>
-        <ol class=\"breadcrumb\">
-            <li><h4>体育场馆使用申请</h4></li>
-        </ol>
-        <form action=\"{:U('Material/Material/material_upload')}\" enctype=\"multipart/form-data\" method=\"POST\">
-            <input type=\"hidden\" name=\"action_type\" value=\"sports\">
+			<ol class=\"breadcrumb\"><li><h4>体育场馆使用申请</h4></li></ol>
             <div class=\"tableContainer\">
                 <table width=\"700\" class=\"table-bordered FillForm\">
                     <tbody>
@@ -749,26 +655,11 @@ class LoadController extends CommonController
                     </tbody>
                 </table>
             </div>
-           
-        </form>
-
-    </body>
-</html>
 			";
 			break;
 			case teachingbuilding:
 			$html = "
-			<!DOCTYPE html>
-<html lang=\"zh-CN\">
-    <head>
-        <meta charset=\"utf-8\">
-    </head>
-    <body>
-        <ol class=\"breadcrumb\">
-            <li><h4>教学楼教室申请</h4></li>
-        </ol>
-        <form action=\"{:U('Material/Material/material_upload')}\" enctype=\"multipart/form-data\" method=\"POST\">
-            <input type=\"hidden\" name=\"action_type\" value=\"teachingbuilding\">
+        <ol class=\"breadcrumb\"><li><h4>教学楼教室申请</h4></li></ol>
             <div style=\"text-align: center\">
                 <h2>社团活动申请表</h2>
                 <h3>（教学楼专用）</h3>
@@ -966,18 +857,10 @@ class LoadController extends CommonController
                     </table>
                 </div>
             </div>
-
-        </form>
-    </body>
-</html>
 			";
 			break;
 		}
-		//$this->html=$html;
-		//$this->display();
-		//echo $html;
 
-		//Show into html
 		$this->show($html);
 	}
 	
@@ -1233,20 +1116,8 @@ class LoadController extends CommonController
 
 				break;
 		}
-		/*$this->start();
-		$wordname = $table.$ID.".doc";
-		//$this->preview();
-		echo $html;
-		$this->save($wordname); */
-		//$this->show('http://'.$_SERVER['HTTP_HOST'].__ROOT__.'/'.str_replace("\\","/",$docroot));
-		/*$sendDownload= new \PhpOffice\PhpWord\PhpWord('http://'.$_SERVER['HTTP_HOST'].__ROOT__.'/'.str_replace("\\","/",$docroot));
-		header("Content-type: application/vnd.ms-word");
-		header("Content-Disposition:attachment;filename=".$fileName);
-		header('Cache-Control: max-age=0');
-		$objCreate=\PhpOffice\PhpWord\IOFactory::createWriter($sendDownload , 'Word2007');
-		$objCreate->save("php://output");
-		unlink('http://'.$_SERVER['HTTP_HOST'].__ROOT__.'/'.str_replace("\\","/",$docroot));*/
-		// SaveFileToServer
+
+		//Save DOCX to server
 		$document->saveAs($docroot);
 
 		$fileurl='http://'.$_SERVER['HTTP_HOST'].__ROOT__.'/'.str_replace("\\","/",$docroot);
@@ -1271,8 +1142,6 @@ class LoadController extends CommonController
 		//$this->show($fileurl);
 		ob_flush();//每次执行前刷新缓存
 		flush();
-		
-       // header("Content-Disposition:attachment;filename='$type-$ID.doc'");
        
 	}
 }

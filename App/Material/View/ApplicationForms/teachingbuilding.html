@@ -271,8 +271,21 @@
             <div class="form-group">
                 <label for="" class="col-sm-2 control-label">策划提交<br>（可选）</label>
                 <div class="col-sm-10">
-                    <input type="file" name="file" class="btn btn-success" id="inputUploadFile">
+                    <!--//文件选择组合框-->
+                    <div class="input-group file-selection-container">
+                        <div class="file-selection-filePath">
+
+                            <div id="file-location" class="form-control">选择文件...</div>
+                        </div>
+                        <div class="file-selection-btn-container input-group-btn">
+                            <button class="file-selection-btn-info btn btn-success"><span class="glyphicon glyphicon glyphicon-open" aria-hidden="true"></span> 选择文件</button>
+
+                            <input type="file" name="file" class="btn file-selection-btn" id="inputUploadFile">
+                        </div>
+
+                    </div><!-- /input-group -->
                     <input type="hidden" name="ifUploadFile" id="ifUploadFile" value="none">
+
                 </div>
             </div>
             <div class="row">
