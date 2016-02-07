@@ -1964,11 +1964,26 @@ class LoadController extends CommonController
 		$objCreate=\PhpOffice\PhpWord\IOFactory::createWriter($sendDownload , 'Word2007');
 		$objCreate->save("php://output");
 		unlink('http://'.$_SERVER['HTTP_HOST'].__ROOT__.'/'.str_replace("\\","/",$docroot));*/
+
 		$fileurl='http://'.$_SERVER['HTTP_HOST'].__ROOT__.'/'.str_replace("\\","/",$docroot);
+
+		// 设置下载文件名
+		$filenameElem=array_merge(range(0, 9), range('a', 'z'), range('A', 'Z'));
+		$dlFilename="";
+		$arr_len = count($filenameElem);
+		for ($i = 0; $i < 6; $i++)
+		{
+			$rand = mt_rand(0, $arr_len-1);
+			$dlFilename.=$filenameElem[$rand];
+		}
+		$dlFilename=$file_data[username]."-".$type.$dlFilename.".docx";
+
  		header("Content-type: application/vnd.ms-word");
-		header("Content-Disposition:attachment;filename=".$fileName);
+		header("Content-Disposition:attachment;filename=".$dlFilename);
 		header('Content-Transfer-Encodeing: binary');
 		readfile($fileurl);
+		//删除缓存文件
+		unlink($docroot);
 		//$this->show($fileurl);
 		ob_flush();//每次执行前刷新缓存
 		flush();
