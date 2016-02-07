@@ -1189,95 +1189,19 @@ class LoadController extends CommonController
 			";
 			break;
 			case sports:
-			$html = "
-			<!DOCTYPE html>
-<html lang=\"zh-CN\">
-    <head>
-        <meta charset=\"utf-8\">
-    </head>
-    <body>
-        <ol class=\"breadcrumb\">
-            <li><h4>体育场馆使用申请</h4></li>
-        </ol>
-        <form action=\"{:U('Material/Material/material_upload')}\" enctype=\"multipart/form-data\" method=\"POST\">
-            <input type=\"hidden\" name=\"action_type\" value=\"sports\">
-            <div class=\"tableContainer\">
-                <table width=\"700\" class=\"table-bordered FillForm\">
-                    <tbody>
-                    <tr>
-                        <td width=\"88\" height=\"50\" align=\"center\" valign=\"middle\">申请单位</td>
-                        <td height=\"50\" colspan=\"7\" align=\"center\" valign=\"middle\">
-                            $file_data[applyname]
-                        </td>
-                    </tr>
-                    <tr>
-                        <td rowspan=\"2\" align=\"center\" valign=\"middle\">经办人信息</td>
-                        <td width=\"62\" height=\"35\" align=\"center\" valign=\"middle\">姓名</td>
-                        <td height=\"35\" colspan=\"3\" align=\"center\" valign=\"middle\">
-                            $file_data[operatorname]
-                        </td>
-                        <td width=\"111\" height=\"35\" align=\"center\" valign=\"middle\">联系方式</td>
-                        <td height=\"35\" colspan=\"2\" align=\"center\" valign=\"middle\">
-                            $file_data[operatorphone]
-                        </td>
-                    </tr>
-                    <tr>
-                        <td height=\"35\" align=\"center\" valign=\"middle\">学号</td>
-                        <td height=\"35\" colspan=\"3\" align=\"center\" valign=\"middle\">
-                            $file_data[operatorid]
-                        </td>
-                        <td height=\"35\" align=\"center\" valign=\"middle\">所在院（系）</td>
-                        <td height=\"35\" colspan=\"2\" align=\"center\" valign=\"middle\">
-                            $file_data[operatordepartment]
-                        </td>
-                    </tr>
-                    <tr>
-                        <td height=\"120\" align=\"center\" valign=\"middle\">活动内容</td>
-                        <td height=\"120\" colspan=\"7\" align=\"center\" valign=\"middle\">
-                            $file_data[activitycontent]
-                        </td>
-                    </tr>
-                    <tr>
-                        <td height=\"50\" align=\"center\" valign=\"middle\">活动日期</td>
-                        <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\" id=\"ActivityDateArea\">
-                            $file_data[activitydate]
-                        </td>
-                        <td width=\"76\" height=\"50\" align=\"center\" valign=\"middle\">使用时间</td>
-                        <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">
-                            $file_data[usetime]
-                        </td>
-                        <td width=\"74\" height=\"50\" align=\"center\" valign=\"middle\">使用地点</td>
-                        <td width=\"153\" height=\"50\" align=\"center\" valign=\"middle\">
-                            $file_data[uselocation]
-                        </td>
-                    </tr>
-                    <tr>
-                        <td height=\"100\" align=\"center\" valign=\"middle\">备注</td>
-                        <td height=\"100\" colspan=\"7\" align=\"center\" valign=\"middle\">
-                            $file_data[remark]
-                        </td>
-                    </tr>
-                    <tr>
-                        <td height=\"150\" colspan=\"8\" align=\"left\" valign=\"top\">
-                            <p>院（系）或部门负责人意见</p><br><br>
-                            <p style=\"text-align:right\">院（系）或部门公章</p>
-                            <p style=\"text-align:right\">年&nbsp;&nbsp;&nbsp;&nbsp;月&nbsp;&nbsp;&nbsp;&nbsp;日 </p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td height=\"150\" colspan=\"5\" align=\"right\" valign=\"bottom\"> 保卫处审批意见(盖章)<br>年&nbsp;&nbsp;&nbsp;&nbsp;月&nbsp;&nbsp;&nbsp;&nbsp;日 </td>
-                        <td height=\"150\" colspan=\"3\" align=\"right\" valign=\"bottom\"> 体育场管中心审批意见(盖章)<br>年&nbsp;&nbsp;&nbsp;&nbsp;月&nbsp;&nbsp;&nbsp;&nbsp;日 </td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-           
-        </form>
+				$document->setValue('applyname',$file_data[applyname]);
+				$document->setValue('operatorname',$file_data[operatorname]);
+				$document->setValue('operatorphone',$file_data[operatorphone]);
+				$document->setValue('operatorid',$file_data[operatorid]);
+				$document->setValue('operatordepartment',$file_data[operatordepartment]);
+				$document->setValue('activitycontent',$file_data[activitycontent]);
+				$document->setValue('activitydate',$file_data[activitydate]);
+				$document->setValue('usetime',$file_data[usetime]);
+				$document->setValue('uselocation',$file_data[uselocation]);
+				$document->setValue('remark',$file_data[remark]);
 
-    </body>
-</html>
-			";
-			break;
+				break;
+
 			case teachingbuilding:
 			$html = "
 			<!DOCTYPE html>
