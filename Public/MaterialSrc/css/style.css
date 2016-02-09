@@ -1,0 +1,108 @@
+@media screen and (min-width: 768px) {
+    .Slidelist {
+        width: 200px;
+        float: left;
+    }
+}
+@media screen and (min-width: 768px) {
+    .TableArea {
+        width: 520px;
+        float: left;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .TableArea {
+        width: 740px;
+        float: left;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .TableArea {
+        width: 940px;
+        float: left;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .Slidelist {
+        background-color: #efefef;
+        float:none;
+    }
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.Slidelist {
+    padding: 5px 10px;
+}
+
+.TableArea {
+    float: left;
+    padding: 5px;
+}
+
+.ButtonToggle{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    display: inline-block;
+}
+.ButtonToggle span {
+    width: 20px;
+    height: 3px;
+    left: 0px;
+    position: absolute;
+    background-color: #666666;
+    overflow: hidden;
+}
+.ButtonToggle span:nth-child(2) {
+    top: 8px;
+}
+.ButtonToggle span:nth-child(3) {
+    top: 16px;
+}
+
+.FormSwitcher{
+    padding: 2px 5px;
+    display: block;
+    font-size: 16px;
+    border-radius: 3px;
+}
+
+.FormSwitcher.active {
+    background-color: #03A9F4;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.FormSwitcher:hover {
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #90CAF9;
+}
+
+
+/* 申请状态未审核、已通过、未通过 */
+.ApproveState-Rejected {
+    color: #ff6f6f;
+    font-weight: 800;
+}
+.ApproveState-Pass {
+    color: #00b026;
+    font-weight: 600;
+}
+.ApproveState-Wait {
+    color: #000000;
+}
+
+.form-control {
+    border-radius: 0px;
+}
+
+/* footer */
+html,body {
+    height: 100%;
+}

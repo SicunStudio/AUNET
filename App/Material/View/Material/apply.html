@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>资源申请系统</title>
+    <script src="__PUBLIC__/MaterialSrc/js/generateDateSelector.js"></script>
+    <script src="__PUBLIC__/MaterialSrc/js/switchForms.js"></script>
+    <link rel="stylesheet" href="__PUBLIC__/MaterialSrc/css/table.css">
+    <script src="__PUBLIC__/MaterialSrc/js/check_general.js"></script>
+    <script src="__PUBLIC__/MaterialSrc/js/general.js"></script>
+    <style>
+
+        .alert {
+            display: none;
+        }
+
+    </style>
+
+</head>
+<body>
+<div class="container" style="overflow: hidden">
+    <div data-role="SlideMenu" class="Slidelist">
+        <div class="row SlideMenu-ShowOnlyAtSmallScreen" style="padding-left: 15px; overflow: hidden">
+            <h4 style="float: left">资源申请系统</h4>
+            <span class="btn btn-default btn-sm" style="float: right; margin-right: 10px;" data-role="SlideMenuHide">返回</span>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title" >物资借用</h3>
+            </div>
+            <div class="panel-body">
+                <a class="FormSwitcher" data-formname="materialapply">物资借用</a>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">场地借用</h3>
+            </div>
+            <div class="panel-body">
+                <a class="FormSwitcher" data-formname="colorprinting">彩喷悬挂</a>
+                <a class="FormSwitcher" data-formname="east4">东四三楼</a>
+                <a class="FormSwitcher" data-formname="sports">体育场馆</a>
+                <a class="FormSwitcher" data-formname="special">特殊场地</a>
+                <a class="FormSwitcher" data-formname="teachingbuilding">教学楼教室</a>
+                <a class="FormSwitcher" data-formname="outdoor">路演场地</a>
+                <a class="FormSwitcher" data-formname="sacenter">大活教室</a>
+
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">状态查询</h3>
+            </div>
+            <div class="panel-body">
+                <a class="FormSwitcher" data-formname="apply_state">状态查询</a>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">申请流程</h3>
+            </div>
+            <div class="panel-body">
+                <a class="FormSwitcher" data-formname="apply_procedure">场地物资申请流程</a>
+            </div>
+        </div>
+
+    </div>
+    <div data-role="MainContent" class="TableArea" id="TableArea">
+        <!-- 页头警告框 -->
+        <div class="alert alert-success" role="alert">...</div>
+        <div class="alert alert-info" role="alert">...</div>
+        <div class="alert alert-warning" role="alert">...</div>
+        <div class="alert alert-danger" role="alert" id="alert-danger">...</div>
+
+        <div id="FormArea">
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>资源申请系统 - 审批</title>
+
+</head>
+<body>
+<div class="container" id="admin-table-container">
+
+</div>
+<script src="__PUBLIC__/MaterialSrc/js/admin_table_switch_tab.js"></script>
+<script>
+    $("#NavBarTitle").text("资源申请系统 - 审批申请");
+
+    $("#admin-table-container").load("admin_table.html",function(response,status,xhr){
+        if(status!="success"){
+            $("#admin-table-container").html("<div style='width: 100px; height: 100px; border-radius: 50px; border: solid 5px #505050; line-height: 80px; font-size: 56px; text-align: center;display: inline-block'>!</div><h2>Oops，好像出了一些问题</h2><h4>暂时无法加载，可能是网络原因，请检查你的网络连接</h4><h4>你可以稍后再试，也可以联系思存工作室</h4>");
+        }
+    });
+</script>
+</body>
+</html>

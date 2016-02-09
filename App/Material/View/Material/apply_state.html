@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ol class="breadcrumb">
+    <li><h4>申请状态查询</h4></li>
+</ol>
+<div class="row" style="overflow: auto">
+    <div style="margin: 10px auto; width: 400px">
+        <ul class="nav nav-pills">
+            <li role="presentation" class="active"><a href="javascript:void(0)" data-toggle="pill" class="switchTab" data-tabtype="未审批">未审批 <span class="badge" id="TobeApproveNum">0</span></a></li>
+            <li role="presentation"><a href="javascript:void(0)" data-toggle="pill" class="switchTab" data-tabtype="已通过">已通过</a></li>
+            <li role="presentation"><a href="javascript:void(0)" data-toggle="pill" class="switchTab" data-tabtype="未通过">未通过</a></li>
+            <li role="presentation"><a href="javascript:void(0)" data-toggle="pill" class="switchTab" data-tabtype="已审批">已审批</a></li>
+            <li role="presentation"><a href="javascript:void(0)" data-toggle="pill" class="switchTab" data-tabtype="所有">所有</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="table-responsive">
+    <table class="table-bordered table" width="700px">
+        <tr>
+            <th width="100px">提交时间</th>
+            <th width="50px">审核状态</th>
+            <th width="150px">种类</th>
+            <th width="100px">审批时间</th>
+            <th width="300px">审核意见</th>
+        </tr>
+
+        <foreach name="list" item="v" key="lm">
+            <foreach name="v[1]" item="u">
+                <tr class="list-container" data-action-type="" data-approvestate="{$u.approvestate}">
+                    <td>{$u.createtime}</td>
+                    <td><span data-approvestate="{$u.approvestate}">{$u.approvestate}</span></td>
+                    <td>{$v[0]}</td>
+                    <!--<td><a href="{:U('Material/Download/' . $lm,array('id'=>$u['id']))}">下载</a></td>-->
+                    <td>{$u.approvetime}</td>
+                    <td>{$u.approvenote}</td>
+                </tr>
+            </foreach>
+        </foreach>
+    </table>
+</div>
+<script src="__PUBLIC__/MaterialSrc/js/admin_table.js"></script>
+<script src="__PUBLIC__/MaterialSrc/js/admin_table_switch_tab.js"></script>
+<script>
+    //为审批状态文字设置颜色
+    $(document).ready(function(){
+        $("span[data-approvestate='未通过']").addClass("ApproveState-Rejected");
+        $("span[data-approvestate='已通过']").addClass("ApproveState-Pass");
+        $("span[data-approvestate='未审核']").addClass("ApproveState-Wait");
+    });
+</script>
+</body>
+</html>
