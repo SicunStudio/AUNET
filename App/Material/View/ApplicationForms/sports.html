@@ -13,26 +13,28 @@
                 <div class="form-group">
                     <label for="" class="col-sm-2 control-label">申请单位</label>
                     <div class="col-sm-10">
-                        <input type="text" name="ApplyName" class="form-control" data-check-null="notnull" data-check-notice="申请单位">
+                        <input type="text" name="ApplyName" class="form-control" data-check-null="notnull" maxlength="50" data-check-notice="申请单位">
                     </div>
                 </div>
 
                 <div class="form-group" style="margin-left: 10px"><h3>经办人信息</h3></div>
                 <div class="form-group"><label for="" class="col-sm-2 control-label">姓名</label>
                     <div class="col-sm-10">
-                        <input type="text" name="OperatorName" class="form-control" data-check-null="notnull" data-check-notice="经办人姓名">
+                        <input type="text" maxlength="25" name="OperatorName" class="form-control" data-check-null="notnull" data-check-notice="经办人姓名">
                     </div>
                 </div>
                 <div class="form-group"><label for="" class="col-sm-2 control-label">联系方式</label>
                     <div class="col-sm-10">
-                        <input type="text" name="OperatorPhone" class="form-control" data-check-null="notnull" data-check-notice="经办人联系方式">
+                        <input type="text" maxlength="20" name="OperatorPhone" class="form-control" data-check-null="notnull" data-check-notice="经办人联系方式">
                     </div>
                 </div>
                 <div class="form-group"><label for="" class="col-sm-2 control-label">学号</label>
-                    <div class="col-sm-10"><input type="text" name="OperatorID" class="form-control" data-check-null="notnull"></div>
+                    <div class="col-sm-10">
+                        <input type="text" maxlength="20" name="OperatorID" class="form-control" data-check-null="notnull">
+                    </div>
                 </div>
                 <div class="form-group"><label for="" class="col-sm-2 control-label">所在院（系）</label>
-                    <div class="col-sm-10"><input type="text" name="OperatorDepartment" class="form-control" data-check-null="notnull"></div>
+                    <div class="col-sm-10"><input type="text" maxlength="50" name="OperatorDepartment" class="form-control" data-check-null="notnull"></div>
                 </div>
                 <p>&nbsp;</p>
                 <div class="form-group"><label for="" class="col-sm-2 control-label">活动内容</label>
@@ -48,16 +50,14 @@
                     </div>
                 </div>
                 <div class="form-group"><label for="" class="col-sm-2 control-label">使用时间</label>
-                    <div class="col-sm-10"><input type="text" name="UseTime" class="form-control" data-check-null="notnull" data-check-notice="使用时间"></div>
+                    <div class="col-sm-10"><input type="text" name="UseTime" maxlength="50" class="form-control" data-check-null="notnull" data-check-notice="使用时间"></div>
                 </div>
                 <div class="form-group"><label for="" class="col-sm-2 control-label">使用地点</label>
-                    <div class="col-sm-10"><input type="text" name="UseLocation" class="form-control" data-check-null="notnull" data-check-notice="使用地点"></div>
+                    <div class="col-sm-10"><input type="text" name="UseLocation" class="form-control" data-check-null="notnull" maxlength="100" data-check-notice="使用地点"></div>
                 </div>
                 <div class="form-group"><label for="" class="col-sm-2 control-label">备注</label>
                     <div class="col-sm-10"><textarea style="height: 150px;" name="Remark" class="form-control h100"></textarea></div>
                 </div>
-
-
             </div>
             <div class="form-group">
                 <label for="" class="col-sm-2 control-label">策划提交<br>（可选）</label>

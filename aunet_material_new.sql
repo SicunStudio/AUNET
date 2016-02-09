@@ -21,12 +21,12 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `aunet_material_colorprinting` (
-  `AssociationName` varchar(100) NOT NULL,
+  `AssociationName` varchar(200) NOT NULL,
   `Name` varchar(50) NOT NULL,
   `Phone` varchar(20) NOT NULL,
   `ActivityContent` text,
   `ActivityDate` varchar(50) DEFAULT NULL,
-  `UseTime` varchar(50) DEFAULT NULL,
+  `UseTime` varchar(100) DEFAULT NULL,
   `Location` varchar(200) DEFAULT NULL,
   `Commercial` varchar(10) DEFAULT NULL,
   `Remark` text,
@@ -46,7 +46,7 @@ CREATE TABLE IF NOT EXISTS `aunet_material_colorprinting` (
 --
 
 CREATE TABLE IF NOT EXISTS `aunet_material_east4` (
-  `AssociationName` varchar(100) NOT NULL,
+  `AssociationName` varchar(200) NOT NULL,
   `ActivityName` varchar(200) NOT NULL,
   `JoinNumber` varchar(10) NOT NULL,
   `ActivityDate` varchar(50) NOT NULL,
@@ -74,7 +74,7 @@ CREATE TABLE IF NOT EXISTS `aunet_material_east4` (
 --
 
 CREATE TABLE IF NOT EXISTS `aunet_material_materialapply` (
-  `AssociationName` varchar(100) NOT NULL,
+  `AssociationName` varchar(200) NOT NULL,
   `ActivityName` varchar(200) NOT NULL,
   `ActivityLocation` varchar(200) NOT NULL,
   `BorrowTime` varchar(50) NOT NULL,
@@ -106,8 +106,8 @@ CREATE TABLE IF NOT EXISTS `aunet_material_materialapply` (
 --
 
 CREATE TABLE IF NOT EXISTS `aunet_material_outdoor` (
-  `AssociationName` varchar(100) NOT NULL,
-  `ActivityName` varchar(10) NOT NULL,
+  `AssociationName` varchar(200) NOT NULL,
+  `ActivityName` varchar(200) NOT NULL,
   `JoinNumber` varchar(10) NOT NULL,
   `ActivityDate` varchar(10) NOT NULL,
   `ActivityTime` varchar(10) NOT NULL,
@@ -134,7 +134,7 @@ CREATE TABLE IF NOT EXISTS `aunet_material_outdoor` (
 --
 
 CREATE TABLE IF NOT EXISTS `aunet_material_plan` (
-  `AssociationName` varchar(100) NOT NULL,
+  `AssociationName` varchar(200) NOT NULL,
   `ActivityName` varchar(200) NOT NULL,
   `ApproveState` varchar(8) NOT NULL DEFAULT '未审批',
   `ApproveNote` text,
@@ -150,7 +150,7 @@ CREATE TABLE IF NOT EXISTS `aunet_material_plan` (
 --
 
 CREATE TABLE IF NOT EXISTS `aunet_material_sacenter` (
-  `AssociationName` varchar(100) NOT NULL,
+  `AssociationName` varchar(200) NOT NULL,
   `ActivityName` varchar(200) NOT NULL,
   `JoinNumber` varchar(10) NOT NULL,
   `ActivityDate` varchar(20) NOT NULL,
@@ -180,7 +180,7 @@ CREATE TABLE IF NOT EXISTS `aunet_material_sacenter` (
 --
 
 CREATE TABLE IF NOT EXISTS `aunet_material_special` (
-  `AssociationName` varchar(100) NOT NULL,
+  `AssociationName` varchar(200) NOT NULL,
   `ActivityName` varchar(200) NOT NULL,
   `JoinNumber` varchar(10) DEFAULT NULL,
   `ActivityDate` varchar(20) DEFAULT NULL,

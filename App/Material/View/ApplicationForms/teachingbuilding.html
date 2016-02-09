@@ -9,9 +9,6 @@
                 $("#ClassTime").val(str);
             });
         </script>
-        <style>
-
-        </style>
     </head>
 
     <body>
@@ -29,13 +26,13 @@
                 <div class="form-group">
                     <label for="" class="col-sm-2 control-label">社团名称</label>
                     <div class="col-sm-10">
-                        <input type="text" name="AssociationNameA" class="form-control" data-check-notice="社团名称" data-check-null="notnull" >
+                        <input type="text" maxlength="50" name="AssociationNameA" class="form-control" data-check-notice="社团名称" data-check-null="notnull" >
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="" class="col-sm-2 control-label">活动名称</label>
                     <div class="col-sm-10">
-                        <input type="text" name="ActivityName" class="form-control" data-check-notice="活动名称" data-check-null="notnull" >
+                        <input type="text" maxlength="100" name="ActivityName" class="form-control" data-check-notice="活动名称" data-check-null="notnull" >
                     </div>
                 </div>
                 <div class="form-group">
@@ -51,7 +48,7 @@
                 <div class="form-group">
                     <label for="" class="col-sm-2 control-label">活动地点</label>
                     <div class="col-sm-10">
-                        <input type="text" name="ActivityLocation" class="form-control" data-check-notice="活动地点" data-check-null="notnull" >
+                        <input type="text" maxlength="100" name="ActivityLocation" class="form-control" data-check-notice="活动地点" data-check-null="notnull" >
                     </div>
                 </div>
                 <div class="form-group">
@@ -79,19 +76,19 @@
                 <div class="form-group">
                     <label for="" class="col-sm-2 control-label">院（系）名称</label>
                     <div class="col-sm-10">
-                        <input type="text" name="AssociationNameB" data-check-notice="院（系）名称" data-check-null="notnull" placeholder="请填写协会名称" class="form-control">
+                        <input type="text" maxlength="50" name="AssociationNameB" data-check-notice="院（系）名称" data-check-null="notnull" placeholder="请填写协会名称" class="form-control">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="" class="col-sm-2 control-label">教室容量</label>
                     <div class="col-sm-10">
-                        <input type="text" name="ClassroomCapacity" data-check-notice="教室容量" data-check-null="notnull" class="form-control " data-check-type="number" style="display: inline-block; width: 150px;">&nbsp;<span>人</span>
+                        <input type="text" name="ClassroomCapacity" data-check-notice="教室容量" data-check-null="notnull" class="form-control" maxlength="10" data-check-type="number" style="display: inline-block; width: 150px;">&nbsp;<span>人</span>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="" class="col-sm-2 control-label">申请人姓名</label>
                     <div class="col-sm-6">
-                        <input type="text" name="ApplyerName" data-check-notice="申请人姓名" data-check-null="notnull" class="form-control" style="display: inline-block;">
+                        <input type="text" name="ApplyerName" maxlength="25" data-check-notice="申请人姓名" data-check-null="notnull" class="form-control" style="display: inline-block;">
                     </div>
                     <div class="col-sm-4">
                         <select name="ApplyerAttr" class="form-control" style="display: inline-block;">
@@ -120,13 +117,13 @@
                 <div class="form-group">
                     <label for="" class="col-sm-2 control-label">办公电话号码</label>
                     <div class="col-sm-10">
-                        <input type="text" data-check-notice="办公电话号码" name="OfficePhone" class="form-control">
+                        <input type="text" data-check-notice="办公电话号码" maxlength="20" name="OfficePhone" class="form-control">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="" class="col-sm-2 control-label">手机号码</label>
                     <div class="col-sm-10">
-                        <input type="text" data-check-notice="手机号码" name="MobilePhone" class="form-control">
+                        <input type="text" data-check-notice="手机号码" maxlength="20" name="MobilePhone" class="form-control">
                     </div>
                 </div>
                 <p>&nbsp;</p>
@@ -170,7 +167,7 @@
                 <div class="form-group">
                     <label for="" class="col-sm-2 control-label">周次</label>
                     <div class="col-sm-2">
-                        <input type="text" name="Week" class="form-control" data-check-notice="周次" data-check-type="number" data-check-null="notnull">
+                        <input type="text" name="Week" class="form-control" maxlength="4" data-check-notice="周次" data-check-type="number" data-check-null="notnull">
                     </div>
                     <label for="" class="col-sm-2 control-label">星期</label>
                     <div class="col-sm-2">
@@ -230,15 +227,15 @@
                 <div class="form-group">
                     <label for="" class="col-sm-2 control-label">主持人姓名</label>
                     <div class="col-sm-3">
-                        <input type="text" name="HostName" class="form-control">
+                        <input type="text" name="HostName" maxlength="25" class="form-control">
                     </div>
                     <label for="" class="col-sm-1 control-label">单位</label>
                     <div class="col-sm-2">
-                        <input type="text" name="HostCompany" class="form-control">
+                        <input type="text" name="HostCompany" maxlength="50" class="form-control">
                     </div>
                     <label for="" class="col-sm-2 control-label">职务（职称）</label>
                     <div class="col-sm-2">
-                        <input type="text" name="HostPost" class="form-control">
+                        <input type="text" name="HostPost" maxlength="50" class="form-control">
                     </div>
                 </div>
 
@@ -255,15 +252,15 @@
                 <div class="form-group">
                     <label for="" class="col-sm-2 control-label">授课（讲座）姓名</label>
                     <div class="col-sm-3">
-                        <input type="text" name="SpeakerName" class="form-control">
+                        <input type="text" name="SpeakerName" maxlength="25" class="form-control">
                     </div>
                     <label for="" class="col-sm-1 control-label">单位</label>
                     <div class="col-sm-2">
-                        <input type="text" name="SpeakerCompany" class="form-control">
+                        <input type="text" name="SpeakerCompany" maxlength="50" class="form-control">
                     </div>
                     <label for="" class="col-sm-2 control-label">职务（职称）</label>
                     <div class="col-sm-2">
-                        <input type="text" name="SpeakerPost" class="form-control">
+                        <input type="text" name="SpeakerPost" maxlength="50" class="form-control">
                     </div>
                 </div>
 
