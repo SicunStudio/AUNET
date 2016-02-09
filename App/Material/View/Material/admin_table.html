@@ -27,7 +27,7 @@
 
                             <div class="btn-group" role="group" aria-label="...">
                                 <input type="submit" value="下载表格" class="btn btn-success">
-                                <a href="" class="btn btn-warning modal-input-storeurl">下载策划</a>
+                                <a href="__ROOT__" id="modal-storeurl-link" class="btn btn-warning modal-input-storeurl">下载策划</a>
                             </div>
                         </form>
                     </div>
@@ -116,11 +116,11 @@
                     </div>
                     <div class="col-sm-2">
                         <div class="Applylist-Approve">
-                            <form action="{:U('Material/Load/downloadword')}" enctype="multipart/form-data" method="POST">
-                                <input type="hidden" name="action_type" value="{$v[0]}">
-                                <input type="hidden" name="ID" value="{$u.id}">
-                            </form>
-                            <button class="btn btn-info btn-approve" data-toggle="modal" data-action-target="{:U('Material/Load/preview')}" data-target="#modalPreview" data-action-type="{$v[0]}" data-id="{$u.id}" data-username="{$u.username}" data-storeurl="{$u.storeurl}">审批</button>
+                            <!--<form action="{:U('Material/Load/downloadword')}" enctype="multipart/form-data" method="POST">-->
+                                <!--<input type="hidden" name="action_type" value="{$v[0]}">-->
+                                <!--<input type="hidden" name="ID" value="{$u.id}">-->
+                            <!--</form>-->
+                            <button class="btn btn-info btn-approve" data-toggle="modal" data-action-target="{:U('Material/Load/preview')}" data-target="#modalPreview" data-action-type="{$v[0]}" data-id="{$u.id}" data-username="{$u.username}" data-storeurl="__ROOT__{$u.storeurl}">审批</button>
                         </div>
 
                         <div class="Applylist-Download">
@@ -141,7 +141,7 @@
                                             <input type="hidden" name="ID" value="{$u.id}">
                                         </form>
                                     </li>
-                                    <li><a href="__ROOT__{$u.storeurl}">策划</a></li>
+                                    <li><a class="Applylist-downloadplan" href="__ROOT__{$u.storeurl}">策划</a></li>
                                 </ul>
 
                                 </div>

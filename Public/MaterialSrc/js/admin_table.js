@@ -16,13 +16,26 @@ $(document).ready(function(){
     $(".list-container[data-approvestate!='未审批'] .Applylist-Approve button").text("更改审批");
     $(".list-container[data-approvestate!='未审批'] .Applylist-Approve button").removeClass("btn-info");
     $(".list-container[data-approvestate!='未审批'] .Applylist-Approve button").addClass("btn-default");
-});
 
+    //将空下载策划链接禁用
+    $(".Applylist-downloadplan").each(function(){
+        if($(this).attr("href")==$("#modal-storeurl-link").attr("href")){
+            $(this).attr("href","javascript:void(0)");
+        }
+    });
+    $(".btn-approve").each(function(){
+        if($(this).attr("data-storeurl")==$("#modal-storeurl-link").attr("href")){
+            $(this).attr("data-storeurl","javascript:void(0)");
+        }
+    });
+});
+// 审批是项目列表 点击下载表格
 $(document).on("click",".download-table",function(){
     var dom=$(this);
     dom.next().submit();
 });
 
+// 关闭审批模态框后清理内容
 $('#modalPreview').on("hidden.bs.modal",function(e){
     $("#modalPreview-UserName").text("---");
     $("#modalPreview-TableContainer").html("&nbsp;");
@@ -30,13 +43,15 @@ $('#modalPreview').on("hidden.bs.modal",function(e){
     $("#modalPreview-ApproveNote").val("");
 });
 
+// 点击打开审批模态框
 $(document).on("click",".btn-approve", function() {
     var dom=$(this);
     $("#modalPreview-UserName").text(dom.attr("data-username"));
     $(".modal-input-UserName").val(dom.attr("data-username"));
     $(".modal-input-ID").val(dom.attr("data-id"));
     $(".modal-input-action-type").val(dom.attr("data-action-type"));
-    $(".modal-input-storeurl").val(dom.attr("data-storeurl"));
+
+    $(".modal-input-storeurl").attr("href",dom.attr("data-storeurl"));
     $.post(dom.attr("data-action-target"),
         {
             ID:dom.attr("data-id"),
