@@ -7,125 +7,153 @@
         <ol class="breadcrumb">
             <li><h4>大学生活动中心教室申请</h4></li>
         </ol>
-        <form action="{:U('Material/Material/material_upload')}" enctype="multipart/form-data" method="POST">
+        <form action="{:U('Material/Material/material_upload')}" class="form-horizontal" enctype="multipart/form-data" method="POST">
             <input type="hidden" name="action_type" value="sacenter">
-            <div class="tableContainer">
-                <table width="700" class="table-bordered FillForm">
-                    <tbody>
-                    <tr>
-                        <td width="104" height="50" align="center" valign="middle">协会名称</td>
-                        <td width="122" height="50" align="center" valign="middle">
-                            <input type="text" name="AssociationName" class="inputArea h50" data-check-null="notnull">
-                        </td>
-                        <td width="89" height="50" align="center" valign="middle">活动名称</td>
-                        <td height="50" colspan="2" align="center" valign="middle">
-                            <input type="text" name="ActivityName" class="inputArea h50" data-check-null="notnull">
-                        </td>
-                        <td width="112" height="50" align="center" valign="middle">参与人数</td>
-                        <td height="50" colspan="2" align="center" valign="middle">
-                            <input type="text" name="JoinNumber" class="inputArea h50" data-check-null="notnull">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td height="50" align="center" valign="middle">活动日期</td>
-                        <td height="50" align="center" valign="middle" id="ActivityDateArea">
-                            <input type="text" name="ActivityDate" class="inputArea h50" data-check-null="notnull">
-                            <script>
-                                var mydate=new Date();
-                                $("#ActivityDateArea").html(generateDateSelector(mydate.getFullYear()+1,mydate.getFullYear(),true,true,"ActivityDate","ActivityDateArea_DateInput","YY年MM月DD日","adt","","","data-check-notice='活动日期' data-check-null='notnull'"));
-                            </script>
-                        </td>
-                        <td height="50" align="center" valign="middle">活动时间</td>
-                        <td height="50" colspan="5" align="center" valign="middle">
-                            <select name="ActivityTime" class="form-control">
-                                <option value="上午" selected>上午</option>
-                                <option value="下午">下午</option>
-                                <option value="晚上">晚上</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td height="50" align="center" valign="middle">普通教室<br>（50人） </td>
-                        <td height="50" colspan="4" align="center" valign="middle">
-                            <select name="NormalClassroom" id="" class="form-control">
-                                <option value="" selected>-</option>
-                                <option value="302">302</option>
-                                <option value="303">303</option>
-                                <option value="304">304</option>
-                                <option value="603">603</option>
-                            </select>
+            <div class="FillForm">
+                        <div class="form-group">
+                            <label for="" class="col-sm-2 control-label">协会名称</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="AssociationName" class="form-control" data-check-null="notnull" maxlength="100" data-check-notice="协会名称">
+                            </div>
+                        </div>
 
-                        </td>
-                        <td colspan="2" rowspan="2" align="center" valign="middle">是否经系统查询</td>
-                        <td width="114" rowspan="2" align="center" valign="middle">
-                            <select name="Queried" id="" class="form-control">
-                                <option value="否" selected>否</option>
-                                <option value="是">是</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td height="50" align="center" valign="middle">阶梯教室<br>（300人） </td>
-                        <td height="50" colspan="4" align="center" valign="middle">
-                            <select name="LadderClassroom" id="" class="form-control">
-                                <option value="" selected>-</option>
-                                <option value="305">305</option>
-                                <option value="513">513</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td height="120" align="center" valign="middle">活动内容<br>（主题， 目的， 流程， 安全负责人） </td>
-                        <td height="120" colspan="7" align="center" valign="middle">
-                            <textarea name="ActivityContent" class="inputArea"></textarea>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td height="80" align="center" valign="middle">有无商业赞助</td>
-                        <td height="80" align="center" valign="middle">
-                            <select name="Commercial" id="" class="form-control">
-                                <option value="有" selected>有</option>
-                                <option value="无">无</option>
-                            </select>
-                        </td>
-                        <td height="80" align="center" valign="middle">赞助方名及赞助方式（如有） </td>
-                        <td height="80" colspan="5" align="center" valign="middle">
-                            <textarea name="CommercialPart" class="inputArea"></textarea>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td height="50" align="center" valign="middle">活动负责人</td>
-                        <td height="50" colspan="2" align="center" valign="middle">
-                            <input type="text" name="ActivityChargePerson" class="inputArea h50" data-check-null="notnull">
-                        </td>
-                        <td width="91" align="center" valign="middle">联系电话</td>
-                        <td height="50" colspan="4" align="center" valign="middle">
-                            <input type="text" name="ActivityPhone" class="inputArea h50" data-check-null="notnull">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td height="100" align="center" valign="middle">社团意见</td>
-                        <td height="100" colspan="2" align="center" valign="middle">
-                            <textarea name="AssociationComment" class="inputArea"></textarea>
-                        </td>
-                        <td align="center" valign="middle">社联意见</td>
-                        <td height="100" colspan="4" align="center" valign="middle"><span class="disable-area"></span></td>
-                    </tr>
-                    <tr>
-                        <td height="50" align="center" valign="middle">社联经手人</td>
-                        <td height="50" colspan="2" align="center" valign="middle"><span class="disable-area"></span></td>
-                        <td align="center" valign="middle">联系电话</td>
-                        <td height="50" colspan="4" align="center" valign="middle"><span class="disable-area"></span></td>
-                    </tr>
-                    <tr>
-                        <td height="120" align="center" valign="middle">共青团<br>华中科技大学<br>委员会意见 </td>
-                        <td height="120" colspan="7" align="center" valign="middle"><span class="disable-area"></span></td>
-                    </tr>
-                    </tbody>
-                </table>
+                <div class="form-group">
+                    <label for="" class="col-sm-2 control-label">活动名称</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="ActivityName" class="form-control" data-check-null="notnull" maxlength="100" data-check-notice="活动名称">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="" class="col-sm-2 control-label">参与人数</label>
+                    <div class="col-sm-10">
+                        <input type="text" maxlength="8" name="JoinNumber" class="form-control" data-check-null="notnull" maxlength="10" data-check-notice="参与人数" data-check-type="number">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="" class="col-sm-2 control-label">活动日期</label>
+                    <div class="col-sm-10" id="ActivityDateArea">
+                        <input type="text" name="ActivityDate" class="form-control" data-check-null="notnull" data-check-notice="活动日期">
+                        <script>
+                            var mydate=new Date();
+                            $("#ActivityDateArea").html(generateDateSelector(mydate.getFullYear()+1,mydate.getFullYear(),true,true,"ActivityDate","ActivityDateArea_DateInput","YY年MM月DD日","adt","form-control","width:100px; display:inline-block;margin:5px;","data-check-notice='活动日期' data-check-null='notnull'"));
+                        </script>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="" class="col-sm-2 control-label">活动时间</label>
+                    <div class="col-sm-10">
+                        <select name="ActivityTime" class="form-control">
+                            <option value="上午" selected>上午</option>
+                            <option value="下午">下午</option>
+                            <option value="晚上">晚上</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="" class="col-sm-2 control-label">普通教室（50人）</label>
+                    <div class="col-sm-4">
+                        <select name="NormalClassroom" id="" class="form-control">
+                            <option value="" selected>-</option>
+                            <option value="302">302</option>
+                            <option value="303">303</option>
+                            <option value="304">304</option>
+                            <option value="603">603</option>
+                        </select>
+                    </div>
+                    <label for="" class="col-sm-2 control-label">阶梯教室（300人）</label>
+                    <div class="col-sm-4">
+                        <select name="LadderClassroom" id="" class="form-control">
+                            <option value="" selected>-</option>
+                            <option value="305">305</option>
+                            <option value="513">513</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="" class="col-sm-2 control-label">是否经系统查询</label>
+                    <div class="col-sm-4">
+                        <select name="Queried" id="" class="form-control">
+                            <option value="否" selected>否</option>
+                            <option value="是">是</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="" class="col-sm-2 control-label">活动内容（主题， 目的， 流程， 安全负责人）</label>
+                    <div class="col-sm-10">
+                        <textarea style="height: 200px" name="ActivityContent" class="form-control"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="" class="col-sm-2 control-label">有无商业赞助</label>
+                    <div class="col-sm-10">
+                        <select name="Commercial" id="" class="form-control">
+                            <option value="有" selected>有</option>
+                            <option value="无">无</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="" class="col-sm-2 control-label">赞助方名及赞助方式（如有）</label>
+                    <div class="col-sm-10">
+                        <textarea style="height: 150px" name="CommercialPart" class="form-control"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="" class="col-sm-2 control-label">活动负责人</label>
+                    <div class="col-sm-10">
+                        <input type="text" maxlength="25" name="ActivityChargePerson" class="form-control" data-check-null="notnull" data-check-notice="活动负责人">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="" class="col-sm-2 control-label">联系电话</label>
+                    <div class="col-sm-10">
+                        <input type="text" maxlength="20" name="ActivityPhone" class="form-control" data-check-null="notnull" data-check-notice="联系电话">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="" class="col-sm-2 control-label">社团意见</label>
+                    <div class="col-sm-10">
+                        <textarea style="height: 150px" name="AssociationComment" class="form-control"></textarea>
+                    </div>
+                </div>
+                       
             </div>
-            <input type="file" name="file" id="inputUploadFile"><input type="hidden" name="ifUploadFile" id="ifUploadFile" value="none">
-            <input type="submit">
+            <div class="form-group">
+                <label for="" class="col-sm-2 control-label">策划提交<br>（可选）</label>
+                <div class="col-sm-10">
+                    <!--//文件选择组合框-->
+                    <div class="input-group file-selection-container">
+                        <div class="file-selection-filePath">
+
+                            <div id="file-location" class="form-control">选择文件...</div>
+                        </div>
+                        <div class="file-selection-btn-container input-group-btn">
+                            <button class="file-selection-btn-info btn btn-success"><span class="glyphicon glyphicon glyphicon-open" aria-hidden="true"></span> 选择文件</button>
+
+                            <input type="file" name="file" class="btn file-selection-btn" id="inputUploadFile">
+                        </div>
+
+                    </div><!-- /input-group -->
+                    <input type="hidden" name="ifUploadFile" id="ifUploadFile" value="none">
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <input type="button" class="btn btn-primary btn-lg" style="display:block; width: 150px; margin: 5px auto" data-role="submit" value="提交申请">
+                </div>
+            </div>
         </form>
 
     </body>

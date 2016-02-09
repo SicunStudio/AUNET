@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="__PUBLIC__/MaterialSrc/js/generateDateSelector.js">
+    <script src="__PUBLIC__/MaterialSrc/js/generateDateSelector.js"></script>
+
     <link rel="stylesheet" href="__PUBLIC__/SlideMenu/slidemenu.css">
     <link rel="stylesheet" href="__PUBLIC__/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="__PUBLIC__/MaterialSrc/css/style.css">
@@ -34,22 +35,38 @@
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
-<nav class="navbar navbar-default">
-    <div class="container">
-        <div class="navbar-header">
-            <div class="navbar-brand">
+
+
+<div style="min-height: 100%; position: relative;">
+
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <div class="navbar-brand">
                 <span class="ButtonToggle" data-role="SlideMenuToggleButton">
                     &nbsp;
                     <span>&nbsp;</span>
                     <span>&nbsp;</span>
                     <span>&nbsp;</span>
                 </span>
-                <span id="NavBarTitle">资源申请系统</span>
+                    <span id="NavBarTitle">资源申请系统</span>
+                </div>
             </div>
+            <div class="navbar-text navbar-right">欢迎你，{$_SESSION['username']}<a href="{:U('/Material/Index');}" class="btn btn-danger btn-xs" style="margin-left:10px;">退出登录</a></div>
         </div>
+    </nav>
+
+    <div style="padding-bottom: 80px;">
+        {__CONTENT__}
     </div>
-</nav>
-{__CONTENT__}
+    <div style="position: absolute; bottom: 0px; width: 100%; text-align: center; height: 80px; color: #ffffff; background-color: #303030; padding-top: 15px; margin-top: 15px">
+        <p>Copyright &copy; 2008-<?php echo date("Y"); ?> AU&nbsp;SicunStudio</p>
+        <p>All&nbsp;Rights&nbsp;Reserved</p>
+    </div>
+</div>
+
+
 <script src="__PUBLIC__/SlideMenu/slidemenu.js"></script>
+
 </body>
 </html>
