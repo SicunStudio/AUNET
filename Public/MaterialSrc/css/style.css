@@ -106,3 +106,15 @@
 html,body {
     height: 100%;
 }
+
+.bodycontainer {
+    min-height: 100%; position: relative;
+}
+
+.maincontent {
+    padding-bottom: 80px;
+}
+
+footer {
+    position: absolute; bottom: 0px; width: 100%; text-align: center; height: 80px; color: #ffffff; background-color: #303030; padding-top: 15px; margin-top: 15px
+}

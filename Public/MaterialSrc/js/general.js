@@ -20,7 +20,16 @@ $(document).on("click","[data-role='submit']",function(){
         //alert(msg);
     }
     else {
-        //TODO 提交表单
+        //转换textarea中的换行
+       /* $('textarea').each(function(){
+            var dom=$(this);
+            var org=dom.val();
+            dom.val(dom.val().replace(/\n/g,"<br>"));
+            console.log(org);
+            console.log(dom.val());
+        });*/
+
+        //提交表单
         $("form").submit();
     }
 });
