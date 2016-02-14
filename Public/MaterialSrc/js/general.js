@@ -11,8 +11,9 @@ $(document).on("click","[data-role='submit']",function(){
     var msgNull=check_null();
     var msgNum=check_number();
     var msgUnique=check_unique();
-    if(msgNull || msgNum || msgUnique){
-        $("#alert-danger").html((msgNull!=""?msgNull+"<br>":"") + (msgNum!=""?msgNum+"<br>":"")+(msgUnique!=""?msgUnique:""));
+    var msgUpload=check_file();
+    if(msgNull || msgNum || msgUpload || msgUnique){
+        $("#alert-danger").html((msgNull!=""?msgNull+"<br>":"") + (msgNum!=""?msgNum+"<br>":"")+(msgUpload!=""?msgUpload+"<br>":"")+(msgUnique!=""?msgUnique:""));
         $("body").animate({scrollTop: $("#TableArea").offset().top}, 500,"swing");
         $("#alert-danger").slideDown("fast");
 

@@ -42,6 +42,27 @@ function check_number(){
 }
 
 /**
+ * 检查上传文件类型
+ */
+function check_file(){
+    var MsgString="";
+    $("input[data-check-type='file']").each(function(){
+        var filename=$(this).val();
+        var filetype="";
+        if(filename!=undefined && filename!=""){
+            filetype=filename.substr(filename.lastIndexOf(".")+1);
+            if(filetype=='doc'||filetype=='docx'||filetype=='txt'||filetype=='pdf'){
+                MsgString="";
+            }else
+            {
+                MsgString="上传文件类型错误：允许的文件类型：doc、docx、pdf、txt";
+            }
+        }
+    });
+    return MsgString;
+}
+
+/**
  * 每页独有检查
  *
  */
