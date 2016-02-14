@@ -18,30 +18,30 @@
     </style>
 </head>
 <body>
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">Modal title</h4>
-            </div>
-            <div class="modal-body">
-                <p>One fine body&hellip;</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+<!--<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">-->
+    <!--<div class="modal-dialog">-->
+        <!--<div class="modal-content">-->
+            <!--<div class="modal-header">-->
+                <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
+                <!--<h4 class="modal-title">Modal title</h4>-->
+            <!--</div>-->
+            <!--<div class="modal-body">-->
+                <!--<p>One fine body&hellip;</p>-->
+            <!--</div>-->
+            <!--<div class="modal-footer">-->
+                <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
+                <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+            <!--</div>-->
+        <!--</div>&lt;!&ndash; /.modal-content &ndash;&gt;-->
+    <!--</div>&lt;!&ndash; /.modal-dialog &ndash;&gt;-->
+<!--</div>&lt;!&ndash; /.modal &ndash;&gt;-->
 
 
 <div class="bodycontainer">
 
     <nav class="navbar navbar-inverse">
         <div class="container">
-            <div class="navbar-header">
+            <div class="navbar-header" style="float: left">
                 <div class="navbar-brand">
                 <span class="ButtonToggle" data-role="SlideMenuToggleButton">
                     &nbsp;
@@ -52,7 +52,7 @@
                     <span id="NavBarTitle">资源申请系统</span>
                 </div>
             </div>
-            <div class="navbar-text navbar-right">欢迎你，{$_SESSION['username']}<a href="{:U('/Material/Index');}" class="btn btn-danger btn-xs" style="margin-left:10px;">退出登录</a></div>
+            <div class="navbar-text navbar-right" style="float: right">{$_SESSION['username']}<a href="{:U('/Material/Index');}" class="btn btn-danger btn-xs" style="margin-left:10px;">退出</a></div>
         </div>
     </nav>
 
