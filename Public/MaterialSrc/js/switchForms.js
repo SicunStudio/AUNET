@@ -13,8 +13,8 @@ FormAddress[7]=new Array("sacenter","../ApplicationForms/sacenter.html");
 FormAddress[8]=new Array("apply_state","apply_state.html");
 FormAddress[9]=new Array("apply_procedure","apply_procedure.html");
 
-var loadingMsg="<h2>请稍候，正在加载</h2><h4>若长时间未响应，请在左侧重新选择表格或刷新再试</h4>";
-var errorMsg="<h2>抱歉，加载失败</h2><h3>该表格不可用</h3>";
+var loadingMsg="<div style='margin-left: 10px'><div style='width: 100px; height: 100px; border-radius: 50px; border: solid 5px #505050; line-height: 50px; font-size: 56px; text-align: center;display: inline-block'>...</div><h2>请稍候，正在加载</h2><h3>若长时间未响应，请在左侧重新选择表格或刷新再试</h3></div>";
+var errorMsg="<div style='margin-left: 10px'><div style='width: 100px; height: 100px; border-radius: 50px; border: solid 5px #505050; line-height: 80px; font-size: 56px; text-align: center;display: inline-block'>!</div><h2>Oops，好像出了一些问题</h2><h3>暂时无法加载，你可以稍后再试，也可以联系思存工作室</h4></div>";
 $(document).on("click",".FormSwitcher",function(){
     //TODO 如果当前表格已经填写，询问是否离开
     //收起警告框
@@ -26,7 +26,7 @@ $(document).on("click",".FormSwitcher",function(){
     $(".FormSwitcher").removeClass("active");
     $("#FormArea").html(loadingMsg);
     //$("#FormArea").load("../ApplicationForms/loading.html");
-    $("#FormArea").html();
+    //$("#FormArea").html();
     var FormName=$(this).attr("data-formname");
 
     //Fetch Table
@@ -41,15 +41,15 @@ $(document).on("click",".FormSwitcher",function(){
     }
 
     //Show Table
-    $("#FormArea").html("");
+    //$("#FormArea").html("");
 
     if(tableURL=="None"){
-        $("#FormArea").html(errorMsg + "<h4>此表格不存在</h4>");
+        $("#FormArea").html(errorMsg + "<h4>错误原因：此表格不存在</h4>");
     }
     else{
             $("#FormArea").load(tableURL,function(response,status,xhr){
                 if(status!="success"){
-                    $("#FormArea").html(errorMsg + "<h4>表格错误或网络有问题</h4>");
+                    $("#FormArea").html(errorMsg + "<h4>错误原因：表格获取错误或网络有问题</h4>");
                 }
             });
     }
