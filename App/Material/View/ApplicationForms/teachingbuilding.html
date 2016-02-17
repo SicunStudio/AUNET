@@ -18,8 +18,7 @@
         <form action="{:U('Material/Material/material_upload')}" class="form-horizontal" enctype="multipart/form-data" method="POST">
             <input type="hidden" name="action_type" value="teachingbuilding">
             <div style="text-align: center">
-                <h2>社团活动申请</h2>
-                <h3>（教学楼专用）</h3>
+                <h2>华中科技大学教室申请表（A表）</h2>
             </div>
 
             <div class="FillForm">
@@ -69,9 +68,8 @@
                 </div>
 
 
-                <div style="text-align: center; margin-top: 20px;">
-                    <span style="font-size: 30px">华中科技大学教室申请表</span><span style="font-size: 20px">（非计划内教学—学生专用）</span>
-
+                <div style="text-align: center; margin-top: 50px;">
+                    <h2>华中科技大学教室申请表（B表）</h2>
                 </div>
                 <div class="form-group">
                     <label for="" class="col-sm-2 control-label">院（系）名称</label>
@@ -117,13 +115,13 @@
                 <div class="form-group">
                     <label for="" class="col-sm-2 control-label">办公电话号码</label>
                     <div class="col-sm-10">
-                        <input type="text" data-check-notice="办公电话号码" maxlength="20" name="OfficePhone" class="form-control">
+                        <input type="text" data-check-notice="办公电话号码" maxlength="13" name="OfficePhone" id="OfficePhone" class="form-control">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="" class="col-sm-2 control-label">手机号码</label>
                     <div class="col-sm-10">
-                        <input type="text" data-check-notice="手机号码" maxlength="20" name="MobilePhone" class="form-control">
+                        <input type="text" data-check-notice="手机号码" maxlength="11" name="MobilePhone" id="MobilePhone" class="form-control">
                     </div>
                 </div>
                 <p>&nbsp;</p>
@@ -221,21 +219,21 @@
                 <div class="form-group">
                     <label for="" class="col-sm-2 control-label">内容</label>
                     <div class="col-sm-10">
-                        <textarea style="height: 150px" name="NormalConferenceContent" class="form-control"></textarea>
+                        <textarea style="height: 150px" name="NormalConferenceContent" id="NormalConferenceContent" class="form-control"></textarea>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="" class="col-sm-2 control-label">主持人姓名</label>
                     <div class="col-sm-3">
-                        <input type="text" name="HostName" maxlength="25" class="form-control">
+                        <input type="text" name="HostName" id="HostName" maxlength="25" class="form-control">
                     </div>
                     <label for="" class="col-sm-1 control-label">单位</label>
                     <div class="col-sm-2">
-                        <input type="text" name="HostCompany" maxlength="50" class="form-control">
+                        <input type="text" name="HostCompany" id="HostCompany" maxlength="50" class="form-control">
                     </div>
                     <label for="" class="col-sm-2 control-label">职务（职称）</label>
                     <div class="col-sm-2">
-                        <input type="text" name="HostPost" maxlength="50" class="form-control">
+                        <input type="text" name="HostPost" id="HostPost" maxlength="50" class="form-control">
                     </div>
                 </div>
 
@@ -245,22 +243,22 @@
                 <div class="form-group">
                     <label for="" class="col-sm-2 control-label">授课（讲座）内容</label>
                     <div class="col-sm-10">
-                        <textarea style="height: 150px" name="LectureContent" class="form-control"></textarea>
+                        <textarea style="height: 150px" name="LectureContent" id="LectureContent" class="form-control"></textarea>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label for="" class="col-sm-2 control-label">授课（讲座）姓名</label>
                     <div class="col-sm-3">
-                        <input type="text" name="SpeakerName" maxlength="25" class="form-control">
+                        <input type="text" name="SpeakerName" id="SpeakerName" maxlength="25" class="form-control">
                     </div>
                     <label for="" class="col-sm-1 control-label">单位</label>
                     <div class="col-sm-2">
-                        <input type="text" name="SpeakerCompany" maxlength="50" class="form-control">
+                        <input type="text" name="SpeakerCompany" id="SpeakerCompany" maxlength="50" class="form-control">
                     </div>
                     <label for="" class="col-sm-2 control-label">职务（职称）</label>
                     <div class="col-sm-2">
-                        <input type="text" name="SpeakerPost" maxlength="50" class="form-control">
+                        <input type="text" name="SpeakerPost" id="SpeakerPost" maxlength="50" class="form-control">
                     </div>
                 </div>
 

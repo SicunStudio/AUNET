@@ -101,12 +101,15 @@
 
             <div class="form-group">
                 <label for="" class="col-sm-2 control-label">归还日期</label>
-                <div class="col-sm-10" id="DCReturnTimeArea">
+                <div class="col-sm-5" id="DCReturnTimeArea">
                     <input type="text" class="form-control h35" data-check-notice="桌椅归还日期" name="DCReturnTime">
                     <script>
                     var mydate=new Date();
                     $("#DCReturnTimeArea").html(generateDateSelector(mydate.getFullYear()+1,mydate.getFullYear(),true,true,"DCReturnTime","DCReturnTime_DateInput","YY-MM-DD","dcrt","form-control","width:100px; display:inline-block;margin:5px;","data-check-notice='桌椅归还日期'"));
                 </script>
+                </div>
+                <div class="col-sm-5">
+                    <label for="">校车借用申请请另填写一份新的申请表</label>
                 </div>
             </div>
           
