@@ -9,33 +9,6 @@ use PhpOffice\PhpWord\Settings;
 
 class LoadController extends CommonController
 {
-	/*
-	var $ID;
-	var $type;
-	var $table;
-	public function __construct(){
-		$this->ID = I('POST.ID');
-		$this->type = I('POST.action_type');
-		$table = strtolower($this->type);
-	}*/
-	public function start(){
-		ob_start();
-		echo '<html xmlns:o="urn:schemas-microsoft-com:office:office"
-		xmlns:w="urn:schemas-microsoft-com:office:word"
-		xmlns="http://www.w3.org/TR/REC-html40">';
-	}
-	public function save($path){
-		echo "</html>";
-		$data = ob_get_contents();
-		ob_end_clean();
-		$this->wirtefile ($path,$data);
-	}
-	public function wirtefile ($fn,$data){
-		$fp=fopen($fn,"wb");
-		fwrite($fp,$data);
-		fclose($fp);
-	}
-	
 	public function preview(){
 		//echo $this->ID;
 		$ID = I('POST.ID');
@@ -1035,15 +1008,15 @@ class LoadController extends CommonController
 		$filenameElem=array_merge(range(0, 9), range('a', 'z'), range('A', 'Z'));
 		$dlFilename="";
 		$arr_len = count($filenameElem);
-		for ($i = 0; $i < 6; $i++)
+		for ($i = 0; $i < 10; $i++)
 		{
 			$rand = mt_rand(0, $arr_len-1);
 			$dlFilename.=$filenameElem[$rand];
 		}
-		$dlFilename=$file_data[username]."-".$type.$dlFilename.".docx";
+		$dlFilename=$type."-".$dlFilename.".docx";
 
  		header("Content-type: application/vnd.ms-word");
-		header("Content-Disposition:attachment;filename=".$dlFilename);
+		header("Content-Disposition:attachment;filename='".$dlFilename."'");
 		header('Content-Transfer-Encodeing: binary');
 		readfile($fileurl);
 		//删除缓存文件
