@@ -1004,21 +1004,41 @@ class LoadController extends CommonController
 
 		$fileurl='http://'.$_SERVER['HTTP_HOST'].__ROOT__.'/'.str_replace("\\","/",$docroot);
 
-		// 设置下载文件名
-		$filenameElem=array_merge(range(0, 9), range('a', 'z'), range('A', 'Z'));
-		$dlFilename="";
-		$arr_len = count($filenameElem);
-		for ($i = 0; $i < 10; $i++)
-		{
-			$rand = mt_rand(0, $arr_len-1);
-			$dlFilename.=$filenameElem[$rand];
-		}
-		$dlFilename=$type."-".$dlFilename.".docx";
+		$name_list = array('sports' => '体育场馆申请',
+			'materialapply' => '物资申请',
+			'special' => '特殊场地申请',
+			'teachingbuilding' => '教学楼教室申请',
+			'outdoor' => '户外路演场地申请',
+			'east4' => '东四三楼申请',
+			'sacenter' => '大活教室申请',
+			'colorprinting' => '彩喷悬挂申请',
+		);
 
- 		header("Content-type: application/vnd.ms-word");
-		header("Content-Disposition:attachment;filename='".$dlFilename."'");
-		header('Content-Transfer-Encodeing: binary');
+		// 设置下载文件名
+		header("Content-type:text/html;charset=utf-8");
+
+		$filename=$file_data['username']."-".$name_list[$type].".docx";
+		$encoded_filename = urlencode($filename);
+		$encoded_filename = str_replace("+", "%20", $encoded_filename);
+
+		$ua = $_SERVER["HTTP_USER_AGENT"];
+
+// $_SERVER["HTTP_USER_AGENT"]在IE中显示为：
+// Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+		header('Content-Type: application/octet-stream');
+
+
+//兼容IE11
+		if(preg_match("/MSIE/", $ua) || preg_match("/Trident\/7.0/", $ua)){
+			header('Content-Disposition: attachment; filename="' . $encoded_filename . '"');
+		} else if (preg_match("/Firefox/", $ua)) {
+			header('Content-Disposition: attachment; filename*="utf8\'\'' . $filename . '"');
+		} else {
+			header('Content-Disposition: attachment; filename="' . $filename . '"');
+		}
+
 		readfile($fileurl);
+		
 		//删除缓存文件
 		unlink($docroot);
 		//$this->show($fileurl);

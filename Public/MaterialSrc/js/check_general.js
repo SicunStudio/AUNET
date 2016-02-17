@@ -13,7 +13,7 @@
  */
 function check_null(){
     var MsgString="";
-    $("input[data-check-null='notnull']").each(function(){
+    $("[data-check-null='notnull']").each(function(){
         //console.log($(this).attr("value"));
         if(check_value_null($(this).val())){
             MsgString+=$(this).attr("data-check-notice");
@@ -156,6 +156,25 @@ function check_unique_special(){
 /* teachingbuilding */
 function check_unique_teachingbuilding(){
     var msg="";
+    /* 申请人联系电话 */
+    if(check_value_null($("#OfficePhone").val()) && check_value_null($("#MobilePhone").val())){
+        AddErrorMark($("#OfficePhone"));
+        AddErrorMark($("#MobilePhone"));
+        msg+="申请人联系电话：必须填写至少一项";
+    }
+
+    /* 形式内容 */
+    var normalConf=check_value_null($("#NormalConferenceContent").val())||check_value_null($("#HostName").val())||check_value_null($("#HostCompany").val())||check_value_null($("#HostPost").val());
+    var lect=check_value_null($("#LectureContent").val())||check_value_null($("#SpeakerName").val())||check_value_null($("#SpeakerCompany").val())||check_value_null($("#SpeakerPost").val());
+    if((normalConf&&lect)||((normalConf||lect)==false)){
+        msg=msg+(msg==""?"":" ")+"形式和内容：填写一项";
+        AddErrorMark($("#NormalConferenceContent"));
+        AddErrorMark($("#HostName"));
+        AddErrorMark($("#LectureContent"));
+        AddErrorMark($("#SpeakerName"));
+    }
+
+
 
     return msg;
 }
@@ -196,9 +215,18 @@ function check_value_num(){
  * 为不符合的input加上标记
  */
 function AddErrorMark(elem){
-    if(!elem.parent().hasClass("FillForm")){ elem.parent().addClass("has-error"); };
-    var elemP=elem.parent() ;
-    if(!elemP.parent().hasClass("FillForm")){ elemP.parent().addClass("has-error"); };
+    //if(!elem.parent().hasClass("FillForm")){ elem.parent().addClass("has-error"); };
+    //var elemP=elem.parent() ;
+    //if(!elemP.parent().hasClass("FillForm")){ elemP.parent().addClass("has-error"); };
+    var elemP=elem;
+    for(;;){
+        if(!elemP.hasClass("form-group")) {
+            elemP = elemP.parent();
+        }else {
+            break;
+        }
+    }
+    elemP.addClass("has-error");
 
 }
 

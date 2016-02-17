@@ -7,10 +7,20 @@ $(document).on("change","#filter-type",function(){
     filterDOM();
     //console.log($("#filter-type").val());
 });
+$(document).on("change","#filter-date",function(){
+    filterDOM();
+    //console.log($("#filter-type").val());
+});
+
+$(document).on("click",".date-clear",function(){
+    $("#filter-date").val("");
+    filterDOM();
+});
 
 function filterDOM(){
     var approveState=$("li[role='presentation'].active a").attr("data-tabtype");
     var type=$("#filter-type").val();
+    var filterdate=$("#filter-date").val();
     var num=0;
 
     $(".Applylist .Applylist-Nodata").hide("fast");
@@ -32,14 +42,27 @@ function filterDOM(){
                 break;
         }
         var bool_type=(type=="__ALL__"? 1 : dom_type==type);
+        var bool_date=(filterdate==""?true:false);
+        // 过滤日期
+        if(!bool_date){
+            var createdate=$(this).attr('data-createtime');
+            createdate=createdate.substr(0,createdate.indexOf(" "));
+            console.log(createdate);
+            bool_date=(createdate==filterdate);
+        }
+
         if(approveState==undefined){ bool_as=true; }
         if(type==undefined) { bool_type=true; }
-        if(bool_as && bool_type){
+        if(filterdate==undefined) { bool_date=true; }
+        if(bool_as && bool_type && bool_date){
             $(this).fadeIn("fast");
             num=num+1;
         }
     });
     //console.log(num);
+
+
+
     if(num==0){
         $(".Applylist .Applylist-Nodata").fadeIn(100);
     }

@@ -18,7 +18,7 @@ function generateDateSelector(ToY,StY,IfSelToday,Up,targetName,targetID,format,p
      * Up 排序为升序还是降序（true：升序，false 降序）
      *
      * targetName 要把选中的日期赋给的input的name，注意，这个input将会自动创建且不可见
-     * targetName 要把选中的日期赋给的input的id，注意，这个input将会自动创建且不可见
+     * targetID 要把选中的日期赋给的input的id，注意，这个input将会自动创建且不可见
      * format 生成日期字符串的格式，最终会将YY替换为年，MM替换为月，DD替换为日，
      * ****例如: YY-MM-DD 2000-1-1
      * ******** YY年MM月DD日 2000年1月1日
@@ -150,11 +150,12 @@ $(document).on("change","[data-DateSelector-role='Year']",function(){
 
 $(document).on("change","[data-DateSelector-role='Month']",function(){
     var str=generateDaySelector($(this).attr('data-DateSelector-YearListID'),$(this).attr('data-DateSelector-MonthListID'),$(this).attr('data-DateSelector-DayListID'),$(this).attr('data-DateSelector-Up'));
-    //console.log(str);
+    console.log(str);
     $("#" + $(this).attr('data-DateSelector-DayListID')).html(str);
 });
 
 $(document).on("change","[data-element-type='DateSelector']",function(){
     var str=generateDateString($(this).attr('data-DateSelector-YearListID'),$(this).attr('data-DateSelector-MonthListID'),$(this).attr('data-DateSelector-DayListID'),$(this).attr('data-DateSelector-DateStringFormat'));
+
     $("#" + $(this).attr('data-DateSelector-TargetInputID')).val(str);
 });
