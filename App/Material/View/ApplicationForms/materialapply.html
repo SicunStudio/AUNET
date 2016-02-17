@@ -39,7 +39,7 @@
                     <input type="text" class="form-control" data-check-null="notnull" data-check-notice="借用日期" name="BorrowTime">
                     <script>
                         var mydate=new Date();
-                        $("#borrowTimeArea").html(generateDateSelector(mydate.getFullYear()+1,mydate.getFullYear(),true,true,"BorrowTime","borrowTimeArea_DateInput","YY年MM月DD日","bt","form-control","width:100px; display:inline-block;margin:5px;","data-check-notice='借用日期' data-check-null='notnull'"));
+                        $("#borrowTimeArea").html(generateDateSelector(mydate.getFullYear()+1,mydate.getFullYear(),true,true,"BorrowTime","borrowTimeArea_DateInput","YY-MM-DD","bt","form-control","width:100px; display:inline-block;margin:5px;","data-check-notice='借用日期' data-check-null='notnull'"));
                     </script>
                 </div>
             </div>
@@ -69,7 +69,7 @@
                     <input type="text" id="inputProjectorReturn" class="form-control h35"  data-check-notice="投影仪归还日期" name="PReturnTime">
                     <script>
                         var mydate=new Date();
-                        $("#PReturnTimeArea").html(generateDateSelector(mydate.getFullYear()+1,mydate.getFullYear(),true,true,"PReturnTime","PReturnTime_DateInput","YY年MM月DD日","prt","form-control","width:100px; display:inline-block;margin:5px;","data-check-notice='投影仪归还日期'"));
+                        $("#PReturnTimeArea").html(generateDateSelector(mydate.getFullYear()+1,mydate.getFullYear(),true,true,"PReturnTime","PReturnTime_DateInput","YY-MM-DD","prt","form-control","width:100px; display:inline-block;margin:5px;","data-check-notice='投影仪归还日期'"));
                     </script>
                 </div>
             </div>
@@ -105,7 +105,7 @@
                     <input type="text" class="form-control h35" data-check-notice="桌椅归还日期" name="DCReturnTime">
                     <script>
                     var mydate=new Date();
-                    $("#DCReturnTimeArea").html(generateDateSelector(mydate.getFullYear()+1,mydate.getFullYear(),true,true,"DCReturnTime","DCReturnTime_DateInput","YY年MM月DD日","dcrt","form-control","width:100px; display:inline-block;margin:5px;","data-check-notice='桌椅归还日期'"));
+                    $("#DCReturnTimeArea").html(generateDateSelector(mydate.getFullYear()+1,mydate.getFullYear(),true,true,"DCReturnTime","DCReturnTime_DateInput","YY-MM-DD","dcrt","form-control","width:100px; display:inline-block;margin:5px;","data-check-notice='桌椅归还日期'"));
                 </script>
                 </div>
             </div>

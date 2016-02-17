@@ -334,7 +334,7 @@ class LoadController extends CommonController
                     <tr>
                         <td height=\"120\" align=\"center\" valign=\"middle\">活动内容 （主题， 目的， 流程， 安全负责人） </td>
                         <td height=\"120\" colspan=\"5\" align=\"center\" valign=\"middle\">
-                            <textarea name=\"ActivityContent\" class=\"inputArea\" data-check-null=\"notnull\" value=\"$file_data[activitycontent]\"></textarea>
+                            $file_data[activitycontent]
                         </td>
                     </tr>
                     <tr>
