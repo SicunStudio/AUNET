@@ -847,9 +847,9 @@ class LoadController extends CommonController
 		$sql = M("aunet.$table" , 'aunet_material_');
 		$file_data = $sql->where("id=".$ID)->limit(1)->select()[0];
 		$usr=$file_data['username'];
-		foreach($file_data as $key => $val){
-            $file_data[$key] = mb_convert_encoding($val, "HTML-ENTITIES", "UTF-8");
-		}
+//		foreach($file_data as $key => $val){
+//            $file_data[$key] = mb_convert_encoding($val, "HTML-ENTITIES", "UTF-8");
+//		}
 
 		//模板路径
 		$modroot ='http://'.$_SERVER['HTTP_HOST'].__ROOT__.'/Public/MaterialSrc/docx/'.$type.'.docx';

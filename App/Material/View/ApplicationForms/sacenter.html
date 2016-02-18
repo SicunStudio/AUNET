@@ -45,11 +45,12 @@
                 <div class="form-group">
                     <label for="" class="col-sm-2 control-label">活动时间</label>
                     <div class="col-sm-10">
-                        <select name="ActivityTime" class="form-control">
-                            <option value="上午" selected>上午</option>
-                            <option value="下午">下午</option>
-                            <option value="晚上">晚上</option>
-                        </select>
+                        <!--<select name="ActivityTime" class="form-control">-->
+                            <!--<option value="上午" selected>上午</option>-->
+                            <!--<option value="下午">下午</option>-->
+                            <!--<option value="晚上">晚上</option>-->
+                        <!--</select>-->
+                        <input type="text" name="ActivityTime" placeholder="上午/下午/晚上" class="form-control" data-check-null="notnull" data-check-notice="活动时间" maxlength="50">
                     </div>
                 </div>
 
@@ -127,7 +128,7 @@
                         <textarea style="height: 150px" name="AssociationComment" class="form-control"></textarea>
                     </div>
                 </div>
-                       
+
             </div>
             <div class="form-group">
                 <label for="" class="col-sm-2 control-label">策划提交<br>（可选）</label>
@@ -139,7 +140,7 @@
                             <div id="file-location" class="form-control">选择文件...</div>
                         </div>
                         <div class="file-selection-btn-container input-group-btn">
-                            <button class="file-selection-btn-info btn btn-success"><span class="glyphicon glyphicon glyphicon-open" aria-hidden="true"></span> 选择文件</button>
+                            <button type="button" class="file-selection-btn-info btn btn-success"><span class="glyphicon glyphicon glyphicon-open" aria-hidden="true"></span> 选择文件</button>
 
                             <input type="file" data-check-type="file" name="file" class="btn file-selection-btn" id="inputUploadFile">
                         </div>
@@ -151,8 +152,9 @@
             </div>
             <div class="row">
                 <div class="col-sm-12">
-                    <input type="button" class="btn btn-primary btn-lg" style="display:block; width: 150px; margin: 5px auto" data-role="submit" value="提交申请">
+                    <button type="button" data-role="submit" class="btn btn-primary btn-lg" style="display:block; width: 150px; margin: 5px auto" >提交申请</button>
                 </div>
+
             </div>
         </form>
 

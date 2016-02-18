@@ -47,7 +47,6 @@ function filterDOM(){
         if(!bool_date){
             var createdate=$(this).attr('data-createtime');
             createdate=createdate.substr(0,createdate.indexOf(" "));
-            console.log(createdate);
             bool_date=(createdate==filterdate);
         }
 
