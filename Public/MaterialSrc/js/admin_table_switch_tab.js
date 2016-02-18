@@ -41,7 +41,7 @@ function filterDOM(){
                 bool_as=(dom_approvestate==approveState);
                 break;
         }
-        var bool_type=(type=="__ALL__"? 1 : dom_type==type);
+        var bool_type=(type=="ALL"? 1 : dom_type==type);
         var bool_date=(filterdate==""?true:false);
         // 过滤日期
         if(!bool_date){
