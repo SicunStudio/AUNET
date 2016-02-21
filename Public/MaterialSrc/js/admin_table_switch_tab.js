@@ -35,7 +35,7 @@ function filterDOM(){
                 bool_as=true;
                 break;
             case "已审批":
-                bool_as=(dom_approvestate!="未审批");
+                bool_as=(dom_approvestate!="审批中");
                 break;
             default:
                 bool_as=(dom_approvestate==approveState);
