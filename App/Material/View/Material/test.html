@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="__PUBLIC__/MaterialSrc/css/admin_style.css">
+
+</head>
+<body>
+<!--模态框区域-->
+<!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalPreview">Large modal</button>-->
+
+<div class="modal fade" id="modalPreview" tabindex="-1" role="dialog" style="border-radius: 0px">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="modalPreview-Title">审批</h4>
+            </div>
+
+            <div class="modal-body container-fluid">
+                <div class="row">
+                    <div class="col-sm-2"><h4>申请者：</h4></div>
+                    <h4 class="col-sm-8" id="modalPreview-UserName">table.UserName</h4>
+                    <div class="col-sm-2">
+                        <!--此处换成表格下载地址-->
+                        <a href="javascript:void(0)" class="btn btn-success">下载表格</a>
+                    </div>
+                </div>
+                <!--表格主体-->
+                <div class="row" id="modalPreview-TableContainer" style="padding: 5px 15px">
+
+                    <h2>Oops，好像出了一些问题</h2><h4>暂时无法加载，可能是网络原因，请检查你的网络连接</h4><h4>你可以稍后再试，或者联系思存工作室</h4>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <form enctype="multipart/form-data" class="form">
+                    <div class="col-sm-3" style="text-align: left">
+                        <h4>审批结果</h4>
+                        <select name="ApproveState" id="" class="form-control">
+                            <option value="未审核">未审核</option>
+                            <option value="已通过">已通过</option>
+                            <option value="未通过">未通过</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-6" style="text-align: left">
+                        <h4>审批意见</h4>
+                        <textarea name="ApproveNote" id="" class="form-control"></textarea>
+                    </div>
+                    <div class="col-sm-3">
+                        <button type="button" class="btn btn-info btn-lg">保存</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row" style="overflow: auto">
+    <div style="margin: 10px auto; width: 400px">
+        <ul class="nav nav-pills">
+            <li role="presentation" class="active"><a href="javascript:void(0)" data-toggle="pill" class="switchTab" data-tabtype="未审批">未审批 <span class="badge" id="TobeApproveNum">0</span></a></li>
+            <li role="presentation"><a href="javascript:void(0)" data-toggle="pill" class="switchTab" data-tabtype="已通过">已通过</a></li>
+            <li role="presentation"><a href="javascript:void(0)" data-toggle="pill" class="switchTab" data-tabtype="未通过">未通过</a></li>
+            <li role="presentation"><a href="javascript:void(0)" data-toggle="pill" class="switchTab" data-tabtype="已审批">已审批</a></li>
+            <li role="presentation"><a href="javascript:void(0)" data-toggle="pill" class="switchTab" data-tabtype="所有">所有</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="row Applylist">
+    <p class="Applylist-Nodata">暂无数据</p>
+    <div class="list-container" data-approvestate="未审批">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="Applylist-UserName">申请人申请人申请人申请人申请人申请人申请人申请人</div>
+                <div class="Applylist-FormType">申请类别</div>
+            </div>
+            <div class="col-sm-3">
+                <div class="Applylist-CreateTime">提交时间：&nbsp;<span>2016-12-31 23:59:59</span></div>
+                <div class="Applylist-ApproveTime">审批时间：&nbsp;<span>2016-12-31 23:59:59</span></div>
+            </div>
+            <div class="col-sm-3">
+                <div class="Applylist-ApproveState" data-approvestate="未审批">未审批</div>
+                <div class="Applylist-ApproveNote">审批意见</div>
+            </div>
+            <div class="col-sm-2">
+                <div class="Applylist-Approve">
+                    <button class="btn btn-info">审批</button>
+                </div>
+
+                <div class="Applylist-Download">
+                    <button class="btn btn-success">下载表格</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="list-container" data-approvestate="已通过">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="Applylist-UserName">申请人</div>
+                <div class="Applylist-FormType">申请类别</div>
+            </div>
+            <div class="col-sm-3">
+                <div class="Applylist-CreateTime">提交时间</div>
+                <div class="Applylist-ApproveTime">审批时间</div>
+            </div>
+            <div class="col-sm-3">
+                <div class="Applylist-ApproveState" data-approvestate="已通过">已通过</div>
+                <div class="Applylist-ApproveNote">审批意见 <span></span></div>
+            </div>
+            <div class="col-sm-2">
+                <div class="Applylist-Approve">
+                    <button class="btn btn-info">审批</button>
+                </div>
+                <div class="Applylist-Download">
+                    <button class="btn btn-success">下载表格</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<script>
+
+    $(document).ready(function(){
+        //为审批状态文字设置颜色
+        $(".Applylist-ApproveState[data-approvestate='未通过']").addClass("ApproveState-Rejected");
+        $(".Applylist-ApproveState[data-approvestate='已通过']").addClass("ApproveState-Pass");
+        $(".Applylist-ApproveState[data-approvestate='未审批']").addClass("ApproveState-Wait");
+
+        // 设置未审批数量
+        var TobeApproved=0;
+        TobeApproved=$(".list-container[data-approvestate='未审批']").size();
+        $("#TobeApproveNum").text(TobeApproved);
+
+        // 只显示未审批
+        $(".list-container[data-approvestate!='未审批']").css("display","none");
+
+        // 更改已审批项的审批按钮
+        $(".list-container[data-approvestate!='未审批'] .Applylist-Approve button").text("更改审批");
+        $(".list-container[data-approvestate!='未审批'] .Applylist-Approve button").removeClass("btn-info");
+        $(".list-container[data-approvestate!='未审批'] .Applylist-Approve button").addClass("btn-default");
+    });
+
+</script>
+</body>
+</html>

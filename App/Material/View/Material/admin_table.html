@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="__PUBLIC__/MaterialSrc/css/admin_style.css">
+    <link rel="stylesheet" href="__PUBLIC__/DatetimePicker/bootstrap-datetimepicker.css">
+</head>
+<body>
+<!--模态框区域-->
+
+<div class="modal fade" id="modalPreview" tabindex="-1" role="dialog" style="border-radius: 0px">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="modalPreview-Title">审批</h4>
+            </div>
+
+            <div class="modal-body container-fluid">
+                <div class="row">
+                    <div class="col-sm-8"><h4>申请者：<span id="modalPreview-UserName">table.UserName</span></h4></div>
+
+                    <div class="col-sm-4">
+                        <!--此处换成表格下载地址//TODO-->
+                        <form action="{:U('Material/Load/downloadword')}" enctype="multipart/form-data" method="POST">
+                            <input type="hidden" class="modal-input-action-type" name="action_type" value="">
+                            <input type="hidden" class="modal-input-ID" name="ID" value="">
+
+                            <div class="btn-group" role="group" aria-label="...">
+                                <input type="submit" value="下载表格" class="btn btn-success">
+                                <a href="__ROOT__" id="modal-storeurl-link" class="btn btn-warning modal-input-storeurl">下载策划</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!--表格主体-->
+                <div class="row table-responsive" id="modalPreview-TableContainer" style="padding: 5px 15px">
+
+                    <div style='width: 100px; height: 100px; border-radius: 50px; border: solid 5px #505050; line-height: 80px; font-size: 56px; text-align: center;display: inline-block'>!</div><h2>Oops，好像出了一些问题</h2><h4>暂时无法加载，可能是网络原因，请检查你的网络连接</h4><h4>你可以稍后再试，或者联系思存工作室</h4>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <form enctype="multipart/form-data" action="{:U('material_adupload')}" id="approveform" class="form" method="POST">
+                    <input type="hidden" class="modal-input-action-type" name="action_type" value="">
+                    <input type="hidden" class="modal-input-ID" name="ID" value="">
+                    <input type="hidden" class="modal-input-UserName" name="UserName" value="">
+                    <div class="col-sm-3" style="text-align: left">
+                        <h4>审批结果</h4>
+                        <select name="ApproveState" id="modalPreview-ApproveState" class="form-control">
+                            <option value="审批中" selected>审批中</option>
+                            <option value="已通过">已通过</option>
+                            <option value="未通过">未通过</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-6" style="text-align: left">
+                        <h4>审批意见</h4>
+                        <textarea name="ApproveNote" id="modalPreview-ApproveNote" class="form-control"></textarea>
+                    </div>
+                    <div class="col-sm-3">
+                        <button type="button" class="btn btn-info btn-lg" id="approveform-save">保存</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row" style="overflow: auto">
+    <div style="margin: 10px auto; width: 400px">
+        <ul class="nav nav-pills">
+            <li role="presentation" class="active"><a href="javascript:void(0)" data-toggle="pill" class="switchTab" data-tabtype="审批中">审批中 <span class="badge" id="TobeApproveNum">0</span></a></li>
+            <li role="presentation"><a href="javascript:void(0)" data-toggle="pill" class="switchTab" data-tabtype="已通过">已通过</a></li>
+            <li role="presentation"><a href="javascript:void(0)" data-toggle="pill" class="switchTab" data-tabtype="未通过">未通过</a></li>
+            <li role="presentation"><a href="javascript:void(0)" data-toggle="pill" class="switchTab" data-tabtype="已审批">已审批</a></li>
+            <li role="presentation"><a href="javascript:void(0)" data-toggle="pill" class="switchTab" data-tabtype="所有">所有</a></li>
+        </ul>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-4 col-sm-offset-2">
+        <div class="col-xs-4"><label for="" class="control-label">申请类型</label></div>
+        <div class="col-xs-8">
+            <select name="" id="filter-type" class="form-control" style="width: 150px;">
+                <option value="__ALL__" selected>所有</option>
+                <option value="materialapply">物资申请</option>
+                <option value="colorprinting">彩喷悬挂</option>
+                <option value="east4">东四三楼</option>
+                <option value="sports">体育场馆</option>
+                <option value="special">特殊场地</option>
+                <option value="teachingbuilding">教学楼教室</option>
+                <option value="outdoor">路演场地</option>
+                <option value="sacenter">大活教室</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="col-xs-4"><label for="" class="control-label">申请时间</label></div>
+        <div class="col-xs-8">
+            <div class="input-group" style="width: 150px;">
+                <input size="16" type="text" value="" id="filter-date" readonly class="form-control form_datetime1">
+    <span class="input-group-btn">
+        <button class="btn btn-default date-clear"><i class="glyphicon glyphicon-remove"></i></button>
+    </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row Applylist">
+
+    <p class="Applylist-Nodata">暂无数据</p>
+
+    <!--审批信息条目区域-->
+    <foreach name="value" item="v">
+
+        <foreach  name="v[2]" item="u">
+
+            <div class="list-container" data-action-type="{$v[0]}" data-approvestate="{$u.approvestate}" data-createtime="{$u.createtime}">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="Applylist-UserName">{$u.username}</div>
+                        <div class="Applylist-FormType">{$v[1]}</div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="Applylist-CreateTime">提交时间：&nbsp;<span>{$u.createtime}</span></div>
+                        <div class="Applylist-ApproveTime">审批时间：&nbsp;<span>{$u.approvetime}</span></div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="Applylist-ApproveState" data-approvestate="{$u.approvestate}">{$u.approvestate}</div>
+                        <div class="Applylist-ApproveNote">{$u.approvenote}</div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="Applylist-Approve">
+
+                            <button class="btn btn-info btn-approve" data-toggle="modal" data-action-target="{:U('Material/Load/preview')}" data-target="#modalPreview" data-action-type="{$v[0]}" data-id="{$u.id}" data-username="{$u.username}" data-storeurl="__ROOT__{$u.storeurl}">审批</button>
+                        </div>
+
+                        <div class="Applylist-Download">
+
+                                <div class="dropdown">
+                                    <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                        下载
+                                        <span class="caret"></span>
+                                    </button>
+
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                    <li>
+                                        <a href="javascript:void(0)" class="download-table">
+                                            表格
+                                        </a>
+                                        <form action="{:U('Material/load/downloadword')}" enctype="multipart/form-data" method="POST">
+                                            <input type="hidden" name="action_type" value="{$v[0]}">
+                                            <input type="hidden" name="ID" value="{$u.id}">
+                                        </form>
+                                    </li>
+                                    <li><a class="Applylist-downloadplan" href="__ROOT__{$u.storeurl}">策划</a></li>
+                                </ul>
+
+                                </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </foreach>
+    </foreach>
+
+
+
+</div>
+
+<script src="__PUBLIC__/MaterialSrc/js/admin_table.js"></script>
+<script src="__PUBLIC__/DatetimePicker/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+<script src="__PUBLIC__/DatetimePicker/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
+<script>
+    $(".form_datetime1").datetimepicker({
+        weekStart: 1,
+        language: "zh-CN",
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 2,
+        minView: 2,
+        forceParse: 0,
+        format: "yyyy-mm-dd"
+    });
+</script>
+</body>
+</html>
