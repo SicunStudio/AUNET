@@ -846,9 +846,10 @@ class LoadController extends CommonController
 		$table = strtolower($type);
 		$sql = M("aunet.$table" , 'aunet_material_');
 		$file_data = $sql->where("id=".$ID)->limit(1)->select()[0];
-		foreach($file_data as $key => $val){
-            $file_data[$key] = mb_convert_encoding($val, "HTML-ENTITIES", "UTF-8");
-		}
+		$usr=$file_data['username'];
+//		foreach($file_data as $key => $val){
+//            $file_data[$key] = mb_convert_encoding($val, "HTML-ENTITIES", "UTF-8");
+//		}
 
 		//模板路径
 		$modroot ='http://'.$_SERVER['HTTP_HOST'].__ROOT__.'/Public/MaterialSrc/docx/'.$type.'.docx';
@@ -1016,8 +1017,7 @@ class LoadController extends CommonController
 
 		// 设置下载文件名
 		header("Content-type:text/html;charset=utf-8");
-
-		$filename=$file_data['username']."-".$name_list[$type].".docx";
+		$filename=$usr."-".$name_list[$type].".docx";
 		$encoded_filename = urlencode($filename);
 		$encoded_filename = str_replace("+", "%20", $encoded_filename);
 

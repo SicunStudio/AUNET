@@ -37,7 +37,7 @@
                 <div class="form-group">
                     <label for="" class="col-sm-2 control-label">活动时间</label>
                     <div class="col-sm-10" id="dateSelAreaA">
-                        <input type="text" name="ActivityTimeA" class="form-control" data-check-notice="活动时间" data-check-null="notnull" >
+                        <input type="text" maxlength="50" name="ActivityTimeA" class="form-control" data-check-notice="活动时间" data-check-null="notnull" >
                         <script>
                             var mydate=new Date();
                             $("#dateSelAreaA").html(generateDateSelector(mydate.getFullYear()+1,mydate.getFullYear(),true,true,"ActivityTimeA","ActivityTimeA_DateInput","YY-MM-DD","ata","form-control","width:100px; display:inline-block;margin:5px; background-color:transparent;","data-check-notice='活动时间' data-check-null='notnull'"));
@@ -131,7 +131,7 @@
                 <div class="form-group">
                     <label for="" class="col-sm-2 control-label">活动、讲座时间</label>
                     <div class="col-sm-10" id="dateSelAreaB">
-                        <input type="text" data-check-notice="活动、讲座时间" name="ActivityTimeB" class="form-control">
+                        <input type="text" maxlength="50" data-check-notice="活动、讲座时间" name="ActivityTimeB" class="form-control">
                         <script>
                             var mydate=new Date();
                             $("#dateSelAreaB").html(generateDateSelector(mydate.getFullYear()+1,mydate.getFullYear(),true,true,"ActivityTimeB","ActivityTimeB_DateInput","YY年MM月DD日","atb","form-control","width:100px; display:inline-block; margin:5px; background-color: transparent;","data-check-notice='活动时间' data-check-null='notnull'"));
@@ -273,7 +273,7 @@
                             <div id="file-location" class="form-control">选择文件...</div>
                         </div>
                         <div class="file-selection-btn-container input-group-btn">
-                            <button class="file-selection-btn-info btn btn-success"><span class="glyphicon glyphicon glyphicon-open" aria-hidden="true"></span> 选择文件</button>
+                            <button type="button" class="file-selection-btn-info btn btn-success"><span class="glyphicon glyphicon glyphicon-open" aria-hidden="true"></span> 选择文件</button>
 
                             <input type="file" data-check-type="file" name="file" class="btn file-selection-btn" id="inputUploadFile">
                         </div>
@@ -285,7 +285,7 @@
             </div>
             <div class="row">
                 <div class="col-sm-12">
-                    <input type="button" class="btn btn-primary btn-lg" style="display:block; width: 150px; margin: 5px auto" data-role="submit" value="提交申请">
+                    <button type="button" class="btn btn-primary btn-lg" style="display:block; width: 150px; margin: 5px auto" data-role="submit">提交申请</button>
                 </div>
             </div>
         </form>

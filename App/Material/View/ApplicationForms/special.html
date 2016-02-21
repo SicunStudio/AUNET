@@ -45,7 +45,7 @@
                 <div class="form-group">
                     <label for="" class="col-sm-2 control-label">活动时间</label>
                     <div class="col-sm-10">
-                        <input type="text" name="ActivityTime" class="form-control" data-check-null="notnull" data-check-notice="活动时间">
+                        <input type="text" maxlength="50" name="ActivityTime" class="form-control" data-check-null="notnull" data-check-notice="活动时间">
                     </div>
                 </div>
 
@@ -121,7 +121,7 @@
                             <div id="file-location" class="form-control">选择文件...</div>
                         </div>
                         <div class="file-selection-btn-container input-group-btn">
-                            <button class="file-selection-btn-info btn btn-success"><span class="glyphicon glyphicon glyphicon-open" aria-hidden="true"></span> 选择文件</button>
+                            <button type="button" class="file-selection-btn-info btn btn-success"><span class="glyphicon glyphicon glyphicon-open" aria-hidden="true"></span> 选择文件</button>
 
                             <input type="file" data-check-type="file" name="file" class="btn file-selection-btn" id="inputUploadFile">
                         </div>
@@ -133,7 +133,7 @@
             </div>
             <div class="row">
                 <div class="col-sm-12">
-                    <input type="button" class="btn btn-primary btn-lg" style="display:block; width: 150px; margin: 5px auto" data-role="submit" value="提交申请">
+                    <button type="button" class="btn btn-primary btn-lg" style="display:block; width: 150px; margin: 5px auto" data-role="submit">提交申请</button>
                 </div>
             </div>
 

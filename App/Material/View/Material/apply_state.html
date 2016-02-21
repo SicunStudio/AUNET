@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <link rel="stylesheet" href="__PUBLIC__/DatetimePicker/bootstrap-datetimepicker.css">
 </head>
 <body>
 <ol class="breadcrumb">
@@ -11,7 +11,7 @@
 <div class="row" style="overflow: auto">
     <div style="margin: 10px auto; width: 400px">
         <ul class="nav nav-pills">
-            <li role="presentation" class="active"><a href="javascript:void(0)" data-toggle="pill" class="switchTab" data-tabtype="未审批">未审批 <span class="badge" id="TobeApproveNum">0</span></a></li>
+            <li role="presentation" class="active"><a href="javascript:void(0)" data-toggle="pill" class="switchTab" data-tabtype="审批中">审批中 <span class="badge" id="TobeApproveNum">0</span></a></li>
             <li role="presentation"><a href="javascript:void(0)" data-toggle="pill" class="switchTab" data-tabtype="已通过">已通过</a></li>
             <li role="presentation"><a href="javascript:void(0)" data-toggle="pill" class="switchTab" data-tabtype="未通过">未通过</a></li>
             <li role="presentation"><a href="javascript:void(0)" data-toggle="pill" class="switchTab" data-tabtype="已审批">已审批</a></li>
@@ -21,11 +21,11 @@
 </div>
 
 <div class="row">
-    <div class="col-sm-3 col-sm-offset-3">
+    <div class="col-md-3 col-md-offset-3">
         <div class="col-xs-5"><label for="" class="control-label">申请类型</label></div>
         <div class="col-xs-7">
             <select name="" id="filter-type" class="form-control" style="width: 150px;">
-                <option value="__ALL__" selected>所有</option>
+                <option value="ALL" selected>所有</option>
                 <option value="materialapply">物资申请</option>
                 <option value="colorprinting">彩喷悬挂</option>
                 <option value="east4">东四三楼</option>
@@ -37,7 +37,7 @@
             </select>
         </div>
     </div>
-    <div class="col-sm-3">
+    <div class="col-md-3">
         <div class="col-xs-5"><label for="" class="control-label">申请时间</label></div>
         <div class="col-xs-7">
             <div class="input-group" style="width: 150px;">
@@ -51,18 +51,18 @@
 </div>
 <p></p>
 <div class="table-responsive">
-    <table class="table-bordered table" width="700px">
+    <table class="table-bordered table table-hover" width="700px">
         <tr>
-            <th width="100px">提交时间</th>
-            <th width="50px">审核状态</th>
+            <th width="130px">提交时间</th>
+            <th width="80px">审核状态</th>
             <th width="150px">种类</th>
-            <th width="100px">审批时间</th>
-            <th width="300px">审核意见</th>
+            <th width="130px">审批时间</th>
+            <th width="210px">审核意见</th>
         </tr>
 
         <foreach name="list" item="v" key="lm">
             <foreach name="v[1]" item="u">
-                <tr class="list-container" data-action-type="" data-approvestate="{$u.approvestate}" data-createtime="{$u.createtime}">
+                <tr class="list-container" data-action-type="{$v[2]}" data-approvestate="{$u.approvestate}" data-createtime="{$u.createtime}">
                     <td>{$u.createtime}</td>
                     <td><span data-approvestate="{$u.approvestate}">{$u.approvestate}</span></td>
                     <td>{$v[0]}</td>
@@ -84,7 +84,7 @@
         language: "zh-CN",
         todayBtn:  1,
         autoclose: 1,
-        todayHighlight: 1,
+        todayHighlight: true,
         startView: 2,
         minView: 2,
         forceParse: 0,
@@ -96,7 +96,10 @@
     $(document).ready(function(){
         $("span[data-approvestate='未通过']").addClass("ApproveState-Rejected");
         $("span[data-approvestate='已通过']").addClass("ApproveState-Pass");
-        $("span[data-approvestate='未审核']").addClass("ApproveState-Wait");
+        $("span[data-approvestate='审批中']").addClass("ApproveState-Wait");
+        $("tr[data-approvestate='未通过']").addClass("danger");
+        $("tr[data-approvestate='已通过']").addClass("success");
+
     });
 </script>
 </body>

@@ -48,7 +48,7 @@
                     <div class="col-sm-3" style="text-align: left">
                         <h4>审批结果</h4>
                         <select name="ApproveState" id="modalPreview-ApproveState" class="form-control">
-                            <option value="未审批" selected>未审批</option>
+                            <option value="审批中" selected>审批中</option>
                             <option value="已通过">已通过</option>
                             <option value="未通过">未通过</option>
                         </select>
@@ -70,7 +70,7 @@
 <div class="row" style="overflow: auto">
     <div style="margin: 10px auto; width: 400px">
         <ul class="nav nav-pills">
-            <li role="presentation" class="active"><a href="javascript:void(0)" data-toggle="pill" class="switchTab" data-tabtype="未审批">未审批 <span class="badge" id="TobeApproveNum">0</span></a></li>
+            <li role="presentation" class="active"><a href="javascript:void(0)" data-toggle="pill" class="switchTab" data-tabtype="审批中">审批中 <span class="badge" id="TobeApproveNum">0</span></a></li>
             <li role="presentation"><a href="javascript:void(0)" data-toggle="pill" class="switchTab" data-tabtype="已通过">已通过</a></li>
             <li role="presentation"><a href="javascript:void(0)" data-toggle="pill" class="switchTab" data-tabtype="未通过">未通过</a></li>
             <li role="presentation"><a href="javascript:void(0)" data-toggle="pill" class="switchTab" data-tabtype="已审批">已审批</a></li>
@@ -79,9 +79,9 @@
     </div>
 </div>
 <div class="row">
-    <div class="col-sm-3 col-sm-offset-3">
-        <div class="col-xs-5"><label for="" class="control-label">申请类型</label></div>
-        <div class="col-xs-7">
+    <div class="col-sm-4 col-sm-offset-2">
+        <div class="col-xs-4"><label for="" class="control-label">申请类型</label></div>
+        <div class="col-xs-8">
             <select name="" id="filter-type" class="form-control" style="width: 150px;">
                 <option value="__ALL__" selected>所有</option>
                 <option value="materialapply">物资申请</option>
@@ -95,9 +95,9 @@
             </select>
         </div>
     </div>
-    <div class="col-sm-3">
-        <div class="col-xs-5"><label for="" class="control-label">申请时间</label></div>
-        <div class="col-xs-7">
+    <div class="col-sm-4">
+        <div class="col-xs-4"><label for="" class="control-label">申请时间</label></div>
+        <div class="col-xs-8">
             <div class="input-group" style="width: 150px;">
                 <input size="16" type="text" value="" id="filter-date" readonly class="form-control form_datetime1">
     <span class="input-group-btn">
@@ -107,28 +107,8 @@
         </div>
     </div>
 </div>
-<!--<span style="width: 90px"></span>-->
-<!--<select name="" id="filter-type" class="form-control" style="width: 100px; padding-left: 1px; padding-right: 0px; display: inline-block">-->
-    <!--<option value="__ALL__" selected>所有</option>-->
-    <!--<option value="materialapply">物资申请</option>-->
-    <!--<option value="colorprinting">彩喷悬挂</option>-->
-    <!--<option value="east4">东四三楼</option>-->
-    <!--<option value="sports">体育场馆</option>-->
-    <!--<option value="special">特殊场地</option>-->
-    <!--<option value="teachingbuilding">教学楼教室</option>-->
-    <!--<option value="outdoor">路演场地</option>-->
-    <!--<option value="sacenter">大活教室</option>-->
-<!--</select>-->
-<!--<span>申请时间</span>-->
-<!--<div class="input-group" style="width: 150px;">-->
-    <!--<input size="16" type="text" value="" id="filter-date" readonly class="form-control form_datetime1">-->
-    <!--<span class="input-group-btn">-->
-        <!--<button class="btn btn-default"><i class="glyphicon glyphicon-remove"></i></button>-->
-    <!--</span>-->
-<!--</div>-->
+
 <div class="row Applylist">
-
-
 
     <p class="Applylist-Nodata">暂无数据</p>
 

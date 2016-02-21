@@ -54,7 +54,7 @@ class MaterialController extends CommonController
             //print_r($tmp);
             if ($tmp)
             {
-                $ans[$name_en] = array($name_cn, $tmp);
+                $ans[$name_en] = array($name_cn, $tmp,substr($name_en,9));
             }
         }
         //print_r($ans);
@@ -177,10 +177,7 @@ class MaterialController extends CommonController
             }
 			
         }
-        //print_r($ans);
-		/*foreach($ans as $key => $val){
-            $file_data[$key] = mb_convert_encoding($val, "HTML-ENTITIES", "UTF-8");
-		}*/
+
         $this->value = $ans;
 
         $this->display();

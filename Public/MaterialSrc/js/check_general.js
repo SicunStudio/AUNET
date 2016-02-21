@@ -173,9 +173,6 @@ function check_unique_teachingbuilding(){
         AddErrorMark($("#LectureContent"));
         AddErrorMark($("#SpeakerName"));
     }
-
-
-
     return msg;
 }
 
