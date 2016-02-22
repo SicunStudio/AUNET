@@ -45,8 +45,14 @@
                 </div>
             </div>
             <input type="submit" name="submit" value="提交" class="btn btn-primary btn-lg btn-block" style="margin:5px auto; width:50%; font-size:1.6em;">
+            <a href="javascript:void(0)" data-container="body" data-toggle="popover" data-placement="bottom" title="忘记用户名或密码？" data-content="请联系思存工作室 sicun@auhust.net 以获取用户名或重置密码"><small>登录遇到问题？</small></a>
         </form>
     </div>
 </div>
+<script>
+    $(function () {
+        $('[data-toggle="popover"]').popover()
+    });
+</script>
 </body>
 </html>
