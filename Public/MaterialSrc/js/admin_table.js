@@ -50,6 +50,7 @@ $(document).on("click",".btn-approve", function() {
     $(".modal-input-UserName").val(dom.attr("data-username"));
     $(".modal-input-ID").val(dom.attr("data-id"));
     $(".modal-input-action-type").val(dom.attr("data-action-type"));
+    $("#modalPreview-ApproveActivity").val(dom.attr("data-approveactivity"));
 
     $(".modal-input-storeurl").attr("href",dom.attr("data-storeurl"));
     $.post(dom.attr("data-action-target"),
