@@ -107,6 +107,7 @@ class MaterialController extends CommonController
         $pretype = I('POST.action_type');
 		$pre = 'aunet_material_';
 		$type = $pre.$pretype;*/
+
 		$type = I('POST.action_type');
 		$table = strtolower($type);
         $sql = M("aunet.$table" , 'aunet_material_');
@@ -146,7 +147,12 @@ class MaterialController extends CommonController
 		*/
 
         $data['ApproveState']= $all_data['ApproveState'];
-        $data['ApproveTime'] = date("Y-m-d H:i:s");
+        $data['ApproveActivity']= $all_data['ApproveActivity'];
+        if($all_data['ApproveState']!='审批中'){
+            $data['ApproveTime'] = date("Y-m-d H:i:s");
+        }else{
+//            $data['ApproveTime'] = "";
+        }
         $data['ApproveNote'] = $all_data['ApproveNote'];
         $sql->where('ID=' .$all_data[ID])->save($data);
 
@@ -170,7 +176,7 @@ class MaterialController extends CommonController
         {
             //print("$list_name</br>");
             $list = D(strtolower($name_en));
-            $tmp = $list->getField('ID,UserName,CreateTime,ApproveTime,ApproveState,ApproveNote,StoreURL');
+            $tmp = $list->getField('ID,UserName,CreateTime,ApproveTime,ApproveState,ApproveActivity,ApproveNote,StoreURL');
 			if ($tmp)
             {
                 $ans[$name_en] = array(substr($name_en,9),$name_cn,$tmp);

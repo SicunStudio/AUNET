@@ -72,12 +72,18 @@
 }
 
 .Applylist-ApproveState {
-    height: 30px;
-    line-height: 30px;
-    font-size: 20px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 16px;
+}
+
+.Applylist-ApproveActivity {
+    height: 18px;
+    line-height: 18px;
+    font-size: 14px;
 }
 .Applylist-ApproveNote {
-    height: 40px;
+    height: 32px;
     font-size: 14px;
     line-height: 16px;
 }
@@ -107,3 +113,8 @@
 /*#modalPreview-TableContainer {*/
     /*overflow: scroll;*/
 /*}*/
+
+.btn-center {
+    display: block;
+    margin: 5px auto;
+}
