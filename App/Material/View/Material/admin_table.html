@@ -40,12 +40,16 @@
                 </div>
             </div>
 
-            <div class="modal-footer">
+            <div class="modal-footer row">
                 <form enctype="multipart/form-data" action="{:U('material_adupload')}" id="approveform" class="form" method="POST">
                     <input type="hidden" class="modal-input-action-type" name="action_type" value="">
                     <input type="hidden" class="modal-input-ID" name="ID" value="">
                     <input type="hidden" class="modal-input-UserName" name="UserName" value="">
-                    <div class="col-sm-3" style="text-align: left">
+                    <div class="col-md-3" style="text-align: left">
+                        <h4>初审</h4>
+                        <input type="text" class="form-control" name="ApproveActivity" id="modalPreview-ApproveActivity">
+                    </div>
+                    <div class="col-md-2" style="text-align: left">
                         <h4>审批结果</h4>
                         <select name="ApproveState" id="modalPreview-ApproveState" class="form-control">
                             <option value="审批中" selected>审批中</option>
@@ -53,13 +57,13 @@
                             <option value="未通过">未通过</option>
                         </select>
                     </div>
-                    <div class="col-sm-6" style="text-align: left">
+                    <div class="col-md-5" style="text-align: left">
                         <h4>审批意见</h4>
                         <textarea name="ApproveNote" id="modalPreview-ApproveNote" class="form-control"></textarea>
                     </div>
-                    <div class="col-sm-3">
-                        <button type="button" class="btn btn-info btn-lg" id="approveform-save">保存</button>
-                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <div class="col-md-2">
+                        <button type="button" class="btn btn-info btn-lg btn-center row" id="approveform-save">保存</button>
+                        <button type="button" class="btn btn-default btn-center row" data-dismiss="modal">关闭</button>
                     </div>
                 </form>
             </div>
@@ -119,7 +123,7 @@
 
             <div class="list-container" data-action-type="{$v[0]}" data-approvestate="{$u.approvestate}" data-createtime="{$u.createtime}">
                 <div class="row">
-                    <div class="col-sm-4">
+                    <div class="col-sm-3">
                         <div class="Applylist-UserName">{$u.username}</div>
                         <div class="Applylist-FormType">{$v[1]}</div>
                     </div>
@@ -127,14 +131,14 @@
                         <div class="Applylist-CreateTime">提交时间：&nbsp;<span>{$u.createtime}</span></div>
                         <div class="Applylist-ApproveTime">审批时间：&nbsp;<span>{$u.approvetime}</span></div>
                     </div>
-                    <div class="col-sm-3">
-                        <div class="Applylist-ApproveState" data-approvestate="{$u.approvestate}">{$u.approvestate}</div>
+                    <div class="col-sm-4">
+                        <div class="Applylist-ApproveState"><span data-approvestate="{$u.approvestate}">{$u.approvestate}</span></div>
+                        <div class="Applylist-ApproveActivity">初审：{$u.approveactivity}</div>
                         <div class="Applylist-ApproveNote">{$u.approvenote}</div>
                     </div>
                     <div class="col-sm-2">
                         <div class="Applylist-Approve">
-
-                            <button class="btn btn-info btn-approve" data-toggle="modal" data-action-target="{:U('Material/Load/preview')}" data-target="#modalPreview" data-action-type="{$v[0]}" data-id="{$u.id}" data-username="{$u.username}" data-storeurl="__ROOT__{$u.storeurl}">审批</button>
+                            <button class="btn btn-info btn-approve" data-toggle="modal" data-action-target="{:U('Material/Load/preview')}" data-target="#modalPreview" data-action-type="{$v[0]}" data-id="{$u.id}" data-approveactivity="{$u.approveactivity}" data-username="{$u.username}" data-storeurl="__ROOT__{$u.storeurl}">审批</button>
                         </div>
 
                         <div class="Applylist-Download">
@@ -144,7 +148,6 @@
                                         下载
                                         <span class="caret"></span>
                                     </button>
-
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
                                     <li>
                                         <a href="javascript:void(0)" class="download-table">
