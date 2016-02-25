@@ -1,0 +1,117 @@
+/* Cover Layer */
+/* line 5, ../sass/slidemenu.sass */
+.SlideMenu-CoverLayer {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 900;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* line 15, ../sass/slidemenu.sass */
+.SlideMenu-CoverBody {
+  overflow: hidden;
+}
+
+/* line 18, ../sass/slidemenu.sass */
+.SlideMenu-SlideContainer {
+  width: 250px;
+  height: 100%;
+}
+
+/* Set Media Query */
+/* SmallScreen:SlideBar */
+@media screen and (max-width: 768px) {
+  /* line 25, ../sass/slidemenu.sass */
+  .SlideMenu-SlideContainer {
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    z-index: 1000;
+    top: 0px;
+    left: -255px;
+    display: block;
+    overflow: auto;
+  }
+
+  /* line 34, ../sass/slidemenu.sass */
+  .SlideMenu-SlideButton {
+    display: block;
+  }
+
+  /* line 37, ../sass/slidemenu.sass */
+  .SlideMenu-MainContent {
+    width: 100%;
+  }
+
+  /* line 40, ../sass/slidemenu.sass */
+  .SlideMenu-ShowOnlyAtSmallScreen {
+    display: block;
+  }
+
+  /* Normal State */
+}
+@media screen and (min-width: 768px) {
+  /* line 48, ../sass/slidemenu.sass */
+  .SlideMenu-SlideButton {
+    display: none !important;
+  }
+
+  /* line 51, ../sass/slidemenu.sass */
+  .SlideMenu-ShowOnlyAtSmallScreen {
+    display: none;
+  }
+}
+/* Animation */
+/* line 55, ../sass/slidemenu.sass */
+.SlideToHide {
+  animation: SlideMenu-SlideHide 0.5s ease-in-out;
+  animation-fill-mode: forwards;
+  -webkit-animation: SlideMenu-SlideHide 0.5s ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+}
+
+/* line 61, ../sass/slidemenu.sass */
+.SlideToShow {
+  animation: SlideMenu-SlideShow 0.5s ease-in-out;
+  animation-fill-mode: forwards;
+  -webkit-animation: SlideMenu-SlideShow 0.5s ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+}
+
+/* Keyframes */
+@keyframes SlideMenu-SlideShow {
+  from {
+    left: -255px;
+  }
+  to {
+    left: 0px;
+  }
+}
+@-webkit-keyframes SlideMenu-SlideShow {
+  from {
+    left: -255px;
+  }
+  to {
+    left: 0px;
+  }
+}
+@keyframes SlideMenu-SlideHide {
+  0% {
+    left: 0px;
+  }
+  100% {
+    left: -255px;
+  }
+}
+@-webkit-keyframes SlideMenu-SlideHide {
+  0% {
+    left: 0px;
+  }
+  100% {
+    left: -255px;
+  }
+}

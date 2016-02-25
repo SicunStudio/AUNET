@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>物资申请表</title>
+</head>
+<body>
+
+    <ol class="breadcrumb">
+        <li><h4>物资借用</h4></li>
+    </ol>
+    <form action="{:U('Material/Material/material_upload')}" class="form-horizontal" enctype="multipart/form-data" method="POST">
+        <input type="hidden" name="action_type" value="materialapply">
+        <div class="FillForm">
+            <div class="form-group">
+                <label for="" class="col-sm-2 control-label">协会名称</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" data-check-null="notnull" maxlength="100" data-check-notice="协会名称" name="AssociationName">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="" class="col-sm-2 control-label">活动名称</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" data-check-null="notnull" data-check-notice="活动名称" maxlength="100" name="ActivityName">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="" class="col-sm-2 control-label">活动地点</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" data-check-null="notnull" data-check-notice="活动地点" maxlength="100" name="ActivityLocation">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="" class="col-sm-2 control-label">借用日期</label>
+                <div class="col-sm-10" id="borrowTimeArea">
+                    <input type="text" class="form-control" data-check-null="notnull" data-check-notice="借用日期" name="BorrowTime">
+                    <script>
+                        var mydate=new Date();
+                        $("#borrowTimeArea").html(generateDateSelector(mydate.getFullYear()+1,mydate.getFullYear(),true,true,"BorrowTime","borrowTimeArea_DateInput","YY-MM-DD","bt","form-control","width:100px; display:inline-block;margin:5px;","data-check-notice='借用日期' data-check-null='notnull'"));
+                    </script>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="" class="col-sm-2 control-label">参与人数</label>
+                <div class="col-sm-10">
+                    <input type="text" maxlength="10" class="form-control" data-check-null="notnull" data-check-notice="参与人数" data-check-type="number" name="JoinNumber">
+                </div>
+            </div>
+
+            <div class="form-group" style="text-align: center">
+                <h4>注：每张申请表只能借用一种物资</h4>
+            </div>
+
+            <div class="form-group" style="padding-left: 20px">
+                <h3>投影仪</h3>
+            </div>
+            <div class="form-group">
+                <label for="" class="col-sm-2 control-label">台数</label>
+                <div class="col-sm-10">
+                    <input type="text" maxlength="10" id="inputProjectorNum" class="form-control h35" data-check-type="number" data-check-notice="投影仪台数" name="ProjectorNumber">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="" class="col-sm-2 control-label">归还日期</label>
+                <div class="col-sm-10" id="PReturnTimeArea">
+                    <input type="text" id="inputProjectorReturn" class="form-control h35"  data-check-notice="投影仪归还日期" name="PReturnTime">
+                    <script>
+                        var mydate=new Date();
+                        $("#PReturnTimeArea").html(generateDateSelector(mydate.getFullYear()+1,mydate.getFullYear(),true,true,"PReturnTime","PReturnTime_DateInput","YY-MM-DD","prt","form-control","width:100px; display:inline-block;margin:5px;","data-check-notice='投影仪归还日期'"));
+                    </script>
+                </div>
+            </div>
+
+            <div class="form-group" style="padding-left: 20px">
+                <h3>电力</h3>
+            </div>
+            <div class="form-group">
+                <label for="" class="col-sm-2 control-label">瓦数</label>
+                <div class="col-sm-5">
+                    <input type="text" maxlength="10" class="form-control" data-check-notice="瓦数" data-check-type="number" id="PowerWattage" name="PowerWattage">
+                </div>
+                <label for="" class="col-sm-5 control-label">（注：瓦数超过2000W须要到主校区配电房签字）</label>
+            </div>
+           
+            <div class="form-group" style="padding-left: 20px">
+                <h3>大量桌椅</h3>
+            </div>
+            <div class="form-group">
+                <label for="" class="col-sm-2 control-label">桌子数量</label>
+                <div class="col-sm-4">
+                    <input type="text" maxlength="10" class="form-control h35"  data-check-type="number" data-check-notice="桌子数量" id="DeskNumber" name="DeskNumber">
+                </div>
+                <label for="" class="col-sm-2 control-label">椅子数量</label>
+                <div class="col-sm-4">
+                    <input type="text" maxlength="10" class="form-control h35" data-check-notice="椅子数量" data-check-type="number" id="ChairNumber" name="ChairNumber">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="" class="col-sm-2 control-label">归还日期</label>
+                <div class="col-sm-5" id="DCReturnTimeArea">
+                    <input type="text" class="form-control h35" data-check-notice="桌椅归还日期" name="DCReturnTime">
+                    <script>
+                    var mydate=new Date();
+                    $("#DCReturnTimeArea").html(generateDateSelector(mydate.getFullYear()+1,mydate.getFullYear(),true,true,"DCReturnTime","DCReturnTime_DateInput","YY-MM-DD","dcrt","form-control","width:100px; display:inline-block;margin:5px;","data-check-notice='桌椅归还日期'"));
+                </script>
+                </div>
+                <div class="col-sm-5">
+                    <label for="">校车借用申请请另填写一份新的申请表</label>
+                </div>
+            </div>
+          
+            <div class="form-group" style="padding-left: 20px">
+                <h3>校车</h3>
+            </div>
+            <div class="form-group">
+                <label for="" class="col-sm-2 control-label">运送桌子数量</label>
+                <div class="col-sm-4">
+                    <input type="text" maxlength="10" class="form-control h35" data-check-notice="运送桌子数量" data-check-type="number" name="CarryDeskNumber" id="CarryDeskNumber">
+                </div>
+                <label for="" class="col-sm-2 control-label">运送椅子数量</label>
+                <div class="col-sm-4">
+                    <input type="text" maxlength="10" class="form-control h35" data-check-notice="运送椅子数量" data-check-type="number" name="CarryChairNumber" id="CarryChairNumber">
+                </div>
+            </div>
+<p>&nbsp;</p><p>&nbsp;</p>
+            <div class="form-group">
+                <label for="" class="col-sm-2 control-label">活动负责人</label>
+                <div class="col-sm-10">
+                    <input type="text" maxlength="25" class="form-control" data-check-null="notnull" data-check-notice="活动负责人" name="ActivityChargePerson">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="" class="col-sm-2 control-label">联系电话</label>
+                <div class="col-sm-10">
+                    <input type="text" maxlength="20" class="form-control" data-check-null="notnull" data-check-notice="联系电话" name="ActivityPhone">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="" class="col-sm-2 control-label">社团意见</label>
+                <div class="col-sm-10">
+                    <textarea type="text" class="form-control" style="height: 100px" data-check-notice="社团意见" name="AssociationComment"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">策划提交<br>（可选）</label>
+
+            <div class="col-sm-10">
+                <!--//文件选择组合框-->
+                <div class="input-group file-selection-container">
+                    <div class="file-selection-filePath">
+
+                        <div id="file-location" class="form-control">选择文件...</div>
+                    </div>
+                    <div class="file-selection-btn-container input-group-btn">
+                        <button type="button" class="file-selection-btn-info btn btn-success"><span class="glyphicon glyphicon glyphicon-open" aria-hidden="true"></span> 选择文件</button>
+
+                        <input type="file" data-check-type="file" name="file" class="btn file-selection-btn" id="inputUploadFile">
+                    </div>
+
+                </div><!-- /input-group -->
+                <input type="hidden" name="ifUploadFile" id="ifUploadFile" value="none">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <button type="button" class="btn btn-primary btn-lg" style="display:block; width: 150px; margin: 5px auto" data-role="submit">提交申请</button>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
