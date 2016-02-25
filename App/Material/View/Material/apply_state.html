@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="__PUBLIC__/DatetimePicker/bootstrap-datetimepicker.css">
+</head>
+<body>
+<ol class="breadcrumb">
+    <li><h4>申请状态查询</h4></li>
+</ol>
+<div class="row" style="overflow: auto">
+    <div style="margin: 10px auto; width: 400px">
+        <ul class="nav nav-pills">
+            <li role="presentation" class="active"><a href="javascript:void(0)" data-toggle="pill" class="switchTab" data-tabtype="审批中">审批中 <span class="badge" id="TobeApproveNum">0</span></a></li>
+            <li role="presentation"><a href="javascript:void(0)" data-toggle="pill" class="switchTab" data-tabtype="已通过">已通过</a></li>
+            <li role="presentation"><a href="javascript:void(0)" data-toggle="pill" class="switchTab" data-tabtype="未通过">未通过</a></li>
+            <li role="presentation"><a href="javascript:void(0)" data-toggle="pill" class="switchTab" data-tabtype="已审批">已审批</a></li>
+            <li role="presentation"><a href="javascript:void(0)" data-toggle="pill" class="switchTab" data-tabtype="所有">所有</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-3 col-md-offset-3">
+        <div class="col-xs-5"><label for="" class="control-label">申请类型</label></div>
+        <div class="col-xs-7">
+            <select name="" id="filter-type" class="form-control" style="width: 150px;">
+                <option value="ALL" selected>所有</option>
+                <option value="materialapply">物资申请</option>
+                <option value="colorprinting">彩喷悬挂</option>
+                <option value="east4">东四三楼</option>
+                <option value="sports">体育场馆</option>
+                <option value="special">特殊场地</option>
+                <option value="teachingbuilding">教学楼教室</option>
+                <option value="outdoor">路演场地</option>
+                <option value="sacenter">大活教室</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="col-xs-5"><label for="" class="control-label">申请时间</label></div>
+        <div class="col-xs-7">
+            <div class="input-group" style="width: 150px;">
+                <input size="16" type="text" value="" id="filter-date" readonly class="form-control form_datetime1">
+    <span class="input-group-btn">
+        <button class="btn btn-default date-clear"><i class="glyphicon glyphicon-remove"></i></button>
+    </span>
+            </div>
+        </div>
+    </div>
+</div>
+<p></p>
+<div class="table-responsive">
+    <table class="table-bordered table table-hover" width="700px">
+        <tr>
+            <th width="130px">提交时间</th>
+            <th width="80px">审核状态</th>
+            <th width="150px">种类</th>
+            <th width="130px">审批时间</th>
+            <th width="210px">审核意见</th>
+        </tr>
+
+        <foreach name="list" item="v" key="lm">
+            <foreach name="v[1]" item="u">
+                <tr class="list-container" data-action-type="{$v[2]}" data-approvestate="{$u.approvestate}" data-createtime="{$u.createtime}">
+                    <td>{$u.createtime}</td>
+                    <td><span data-approvestate="{$u.approvestate}">{$u.approvestate}</span></td>
+                    <td>{$v[0]}</td>
+                    <!--<td><a href="{:U('Material/Download/' . $lm,array('id'=>$u['id']))}">下载</a></td>-->
+                    <td>{$u.approvetime}</td>
+                    <td>{$u.approvenote}</td>
+                </tr>
+            </foreach>
+        </foreach>
+    </table>
+</div>
+<script src="__PUBLIC__/MaterialSrc/js/admin_table.js"></script>
+<script src="__PUBLIC__/MaterialSrc/js/admin_table_switch_tab.js"></script>
+<script src="__PUBLIC__/DatetimePicker/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+<script src="__PUBLIC__/DatetimePicker/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
+<script>
+    $(".form_datetime1").datetimepicker({
+        weekStart: 1,
+        language: "zh-CN",
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: true,
+        startView: 2,
+        minView: 2,
+        forceParse: 0,
+        format: "yyyy-mm-dd"
+    });
+</script>
+<script>
+    //为审批状态文字设置颜色
+    $(document).ready(function(){
+        $("span[data-approvestate='未通过']").addClass("ApproveState-Rejected");
+        $("span[data-approvestate='已通过']").addClass("ApproveState-Pass");
+        $("span[data-approvestate='审批中']").addClass("ApproveState-Wait");
+        $("tr[data-approvestate='未通过']").addClass("danger");
+        $("tr[data-approvestate='已通过']").addClass("success");
+
+    });
+</script>
+</body>
+</html>
