@@ -1,1 +1,1 @@
-<?phpreturn array(    'LAYOUT_ON'             =>true,    'LAYOUT_NAME'           =>'common_layout',    'ADVICE_ACCEPTED'       =>'您的建议已经被接受',    'OPER_ERROR'            =>'提交失败',	//'配置项'=>'配置值');
+<?phpreturn array(    'LAYOUT_ON'             =>true,    'LAYOUT_NAME'           =>'common_layout',	//'配置项'=>'配置值');
