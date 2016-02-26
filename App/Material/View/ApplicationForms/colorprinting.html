@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <script>
+            $(document).on("click","#ajax_submit",function(){
+                alert("get");$("#myModal").modal('show');
+                $.post("{:U('Material/Material/material_upload')}",$("#applicationForm").serializeArray(),function(){
+
+                });
+            });
+
+        </script>
+    </head>
+    <body>
+        <ol class="breadcrumb">
+            <li><h4>彩喷悬挂申请</h4></li>
+        </ol>
+        <form id="applicationForm" class="form-horizontal" action="{:U('Material/Material/material_upload')}" enctype="multipart/form-data" method="POST">
+            <input type="hidden" name="action_type" value="colorprinting">
+            <div class="FillForm">
+                <div class="form-group">
+                    <label for="" class="col-sm-2 control-label">申请单位</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="AssociationName" maxlength="100" class="form-control" data-check-notice="申请单位" data-check-null="notnull">
+                    </div>
+                </div>
+                <div class="form-group" style="margin-left: 10px"><h3>经办人信息</h3></div>
+
+                <div class="form-group"><label for="" class="col-sm-2 control-label">姓名</label>
+                    <div class="col-sm-10"><input type="text" name="Name" class="form-control" maxlength="25" data-check-notice="姓名" data-check-null="notnull"></div>
+                </div>
+                <div class="form-group"><label for="" class="col-sm-2 control-label">联系方式</label>
+                    <div class="col-sm-10"><input type="text" maxlength="13" name="Phone" class="form-control" data-check-notice="联系方式" data-check-null="notnull"></div>
+                </div>
+                <p>&nbsp;</p>
+                <div class="form-group"><label for="" class="col-sm-2 control-label">活动内容</label>
+                    <div class="col-sm-10">
+                        <textarea name="ActivityContent" class="form-control h100" data-check-notice="活动内容" data-check-null="notnull" style="height: 150px"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group"><label for="" class="col-sm-2 control-label">活动日期</label>
+                    <div class="col-sm-10" id="ActivityDateArea">
+                        <input type="text" name="ActivityDate" class="inputArea h50">
+                        <script>
+                            var mydate=new Date();
+                            $("#ActivityDateArea").html(generateDateSelector(mydate.getFullYear()+1,mydate.getFullYear(),true,true,"ActivityDate","ActivityDateArea_DateInput","YY年MM月DD日","adt","form-control","width:100px; display:inline-block;margin:5px;","data-check-notice='活动日期' data-check-null='notnull'"));
+                        </script>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="" class="col-sm-2 control-label">使用时间</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="UseTime" class="form-control" data-check-notice="使用时间" maxlength="50" data-check-null="notnull">
+                    </div>
+                </div>
+
+                <div class="form-group"><label for="" class="col-sm-2 control-label">使用地点</label>
+                    <div class="col-sm-10"><input type="text" name="Location" class="form-control" data-check-notice="使用地点" maxlength="100" data-check-null="notnull"></div>
+                </div>
+                <div class="form-group"><label for="" class="col-sm-2 control-label">彩喷是否具有商业性质</label>
+                    <div class="col-sm-10">
+                        <select name="Commercial" id="" class="form-control" style="width: 150px;">
+                            <option value="有" selected>有</option>
+                            <option value="无">无</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group"><label for="" class="col-sm-2 control-label">备注</label>
+                    <div class="col-sm-10"><textarea name="Remark" id="" class="form-control" style="height: 150px;"></textarea></div>
+                </div>
+
+            </div>
+            <div class="form-group">
+                <label for="" class="col-sm-2 control-label">策划提交<br>（可选）</label>
+                <div class="col-sm-10">
+                    <!--//文件选择组合框-->
+                    <div class="input-group file-selection-container">
+                        <div class="file-selection-filePath">
+
+                            <div id="file-location" class="form-control">选择文件...</div>
+                        </div>
+                        <div class="file-selection-btn-container input-group-btn">
+                            <button type="button" class="file-selection-btn-info btn btn-success"><span class="glyphicon glyphicon glyphicon-open" aria-hidden="true"></span> 选择文件</button>
+
+                            <input type="file" data-check-type="file" name="file" class="btn file-selection-btn" id="inputUploadFile">
+                        </div>
+
+                    </div><!-- /input-group -->
+                    <input type="hidden" name="ifUploadFile" id="ifUploadFile" value="none">
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <button type="button" class="btn btn-primary btn-lg" style="display:block; width: 150px; margin: 5px auto" data-role="submit">提交申请</button>
+                </div>
+            </div>
+
+        </form>
+
+    </body>
+</html>

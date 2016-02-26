@@ -1,3 +1,5 @@
 .idea/*
 App/Runtime/*
 .idea
+Upload/Material/*
+.DS_STORE
