@@ -1,1 +1,1 @@
-<?php/** * Created by PhpStorm. * User: Administrator * Date: 2015/4/25 * Time: 0:58 *//** * * Replace the img tag to the img text * * @param $text the img tag * @return mixed the img text */function replace_img($text){    return preg_replace('/<img[^>]+>/',"",$text);}
+<?php/** * Created by PhpStorm. * User: Administrator * Date: 2015/4/25 * Time: 0:58 */function replace_img($text){    return preg_replace('/<img[^>]+>/',"",$text);}
