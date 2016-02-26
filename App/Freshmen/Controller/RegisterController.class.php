@@ -5,7 +5,7 @@
 	use Think\Controller;
 	
 	class RegisterController extends Controller{
-		/*
+		
 		public function add(){			//新人提交报名表
 			//array data:获取表单数据
 			$data['name'] = $_POST['name'];
@@ -27,30 +27,31 @@
 			$DBase->create($data);
 			//检验是否存在重复提交
 				//用于判断的唯一字段为uid和tel
-			$dupCheck = $DBase->where('uid=' . $data['uid'] . ' AND tel=' . $data['tel'])->find();
+			
+			$dupCheck = $DBase->where('uid="' . $data['uid'] . '" OR tel="' . $data['tel'] . '"')->find();
 			if($dupCheck != NULL){			//抓到重复提交了
 				$this->error("啊哦。。。发现了重复的数据耶！<br> 仔细想一下你之前有没有提交过噢！<br>");
+
 			}
-			elseif($dupCheck == false){		//出错了
-				$this->error("啊呀。。。出错了。。。<br> 待会再试试吧，是小编不好( ▼-▼ )<br>");
-			}		
+			//elseif($dupCheck == false){		//出错了
+			//	$this->error("啊呀。。。出错了。。。<br> 待会再试试吧，是小编不好( ▼-▼ )<br>");
+			//}		
 			else		//如果未发现重复的数据，就直接写入
 			{
 				$DBase->add();
 				//检查数据是否真正被写入了
 				$finishCheck = $DBase->where($data)->find();
-				if($dupCheck != NULL){
+				if($finishCheck != NULL){
 					$this->success("报名表提交成功啦！<br>");
+					//echo "<br>报名表提交成功啦！<br>";
 				}
 				else 	//如果出错或未写入
 				{
 					$this->error("啊呀。。。出错了。。。<br> 待会再试试吧，是小编不好( ▼-▼ )<br>");
 				}
 			}
-			
-			$this->display();
 		}
-		*/
+		
 		public function add_test(){			
 		//测试专用！看看我操作数据库的代码是否正常。。
 			//array data:指定表单数据以进行测试
