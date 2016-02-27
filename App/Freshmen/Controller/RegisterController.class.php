@@ -1,6 +1,6 @@
 <?php
 	//新人报名表填写主过程
-	//如果需要，可以合并到Index控制器中
+	//由 爱拼安小匠（AnClark） 设计
 	namespace Freshmen\Controller;
 	use Think\Controller;
 	
@@ -102,10 +102,66 @@
 		}
 		
 		
-		public function modify(){		//新人修改报名表
-			//array data:获取数据库中的表单数据
-			//【问题】还需要提供报名表的修改吗？并没有账号注册。。。
+		public function modify(){		//新人修改报名表，将报名信息输出到前端
+			//定义全局变量，存放修改条目的id，以保证修改成功
+			global $readId;
 			
+			//连接数据库
+			$DBase = M('freshmen');
+			
+			//获取用户提交的查询条件：姓名和电话
+			$data['name'] = I('post.name');
+			$data['tel'] = I('post.tel');
+			
+			//array readData:获取数据库中的表单数据
+			//依据关键字：姓名和电话号码，二者必须匹配，缺一不可
+			//【提示】可以直接给where方法传入数组，而无须凑成SQL语句！
+			$readData = $DBase->where($data)->find();
+			//检查数据是否存在
+			if($dupCheck != NULL)			//如果确实存在
+			{
+				//获取修改条目的id
+				$readId = $readData['id'];
+				//将表单信息传给前台
+				$this->assign('data',$readData);
+				//在前端使获取的数据显示出来
+				$this->display();
+			}
+			else		//如果“查无此人”或出错
+			{
+				$this->error('不好意思啊。。。查不到你的信息。。。<br> 可能是你还没报名吧~~~');
+			}
+		}
+		
+		public function modify_sure(){			//新人修改报名表，确认修改
+			//连接数据库
+			$DBase = M('freshmen');
+			
+			//获取用户修改好的表单信息
+			//注意“姓名”和“电话”不必传到前台
+			//array data:获取表单数据
+			//$data['name'] = $_POST['name'];
+			$data['sex'] = $_POST['sex'];
+			$data['uid'] = $_POST['uid'];
+			$data['class'] = $_POST['class'];
+			$data['dorm'] = $_POST['dorm'];
+			//$data['tel'] = $_POST['tel'];
+			$data['qq'] = $_POST['qq'];
+			$data['depart1'] = $_POST['depart1'];
+			$data['depart2'] = $_POST['depart2'];
+			$data['concede'] = $_POST['concede'];
+			$data['introduction'] = $_POST['introduction'];
+			$data['expectation'] = $_POST['expectation'];
+			
+			//更新数据
+			$successFlag = $DBase->where('id=' . $readId)->save($data);
+			//检查更新是否成功
+			if($successFlag != false){
+				$this->success('报名表修改成功啦！',U('/Freshmen/Index'),3);
+			}
+			else{
+				$this->error('不好意思啊。。。<br> 报名表修改失败了( ▼-▼ )');
+			}
 			
 		}
 		
