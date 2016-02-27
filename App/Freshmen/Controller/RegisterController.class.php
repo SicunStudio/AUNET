@@ -57,10 +57,10 @@
 			//array data:指定表单数据以进行测试
 			$data['name'] = '测试';
 			$data['sex'] = '男';
-			$data['uid'] = 'U201599922';
+			$data['uid'] = 'U201599942';
 			$data['class'] = '社联思存工作室';
 			$data['dorm'] = '韵苑99栋666';
-			$data['tel'] = '17799999222';
+			$data['tel'] = '17799999422';
 			$data['qq'] = '999999999';
 			$data['depart1'] = '思存工作室';
 			$data['depart2'] = '人力资源部';
