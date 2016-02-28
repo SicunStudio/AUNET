@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/bootstrap/css/bootstrap.min.css"/>
+    <script type="text/javascript" src="__PUBLIC__/js/jquery.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/bootstrap/js/bootstrap.min.js"></script>
+    <title>报名表下载</title>
+    <style>
+        *{
+
+            font-family: "微软雅黑";
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <h2>所有报名表</h2>
+    <table class="table table-bordered table-hover">
+        <tr>
+            <th>编号</th>
+            <th>姓名</th>
+            <th>专业班级</th>
+            <th>性别</th>
+            <th>电话</th>
+            <th>第一志愿</th>
+            <th>第二志愿</th>
+            <th>下载</th>
+        </tr>
+        <foreach name="list" item="v" empty="暂无数据">
+            <tr>
+                <td>{$v.id}</td>
+                <td>{$v.name}</td>
+                <td>{$v.class}</td>
+                <td>{$v.sex}</td>
+                <td>{$v.tel}</td>
+                <td>{$v.depart1}</td>
+                <td>{$v.depart2}</td>
+                <td>
+                    <form action="{:U('Freshmen/Signup/downloadword')}" method="post">
+                        <input type="hidden" name="id" value="{$v.id}">
+                        <input type="submit" value="下载" class="btn btn-success">
+                    </form>
+                </td>
+            </tr>
+        </foreach>
+    </table>
+</div>
+
+</body>
+</html>

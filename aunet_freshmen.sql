@@ -19,6 +19,7 @@ SET time_zone = "+00:00";
 --
 -- Database: `aunet`
 --
+USE `aunet`;
 
 -- --------------------------------------------------------
 
@@ -56,11 +57,7 @@ CREATE TABLE `aunet_freshmen` (
 -- Indexes for table `aunet_freshmen`
 --
 ALTER TABLE `aunet_freshmen`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `uid` (`uid`),
-  ADD UNIQUE KEY `tel` (`tel`),
-  ADD UNIQUE KEY `id` (`id`),
-  ADD KEY `uid_2` (`uid`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- 在导出的表使用AUTO_INCREMENT
@@ -70,7 +67,7 @@ ALTER TABLE `aunet_freshmen`
 -- 使用表AUTO_INCREMENT `aunet_freshmen`
 --
 ALTER TABLE `aunet_freshmen`
-  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
