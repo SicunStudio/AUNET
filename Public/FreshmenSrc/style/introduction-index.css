@@ -1,4 +1,4 @@
-body{background:url(../images/background.jpg) no-repeat fixed center;background-size:100%;font-family:Microsoft YaHei;font-size:16px}
+body{background:url(../images/background.jpg) no-repeat fixed center;background-size:100% 100%;font-family:Microsoft YaHei;font-size:16px}
 .col-xs-4{padding:auto auto; margin:auto auto}
 .row{position:relative;top:40px;text-align:center}
 a{text-decoration:none;color:#000;font-weight:bolder}
