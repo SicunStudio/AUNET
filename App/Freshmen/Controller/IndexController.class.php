@@ -1,1 +1,1 @@
-<?phpnamespace Freshmen\Controller;use Think\Controller;class IndexController extends Controller {    public function index(){        $this->display();    }}
+<?phpnamespace Freshmen\Controller;use Think\Controller;class IndexController extends Controller {    public function index(){//        layout('common_layout');        $this->display();    }}

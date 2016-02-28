@@ -1,6 +1,6 @@
 body{background:url(../images/index-background.jpg) no-repeat fixed center;
 	}
-.title{text-align:center;position:relative;top:180px; }
+.title{text-align:center;position:relative;top:140px; }
 .letter{width:90%}
 .pet{width:150px; display:block}
 .chose{position:relative;top:240px;text-align:center}
@@ -9,3 +9,25 @@ img{padding:auto auto;margin:auto auto;}
 a{text-decoration:none;color:#356462}
 a:hover{text-decoration:none;color:#a6cb3d}
 p{position:relative;text-align:center;bottom:0}
+@media screen and (min-width: 768px){
+	.img-s {
+		display: none;
+	}
+	.img-l {
+		display: block;
+	}
+}
+@media screen and (max-width: 768px){
+	.title {
+		top: 60px;
+	}
+	.chose {
+		top: 150px;
+	}
+	.img-s {
+		display: block;
+	}
+	.img-l {
+		display: none;
+	}
+}

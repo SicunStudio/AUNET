@@ -1,0 +1,15 @@
+html, body {
+    height: 100%;
+}
+
+.bodycontainer {
+    min-height: 100%; position: relative;
+}
+
+.maincontent {
+    padding-bottom: 40px;
+}
+
+footer {
+    position: absolute; bottom: 0px; width: 100%; text-align: center; height: 40px; color: #000; background-color: transparent; margin-top: 10px
+}

@@ -1,5 +1,5 @@
 body{background:url(../images/background.jpg)  no-repeat fixed center;background-size:100% 100%;font-family:Microsoft YaHei}
-.title{font-size:50px;font-weight:bolder;position:relative;top:0;/*left:200px;*/;display:inline*/}
+.title{font-size:50px;font-weight:bolder;position:relative;top:0;/*left:200px;*/display:inline;}
 .require,.figure{line-height:33px;font-size:18px;/*font-weight:bold*/;display:block;border:5px red;border-bottom:dotted 2px;
 				/*position:relative;top:-50px;left:50%;*/width:100%;/*position:absolute;left:200px;*/
 }
@@ -18,22 +18,17 @@ a:hover{text-decoration:none}
 
 button{visibility:hidden;position:absolute}
 .icon-bar{display:block;background:#356462;height:4px;width:12px;margin:2px;border-radius:15px 15px 15px 15px;}
-.down{width:80px;background:#747474;display:block;position:fixed;right:14px;top:-80px;display:none;transition: all 0.5s}
-.down a,.down p{display:block;line-height:30px;text-align:center;color:#FDFDFD;font-size:16px;}
-.down a[href="index.html"]{padding-top:20px}
-.down p{line-height:10px}
+
 @media all and (max-width:736px) {
-	.down{display:block;z-index:7;background:rgba(2,26,22,0.3);}
-	.down a:hover{background:rgba(2,26,22,0.6);}
-	.down:hover{position:fixed;right:14px;top:0px;}
+
 	.leave{display:none}
 	button{visibility:visible;border-radius:5px 5px 5px 5px;width:32px;text-align:center;margin:20px 20px}
-	img{width:100px;position:relative;top:80px;filter:alpha(opacity=30); 
--moz-opacity:0.3; 
--khtml-opacity: 0.3; 
+	img{width:100px;position:relative;top:80px;filter:alpha(opacity=30);
+-moz-opacity:0.3;
+-khtml-opacity: 0.3;
 opacity: 0.3;}
-	.title{font-size:25px;font-weight:bolder;position:relative;top:40px;/*left:200px;*/;display:inline*/}
-	.require,.figure{line-height:30px;font-size:12px;position:relative;bottom:40px/*font-weight:bold*/;display:block;border:5px red;border-bottom:dotted 2px;/*background:rgba(2,26,22,0.2);*/text-align:center;font-weight:600; 
+	.title{font-size:25px;font-weight:bolder;position:relative;/*top:40px;*//*left:200px;*/;display:inline*/}
+	.require,.figure{line-height:28px;font-size:14px;position:relative;bottom:40px/*font-weight:bold*/;display:block;border:5px red;border-bottom:dotted 2px;/*background:rgba(2,26,22,0.2);*/text-align:center;/*font-weight:600; */
 				/*position:relative;top:-50px;left:50%;*/width:70%;/*position:absolute;left:200px;*/margin:0 auto
 }
 	ul{display:none}

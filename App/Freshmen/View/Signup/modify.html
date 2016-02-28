@@ -1,185 +1,191 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>signup</title>
-<link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
-   <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
-   <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-   <style type="text/javascript">
-   function check_all()
-		{
-			var name=document.getElementById("name");
-			var sex=document.getElementById("sex");
-			var tel=document.getElementById("tel");
-			var depart1=document.getElementById("depart1");
-			var depart2=document.getElementById("depart2");
-			var concede=document.getElementById("concede");
-			var introduction=document.getElementById("introduction");
-			if((sex.value=="undefined ")||(name.value=="undefined ")||(tel.value=="undefined ")||(depart1.value=="undefined ")||(depart2.value=="undefined ")||(introduction.value=="undefined ")||(concede.value=="undefined "))
-			alert("请填完表格信息")}; 
-   </style>
-<style type="text/css">
-body{margin:0px;
-     background-repeat: repeat-y;
-     background-size:100%;
-	 background-color:#FFF;
-	 background:url(signupBackgound.png)
-}
-.header{
-	margin:60px auto auto 50%;
-	padding:0px
-	background-color:#FFF;
-	width:55%;
-	height:10%;
-	float:left;
-	font-size:24px;
-	color:#000;
-}
-.main{
-	margin:80px auto auto 10%;
-	padding:30px;
-	width:80%;
-	height:800px;
-	float:left;
-	font-size:24px;
-	color:#000;
-}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>报名信息修改</title>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/bootstrap/css/bootstrap.min.css"/>
+    <script type="text/javascript" src="__PUBLIC__/js/jquery.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function check_all()
+        {
+            var complete=true;
+            $("[required='required']").each(
+                    function(){ console.log($(this).val());
+                        if($(this).val()==""){
+                            complete=false;
+
+                        }
+                    }
+            );
+            if(!complete){
+                alert("表格信息未填完整");
+            }
+            else{
+                if($("[name='depart1']").val()==$("[name='depart2']").val())
+                {
+                    alert("第一志愿和第二志愿请填写不同部门");
+                }
+                else{
+                    $("#form-signup").submit();
+                }
+            }
+        };
+    </script>
+    <style type="text/css">
+    body{
+        margin:0px;
+        font-family: "微软雅黑";
+        /*background-repeat: no-repeat;*/
+
+
+        /*background-color:#FFF;*/
+        background:url(__PUBLIC__/FreshmenSrc/images/background.jpg) no-repeat fixed center;
+        background-size:100% 100%;
+        /*background-position: fixed;*/
+    }
+    .header{
+        margin:60px auto auto 50%;
+        padding:0px;
+        background-color:#FFF;
+        width:55%;
+        height:10%;
+        float:left;
+        font-size:24px;
+        color:#000;
+    }
+    .form-control {
+        background-color: rgba(255,255,255,0.3);
+    }
 </style>
 </head>
 <body>
 <div class="container">
-
-<div class="header col-xs-12">
-<ul class="nav nav-pills">
-   <li class="active" name="signup"><a href="#">我要报名</a></li>
-   <li name="introduction"><a href="#">部门介绍</a></li>
-   <li name="modify"><a href="#">修改信息</a></li>
-</ul>
-</div>
+    <div class="row">
+        <div class="col-sm-offset-2"><h2>加入社联</h2></div>
+    </div>
 
 
-<div class="main">
-   <form class="bs-example bs-example-form" role="form">
-      <div class="input-group col-xs-12">
-         <span class="input-group-addon">姓名</span>
-         <p>value="{$data.name}"</p>
-      </div>
-      </br>
- <div class="input-group">
-         <span class="input-group-addon">学号</span>
-         <input name="uid" id="uid" type="text" class="form-control"  value="{$data.uid}" >
-      </div>
-      <br>
- <div class="input-group">
-      <span class="input-group-addon">寝室地址</span>
-      <input name="dorm" type="text" class="form-control"  value="{$data.dorm}" />
- </div>
-      <br> <div class="input-group">
-         <span class="input-group-addon">联系电话</span>
-         <p> value="{$data.tel}" </p>
-      </div>
-      <br>
-	    <div class="input-group">
-      <span class="input-group-addon">QQ号码</span>
-      <input name="qq" id="qq" type="text" class="form-control" value="{$data.qq}"/>
-      </div>
-      <br>
-   </form>
-<div class="form-group">
-      <label for="" class="col-xs-5 control-label"><font size="3">性别</font></label>
-      <div class="col-xs-7">
-          <select name="" class="form-control"  value="{$data.}" >
-            <option value="男" selected>男</option>
-            <option value="女">女</option>
-          </select>
+    <form class="form-horizontal" id="form-signup" method="post" role="form" action="{:U('Freshmen/Signup/modify_sure')}">
+        <div class="form-group">
+            <div class="col-xs-8 col-xs-offset-2">
+                标注*号的为必填
+            </div>
         </div>
-    </div>
-
-
-</br>
-</br>
-<div class="form-group">
-        <label for="" class="col-xs-3 control-label"><font size="3">第一志愿</font></label>
-        <div class="col-xs-9"></div>
-    </div>
-
-<span class="col-xs-9">
-<select name="select" class="form-control">
-  <option value="财务部" selected="">财务部</option>
-  <option value="社团外联企划部">社团外联企划部</option>
-  <option value="秘书部" selected="">秘书部</option>
-  <option value="人力资源部" selected="">人力资源部</option>
-  <option value="社团部" selected="">社团部</option>
-  <option value="行政监察部" selected="">行政监察部</option>
-  <option value="外联部" selected="">外联部</option>
-  <option value="公共关系部" selected="">公共关系部</option>
-  <option value="媒体部" selected="">媒体部</option>
-  <option value="宣传部" selected="">宣传部</option>
-  <option value="思存工作室" selected="">思存工作室</option>
-  <option value="新媒体工作室" selected="">新媒体工作室</option>
-  <option value="文艺拓展部" selected="">文艺拓展部</option>
-</select>
-</span>
-
-</br>
-</br>
-<div class="form-group">
-        <label for="" class="col-xs-3 control-label"><font size="3">第二志愿</font></label>
-        <div class="col-xs-9"></div>
-    </div>
-
-<span class="col-xs-9">
-<select name="select" class="form-control">
-  <option value="财务部" selected="">财务部</option>
-  <option value="社团外联企划部">社团外联企划部</option>
-  <option value="秘书部" selected="">秘书部</option>
-  <option value="人力资源部" selected="">人力资源部</option>
-  <option value="社团部" selected="">社团部</option>
-  <option value="行政监察部" selected="">行政监察部</option>
-  <option value="外联部" selected="">外联部</option>
-  <option value="公共关系部" selected="">公共关系部</option>
-  <option value="媒体部" selected="">媒体部</option>
-  <option value="宣传部" selected="">宣传部</option>
-  <option value="思存工作室" selected="">思存工作室</option>
-  <option value="新媒体工作室" selected="">新媒体工作室</option>
-  <option value="文艺拓展部" selected="">文艺拓展部</option>
-</select>
-</span>
-
-</br>
-</br>
-<div class="form-group">
-      <label for="" class="col-xs-5 control-label"><font size="3">是否服从调剂</font></label>
-      <div class="col-xs-7">
-          <select name="" class="form-control">
-            <option value="是" selected="">是</option>
-            <option value="否">否</option>
-          </select>
+        <input type="hidden" value="{$data.id}" name="id">
+        <div class="form-group"><label for="" class="col-sm-2 control-label">*姓名</label>
+            <div class="col-sm-10">{$data.name}</div>
         </div>
-    </div>
+
+        <div class="form-group">
+            <label for="" class="col-sm-2 control-label">*性别</label>
+            <div class="col-sm-10">
+                <select name="sex" value="{$data.sex}" class="form-control">
+                    <option value="男">男</option>
+                    <option value="女">女</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group"><label for="" class="col-sm-2 control-label">学号</label>
+            <div class="col-sm-10"><input name="uid" id="uid" type="text" value="{$data.uid}" class="form-control"></div>
+        </div>
+        <div class="form-group"><label for="" class="col-sm-2 control-label">专业班级</label>
+            <div class="col-sm-10"><input name="class" required="required" type="text" value="{$data.class}" class="form-control" /></div>
+        </div>
+
+        <div class="form-group"><label for="" class="col-sm-2 control-label">*寝室地址</label>
+            <div class="col-sm-10"><input name="dorm" required="required" value="{$data.dorm}" type="text" class="form-control" /></div>
+        </div>
+
+        <div class="form-group"><label for="" class="col-sm-2 control-label">*联系电话</label>
+            <div class="col-sm-10">{$data.tel}</div>
+        </div>
+
+        <div class="form-group"><label for="" class="col-sm-2 control-label">QQ号码</label>
+            <div class="col-sm-10"><input name="qq" value="{$data.qq}" id="qq" type="text" class="form-control"/></div>
+        </div>
+
+        <!--div.form-group>label.col-sm-2.control-label+div.col-sm-10-->
+
+        <!--div.form-group>label.col-sm-2.control-label+div.col-sm-10-->
+
+        <!--div.form-group>label.col-sm-2.control-label+div.col-sm-10-->
 
 
-</br>
-</br>
-</br>
-</br>
-<button required="required" type="button" class="btn btn-info">自我介绍</button>
-</br>
-<textarea name="introduction" cols="50" rows="3"></textarea>
-</br>
-</br>
-<button type="button" class="btn btn-info">对社联的期望</button>
-</br>
-<textarea name="expectation" cols="50" rows="3"></textarea>
-</br>
-</br>
-<button type="button" class="btn btn-success  btn-lg" onclick="check_all();">提交信息</button>
-</br>
+
+        <div class="form-group">
+            <label for="" class="col-sm-2 control-label">*第一志愿</label>
+            <div class="col-sm-10">
+                <select name="depart1" value="{$data.depart1}" class="form-control">
+                    <option value="财务部" selected>财务部</option>
+                    <option value="社团外联企划部">社团外联企划部</option>
+                    <option value="秘书部">秘书部</option>
+                    <option value="人力资源部">人力资源部</option>
+                    <option value="社团部">社团部</option>
+                    <option value="行政监察部">行政监察部</option>
+                    <option value="外联部">外联部</option>
+                    <option value="公共关系部">公共关系部</option>
+                    <option value="媒体部">媒体部</option>
+                    <option value="宣传部">宣传部</option>
+                    <option value="思存工作室">思存工作室</option>
+                    <option value="新媒体工作室">新媒体工作室</option>
+                    <option value="文艺拓展部">文艺拓展部</option>
+                </select>
+            </div>
+
+        </div>
+
+        <div class="form-group">
+            <label for="" class="col-sm-2 control-label">*第二志愿</label>
+            <div class="col-sm-10">
+                <select name="depart2" value="{$data.depart2}" class="form-control">
+                    <option value="财务部">财务部</option>
+                    <option value="社团外联企划部" selected>社团外联企划部</option>
+                    <option value="秘书部">秘书部</option>
+                    <option value="人力资源部">人力资源部</option>
+                    <option value="社团部">社团部</option>
+                    <option value="行政监察部">行政监察部</option>
+                    <option value="外联部">外联部</option>
+                    <option value="公共关系部">公共关系部</option>
+                    <option value="媒体部">媒体部</option>
+                    <option value="宣传部">宣传部</option>
+                    <option value="思存工作室">思存工作室</option>
+                    <option value="新媒体工作室">新媒体工作室</option>
+                    <option value="文艺拓展部">文艺拓展部</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="" class="col-sm-2 control-label">*是否服从调剂</label>
+            <div class="col-sm-7">
+                <select name="concede" value="{$data.concede}" class="form-control">
+                    <option value="是">是</option>
+                    <option value="否">否</option>
+                </select>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label for="" class="col-sm-2 control-label">*自我介绍</label>
+            <div class="col-sm-10"><textarea name="introduction" class="form-control" required="required" cols="50" rows="3">{$data.introduction}</textarea></div>
+        </div>
+        <div class="form-group">
+            <label for="" class="col-sm-2 control-label">*对社联的期望</label>
+            <div class="col-sm-10"><textarea name="expectation" class="form-control" required="required" cols="50" rows="3">{$data.expectation}</textarea></div>
+        </div>
+
+        <button type="button" class="btn btn-success  btn-lg" onclick="check_all()" style="width: 100px; margin: 10px auto; display: block;">提交信息</button>
+    </form>
 </div>
-
-</div>
-</div>
-
+    <script>
+        $("[name='sex'] option[value='{$data.sex}']").attr("selected",true);
+        $("[name='depart1'] option[value='{$data.depart1}']").attr("selected",true);
+        $("[name='depart2'] option[value='{$data.depart2}']").attr("selected",true);
+    </script>
 </body>
 </html>

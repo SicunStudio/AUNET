@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="__PUBLIC__/js/jquery.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/FreshmenSrc/style/downlist.css"/>
+    <link rel="stylesheet" href="__PUBLIC__/FreshmenSrc/style/footer.css">
+</head>
+<body>
+<div class="down">
+    <a href="{:U('Freshmen/Index/index')}">首页</a>
+    <a href="{:U('Freshmen/Introduction/index')}">部门介绍</a>
+    <a href="{:U('Freshmen/Signup/signup')}">我要报名</a>
+    <p>点击下拉</p>
+</div>
+
+<div class="bodycontainer">
+    <div class="maincontent">
+        {__CONTENT__}
+    </div>
+    <footer>
+        <p>Copyright &copy; 2008-<?php echo date("Y"); ?> AU&nbsp;SicunStudio. All&nbsp;Rights&nbsp;Reserved</p>
+    </footer>
+</div>
+
+</body>
+</html>
