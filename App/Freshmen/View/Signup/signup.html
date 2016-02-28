@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>signup</title>
+<link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+   <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+   <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+   <script type="text/javascript">
+   function check_all()
+		{
+			console.log("aaa");
+			var name=document.getElementById("name");
+			console.log(name.getAttribute("value"));
+			var sex=document.getElementById("sex");
+			var tel=document.getElementById("tel");
+			var depart1=document.getElementById("depart1");
+			var depart2=document.getElementById("depart2");
+			var concede=document.getElementById("concede");
+			var introduction=document.getElementById("introduction");
+			if((sex.value=="")||(name.value=="")||(tel.value=="undefined ")||(depart1.value=="undefined ")||(depart2.value=="undefined ")||(introduction.value=="undefined ")||(concede.value=="undefined "))
+			{alert("请填完表格信息");
+				}
+			}; 
+   </script>
+<style type="text/css">
+body{margin:0px;
+     background-repeat: repeat-y;
+     background-size:100%;
+	 background-color:#FFF;
+	 background:url(signupBackgound.png)
+}
+.header{
+	margin:60px auto auto 50%;
+	padding:0px
+	background-color:#FFF;
+	width:55%;
+	height:10%;
+	float:left;
+	font-size:24px;
+	color:#000;
+}
+.main{
+	margin:80px auto auto 10%;
+	padding:30px;
+	width:80%;
+	height:800px;
+	float:left;
+	font-size:24px;
+	color:#000;
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header col-xs-12">
+<ul class="nav nav-pills">
+   <li class="active" name="signup"><a href="#">我要报名</a></li>
+   <li name="introduction"><a href="#">部门介绍</a></li>
+   <li name="modify"><a href="#">修改信息</a></li>
+</ul>
+</div>
+
+
+<div class="main">
+   <form class="bs-example bs-example-form" role="form">
+      <div class="input-group col-xs-12">
+         <span class="input-group-addon">姓名</span>
+         <input onkeydown="check_all()" required="required" name="name" id="name" type="text" class="form-control">
+      </div>
+      </br>
+ <div class="input-group">
+         <span class="input-group-addon">学号</span>
+         <input name="uid" id="uid" type="text" class="form-control">
+      </div>
+      <br>
+ <div class="input-group">
+      <span class="input-group-addon">寝室地址</span>
+      <input name="dorm" type="text" class="form-control" />
+ </div>
+      <br> <div class="input-group">
+         <span class="input-group-addon">联系电话</span>
+         <input required="required" name="tel" id="tel" type="text" class="form-control">
+      </div>
+      <br>
+	    <div class="input-group">
+      <span class="input-group-addon">QQ号码</span>
+      <input name="qq" id="qq" type="text" class="form-control"/>
+      </div>
+      <br>
+   </form>
+<div class="form-group">
+      <label for="" class="col-xs-5 control-label"><font size="3">性别</font></label>
+      <div class="col-xs-7">
+          <select name="" class="form-control">
+            <option value="男" selected="">男</option>
+            <option value="女">女</option>
+          </select>
+        </div>
+    </div>
+
+
+</br>
+</br>
+<div class="form-group">
+        <label for="" class="col-xs-3 control-label"><font size="3">第一志愿</font></label>
+        <div class="col-xs-9"></div>
+    </div>
+
+<span class="col-xs-9">
+<select name="select" class="form-control">
+  <option value="财务部" selected="">财务部</option>
+  <option value="社团外联企划部">社团外联企划部</option>
+  <option value="秘书部" selected="">秘书部</option>
+  <option value="人力资源部" selected="">人力资源部</option>
+  <option value="社团部" selected="">社团部</option>
+  <option value="行政监察部" selected="">行政监察部</option>
+  <option value="外联部" selected="">外联部</option>
+  <option value="公共关系部" selected="">公共关系部</option>
+  <option value="媒体部" selected="">媒体部</option>
+  <option value="宣传部" selected="">宣传部</option>
+  <option value="思存工作室" selected="">思存工作室</option>
+  <option value="新媒体工作室" selected="">新媒体工作室</option>
+  <option value="文艺拓展部" selected="">文艺拓展部</option>
+</select>
+</span>
+
+</br>
+</br>
+<div class="form-group">
+        <label for="" class="col-xs-3 control-label"><font size="3">第二志愿</font></label>
+        <div class="col-xs-9"></div>
+    </div>
+
+<span class="col-xs-9">
+<select name="select" class="form-control">
+  <option value="财务部" selected="">财务部</option>
+  <option value="社团外联企划部">社团外联企划部</option>
+  <option value="秘书部" selected="">秘书部</option>
+  <option value="人力资源部" selected="">人力资源部</option>
+  <option value="社团部" selected="">社团部</option>
+  <option value="行政监察部" selected="">行政监察部</option>
+  <option value="外联部" selected="">外联部</option>
+  <option value="公共关系部" selected="">公共关系部</option>
+  <option value="媒体部" selected="">媒体部</option>
+  <option value="宣传部" selected="">宣传部</option>
+  <option value="思存工作室" selected="">思存工作室</option>
+  <option value="新媒体工作室" selected="">新媒体工作室</option>
+  <option value="文艺拓展部" selected="">文艺拓展部</option>
+</select>
+</span>
+
+</br>
+</br>
+<div class="form-group">
+      <label for="" class="col-xs-5 control-label"><font size="3">是否服从调剂</font></label>
+      <div class="col-xs-7">
+          <select name="" class="form-control">
+            <option value="是" selected="">是</option>
+            <option value="否">否</option>
+          </select>
+        </div>
+    </div>
+
+
+</br>
+</br>
+</br>
+</br>
+<button required="required" type="button" class="btn btn-info">自我介绍</button>
+</br>
+<textarea name="introduction" class="form-control" cols="50" rows="3"></textarea>
+</br>
+</br>
+<button type="button" class="btn btn-info">对社联的期望</button>
+</br>
+<textarea name="expectation" class="form-control" cols="50" rows="3"></textarea>
+</br>
+</br>
+<button type="button" class="btn btn-success  btn-lg" onclick="check_all()">提交信息</button>
+<input type="submit" />asfa</form>
+</br>
+</div>
+
+</div>
+</div>
+
+</body>
+</html>
