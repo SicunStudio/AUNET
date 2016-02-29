@@ -42,30 +42,20 @@
 			//创建新条目（但尚未保存）
 			$DBase->create($data);
 			//检验是否存在重复提交
-				//用于判断的唯一字段为uid和tel
+				//用于判断的唯一字段为tel
 			
 			$dupCheck = $DBase->where('tel="' . $data['tel'] . '"')->find();
 			if($dupCheck != NULL){			//抓到重复提交了
-				$this->error('你已经报过名了',U('/Freshmen/Index'));
+				$this->error('你已经报过名了',U('/Freshmen/Index/index'));
 
 			}
-//			elseif($dupCheck == false){		//出错了
-//				$this->error("啊呀。。。出错了。。。<br> 待会再试试吧，是小编不好( ▼-▼ )<br>");
-//			}
 			else		//如果未发现重复的数据，就直接写入
 			{
-				$DBase->add();
+				if($data['name']!=null && $data['tel']!=null){
+					$DBase->add();
+				}
 				$this->success('报名表提交成功啦！',U('/Freshmen/Index'),3);
-				//检查数据是否真正被写入了
-//				$finishCheck = $DBase->where($data)->find();
-//				if($finishCheck!= NULL){
-//
-//					//echo "<br>报名表提交成功啦！<br>";
-//				}
-//				else 	//如果出错或未写入
-//				{
-//					$this->error("啊呀。。。出错了。。。<br> 待会再试试吧，是小编不好( ▼-▼ )<br>");
-//				}
+				
 			}
 		}
 		
