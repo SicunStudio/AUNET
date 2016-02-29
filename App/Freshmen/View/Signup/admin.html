@@ -27,6 +27,7 @@
             <th>电话</th>
             <th>第一志愿</th>
             <th>第二志愿</th>
+			<th>提交时间</th>
             <th>下载</th>
         </tr>
         <foreach name="list" item="v" empty="暂无数据">
@@ -38,6 +39,7 @@
                 <td>{$v.tel}</td>
                 <td>{$v.depart1}</td>
                 <td>{$v.depart2}</td>
+				<td>{$v.createtime}</td>
                 <td>
                     <form action="{:U('Freshmen/Signup/downloadword')}" method="post">
                         <input type="hidden" name="id" value="{$v.id}">
