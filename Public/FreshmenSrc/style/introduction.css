@@ -1,5 +1,5 @@
-body{background:url(../images/background.jpg)  no-repeat fixed center;background-size:100% 100%;font-family:Microsoft YaHei}
-.title{font-size:50px;font-weight:bolder;position:relative;top:0;/*left:200px;*/display:inline;}
+body{background:url(../images/background.jpg)  no-repeat /*fixed center*/;background-size:100% 100%;font-family:Microsoft YaHei; }
+.title{font-size:50px;font-weight:bolder;position:relative;top:0;/*left:200px;*//*display:inline;*/}
 .require,.figure{line-height:33px;font-size:18px;/*font-weight:bold*/;display:block;border:5px red;border-bottom:dotted 2px;
 				/*position:relative;top:-50px;left:50%;*/width:100%;/*position:absolute;left:200px;*/
 }
@@ -27,7 +27,7 @@ button{visibility:hidden;position:absolute}
 -moz-opacity:0.3;
 -khtml-opacity: 0.3;
 opacity: 0.3;}
-	.title{font-size:25px;font-weight:bolder;position:relative;/*top:40px;*//*left:200px;*/;display:inline*/}
+	.title{font-size:25px;font-weight:bolder;position:relative;top:40px;/*left:200px;*/;/*display:inline*/}
 	.require,.figure{line-height:28px;font-size:14px;position:relative;bottom:40px/*font-weight:bold*/;display:block;border:5px red;border-bottom:dotted 2px;/*background:rgba(2,26,22,0.2);*/text-align:center;/*font-weight:600; */
 				/*position:relative;top:-50px;left:50%;*/width:70%;/*position:absolute;left:200px;*/margin:0 auto
 }

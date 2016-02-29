@@ -3,4 +3,4 @@
 .down:first-child{padding-top:20px}
 .down p{line-height:20px}.down{display:block;z-index:7;background:rgba(2,26,22,0.3);}
 .down a:hover {background:rgba(2,26,22,0.6); text-decoration: none; color: #fff;}
-.down:hover{position:fixed;right:14px;top:0px;}
+.down.showed {position:fixed;right:14px;top:0px;}
