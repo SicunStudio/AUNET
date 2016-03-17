@@ -121,7 +121,7 @@
 			}
 			
 		}
-		public function admin(){
+		public function h6c7u3lk(){
 			$DBase = M('freshmen');
 			$readData = $DBase->select();
 			$this->assign('list',$readData);
