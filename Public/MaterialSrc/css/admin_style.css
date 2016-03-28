@@ -71,10 +71,42 @@
     word-break: keep-all;
 }
 
-.Applylist-ApproveState {
+.Applylist-ApproveStatePrint {
     height: 20px;
+    overflow: hidden;
+
+}
+.Applylist-ApprovePrint{
+    margin: 0px 5px;
+    border-radius: 3px;
+    border: solid 1px;
+    font-size: 12px;
+    line-height: 16px;
+    float: left;
+    padding: 1px 5px;
+}
+.Applylist-ApprovePrint[data-approveprint='0'] {
+    border-color: #ef5350;
+    color: #ef5350;
+}
+
+.Applylist-ApprovePrint[data-approveprint='0']:before {
+    content: '未打印';
+}
+
+.Applylist-ApprovePrint[data-approveprint='1'] {
+    border-color: #4caf50;
+    color: #4caf50;
+}
+.Applylist-ApprovePrint[data-approveprint='1']:before {
+    content: '已打印';
+}
+
+
+.Applylist-ApproveState {
     line-height: 20px;
     font-size: 16px;
+    float: left;
 }
 
 .Applylist-ApproveActivity {
@@ -92,13 +124,11 @@
     height: 35px;
 }
 
-
 .Applylist-Approve button {
     margin: 0px auto;
     display: block;
     width: 80px;
 }
-
 
 .Applylist-Download {
     height: 35px;

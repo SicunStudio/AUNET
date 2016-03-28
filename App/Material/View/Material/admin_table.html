@@ -21,7 +21,6 @@
                     <div class="col-sm-8"><h4>申请者：<span id="modalPreview-UserName">table.UserName</span></h4></div>
 
                     <div class="col-sm-4">
-                        <!--此处换成表格下载地址//TODO-->
                         <form action="{:U('Material/Load/downloadword')}" enctype="multipart/form-data" method="POST">
                             <input type="hidden" class="modal-input-action-type" name="action_type" value="">
                             <input type="hidden" class="modal-input-ID" name="ID" value="">
@@ -45,18 +44,30 @@
                     <input type="hidden" class="modal-input-action-type" name="action_type" value="">
                     <input type="hidden" class="modal-input-ID" name="ID" value="">
                     <input type="hidden" class="modal-input-UserName" name="UserName" value="">
-                    <div class="col-md-3" style="text-align: left">
-                        <h4>初审</h4>
-                        <input type="text" class="form-control" name="ApproveActivity" id="modalPreview-ApproveActivity">
+                    <div class="col-md-5" style="text-align: left">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <h4>初审</h4>
+                                <input type="text" class="form-control" name="ApproveActivity" id="modalPreview-ApproveActivity">
+                            </div>
+                            <div class="col-md-5">
+                                <h4>审批结果</h4>
+                                <select name="ApproveState" id="modalPreview-ApproveState" class="form-control">
+                                    <option value="审批中" selected>审批中</option>
+                                    <option value="已通过">已通过</option>
+                                    <option value="未通过">未通过</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <input type="checkbox" name="ApprovePrint" id="modalPreview-ApprovePrint">
+                                <label for="modalPreview-ApprovePrint">是否已打印</label>
+                            </div>
+                        </div>
+
                     </div>
-                    <div class="col-md-2" style="text-align: left">
-                        <h4>审批结果</h4>
-                        <select name="ApproveState" id="modalPreview-ApproveState" class="form-control">
-                            <option value="审批中" selected>审批中</option>
-                            <option value="已通过">已通过</option>
-                            <option value="未通过">未通过</option>
-                        </select>
-                    </div>
+                    <!--</div>-->
                     <div class="col-md-5" style="text-align: left">
                         <h4>审批意见</h4>
                         <textarea name="ApproveNote" id="modalPreview-ApproveNote" class="form-control"></textarea>
@@ -132,13 +143,17 @@
                         <div class="Applylist-ApproveTime">审批时间：&nbsp;<span>{$u.approvetime}</span></div>
                     </div>
                     <div class="col-sm-4">
-                        <div class="Applylist-ApproveState" data-approvestate="{$u.approvestate}">{$u.approvestate}</div>
+                        <div class="Applylist-ApproveStatePrint">
+                            <div class="Applylist-ApprovePrint" data-approveprint="{$u.approveprint}"></div>
+                            <div class="Applylist-ApproveState" data-approvestate="{$u.approvestate}">{$u.approvestate}</div>
+                        </div>
+
                         <div class="Applylist-ApproveActivity">初审：{$u.approveactivity}</div>
                         <div class="Applylist-ApproveNote">{$u.approvenote}</div>
                     </div>
                     <div class="col-sm-2">
                         <div class="Applylist-Approve">
-                            <button class="btn btn-info btn-approve" data-toggle="modal" data-action-target="{:U('Material/Load/preview')}" data-target="#modalPreview" data-action-type="{$v[0]}" data-id="{$u.id}" data-approveactivity="{$u.approveactivity}" data-username="{$u.username}" data-storeurl="__ROOT__{$u.storeurl}">审批</button>
+                            <button class="btn btn-info btn-approve" data-toggle="modal" data-action-target="{:U('Material/Load/preview')}" data-target="#modalPreview" data-action-type="{$v[0]}" data-id="{$u.id}" data-approveactivity="{$u.approveactivity}" data-username="{$u.username}" data-storeurl="__ROOT__{$u.storeurl}" data-approveprint="{$u.approveprint}">审批</button>
                         </div>
 
                         <div class="Applylist-Download">

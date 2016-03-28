@@ -50,7 +50,7 @@ class MaterialController extends CommonController
         {
             //print("$list_name</br>");
             $list = D(strtolower($name_en));
-            $tmp = $list->where("UserName='%s'", $user_name)->getField('ID,ApproveState,CreateTime,ApproveNote,ApproveTime');
+            $tmp = $list->where("UserName='%s'", $user_name)->getField('ID,ApproveState,ApprovePrint,CreateTime,ApproveNote,ApproveTime');
             //print_r($tmp);
             if ($tmp)
             {
@@ -103,49 +103,12 @@ class MaterialController extends CommonController
 	//后台管理审批状态修改函数
     public function material_adupload()
     {
-		/*
-        $pretype = I('POST.action_type');
-		$pre = 'aunet_material_';
-		$type = $pre.$pretype;*/
-
 		$type = I('POST.action_type');
 		$table = strtolower($type);
         $sql = M("aunet.$table" , 'aunet_material_');
         $all_data = I('POST.');
         $data = array();
-        
-		/*$data[0] = array();
-        $data[1] = array();
-        $data[2] = array();
-        foreach ($all_data as $key => $value)
-        {
-            if (preg_match('/' . $type . '_(\d*)$/', $key, $match))
-            {
-                array_push($data[$value], $match[1]);
-            }
-        }
-
-        if (count($data[1]) > 0){
-            $map['ID'] = array('in', $data[1]);
-            $data['ApproveState']= '已通过';
-			$data['AprroveTime'] = date("Y年n月j日 G:i:s");
-			$sql->where($map)->save($data);
-        }else{
-            $map['ID'] = array('in', $data[2]);
-            $data['ApproveState'] = '未通过';
-			$time = date("Y年n月j日 G:i:s");
-			$sql->where($map)->save($data);
-        }
-
-        foreach ($all_data as $key => $value)
-        {
-            if (preg_match('/' . $type . '_Approve_(\d*)$/', $key, $match))
-            {
-                $sql->where('ID=' . $match[1])->setField('ApproveNote', $value);
-            }
-        }
-		*/
-
+     
         $data['ApproveState']= $all_data['ApproveState'];
         $data['ApproveActivity']= $all_data['ApproveActivity'];
         if($all_data['ApproveState']!='审批中'){
@@ -154,6 +117,8 @@ class MaterialController extends CommonController
 //            $data['ApproveTime'] = "";
         }
         $data['ApproveNote'] = $all_data['ApproveNote'];
+        if ($all_data['ApprovePrint']==null){ $data['ApprovePrint'] = 0; }
+        else{ $data['ApprovePrint'] = 1; };
         $sql->where('ID=' .$all_data[ID])->save($data);
 
         $this->success(L('操作成功！'));
@@ -176,7 +141,7 @@ class MaterialController extends CommonController
         {
             //print("$list_name</br>");
             $list = D(strtolower($name_en));
-            $tmp = $list->getField('ID,UserName,CreateTime,ApproveTime,ApproveState,ApproveActivity,ApproveNote,StoreURL');
+            $tmp = $list->getField('ID,UserName,CreateTime,ApproveTime,ApprovePrint,ApproveState,ApproveActivity,ApproveNote,StoreURL');
 			if ($tmp)
             {
                 $ans[$name_en] = array(substr($name_en,9),$name_cn,$tmp);
