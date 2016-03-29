@@ -56,9 +56,9 @@
             <th width="130px">提交时间</th>
             <th width="100px">种类</th>
             <th width="80px">审核结果</th>
-            <th width="80px">审核进度</th>
-            <th width="130px">审批时间</th>
-            <th width="180px">审核意见</th>
+            <th width="100px">审核进度</th>
+            <th width="120px">审批时间</th>
+            <th width="170px">审核意见</th>
         </tr>
 
         <foreach name="list" item="v" key="lm">
@@ -68,7 +68,7 @@
                     <td>{$v[0]}</td>
                     <td><span data-approvestate="{$u.approvestate}">{$u.approvestate}</span></td>
                     <td>
-                        <if condition="($u.approvestate eq 审批中) AND ($u.approveprint eq 0)">等待初审</if>
+                        <if condition="($u.approvestate eq 审批中) AND ($u.approveprint eq 0)">初审中</if>
                         <if condition="($u.approvestate eq 审批中) AND ($u.approveprint eq 1)">初审通过</if>
                         <if condition="($u.approvestate eq 已通过) AND ($u.approveprint eq 1)">审批通过，请取表</if>
                         <if condition="$u.approvestate eq 未通过">审批未通过</if>

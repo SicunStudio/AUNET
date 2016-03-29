@@ -111,11 +111,7 @@ class MaterialController extends CommonController
      
         $data['ApproveState']= $all_data['ApproveState'];
         $data['ApproveActivity']= $all_data['ApproveActivity'];
-        if($all_data['ApproveState']!='审批中'){
-            $data['ApproveTime'] = date("Y-m-d H:i:s");
-        }else{
-//            $data['ApproveTime'] = "";
-        }
+        $data['ApproveTime'] = date("Y-m-d H:i:s");
         $data['ApproveNote'] = $all_data['ApproveNote'];
         if ($all_data['ApprovePrint']==null){ $data['ApprovePrint'] = 0; }
         else{ $data['ApprovePrint'] = 1; };
