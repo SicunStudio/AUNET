@@ -51,19 +51,20 @@
 </div>
 <p></p>
 <div class="table-responsive">
-    <table class="table-bordered table table-hover" width="700px">
+    <table class="table-bordered table table-hover" width="750px">
         <tr>
             <th width="130px">提交时间</th>
             <th width="100px">种类</th>
             <th width="80px">审核结果</th>
             <th width="100px">审核进度</th>
-            <th width="120px">审批时间</th>
+            <th width="130px">审批时间</th>
             <th width="170px">审核意见</th>
+            <th width="40px">操作</th>
         </tr>
 
         <foreach name="list" item="v" key="lm">
             <foreach name="v[1]" item="u">
-                <tr class="list-container" data-action-type="{$v[2]}" data-approvestate="{$u.approvestate}" data-createtime="{$u.createtime}">
+                <tr class="list-container" valign="middle" data-action-type="{$v[2]}" data-approvestate="{$u.approvestate}" data-createtime="{$u.createtime}">
                     <td>{$u.createtime}</td>
                     <td>{$v[0]}</td>
                     <td><span data-approvestate="{$u.approvestate}">{$u.approvestate}</span></td>
@@ -76,6 +77,7 @@
                     <!--<td><a href="{:U('Material/Download/' . $lm,array('id'=>$u['id']))}">下载</a></td>-->
                     <td>{$u.approvetime}</td>
                     <td>{$u.approvenote}</td>
+                    <td><button type="button" class="btn btn-info btn-sm">查看</button></td>
                 </tr>
             </foreach>
         </foreach>

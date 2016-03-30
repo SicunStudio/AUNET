@@ -165,105 +165,73 @@ class LoadController extends CommonController
 <ol class=\"breadcrumb\"><li><h4>物资借用</h4></li></ol>
     <div class=\"tableContainer\">
         <table class=\"table-bordered FillForm\" width=\"700px\">
-    <tbody>
+        
+        
+            <tbody>
     <tr>
-        <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">协会名称</td>
-        <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">$file_data[associationname]</td>
-        <td width=\"86\" height=\"50\" align=\"center\" valign=\"middle\">活动名称</td>
-        <td height=\"50\" colspan=\"3\" align=\"center\" valign=\"middle\">$file_data[activityname]</td>
+        <td height=\"50\" colspan=\"2\" align=\"center\">协会名称</td>
+        <td height=\"50\" colspan=\"2\" align=\"center\">$file_data[associationname]</td>
+        <td width=\"104\" height=\"50\" align=\"center\">活动名称</td>
+        <td height=\"50\" colspan=\"2\" align=\"center\">$file_data[activityname]</td>
     </tr>
     <tr>
-        <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">活动地点</td>
-        <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">
-            $file_data[activitylocation]
-        </td>
-        <td height=\"50\" align=\"center\" valign=\"middle\">借用日期</td>
-        <td width=\"98\" height=\"50\" align=\"center\" valign=\"middle\" id=\"borrowTimeArea\">
-            $file_data[borrowtime]
-        </td>
-        <td width=\"82\" height=\"50\" align=\"center\" valign=\"middle\">参与人数</td>
-        <td width=\"90\" height=\"50\" align=\"center\" valign=\"middle\">
-            $file_data[joinnumber]
-        </td>
+        <td height=\"50\" colspan=\"2\" align=\"center\">活动地点</td>
+        <td height=\"50\" colspan=\"2\" align=\"center\">$file_data[activitylocation]</td>
+        <td height=\"50\" align=\"center\">借用日期</td>
+        <td height=\"50\" colspan=\"2\" align=\"center\">$file_data[borrowtime]</td>
     </tr>
     <tr>
-        <td height=\"50\" colspan=\"8\" align=\"center\" valign=\"middle\">注：每张申请表只能借用一种物资</td>
+        <td height=\"40\" colspan=\"7\" align=\"center\">注：每张申请表只能借用一种物资</td>
     </tr>
     <tr>
-        <td width=\"40\" rowspan=\"4\" align=\"center\" valign=\"middle\" width=\"39\">物资种类</td>
-        <td width=\"69\" height=\"35\" align=\"center\" valign=\"middle\" width=\"71\">投影仪</td>
-        <td width=\"111\" height=\"35\" align=\"center\" valign=\"middle\" width=\"90\">台数</td>
-        <td height=\"35\" colspan=\"2\" align=\"center\" valign=\"middle\" width=\"90\">
-            $file_data[projectornumber]
-        </td>
-        <td height=\"35\" align=\"center\" valign=\"middle\" width=\"109\">归还日期</td>
-        <td height=\"35\" colspan=\"2\" align=\"center\" valign=\"middle\" width=\"86\" id=\"PReturnTimeArea\">
-            $file_data[preturntime]
-        </td>
+        <td width=\"35\" rowspan=\"4\" align=\"center\">物资种类</td>
+        <td width=\"86\" height=\"60\" align=\"center\">投影仪</td>
+        <td width=\"109\" height=\"60\" align=\"center\">台数</td>
+        <td height=\"60\" colspan=\"2\" align=\"center\">$file_data[projectornumber]</td>
+        <td width=\"99\" height=\"60\" align=\"center\">归还日期</td>
+        <td width=\"142\" height=\"60\" align=\"center\">$file_data[preturntime]</td>
     </tr>
     <tr>
-        <td height=\"35\" align=\"center\" valign=\"middle\" width=\"71\">电力<br></td>
-        <td height=\"35\" align=\"center\" valign=\"middle\" width=\"90\">瓦数</td>
-        <td height=\"35\" colspan=\"2\" align=\"center\" valign=\"middle\" width=\"90\">
-            $file_data[powerwattage]
-        </td>
-        <td height=\"35\" colspan=\"3\" align=\"center\" valign=\"middle\">（注：瓦数超过2000W须要到主校区配电房签字）</td>
+        <td height=\"60\" align=\"center\">电力</td>
+        <td height=\"60\" align=\"center\">瓦数</td>
+        <td height=\"60\" colspan=\"4\" align=\"right\">$file_data[powerwattage]W（注：瓦数超过2000W须要到主校区配电房签字）</td>
     </tr>
     <tr>
-        <td height=\"35\" align=\"center\" valign=\"middle\" width=\"71\">大量桌椅</td>
-        <td height=\"35\" align=\"center\" valign=\"middle\" width=\"90\">桌子数量</td>
-        <td width=\"90\" height=\"35\" align=\"center\" valign=\"middle\" width=\"90\">
-            $file_data[desknumber]
-        </td>
-        <td height=\"35\" align=\"center\" valign=\"middle\" width=\"89\">椅子数量</td>
-        <td height=\"35\" align=\"center\" valign=\"middle\" width=\"109\">
-            $file_data[chairnumber]
-        </td>
-        <td height=\"35\" align=\"center\" valign=\"middle\" width=\"86\">归还日期</td>
-        <td height=\"35\" align=\"center\" valign=\"middle\" width=\"92\" id=\"DCReturnTimeArea\">
-            $file_data[dcreturntime]
-        </td>
+        <td height=\"60\" align=\"center\">大量桌椅</td>
+        <td height=\"60\" align=\"center\">数量</td>
+        <td height=\"60\" colspan=\"2\" align=\"center\">桌子： $file_data[desknumber]&nbsp;&nbsp; 椅子：$file_data[chairnumber]</td>
+        <td height=\"60\" align=\"center\">归还日期</td>
+        <td height=\"60\" align=\"center\">$file_data[dcreturntime]</td>
     </tr>
     <tr>
-        <td height=\"35\" align=\"center\" valign=\"middle\" width=\"71\">校车</td>
-        <td height=\"35\" align=\"center\" valign=\"middle\" width=\"90\">运送桌子数量</td>
-        <td height=\"35\" colspan=\"2\" align=\"center\" valign=\"middle\" width=\"90\">
-            $file_data[carrydesknumber]
-        </td>
-        <td height=\"35\" align=\"center\" valign=\"middle\" width=\"109\">运送椅子数量</td>
-        <td height=\"35\" colspan=\"2\" align=\"center\" valign=\"middle\" width=\"86\">
-            $file_data[carrychairnumber]
-        </td>
+        <td height=\"60\" align=\"center\">校车</td>
+        <td height=\"60\" align=\"center\">运送桌子数量</td>
+        <td height=\"60\" colspan=\"2\" align=\"center\">$file_data[carrydesknumber]</td>
+        <td height=\"60\" align=\"center\">运送椅子数量</td>
+        <td height=\"60\" align=\"center\">$file_data[carrychairnumber]</td>
     </tr>
     <tr>
-        <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">活动负责人</td>
-        <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">
-            $file_data[activitychargeperson]
-        </td>
-        <td width=\"50\" height=\"50\" align=\"center\" valign=\"middle\">联系电话</td>
-        <td height=\"50\" colspan=\"3\" align=\"center\" valign=\"middle\">
-            $file_data[activityphone]
-        </td>
+        <td height=\"70\" colspan=\"2\" align=\"center\">活动负责人</td>
+        <td height=\"70\" colspan=\"2\" align=\"center\">$file_data[activitychargeperson]</td>
+        <td height=\"70\" align=\"center\">联系电话</td>
+        <td height=\"70\" colspan=\"2\" align=\"center\">$file_data[activityphone]</td>
     </tr>
     <tr>
-        <td height=\"80\" colspan=\"2\" align=\"center\" valign=\"middle\">社团意见</td>
-        <td height=\"80\" colspan=\"2\" align=\"center\" valign=\"middle\">
-            $file_data[associationcomment]
-        </td>
-        <td height=\"80\" align=\"center\" valign=\"middle\">社联意见</td>
-        <td height=\"80\" colspan=\"3\" align=\"center\" valign=\"middle\"><span class=\"disable-area\"></span></td>
+        <td height=\"70\" colspan=\"2\" align=\"center\">社团意见</td>
+        <td height=\"70\" colspan=\"2\" align=\"center\">$file_data[associationcomment]</td>
+        <td height=\"70\" align=\"center\">社联意见</td>
+        <td height=\"70\" colspan=\"2\" align=\"center\">&nbsp;</td>
     </tr>
     <tr>
-        <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\">社联经手人</td>
-        <td height=\"50\" colspan=\"2\" align=\"center\" valign=\"middle\"><span class=\"disable-area\"></span></td>
-        <td height=\"50\" align=\"center\" valign=\"middle\">联系电话</td>
-        <td height=\"50\" colspan=\"3\" align=\"center\" valign=\"middle\"><span class=\"disable-area\"></span></td>
-    </tr>
-    <tr>
-        <td height=\"100\" colspan=\"2\" align=\"center\" valign=\"middle\">共青团<br>华中科技大学委员会意见</td>
-        <td height=\"100\" colspan=\"6\" align=\"center\" valign=\"middle\"><span class=\"disable-area\"></span></td>
+        <td height=\"100\" colspan=\"2\" align=\"center\">共青团<br>华中科技大学<br>委员会意见</td>
+        <td height=\"100\" colspan=\"5\" align=\"center\">&nbsp;</td>
     </tr>
     </tbody>
+        
+        
+        
+        
+    
 </table>
     </div>
 			";
@@ -396,17 +364,23 @@ class LoadController extends CommonController
                         </td>
                     </tr>
                     <tr>
-                        <td height=\"50\" align=\"center\" valign=\"middle\">普通教室<br>（50人） </td>
+                        <td height=\"50\" align=\"center\" valign=\"middle\">普通教室<br>（无投影仪）</td>
                         <td height=\"50\" colspan=\"4\" align=\"center\" valign=\"middle\">
-                            $file_data[normalclassroom]
+                            $file_data[normalclassroomnoprojector]
                         </td>
-                        <td colspan=\"2\" rowspan=\"2\" align=\"center\" valign=\"middle\">是否经系统查询</td>
-                        <td width=\"114\" rowspan=\"2\" align=\"center\" valign=\"middle\">
+                        <td colspan=\"2\" rowspan=\"3\" align=\"center\" valign=\"middle\">是否经系统查询</td>
+                        <td width=\"114\" rowspan=\"3\" align=\"center\" valign=\"middle\">
                             $file_data[queried]
                         </td>
                     </tr>
                     <tr>
-                        <td height=\"50\" align=\"center\" valign=\"middle\">阶梯教室<br>（300人） </td>
+                        <td height=\"50\" align=\"center\" valign=\"middle\">普通教室<br>（有投影仪）</td>
+                        <td height=\"50\" colspan=\"4\" align=\"center\" valign=\"middle\">
+                            $file_data[normalclassroomwithprojector]
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height=\"50\" align=\"center\" valign=\"middle\">阶梯教室<br>（有投影仪） </td>
                         <td height=\"50\" colspan=\"4\" align=\"center\" valign=\"middle\">
                             $file_data[ladderclassroom]
                         </td>
@@ -891,7 +865,6 @@ class LoadController extends CommonController
 				$document->setValue('associationname',$file_data[associationname]);
 				$document->setValue('activityname',$file_data[activityname]);
 				$document->setValue('activitylocation',$file_data[activitylocation]);
-				$document->setValue('joinnumber',$file_data[joinnumber]);
 				$document->setValue('borrowtime',$file_data[borrowtime]);
 				$document->setValue('projectornumber',$file_data[projectornumber]);
 				$document->setValue('preturntime',$file_data[preturntime]);
@@ -922,12 +895,13 @@ class LoadController extends CommonController
 
 			break;
 			case sacenter:
-				$document->setValue('associationname',$file_data[associationname]);
 				$document->setValue('activityname',$file_data[activityname]);
+				$document->setValue('associationname',$file_data[associationname]);
 				$document->setValue('joinnumber',$file_data[joinnumber]);
 				$document->setValue('activitydate',$file_data[activitydate]);
 				$document->setValue('activitytime',$file_data[activitytime]);
-				$document->setValue('normalclassroom',$file_data[normalclassroom]);
+				$document->setValue('normalclassroomnoprojector',$file_data[normalclassroomnoprojector]);
+				$document->setValue('normalclassroomwithprojector',$file_data[normalclassroomwithprojector]);
 				$document->setValue('ladderclassroom',$file_data[ladderclassroom]);
 				$document->setValue('queried',$file_data[queried]);
 				$document->setValue('activitycontent',$file_data[activitycontent]);
