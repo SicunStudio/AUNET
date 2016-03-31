@@ -51,6 +51,7 @@ DROP TABLE IF EXISTS `aunet_stuff`;
 
 DROP TABLE IF EXISTS `aunet_material_colorprinting`;
 CREATE TABLE IF NOT EXISTS `aunet_material_colorprinting` (
+  `ID` int(5) NOT NULL,
   `AssociationName` varchar(100) NOT NULL,
   `Name` varchar(50) NOT NULL,
   `Phone` varchar(20) NOT NULL,
@@ -62,12 +63,12 @@ CREATE TABLE IF NOT EXISTS `aunet_material_colorprinting` (
   `Remark` text,
   `CreateTime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `ApproveTime` datetime DEFAULT NULL,
+  `ApprovePrint` int(4) DEFAULT 0,
   `ApproveState` varchar(10) NOT NULL DEFAULT '审批中',
   `ApproveActivity` text,
   `ApproveNote` text,
   `StoreURL` varchar(100) DEFAULT NULL,
-  `UserName` varchar(40) NOT NULL,
-  `ID` int(5) NOT NULL
+  `UserName` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -92,6 +93,7 @@ CREATE TABLE IF NOT EXISTS `aunet_material_east4` (
   `AssociationComment` text,
   `CreateTime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `ApproveTime` datetime DEFAULT NULL,
+  `ApprovePrint` int(4) DEFAULT 0,
   `ApproveState` varchar(8) NOT NULL DEFAULT '审批中',
   `ApproveActivity` text,
   `ApproveNote` text,
@@ -112,7 +114,6 @@ CREATE TABLE IF NOT EXISTS `aunet_material_materialapply` (
   `ActivityName` varchar(200) NOT NULL,
   `ActivityLocation` varchar(200) NOT NULL,
   `BorrowTime` varchar(50) NOT NULL,
-  `JoinNumber` varchar(10) NOT NULL,
   `ProjectorNumber` int(10) DEFAULT NULL,
   `PReturnTime` varchar(50) DEFAULT NULL,
   `PowerWattage` int(10) DEFAULT NULL,
@@ -126,6 +127,7 @@ CREATE TABLE IF NOT EXISTS `aunet_material_materialapply` (
   `AssociationComment` text,
   `CreateTime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `ApproveTime` datetime DEFAULT NULL,
+  `ApprovePrint` int(4) DEFAULT 0,
   `ApproveState` varchar(8) NOT NULL DEFAULT '审批中',
   `ApproveActivity` text,
   `ApproveNote` text,
@@ -156,6 +158,7 @@ CREATE TABLE IF NOT EXISTS `aunet_material_outdoor` (
   `AssociationComment` text NOT NULL,
   `CreateTime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `ApproveTime` datetime DEFAULT NULL,
+  `ApprovePrint` int(4) DEFAULT 0,
   `ApproveState` varchar(8) NOT NULL DEFAULT '审批中',
   `ApproveActivity` text,
   `ApproveNote` text,
@@ -177,7 +180,8 @@ CREATE TABLE IF NOT EXISTS `aunet_material_sacenter` (
   `JoinNumber` varchar(10) NOT NULL,
   `ActivityDate` varchar(20) NOT NULL,
   `ActivityTime` varchar(100) NOT NULL,
-  `NormalClassroom` varchar(10) DEFAULT NULL,
+  `NormalClassroomNoProjector` varchar(10) DEFAULT NULL,
+  `NormalClassroomWithProjector` varchar(10) DEFAULT NULL,
   `LadderClassroom` varchar(10) DEFAULT NULL,
   `Queried` varchar(4) NOT NULL,
   `ActivityContent` text,
@@ -188,6 +192,7 @@ CREATE TABLE IF NOT EXISTS `aunet_material_sacenter` (
   `AssociationComment` text,
   `CreateTime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `ApproveTime` datetime DEFAULT NULL,
+  `ApprovePrint` int(4) DEFAULT 0,
   `ApproveState` varchar(8) NOT NULL DEFAULT '审批中',
   `ApproveActivity` text,
   `ApproveNote` text,
@@ -219,6 +224,7 @@ CREATE TABLE IF NOT EXISTS `aunet_material_special` (
   `AssociationComment` text,
   `CreateTime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `ApproveTime` datetime DEFAULT NULL,
+  `ApprovePrint` int(4) DEFAULT 0,
   `ApproveState` varchar(8) NOT NULL DEFAULT '审批中',
   `ApproveActivity` text,
   `ApproveNote` text,
@@ -247,6 +253,7 @@ CREATE TABLE IF NOT EXISTS `aunet_material_sports` (
   `Remark` text,
   `CreateTime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `ApproveTime` datetime DEFAULT NULL,
+  `ApprovePrint` int(4) DEFAULT 0,
   `ApproveState` varchar(8) NOT NULL DEFAULT '审批中',
   `ApproveActivity` text,
   `ApproveNote` text,
@@ -292,6 +299,7 @@ CREATE TABLE IF NOT EXISTS `aunet_material_teachingbuilding` (
   `SpeakerPost` varchar(100) DEFAULT NULL,
   `CreateTime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `ApproveTime` datetime DEFAULT NULL,
+  `ApprovePrint` int(4) DEFAULT 0,
   `ApproveState` varchar(8) NOT NULL DEFAULT '审批中',
   `ApproveActivity` text,
   `ApproveNote` text,
