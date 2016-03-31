@@ -13,17 +13,39 @@ class LoadController extends CommonController
 		//echo $this->ID;
 		$ID = I('POST.ID');
 		$type = I('POST.action_type');
+		//print_r($file_data);
+
+		$html= $this->outputHTML($ID ,$type);
+		$this->show($html);
+	}
+
+	public function apply_preview(){
+		$ID = I('POST.ID');
+		$type = I('POST.action_type');
+		$table = strtolower($type);
+		$html="";
+		$sql = M("aunet.$table" , 'aunet_material_');
+		$username = $sql->where("id=".$ID)->getField('UserName');
+		if($username!=session('username')){
+			$this->show("意外错误");
+		}else{
+			$html= $this->outputHTML($ID ,$type);
+			$this->show($html);
+		}
+	}
+
+	private function outputHTML($id,$type) {
+		$html="";
 		$table = strtolower($type);
 		$sql = M("aunet.$table" , 'aunet_material_');
-		$file_data = $sql->where("id=".$ID)->limit(1)->select()[0];
+		$file_data = $sql->where("id=".$id)->limit(1)->select()[0];
 		foreach($file_data as $key => $val){
-            $file_data[$key] = mb_convert_encoding($val, "HTML-ENTITIES", "UTF-8");
+			$file_data[$key] = mb_convert_encoding($val, "HTML-ENTITIES", "UTF-8");
 		}
-		//print_r($file_data);
 		switch($type){
 			case colorprinting:
-			$html = "
-        <ol class=\"breadcrumb\"><li><h4>彩喷悬挂申请</h4></li></ol>
+				$html = "
+        <ol class=\"breadcrumb\"><li><h4>彩喷悬挂申请</h4></li><li>$file_data[createtime]</li></ol>
             <div class=\"tableContainer\">
                 <table class=\"table-bordered FillForm\" width=\"700\" border=\"0\">
                     <tbody>
@@ -74,10 +96,10 @@ class LoadController extends CommonController
             </div>
 
 			";
-			break;
+				break;
 			case east4:
-			$html = "
-        <ol class=\"breadcrumb\"><li><h4>东四食堂三楼申请</h4></li></ol>
+				$html = "
+        <ol class=\"breadcrumb\"><li><h4>东四食堂三楼申请</h4></li><li>$file_data[createtime]</li></ol>
             <div class=\"tableContainer\">
                 <table width=\"700\" class=\"table-bordered FillForm\">
                     <tbody>
@@ -159,10 +181,10 @@ class LoadController extends CommonController
                 </table>
             </div>
 			";
-			break;
+				break;
 			case materialapply:
-			$html = "
-<ol class=\"breadcrumb\"><li><h4>物资借用</h4></li></ol>
+				$html = "
+<ol class=\"breadcrumb\"><li><h4>物资借用</h4></li><li>$file_data[createtime]</li></ol>
     <div class=\"tableContainer\">
         <table class=\"table-bordered FillForm\" width=\"700px\">
         
@@ -235,10 +257,10 @@ class LoadController extends CommonController
 </table>
     </div>
 			";
-			break;
+				break;
 			case outdoor:
-			$html = "
-        <ol class=\"breadcrumb\"><li><h4>户外路演场地</h4></li></ol>
+				$html = "
+        <ol class=\"breadcrumb\"><li><h4>户外路演场地</h4></li><li>$file_data[createtime]</li></ol>
             <div class=\"tableContainer\">
                 <table width=\"700\" class=\"table-bordered FillForm\">
                     <tbody>
@@ -332,10 +354,10 @@ class LoadController extends CommonController
                 </table>
             </div>
 			";
-			break;
+				break;
 			case sacenter:
-			$html = "
-        <ol class=\"breadcrumb\"><li><h4>大学生活动中心教室申请</h4></li></ol>
+				$html = "
+        <ol class=\"breadcrumb\"><li><h4>大学生活动中心教室申请</h4></li><li>$file_data[createtime]</li></ol>
             <div class=\"tableContainer\">
                 <table width=\"700\" class=\"table-bordered FillForm\">
                     <tbody>
@@ -433,10 +455,10 @@ class LoadController extends CommonController
                 </table>
             </div>
 			";
-			break;
+				break;
 			case special:
-			$html = "
-			<ol class=\"breadcrumb\"><li><h4>特殊场地申请</h4></li></ol>
+				$html = "
+			<ol class=\"breadcrumb\"><li><h4>特殊场地申请</h4></li><li>$file_data[createtime]</li></ol>
         <form action=\"{:U('Material/Material/material_upload')}\" enctype=\"multipart/form-data\" method=\"POST\">
             <input type=\"hidden\" name=\"action_type\" value=\"special\">
             <div class=\"tableContainer\">
@@ -528,10 +550,10 @@ class LoadController extends CommonController
                 </table>
             </div>
 			";
-			break;
+				break;
 			case sports:
-			$html = "
-			<ol class=\"breadcrumb\"><li><h4>体育场馆使用申请</h4></li></ol>
+				$html = "
+			<ol class=\"breadcrumb\"><li><h4>体育场馆使用申请</h4></li><li>$file_data[createtime]</li></ol>
             <div class=\"tableContainer\">
                 <table width=\"700\" class=\"table-bordered FillForm\">
                     <tbody>
@@ -603,10 +625,10 @@ class LoadController extends CommonController
                 </table>
             </div>
 			";
-			break;
+				break;
 			case teachingbuilding:
-			$html = "
-        <ol class=\"breadcrumb\"><li><h4>教学楼教室申请</h4></li></ol>
+				$html = "
+        <ol class=\"breadcrumb\"><li><h4>教学楼教室申请</h4></li><li>$file_data[createtime]</li></ol>
             <div style=\"text-align: center\">
                 <h2>社团活动申请表</h2>
                 <h3>（教学楼专用）</h3>
@@ -805,12 +827,11 @@ class LoadController extends CommonController
                 </div>
             </div>
 			";
-			break;
+				break;
 		}
-
-		$this->show($html);
+		return $html;
 	}
-	
+
 	public function downloadword(){
 		// Initialize PHPWord Class
 		Autoloader::register();
