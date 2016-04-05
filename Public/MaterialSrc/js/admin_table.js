@@ -39,6 +39,7 @@ $(document).on("click",".download-table",function(){
 $('#modalPreview').on("hidden.bs.modal",function(e){
     $("#modalPreview-UserName").text("---");
     $("#modalPreview-TableContainer").html("&nbsp;");
+    $("#modalPreview-ApproveState option").attr("selected",false);
     $("#modalPreview-ApproveState").val("审批中");
     $("#modalPreview-ApproveNote").val("");
 });
@@ -52,7 +53,15 @@ $(document).on("click",".btn-approve", function() {
     $(".modal-input-action-type").val(dom.attr("data-action-type"));
     $("#modalPreview-ApproveActivity").val(dom.attr("data-approveactivity"));
 
+    $("#modalPreview-ApprovePrint").attr("checked",(dom.attr("data-approveprint")==1?"checked":null));
+
+    $("#modalPreview-ApproveNote").val(dom.parent().parent().parent().find(".Applylist-ApproveNote").text());
+
     $(".modal-input-storeurl").attr("href",dom.attr("data-storeurl"));
+    $("#modalPreview-ApproveState option").attr("selected",false);
+    $("#modalPreview-ApproveState option[value='"+dom.parent().parent().parent().parent().attr("data-approvestate")+"']").attr("selected",true);
+    $("#modalPreview-ApproveState").val(dom.parent().parent().parent().parent().attr("data-approvestate"));
+    //fetch preview
     $.post(dom.attr("data-action-target"),
         {
             ID:dom.attr("data-id"),
