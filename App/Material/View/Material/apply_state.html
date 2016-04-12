@@ -8,6 +8,32 @@
 <ol class="breadcrumb">
     <li><h4>申请状态查询</h4></li>
 </ol>
+
+<!--模态框区域-->
+<div class="modal fade" id="modalPreview" tabindex="-1" role="dialog" style="border-radius: 0px">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="modalPreview-Title">查看申请</h4>
+            </div>
+
+            <div class="modal-body">
+                <!--表格主体-->
+                <div class="row table-responsive" id="modalPreview-TableContainer" style="padding: 5px 15px">
+                    <div style='width: 100px; height: 100px; border-radius: 50px; border: solid 5px #505050; line-height: 80px; font-size: 56px; text-align: center;display: inline-block'>!</div><h2>Oops，好像出了一些问题</h2><h4>暂时无法加载，可能是网络原因，请检查你的网络连接</h4><h4>你可以稍后再试，或者联系思存工作室</h4>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
 <div class="row" style="overflow: auto">
     <div style="margin: 10px auto; width: 400px">
         <ul class="nav nav-pills">
@@ -51,31 +77,41 @@
 </div>
 <p></p>
 <div class="table-responsive">
-    <table class="table-bordered table table-hover" width="700px">
+    <table class="table-bordered table table-hover" width="750px">
         <tr>
             <th width="130px">提交时间</th>
-            <th width="80px">审核状态</th>
-            <th width="150px">种类</th>
+            <th width="100px">种类</th>
+            <th width="70px">审核结果</th>
+            <th width="120px">审核进度</th>
             <th width="130px">审批时间</th>
-            <th width="210px">审核意见</th>
+            <th width="150px">审核意见</th>
+            <th width="40px">操作</th>
         </tr>
 
         <foreach name="list" item="v" key="lm">
             <foreach name="v[1]" item="u">
-                <tr class="list-container" data-action-type="{$v[2]}" data-approvestate="{$u.approvestate}" data-createtime="{$u.createtime}">
+                <tr class="list-container" valign="middle" data-action-type="{$v[2]}" data-approvestate="{$u.approvestate}" data-createtime="{$u.createtime}">
                     <td>{$u.createtime}</td>
-                    <td><span data-approvestate="{$u.approvestate}">{$u.approvestate}</span></td>
                     <td>{$v[0]}</td>
+                    <td><span data-approvestate="{$u.approvestate}">{$u.approvestate}</span></td>
+                    <td>
+                        <if condition="($u.approvestate eq 审批中) AND ($u.approveprint eq 0)">初审中</if>
+                        <if condition="($u.approvestate eq 审批中) AND ($u.approveprint eq 1)">初审通过</if>
+                        <if condition="($u.approvestate eq 已通过) AND ($u.approveprint eq 1)">审批通过，请取表</if>
+                        <if condition="$u.approvestate eq 未通过">审批未通过</if>
+                    </td>
                     <!--<td><a href="{:U('Material/Download/' . $lm,array('id'=>$u['id']))}">下载</a></td>-->
                     <td>{$u.approvetime}</td>
                     <td>{$u.approvenote}</td>
+                    <td><button type="button" class="btn btn-info btn-sm btn-preview" data-toggle="modal" data-target="#modalPreview" data-action-type="{$v[2]}"  data-id="{$u.id}" data-action-target="{:U('Material/Load/apply_preview')}">查看</button></td>
                 </tr>
             </foreach>
         </foreach>
     </table>
 </div>
-<script src="__PUBLIC__/MaterialSrc/js/admin_table.js"></script>
-<script src="__PUBLIC__/MaterialSrc/js/admin_table_switch_tab.js"></script>
+<!--<script src="__PUBLIC__/MaterialSrc/js/admin_table.js"></script>-->
+<script src="__PUBLIC__/MaterialSrc/js/switch_tab.js"></script>
+<script src="__PUBLIC__/MaterialSrc/js/apply_state.js"></script>
 <script src="__PUBLIC__/DatetimePicker/bootstrap-datetimepicker.js" charset="UTF-8"></script>
 <script src="__PUBLIC__/DatetimePicker/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
 <script>
@@ -91,16 +127,6 @@
         format: "yyyy-mm-dd"
     });
 </script>
-<script>
-    //为审批状态文字设置颜色
-    $(document).ready(function(){
-        $("span[data-approvestate='未通过']").addClass("ApproveState-Rejected");
-        $("span[data-approvestate='已通过']").addClass("ApproveState-Pass");
-        $("span[data-approvestate='审批中']").addClass("ApproveState-Wait");
-        $("tr[data-approvestate='未通过']").addClass("danger");
-        $("tr[data-approvestate='已通过']").addClass("success");
 
-    });
-</script>
 </body>
 </html>
