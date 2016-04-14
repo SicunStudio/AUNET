@@ -1,0 +1,1 @@
+<?php/** * Specified for cli mode *  * Not suitable for web visit */define('APP_NAME','App');define('APP_MODE','cli');define('APP_PATH',dirname(__FILE__).'/App/');define('APP_DEBUG',true);require(dirname(__FILE__).'/ThinkPHP/ThinkPHP.php');
