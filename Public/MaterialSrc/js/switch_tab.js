@@ -12,6 +12,11 @@ $(document).on("change","#filter-date",function(){
     //console.log($("#filter-type").val());
 });
 
+$(document).on("change","#filter-print",function(){
+    filterDOM();
+    //console.log($("#filter-type").val());
+});
+
 $(document).on("click",".date-clear",function(){
     $("#filter-date").val("");
     filterDOM();
@@ -21,6 +26,7 @@ function filterDOM(){
     var approveState=$("li[role='presentation'].active a").attr("data-tabtype");
     var type=$("#filter-type").val();
     var filterdate=$("#filter-date").val();
+    var filterprint=$("#filter-print").val();
     var num=0;
 
     $(".Applylist .Applylist-Nodata").hide("fast");
@@ -28,7 +34,7 @@ function filterDOM(){
     $(".list-container").each(function(){
         var dom_approvestate=$(this).attr("data-approvestate");
         var dom_type=$(this).attr("data-action-type");
-
+        var dom_print=$(this).attr("data-approveprint");
         var bool_as=false;
         switch (approveState){
             case "所有":
@@ -43,6 +49,7 @@ function filterDOM(){
         }
         var bool_type=(type=="ALL"? 1 : dom_type==type);
         var bool_date=(filterdate==""?true:false);
+        var bool_print=(filterprint=="ALL"? 1:filterprint==dom_print);
         // 过滤日期
         if(!bool_date){
             var createdate=$(this).attr('data-createtime');
@@ -53,7 +60,7 @@ function filterDOM(){
         if(approveState==undefined){ bool_as=true; }
         if(type==undefined) { bool_type=true; }
         if(filterdate==undefined) { bool_date=true; }
-        if(bool_as && bool_type && bool_date){
+        if(bool_as && bool_type && bool_date && bool_print){
             $(this).fadeIn("fast");
             num=num+1;
         }
