@@ -1,0 +1,31 @@
+	.top{position: fixed;
+		top:0;
+		text-align: center;
+		color: #fff;
+		font-size: 1.3em;
+		}
+	.top img{position: fixed;
+		left:10%;
+		top: 2px;
+		height: 120px;
+		vertical-align: middle;
+		margin: 0 0;
+		padding: 0 0;
+		}
+	.top h1{
+		margin: 5px 0;
+		padding: 0 0;
+	}
+	.footer{	
+		position: fixed;
+		bottom:0;
+		text-align: center;
+		color: #fff;
+		vertical-align: middle;
+		}
+	.top,.footer{background:#74b05c;
+		width:100%;
+		margin:0 0;
+		padding:0 0;
+		border:0;
+		left:0;}
