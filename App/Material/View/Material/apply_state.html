@@ -33,6 +33,35 @@
 </div>
 
 
+<div class="modal fade" id="modalCancel" tabindex="-1" role="dialog" style="border-radius: 0px">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="modalRecall-Title">撤销申请</h4>
+            </div>
+
+            <div class="modal-body">
+                <div>
+                    <div>你确定要撤销这条申请吗？</div>
+                    <div>序号：<strong><span id="modalCancel-id"></span></strong></div>
+                    <div>申请类型：<strong><span id="modalCancel-type"></span></strong></div>
+                    <div>申请时间：<strong><span id="modalCancel-time"></span></strong></div>
+                    <div>申请仅可在未打印前撤销</div>
+                    <div>撤销后，你、审批者都无法看到此条申请，也无法恢复</div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-danger btn-modal-cancel">确认撤销</button>
+                <form action="{:U('Material/Material/apply_cancel')}" method="post">
+                    <input type="hidden" name="id" id="modalCancel-input-id"><input type="hidden" name="type" id="modalCancel-input-type">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div class="row" style="overflow: auto">
     <div style="margin: 10px auto; width: 400px">
@@ -79,20 +108,23 @@
 <div class="table-responsive">
     <table class="table-bordered table table-hover" width="750px">
         <tr>
+            <th width="30px">序号</th>
             <th width="130px">提交时间</th>
-            <th width="100px">种类</th>
+            <th width="110px">种类</th>
             <th width="70px">审核结果</th>
-            <th width="120px">审核进度</th>
+            <th width="110px">审核进度</th>
             <th width="130px">审批时间</th>
-            <th width="150px">审核意见</th>
-            <th width="40px">操作</th>
+            <th width="100px">审核意见</th>
+            <th width="100px">操作</th>
         </tr>
 
         <foreach name="list" item="v" key="lm">
             <foreach name="v[1]" item="u">
                 <tr class="list-container" valign="middle" data-action-type="{$v[2]}" data-approvestate="{$u.approvestate}" data-createtime="{$u.createtime}">
-                    <td>{$u.createtime}</td>
-                    <td>{$v[0]}</td>
+
+                    <td>{$i=$i+1}</td>
+                    <td class="list-apply-time">{$u.createtime}</tdlist-apply-name>
+                    <td class="list-apply-name">{$v[0]}</td>
                     <td><span data-approvestate="{$u.approvestate}">{$u.approvestate}</span></td>
                     <td>
                         <if condition="($u.approvestate eq 审批中) AND ($u.approveprint eq 0)">初审中</if>
@@ -103,7 +135,14 @@
                     <!--<td><a href="{:U('Material/Download/' . $lm,array('id'=>$u['id']))}">下载</a></td>-->
                     <td>{$u.approvetime}</td>
                     <td>{$u.approvenote}</td>
-                    <td><button type="button" class="btn btn-info btn-sm btn-preview" data-toggle="modal" data-target="#modalPreview" data-action-type="{$v[2]}"  data-id="{$u.id}" data-action-target="{:U('Material/Load/apply_preview')}">查看</button></td>
+                    <td>
+                        <button type="button" class="btn btn-info btn-sm btn-preview" data-toggle="modal" data-target="#modalPreview" data-action-type="{$v[2]}"  data-id="{$u.id}">查看</button>
+                        <if condition="($u.approvestate eq 审批中) AND ($u.approveprint eq 0)">
+
+                            <button type="button" class="btn btn-warning btn-sm btn-cancel" data-toggle="modal" data-target="#modalCancel" data-action-type="{$v[2]}"  data-id="{$u.id}" data-no="{$i}">撤销</button>
+                        </if>
+
+                    </td>
                 </tr>
             </foreach>
         </foreach>

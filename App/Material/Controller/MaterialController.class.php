@@ -110,6 +110,47 @@ class MaterialController extends CommonController
             $this->error($sql->getError());
         }
 	}
+    
+    
+    //申请者撤销
+    public function apply_cancel() {
+        $type = I('POST.type');
+        $id = I('POST.id');
+        $allowDel=true;
+        $msg="";
+        $apply_item_data=M("material_".$type)->where("id=".$id)->getField('id,UserName,ApproveState,ApprovePrint',1);
+        $apply_item=$apply_item_data[$id];
+        //检查是否是提交申请的用户
+        $user=$apply_item["username"];
+        if($user!=$_SESSION['username']) {
+            $allowDel=false;
+            //$this->success("撤销失败，你无权撤销这份申请");
+            $msg="你无权撤销这份申请";
+        }
+
+        //检查申请状态
+        if($allowDel) {
+            if( $apply_item['approvestate']=="审批中" && $apply_item['approveprint'][0]==0){}
+            else{
+                $allowDel=false;
+                $msg="此申请已无法撤销";
+            }
+        }
+
+        $del_state=false;
+
+        if($allowDel){
+            $del_state=M("material_".$type)->where("id=".$id)->delete();
+            if(!$del_state) { $msg="请重试"; }
+
+        }
+        if ($del_state && $allowDel) {
+            $this->success("撤销成功");
+        }else {
+            $this->error("撤销失败，".$msg);
+        }
+    }
+    
 	//后台管理审批状态修改函数
     public function material_adupload()
     {
