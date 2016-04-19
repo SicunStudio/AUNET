@@ -66,6 +66,15 @@ class MaterialController extends CommonController
 	//前台申请上传附件和数据函数
     public function material_upload()
     {
+        $name_list = array('sports' => '体育场馆申请',
+            'materialapply' => '物资申请',
+            'special' => '特殊场地申请',
+            'teachingbuilding' => '教学楼教室申请',
+            'outdoor' => '户外路演场地申请',
+            'east4' => '东四三楼申请',
+            'sacenter' => '大活教室申请',
+            'colorprinting' => '彩喷悬挂申请',
+        );
 		$type = I('POST.action_type');
         $ifUploadFile = I('POST.ifUploadFile');
 		if($ifUploadFile == 'file'){
@@ -95,6 +104,7 @@ class MaterialController extends CommonController
         $data['UserName'] = I('session.username', '');
         $result = $sql->data($data)->add();
         if($result) {
+//            addMQ($_SESSION['username'],'739142578@qq.com','场地物资申请提交成功',"<p>尊敬的用户".$_SESSION['username']."</p><p>您提交的<strong>".$name_list[$type]."</strong>已经收到，我们将尽快处理，请关注审批进度</p>");
             $this->success(L('操作成功！'));
         }else{
             $this->error($sql->getError());
