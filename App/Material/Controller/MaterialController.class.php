@@ -104,7 +104,8 @@ class MaterialController extends CommonController
         $data['UserName'] = I('session.username', '');
         $result = $sql->data($data)->add();
         if($result) {
-//            addMQ($_SESSION['username'],'739142578@qq.com','场地物资申请提交成功',"<p>尊敬的用户".$_SESSION['username']."</p><p>您提交的<strong>".$name_list[$type]."</strong>已经收到，我们将尽快处理，请关注审批进度</p>");
+            $mail=M('user')->where("id=".$_SESSION['uid'])->getField("mail");
+            addMQ($_SESSION['username'],$mail,'场地物资申请提交成功',"<p>尊敬的用户".$_SESSION['username']."</p><p>您提交的<strong>".$name_list[$type]."</strong>已经收到，我们将尽快处理，请关注审批进度</p>");
             $this->success(L('操作成功！'));
         }else{
             $this->error($sql->getError());
