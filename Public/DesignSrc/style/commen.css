@@ -1,9 +1,43 @@
+	body{ font-family: "Microsoft YaHei" ! important; } 
 	.top{position: fixed;
 		top:0;
 		text-align: center;
 		color: #fff;
 		font-size: 1.3em;
 		}
+	nav{	
+		position: fixed;
+		top:100px;
+		left:50px;
+		}
+	nav a{
+		text-decoration: none;
+		color:#000;
+	}
+	nav div[class="appoint"]:hover{
+		background: #74b05c;
+		color:#fff;
+	}
+	nav div[class="appoint"],nav div[class="public"],nav div[class="media"],nav div[class="newMedia"]{
+		border-radius: 5px;	
+		font-weight: 550;
+		line-height: 30px;
+		border:1px solid #c4b19b; 
+		/*margin:8px 0;*/
+		padding-left:10px; 
+		width:150px;		
+	}
+	nav div[class="appoint"],nav div[class="media"]{margin:8px 0;}
+	nav div[class="public"]{background: #f4ccad;}
+	nav div[class="media"]{background: #91e1bf;	}
+	nav div[class="newMedia"]{background: #dda3f4;	}
+	.apartments{
+		display: none;
+	}
+	#active{
+		background: #74b05c;
+		color:#fff;
+	}
 	.top img{position: fixed;
 		left:10%;
 		top: 2px;
@@ -29,3 +63,9 @@
 		padding:0 0;
 		border:0;
 		left:0;}
+	.content{
+		position: absolute;
+		left:300px;
+		top:100px;
+
+	}

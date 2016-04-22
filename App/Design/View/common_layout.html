@@ -5,13 +5,23 @@
 	<title></title>
 </head>
 <link rel=stylesheet type=text/css href="../../../Public/DesignSrc/style/commen.css" />
+<script type="text/javascript" src="../../../Public/jquery-1.8.0.min.js"></script>
 <body>
 <div class="top">
 	<img src="../../../Public/DesignSrc/images/logo.png">
 	<h1>传媒委任</h1>
 </div>
-
-<div class="body">
+<nav class="container">
+	<a href="./Design/design_design.html"><div class="appoint">委任查询</div></a>
+		<div class="apartments">	
+			<a href="#public"><div class="public">宣传部</div></a>
+			<a href="#media"><div class="media">媒体部</div></a>
+			<a href="#newMedia"><div class="newMedia">新媒体工作室</div></a>
+		</div>
+	<a href="./Notice/Notice.html"><div class="appoint">委任须知</div></a>
+	<a href="./Design/design_apply.html"><div class="appoint">委任申请</div></a>
+</nav>
+<div class="content">
             {__CONTENT__}
 </div>
 
@@ -27,6 +37,35 @@ document.getElementsByClassName("year")[0].innerHTML=year;
 //heights=document.getElementsByClassName("top")[0].clientHeight;
 //styles=document.getElementsByClassName("style")[0];
 </script>
+<script type="text/javascript">
+$(document).ready(function(){
+	n=0;
+	thisUrl=window.location.pathname.split("/");
+	while(1)
+		{
+			if(thisUrl[n]==undefined){break;}
+			n++;
+		}
+	switch (thisUrl[n-1])
+	{
+		case "design_design.html":newCss(0);document.getElementsByClassName("apartments")[0].setAttribute("class","");break;
+		case "Notice.html":newCss(1);break;
+		case "design_apply.html":newCss(2);break;
+	}
 
+	function newCss(x){
+			document.getElementsByClassName("appoint")[x].setAttribute("id","active");		
+		}
+  /*$(".appoint:first").click(function(){
+    $(".apartments").stop().slideToggle("fast");
+  });*/
+ /* $(".appoint").click(function()
+  {
+  	$(this).css("background","#74b05c");
+  	$(this).css("color","#fff");
+  });*/
+
+});
+</script>
 
 </html>
