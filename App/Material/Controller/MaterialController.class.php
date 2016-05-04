@@ -80,8 +80,8 @@ class MaterialController extends CommonController
 		if($ifUploadFile == 'file'){
 			$name = 'file_' . $type;
 			$upload = new Upload();// 实例化上传类
-			$upload->maxSize  = 3145728;// 设置附件上传大小
-			$upload->exts  = array('txt','doc', 'docx','pdf');// 设置附件上传类型
+			$upload->maxSize  = 8388608;// 设置附件上传大小
+			$upload->exts  = array('txt','doc', 'docx','pdf','zip','7z','rar');// 设置附件上传类型
 			$upload->savePath =  './Material/' . $type . '/';// 设置附件上传目录
 			if(!($info = $upload->upload())){// 上传错误提示错误信息
                 $this->error($upload->getError());
