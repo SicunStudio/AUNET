@@ -167,9 +167,30 @@ class MaterialController extends CommonController
         $data['ApproveNote'] = $all_data['ApproveNote'];
         if ($all_data['ApprovePrint']==null){ $data['ApprovePrint'] = 0; }
         else{ $data['ApprovePrint'] = 1; };
-        $sql->where('ID=' .$all_data[ID])->save($data);
 
-        $this->success(L('操作成功！'));
+        if($sql->where('ID=' .$all_data[ID])->getField("ApproveState")=="审批中" && $all_data['ApproveState']!="审批中"){
+            $name_list = array('sports' => '体育场馆申请',
+                'materialapply' => '物资申请',
+                'special' => '特殊场地申请',
+                'teachingbuilding' => '教学楼教室申请',
+                'outdoor' => '户外路演场地申请',
+                'east4' => '东四三楼申请',
+                'sacenter' => '大活教室申请',
+                'colorprinting' => '彩喷悬挂申请',
+            );
+            $username=$sql->where('ID=' .$all_data[ID])->getField("UserName");
+            $createtime=$sql->where('ID=' .$all_data[ID])->getField("CreateTime");
+            $mail=M('user')->where("username='".$username."'")->getField("mail");
+            addMQ($username,$mail,'场地物资申请审批结果',"<p>尊敬的用户".$username."：</p><p>您于&nbsp;".$createtime."&nbsp;提交的&nbsp;<strong>".$name_list[$type]."</strong>&nbsp;已经审批完成，审批结果是&nbsp;<strong>".$all_data['ApproveState']."</strong>，敬请留意稍后社团部的提醒。</p>");
+        }
+
+        if($sql->where('ID=' .$all_data[ID])->save($data)){
+            $this->success(L('操作成功！'));
+        }else{
+            $this->error("操作失败");
+        }
+
+
     }
 	//后台管理显示函数
     public function admin_table()
