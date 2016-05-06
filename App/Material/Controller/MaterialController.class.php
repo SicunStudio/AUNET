@@ -66,13 +66,22 @@ class MaterialController extends CommonController
 	//前台申请上传附件和数据函数
     public function material_upload()
     {
+        $name_list = array('sports' => '体育场馆申请',
+            'materialapply' => '物资申请',
+            'special' => '特殊场地申请',
+            'teachingbuilding' => '教学楼教室申请',
+            'outdoor' => '户外路演场地申请',
+            'east4' => '东四三楼申请',
+            'sacenter' => '大活教室申请',
+            'colorprinting' => '彩喷悬挂申请',
+        );
 		$type = I('POST.action_type');
         $ifUploadFile = I('POST.ifUploadFile');
 		if($ifUploadFile == 'file'){
 			$name = 'file_' . $type;
 			$upload = new Upload();// 实例化上传类
-			$upload->maxSize  = 3145728;// 设置附件上传大小
-			$upload->exts  = array('txt','doc', 'docx','pdf');// 设置附件上传类型
+			$upload->maxSize  = 8388608;// 设置附件上传大小
+			$upload->exts  = array('txt','doc', 'docx','pdf','zip','7z','rar');// 设置附件上传类型
 			$upload->savePath =  './Material/' . $type . '/';// 设置附件上传目录
 			if(!($info = $upload->upload())){// 上传错误提示错误信息
                 $this->error($upload->getError());
@@ -95,11 +104,54 @@ class MaterialController extends CommonController
         $data['UserName'] = I('session.username', '');
         $result = $sql->data($data)->add();
         if($result) {
+            $mail=M('user')->where("id=".$_SESSION['uid'])->getField("mail");
+            addMQ($_SESSION['username'],$mail,'场地物资申请提交成功',"<p>尊敬的用户".$_SESSION['username']."</p><p>您提交的<strong>".$name_list[$type]."</strong>已经收到，我们将尽快处理，请关注审批进度</p>");
             $this->success(L('操作成功！'));
         }else{
             $this->error($sql->getError());
         }
 	}
+    
+    
+    //申请者撤销
+    public function apply_cancel() {
+        $type = I('POST.type');
+        $id = I('POST.id');
+        $allowDel=true;
+        $msg="";
+        $apply_item_data=M("material_".$type)->where("id=".$id)->getField('id,UserName,ApproveState,ApprovePrint',1);
+        $apply_item=$apply_item_data[$id];
+        //检查是否是提交申请的用户
+        $user=$apply_item["username"];
+        if($user!=$_SESSION['username']) {
+            $allowDel=false;
+            //$this->success("撤销失败，你无权撤销这份申请");
+            $msg="你无权撤销这份申请";
+        }
+
+        //检查申请状态
+        if($allowDel) {
+            if( $apply_item['approvestate']=="审批中" && $apply_item['approveprint'][0]==0){}
+            else{
+                $allowDel=false;
+                $msg="此申请已无法撤销";
+            }
+        }
+
+        $del_state=false;
+
+        if($allowDel){
+            $del_state=M("material_".$type)->where("id=".$id)->delete();
+            if(!$del_state) { $msg="请重试"; }
+
+        }
+        if ($del_state && $allowDel) {
+            $this->success("撤销成功");
+        }else {
+            $this->error("撤销失败，".$msg);
+        }
+    }
+    
 	//后台管理审批状态修改函数
     public function material_adupload()
     {
