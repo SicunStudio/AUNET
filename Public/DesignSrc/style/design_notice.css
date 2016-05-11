@@ -14,5 +14,5 @@
     font-weight: 400;
     font-size:1.4em;
   } 
-a{text-decoration: none;color:#000;}
-a:hover{color: blue;text-decoration: underline;}
+p a{text-decoration: none;color:#000;}
+p a:hover{color: blue;text-decoration: underline;}
