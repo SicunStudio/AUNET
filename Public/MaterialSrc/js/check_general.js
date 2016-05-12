@@ -1,7 +1,7 @@
 /**
  * Created by Brian on 2015/12/21.
  */
-/* General Check */
+/** General Check */
 /**
  * 所有想检查的input必须包含data-check-notice属性，值为检查未通过时的提示内容
  */
@@ -51,11 +51,11 @@ function check_file(){
         var filetype="";
         if(filename!=undefined && filename!=""){
             filetype=filename.substr(filename.lastIndexOf(".")+1);
-            if(filetype=='doc'||filetype=='docx'||filetype=='txt'||filetype=='pdf'){
+            if(filetype=='doc'||filetype=='docx'||filetype=='txt'||filetype=='pdf'||filetype=='zip'||filetype=='rar'||filetype=='7z'){
                 MsgString="";
             }else
             {
-                MsgString="上传文件类型错误：允许的文件类型：doc、docx、pdf、txt";
+                MsgString="上传文件类型错误：允许的文件类型：doc、docx、pdf、txt、zip、7z、rar";
             }
         }
     });

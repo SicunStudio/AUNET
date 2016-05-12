@@ -160,7 +160,7 @@ class LoadController extends CommonController
                     <tr>
                         <td height=\"80\" align=\"center\" valign=\"middle\">社团意见</td>
                         <td height=\"80\" colspan=\"2\" align=\"center\" valign=\"middle\">
-                            $file_data[associationname]
+                            $file_data[associationcomment]
                         </td>
                         <td height=\"80\" align=\"center\" valign=\"middle\">社联意见</td>
                         <td height=\"80\" colspan=\"3\" align=\"center\" valign=\"middle\"><span class=\"disable-area\"></span></td>
@@ -323,7 +323,7 @@ class LoadController extends CommonController
                     <tr>
                         <td height=\"80\" align=\"center\" valign=\"middle\">社团意见</td>
                         <td height=\"80\" colspan=\"2\" align=\"center\" valign=\"middle\">
-                            $file_data[associationname]
+                            $file_data[associationcomment]
                         </td>
                         <td height=\"80\" align=\"center\" valign=\"middle\">社联意见</td>
                         <td height=\"80\" colspan=\"2\" align=\"center\" valign=\"middle\">
