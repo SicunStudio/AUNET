@@ -7,22 +7,19 @@
   <meta name="author" content="" />
   <meta name="keywords" content="" />
   <meta name="description" content="" />
+  <link rel=stylesheet type=text/css href="__PUBLIC__/DesignSrc/style/design_notice.css" />
   <style>
-	*{font-family:"Microsoft YaHei";}
-	  html,body,p,a,div,img,table{margin:0;padding:0;width:100%;}
-	  div,p,a{font-size:14px;text-decoration:none;}
+	  
 	  a{cursor:pointer;}
-	  tr{display:block;height:48px;border-bottom:4px solid #cccccc;}
+	  table{width:100%;}
+	  tr{display:block;height:48px;width:100%;border-bottom:4px solid #cccccc;}
 	  td{display:block;float:left;width:49%;height:100%;}
-	  .main{
-		width:100%;
-		padding-bottom:243px;
-	  }
+	  p{padding:0;margin:0;}
+	
 	  .department{
 		overflow:hidden;
 	  }
 	  .dtitle{			/*绿框 部门名称*/
-		width:100%;
 		height:61px;
 		padding-left:8px;
 		background-color:#9bd389;
@@ -36,25 +33,6 @@
 	  .dinfo{
 		height:162px;
 		padding-top:28px;
-	  }
-	  .dinfo p{
-		width:50%;
-		height:54px;
-		padding-left:8px;
-		line-height:70px;
-		font-size:33px;
-	  }
-	  .dinfo p:nth-of-type(3){		/*正在进行的委任*/
-		float:left;
-	  }
-	  .dinfo p:nth-of-type(4){		/*委任协会*/
-		width:20%;
-		float:left;
-	  }
-	  .dimg p{
-		height:55px;
-		font-size:33px;
-		padding-left:8px;
 	  }
 	  .dimg img{
 		width:48.8%;
@@ -70,11 +48,9 @@
 
 	<div class="department">
 		<div class="dtitle"><a name="public">宣传部</a></div>	<!--绿框 部门名称-->
-		<div class="dinfo">
-			<p>本月部门空闲时间段：</p>
-			<p>正在进行/最大承接：</p>
-			<p>正在进行的委任</p> <p>委任协会</p>
-		</div>
+			<p class="title">本月部门空闲时间段：</p>
+			<p class="title">正在进行/最大承接：</p>
+			<p class="title" style="width:49%;float:left;">正在进行的委任</p> <p class="title" style="float:left;">委任协会</p>
 		<div>	<!--表格-->
 			<table>
 				<tr style="border-top:6px solid #cccccc;"><td></td><td></td></tr>
@@ -85,18 +61,18 @@
 			</table>
 		</div>
 		<div class="dimg">	<!--图片-->
-			<p>优秀作品展示</p>
+			<p class="title">优秀作品展示</p>
 			<img style="float:left;"/><img style="float:right;"/>
-			<div style="clear:both;">
+			<div style="clear:both;"></div>
 		</div>
 	</div>
 
 	<div class="department">
 		<div class="dtitle"><a name="media">媒体部</a></div>
 		<div class="dinfo">
-			<p>本月部门空闲时间段：</p>
-			<p>正在进行/最大承接：</p>
-			<p>正在进行的委任</p> <p>委任协会</p>
+			<p class="title">本月部门空闲时间段：</p>
+			<p class="title">正在进行/最大承接：</p>
+			<p class="title" style="width:49%;float:left;">正在进行的委任</p> <p class="title" style="float:left;">委任协会</p>
 		</div>
 		<div class="dform">
 			<table>
@@ -106,18 +82,18 @@
 			</table>
 		</div>
 		<div class="dimg">
-			<p>优秀作品展示</p>
+			<p class="title">优秀作品展示</p>
 			<img style="float:left;"/><img style="float:right;"/>
-			<div style="clear:both;">
+			<div style="clear:both;"></div>
 		</div>
 	</div>
 
 	<div class="department">
 		<div class="dtitle"><a name="newMedia">新媒体工作室</a></div>
 		<div class="dinfo">
-			<p>本月部门空闲时间段：</p>
-			<p>正在进行/最大承接：</p>
-			<p>正在进行的委任</p> <p>委任协会</p>
+			<p class="title">本月部门空闲时间段：</p>
+			<p class="title">正在进行/最大承接：</p>
+			<p class="title" style="width:49%;float:left;">正在进行的委任</p> <p class="title" style="float:left;">委任协会</p>
 		</div>
 		<div class="dform">
 			<table>
@@ -127,9 +103,9 @@
 			</table>
 		</div>
 		<div class="dimg">
-			<p>优秀作品展示</p>
+			<p class="title">优秀作品展示</p>
 			<img style="float:left;"/><img style="float:right;"/>
-			<div style="clear:both;">
+			<div style="clear:both;"></div>
 		</div>
 	</div>
 
