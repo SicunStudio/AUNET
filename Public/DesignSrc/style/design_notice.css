@@ -1,0 +1,18 @@
+	body{font-family: "Microsoft YaHei" ! important; }
+	  p{padding: 0 96px;
+    line-height: 32px;}
+  p[class="title"]{
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 60px;
+  }	
+  p[class="notice"]{
+    font-weight: 600;
+    font-size:1.1em;
+  } 
+  p[class="parts"]{
+    font-weight: 400;
+    font-size:1.4em;
+  } 
+p a{text-decoration: none;color:#000;}
+p a:hover{color: blue;text-decoration: underline;}
