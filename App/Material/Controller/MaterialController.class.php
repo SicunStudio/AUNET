@@ -105,7 +105,7 @@ class MaterialController extends CommonController
         $result = $sql->data($data)->add();
         if($result) {
             $mail=M('user')->where("id=".$_SESSION['uid'])->getField("mail");
-            addMQ($_SESSION['username'],$mail,'场地物资申请提交成功',"<p>尊敬的用户".$_SESSION['username']."</p><p>您提交的<strong>".$name_list[$type]."</strong>已经收到，我们将尽快处理，请关注审批进度</p>");
+            addMQ($_SESSION['username'],$mail,'场地物资申请提交成功',"<p>尊敬的用户".$_SESSION['username']."：</p><p>您好！您提交的<strong>".$name_list[$type]."</strong>已经收到，我们将尽快处理，请关注审批进度。</p>");
             $this->success(L('操作成功！'));
         }else{
             $this->error($sql->getError());
@@ -181,7 +181,7 @@ class MaterialController extends CommonController
             $username=$sql->where('ID=' .$all_data[ID])->getField("UserName");
             $createtime=$sql->where('ID=' .$all_data[ID])->getField("CreateTime");
             $mail=M('user')->where("username='".$username."'")->getField("mail");
-            addMQ($username,$mail,'场地物资申请审批结果',"<p>尊敬的用户".$username."：</p><p>您于&nbsp;".$createtime."&nbsp;提交的&nbsp;<strong>".$name_list[$type]."</strong>&nbsp;已经审批完成，审批结果是&nbsp;<strong>".$all_data['ApproveState']."</strong>，敬请留意稍后社团部的提醒。</p>");
+            addMQ($username,$mail,'场地物资申请审批结果',"<p>尊敬的用户".$username."：</p><p>您于&nbsp;".$createtime."&nbsp;提交的&nbsp;<strong>".$name_list[$type]."</strong>&nbsp;已经审批完成，审批结果是&nbsp;<strong>".$all_data['ApproveState']."</strong>。请于大学生活动中心611社团部办公桌处签字取表，并完成后续流程；或参考审核意见，重新提交申请。</p>");
         }
 
         if($sql->where('ID=' .$all_data[ID])->save($data)){
