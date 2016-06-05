@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HR系统</title>
+    <meta charset="utf-8">
+    <link href="__PUBLIC__/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="__PUBLIC__/bootstrap/js/jquery.min.js"></script>
+    <script src="__PUBLIC__/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <script src="main.js"></script>
+
+</head>
+<body>
+<div class="header">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HR系统
+</div>
+<div class="head_1">
+    <div class="head_part1">
+        HR系统登录
+    </div>
+    <div class="head_part2">
+        用户账号
+        <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1"> <img src="image/user.svg"/></span>
+            <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+        </div>
+         用户密码
+        <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1"><img src="image/password.svg"/></span>
+            <input type="text" class="form-control" placeholder="Password" aria-describedby="basic-addon1">
+        </div>
+        <form action="" method="get">
+            用户类型：<br />
+            <input name="sex" id="admin" type="radio" value="nuser" />
+            <label for="admin">普通用户</label>
+            <input name="sex" id="user" type="radio" value="muser" />
+            <label for="user">高级用户</label>
+        </form>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="button" class="btn btn-success  btn-lg" data-toggle="button" aria-pressed="false" autocomplete="off" value="提交“>
+
+            &nbsp;&nbsp;&nbsp;登陆&nbsp;&nbsp;&nbsp;
+        </button>
+    </div>
+
+</div>
+</body>
+</html>

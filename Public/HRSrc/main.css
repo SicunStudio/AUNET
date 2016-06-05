@@ -1,0 +1,148 @@
+body{margin:0px;
+    background-repeat:no-repeat;
+    background-size:100%;
+    background-color:white;
+    background-image: url("image/login_bg.jpg")
+
+}
+.header{
+    margin:0px;
+    padding:0px;
+    background-color:rgba(0,130,78,.6);
+    width:100%;
+    height:50px;
+    float:left;
+    color: white;
+    font-size: 22px;
+    padding: 10px;
+}
+.head_1{
+     margin:160px auto auto 18%;
+     padding:0px;
+     background-color:rgba(255,255,255,.4);
+     width:55%;
+     height:490px;
+     float:left;
+     color: black;
+    font-size: 22px;
+     border-radius: 10px;
+ }
+.head_part1{
+    margin:70px auto auto 280px;
+    width:400px;
+    height:80px;
+    clear:right;
+    padding: 10px;
+    float:left;
+    font-size: 38px;
+    color: black;
+    border-radius: 10px;
+}
+.head_part2{
+    margin:5px auto auto 190px;
+    width:400px;
+    height:240px;
+    padding: 10px;
+    float:left;
+    color: black;
+    border-radius: 10px;
+}
+.head_part3{
+    margin:30px auto auto 220px;
+    width:100px;
+    height:60px;
+    padding: 15px;
+    float:left;
+    color: black;
+    border-radius: 10px;
+    font-size: 31px;
+    background-color: lightgreen;
+}
+.checkBox{
+    margin: 20px auto auto -200px;
+    width:400px;
+    height:120px;
+    padding: 10px;
+    float:left;
+}
+.putFont{
+    margin: -52px auto auto 195px;
+    width:200px;
+    height:40px;
+    font-size: 18px;
+    position: absolute;
+    padding: 10px;
+}
+.putFont2{
+    margin: -43px auto auto 22px;
+    width:200px;
+    height:40px;
+    font-size: 18px;
+    position: absolute;
+    padding: 10px;
+}
+.roundedOne {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    margin: 20px auto;
+    background: #fcfff4;
+    background: -moz-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 10%);
+    background: -webkit-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 10%);
+    background: linear-gradient(to bottom, #fcfff4 0%, #dfe5d7 40%, #b3bead 10%);
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    -moz-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+}
+.roundedOne label {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    position: absolute;
+    margin: 0;
+    left: 2px;
+    top: 2px;
+    background: -moz-linear-gradient(top, #222222 0%, #45484d 10%);
+    background: -webkit-linear-gradient(top, #222222 0%, #45484d 10%);
+    background: linear-gradient(to bottom, #222222 0%, #45484d 10%);
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    -moz-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px white;
+    -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px white;
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px white;
+}
+.roundedOne label:after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    background: #00bf00;
+    background: -moz-linear-gradient(top, #00bf00 0%, #009400 10%);
+    background: -webkit-linear-gradient(top, #00bf00 0%, #009400 10%);
+    background: linear-gradient(to bottom, #00bf00 0%, #009400 10%);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    -moz-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+}
+.roundedOne label:hover::after {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
+    opacity: 0.3;
+}
+.roundedOne input[type=checkbox] {
+    visibility: hidden;
+}
+.roundedOne input[type=checkbox]:checked + label:after {
+    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+    opacity: 1;
+}
