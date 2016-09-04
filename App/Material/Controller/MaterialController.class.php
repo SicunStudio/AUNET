@@ -80,8 +80,8 @@ class MaterialController extends CommonController
 		if($ifUploadFile == 'file'){
 			$name = 'file_' . $type;
 			$upload = new Upload();// 实例化上传类
-			$upload->maxSize  = 3145728;// 设置附件上传大小
-			$upload->exts  = array('txt','doc', 'docx','pdf');// 设置附件上传类型
+			$upload->maxSize  = 8388608;// 设置附件上传大小
+			$upload->exts  = array('txt','doc', 'docx','pdf','zip','7z','rar');// 设置附件上传类型
 			$upload->savePath =  './Material/' . $type . '/';// 设置附件上传目录
 			if(!($info = $upload->upload())){// 上传错误提示错误信息
                 $this->error($upload->getError());
@@ -105,7 +105,7 @@ class MaterialController extends CommonController
         $result = $sql->data($data)->add();
         if($result) {
             $mail=M('user')->where("id=".$_SESSION['uid'])->getField("mail");
-            addMQ($_SESSION['username'],$mail,'场地物资申请提交成功',"<p>尊敬的用户".$_SESSION['username']."</p><p>您提交的<strong>".$name_list[$type]."</strong>已经收到，我们将尽快处理，请关注审批进度</p>");
+            addMQ($_SESSION['username'],$mail,'场地物资申请提交成功',"<p>尊敬的用户".$_SESSION['username']."：</p><p>您好！您提交的<strong>".$name_list[$type]."</strong>已经收到，我们将尽快处理，请关注审批进度。</p>");
             $this->success(L('操作成功！'));
         }else{
             $this->error($sql->getError());
@@ -167,9 +167,30 @@ class MaterialController extends CommonController
         $data['ApproveNote'] = $all_data['ApproveNote'];
         if ($all_data['ApprovePrint']==null){ $data['ApprovePrint'] = 0; }
         else{ $data['ApprovePrint'] = 1; };
-        $sql->where('ID=' .$all_data[ID])->save($data);
 
-        $this->success(L('操作成功！'));
+        if($sql->where('ID=' .$all_data[ID])->getField("ApproveState")=="审批中" && $all_data['ApproveState']!="审批中"){
+            $name_list = array('sports' => '体育场馆申请',
+                'materialapply' => '物资申请',
+                'special' => '特殊场地申请',
+                'teachingbuilding' => '教学楼教室申请',
+                'outdoor' => '户外路演场地申请',
+                'east4' => '东四三楼申请',
+                'sacenter' => '大活教室申请',
+                'colorprinting' => '彩喷悬挂申请',
+            );
+            $username=$sql->where('ID=' .$all_data[ID])->getField("UserName");
+            $createtime=$sql->where('ID=' .$all_data[ID])->getField("CreateTime");
+            $mail=M('user')->where("username='".$username."'")->getField("mail");
+            addMQ($username,$mail,'场地物资申请审批结果',"<p>尊敬的用户".$username."：</p><p>您于&nbsp;".$createtime."&nbsp;提交的&nbsp;<strong>".$name_list[$type]."</strong>&nbsp;已经审批完成，审批结果是&nbsp;<strong>".$all_data['ApproveState']."</strong>。请于大学生活动中心611社团部办公桌处签字取表，并完成后续流程；或参考审核意见，重新提交申请。</p>");
+        }
+
+        if($sql->where('ID=' .$all_data[ID])->save($data)){
+            $this->success(L('操作成功！'));
+        }else{
+            $this->error("操作失败");
+        }
+
+
     }
 	//后台管理显示函数
     public function admin_table()
